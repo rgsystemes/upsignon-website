@@ -3,6 +3,7 @@ import FeaturePlatforms, { TPlatforms } from "./featurePlatforms";
 import styles from "./featureSection.module.css";
 import Link from "next/link";
 import TechFocusLink from "./techFocusLink";
+import ProPersoTags from "./proPersoTags";
 
 type Props = {
   title: string;
@@ -10,7 +11,7 @@ type Props = {
   tags: {
     pro: boolean;
     perso: boolean;
-  };
+  } | null;
   summary: string;
   details: string[] | null;
   techFocus: {
@@ -31,6 +32,7 @@ export default function FeatureSection(p: Props) {
         style={{ width: "auto", height: "auto", maxHeight: 450, margin: "auto" }}
       />
       <FeaturePlatforms platforms={p.platforms} />
+      <ProPersoTags pro={p.tags?.pro} perso={p.tags?.perso} />
       {p.details?.length > 0 ? (
         <details>
           <summary>{p.summary}</summary>

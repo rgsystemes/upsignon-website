@@ -1,0 +1,24 @@
+.pro_perso_tag_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.pro_tag,
+.perso_tag {
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  padding: 0 5px;
+  margin-right: 10px;
+}
+.pro_tag:last-of-type,
+.perso_tag:last-of-type {
+  margin-right: 0px;
+}
+.pro_tag {
+  background-color: rgb(246, 164, 0);
+}
+.perso_tag {
+  background-color: rgb(44, 83, 132);
+}

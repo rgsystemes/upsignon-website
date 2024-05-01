@@ -16,7 +16,7 @@ export default function Page() {
         platforms={{
           ios: true,
           android: true,
-          windows: false,
+          windows: true,
           macos: true,
           linux: true,
         }}
@@ -27,14 +27,14 @@ export default function Page() {
           "Les coffres-forts PRO sont proposés par votre employeur ou responsable de la sécurité informatique pour vous donner les moyens d’atteindre 100% de mots de passe forts et uniques. Votre DSI ou RSSI peut suivre l’avancement de cet objectif depuis la console de supervision qui lui donne accès à la force des mots de passe enregistrés dans les coffres-forts PRO. Cette console ne donne bien sûr pas accès à vos mots de passe et autres secrets directement. Par ailleurs, avec les coffres-forts PRO, il vous sera beaucoup plus facile de partager des secrets avec vos collègues en saisissant simplement leur adresse email.",
         ]}
         imageSrc={proPersoVaultsImg}
-        imageAlt="Screen capture illustrating PRO and PERSO vaults in the app."
+        imageAlt="Capture d'écran montrant les coffres-forts PRO et PERSO dans l'application."
         techFocus={{
           title: "Coffres-forts PRO vs coffres-forts PERSO",
           href: "/resources/technical-details/pro-vs-perso",
         }}
       />
       <FeatureSection
-        title="Coffres-forts PRO & PERSO"
+        title="Disponible sur smartphones, tablettes et ordinateurs"
         platforms={{
           ios: true,
           android: true,
@@ -42,11 +42,11 @@ export default function Page() {
           macos: true,
           linux: true,
         }}
-        tags={null}
-        summary="UpSignOn vous propose deux types de coffres-forts, tous les deux semblables dans leur interface utilisateur, mais différents techniquement."
+        tags={{ pro: true, perso: true }}
+        summary="Accédez à vos mots de passe en toute sécurité sur tous vos appareils. L'interface reste exactement la même sur toutes les tailles d'écran."
         details={null}
         imageSrc={proPersoVaultsImg}
-        imageAlt="Screen capture illustrating PRO and PERSO vaults in the app."
+        imageAlt="Captures d'écran de l'application sur un smartphone, une tablette et un ordinateur."
         techFocus={null}
       />
     </div>
