@@ -28,6 +28,10 @@ export default function Page() {
         ]}
         imageSrc={proPersoVaultsImg}
         imageAlt="Screen capture illustrating PRO and PERSO vaults in the app."
+        techFocus={{
+          title: "Coffres-forts PRO vs coffres-forts PERSO",
+          href: "/resources/technical-details/pro-vs-perso",
+        }}
       />
       <FeatureSection
         title="Coffres-forts PRO & PERSO"
@@ -43,6 +47,7 @@ export default function Page() {
         details={null}
         imageSrc={proPersoVaultsImg}
         imageAlt="Screen capture illustrating PRO and PERSO vaults in the app."
+        techFocus={null}
       />
     </div>
   );

@@ -1,0 +1,15 @@
+.tech_focus {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: rgb(246, 164, 0);
+}
+.tech_focus:hover {
+  text-decoration: underline;
+}
+
+.tech_focus svg {
+  margin-right: 10px;
+}

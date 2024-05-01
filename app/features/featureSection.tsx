@@ -1,6 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import FeaturePlatforms, { TPlatforms } from "./featurePlatforms";
 import styles from "./featureSection.module.css";
+import Link from "next/link";
+import TechFocusLink from "./techFocusLink";
 
 type Props = {
   title: string;
@@ -11,6 +13,10 @@ type Props = {
   };
   summary: string;
   details: string[] | null;
+  techFocus: {
+    title: string;
+    href: string;
+  } | null;
   imageSrc: StaticImageData;
   imageAlt: string;
 };
@@ -35,6 +41,7 @@ export default function FeatureSection(p: Props) {
       ) : (
         <p>{p.summary}</p>
       )}
+      {p.techFocus && <TechFocusLink title={p.techFocus.title} href={p.techFocus.href} />}
     </section>
   );
 }
