@@ -1,0 +1,13 @@
+* {
+  color: rgb(44, 83, 132);
+  font-family: Arial;
+}
+
+details summary {
+  cursor: pointer;
+  transition: margin 150ms ease-out;
+}
+
+details[open] summary {
+  margin-bottom: 10px;
+}
