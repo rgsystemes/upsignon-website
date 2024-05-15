@@ -28,13 +28,13 @@ export default function FeatureSection(p: Props) {
   return (
     <section className={styles.feature_section}>
       <h2>{p.title}</h2>
+      {p.platforms && <FeaturePlatforms platforms={p.platforms} lang={p.lang} />}
+      <ProPersoTags pro={p.tags?.pro} perso={p.tags?.perso} lang={p.lang} />
       <Image
         src={p.imageSrc}
         alt={p.imageAlt}
         style={{ width: "auto", height: "auto", maxHeight: 450, margin: "auto" }}
       />
-      {p.platforms && <FeaturePlatforms platforms={p.platforms} lang={p.lang} />}
-      <ProPersoTags pro={p.tags?.pro} perso={p.tags?.perso} lang={p.lang} />
       {p.summary ? (
         <details>
           <summary>{p.summary}</summary>
