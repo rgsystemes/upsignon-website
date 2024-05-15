@@ -1,4 +1,4 @@
-import { colors } from "../colors";
+import { colors } from "../../colors";
 import styles from "./featurePlatforms.module.css";
 
 export type TPlatforms = {

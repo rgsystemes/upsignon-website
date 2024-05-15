@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import FeatureSection from "./featureSection";
 import CompatibilityTable from "./compatibilityTable";
 import styles from "./page.module.css";
-import proPersoVaultsImg from "../../public/images/pro-perso-vaults.png";
-import passwordScore from "../../public/images/password-score.png";
+import proPersoVaultsImg from "../../../public/images/pro-perso-vaults.png";
+import passwordScore from "../../../public/images/password-score.png";
 
 export const metadata: Metadata = {
   title: "Fonctionnalités",

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./techFocusLink.module.css";
-import { colors } from "../colors";
+import { colors } from "../../colors";
 
 export default function TechFocusLink({ title, href }: { title: string; href: string }) {
   return (

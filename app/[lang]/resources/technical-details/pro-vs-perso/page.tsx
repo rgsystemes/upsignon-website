@@ -18,7 +18,7 @@ export default function ProVsPerso() {
         </p>
         <blockquote id="f19283b2-8554-4488-a5af-58e92319ef01" className="">
           Pour les détails encore plus techniques sur le chiffrement utilisé, consultez{" "}
-          <span style="border-bottom:0.05em solid">cette page</span>.
+          <span style={{ borderBottom: "0.05em solid" }}>cette page</span>.
         </blockquote>
         <p id="6d3e6312-cc8e-4c0b-b1f0-f4c07f8f6020" className="">
           <strong>Appairage de nouveaux appareils</strong>
@@ -44,7 +44,7 @@ export default function ProVsPerso() {
         </p>
         <blockquote id="17dd150e-3785-4b76-92ce-a8ff78a6e8fb" className="">
           Pour comprendre le détail du protocole technique, consultez{" "}
-          <span style="border-bottom:0.05em solid">cette page</span>.
+          <span style={{ borderBottom: "0.05em solid" }}>cette page</span>.
         </blockquote>
         <p id="3c97cbcc-1fe1-4540-b887-f537ee59b163" className="">
           <strong>Synchronisation entre appareils</strong>
@@ -119,13 +119,13 @@ export default function ProVsPerso() {
         <blockquote id="4e1f0489-8a5e-473a-819b-970c7ff65312" className="">
           Remarquez que
           <ul id="a9fd4714-b4a4-4b07-9503-a8b0c89e3c0c" className="bulleted-list">
-            <li style="list-style-type:disc">
+            <li style={{ listStyleType: "disc" }}>
               le système de sauvegarde de vos données repose sur le fait que vous seul connaissez votre mot de passe
               maître
             </li>
           </ul>
           <ul id="f3338eb4-2827-4a45-b047-c8b6bfbb2281" className="bulleted-list">
-            <li style="list-style-type:disc">
+            <li style={{ listStyleType: "disc" }}>
               le système de sauvegarde de votre mot de passe maître repose sur le fait que vous ayez accès à l’un de vos
               appareils
             </li>
@@ -201,7 +201,7 @@ export default function ProVsPerso() {
         <blockquote id="15a8980b-3f25-4c97-a12c-0571c0e84ce9" className="">
           Le mot de passe maître n’est pas pour autant simplement envoyé au serveur comme pour une authentification par
           mot de passe classique. Il est utilisé dans le cadre d’un protocole de défi-réponse afin de ne jamais être
-          envoyé au serveur. <span style="border-bottom:0.05em solid">Voir les détails de ce système</span>.
+          envoyé au serveur. <span style={{ borderBottom: "0.05em solid" }}>Voir les détails de ce système</span>.
         </blockquote>
         <p id="fda9bf11-7a19-435d-9f88-992f85665623" className="">
           <strong>Synchronisation des appareils</strong>
@@ -312,64 +312,66 @@ export default function ProVsPerso() {
           Librairie utilisée : <a href="https://doc.libsodium.org/">libsodium</a>
           <div className="indented">
             <ul id="ffafaf55-3220-46c2-9dfc-49e63adbe891" className="bulleted-list">
-              <li style="list-style-type:disc">
+              <li style={{ listStyleType: "disc" }}>
                 Dérivation de mot de passe :{" "}
                 <mark className="highlight-teal_background">
                   <a href="https://libsodium.gitbook.io/doc/password_hashing/default_phf#key-derivation">Argon2ID</a>
                 </mark>
                 <ul id="d9c833bd-cb19-49c2-b7f7-d923518d222e" className="bulleted-list">
-                  <li style="list-style-type:circle">dérivation des mot de passe maître PRO et PERSO</li>
+                  <li style={{ listStyleType: "circle" }}>dérivation des mot de passe maître PRO et PERSO</li>
                 </ul>
               </li>
             </ul>
             <ul id="bca59a0a-34b8-49db-9437-4fc5f6b98193" className="bulleted-list">
-              <li style="list-style-type:disc">
+              <li style={{ listStyleType: "disc" }}>
                 Chiffrement symétrique authentifié :{" "}
                 <a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox">secret box de libsodium</a>{" "}
                 (<mark className="highlight-teal_background">XSalsa20 + Poly1305 MAC</mark>)
                 <ul id="b679369e-7d37-48f7-bbc0-87edee435ee5" className="bulleted-list">
-                  <li style="list-style-type:circle">
+                  <li style={{ listStyleType: "circle" }}>
                     chiffrement des coffres-forts PRO et PERSO après dérivation du mot de passe maître
                   </li>
                 </ul>
                 <ul id="82a5a873-dec9-40ff-9c9e-31e8ec27d1c4" className="bulleted-list">
-                  <li style="list-style-type:circle">chiffrement des coffres-forts partagés PRO et PERSO</li>
+                  <li style={{ listStyleType: "circle" }}>chiffrement des coffres-forts partagés PRO et PERSO</li>
                 </ul>
                 <ul id="09a81bf5-b158-4a65-ba0e-c882360021f3" className="bulleted-list">
-                  <li style="list-style-type:circle">synchronisation zero-trust PERSO</li>
+                  <li style={{ listStyleType: "circle" }}>synchronisation zero-trust PERSO</li>
                 </ul>
                 <ul id="a10c671d-b612-415e-bf61-c239f4b9a314" className="bulleted-list">
-                  <li style="list-style-type:circle">
+                  <li style={{ listStyleType: "circle" }}>
                     échanges de données zero-trust (chiffrée de bout en bout) entre contacts de confiance PERSO
                   </li>
                 </ul>
                 <ul id="5a1575b9-9b8f-4f48-9517-a24d36532bcb" className="bulleted-list">
-                  <li style="list-style-type:circle">
+                  <li style={{ listStyleType: "circle" }}>
                     chiffrement des sauvegardes de données PERSO après dérivation du mot de passe maître
                   </li>
                 </ul>
                 <ul id="faf1a317-da67-4c0c-95eb-f0e80cea5c16" className="bulleted-list">
-                  <li style="list-style-type:circle">chiffrement des sauvegardes de mot de passe maître PERSO</li>
+                  <li style={{ listStyleType: "circle" }}>chiffrement des sauvegardes de mot de passe maître PERSO</li>
                 </ul>
               </li>
             </ul>
             <ul id="e47f0fb1-24d0-4be1-9e76-c0520000a723" className="bulleted-list">
-              <li style="list-style-type:disc">
+              <li style={{ listStyleType: "disc" }}>
                 Chiffrement asymétrique :{" "}
                 <a href="https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes">
                   sealed box de libsodium
                 </a>{" "}
                 (<mark className="highlight-teal_background">X25519 + XSalsa20-Poly1305</mark>)
                 <ul id="2e644cfa-92fe-4cf0-8bf2-decc1a1b74d0" className="bulleted-list">
-                  <li style="list-style-type:circle">chiffrement des clés secrètes de coffres-forts partagés PRO</li>
+                  <li style={{ listStyleType: "circle" }}>
+                    chiffrement des clés secrètes de coffres-forts partagés PRO
+                  </li>
                 </ul>
                 <ul id="a0636e2f-3ca6-408e-8f1f-aa845a4ebe80" className="bulleted-list">
-                  <li style="list-style-type:circle">sauvegarde de mots de passe maître PRO</li>
+                  <li style={{ listStyleType: "circle" }}>sauvegarde de mots de passe maître PRO</li>
                 </ul>
               </li>
             </ul>
             <ul id="0a0c2f3a-ceb1-4dfe-90ea-458071ea703e" className="bulleted-list">
-              <li style="list-style-type:disc">
+              <li style={{ listStyleType: "disc" }}>
                 Signature :{" "}
                 <mark className="highlight-teal_background">
                   <a href="https://libsodium.gitbook.io/doc/public-key_cryptography/public-key_signatures#algorithm-details">
@@ -377,18 +379,18 @@ export default function ProVsPerso() {
                   </a>
                 </mark>
                 <ul id="44d736bc-4d27-4baf-b924-6cb514e41e30" className="bulleted-list">
-                  <li style="list-style-type:circle">authentification forte d’appareil PRO</li>
+                  <li style={{ listStyleType: "circle" }}>authentification forte d’appareil PRO</li>
                 </ul>
               </li>
             </ul>
             <ul id="ed6cf952-e701-4708-a2d9-b1e440636818" className="bulleted-list">
-              <li style="list-style-type:disc">
+              <li style={{ listStyleType: "disc" }}>
                 Authentification de challenges :{" "}
                 <mark className="highlight-teal_background">
                   <a href="https://libsodium.gitbook.io/doc/advanced/hmac-sha2#hmac-sha-512-256">HMAC-SHA-256</a>
                 </mark>
                 <ul id="f1f23ae3-a575-4736-a790-a9db5eca7835" className="bulleted-list">
-                  <li style="list-style-type:circle">
+                  <li style={{ listStyleType: "circle" }}>
                     authentification du mot de passe maître PRO par défi-réponse (pour que le mot de passe maître soit
                     vérifié sans être jamais envoyé au serveur)
                   </li>
