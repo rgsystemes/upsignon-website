@@ -1,12 +1,12 @@
 import Image, { StaticImageData } from "next/image";
 import FeaturePlatforms, { TPlatforms } from "./featurePlatforms";
 import styles from "./featureSection.module.css";
-import Link from "next/link";
 import TechFocusLink from "./techFocusLink";
 import ProPersoTags from "./proPersoTags";
 import { ReactNode } from "react";
 
 type Props = {
+  lang: string;
   title: string;
   platforms: TPlatforms;
   tags: {
@@ -33,8 +33,8 @@ export default function FeatureSection(p: Props) {
         alt={p.imageAlt}
         style={{ width: "auto", height: "auto", maxHeight: 450, margin: "auto" }}
       />
-      {p.platforms && <FeaturePlatforms platforms={p.platforms} />}
-      <ProPersoTags pro={p.tags?.pro} perso={p.tags?.perso} />
+      {p.platforms && <FeaturePlatforms platforms={p.platforms} lang={p.lang} />}
+      <ProPersoTags pro={p.tags?.pro} perso={p.tags?.perso} lang={p.lang} />
       {p.summary ? (
         <details>
           <summary>{p.summary}</summary>
@@ -49,7 +49,7 @@ export default function FeatureSection(p: Props) {
           </p>
         ))
       )}
-      {p.techFocus && <TechFocusLink title={p.techFocus.title} href={p.techFocus.href} />}
+      {p.techFocus && <TechFocusLink title={p.techFocus.title} href={p.techFocus.href} lang={p.lang} />}
       {p.children}
     </section>
   );

@@ -1,17 +1,19 @@
+import { getDictionary } from "../../../translations/translations";
 import styles from "./compatibilityTable.module.css";
 
-export default function CompatibilityTable() {
+export default function CompatibilityTable({ lang }: { lang: string }) {
+  const t = getDictionary(lang);
   return (
     <details>
-      <summary>Table de compatibilité</summary>
+      <summary>{t.features.compatibilityTable.summary}</summary>
       <div className={styles.platform_compat_table_container}>
         <table>
           <thead>
             <tr>
-              <th>OS</th>
-              <th>Version minimum théorique</th>
-              <th>Version testée</th>
-              <th>Architectures</th>
+              <th>{t.features.compatibilityTable.header.os}</th>
+              <th>{t.features.compatibilityTable.header.minTheoreticalVersion}</th>
+              <th>{t.features.compatibilityTable.header.testedVersion}</th>
+              <th>{t.features.compatibilityTable.header.arch}</th>
             </tr>
           </thead>
           <tbody>
@@ -48,7 +50,7 @@ export default function CompatibilityTable() {
             <tr>
               <td>Debian (Linux)</td>
               <td>9</td>
-              <td>Non testé</td>
+              <td>{t.features.compatibilityTable.untested}</td>
               <td>x64, Arm64</td>
             </tr>
           </tbody>

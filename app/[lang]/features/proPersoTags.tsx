@@ -1,10 +1,12 @@
+import { getDictionary } from "../../../translations/translations";
 import styles from "./proPersoTags.module.css";
 
-export default function ProPersoTags({ pro, perso }: { pro: boolean; perso: boolean }) {
+export default function ProPersoTags({ pro, perso, lang }: { pro: boolean; perso: boolean; lang: string }) {
+  const t = getDictionary(lang);
   return (
     <div className={styles.pro_perso_tag_container}>
-      {perso && <div className={styles.perso_tag}>PERSO</div>}
-      {pro && <div className={styles.pro_tag}>PRO</div>}
+      {perso && <div className={styles.perso_tag}>{t.features.tags.perso}</div>}
+      {pro && <div className={styles.pro_tag}>{t.features.tags.pro}</div>}
     </div>
   );
 }
