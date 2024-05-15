@@ -1,0 +1,16 @@
+.platform_compat_table_container {
+  background-color: white;
+  max-width: 100%;
+  overflow: auto;
+}
+.platform_compat_table_container table {
+  overflow: scroll;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid black;
+}
+.platform_compat_table_container th,
+.platform_compat_table_container td {
+  border: 1px solid black;
+  padding: 5px;
+}

@@ -4,6 +4,7 @@ import styles from "./featureSection.module.css";
 import Link from "next/link";
 import TechFocusLink from "./techFocusLink";
 import ProPersoTags from "./proPersoTags";
+import { ReactNode } from "react";
 
 type Props = {
   title: string;
@@ -20,6 +21,7 @@ type Props = {
   } | null;
   imageSrc: StaticImageData;
   imageAlt: string;
+  children?: ReactNode | null;
 };
 
 export default function FeatureSection(p: Props) {
@@ -31,9 +33,9 @@ export default function FeatureSection(p: Props) {
         alt={p.imageAlt}
         style={{ width: "auto", height: "auto", maxHeight: 450, margin: "auto" }}
       />
-      <FeaturePlatforms platforms={p.platforms} />
+      {p.platforms && <FeaturePlatforms platforms={p.platforms} />}
       <ProPersoTags pro={p.tags?.pro} perso={p.tags?.perso} />
-      {p.details?.length > 0 ? (
+      {p.summary ? (
         <details>
           <summary>{p.summary}</summary>
           {p.details.map((d, id) => (
@@ -41,9 +43,14 @@ export default function FeatureSection(p: Props) {
           ))}
         </details>
       ) : (
-        <p>{p.summary}</p>
+        p.details.map((d, id) => (
+          <p key={id} className={styles.p}>
+            {d}
+          </p>
+        ))
       )}
       {p.techFocus && <TechFocusLink title={p.techFocus.title} href={p.techFocus.href} />}
+      {p.children}
     </section>
   );
 }

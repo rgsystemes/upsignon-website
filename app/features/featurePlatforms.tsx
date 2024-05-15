@@ -7,27 +7,31 @@ export type TPlatforms = {
   windows: boolean;
   macos: boolean;
   linux: boolean;
+  chromeos: boolean;
 };
 
 export default function FeaturePlatforms({ platforms }: { platforms: TPlatforms }) {
   return (
-    <ul className={styles.platform_support}>
-      <li aria-label={platforms.windows ? "Supported on Windows" : "Unsupported on Windows"}>
+    <div className={styles.platform_support}>
+      <div aria-label={platforms.windows ? "Disponible sur Windows" : "Non disponible sur Windows"}>
         {platforms.windows ? <PlatformSupportedIcon /> : <PlatformUnsupportedIcon />}Windows
-      </li>
-      <li aria-label={platforms.macos ? "Supported on MacOS" : "Unsupported on MacOS"}>
+      </div>
+      <div aria-label={platforms.macos ? "Disponible sur MacOS" : "Non disponible sur MacOS"}>
         {platforms.macos ? <PlatformSupportedIcon /> : <PlatformUnsupportedIcon />}MacOS
-      </li>
-      <li aria-label={platforms.macos ? "Supported on Linux" : "Unsupported on Linux"}>
+      </div>
+      <div aria-label={platforms.macos ? "Disponible sur Linux" : "Non disponible sur Linux"}>
         {platforms.linux ? <PlatformSupportedIcon /> : <PlatformUnsupportedIcon />}Linux
-      </li>
-      <li aria-label={platforms.ios ? "Supported on iOS" : "Unsupported on iOS"}>
+      </div>
+      <div aria-label={platforms.ios ? "Disponible sur iOS" : "Non disponible sur iOS"}>
         {platforms.ios ? <PlatformSupportedIcon /> : <PlatformUnsupportedIcon />}iOS
-      </li>
-      <li aria-label={platforms.android ? "Supported on Android" : "Unsupported on Android"}>
+      </div>
+      <div aria-label={platforms.android ? "Disponible sur Android" : "Non disponible sur Android"}>
         {platforms.android ? <PlatformSupportedIcon /> : <PlatformUnsupportedIcon />}Android
-      </li>
-    </ul>
+      </div>
+      <div aria-label={platforms.chromeos ? "Disponible sur ChromeOS" : "Non disponible sur ChromeOS"}>
+        {platforms.chromeos ? <PlatformSupportedIcon /> : <PlatformUnsupportedIcon />}ChromeOS
+      </div>
+    </div>
   );
 }
 

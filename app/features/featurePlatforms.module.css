@@ -3,14 +3,14 @@
   padding: 0;
   font-size: 0.8rem;
 }
-.platform_support li {
+.platform_support > div {
   display: inline-flex;
   align-items: center;
   margin-right: 10px;
 }
-.platform_support li:last-child {
+.platform_support > div:last-child {
   margin-right: 0px;
 }
-.platform_support li svg {
+.platform_support > div svg {
   margin-right: 5px;
 }
