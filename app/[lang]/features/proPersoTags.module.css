@@ -4,6 +4,20 @@
   justify-content: center;
   margin: 0 0 10px 0;
 }
+
+.pro_perso_tag_container > div {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.pro_perso_tag_container > div:last-child {
+  margin-right: 0px;
+}
+.pro_perso_tag_container > div svg {
+  flex-shrink: 0;
+  margin-right: 5px;
+}
+
 .pro_tag,
 .perso_tag {
   color: white;

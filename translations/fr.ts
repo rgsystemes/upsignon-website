@@ -7,6 +7,8 @@ const translations = {
     tags: {
       pro: "PRO",
       perso: "PERSO",
+      availableFor: (pro: boolean) => `Disponible pour les coffres-forts ${pro ? "pro" : "perso"}`,
+      unavailableFor: (pro: boolean) => `Non disponible pour les coffres-forts ${pro ? "pro" : "perso"}`,
     },
     compatibilityTable: {
       summary: "Table de compatibilité",

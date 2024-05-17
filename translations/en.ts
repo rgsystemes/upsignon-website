@@ -9,20 +9,22 @@ const translations: typeof fr = {
     tags: {
       pro: "PRO",
       perso: "PERSO",
+      availableFor: (pro: boolean) => `Available for ${pro ? "pro" : "perso"} vaults`,
+      unavailableFor: (pro: boolean) => `Not available for ${pro ? "pro" : "perso"} vaults`,
     },
     compatibilityTable: {
-      summary: "Table de compatibilité",
+      summary: "Compatibility table",
       header: {
         os: "OS",
-        minTheoreticalVersion: "Version minimum théorique",
-        testedVersion: "Version testée",
+        minTheoreticalVersion: "Theoretical minimum version",
+        testedVersion: "Tested versions",
         arch: "Architectures",
       },
-      untested: "Non testé",
+      untested: "Untested",
     },
     featurePlatforms: {
-      availableOn: (p: string) => `Disponible sur ${p}`,
-      unavailableOn: (p: string) => `Non disponible sur ${p}`,
+      availableOn: (p: string) => `Available on ${p}`,
+      unavailableOn: (p: string) => `Not available on ${p}`,
     },
     techFocus: "Technical focus:",
     proPerso: {
