@@ -25,6 +25,7 @@ const translations = {
       unavailableOn: (p: string): string => `Non disponible sur ${p}`,
     },
     techFocus: "Focus technique :",
+    generalSubtitle: "Généralités",
     proPerso: {
       title: "Coffres-forts PRO & PERSO",
       summary:
@@ -50,7 +51,7 @@ const translations = {
       ],
       imageAlt: "",
     },
-    dataSubtitle: "Gestion de vos mots de passe, TOTP et données bancaires",
+    dataSubtitle: "Gérez vos mots de passe, TOTP et données bancaires",
     unlimitedAccounts: {
       title: "Ajout de comptes internet illimité",
       details: [
@@ -134,6 +135,7 @@ const translations = {
       details: [
         "Les coffres-forts PERSO vous permettent d'enregistrer des contacts de confiance.",
         "Ce sont d'autres utilisateurs d'UpSignOn avec lesquels vous pouvez partager des comptes et des codes et auxquels vous pouvez confier des sauvegardes de vos données et de votre mot de passe maître.",
+        "NB : Cette fonctionnalité n'est pas nécessaire pour les coffres-forts PRO car le partage et les sauvegardes fonctionnent différemment.",
       ],
       imageAlt: 'Capture d\'écran de la page "Contacts de confiance".',
     },
@@ -200,6 +202,48 @@ const translations = {
       ],
       imageAlt:
         "Capture d'écran d'un formulaire web sur Android affichant l'interface de remplissage automatique d'UpSignOn.",
+    },
+    searchFilterOrganizeSubtitle: "Cherchez, filtrez, organisez",
+    search: {
+      title: "Recherche par nom de compte, nom de domaine, email, nom de dossier",
+      details: [
+        "Le champ de recherche vous aide à retrouver un compte rapidement dans votre liste. Servez-vous-en sans modération !",
+      ],
+      imageAlt: "Capture d'écran d'un coffre-fort montrant une recherche en cours.",
+    },
+    filter: {
+      title: "Filtres par type et force de mot de passe",
+      details: [
+        "En complément de la recherche, vous pouvez filtrer votre coffre-fort par type de secret (compte ou code), par force de mot de passe, ou n'afficher que les éléments partagés. Vous pouvez également choisir de cacher les éléments du dossier racine si vous en avez beaucoup.",
+      ],
+      imageAlt: "Capture d'écran de l'application montrant les différents filtres disponibles.",
+    },
+    organize: {
+      title: "Organisation par dossiers et sous-dossiers",
+      details: [
+        "Nous aimons tous que les choses soient bien rangées. Organisez votre coffre-fort grâce aux dossiers. Vous pouvez inclure des dossiers dans des dossiers sans limite de profondeur.",
+      ],
+      imageAlt: "Capture d'écran d'un coffre-fort contenant une arborescence en dossiers et sous-dossiers.",
+    },
+    importExportSubtitle: "Import & Export de vos données",
+    csvImport: {
+      title: "Import CSV & XML",
+      details: [
+        "Vous avez des mots de passe enregistrés dans votre navigateur ou dans un autre outil ? Exportez-les au format .csv puis importez-les en quelques clics dans votre coffre-fort UpSignOn !",
+        "NB : pour transférer vos données depuis KeePass utilisez plutôt le format XML pour conserver l'aborescence de vos dossiers.",
+        "Attention, pensez à effacer complètement le fichier CSV (ou XML) après avoir terminé l’import pour que vos secrets ne restent pas accessibles dans un format non protégé !",
+      ],
+      imageAlt: "Capture d'écran de la page d'import CSV.",
+    },
+    csvExport: {
+      title: "Export CSV",
+      details: [
+        "Si vous décidez de changer d’outil, vous pouvez à tout moment exporter vos mots de passe au format .csv pour les réimporter dans un autre outil.",
+        "Attention, cette fonctionnalité n’est pas conçue pour faire une sauvegarde de vos données. Nous vous proposons des mécanismes dédiés et sécurisés pour cela.",
+      ],
+      warningPro:
+        "NB coffres-forts PRO : cette fonctionnalité est désactivée par défaut et ne peut être activée que par un administrateur depuis la console de supervision (voir plus bas).",
+      imageAlt: "Capture d'écran du bouton d'export CSV.",
     },
   },
 };

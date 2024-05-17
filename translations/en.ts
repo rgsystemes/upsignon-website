@@ -27,6 +27,7 @@ const translations: typeof fr = {
       unavailableOn: (p: string) => `Not available on ${p}`,
     },
     techFocus: "Technical focus:",
+    generalSubtitle: "General",
     proPerso: {
       title: "PRO & PERSO vaults",
       summary:
@@ -135,6 +136,7 @@ const translations: typeof fr = {
       details: [
         "PERSO vaults allow you register trusted contacts.",
         "They are other users of UpSignOn with whom you can share accounts and codes and to whom you can entrust backups of your data and master password.",
+        "NB : This feature is not necessary for PRO vaults because sharing and backups work differently.",
       ],
       imageAlt: 'Screenshot of the "Trusted contacts" page.',
     },
@@ -166,7 +168,7 @@ const translations: typeof fr = {
           def: "the recipient has the same rights as you on the shared element and can manage its recipients.",
         },
       },
-      imageAlt: "Capture d'écran de la page de gestion des destinataires d'un dossier partagé.",
+      imageAlt: "Screenshot of the recipients management page of a shared folder.",
     },
     autofillAutosaveSubtitle: "Autofill and autosave",
     autofillDesktop: {
@@ -200,6 +202,46 @@ const translations: typeof fr = {
         "This feature can be activated directly from the Preferences menu of UpSignOn",
       ],
       imageAlt: "Screenshot of a web login forl on Android displaying UpSignOn's autofill interface.",
+    },
+    searchFilterOrganizeSubtitle: "Search, filter, organize",
+    search: {
+      title: "Search by account name, domain name, email, folder name",
+      details: ["The search field helps you find an account quickly in your list. Use it without moderation!"],
+      imageAlt: "Screenshot of a vault showing a search in progress.",
+    },
+    filter: {
+      title: "Filters by type and password strength",
+      details: [
+        "In addition to searching, you can filter you vault by secret type (account or code), by password strength, or display only shared elements. You can also choose to hide elements of the root folder if you have many of them.",
+      ],
+      imageAlt: "Screenshot of the application showing the various filters that are available.",
+    },
+    organize: {
+      title: "Organisation by folders and subfolders",
+      details: [
+        "We all like things to be tidy. Organise your vault using folders. You can include folders within folders with no depth limit.",
+      ],
+      imageAlt: "Screenshot of a vault containing a tree structure of folders and subfolders.",
+    },
+    importExportSubtitle: "Import & Export your data",
+    csvImport: {
+      title: "CSV & XML import",
+      details: [
+        "You have passwords saved in your browser or in another tool? Export them in .csv format and import them into your UpSignOn vault in just a few clicks!",
+        "NB : to transfer your date from KeePass, prefer to use the XML format to preserver the tree structure of your folders.",
+        "Remember to completely erase the CSV (or XML) file once you have finished importing so that your secrets are not accessible in an unprotected format!",
+      ],
+      imageAlt: "Screenshot of the CSV import page.",
+    },
+    csvExport: {
+      title: "CSV export",
+      details: [
+        "If you decide to change tools, you can export your passwords in .csv format at any time and re-import them into another tool.",
+        "Please note that this function is not designed to back up your data. We offer dedicated and secure mechanisms for this purpose.",
+      ],
+      warningPro:
+        "NB PRO vaults: this feature is disabled by default and can only be activated by an administrator from the supervision console (see below).",
+      imageAlt: "Screenshot of the CSV export button.",
     },
   },
 };

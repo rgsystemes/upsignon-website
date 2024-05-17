@@ -16,6 +16,7 @@ export default function Page({ params }: { params: { lang: string } }) {
   return (
     <div className={styles.content}>
       <h1>{t.features.pageTitle}</h1>
+      <h2 className={styles.feature_family_title}>{t.features.generalSubtitle}</h2>
       <FeatureSection
         lang={params.lang}
         title={t.features.proPerso.title}
@@ -204,6 +205,7 @@ export default function Page({ params }: { params: { lang: string } }) {
           </li>
         </ul>
       </FeatureSection>
+
       <h2 className={styles.feature_family_title}>{t.features.autofillAutosaveSubtitle}</h2>
       <FeatureSection
         lang={params.lang}
@@ -245,6 +247,62 @@ export default function Page({ params }: { params: { lang: string } }) {
         imageSrc={passwordScore}
         imageAlt={t.features.autofillAndroid.imageAlt}
       />
+
+      <h2 className={styles.feature_family_title}>{t.features.searchFilterOrganizeSubtitle}</h2>
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.search.title}
+        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        tags={{ pro: true, perso: true }}
+        summary={null}
+        details={t.features.search.details}
+        imageSrc={passwordScore}
+        imageAlt={t.features.search.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.filter.title}
+        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        tags={{ pro: true, perso: true }}
+        summary={null}
+        details={t.features.filter.details}
+        imageSrc={passwordScore}
+        imageAlt={t.features.filter.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.organize.title}
+        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        tags={{ pro: true, perso: true }}
+        summary={null}
+        details={t.features.organize.details}
+        imageSrc={passwordScore}
+        imageAlt={t.features.organize.imageAlt}
+      />
+
+      <h2 className={styles.feature_family_title}>{t.features.importExportSubtitle}</h2>
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.csvImport.title}
+        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        tags={{ pro: true, perso: true }}
+        summary={null}
+        details={t.features.csvImport.details}
+        imageSrc={passwordScore}
+        imageAlt={t.features.csvImport.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.csvExport.title}
+        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        tags={{ pro: true, perso: true }}
+        summary={null}
+        details={t.features.csvExport.details}
+        imageSrc={passwordScore}
+        imageAlt={t.features.csvExport.imageAlt}
+      >
+        <strong>{t.features.csvExport.warningPro}</strong>
+      </FeatureSection>
     </div>
   );
 }
