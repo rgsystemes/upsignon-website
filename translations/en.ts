@@ -48,6 +48,7 @@ const translations: typeof fr = {
       details: [
         "Changes you make on one device are automatically synchronised with your other authorised devices. There is no limit to the number of authorised devices.",
       ],
+      imageAlt: "",
     },
     dataSubtitle: "Manage your passwords, TOTP and bank details",
     unlimitedAccounts: {
@@ -68,6 +69,7 @@ const translations: typeof fr = {
         "Your vault displays the list of your passwords and codes in a fairly condensed way so as to keep the interface simple and suitable for small screens.",
         "You can consult the contents of your information in a very intuitive and ergonomic way without having to change pages. All the actions you might want to perform are at your fingertips. Copy a password, open a site in your browser, consult your notes.",
       ],
+      imageAlt: "Screenshot of an account's quick view",
     },
     passwordStrength: {
       title: "Evaluation of password strength",
@@ -128,16 +130,74 @@ const translations: typeof fr = {
     sharingSubtitle: "Share your login details",
     trustedContacts: {
       title: "(PERSO) Management of trusted contacts",
+      details: [
+        "PERSO vaults allow you register trusted contacts.",
+        "They are other users of UpSignOn with whom you can share accounts and codes and to whom you can entrust backups of your data and master password.",
+      ],
+      imageAlt: 'Screenshot of the "Trusted contacts" page.',
     },
     sharing: {
       title: "Secure sharing with family or colleagues",
+      details: [
+        "Sharing login details between family members or colleagues is a common practice that unfortunately often leads to the use of weak passwords (that everyone knows) and the reuse of the same password on all shared accounts",
+        "UpSignOn allows you to share single identifiers or entire folders with your trusted contacts (PERSO vaults) or with other users of your bank (PRO vaults) simply and securely.",
+        "Shared items are automatically synchronised between different users. There is no limit to the number of items shared or the number of recipients.",
+      ],
+      imageAlt: "Screenshot of a vault containing shared items and folders.",
     },
     rightsManagement: {
-      title: "Rights management (read-only or manager)",
+      title: "Mangement of access level on shared elements",
+      details: [
+        "In the recipients management page of a shared vault, you can grant several levels of access to the recipients of your shared element:",
+      ],
+      rightLevels: {
+        readOnly: {
+          title: "Read only:",
+          def: "the recipient can not change anything in the shared element.",
+        },
+        editor: {
+          title: "Editor:",
+          def: "the recipient can change the content of the shared element.",
+        },
+        owner: {
+          title: "Owner:",
+          def: "the recipient has the same rights as you on the shared element and can manage its recipients.",
+        },
+      },
+      imageAlt: "Capture d'écran de la page de gestion des destinataires d'un dossier partagé.",
     },
     autofillAutosaveSubtitle: "Autofill and autosave",
-    autofillSmartphones: {
-      title: "Autofill on smartphones and tablets",
+    autofillDesktop: {
+      title: "Automatic filling in of forms via the browser extension",
+      details: [
+        "Install our browser extension to have UpSignOn automatically fill out most login forms as you browse the Internet.",
+        "This extension is available for all Chromium browsers (Google Chrome, Microsoft Edge, Brave), for Firefox and for Safari on macOS.",
+        "NB: the Safari extension ships directly with the application, but you need to activate it manually via the Safari Settings menu.",
+      ],
+      imageAlt: "Screenshot of a the UpSignOn extension",
+    },
+    autosaveDesktop: {
+      title: "Automatic saving of passwords via the browser extension",
+      details: [
+        "Our browser extension also detects passwords you manually type and lets you save them directly to your vault effortlessly.",
+      ],
+      imageAlt: "Screenshot of the UpSignOn extension suggesting to save a new password.",
+    },
+    autofillIOS: {
+      title: "Semi-automatic filling in of identifiers on iOS",
+      details: [
+        "UpSignOn integrates with the keyboard to offer you semi-automatic filling in of the identifiers stored in your vault in the login forms you encounter, both when browsing the Internet and in your applications.",
+        'This feature can be activated from the Settings application, menu "Passwords", menu "Password options"',
+      ],
+      imageAlt: "Screenshot of a keyboard on iOS proposing filling in a form using UpSignOn.",
+    },
+    autofillAndroid: {
+      title: "Semi-automatic filling in of identifiers on Android",
+      details: [
+        "UpSignOn integrates with Android to offer you semi-automatic filling in of the identifiers stored in your vault in the login forms you encounter, both when browsing the Internet and in your applications.",
+        "This feature can be activated directly from the Preferences menu of UpSignOn",
+      ],
+      imageAlt: "Screenshot of a web login forl on Android displaying UpSignOn's autofill interface.",
     },
   },
 };

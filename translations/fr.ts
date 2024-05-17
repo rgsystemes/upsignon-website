@@ -46,6 +46,7 @@ const translations = {
       details: [
         "Les modifications que vous faites sur un appareil sont automatiquement synchronisées avec vos autres appareils autorisés. Il n’y a pas de limite au nombre d’appareils autorisés.",
       ],
+      imageAlt: "",
     },
     dataSubtitle: "Gestion de vos mots de passe, TOTP et données bancaires",
     unlimitedAccounts: {
@@ -66,6 +67,7 @@ const translations = {
         "Votre coffre-fort affiche la liste de vos mots de passe et codes de façon assez condensée de façon à garder une interface simple et adaptée aux petits écrans.",
         "Vous pouvez consulter le contenu de vos informations de façon très intuitive et ergonomique sans changer de page. Toutes les actions que vous pourriez vouloir faire sont à portée de main. Copier un mot de passe, ouvrir un site dans votre navigateur, consulter vos notes.",
       ],
+      imageAlt: "Capture d'écran de la vue rapide d'un compte",
     },
     passwordStrength: {
       title: "Évaluation de la force des mots de passe",
@@ -127,16 +129,75 @@ const translations = {
     sharingSubtitle: "Partagez vos identifiants",
     trustedContacts: {
       title: "(PERSO) Gestion de contacts de confiance",
+      details: [
+        "Les coffres-forts PERSO vous permettent d'enregistrer des contacts de confiance.",
+        "Ce sont d'autres utilisateurs d'UpSignOn avec lesquels vous pouvez partager des comptes et des codes et auxquels vous pouvez confier des sauvegardes de vos données et de votre mot de passe maître.",
+      ],
+      imageAlt: 'Capture d\'écran de la page "Contacts de confiance".',
     },
     sharing: {
       title: "Partage sécurisé en famille ou entre collègues",
+      details: [
+        "Le partage d'identifiants entre membres d'une même famille ou entre collègues est une pratique courante qui conduit malheureusement souvent à utiliser des mots de passe faibles (que tout le monde connaît) et à réutiliser le même mot de passe sur tous les comptes partagés.",
+        "UpSignOn vous permet de partager des identifiants uniques ou des dossiers entiers avec vos contacts de confiance (coffres-forts PERSO) ou avec les autres utilisateurs de votre banque (coffres-forts PRO) de façon simple et sécurisée.",
+        "Les éléments partagés se synchronisent automatiquement entre les différents utilisateurs. Il n'y a pas de limite au nombre d'éléments partagés ou au nombre de destinataires.",
+      ],
+      imageAlt: "Capture d'écran d'un coffre-fort contenant des éléments et des dossiers partagés",
     },
     rightsManagement: {
-      title: "Gestion des droits (lecture seule ou gestionnaire)",
+      title: "Gestion de niveau d'accès sur les éléments partagés",
+      details: [
+        "Dans la page de gestion des destinataires d'un coffre-fort partagé, vous pouvez attribuer plusieurs niveaux de droits aux destinataires de votre partage :",
+      ],
+      rightLevels: {
+        readOnly: {
+          title: "Lecture seule :",
+          def: "le destinataire ne peut rien modifier dans l'élément partagé.",
+        },
+        editor: {
+          title: "Éditeur :",
+          def: "le destinataire peut modifier le contenu de l'élément partagé.",
+        },
+        owner: {
+          title: "Propriétaire :",
+          def: "le destinataire a les mêmes droits que vous sur l'élément partagé et peut en administrer les destinataires.",
+        },
+      },
+      imageAlt: "Capture d'écran de la page de gestion des destinataires d'un dossier partagé.",
     },
     autofillAutosaveSubtitle: "Remplissage et enregistrement automatique",
-    autofillSmartphones: {
-      title: "Remplissage automatique sur smartphones et tablettes",
+    autofillDesktop: {
+      title: "Remplissage automatique des formulaires via l'extension de navigateur",
+      details: [
+        "Installez notre extension de navigateur pour qu'UpSignOn remplisse automatiquement la plupart des formulaires de connexion lors de votre navigation sur Internet.",
+        "Cette extension est disponible pour tous les navigateurs Chromium (Google Chrome, Microsoft Edge, Brave), pour Firefox et pour Safari sur MacOS.",
+        "NB : l'extension pour Safari est livrée directement avec l'application, mais vous devez l'activer manuellement via le menu Réglages de Safari.",
+      ],
+      imageAlt: "Capture d'écran de l'extension UpSignOn",
+    },
+    autosaveDesktop: {
+      title: "Enregistrement automatique des mots de passe via l'extension de navigateur",
+      details: [
+        "Notre extension de navigateur détecte également les mots de passe que vous saisissez manuellement et vous permet de les enregistrement directement dans votre coffre-fort sans effort.",
+      ],
+      imageAlt: "Capture d'écran de l'extension UpSignOn proposant l'enregistrement d'un nouveau mot de passe.",
+    },
+    autofillIOS: {
+      title: "Remplissage semi-automatique des identifiants sur iOS",
+      details: [
+        "UpSignOn s'intègre au clavier pour vous proposer le remplissage semi-automatique des identifiants enregistrés dans votre coffre-fort dans les formulaires de connexion que vous rencontrez, aussi bien en naviguant sur internet que dans vos applications.",
+        'Cette fonctionnalité s\'active depuis l\'application Réglages, menu "Mots de passe", menu "Options de mots de passe".',
+      ],
+      imageAlt: "Capture d'écran d'un clavier sur iOS proposant le remplissage d'un formulaire via UpSignOn.",
+    },
+    autofillAndroid: {
+      title: "Remplissage semi-automatique des identifiants sur Android",
+      details: [
+        "UpSignOn s'intègre à Android pour vous proposer le remplissage semi-automatique des identifiants enregistrés dans votre coffre-fort dans les formulaires de connexion que vous rencontrez, aussi bien en naviguant sur internet que dans vos applications.",
+        "Cette fonctionnalité s'active directement depuis la page préférences d'UpSignOn.",
+      ],
+      imageAlt:
+        "Capture d'écran d'un formulaire web sur Android affichant l'interface de remplissage automatique d'UpSignOn.",
     },
   },
 };

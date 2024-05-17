@@ -4,6 +4,7 @@
   font-size: 0.8rem;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .platform_support > div {
   display: inline-flex;
@@ -14,5 +15,6 @@
   margin-right: 0px;
 }
 .platform_support > div svg {
+  flex-shrink: 0;
   margin-right: 5px;
 }

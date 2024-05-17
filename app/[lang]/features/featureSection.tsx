@@ -15,10 +15,6 @@ type Props = {
   } | null;
   summary: string;
   details: string[] | null;
-  techFocus: {
-    title: string;
-    href: string;
-  } | null;
   imageSrc: StaticImageData;
   imageAlt: string;
   children?: ReactNode | null;
@@ -49,7 +45,6 @@ export default function FeatureSection(p: Props) {
           </p>
         ))
       )}
-      {p.techFocus && <TechFocusLink title={p.techFocus.title} href={p.techFocus.href} lang={p.lang} />}
       {p.children}
     </section>
   );
