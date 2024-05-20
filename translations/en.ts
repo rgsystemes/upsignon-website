@@ -11,6 +11,7 @@ const translations: typeof fr = {
       perso: "PERSO",
       availableFor: (pro: boolean) => `Available for ${pro ? "pro" : "perso"} vaults`,
       unavailableFor: (pro: boolean) => `Not available for ${pro ? "pro" : "perso"} vaults`,
+      availableWithWarningFor: (pro: boolean) => `Conditionally available for ${pro ? "pro" : "perso"} vaults`,
     },
     compatibilityTable: {
       summary: "Compatibility table",
@@ -242,6 +243,100 @@ const translations: typeof fr = {
       warningPro:
         "NB PRO vaults: this feature is disabled by default and can only be activated by an administrator from the supervision console (see below).",
       imageAlt: "Screenshot of the CSV export button.",
+    },
+    securityFeaturesSubtitle: "Security features",
+    endToEndEncryption: {
+      title: "End-to-end encryption, zero trust, zero knowledge",
+      summary:
+        "UpSignOn pursues security by design. We apply the principles of zero-trust and zero-knowledge whenever a feature allows it (which is almost all of them).",
+      details: [
+        "Data can only be encrypted and decrypted on your devices. When data passes through our servers - as in the case of synchronisation, sharing, backups - we have no way of reading the content by design.",
+        "PERSO vaults respect the principles of zero-trust and zero knowledge with no exception. We don't even know your email address! This means that we have absolutely no way of helping you recover your vault if you have forgotten your master password and had not set up a master password backup or if you lose all your devices and had not set up a backup of your data. That's the price of security",
+        "PRO vaults are designed to allow team sharing by email address and supervision by your CIO or CISO. This means that certain information is stored on the server and can be read by the administrators (professional email address, password statistics, data identifying your authorised devices). On the other hand, your secrets (passwords, codes, TOTP, notes, bank details, etc.) remain unreadable.",
+      ],
+    },
+    passwordLocking: {
+      title: "Master password locking",
+      details: [
+        "Your master password is the last password you need to remember. It is used to encrypt your data.",
+        "In practical terms, your password is derived into an encryption key which is then used for cryptographic operations. The derivation operation, although almost immediate from the user's point of view, is sufficiently complex to greatly slow down a hacker trying to find your master password by brute force. So, as long as you don't choose a password that is too simple or contains personal information, this system is a very effective protection.",
+      ],
+    },
+    mfaByDesign: {
+      title: "Multi-factor authentication by design",
+      details: [
+        "Unlocking your vault always requires two authentication factors: your master password and an authorised device",
+        "Simply using one of your devices is one first proof of authentication. You only need to enter your master password to unlock your vault.",
+      ],
+    },
+    biometricUnlock: {
+      title: "Biometric unlocking (facial recognition, fingerprint, Windows Hello)",
+      details: [
+        "Save time by activating this option. Biometric unlocking replaces the need to enter your master password.",
+        "Please note that you will still need to enter your master password to enrol a new device or to use the option to recover your data from a backup with a trusted contact.",
+        "NB: on Windows, this option activates Windows Hello. This means that any Windows Hello unlock option will work to unlock your vault.",
+      ],
+    },
+    forgottenPassword: {
+      title: "Forgotten password",
+      details: [
+        "UpSignOn incorporates secure mechanisms to allow you to reset your master password if you forget it. This mechanisms only work from an authorised device.",
+        "For PRO vaults, this mechanism is activated on each authorised device after the master password is first entered on the device and cannot be deactivated. If you forget your master password, the reset request must be validated by an administrator of your bank.",
+        "For PERSO vaults, you must manually activate this option with one or more trusted contact(s). If you forget your master password, one of these trusted contacts can help you reset it.",
+        "In both cases, neither the PRO administrator nor the trusted contact is able to recover your password.",
+      ],
+    },
+    deviceRevocation: {
+      title: "Device management and revocation",
+      summary:
+        'The "Synchronised devices" page lets you view the list of all your authorised devices and, if necessary, revoke them remotely.',
+      details: [
+        "A revoked device will no longer receive changes about your vault.’",
+        "In the PRO case, the device will automatically delete its local data the next time you open the application.",
+        "In the PERSO case, your vault will remain available in read-only mode on this device to prevent you from losing your entire vault if the person who steals your unlocked device revokes your other devices. You always have the option of exporting your data in CSV format and re-importing it into a new vault. In all cases, whether you are on the revoking device or on the revoked device, you need to change all your passwords.",
+      ],
+      imageAlt: "Screenshot of the synchronised devices page",
+    },
+    offlineAcess: {
+      title: "Offline access",
+      summary: "Even without internet access, you always have access to your data!",
+      details: [
+        "By design, PERSO vaults are accessible offline on all your devices. If you make a change to your vault while offline, this change will be saved on your device and will be synchronised when the connection is available again.",
+        "PRO vaults are designed in cloud mode. By default, your data is also accessible offline from your authorised devices, but administrators can disable this behaviour from the supervision console.",
+      ],
+      techFocusTitle: "Design principles of PERSO and PRO vaults.",
+      imageAlt: "Screenshot of a PRO vault in offline mode.",
+    },
+    dataBackup: {
+      title: "Data backup",
+      summary: "Recover access to your vault even if you no longer have access to any of your authorised devices.",
+      details: [
+        "In PRO mode, you can simply register a new device.",
+        "In PERSO mode, you can manually set up a backup with one of your trusted contacts, which is highly recommended.",
+        "In both cases, you will need to enter your master password to recover your vault so that no one else can use the recovery method.",
+      ],
+    },
+    autolock: {
+      title: "Automatic locking",
+      details: [
+        "When the application is in the background or minimized, UpSignOn locks your vault after a default delay of 30 seconds on smartphone and 5 minutes on computer unless you reopen the application or perform an action in the browser extension. This locking time can be set vault by vault and device by device",
+        "UpSignOn can also lock your vault automatically when your screen or user session is locked.",
+      ],
+      byPlatformBehaviourTable: {
+        title: "Here are the details of the automatic locking behaviour by platform:",
+        header: {
+          platform: "Platform",
+          onInactivityBackground: "Inactivity timeout in background",
+          onInactivityMinimized: "Inactivity timeout in reduced window",
+          onSessionLock: "On session lock",
+          onScreenLock: "On screen lock",
+        },
+        yesAlways: "YES (always)",
+        yesOptional: "YES (optional)",
+        minutesDefaultDesktop: "5 minutes by default",
+        minutesDefaultMobile: "30 seconds by default",
+      },
+      imageAlt: "Screenshot of the automatic locking configuration menu",
     },
   },
 };

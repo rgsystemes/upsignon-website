@@ -1,0 +1,16 @@
+.autolock_behaviour_container {
+  background-color: white;
+  max-width: 100%;
+  overflow: auto;
+}
+.autolock_behaviour_container table {
+  overflow: scroll;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid black;
+}
+.autolock_behaviour_container th,
+.autolock_behaviour_container td {
+  border: 1px solid black;
+  padding: 5px;
+}

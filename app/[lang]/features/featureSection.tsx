@@ -10,12 +10,12 @@ type Props = {
   title: string;
   platforms: TPlatforms;
   tags: {
-    pro: boolean;
-    perso: boolean;
+    pro: "yes" | "no" | "warning";
+    perso: "yes" | "no" | "warning";
   } | null;
   summary: string;
   details: string[] | null;
-  imageSrc: StaticImageData;
+  imageSrc: StaticImageData | null;
   imageAlt: string;
   children?: ReactNode | null;
 };
@@ -26,16 +26,20 @@ export default function FeatureSection(p: Props) {
       <h2>{p.title}</h2>
       {p.platforms && <FeaturePlatforms platforms={p.platforms} lang={p.lang} />}
       <ProPersoTags pro={p.tags?.pro} perso={p.tags?.perso} lang={p.lang} />
-      <Image
-        src={p.imageSrc}
-        alt={p.imageAlt}
-        style={{ width: "auto", height: "auto", maxHeight: 450, margin: "auto" }}
-      />
+      {p.imageSrc && (
+        <Image
+          src={p.imageSrc}
+          alt={p.imageAlt}
+          style={{ width: "auto", height: "auto", maxHeight: 450, margin: "auto" }}
+        />
+      )}
       {p.summary ? (
         <details>
           <summary>{p.summary}</summary>
           {p.details.map((d, id) => (
-            <p key={id}>{d}</p>
+            <p key={id} className={styles.p}>
+              {d}
+            </p>
           ))}
         </details>
       ) : (

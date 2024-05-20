@@ -9,6 +9,8 @@ const translations = {
       perso: "PERSO",
       availableFor: (pro: boolean) => `Disponible pour les coffres-forts ${pro ? "pro" : "perso"}`,
       unavailableFor: (pro: boolean) => `Non disponible pour les coffres-forts ${pro ? "pro" : "perso"}`,
+      availableWithWarningFor: (pro: boolean) =>
+        `Disponible sous-condition pour les coffres-forts ${pro ? "pro" : "perso"}`,
     },
     compatibilityTable: {
       summary: "Table de compatibilité",
@@ -244,6 +246,101 @@ const translations = {
       warningPro:
         "NB coffres-forts PRO : cette fonctionnalité est désactivée par défaut et ne peut être activée que par un administrateur depuis la console de supervision (voir plus bas).",
       imageAlt: "Capture d'écran du bouton d'export CSV.",
+    },
+    securityFeaturesSubtitle: "Fonctionnalités de sécurité",
+    endToEndEncryption: {
+      title: "Chiffrement de bout en bout, confiance nulle, connaissance nulle",
+      summary:
+        "UpSignOn recherche la sécurité par conception. Nous appliquons les principes de confiance et de connaissance nulle dès qu'une fonctionnalité le permet (c'est-à-dire presque toutes).",
+      details: [
+        "Les données ne peuvent être chiffrées et déchiffrées que sur vos appareils. Lorsque les données transitent par nos serveurs - comme par exemple dans les cas de la synchronisation, du partage, des sauvegardes - nous n'avons aucun moyen d'en lire le contenu par conception.",
+        "Les coffres-forts PERSO respectent les principes de confiance et de connaissance nulle sans exception. Nous ne connaissons même pas votre adresse email ! Cela implique que nous n'avons absolument aucun moyen de vous aider à récupérer votre coffre-fort si vous avez oublié votre mot de passe maître et n'aviez pas configuré de sauvegarde de mot de passe maître ou si vous perdez tous vos appareils et n'aviez pas configuré de sauvegarde de vos données. C'est le prix de la sécurité.",
+        "Les coffres-forts PRO sont conçus pour permettre le partage en équipe par adresse email et la supervision par votre DSI ou RSSI. Cela implique que certaines informations sont enregistrées sur le serveur et sont lisibles par les administrateurs (adresse email profesionnelle, statistiques sur vos mots de passe, données permettant d'identifier vos appareils autorisés). En revanche vos secrets (mots de passe, codes, TOTP, notes, coordonnées bancaires) restent illisibles.",
+      ],
+    },
+    passwordLocking: {
+      title: "Verrouillage par mot de passe maître",
+      details: [
+        "Votre mot de passe maître est le dernier mot de passe que vous devez retenir. C'est grâce à lui que sont chiffrées vos données.",
+        "Concrètement, votre mot de passe est dérivé en une clé de chiffrement qui est ensuite utilisée pour les opérations cryptographiques. L'opération de dérivation, bien que quasiment immédiate du point de vue de l'utilisateur, est suffisamment complexe pour ralentir fortement un piate qui tenterait de trouver votre mot de passe maître par force brute. Donc, du moment que vous ne choisissez pas un mot de passe trop simple ou contenant des informations personnelles, ce système est une protection très efficace.",
+      ],
+    },
+    mfaByDesign: {
+      title: "Authentification multi-facteurs par conception",
+      details: [
+        "Le déverrouillage de votre coffre-fort nécessite toujours deux facteurs d'authentification : votre mot de passe maître et un appareil autorisé.",
+        "Le simple fait d'utiliser l'un de vos appareils est une première preuve d'authentification. Vous n'avez besoin que de saisir votre mot de passe maître pour déverrouiller votre coffre-fort.",
+      ],
+    },
+    biometricUnlock: {
+      title: "Déverrouillage biométrique (reconnaissance faciale, empreinte digitale, Windows Hello)",
+      details: [
+        "Gagnez du temps en activant cette option. Le déverrouillage biométrique remplace la saisie de votre mot de passe maître.",
+        "Attention, la saisie de votre mot de passe maître restera obligatoire pour l'enrollement d'un nouvel appareil ou pour utiliser l'option de récupération de vos données à partir d'une sauvegarde chez un contact de confiance.",
+        "NB : sur Windows, cette option active Windows Hello. Cela signifie que n'importe quelle option de déverrouillage de Windows Hello fonctionnera pour déverrouiller votre coffre-fort.",
+      ],
+    },
+    forgottenPassword: {
+      title: "Mot de passe oublié",
+      details: [
+        "UpSignOn intègre des mécanismes sécurisés pour vous permettre de réinitialiser votre mot de passe maître en cas d'oubli. Attention, ces mécanismes ne fonctionnent qu'à partir d'un appareil autorisé.",
+        "Pour les coffres-forts PRO, ce mécanisme s'active sur chaque appareil autorisé après la première saisie du mot de passe maître sur l'appareil et ne peut pas être désactivé. En cas d'oubli de votre mot de passe maître, la demande de réinitialisation doit être validée un administrateur de votre banque.",
+        "Pour les coffres-forts PERSO, vous devez manuellement activer cette option auprès d'un ou plusieurs contact(s) de confiance. En cas d'oubli de votre mot de passe maître, l'un de ces contacts de confiance peut vous aider à le réinitialiser.",
+        "Dans les deux cas, ni l'administrateur PRO ni le contact de confiance n'est en mesure de récupérer votre mot de passe.",
+      ],
+    },
+    deviceRevocation: {
+      title: "Gestion et révocation des appareils",
+      summary:
+        'La page "Appareils synchronisés" vous permet de consulter la liste de tous vos appareils autorisés et si besoin de les révoquer à distance.',
+      details: [
+        "Un appareil révoqué ne recevra plus les modifications de votre coffre-fort.",
+        "Dans le cas PRO, l'appareil auto-effacera ses données locales à la prochaine ouverture de l'application.",
+        "Dans le cas PERSO, votre coffre-fort restera disponible en lecture seule sur cet appareil pour éviter que vous ne perdiez tout votre coffre-fort si la personne qui vous vole votre appareil déverrouillé révoquait vos autres appareils. Ainsi, vous avez toujours la possibilité d'exporter vos données au format CSV et de les réimporter dans un nouveau coffre-fort. Dans tous les cas, que vous soyiez sur l'appareil qui révoque ou sur l'appareil révoqué, le changement de tous vos mots de passe s'impose.",
+      ],
+      imageAlt: "Capture d'écran de la page des appareils synchronisés",
+    },
+    offlineAcess: {
+      title: "Accès hors-connexion",
+      summary: "Même sans accès à internet, vous avez toujours accès à vos données !",
+      details: [
+        "Par conception, les coffres-forts PERSO sont accessibles hors-connexion sur tous vos appareils. Si vous effectuez une modification sur votre coffre-fort en étant hors-ligne, cette modification sera enregistrée sur votre appareil et sera synchronisée lorsque la connexion sera à nouveau disponible.",
+        "Les coffres-forts PRO sont conçus en mode cloud. Par défaut, vos données sont également accessibles hors-ligne depuis vos appareils autorisés, mais les administrateurs peuvent désactiver ce comportement depuis la console de supervision.",
+      ],
+      techFocusTitle: "Principes de fonctionnement des coffres-forts PERSO et PRO.",
+      imageAlt: "Capture d'écran d'un coffre-fort PRO en mode hors-ligne.",
+    },
+    dataBackup: {
+      title: "Sauvegarde de secours",
+      summary:
+        "Récupérez l'accès à votre coffre-fort même si vous n'avez plus accès à aucun de vos appareils autorisés.",
+      details: [
+        "En mode PRO, vous pouvez simplement réenroller un nouvel appareil.",
+        "En mode PERSO, vous pouvez manuellement configurer une sauvegarde auprès de l'un de vos contacts de confiance, ce qui est fortement recommandé.",
+        "Dans les deux cas, la récupération de votre coffre-fort nécessite la saisie de votre mot de passe maître pour que personne d'autre ne puisse utiliser la fonction de récupération.",
+      ],
+    },
+    autolock: {
+      title: "Verrouillage automatique",
+      details: [
+        "Lorsque l’application est en arrière-plan ou minimisée, UpSignOn verrouille votre coffre-fort au bout d’un délai par défaut de 30 secondes sur smartphone et de 5 minutes sur ordinateur sauf si vous réouvrez l’application ou si vous effectuez une action dans l’extension de navigateur. Ce délai de verrouillage est paramétrable coffre-fort par coffre-fort et appareil par appareil.",
+        "UpSignOn peut également en option verrouiller automatiquement votre coffre-fort lorsque votre écran ou votre session utilisateur est verrouillée.",
+      ],
+      byPlatformBehaviourTable: {
+        title: "Voici le détail du comportement du verrouillage automatique par plateforme :",
+        header: {
+          platform: "Plateforme",
+          onInactivityBackground: "Délai d'inactivité en arrière-plan",
+          onInactivityMinimized: "Délai d'inactivité en fenêtre réduite",
+          onSessionLock: "Au verrouillage de la session",
+          onScreenLock: "Au verrouillage de l'écran",
+        },
+        yesAlways: "OUI (toujours)",
+        yesOptional: "OUI (optionnel)",
+        minutesDefaultDesktop: "5 minutes par défaut",
+        minutesDefaultMobile: "30 secondes par défaut",
+      },
+      imageAlt: "Capture d'écran du menu de configuration du verrouillage automatique.",
     },
   },
 };
