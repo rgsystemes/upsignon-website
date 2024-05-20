@@ -11,7 +11,7 @@ const translations: typeof fr = {
       perso: "PERSO",
       availableFor: (pro: boolean) => `Available for ${pro ? "pro" : "perso"} vaults`,
       unavailableFor: (pro: boolean) => `Not available for ${pro ? "pro" : "perso"} vaults`,
-      availableWithWarningFor: (pro: boolean) => `Conditionally available for ${pro ? "pro" : "perso"} vaults`,
+      availableWithWarningFor: (pro: boolean) => `Partial support or optional for ${pro ? "pro" : "perso"} vaults`,
     },
     compatibilityTable: {
       summary: "Compatibility table",
@@ -26,6 +26,7 @@ const translations: typeof fr = {
     featurePlatforms: {
       availableOn: (p: string) => `Available on ${p}`,
       unavailableOn: (p: string) => `Not available on ${p}`,
+      availableWithWarningFor: (p: string) => `Conditionally available on ${p}`,
     },
     techFocus: "Technical focus:",
     generalSubtitle: "General",
@@ -338,6 +339,32 @@ const translations: typeof fr = {
       },
       imageAlt: "Screenshot of the automatic locking configuration menu",
     },
+    protectedClipboard: {
+      title: "Secure clipboard",
+      details: [
+        "UpSignOn lets you copy the information you store on it so you can easily paste it wherever you need it. To limit the risk of sensitive data being retrieved without your knowledge by a malicious application or site, UpSignOn automatically deletes the clipboard after 45 seconds (except on Android).",
+        "You can deactivate this protection from within the application.",
+        "Please note that the exact behaviour of this feature differs depending on the platform and operating system version (see the link below for details).",
+      ],
+    },
+  },
+  techResources: {
+    protectedClipboardBehaviour: {
+      title: "Details of how the secure clipboard works",
+      ios: "Sensitive information added to the clipboard is automatically deleted after 45 seconds, even if the application is turned off.",
+      desktop:
+        "Sensitive information added to the clipboard is automatically deleted after 45 seconds, provided the app is not turned off (it can be minimized or in the background).",
+      android: {
+        intro:
+          "Android's clipboard contains around twenty history items. What's more, Android doesn't allow you to target the information to be deleted. We have therefore made the following design choices:",
+        intro_1: "clipboard protection is disabled by default on Android;",
+        intro_2:
+          "when the user decides to enable it, the entire clipboard history is erased after 45 seconds and the most recent item gets the value “UpSignOn security” to remind the user why their history has disappeared;",
+        intro_3:
+          "as of Android N, information added to the clipboard by UpSignOn is marked “sensitive”, which tells Android not to display it on the screen when using the clipboard.",
+        remark:
+          "Note that the application does not have to be completely closed for this to work. It can, however, be in the background.",
+      },
+    },
   },
 };
-export default translations;

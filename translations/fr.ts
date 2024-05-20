@@ -10,7 +10,7 @@ const translations = {
       availableFor: (pro: boolean) => `Disponible pour les coffres-forts ${pro ? "pro" : "perso"}`,
       unavailableFor: (pro: boolean) => `Non disponible pour les coffres-forts ${pro ? "pro" : "perso"}`,
       availableWithWarningFor: (pro: boolean) =>
-        `Disponible sous-condition pour les coffres-forts ${pro ? "pro" : "perso"}`,
+        `Support partiel ou optionnel pour les coffres-forts ${pro ? "pro" : "perso"}`,
     },
     compatibilityTable: {
       summary: "Table de compatibilité",
@@ -25,6 +25,7 @@ const translations = {
     featurePlatforms: {
       availableOn: (p: string): string => `Disponible sur ${p}`,
       unavailableOn: (p: string): string => `Non disponible sur ${p}`,
+      availableWithWarningFor: (p: string): string => `Disponible sous conditions sur ${p}`,
     },
     techFocus: "Focus technique :",
     generalSubtitle: "Généralités",
@@ -341,6 +342,33 @@ const translations = {
         minutesDefaultMobile: "30 secondes par défaut",
       },
       imageAlt: "Capture d'écran du menu de configuration du verrouillage automatique.",
+    },
+    protectedClipboard: {
+      title: "Presse-papier sécurisé",
+      details: [
+        "UpSignOn vous permet de copier les informations que vous y stockez pour pouvoir les coller facilement là où vous en avez besoin. Afin de limiter le risque que des données sensibles ne soient récupérées à votre insu par une application ou un site malveillant, UpSignOn efface le presse-papier automatiquement au bout de 45 secondes (sauf sur Android).",
+        "Vous avez la possibilité de désactiver cette protection depuis l’application.",
+        "Attention, le comportement exact de cette fonctionnalité diffère selon les plateformes et les versions de système d’exploitation (détails de fonctionnement dans le lien ci-dessous).",
+      ],
+    },
+  },
+  techResources: {
+    protectedClipboardBehaviour: {
+      title: "Détail de fonctionnement du presse-papier sécurisé",
+      ios: "L’information sensible ajoutée au presse-papier s’efface automatiquement au bout de 45 secondes, même si l’application est éteinte.",
+      desktop:
+        "L’information sensible ajoutée au presse-papier s’efface automatiquement au bout de 45 secondes, sous réserve que l’application ne soit pas éteinte (elle peut être minimisée ou en arrière plan).",
+      android: {
+        intro:
+          "Le presse-papier d’Android contient une vingtaine d’éléments d’historique. Par ailleurs, Android ne permet pas de cibler l’information à effacer. Nous avons donc fait les choix de conception suivants :",
+        intro_1: "la protection du presse-papier est désactivée par défaut sur Android ;",
+        intro_2:
+          "lorsque l’utilisateur décide de l’activer, l’historique entier du presse-papier est effacé au bout de 45 secondes et l’élément le plus récent obtient la valeur “UpSignOn security” afin de rappeler à l’utilisateur pourquoi son historique a disparu ;",
+        intro_3:
+          "à partir d’Android N, les informations ajoutées au presse-papier par UpSignOn sont marquées “sensibles”, ce qui indique à Android de ne pas les afficher à l’écran lors de l’utilisation du presse-papier.",
+        remark:
+          "Notez que l’application ne doit pas être complètement fermée pour que cela fonctionne. Elle peut en revanche être en arrière plan.",
+      },
     },
   },
 };

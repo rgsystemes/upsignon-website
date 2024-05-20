@@ -21,7 +21,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.proPerso.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={null}
         summary={t.features.proPerso.summary}
         details={t.features.proPerso.details}
@@ -49,7 +49,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.syncing.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.syncing.details}
@@ -60,7 +60,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.unlimitedAccounts.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.unlimitedAccounts.details}
@@ -70,7 +70,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.unlimitedCodes.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.unlimitedCodes.details}
@@ -80,7 +80,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.quickView.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.quickView.details}
@@ -90,7 +90,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.passwordStrength.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={t.features.passwordStrength.summary} // TODO link to article
         details={t.features.passwordStrength.details}
@@ -100,7 +100,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.passwordGenerator.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={t.features.passwordGenerator.summary}
         details={t.features.passwordGenerator.details}
@@ -110,7 +110,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.passwordHistory.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.passwordHistory.details}
@@ -120,7 +120,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.multiUrls.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.multiUrls.details}
@@ -130,7 +130,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.notes.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.notes.details}
@@ -140,7 +140,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.totp.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.totp.details}
@@ -153,7 +153,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.paymentData.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.paymentData.details}
@@ -164,7 +164,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.trustedContacts.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "no", perso: "yes" }}
         summary={null}
         details={t.features.trustedContacts.details}
@@ -174,7 +174,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.sharing.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.sharing.details}
@@ -184,7 +184,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.rightsManagement.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.rightsManagement.details}
@@ -211,7 +211,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.autofillDesktop.title}
-        platforms={{ ios: false, android: false, windows: true, macos: true, linux: false, chromeos: false }}
+        platforms={{ ios: "no", android: "no", windows: "yes", macos: "yes", linux: "no", chromeos: "no" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.autofillDesktop.details}
@@ -221,7 +221,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.autosaveDesktop.title}
-        platforms={{ ios: false, android: false, windows: true, macos: true, linux: false, chromeos: false }}
+        platforms={{ ios: "no", android: "no", windows: "yes", macos: "yes", linux: "no", chromeos: "no" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.autosaveDesktop.details}
@@ -231,7 +231,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.autofillIOS.title}
-        platforms={{ ios: true, android: false, windows: false, macos: false, linux: false, chromeos: false }}
+        platforms={{ ios: "yes", android: "no", windows: "no", macos: "no", linux: "no", chromeos: "no" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.autofillIOS.details}
@@ -241,7 +241,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.autofillAndroid.title}
-        platforms={{ ios: false, android: true, windows: false, macos: false, linux: false, chromeos: false }}
+        platforms={{ ios: "no", android: "yes", windows: "no", macos: "no", linux: "no", chromeos: "no" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.autofillAndroid.details}
@@ -253,7 +253,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.search.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.search.details}
@@ -263,7 +263,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.filter.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.filter.details}
@@ -273,7 +273,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.organize.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.organize.details}
@@ -285,7 +285,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.csvImport.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.csvImport.details}
@@ -295,7 +295,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.csvExport.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.csvExport.details}
@@ -309,7 +309,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.endToEndEncryption.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={t.features.endToEndEncryption.summary}
         details={t.features.endToEndEncryption.details}
@@ -320,7 +320,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.passwordLocking.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.passwordLocking.details}
@@ -331,7 +331,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.mfaByDesign.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.mfaByDesign.details}
@@ -342,7 +342,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.biometricUnlock.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: false, chromeos: false }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "no", chromeos: "no" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.biometricUnlock.details}
@@ -352,7 +352,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.forgottenPassword.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "warning" }}
         summary={null}
         details={t.features.forgottenPassword.details}
@@ -362,7 +362,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.deviceRevocation.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={t.features.deviceRevocation.summary}
         details={t.features.deviceRevocation.details}
@@ -372,7 +372,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.offlineAcess.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={t.features.offlineAcess.summary}
         details={t.features.offlineAcess.details}
@@ -388,7 +388,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.dataBackup.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "warning" }}
         summary={t.features.dataBackup.summary}
         details={t.features.dataBackup.details}
@@ -398,7 +398,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.autolock.title}
-        platforms={{ ios: true, android: true, windows: true, macos: true, linux: true, chromeos: true }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
         details={t.features.autolock.details}
@@ -406,6 +406,22 @@ export default function Page({ params }: { params: { lang: string } }) {
         imageAlt={t.features.autolock.imageAlt}
       >
         <AutolockBehaviourTable lang={params.lang} />
+      </FeatureSection>
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.protectedClipboard.title}
+        platforms={{ ios: "yes", android: "warning", windows: "yes", macos: "yes", linux: "yes", chromeos: "warning" }}
+        tags={{ pro: "yes", perso: "yes" }}
+        summary={null}
+        details={t.features.autolock.details}
+        imageSrc={null}
+        imageAlt={t.features.autolock.imageAlt}
+      >
+        <TechFocusLink
+          title={t.techResources.protectedClipboardBehaviour.title}
+          href="/resources/technical-details/protected-clipboard-behaviour"
+          lang={params.lang}
+        />
       </FeatureSection>
     </div>
   );

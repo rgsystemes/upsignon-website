@@ -53,6 +53,12 @@ export default function CompatibilityTable({ lang }: { lang: string }) {
               <td>{t.features.compatibilityTable.untested}</td>
               <td>x64, Arm64</td>
             </tr>
+            <tr>
+              <td>Chrome OS (Android)</td>
+              <td>{t.features.compatibilityTable.untested}</td>
+              <td>{t.features.compatibilityTable.untested}</td>
+              <td>?</td>
+            </tr>
           </tbody>
         </table>
       </div>
