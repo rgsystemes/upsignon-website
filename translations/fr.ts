@@ -31,9 +31,8 @@ const translations = {
     generalSubtitle: "Généralités",
     proPerso: {
       title: "Coffres-forts PRO & PERSO",
-      summary:
-        "UpSignOn vous propose deux types de coffres-forts, tous les deux semblables dans leur interface utilisateur, mais différents techniquement.",
       details: [
+        "UpSignOn vous propose deux types de coffres-forts, tous les deux semblables dans leur interface utilisateur, mais différents techniquement.",
         "Le coffre-fort PERSO est conçu pour votre usage privé, non professionnel. Il est totalement sécurisé et privé par conception. En revanche, son système de partage de secrets n’est pas adapté aux équipes de plus de quelques personnes.",
         "Les coffres-forts PRO sont proposés par votre employeur ou responsable de la sécurité informatique pour vous donner les moyens d’atteindre 100% de mots de passe forts et uniques. Votre DSI ou RSSI peut suivre l’avancement de cet objectif depuis la console de supervision qui lui donne accès à la force des mots de passe enregistrés dans les coffres-forts PRO. Cette console ne donne bien sûr pas accès à vos mots de passe et autres secrets directement. Par ailleurs, avec les coffres-forts PRO, il vous sera beaucoup plus facile de partager des secrets avec vos collègues en saisissant simplement leur adresse email.",
       ],
@@ -77,9 +76,8 @@ const translations = {
     },
     passwordStrength: {
       title: "Évaluation de la force des mots de passe",
-      summary:
-        "Enregistrer vos mots de passe dans un coffre pour ne pas les oublier, c’est bien, mais utiliser des mots de passe forts et uniques, c’est mieux ! Lisez notre article sur le sujet.",
       details: [
+        "Enregistrer vos mots de passe dans un coffre pour ne pas les oublier, c’est bien, mais utiliser des mots de passe forts et uniques, c’est mieux ! Lisez notre article sur le sujet.",
         "UpSignOn calcul un score de sécurité sur chacun de vos mots de passe (rouge, orange ou vert). Ce score tient compte d’une part de la résistance intrinsèque du mot de passe à une tentative d’extraction, et d’autre part du nombre d’occurrences du même mot de passe dans vos autres comptes. (Plus de détails techniques ici).",
         "Les mots de passe qui méritent d’être changés vont apparaître en rouge ou en orange dans votre coffre-fort. Passez tous vos mots de passe en vert. Ce n’est pas un gros effort mais cela aura un énorme impact positif sur votre cyber-sécurité !",
       ],
@@ -87,9 +85,8 @@ const translations = {
     },
     passwordGenerator: {
       title: "Générateur de mots de passe et de phrases de passe",
-      summary:
-        "Pour vraiment renforcer vos mots de passe, l’idéal est d’utiliser des mots de passe aléatoires, générés par UpSignOn.",
       details: [
+        "Pour vraiment renforcer vos mots de passe, l’idéal est d’utiliser des mots de passe aléatoires, générés par UpSignOn.",
         "UpSignOn vous permet donc de générer plusieurs types de mots de passe aléatoires en vous laissant choisir leur longueur. L’ANSSI recommande désormais au moins 12 caractères. UpSignOn est paramétré par défaut sur 16 caractères mais surtout n’hésitez pas à augmenter cette longueur, votre mot de passe n’en sera que plus robuste.",
         "UpSignOn vous propose également un générateur de phrases de passe, c’est-à-dire une suite de mots choisis au hasard dans le dictionnaire. L’intérêt d’une phrase de passe est qu’il y a beaucoup de caractères (donc c’est très résistant), tout en étant relativement facile à mémoriser. Nous vous conseillons d’utiliser une phrase de passe notamment pour votre session Windows / Apple et pour votre mot de passe maître de coffre-fort.",
       ],
@@ -251,9 +248,8 @@ const translations = {
     securityFeaturesSubtitle: "Fonctionnalités de sécurité",
     endToEndEncryption: {
       title: "Chiffrement de bout en bout, confiance nulle, connaissance nulle",
-      summary:
-        "UpSignOn recherche la sécurité par conception. Nous appliquons les principes de confiance et de connaissance nulle dès qu'une fonctionnalité le permet (c'est-à-dire presque toutes).",
       details: [
+        "UpSignOn recherche la sécurité par conception. Nous appliquons les principes de confiance et de connaissance nulle dès qu'une fonctionnalité le permet (c'est-à-dire presque toutes).",
         "Les données ne peuvent être chiffrées et déchiffrées que sur vos appareils. Lorsque les données transitent par nos serveurs - comme par exemple dans les cas de la synchronisation, du partage, des sauvegardes - nous n'avons aucun moyen d'en lire le contenu par conception.",
         "Les coffres-forts PERSO respectent les principes de confiance et de connaissance nulle sans exception. Nous ne connaissons même pas votre adresse email ! Cela implique que nous n'avons absolument aucun moyen de vous aider à récupérer votre coffre-fort si vous avez oublié votre mot de passe maître et n'aviez pas configuré de sauvegarde de mot de passe maître ou si vous perdez tous vos appareils et n'aviez pas configuré de sauvegarde de vos données. C'est le prix de la sécurité.",
         "Les coffres-forts PRO sont conçus pour permettre le partage en équipe par adresse email et la supervision par votre DSI ou RSSI. Cela implique que certaines informations sont enregistrées sur le serveur et sont lisibles par les administrateurs (adresse email profesionnelle, statistiques sur vos mots de passe, données permettant d'identifier vos appareils autorisés). En revanche vos secrets (mots de passe, codes, TOTP, notes, coordonnées bancaires) restent illisibles.",
@@ -267,7 +263,7 @@ const translations = {
       ],
     },
     mfaByDesign: {
-      title: "Authentification multi-facteurs par conception",
+      title: "Authentification multi-facteurs (MFA) par conception",
       details: [
         "Le déverrouillage de votre coffre-fort nécessite toujours deux facteurs d'authentification : votre mot de passe maître et un appareil autorisé.",
         "Le simple fait d'utiliser l'un de vos appareils est une première preuve d'authentification. Vous n'avez besoin que de saisir votre mot de passe maître pour déverrouiller votre coffre-fort.",
@@ -292,9 +288,8 @@ const translations = {
     },
     deviceRevocation: {
       title: "Gestion et révocation des appareils",
-      summary:
-        'La page "Appareils synchronisés" vous permet de consulter la liste de tous vos appareils autorisés et si besoin de les révoquer à distance.',
       details: [
+        'La page "Appareils synchronisés" vous permet de consulter la liste de tous vos appareils autorisés et si besoin de les révoquer à distance.',
         "Un appareil révoqué ne recevra plus les modifications de votre coffre-fort.",
         "Dans le cas PRO, l'appareil auto-effacera ses données locales à la prochaine ouverture de l'application.",
         "Dans le cas PERSO, votre coffre-fort restera disponible en lecture seule sur cet appareil pour éviter que vous ne perdiez tout votre coffre-fort si la personne qui vous vole votre appareil déverrouillé révoquait vos autres appareils. Ainsi, vous avez toujours la possibilité d'exporter vos données au format CSV et de les réimporter dans un nouveau coffre-fort. Dans tous les cas, que vous soyiez sur l'appareil qui révoque ou sur l'appareil révoqué, le changement de tous vos mots de passe s'impose.",
@@ -303,8 +298,8 @@ const translations = {
     },
     offlineAcess: {
       title: "Accès hors-connexion",
-      summary: "Même sans accès à internet, vous avez toujours accès à vos données !",
       details: [
+        "Même sans accès à internet, vous avez toujours accès à vos données !",
         "Par conception, les coffres-forts PERSO sont accessibles hors-connexion sur tous vos appareils. Si vous effectuez une modification sur votre coffre-fort en étant hors-ligne, cette modification sera enregistrée sur votre appareil et sera synchronisée lorsque la connexion sera à nouveau disponible.",
         "Les coffres-forts PRO sont conçus en mode cloud. Par défaut, vos données sont également accessibles hors-ligne depuis vos appareils autorisés, mais les administrateurs peuvent désactiver ce comportement depuis la console de supervision.",
       ],
@@ -312,10 +307,9 @@ const translations = {
       imageAlt: "Capture d'écran d'un coffre-fort PRO en mode hors-ligne.",
     },
     dataBackup: {
-      title: "Sauvegarde de secours",
-      summary:
-        "Récupérez l'accès à votre coffre-fort même si vous n'avez plus accès à aucun de vos appareils autorisés.",
+      title: "Sauvegarde & récupération du coffre-fort",
       details: [
+        "Récupérez l'accès à votre coffre-fort même si vous n'avez plus accès à aucun de vos appareils autorisés.",
         "En mode PRO, vous pouvez simplement réenroller un nouvel appareil.",
         "En mode PERSO, vous pouvez manuellement configurer une sauvegarde auprès de l'un de vos contacts de confiance, ce qui est fortement recommandé.",
         "Dans les deux cas, la récupération de votre coffre-fort nécessite la saisie de votre mot de passe maître pour que personne d'autre ne puisse utiliser la fonction de récupération.",
@@ -363,7 +357,7 @@ const translations = {
     supervisionGeneralExplanation:
       "Dans une interface de navigateur, les DSI et RSSI peuvent suivre le déploiement et l'utilisation des coffres-forts UpSignOn PRO de leurs utilisateurs, ainsi que configurer et contrôler certaines fonctionnalités de sécurité.",
     bankManagement: {
-      title: "Gestion des banques de coffres-forts",
+      title: "Gestion des banques de coffres-forts (superadmin)",
       details: [
         "Une banque UpSignOn PRO est un groupe de coffres-forts isolés. Les utilisateurs ne peuvent partager des secrets qu'avec d'autres utilisateurs de la même banque.",
         "Vous pouvez être administrateur de plusieurs banques. Si vous êtes superadministrateur (cas de l'auto-hébergement uniquement), vous pouvez gérer vous-mêmes la création de banques, ce qui est utile dans le cas de grands groupes ayant plusieurs entités indépendantes ou dans le cas de revendeurs.",
@@ -376,10 +370,10 @@ const translations = {
       imageAlt: "Capture d'écran de la page \"Vue d'ensemble\" de la console de supervision.",
     },
     userManagement: {
-      title: "Gestion des coffres-forts (utilisateurs)",
+      title: "Gestion des coffres-forts / utilisateurs",
       details: [
         "Retrouvez la liste des coffres-forts et pour chacun les méta-données associées.",
-        "Modifiez les paramètres généraux pour certains utilisateurs.",
+        "Modifiez les réglages de sécurité utilisateur par utilisateur.",
         "Recherchez par adresse email, triez par vulnérabilité ou par date de dernière session.",
       ],
       imageAlt: 'Capture d\'écran de la page "Utilisateurs" de la console de supervision.',
@@ -405,7 +399,7 @@ const translations = {
       title: "Approbation des demandes de réinitialisation de mot de passe",
       details: [
         "Affichez toutes les demandes de réinitialisation de mot de passe.",
-        "Approuvez ou refusez manuellement les demandes de réinitialisation de mot de passe.",
+        "Approuvez ou refusez manuellement les demandes de réinitialisation de mot de passe. Vous pouvez désactiver la validation manuelle dans les réglages de sécurité.",
       ],
       imageAlt:
         "Capture d'écran de la page “Demandes de réinitialisation de mot de passe” de la console de supervision.",
@@ -417,7 +411,9 @@ const translations = {
     },
     securitySettings: {
       title: "Réglages de sécurité",
-      details: ["Désactivez le mode hors-connexion, activez l'export CSV, choisissez les plateformes autorisées."],
+      details: [
+        "Désactivez le mode hors-connexion, activez l'export CSV, choisissez les plateformes autorisées, exigez une validation manuelle pour l'enrollement d'un deuxième appareil.",
+      ],
       imageAlt: "Capture d'écran des options de banque de la console de supervision.",
     },
     adminManagement: {

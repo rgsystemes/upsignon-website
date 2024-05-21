@@ -4,8 +4,8 @@ import styles from "./autolockBehaviourTable.module.css";
 export default function AutolockBehaviourTable({ lang }: { lang: string }) {
   const t = getDictionary(lang);
   return (
-    <details>
-      <summary>{t.features.autolock.byPlatformBehaviourTable.title}</summary>
+    <div>
+      <strong>{t.features.autolock.byPlatformBehaviourTable.title}</strong>
       <div className={styles.autolock_behaviour_container}>
         <table>
           <thead>
@@ -49,6 +49,6 @@ export default function AutolockBehaviourTable({ lang }: { lang: string }) {
           </tbody>
         </table>
       </div>
-    </details>
+    </div>
   );
 }

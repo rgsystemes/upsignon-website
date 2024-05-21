@@ -8,7 +8,31 @@
   background-color: white;
   color:rgb(44, 83, 132);
 }
+.feature_section .title {
+  cursor: pointer;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+.feature_section .title h2 {
+  flex: 1;
+}
+.feature_section .title span, .feature_section .title h2 {
+  font-size: 24px;
+  line-height: 1.2em;
+}
 
 .p {
   margin-bottom: 10px;
+}
+
+.feature_section_compact_summary {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.feature_section_compact_summary .feature_tags {
+  flex:1;
 }

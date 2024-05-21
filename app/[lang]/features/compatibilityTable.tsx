@@ -4,8 +4,8 @@ import styles from "./compatibilityTable.module.css";
 export default function CompatibilityTable({ lang }: { lang: string }) {
   const t = getDictionary(lang);
   return (
-    <details>
-      <summary>{t.features.compatibilityTable.summary}</summary>
+    <div>
+      <strong>{t.features.compatibilityTable.summary}</strong>
       <div className={styles.platform_compat_table_container}>
         <table>
           <thead>
@@ -62,6 +62,6 @@ export default function CompatibilityTable({ lang }: { lang: string }) {
           </tbody>
         </table>
       </div>
-    </details>
+    </div>
   );
 }
