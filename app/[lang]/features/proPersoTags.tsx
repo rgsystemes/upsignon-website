@@ -19,7 +19,7 @@ export default function ProPersoTags({
   }
 
   return (
-    <div className={styles.pro_perso_tag_container} style={inline ? { flexDirection: "row" } : null}>
+    <div className={`${styles.pro_perso_tag_container} ${inline ? styles.inline : ""}`}>
       {perso === "yes" && (
         <div aria-label={t.features.tags.availableFor(false)}>
           {<PlatformSupportedIcon />}

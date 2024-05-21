@@ -6,10 +6,16 @@
   margin: 5px;
   flex-shrink: 0;
 }
+.pro_perso_tag_container.inline {
+  flex-direction: row;
+}
 
 .pro_perso_tag_container > div {
   display: inline-flex;
   align-items: center;
+}
+.pro_perso_tag_container.inline > div {
+  margin-right: 20px;
 }
 .pro_perso_tag_container > div:last-child {
   margin-right: 0px;

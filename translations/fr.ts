@@ -172,20 +172,20 @@ const translations = {
     autofillAutosaveSubtitle: "Remplissage et enregistrement automatique",
     autofill: {
       title: "Remplissage automatique des formulaires",
-      desktopTitle: "Remplissage automatique sur Windows/MacOS avec l'extension de navigateur",
+      desktopTitle: "Windows/MacOS (avec extension de navigateur)",
       desktopDetails: [
         "Installez notre extension de navigateur pour qu'UpSignOn remplisse automatiquement la plupart des formulaires de connexion lors de votre navigation sur Internet.",
         "Cette extension est disponible pour tous les navigateurs Chromium (Google Chrome, Microsoft Edge, Brave), pour Firefox et pour Safari sur MacOS.",
         "NB : l'extension pour Safari est livrée directement avec l'application, mais vous devez l'activer manuellement via le menu Réglages de Safari.",
       ],
       desktopImageAlt: "Capture d'écran de l'extension UpSignOn",
-      iosTitle: "Remplissage semi-automatique des identifiants sur iOS",
+      iosTitle: "iOS",
       iosDetails: [
         "UpSignOn s'intègre au clavier pour vous proposer le remplissage semi-automatique des identifiants enregistrés dans votre coffre-fort dans les formulaires de connexion que vous rencontrez, aussi bien en naviguant sur internet que dans vos applications.",
         'Cette fonctionnalité s\'active depuis l\'application Réglages, menu "Mots de passe", menu "Options de mots de passe".',
       ],
       iosImageAlt: "Capture d'écran d'un clavier sur iOS proposant le remplissage d'un formulaire via UpSignOn.",
-      androidTitle: "Remplissage semi-automatique des identifiants sur Android",
+      androidTitle: "Android",
       androidDetails: [
         "UpSignOn s'intègre à Android pour vous proposer le remplissage semi-automatique des identifiants enregistrés dans votre coffre-fort dans les formulaires de connexion que vous rencontrez, aussi bien en naviguant sur internet que dans vos applications.",
         "Cette fonctionnalité s'active directement depuis la page réglages d'UpSignOn.",
