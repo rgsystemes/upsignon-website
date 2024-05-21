@@ -201,7 +201,7 @@ const translations = {
       title: "Remplissage semi-automatique des identifiants sur Android",
       details: [
         "UpSignOn s'intègre à Android pour vous proposer le remplissage semi-automatique des identifiants enregistrés dans votre coffre-fort dans les formulaires de connexion que vous rencontrez, aussi bien en naviguant sur internet que dans vos applications.",
-        "Cette fonctionnalité s'active directement depuis la page préférences d'UpSignOn.",
+        "Cette fonctionnalité s'active directement depuis la page réglages d'UpSignOn.",
       ],
       imageAlt:
         "Capture d'écran d'un formulaire web sur Android affichant l'interface de remplissage automatique d'UpSignOn.",
@@ -350,6 +350,103 @@ const translations = {
         "Vous avez la possibilité de désactiver cette protection depuis l’application.",
         "Attention, le comportement exact de cette fonctionnalité diffère selon les plateformes et les versions de système d’exploitation (détails de fonctionnement dans le lien ci-dessous).",
       ],
+    },
+    screenshotProtection: {
+      title: "Protection contre les captures et le partage d'écran",
+      details: [
+        "Les captures et le partage d'écran de l'application sont bloqués par défaut.",
+        "Pour éviter des difficultés lors d'éventuelles sessions de support utilisateur, cette protection ne s'active qu'après le déverrouillage d'un coffre-fort.",
+        "Vous pouvez désactiver cette protection pour une durée limitée (configurable) à partir de la page réglages.",
+      ],
+    },
+    supervisionSubtitle: "Console de supervision et d'administration UpSignOn PRO",
+    supervisionGeneralExplanation:
+      "Dans une interface de navigateur, les DSI et RSSI peuvent suivre le déploiement et l'utilisation des coffres-forts UpSignOn PRO de leurs utilisateurs, ainsi que configurer et contrôler certaines fonctionnalités de sécurité.",
+    bankManagement: {
+      title: "Gestion des banques de coffres-forts",
+      details: [
+        "Une banque UpSignOn PRO est un groupe de coffres-forts isolés. Les utilisateurs ne peuvent partager des secrets qu'avec d'autres utilisateurs de la même banque.",
+        "Vous pouvez être administrateur de plusieurs banques. Si vous êtes superadministrateur (cas de l'auto-hébergement uniquement), vous pouvez gérer vous-mêmes la création de banques, ce qui est utile dans le cas de grands groupes ayant plusieurs entités indépendantes ou dans le cas de revendeurs.",
+      ],
+      imageAlt: "Capture d'écran de l'interface de gestion des banques dans la console de supervision.",
+    },
+    passwordStrengthEvolutionCurve: {
+      title: "Courbe d'évolution de la force des mots de passe",
+      details: ["Visualisez l'évolution du nombre de mots de passe forts, moyens, faibles et dupliqués."],
+      imageAlt: "Capture d'écran de la page \"Vue d'ensemble\" de la console de supervision.",
+    },
+    userManagement: {
+      title: "Gestion des coffres-forts (utilisateurs)",
+      details: [
+        "Retrouvez la liste des coffres-forts et pour chacun les méta-données associées.",
+        "Modifiez les paramètres généraux pour certains utilisateurs.",
+        "Recherchez par adresse email, triez par vulnérabilité ou par date de dernière session.",
+      ],
+      imageAlt: 'Capture d\'écran de la page "Utilisateurs" de la console de supervision.',
+    },
+    deviceManagement: {
+      title: "Suivi et révocation des appareils",
+      details: [
+        "Affichez la liste des appareils associés à chaque coffre-fort.",
+        "Révoquez les appareils compromis ou hors-service.",
+      ],
+      imageAlt:
+        'Capture d\'écran de la page "Utilisateurs" de la console de supervision, avec la vue des appareils ouvertes pour un utilisateur.',
+    },
+    sharedVaultsManagement: {
+      title: "Suivi et gestion des coffres-forts partagés",
+      details: [
+        "Affichez la liste des coffres-forts partagés et leurs destinataires.",
+        "Révoquez certains destinataires si besoin et réassignez les administrateurs des coffres-forts partagés.",
+      ],
+      imageAlt: 'Capture d\'écran de la page "Coffres-forts partagés" de la console de supervision.',
+    },
+    passwordResetApproval: {
+      title: "Approbation des demandes de réinitialisation de mot de passe",
+      details: [
+        "Affichez toutes les demandes de réinitialisation de mot de passe.",
+        "Approuvez ou refusez manuellement les demandes de réinitialisation de mot de passe.",
+      ],
+      imageAlt:
+        "Capture d'écran de la page “Demandes de réinitialisation de mot de passe” de la console de supervision.",
+    },
+    sharedDeviceVisibility: {
+      title: "Affichage des appareils partagés",
+      details: ["Affichez tous les appareils sur lesquels plusieurs coffres-forts sont enregistrés."],
+      imageAlt: "Capture d'écran de la page “Appareils partagés” de la console de supervision.",
+    },
+    securitySettings: {
+      title: "Réglages de sécurité",
+      details: ["Désactivez le mode hors-connexion, activez l'export CSV, choisissez les plateformes autorisées."],
+      imageAlt: "Capture d'écran des options de banque de la console de supervision.",
+    },
+    adminManagement: {
+      title: "Gestion des administrateurs",
+      details: [
+        "En tant qu'administrateur d'une banque ou en tant que superadministrateur, invitez d'autres administrateurs.",
+      ],
+      imageAlt: "Capture d'écran du tableau de la page superadministrateur de gestion des administrateurs.",
+    },
+    prefilledWebsites: {
+      title: "Sites webs pré-renseignés",
+      details: [
+        "Afin de simplifier l'ajout manuel de comptes dans l'application, pré-configurez ici les sites web utilisés dans votre entreprise. Ces sites web seront proposés en pré-remplissage dans la page d'ajout d'un compte aux utilisateurs de votre banque.",
+      ],
+      imageAlt: "Capture d'écran du tableau des sites webs prérenseignés.",
+    },
+    msEntra: {
+      title: "Connexion Microsoft Entra",
+      details: [
+        "Connectez votre banque UpSignOn PRO à votre environnement Microsoft Entra pour gérer les utilisateurs autorisés à ouvrir un coffre-fort UpSignOn PRO directement dans Microsoft Entra. En cas de départ d'un collaborateur ou si vous le supprimez du groupe UpSignOn, son coffre-fort sera automatiquement désactivé.",
+      ],
+      imageAlt: "Capture d'écran de l'interface de configuration de Microsoft Entra dans la console de supervision.",
+    },
+    passwordAwarenessCampaigns: {
+      title: "Aide aux campagnes de renforcement des mots de passe",
+      details: [
+        "Récupérez les adresses emails des utilisateurs qui ont encore des mots de passe faibles ou qui n'utilisent pas leur coffre-fort et envoyez-leur des campagnes de sensibilisation ciblées.",
+      ],
+      imageAlt: 'Capture d\'écran de la page "Autres requêtes" de la console de supervision.',
     },
   },
   techResources: {

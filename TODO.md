@@ -1,3 +1,2 @@
 - Sitemap
 - robots
-- vérifier dans app/layout.tsx le paramètre lang="en"

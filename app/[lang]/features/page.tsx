@@ -413,9 +413,9 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "warning", windows: "yes", macos: "yes", linux: "yes", chromeos: "warning" }}
         tags={{ pro: "yes", perso: "yes" }}
         summary={null}
-        details={t.features.autolock.details}
+        details={t.features.protectedClipboard.details}
         imageSrc={null}
-        imageAlt={t.features.autolock.imageAlt}
+        imageAlt={""}
       >
         <TechFocusLink
           title={t.techResources.protectedClipboardBehaviour.title}
@@ -423,6 +423,115 @@ export default function Page({ params }: { params: { lang: string } }) {
           lang={params.lang}
         />
       </FeatureSection>
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.screenshotProtection.title}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "no", linux: "no", chromeos: "yes" }}
+        tags={{ pro: "yes", perso: "yes" }}
+        summary={null}
+        details={t.features.screenshotProtection.details}
+        imageSrc={null}
+        imageAlt={""}
+      />
+
+      <h2 className={styles.feature_family_title}>{t.features.supervisionSubtitle}</h2>
+      <p className={styles.supervision_general_intro}>{t.features.supervisionGeneralExplanation}</p>
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.bankManagement.title}
+        summary={null}
+        details={t.features.bankManagement.details}
+        imageSrc={null}
+        imageAlt={t.features.bankManagement.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.passwordStrengthEvolutionCurve.title}
+        summary={null}
+        details={t.features.passwordStrengthEvolutionCurve.details}
+        imageSrc={null}
+        imageAlt={t.features.passwordStrengthEvolutionCurve.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.userManagement.title}
+        summary={null}
+        details={t.features.userManagement.details}
+        imageSrc={null}
+        imageAlt={t.features.userManagement.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.deviceManagement.title}
+        summary={null}
+        details={t.features.deviceManagement.details}
+        imageSrc={null}
+        imageAlt={t.features.deviceManagement.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.sharedVaultsManagement.title}
+        summary={null}
+        details={t.features.sharedVaultsManagement.details}
+        imageSrc={null}
+        imageAlt={t.features.sharedVaultsManagement.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.passwordResetApproval.title}
+        summary={null}
+        details={t.features.passwordResetApproval.details}
+        imageSrc={null}
+        imageAlt={t.features.passwordResetApproval.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.sharedDeviceVisibility.title}
+        summary={null}
+        details={t.features.sharedDeviceVisibility.details}
+        imageSrc={null}
+        imageAlt={t.features.sharedDeviceVisibility.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.securitySettings.title}
+        summary={null}
+        details={t.features.securitySettings.details}
+        imageSrc={null}
+        imageAlt={t.features.securitySettings.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.adminManagement.title}
+        summary={null}
+        details={t.features.adminManagement.details}
+        imageSrc={null}
+        imageAlt={t.features.adminManagement.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.prefilledWebsites.title}
+        summary={null}
+        details={t.features.prefilledWebsites.details}
+        imageSrc={null}
+        imageAlt={t.features.prefilledWebsites.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.msEntra.title}
+        summary={null}
+        details={t.features.msEntra.details}
+        imageSrc={null}
+        imageAlt={t.features.msEntra.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.passwordAwarenessCampaigns.title}
+        summary={null}
+        details={t.features.passwordAwarenessCampaigns.details}
+        imageSrc={null}
+        imageAlt={t.features.passwordAwarenessCampaigns.imageAlt}
+      />
     </div>
   );
 }

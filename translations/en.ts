@@ -201,7 +201,7 @@ const translations: typeof fr = {
       title: "Semi-automatic filling in of identifiers on Android",
       details: [
         "UpSignOn integrates with Android to offer you semi-automatic filling in of the identifiers stored in your vault in the login forms you encounter, both when browsing the Internet and in your applications.",
-        "This feature can be activated directly from the Preferences menu of UpSignOn",
+        "This feature can be activated directly from the settings page of UpSignOn",
       ],
       imageAlt: "Screenshot of a web login forl on Android displaying UpSignOn's autofill interface.",
     },
@@ -347,6 +347,93 @@ const translations: typeof fr = {
         "Please note that the exact behaviour of this feature differs depending on the platform and operating system version (see the link below for details).",
       ],
     },
+    screenshotProtection: {
+      title: "Protection against screenshots and screen sharing",
+      details: [
+        "Screenshots and screen sharing of the application are bloqued by default.",
+        "To avoid difficulties during potential user support sessions, this protection is only activated after a vault has been unlocked.",
+        "You can disable this protection for a limited time (configurable) from the settings page.",
+      ],
+    },
+    supervisionSubtitle: "UpSignOn PRO supervision and administration dashboard",
+    supervisionGeneralExplanation:
+      "In a browser interface, CIOs and CISOs can monitor the deployment and use of their users’ UpSignOn PRO vaults, as well as configure and control some security features.",
+    bankManagement: {
+      title: "Management of vault banks",
+      details: [
+        "An UpSignOn PRO bank is a group of isolated vaults. Users can only share secrets with other users in the same bank.",
+        "You can be administrator of several banks. If you are a superadministrator (in the case of self-hosting only), you can manage the creation of banks yourself, which is useful in the case of large groups with several independent entities or in the case of resellers.",
+      ],
+      imageAlt: "Screenshot of the bank management interface in the supervision console.",
+    },
+    passwordStrengthEvolutionCurve: {
+      title: "Password strength evolution curve",
+      details: ["View the evolution of the number of strong, medium, weak and duplicate passwords."],
+      imageAlt: "Screenshot of the “Overview” page of the supervision console.",
+    },
+    userManagement: {
+      title: "Vault (users) management",
+      details: [
+        "Find the list of vaults and the associated metadata for each one.",
+        "Modify general parameters for each user.",
+        "Search by email adress, sort by vulnerability or by last session date.",
+      ],
+      imageAlt: "Screenshot of the “Users” page from the supervision console.",
+    },
+    deviceManagement: {
+      title: "Device tracking and revocation",
+      details: ["View a list of devices associated with each vault.", "Revoke compromised or decommissioned devices."],
+      imageAlt: "Screenshot of the “Users” page of the supervision console, with the view of devices open for a user.",
+    },
+    sharedVaultsManagement: {
+      title: "Monitoring and management of shared vaults",
+      details: [
+        "View the list of shared vaults and their recipients.",
+        "Revoke certain recipients if necessary and reassign shared vaults administrators.",
+      ],
+      imageAlt: "Screenshot of the “Shared vaults” page from the supervision console.",
+    },
+    passwordResetApproval: {
+      title: "Approval of password reset requests",
+      details: ["View all password reset requests.", "Manually approve or deny password reset requests."],
+      imageAlt: "Screenshot of the “Password reset requests” page from the supervision console.",
+    },
+    sharedDeviceVisibility: {
+      title: "Display shared devices",
+      details: ["Display all devices on which more than one vault is registered."],
+      imageAlt: "Screenshot of the “Shared devices” page from the supervision console",
+    },
+    securitySettings: {
+      title: "Security settings",
+      details: ["Deactivate offline mode, activate CSV export and choose the authorised platforms."],
+      imageAlt: "Screenshot of bank settings from the supervision console.",
+    },
+    adminManagement: {
+      title: "Administrator management",
+      details: ["As administrator of a bank or as superadministrator, invite other administrators."],
+      imageAlt: "Screenshot of the table on the superadministrator page of administrator management",
+    },
+    prefilledWebsites: {
+      title: "Pre-filled websites",
+      details: [
+        "To simplify the manual addition of accounts in the application, pre-configure here the websites used in your company. These websites will be offered for pre-filling on the page for adding an account to your bank's users.",
+      ],
+      imageAlt: "Screenshot of the table of pre-set websites",
+    },
+    msEntra: {
+      title: "Microsoft Entra connection",
+      details: [
+        "Connect your UpSignOn PRO bank to your Microsoft Entra environment to manage users authorised to open an UpSignOn PRO vault directly in Microsoft Entra. If an employee leaves or is removed from the UpSignOn group, their vault will be automatically deactivated.",
+      ],
+      imageAlt: "Screenshot of the Microsoft Entra configuration interface in the supervision console.",
+    },
+    passwordAwarenessCampaigns: {
+      title: "Help with password awareness campaigns",
+      details: [
+        "Get the email addresses of users who still have weak passwords or don't use their vault and send them targeted awareness campaigns.",
+      ],
+      imageAlt: "Screenshot of the “Other requests” page in the supervision console.",
+    },
   },
   techResources: {
     protectedClipboardBehaviour: {
@@ -368,3 +455,5 @@ const translations: typeof fr = {
     },
   },
 };
+
+export default translations;

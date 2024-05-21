@@ -1,18 +1,17 @@
 import Image, { StaticImageData } from "next/image";
 import FeaturePlatforms, { TPlatforms } from "./featurePlatforms";
 import styles from "./featureSection.module.css";
-import TechFocusLink from "./techFocusLink";
 import ProPersoTags from "./proPersoTags";
 import { ReactNode } from "react";
 
 type Props = {
   lang: string;
   title: string;
-  platforms: TPlatforms;
-  tags: {
+  platforms?: TPlatforms;
+  tags?: {
     pro: "yes" | "no" | "warning";
     perso: "yes" | "no" | "warning";
-  } | null;
+  };
   summary: string;
   details: string[] | null;
   imageSrc: StaticImageData | null;
@@ -25,7 +24,7 @@ export default function FeatureSection(p: Props) {
     <section className={styles.feature_section}>
       <h2>{p.title}</h2>
       {p.platforms && <FeaturePlatforms platforms={p.platforms} lang={p.lang} />}
-      <ProPersoTags pro={p.tags?.pro} perso={p.tags?.perso} lang={p.lang} />
+      {p.tags && <ProPersoTags pro={p.tags?.pro} perso={p.tags?.perso} lang={p.lang} />}
       {p.imageSrc && (
         <Image
           src={p.imageSrc}
