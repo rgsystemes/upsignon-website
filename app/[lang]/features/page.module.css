@@ -2,7 +2,6 @@
   padding: 20px;
   background: rgb(44, 83, 132);
 }
-
 .content h1 {
   color: white;
 }
@@ -18,4 +17,15 @@
 
 .supervision_general_intro {
   margin-bottom: 20px;
+}
+@media (max-width: 550) {
+  .content {
+    padding: 10px;
+  }
+  .feature_family_title {
+    margin-bottom: 10px;
+  }
+  .supervision_general_intro {
+    margin-bottom: 10px;
+  }
 }

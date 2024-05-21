@@ -1,14 +1,15 @@
 .pro_perso_tag_container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  margin: 0 0 10px 0;
+  margin: 5px;
+  flex-shrink: 0;
 }
 
 .pro_perso_tag_container > div {
   display: inline-flex;
   align-items: center;
-  margin-right: 20px;
 }
 .pro_perso_tag_container > div:last-child {
   margin-right: 0px;
@@ -36,4 +37,14 @@
 }
 .perso_tag {
   background-color: rgb(44, 83, 132);
+}
+
+
+@media(max-width: 500px) {
+  .pro_perso_tag_container {
+    flex-direction: row;
+  }
+  .pro_perso_tag_container > div {
+    margin-right: 10px;
+  }
 }

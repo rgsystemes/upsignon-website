@@ -171,14 +171,27 @@ const translations: typeof fr = {
       imageAlt: "Screenshot of the recipients management page of a shared folder.",
     },
     autofillAutosaveSubtitle: "Autofill and autosave",
-    autofillDesktop: {
-      title: "Automatic filling in of forms via the browser extension",
-      details: [
-        "Install our browser extension to have UpSignOn automatically fill out most login forms as you browse the Internet.",
+    autofill: {
+      title: "Automatic form filling",
+      desktopTitle: "Autofill on Windows/MacOS with browser extension",
+      desktopDetails: [
+        "Install our browser extension to have UpSignOn auto-fill most login forms as you browse the Internet.",
         "This extension is available for all Chromium browsers (Google Chrome, Microsoft Edge, Brave), for Firefox and for Safari on macOS.",
         "NB: the Safari extension ships directly with the application, but you need to activate it manually via the Safari Settings menu.",
       ],
-      imageAlt: "Screenshot of a the UpSignOn extension",
+      desktopImageAlt: "Screenshot of the UpSignOn extension",
+      iosTitle: "Semi-automatic credential filling on iOS",
+      iosDetails: [
+        "UpSignOn integrates with the iOS keyboard to offer you semi-automatic filling of credentials saved in your vault in the login forms you encounter, both when browsing the internet and in your apps.",
+        'This feature is activated from the Settings application, "Passwords" menu, "Password options" menu',
+      ],
+      iosImageAlt: "Screenshot of a keyboard on iOS offering form filling via UpSignOn.",
+      androidTitle: "Semi-automatic login on Android",
+      androidDetails: [
+        "UpSignOn integrates with Android to offer you semi-automatic filling of the credentials saved in your vault in the login forms you encounter, both when browsing the internet and in your applications.",
+        "This feature can be activated directly from the UpSignOn settings page.",
+      ],
+      androidImageAlt: "Screenshot of a web form on Android displaying UpSignOn's autofill interface.",
     },
     autosaveDesktop: {
       title: "Automatic saving of passwords via the browser extension",
@@ -186,22 +199,6 @@ const translations: typeof fr = {
         "Our browser extension also detects passwords you manually type and lets you save them directly to your vault effortlessly.",
       ],
       imageAlt: "Screenshot of the UpSignOn extension suggesting to save a new password.",
-    },
-    autofillIOS: {
-      title: "Semi-automatic filling in of identifiers on iOS",
-      details: [
-        "UpSignOn integrates with the keyboard to offer you semi-automatic filling in of the identifiers stored in your vault in the login forms you encounter, both when browsing the Internet and in your applications.",
-        'This feature can be activated from the Settings application, menu "Passwords", menu "Password options"',
-      ],
-      imageAlt: "Screenshot of a keyboard on iOS proposing filling in a form using UpSignOn.",
-    },
-    autofillAndroid: {
-      title: "Semi-automatic filling in of identifiers on Android",
-      details: [
-        "UpSignOn integrates with Android to offer you semi-automatic filling in of the identifiers stored in your vault in the login forms you encounter, both when browsing the Internet and in your applications.",
-        "This feature can be activated directly from the settings page of UpSignOn",
-      ],
-      imageAlt: "Screenshot of a web login forl on Android displaying UpSignOn's autofill interface.",
     },
     searchFilterOrganizeSubtitle: "Search, filter, organize",
     search: {

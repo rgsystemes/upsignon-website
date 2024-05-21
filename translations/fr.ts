@@ -170,14 +170,28 @@ const translations = {
       imageAlt: "Capture d'écran de la page de gestion des destinataires d'un dossier partagé.",
     },
     autofillAutosaveSubtitle: "Remplissage et enregistrement automatique",
-    autofillDesktop: {
-      title: "Remplissage automatique des formulaires via l'extension de navigateur",
-      details: [
+    autofill: {
+      title: "Remplissage automatique des formulaires",
+      desktopTitle: "Remplissage automatique sur Windows/MacOS avec l'extension de navigateur",
+      desktopDetails: [
         "Installez notre extension de navigateur pour qu'UpSignOn remplisse automatiquement la plupart des formulaires de connexion lors de votre navigation sur Internet.",
         "Cette extension est disponible pour tous les navigateurs Chromium (Google Chrome, Microsoft Edge, Brave), pour Firefox et pour Safari sur MacOS.",
         "NB : l'extension pour Safari est livrée directement avec l'application, mais vous devez l'activer manuellement via le menu Réglages de Safari.",
       ],
-      imageAlt: "Capture d'écran de l'extension UpSignOn",
+      desktopImageAlt: "Capture d'écran de l'extension UpSignOn",
+      iosTitle: "Remplissage semi-automatique des identifiants sur iOS",
+      iosDetails: [
+        "UpSignOn s'intègre au clavier pour vous proposer le remplissage semi-automatique des identifiants enregistrés dans votre coffre-fort dans les formulaires de connexion que vous rencontrez, aussi bien en naviguant sur internet que dans vos applications.",
+        'Cette fonctionnalité s\'active depuis l\'application Réglages, menu "Mots de passe", menu "Options de mots de passe".',
+      ],
+      iosImageAlt: "Capture d'écran d'un clavier sur iOS proposant le remplissage d'un formulaire via UpSignOn.",
+      androidTitle: "Remplissage semi-automatique des identifiants sur Android",
+      androidDetails: [
+        "UpSignOn s'intègre à Android pour vous proposer le remplissage semi-automatique des identifiants enregistrés dans votre coffre-fort dans les formulaires de connexion que vous rencontrez, aussi bien en naviguant sur internet que dans vos applications.",
+        "Cette fonctionnalité s'active directement depuis la page réglages d'UpSignOn.",
+      ],
+      androidImageAlt:
+        "Capture d'écran d'un formulaire web sur Android affichant l'interface de remplissage automatique d'UpSignOn.",
     },
     autosaveDesktop: {
       title: "Enregistrement automatique des mots de passe via l'extension de navigateur",
@@ -185,23 +199,6 @@ const translations = {
         "Notre extension de navigateur détecte également les mots de passe que vous saisissez manuellement et vous permet de les enregistrement directement dans votre coffre-fort sans effort.",
       ],
       imageAlt: "Capture d'écran de l'extension UpSignOn proposant l'enregistrement d'un nouveau mot de passe.",
-    },
-    autofillIOS: {
-      title: "Remplissage semi-automatique des identifiants sur iOS",
-      details: [
-        "UpSignOn s'intègre au clavier pour vous proposer le remplissage semi-automatique des identifiants enregistrés dans votre coffre-fort dans les formulaires de connexion que vous rencontrez, aussi bien en naviguant sur internet que dans vos applications.",
-        'Cette fonctionnalité s\'active depuis l\'application Réglages, menu "Mots de passe", menu "Options de mots de passe".',
-      ],
-      imageAlt: "Capture d'écran d'un clavier sur iOS proposant le remplissage d'un formulaire via UpSignOn.",
-    },
-    autofillAndroid: {
-      title: "Remplissage semi-automatique des identifiants sur Android",
-      details: [
-        "UpSignOn s'intègre à Android pour vous proposer le remplissage semi-automatique des identifiants enregistrés dans votre coffre-fort dans les formulaires de connexion que vous rencontrez, aussi bien en naviguant sur internet que dans vos applications.",
-        "Cette fonctionnalité s'active directement depuis la page réglages d'UpSignOn.",
-      ],
-      imageAlt:
-        "Capture d'écran d'un formulaire web sur Android affichant l'interface de remplissage automatique d'UpSignOn.",
     },
     searchFilterOrganizeSubtitle: "Cherchez, filtrez, organisez",
     search: {

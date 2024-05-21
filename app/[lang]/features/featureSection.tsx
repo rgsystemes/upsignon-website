@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import FeaturePlatforms, { TPlatforms } from "./featurePlatforms";
 import styles from "./featureSection.module.css";
 import ProPersoTags from "./proPersoTags";
-import { ReactNode, useRef, useState } from "react";
+import { ReactNode, useState } from "react";
 import { getDictionary } from "../../../translations/translations";
 
 type Props = {
@@ -28,22 +28,22 @@ export default function FeatureSection(p: Props) {
   };
   return (
     <section className={styles.feature_section}>
-      <div className={styles.title} onClick={toggleFold}>
+      <div className={styles.feature_title} onClick={toggleFold}>
         <h2>{p.title}</h2>
         <span>{isOpen ? "-" : "+"}</span>
       </div>
-      <div className={isOpen ? null : styles.feature_section_compact_summary}>
+      <div className={styles.feature_section_compact_summary}>
         {p.imageSrc && (
-          <Image
-            src={p.imageSrc}
-            alt={p.imageAlt}
-            style={{
-              width: "auto",
-              height: "auto",
-              maxHeight: isOpen ? 450 : 200,
-              margin: "auto",
-            }}
-          />
+          <div>
+            <Image
+              src={p.imageSrc}
+              alt={p.imageAlt}
+              className={styles.feature_img}
+              style={{
+                maxHeight: isOpen ? 450 : 200,
+              }}
+            />
+          </div>
         )}
         <div className={styles.feature_tags}>
           {p.platforms && <FeaturePlatforms platforms={p.platforms} lang={p.lang} />}

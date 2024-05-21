@@ -6,10 +6,12 @@ export default function ProPersoTags({
   pro,
   perso,
   lang,
+  inline,
 }: {
   pro: "yes" | "no" | "warning";
   perso: "yes" | "no" | "warning";
   lang: string;
+  inline?: boolean;
 }) {
   const t = getDictionary(lang);
   if (perso === "no" && pro === "no") {
@@ -17,7 +19,7 @@ export default function ProPersoTags({
   }
 
   return (
-    <div className={styles.pro_perso_tag_container}>
+    <div className={styles.pro_perso_tag_container} style={inline ? { flexDirection: "row" } : null}>
       {perso === "yes" && (
         <div aria-label={t.features.tags.availableFor(false)}>
           {<PlatformSupportedIcon />}

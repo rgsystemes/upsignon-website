@@ -7,6 +7,7 @@ import passwordScore from "../../../public/images/password-score.png";
 import { getDictionary } from "../../../translations/translations";
 import TechFocusLink from "./techFocusLink";
 import AutolockBehaviourTable from "./autolockBehaviourTable";
+import AutofillSection from "./autofillSection";
 
 export const metadata: Metadata = {
   title: "Fonctionnalités",
@@ -191,7 +192,8 @@ export default function Page({ params }: { params: { lang: string } }) {
         </ul>
       </FeatureSection>
       <h2 className={styles.feature_family_title}>{t.features.autofillAutosaveSubtitle}</h2>
-      <FeatureSection
+      <AutofillSection lang={params.lang} />
+      {/* <FeatureSection
         lang={params.lang}
         title={t.features.autofillDesktop.title}
         platforms={{ ios: "no", android: "no", windows: "yes", macos: "yes", linux: "no", chromeos: "no" }}
@@ -199,7 +201,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         details={t.features.autofillDesktop.details}
         imageSrc={passwordScore}
         imageAlt={t.features.autofillDesktop.imageAlt}
-      />
+      /> */}
       <FeatureSection
         lang={params.lang}
         title={t.features.autosaveDesktop.title}
@@ -209,7 +211,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         imageSrc={passwordScore}
         imageAlt={t.features.autosaveDesktop.imageAlt}
       />
-      <FeatureSection
+      {/* <FeatureSection
         lang={params.lang}
         title={t.features.autofillIOS.title}
         platforms={{ ios: "yes", android: "no", windows: "no", macos: "no", linux: "no", chromeos: "no" }}
@@ -217,8 +219,8 @@ export default function Page({ params }: { params: { lang: string } }) {
         details={t.features.autofillIOS.details}
         imageSrc={passwordScore}
         imageAlt={t.features.autofillIOS.imageAlt}
-      />
-      <FeatureSection
+      /> */}
+      {/* <FeatureSection
         lang={params.lang}
         title={t.features.autofillAndroid.title}
         platforms={{ ios: "no", android: "yes", windows: "no", macos: "no", linux: "no", chromeos: "no" }}
@@ -226,7 +228,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         details={t.features.autofillAndroid.details}
         imageSrc={passwordScore}
         imageAlt={t.features.autofillAndroid.imageAlt}
-      />
+      /> */}
       <h2 className={styles.feature_family_title}>{t.features.searchFilterOrganizeSubtitle}</h2>
       <FeatureSection
         lang={params.lang}
