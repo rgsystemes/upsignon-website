@@ -1,5 +1,5 @@
 html {
-  background: rgb(44, 83, 132);
+  background: linear-gradient(rgb(44, 83, 132), rgb(20, 38, 61));
   scroll-behavior: smooth;
 }
 

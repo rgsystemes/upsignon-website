@@ -29,13 +29,14 @@ const translations: typeof fr = {
       availableWithWarningFor: (p: string) => `Conditionally available on ${p}`,
     },
     techFocus: "Technical focus:",
-    generalSubtitle: "General",
+    generalSubtitle: "Pro, perso, cross-platform",
     proPerso: {
       title: "PRO & PERSO vaults",
       details: [
         "UpSignOn offers you two types of vaults, both similar in their user interface, but technically different.",
         "The PERSO vault is designed for your private, non-business use. It is totally secure and private by design. However, its secret-sharing system is not suitable for teams of more than a few people.",
         "PRO vaults are offered by your employer or IT security manager to give you the means to achieve 100% strong, unique passwords. Your CIO or CISO can monitor progress towards this objective from the supervision console, which gives him/her access to the strength of the passwords stored in the PRO vaults. This console does not, of course, give direct access to your passwords and other secrets. What's more, with the PRO vaults, it will be much easier for you to share secrets with your colleagues simply by entering their email address.",
+        "You can add as many PRO and PERSO vaults as wanted.",
       ],
       imageAlt: "Screenshot showing the PRO and PERSO vaults in the application.",
       techFocusTitle: "PRO vs PERSO vaults",

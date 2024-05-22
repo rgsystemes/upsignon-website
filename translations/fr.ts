@@ -28,13 +28,14 @@ const translations = {
       availableWithWarningFor: (p: string): string => `Disponible sous conditions sur ${p}`,
     },
     techFocus: "Focus technique :",
-    generalSubtitle: "Généralités",
+    generalSubtitle: "Pro, perso, multi-plateformes",
     proPerso: {
       title: "Coffres-forts PRO & PERSO",
       details: [
         "UpSignOn vous propose deux types de coffres-forts, tous les deux semblables dans leur interface utilisateur, mais différents techniquement.",
         "Le coffre-fort PERSO est conçu pour votre usage privé, non professionnel. Il est totalement sécurisé et privé par conception. En revanche, son système de partage de secrets n’est pas adapté aux équipes de plus de quelques personnes.",
         "Les coffres-forts PRO sont proposés par votre employeur ou responsable de la sécurité informatique pour vous donner les moyens d’atteindre 100% de mots de passe forts et uniques. Votre DSI ou RSSI peut suivre l’avancement de cet objectif depuis la console de supervision qui lui donne accès à la force des mots de passe enregistrés dans les coffres-forts PRO. Cette console ne donne bien sûr pas accès à vos mots de passe et autres secrets directement. Par ailleurs, avec les coffres-forts PRO, il vous sera beaucoup plus facile de partager des secrets avec vos collègues en saisissant simplement leur adresse email.",
+        "Vous pouvez ajouter autant de coffres-forts PRO et PERSO que vous le souhaitez.",
       ],
       imageAlt: "Capture d'écran montrant les coffres-forts PRO et PERSO dans l'application.",
       techFocusTitle: "Coffres-forts PRO vs coffres-forts PERSO",
