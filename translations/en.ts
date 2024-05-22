@@ -343,7 +343,7 @@ const translations: typeof fr = {
     screenshotProtection: {
       title: "Protection against screenshots and screen sharing",
       details: [
-        "Screenshots and screen sharing of the application are bloqued by default.",
+        "Screenshots and screen sharing of the application are bloqued by default to avoid accidental data leak.",
         "To avoid difficulties during potential user support sessions, this protection is only activated after a vault has been unlocked.",
         "You can disable this protection for a limited time (configurable) from the settings page.",
       ],
@@ -370,6 +370,7 @@ const translations: typeof fr = {
         "Find the list of vaults and the associated metadata for each one.",
         "Modify general security settings user by user.",
         "Search by email adress, sort by vulnerability or by last session date.",
+        "If necessary, you can esaily update a vault's email address.",
       ],
       imageAlt: "Screenshot of the “Users” page from the supervision console.",
     },

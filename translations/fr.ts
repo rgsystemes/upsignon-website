@@ -345,9 +345,10 @@ const translations = {
     screenshotProtection: {
       title: "Protection contre les captures et le partage d'écran",
       details: [
-        "Les captures et le partage d'écran de l'application sont bloqués par défaut.",
+        "Les captures et le partage d'écran de l'application sont bloqués par défaut pour éviter les fuites d'information accidentelles.",
         "Pour éviter des difficultés lors d'éventuelles sessions de support utilisateur, cette protection ne s'active qu'après le déverrouillage d'un coffre-fort.",
         "Vous pouvez désactiver cette protection pour une durée limitée (configurable) à partir de la page réglages.",
+        "Si nécessaire, vous pouvez facilement modifier l'adresse email d'un coffre-fort.",
       ],
     },
     supervisionSubtitle: "Console de supervision et d'administration UpSignOn PRO",
