@@ -21,10 +21,10 @@ export default function AutofillSection(p: Props) {
     <section className={styles.feature_section}>
       <div className={styles.feature_title} onClick={toggleFold}>
         <h2>{t.features.autofill.title}</h2>
-        <span>{isOpen ? "-" : "+"}</span>
+        <span className={styles.toggle_button}>{isOpen ? "-" : "+"}</span>
       </div>
       <FeaturePlatforms
-        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "no", chromeos: "no" }}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "no" }}
         inline
         lang={p.lang}
       />
@@ -37,7 +37,7 @@ export default function AutofillSection(p: Props) {
             alt={t.features.autofill.desktopImageAlt}
             className={styles.feature_img}
             style={{
-              maxHeight: isOpen ? 450 : 200,
+              maxHeight: isOpen ? 450 : 212,
             }}
           />
           {isOpen && (
@@ -57,7 +57,7 @@ export default function AutofillSection(p: Props) {
             alt={t.features.autofill.iosImageAlt}
             className={styles.feature_img}
             style={{
-              maxHeight: isOpen ? 450 : 200,
+              maxHeight: isOpen ? 450 : 212,
             }}
           />
           {isOpen && (
@@ -77,7 +77,7 @@ export default function AutofillSection(p: Props) {
             alt={t.features.autofill.androidImageAlt}
             className={styles.feature_img}
             style={{
-              maxHeight: isOpen ? 450 : 200,
+              maxHeight: isOpen ? 450 : 212,
             }}
           />
           {isOpen && (

@@ -27,7 +27,7 @@
   margin-right: 5px;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 445px) {
   .platforms_support {
     flex-direction: row;
     width:auto;

@@ -193,42 +193,15 @@ export default function Page({ params }: { params: { lang: string } }) {
       </FeatureSection>
       <h2 className={styles.feature_family_title}>{t.features.autofillAutosaveSubtitle}</h2>
       <AutofillSection lang={params.lang} />
-      {/* <FeatureSection
-        lang={params.lang}
-        title={t.features.autofillDesktop.title}
-        platforms={{ ios: "no", android: "no", windows: "yes", macos: "yes", linux: "no", chromeos: "no" }}
-        tags={{ pro: "yes", perso: "yes" }}
-        details={t.features.autofillDesktop.details}
-        imageSrc={passwordScore}
-        imageAlt={t.features.autofillDesktop.imageAlt}
-      /> */}
       <FeatureSection
         lang={params.lang}
         title={t.features.autosaveDesktop.title}
-        platforms={{ ios: "no", android: "no", windows: "yes", macos: "yes", linux: "no", chromeos: "no" }}
+        platforms={{ ios: "no", android: "no", windows: "yes", macos: "yes", linux: "yes", chromeos: "no" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.autosaveDesktop.details}
         imageSrc={passwordScore}
         imageAlt={t.features.autosaveDesktop.imageAlt}
       />
-      {/* <FeatureSection
-        lang={params.lang}
-        title={t.features.autofillIOS.title}
-        platforms={{ ios: "yes", android: "no", windows: "no", macos: "no", linux: "no", chromeos: "no" }}
-        tags={{ pro: "yes", perso: "yes" }}
-        details={t.features.autofillIOS.details}
-        imageSrc={passwordScore}
-        imageAlt={t.features.autofillIOS.imageAlt}
-      /> */}
-      {/* <FeatureSection
-        lang={params.lang}
-        title={t.features.autofillAndroid.title}
-        platforms={{ ios: "no", android: "yes", windows: "no", macos: "no", linux: "no", chromeos: "no" }}
-        tags={{ pro: "yes", perso: "yes" }}
-        details={t.features.autofillAndroid.details}
-        imageSrc={passwordScore}
-        imageAlt={t.features.autofillAndroid.imageAlt}
-      /> */}
       <h2 className={styles.feature_family_title}>{t.features.searchFilterOrganizeSubtitle}</h2>
       <FeatureSection
         lang={params.lang}

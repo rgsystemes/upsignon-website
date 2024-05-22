@@ -48,7 +48,7 @@
 }
 
 
-@media(max-width: 500px) {
+@media(max-width: 445px) {
   .pro_perso_tag_container {
     flex-direction: row;
     width: auto;
