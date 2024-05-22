@@ -5,9 +5,11 @@
   justify-content: center;
   margin: 5px;
   flex-shrink: 0;
+  width: 85px;
 }
 .pro_perso_tag_container.inline {
   flex-direction: row;
+  width: auto;
 }
 
 .pro_perso_tag_container > div {
@@ -49,6 +51,7 @@
 @media(max-width: 500px) {
   .pro_perso_tag_container {
     flex-direction: row;
+    width: auto;
   }
   .pro_perso_tag_container > div {
     margin-right: 10px;

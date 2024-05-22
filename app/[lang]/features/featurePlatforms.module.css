@@ -7,6 +7,11 @@
   justify-content: center;
   flex-wrap: wrap;
   flex-shrink: 0;
+  width: 100px;
+}
+.platforms_support.inline {
+  flex-direction: row;
+  width: auto;
 }
 .platform_support {
   display: inline-flex;
@@ -25,5 +30,6 @@
 @media(max-width: 500px) {
   .platforms_support {
     flex-direction: row;
+    width:auto;
   }
 }

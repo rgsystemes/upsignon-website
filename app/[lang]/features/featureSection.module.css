@@ -28,7 +28,6 @@
   flex-wrap: wrap;
   flex-grow: 0;
   flex-shrink: 1;
-  width: 200px;
 }
 
 .p {
@@ -47,13 +46,6 @@
   height: auto;
   min-width: 200px;
   margin: 0;
-}
-
-@media (max-width: 850px) {
-  .feature_tags {
-    width: 100px;
-    flex-shrink: 0;
-  }
 }
 
 @media (max-width: 750px) {

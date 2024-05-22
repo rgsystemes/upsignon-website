@@ -45,7 +45,7 @@ export default function FeaturePlatforms({
 }) {
   const t = getDictionary(lang);
   return (
-    <div className={styles.platforms_support} style={inline ? { flexDirection: "row" } : null}>
+    <div className={`${styles.platforms_support} ${inline ? styles.inline : ""}`}>
       <FeaturePlatform lang={lang} name="Windows" supported={platforms.windows} />
       <FeaturePlatform lang={lang} name="MacOS" supported={platforms.macos} />
       <FeaturePlatform lang={lang} name="Linux" supported={platforms.linux} />
