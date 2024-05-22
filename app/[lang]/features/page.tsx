@@ -23,7 +23,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         lang={params.lang}
         title={t.features.proPerso.title}
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
-        tags={null}
+        tags={{ pro: "yes", perso: "yes" }}
         details={t.features.proPerso.details}
         imageSrc={proPersoVaultsImg}
         imageAlt={t.features.proPerso.imageAlt}
@@ -37,7 +37,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       <FeatureSection
         lang={params.lang}
         title={t.features.crossPlatform.title}
-        platforms={null}
+        platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.crossPlatform.details}
         imageSrc={proPersoVaultsImg}
