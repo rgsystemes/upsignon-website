@@ -5,6 +5,7 @@ import styles from "./featureSection.module.css";
 import ProPersoTags from "./proPersoTags";
 import { ReactNode, useState } from "react";
 import { getDictionary } from "../../../translations/translations";
+import { colors } from "../../colors";
 
 type Props = {
   lang: string;
@@ -30,7 +31,7 @@ export default function FeatureSection(p: Props) {
     <section className={styles.feature_section}>
       <div className={styles.feature_title} onClick={toggleFold}>
         <h2>{p.title}</h2>
-        <span>{isOpen ? "-" : "+"}</span>
+        <span className={styles.toggle_button}>{isOpen ? "-" : "+"}</span>
       </div>
       <div className={styles.feature_section_compact_summary}>
         {p.imageSrc && (

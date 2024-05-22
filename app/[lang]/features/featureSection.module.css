@@ -12,7 +12,7 @@
   cursor: pointer;
   margin-bottom: 15px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 .feature_section .feature_title h2 {
   flex: 1;
@@ -20,6 +20,16 @@
 .feature_section .feature_title span, .feature_section .feature_title h2 {
   font-size: 24px;
   line-height: 1.2em;
+}
+.toggle_button {
+  background-color: rgb(44, 83, 132);
+  border-radius: 50%;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature_tags {
