@@ -45,14 +45,12 @@ const translations = {
       details: [
         "Accédez à vos mots de passe en toute sécurité sur tous vos appareils. L'interface reste exactement la même sur toutes les tailles d'écran.",
       ],
-      imageAlt: "Captures d'écran de l'application sur un smartphone, une tablette et un ordinateur.",
     },
     syncing: {
       title: "Synchronisation automatique entre vos appareils",
       details: [
         "Les modifications que vous faites sur un appareil sont automatiquement synchronisées avec vos autres appareils autorisés. Il n’y a pas de limite au nombre d’appareils autorisés.",
       ],
-      imageAlt: "",
     },
     dataSubtitle: "Gérez vos mots de passe, TOTP et données bancaires",
     unlimitedAccounts: {

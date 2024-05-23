@@ -46,14 +46,12 @@ const translations: typeof fr = {
       details: [
         "Access your passwords securely on all your devices. The interface remains exactly the same on all screen sizes.",
       ],
-      imageAlt: "Screenshots of the application on a smartphone, tablet and computer",
     },
     syncing: {
       title: "Automatic synchronisation between your devices",
       details: [
         "Changes you make on one device are automatically synchronised with your other authorised devices. There is no limit to the number of authorised devices.",
       ],
-      imageAlt: "",
     },
     dataSubtitle: "Manage your passwords, TOTP and bank details",
     unlimitedAccounts: {

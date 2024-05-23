@@ -38,6 +38,10 @@ import totpImg from "../../../public/images/totp.png";
 import trustedContactsImg from "../../../public/images/trustedContacts.png";
 import vaultListImg from "../../../public/images/vaultList.png";
 
+import cryptographyImg from "../../../public/images/cryptography.svg";
+import multiDeviceImg from "../../../public/images/multiDevice.svg";
+import syncImg from "../../../public/images/sync.svg";
+
 export const metadata: Metadata = {
   title: "Fonctionnalités",
 };
@@ -69,8 +73,8 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.crossPlatform.details}
-        imageSrc={null}
-        imageAlt={t.features.crossPlatform.imageAlt}
+        imageSrc={multiDeviceImg}
+        imageAlt={""}
       >
         <CompatibilityTable lang={params.lang} />
       </FeatureSection>
@@ -80,8 +84,8 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.syncing.details}
-        imageSrc={null}
-        imageAlt={t.features.syncing.imageAlt}
+        imageSrc={syncImg}
+        imageAlt={""}
       />
       <h2 className={styles.feature_family_title}>{t.features.dataSubtitle}</h2>
       <FeatureSection
@@ -287,7 +291,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.endToEndEncryption.details}
-        imageSrc={null}
+        imageSrc={cryptographyImg}
         imageAlt={""}
         // TODO: parler des algorithmes de chiffrement utilisés
       />
