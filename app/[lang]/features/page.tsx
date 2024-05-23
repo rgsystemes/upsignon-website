@@ -2,12 +2,41 @@ import { Metadata } from "next";
 import FeatureSection from "./featureSection";
 import CompatibilityTable from "./compatibilityTable";
 import styles from "./page.module.css";
-import proPersoVaultsImg from "../../../public/images/pro-perso-vaults.png";
-import passwordScore from "../../../public/images/password-score.png";
 import { getDictionary } from "../../../translations/translations";
 import TechFocusLink from "./techFocusLink";
 import AutolockBehaviourTable from "./autolockBehaviourTable";
 import AutofillSection from "./autofillSection";
+
+import addAccountImg from "../../../public/images/addAccount.png";
+import addCodeImg from "../../../public/images/addCode.png";
+import autolockImg from "../../../public/images/autolock.png";
+import autosaveDesktopImg from "../../../public/images/autosaveDesktop.png";
+import bankDetailsImg from "../../../public/images/bankDetails.png";
+import biometryImg from "../../../public/images/biometry.png";
+import csvExportImg from "../../../public/images/csvExport.png";
+import csvImportImg from "../../../public/images/csvImport.png";
+import deviceManagementImg from "../../../public/images/deviceManagement.png";
+import filtersImg from "../../../public/images/filters.png";
+import foldersImg from "../../../public/images/folders.png";
+import manyUrlsImg from "../../../public/images/manyUrls.png";
+import mfaImg from "../../../public/images/mfa.png";
+import notesImg from "../../../public/images/notes.png";
+import offlineModeImg from "../../../public/images/offlineMode.png";
+import passwordGeneratorImg from "../../../public/images/passwordGenerator.png";
+import passwordHistoryImg from "../../../public/images/passwordHistory.png";
+import passwordLockingImg from "../../../public/images/passwordLocking.png";
+import passwordScoresImg from "../../../public/images/passwordScores.png";
+import persoDataRecoveryImg from "../../../public/images/persoDataRecovery.png";
+import proForgottenPasswordImg from "../../../public/images/proForgottenPassword.png";
+import quickViewImg from "../../../public/images/quickView.png";
+import screenshotProtectionImg from "../../../public/images/screenshotProtection.png";
+import searchImg from "../../../public/images/search.png";
+import secureClipboardImg from "../../../public/images/secureClipboard.png";
+import sharingImg from "../../../public/images/sharing.png";
+import sharingRightsManagementImg from "../../../public/images/sharingRightsManagement.png";
+import totpImg from "../../../public/images/totp.png";
+import trustedContactsImg from "../../../public/images/trustedContacts.png";
+import vaultListImg from "../../../public/images/vaultList.png";
 
 export const metadata: Metadata = {
   title: "Fonctionnalités",
@@ -25,7 +54,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.proPerso.details}
-        imageSrc={proPersoVaultsImg}
+        imageSrc={vaultListImg}
         imageAlt={t.features.proPerso.imageAlt}
       >
         <TechFocusLink
@@ -40,7 +69,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.crossPlatform.details}
-        imageSrc={proPersoVaultsImg}
+        imageSrc={null}
         imageAlt={t.features.crossPlatform.imageAlt}
       >
         <CompatibilityTable lang={params.lang} />
@@ -51,7 +80,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.syncing.details}
-        imageSrc={proPersoVaultsImg}
+        imageSrc={null}
         imageAlt={t.features.syncing.imageAlt}
       />
       <h2 className={styles.feature_family_title}>{t.features.dataSubtitle}</h2>
@@ -61,8 +90,8 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.unlimitedAccounts.details}
-        imageSrc={proPersoVaultsImg}
-        imageAlt="TODO"
+        imageSrc={addAccountImg}
+        imageAlt={t.features.unlimitedAccounts.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
@@ -70,8 +99,8 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.unlimitedCodes.details}
-        imageSrc={proPersoVaultsImg}
-        imageAlt="TODO"
+        imageSrc={addCodeImg}
+        imageAlt={t.features.unlimitedCodes.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
@@ -79,7 +108,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.quickView.details}
-        imageSrc={proPersoVaultsImg}
+        imageSrc={quickViewImg}
         imageAlt={t.features.quickView.imageAlt}
       />
       <FeatureSection
@@ -88,7 +117,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.passwordStrength.details}
-        imageSrc={passwordScore}
+        imageSrc={passwordScoresImg}
         imageAlt={t.features.passwordStrength.imageAlt}
       />
       <FeatureSection
@@ -97,7 +126,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.passwordGenerator.details}
-        imageSrc={passwordScore}
+        imageSrc={passwordGeneratorImg}
         imageAlt={t.features.passwordGenerator.imageAlt}
       />
       <FeatureSection
@@ -106,7 +135,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.passwordHistory.details}
-        imageSrc={passwordScore}
+        imageSrc={passwordHistoryImg}
         imageAlt={t.features.passwordHistory.imageAlt}
       />
       <FeatureSection
@@ -115,7 +144,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.multiUrls.details}
-        imageSrc={passwordScore}
+        imageSrc={manyUrlsImg}
         imageAlt={t.features.multiUrls.imageAlt}
       />
       <FeatureSection
@@ -124,7 +153,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.notes.details}
-        imageSrc={passwordScore}
+        imageSrc={notesImg}
         imageAlt={t.features.notes.imageAlt}
       />
       <FeatureSection
@@ -133,7 +162,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.totp.details}
-        imageSrc={passwordScore}
+        imageSrc={totpImg}
         imageAlt={t.features.totp.imageAlt}
       >
         <div>Comment configurer un TOTP dans UpSignOn ?</div>
@@ -145,7 +174,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.paymentData.details}
-        imageSrc={passwordScore}
+        imageSrc={bankDetailsImg}
         imageAlt={t.features.paymentData.imageAlt}
       />
       <h2 className={styles.feature_family_title}>{t.features.sharingSubtitle}</h2>
@@ -155,7 +184,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "no", perso: "yes" }}
         details={t.features.trustedContacts.details}
-        imageSrc={passwordScore}
+        imageSrc={trustedContactsImg}
         imageAlt={t.features.trustedContacts.imageAlt}
       />
       <FeatureSection
@@ -164,7 +193,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.sharing.details}
-        imageSrc={passwordScore}
+        imageSrc={sharingImg}
         imageAlt={t.features.sharing.imageAlt}
       />
       <FeatureSection
@@ -173,7 +202,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.rightsManagement.details}
-        imageSrc={passwordScore}
+        imageSrc={sharingRightsManagementImg}
         imageAlt={t.features.rightsManagement.imageAlt}
       >
         <ul>
@@ -181,10 +210,10 @@ export default function Page({ params }: { params: { lang: string } }) {
             <strong>{t.features.rightsManagement.rightLevels.readOnly.title}</strong>{" "}
             {t.features.rightsManagement.rightLevels.readOnly.def}
           </li>
-          <li>
+          {/* <li>
             <strong>{t.features.rightsManagement.rightLevels.editor.title}</strong>{" "}
             {t.features.rightsManagement.rightLevels.editor.def}
-          </li>
+          </li> */}
           <li>
             <strong>{t.features.rightsManagement.rightLevels.owner.title}</strong>{" "}
             {t.features.rightsManagement.rightLevels.owner.def}
@@ -199,7 +228,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "no", android: "no", windows: "yes", macos: "yes", linux: "yes", chromeos: "no" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.autosaveDesktop.details}
-        imageSrc={passwordScore}
+        imageSrc={autosaveDesktopImg}
         imageAlt={t.features.autosaveDesktop.imageAlt}
       />
       <h2 className={styles.feature_family_title}>{t.features.searchFilterOrganizeSubtitle}</h2>
@@ -209,7 +238,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.search.details}
-        imageSrc={passwordScore}
+        imageSrc={searchImg}
         imageAlt={t.features.search.imageAlt}
       />
       <FeatureSection
@@ -218,7 +247,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.filter.details}
-        imageSrc={passwordScore}
+        imageSrc={filtersImg}
         imageAlt={t.features.filter.imageAlt}
       />
       <FeatureSection
@@ -227,7 +256,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.organize.details}
-        imageSrc={passwordScore}
+        imageSrc={foldersImg}
         imageAlt={t.features.organize.imageAlt}
       />
       <h2 className={styles.feature_family_title}>{t.features.importExportSubtitle}</h2>
@@ -237,7 +266,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.csvImport.details}
-        imageSrc={passwordScore}
+        imageSrc={csvImportImg}
         imageAlt={t.features.csvImport.imageAlt}
       />
       <FeatureSection
@@ -246,7 +275,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.csvExport.details}
-        imageSrc={passwordScore}
+        imageSrc={csvExportImg}
         imageAlt={t.features.csvExport.imageAlt}
       >
         <strong>{t.features.csvExport.warningPro}</strong>
@@ -268,8 +297,8 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.passwordLocking.details}
-        imageSrc={null}
-        imageAlt={""}
+        imageSrc={passwordLockingImg}
+        imageAlt={t.features.passwordLocking.imageAlt}
         // TODO: parler des algorithmes de chiffrement utilisés
       />
       <FeatureSection
@@ -278,16 +307,16 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "no", chromeos: "no" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.biometricUnlock.details}
-        imageSrc={null}
-        imageAlt={""}
-      />{" "}
+        imageSrc={biometryImg}
+        imageAlt={t.features.biometricUnlock.imageAlt}
+      />
       <FeatureSection
         lang={params.lang}
         title={t.features.autolock.title}
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.autolock.details}
-        imageSrc={null}
+        imageSrc={autolockImg}
         imageAlt={t.features.autolock.imageAlt}
       >
         <AutolockBehaviourTable lang={params.lang} />
@@ -298,8 +327,8 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "warning" }}
         details={t.features.forgottenPassword.details}
-        imageSrc={null}
-        imageAlt={""}
+        imageSrc={proForgottenPasswordImg}
+        imageAlt={t.features.forgottenPassword.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
@@ -307,8 +336,8 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "warning" }}
         details={t.features.dataBackup.details}
-        imageSrc={null}
-        imageAlt={""}
+        imageSrc={persoDataRecoveryImg}
+        imageAlt={t.features.dataBackup.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
@@ -316,8 +345,8 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.mfaByDesign.details}
-        imageSrc={null}
-        imageAlt={""}
+        imageSrc={mfaImg}
+        imageAlt={t.features.mfaByDesign.imageAlt}
         // TODO: parler des algorithmes de chiffrement utilisés
       />
       <FeatureSection
@@ -326,7 +355,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.deviceRevocation.details}
-        imageSrc={null}
+        imageSrc={deviceManagementImg}
         imageAlt={t.features.deviceRevocation.imageAlt}
       />
       <FeatureSection
@@ -335,7 +364,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.offlineAcess.details}
-        imageSrc={null}
+        imageSrc={offlineModeImg}
         imageAlt={t.features.offlineAcess.imageAlt}
       >
         <TechFocusLink
@@ -350,8 +379,8 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "warning", windows: "yes", macos: "yes", linux: "yes", chromeos: "warning" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.protectedClipboard.details}
-        imageSrc={null}
-        imageAlt={""}
+        imageSrc={secureClipboardImg}
+        imageAlt={t.features.protectedClipboard.imageAlt}
       >
         <TechFocusLink
           title={t.techResources.protectedClipboardBehaviour.title}
@@ -365,8 +394,8 @@ export default function Page({ params }: { params: { lang: string } }) {
         platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "no", linux: "no", chromeos: "yes" }}
         tags={{ pro: "yes", perso: "yes" }}
         details={t.features.screenshotProtection.details}
-        imageSrc={null}
-        imageAlt={""}
+        imageSrc={screenshotProtectionImg}
+        imageAlt={t.features.screenshotProtection.imageAlt}
       />
       <h2 className={styles.feature_family_title}>{t.features.supervisionSubtitle}</h2>
       <p className={styles.supervision_general_intro}>{t.features.supervisionGeneralExplanation}</p>

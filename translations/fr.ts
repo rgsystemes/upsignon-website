@@ -60,12 +60,14 @@ const translations = {
       details: [
         "Dans UpSignOn, vous pouvez ajouter autant de comptes internet que vous le souhaitez, y compris dans les coffres-forts PERSO qui sont gratuits. Typiquement, vous y enregistrerez le mot de passe et l’adresse de chacun de vos sites web.",
       ],
+      imageAlt: "Capture d'écran de la page d'ajout d'un compte.",
     },
     unlimitedCodes: {
       title: "Ajout de codes illimité",
       details: [
         "Vous pouvez également enregistrer des codes dans votre coffre-fort (code d’immeuble, de cadenas, d’alarme, etc.) Leur affichage est plus simple que celui des comptes internet.",
       ],
+      imageAlt: "Capture d'écran de la page d'ajout d'un code.",
     },
     quickView: {
       title: "Vue rapide ergonomique, toutes les actions à portée de main",
@@ -259,6 +261,8 @@ const translations = {
         "Votre mot de passe maître est le dernier mot de passe que vous devez retenir. C'est grâce à lui que sont chiffrées vos données.",
         "Concrètement, votre mot de passe est dérivé en une clé de chiffrement qui est ensuite utilisée pour les opérations cryptographiques. L'opération de dérivation, bien que quasiment immédiate du point de vue de l'utilisateur, est suffisamment complexe pour ralentir fortement un piate qui tenterait de trouver votre mot de passe maître par force brute. Donc, du moment que vous ne choisissez pas un mot de passe trop simple ou contenant des informations personnelles, ce système est une protection très efficace.",
       ],
+      imageAlt:
+        "Capture d'écran de la fenêtre de saisie du mot de passe maître lors du déverouillage d'un coffre-fort.",
     },
     mfaByDesign: {
       title: "Authentification multi-facteurs (MFA) par conception",
@@ -266,6 +270,7 @@ const translations = {
         "Le déverrouillage de votre coffre-fort nécessite toujours deux facteurs d'authentification : votre mot de passe maître et un appareil autorisé.",
         "Le simple fait d'utiliser l'un de vos appareils est une première preuve d'authentification. Vous n'avez besoin que de saisir votre mot de passe maître pour déverrouiller votre coffre-fort.",
       ],
+      imageAlt: "Capture d'écran d'un coffre-fort PRO désactivé.",
     },
     biometricUnlock: {
       title: "Déverrouillage biométrique (reconnaissance faciale, empreinte digitale, Windows Hello)",
@@ -274,6 +279,7 @@ const translations = {
         "Attention, la saisie de votre mot de passe maître restera obligatoire pour l'enrollement d'un nouvel appareil ou pour utiliser l'option de récupération de vos données à partir d'une sauvegarde chez un contact de confiance.",
         "NB : sur Windows, cette option active Windows Hello. Cela signifie que n'importe quelle option de déverrouillage de Windows Hello fonctionnera pour déverrouiller votre coffre-fort.",
       ],
+      imageAlt: "Capture d'écran d'un déverrouillage biométrique sur macOS.",
     },
     forgottenPassword: {
       title: "Mot de passe oublié",
@@ -283,6 +289,7 @@ const translations = {
         "Pour les coffres-forts PERSO, vous devez manuellement activer cette option auprès d'un ou plusieurs contact(s) de confiance. En cas d'oubli de votre mot de passe maître, l'un de ces contacts de confiance peut vous aider à le réinitialiser.",
         "Dans les deux cas, ni l'administrateur PRO ni le contact de confiance n'est en mesure de récupérer votre mot de passe.",
       ],
+      imageAlt: "Capture d'écran de la page de mot de passe oublié d'un coffre-fort PRO.",
     },
     deviceRevocation: {
       title: "Gestion et révocation des appareils",
@@ -312,6 +319,8 @@ const translations = {
         "En mode PERSO, vous pouvez manuellement configurer une sauvegarde auprès de l'un de vos contacts de confiance, ce qui est fortement recommandé.",
         "Dans les deux cas, la récupération de votre coffre-fort nécessite la saisie de votre mot de passe maître pour que personne d'autre ne puisse utiliser la fonction de récupération.",
       ],
+      imageAlt:
+        "Capture d'écran de la page de création d'un coffre-fort PERSO où le mode de récupération est sélectionné.",
     },
     autolock: {
       title: "Verrouillage automatique",
@@ -342,6 +351,7 @@ const translations = {
         "Vous avez la possibilité de désactiver cette protection depuis l’application.",
         "Attention, le comportement exact de cette fonctionnalité diffère selon les plateformes et les versions de système d’exploitation (détails de fonctionnement dans le lien ci-dessous).",
       ],
+      imageAlt: "Capture d'écran du menu d'activation de la protection du presse-papier.",
     },
     screenshotProtection: {
       title: "Protection contre les captures et le partage d'écran",
@@ -351,6 +361,7 @@ const translations = {
         "Vous pouvez désactiver cette protection pour une durée limitée (configurable) à partir de la page réglages.",
         "Si nécessaire, vous pouvez facilement modifier l'adresse email d'un coffre-fort.",
       ],
+      imageAlt: "Capture d'écran de l'application apparaissant noire lors d'un partage d'écran sur Windows.",
     },
     supervisionSubtitle: "Console de supervision et d'administration UpSignOn PRO",
     supervisionGeneralExplanation:

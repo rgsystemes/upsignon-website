@@ -41,7 +41,7 @@ export default function FeatureSection(p: Props) {
               alt={p.imageAlt}
               className={styles.feature_img}
               style={{
-                maxHeight: isOpen ? 450 : 212,
+                maxHeight: isOpen ? 450 : 350,
               }}
             />
           </div>

@@ -61,12 +61,14 @@ const translations: typeof fr = {
       details: [
         "In UpSignOn, you can add as many internet accounts as you like, including PERSO vaults which are free. Typically, you'll store the password and address for each of your websites.",
       ],
+      imageAlt: "Screenshot of the add account page.",
     },
     unlimitedCodes: {
       title: "Add unlimited codes",
       details: [
         "You can also save codes in your vault (building code, lock code, alarm code, etc.) Their display is simpler than that of internet accounts.",
       ],
+      imageAlt: "Screenshot of the add code page.",
     },
     quickView: {
       title: "Ergonomic quick view, all actions at your fingertips",
@@ -257,6 +259,7 @@ const translations: typeof fr = {
         "Your master password is the last password you need to remember. It is used to encrypt your data.",
         "In practical terms, your password is derived into an encryption key which is then used for cryptographic operations. The derivation operation, although almost immediate from the user's point of view, is sufficiently complex to greatly slow down a hacker trying to find your master password by brute force. So, as long as you don't choose a password that is too simple or contains personal information, this system is a very effective protection.",
       ],
+      imageAlt: "Screenshot of the master password entry window when unlocking a vault.",
     },
     mfaByDesign: {
       title: "Multi-factor authentication (MFA) by design",
@@ -264,6 +267,7 @@ const translations: typeof fr = {
         "Unlocking your vault always requires two authentication factors: your master password and an authorised device",
         "Simply using one of your devices is one first proof of authentication. You only need to enter your master password to unlock your vault.",
       ],
+      imageAlt: "Screenshot of a deactivated PRO vault.",
     },
     biometricUnlock: {
       title: "Biometric unlocking (facial recognition, fingerprint, Windows Hello)",
@@ -272,6 +276,7 @@ const translations: typeof fr = {
         "Please note that you will still need to enter your master password to enrol a new device or to use the option to recover your data from a backup with a trusted contact.",
         "NB: on Windows, this option activates Windows Hello. This means that any Windows Hello unlock option will work to unlock your vault.",
       ],
+      imageAlt: "Screenshot of a biometric unlock on macOS.",
     },
     forgottenPassword: {
       title: "Forgotten password",
@@ -281,6 +286,7 @@ const translations: typeof fr = {
         "For PERSO vaults, you must manually activate this option with one or more trusted contact(s). If you forget your master password, one of these trusted contacts can help you reset it.",
         "In both cases, neither the PRO administrator nor the trusted contact is able to recover your password.",
       ],
+      imageAlt: "Screenshot of the forgotten password page for a PRO vault.",
     },
     deviceRevocation: {
       title: "Device management and revocation",
@@ -310,6 +316,7 @@ const translations: typeof fr = {
         "In PERSO mode, you can manually set up a backup with one of your trusted contacts, which is highly recommended.",
         "In both cases, you will need to enter your master password to recover your vault so that no one else can use the recovery method.",
       ],
+      imageAlt: "Screenshot of the PERSO vault creation page where recovery mode is selected.",
     },
     autolock: {
       title: "Automatic locking",
@@ -340,6 +347,7 @@ const translations: typeof fr = {
         "You can deactivate this protection from within the application.",
         "Please note that the exact behaviour of this feature differs depending on the platform and operating system version (see the link below for details).",
       ],
+      imageAlt: "Screenshot of the menu for activating clipboard protection.",
     },
     screenshotProtection: {
       title: "Protection against screenshots and screen sharing",
@@ -348,6 +356,7 @@ const translations: typeof fr = {
         "To avoid difficulties during potential user support sessions, this protection is only activated after a vault has been unlocked.",
         "You can disable this protection for a limited time (configurable) from the settings page.",
       ],
+      imageAlt: "Screenshot of the application appearing black when sharing the screen on Windows.",
     },
     supervisionSubtitle: "UpSignOn PRO supervision and administration dashboard",
     supervisionGeneralExplanation:

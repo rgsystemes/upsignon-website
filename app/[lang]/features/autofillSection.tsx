@@ -5,7 +5,10 @@ import styles from "./featureSection.module.css";
 import ProPersoTags from "./proPersoTags";
 import { useState } from "react";
 import { getDictionary } from "../../../translations/translations";
-import passwordScore from "../../../public/images/password-score.png";
+
+import autofillAndroidImg from "../../../public/images/autofillAndroid.jpg";
+import autofillDesktopSmallImg from "../../../public/images/autofillDesktopSmall.png";
+import autofillIOSImg from "../../../public/images/autofillIOS.png";
 
 type Props = {
   lang: string;
@@ -29,17 +32,19 @@ export default function AutofillSection(p: Props) {
         lang={p.lang}
       />
       <ProPersoTags pro={"yes"} perso={"yes"} lang={p.lang} inline />
-      <div className={isOpen ? null : styles.autofill_block_container}>
-        <div className={styles.autofill_block}>
+      <div className={isOpen ? styles.autofill_block_container_unfolded : styles.autofill_block_container_folded}>
+        <div className={styles.autofill_block_desktop}>
           <div className={styles.autofill_block_title}>{t.features.autofill.desktopTitle}</div>
-          <Image
-            src={passwordScore}
-            alt={t.features.autofill.desktopImageAlt}
-            className={styles.feature_img}
-            style={{
-              maxHeight: isOpen ? 450 : 212,
-            }}
-          />
+          <div>
+            <Image
+              src={autofillDesktopSmallImg}
+              alt={t.features.autofill.desktopImageAlt}
+              className={styles.feature_img}
+              style={{
+                maxHeight: isOpen ? 450 : 350,
+              }}
+            />
+          </div>
           {isOpen && (
             <div>
               {t.features.autofill.desktopDetails.map((d, id) => (
@@ -53,11 +58,11 @@ export default function AutofillSection(p: Props) {
         <div className={styles.autofill_block}>
           <div className={styles.autofill_block_title}>{t.features.autofill.iosTitle}</div>
           <Image
-            src={passwordScore}
+            src={autofillIOSImg}
             alt={t.features.autofill.iosImageAlt}
             className={styles.feature_img}
             style={{
-              maxHeight: isOpen ? 450 : 212,
+              maxHeight: isOpen ? 450 : 250,
             }}
           />
           {isOpen && (
@@ -73,11 +78,11 @@ export default function AutofillSection(p: Props) {
         <div className={styles.autofill_block}>
           <div className={styles.autofill_block_title}>{t.features.autofill.androidTitle}</div>
           <Image
-            src={passwordScore}
+            src={autofillAndroidImg}
             alt={t.features.autofill.androidImageAlt}
             className={styles.feature_img}
             style={{
-              maxHeight: isOpen ? 450 : 212,
+              maxHeight: isOpen ? 450 : 250,
             }}
           />
           {isOpen && (
