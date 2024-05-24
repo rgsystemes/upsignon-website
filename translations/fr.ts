@@ -419,9 +419,12 @@ const translations = {
     },
     securitySettings: {
       title: "Réglages de sécurité",
-      details: [
-        "Désactivez le mode hors-connexion, activez l'export CSV, choisissez les plateformes autorisées, exigez une validation manuelle pour l'enrollement d'un deuxième appareil.",
-      ],
+      a: "Activez/désactivez la validation manuelle d'un administrateur pour les demandes de réinitilisation de mot de passe (activé par défaut).",
+      b: "Activez/désactivez le mode hors-connexion sur les ordinateurs de bureau (activé par défaut).",
+      c: "Activez/désactivez le mode hors-connexion sur les téléphones et tablettes (activé par défaut).",
+      d: "Activez/désactivez l'export CSV (désactivé par défaut).",
+      e: "Autorisez/interdisez certaines plateformes (tout autorisé par défaut).",
+      f: "Activez/désactivez la validation manuelle d'un administrateur pour l'ajout de plus d'un appareil (désactivé par défaut).",
       imageAlt: "Capture d'écran des options de banque de la console de supervision.",
     },
     adminManagement: {

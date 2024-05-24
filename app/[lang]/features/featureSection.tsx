@@ -40,16 +40,22 @@ export default function FeatureSection(p: Props) {
               src={p.imageSrc}
               alt={p.imageAlt}
               className={styles.feature_img}
-              style={{
-                maxHeight: isOpen ? 450 : 350,
-              }}
+              style={
+                p.platforms || p.tags
+                  ? {
+                      maxHeight: isOpen ? 450 : 350,
+                    }
+                  : null
+              }
             />
           </div>
         )}
-        <div className={styles.feature_tags}>
-          {p.platforms && <FeaturePlatforms platforms={p.platforms} lang={p.lang} />}
-          {p.tags && <ProPersoTags pro={p.tags?.pro} perso={p.tags?.perso} lang={p.lang} />}
-        </div>
+        {(p.platforms || p.tags) && (
+          <div className={styles.feature_tags}>
+            {p.platforms && <FeaturePlatforms platforms={p.platforms} lang={p.lang} />}
+            {p.tags && <ProPersoTags pro={p.tags?.pro} perso={p.tags?.perso} lang={p.lang} />}
+          </div>
+        )}
       </div>
       {isOpen && (
         <div>

@@ -37,6 +37,18 @@ import sharingRightsManagementImg from "../../../public/images/sharingRightsMana
 import totpImg from "../../../public/images/totp.png";
 import trustedContactsImg from "../../../public/images/trustedContacts.png";
 import vaultListImg from "../../../public/images/vaultList.png";
+import adminManagementImg from "../../../public/images/console_adminManagement.png";
+import awarenessCampaignsImg from "../../../public/images/console_awarenessCampaigns.png";
+import bankManagementImg from "../../../public/images/console_bankManagement.png";
+import consoleDeviceManagementImg from "../../../public/images/console_deviceManagement.png";
+import microsoftEntraConfigImg from "../../../public/images/console_microsoftEntraConfig.png";
+import passwordResetImg from "../../../public/images/console_passwordReset.png";
+import passwordStrengthCurveImg from "../../../public/images/console_passwordStrengthCurve.png";
+import prefilledWebsitesImg from "../../../public/images/console_prefilledWebsites.png";
+import securitySettingsImg from "../../../public/images/console_securitySettings.png";
+import sharedDevicesImg from "../../../public/images/console_sharedDevice.png";
+import sharedVaultsImg from "../../../public/images/console_sharedVaults.png";
+import userManagementImg from "../../../public/images/console_userManagement.png";
 
 import cryptographyImg from "../../../public/images/cryptography.svg";
 import multiDeviceImg from "../../../public/images/multiDevice.svg";
@@ -405,86 +417,95 @@ export default function Page({ params }: { params: { lang: string } }) {
       <p className={styles.supervision_general_intro}>{t.features.supervisionGeneralExplanation}</p>
       <FeatureSection
         lang={params.lang}
-        title={t.features.bankManagement.title}
-        details={t.features.bankManagement.details}
-        imageSrc={null}
-        imageAlt={t.features.bankManagement.imageAlt}
-      />
-      <FeatureSection
-        lang={params.lang}
         title={t.features.passwordStrengthEvolutionCurve.title}
         details={t.features.passwordStrengthEvolutionCurve.details}
-        imageSrc={null}
+        imageSrc={passwordStrengthCurveImg}
         imageAlt={t.features.passwordStrengthEvolutionCurve.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
         title={t.features.userManagement.title}
         details={t.features.userManagement.details}
-        imageSrc={null}
+        imageSrc={userManagementImg}
         imageAlt={t.features.userManagement.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
         title={t.features.deviceManagement.title}
         details={t.features.deviceManagement.details}
-        imageSrc={null}
+        imageSrc={consoleDeviceManagementImg}
         imageAlt={t.features.deviceManagement.imageAlt}
+      />
+      <FeatureSection
+        lang={params.lang}
+        title={t.features.bankManagement.title}
+        details={t.features.bankManagement.details}
+        imageSrc={bankManagementImg}
+        imageAlt={t.features.bankManagement.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
         title={t.features.sharedVaultsManagement.title}
         details={t.features.sharedVaultsManagement.details}
-        imageSrc={null}
+        imageSrc={sharedVaultsImg}
         imageAlt={t.features.sharedVaultsManagement.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
+        title={t.features.securitySettings.title}
+        details={[]}
+        imageSrc={securitySettingsImg}
+        imageAlt={t.features.securitySettings.imageAlt}
+      >
+        <ul>
+          <li>{t.features.securitySettings.a}</li>
+          <li>{t.features.securitySettings.b}</li>
+          <li>{t.features.securitySettings.c}</li>
+          <li>{t.features.securitySettings.d}</li>
+          <li>{t.features.securitySettings.e}</li>
+          <li>{t.features.securitySettings.f}</li>
+        </ul>
+      </FeatureSection>
+      <FeatureSection
+        lang={params.lang}
         title={t.features.passwordResetApproval.title}
         details={t.features.passwordResetApproval.details}
-        imageSrc={null}
+        imageSrc={passwordResetImg}
         imageAlt={t.features.passwordResetApproval.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
-        title={t.features.securitySettings.title}
-        details={t.features.securitySettings.details}
-        imageSrc={null}
-        imageAlt={t.features.securitySettings.imageAlt}
+        title={t.features.passwordAwarenessCampaigns.title}
+        details={t.features.passwordAwarenessCampaigns.details}
+        imageSrc={awarenessCampaignsImg}
+        imageAlt={t.features.passwordAwarenessCampaigns.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
         title={t.features.adminManagement.title}
         details={t.features.adminManagement.details}
-        imageSrc={null}
+        imageSrc={adminManagementImg}
         imageAlt={t.features.adminManagement.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
         title={t.features.msEntra.title}
         details={t.features.msEntra.details}
-        imageSrc={null}
+        imageSrc={microsoftEntraConfigImg}
         imageAlt={t.features.msEntra.imageAlt}
-      />
-      <FeatureSection
-        lang={params.lang}
-        title={t.features.passwordAwarenessCampaigns.title}
-        details={t.features.passwordAwarenessCampaigns.details}
-        imageSrc={null}
-        imageAlt={t.features.passwordAwarenessCampaigns.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
         title={t.features.prefilledWebsites.title}
         details={t.features.prefilledWebsites.details}
-        imageSrc={null}
+        imageSrc={prefilledWebsitesImg}
         imageAlt={t.features.prefilledWebsites.imageAlt}
       />
       <FeatureSection
         lang={params.lang}
         title={t.features.sharedDeviceVisibility.title}
         details={t.features.sharedDeviceVisibility.details}
-        imageSrc={null}
+        imageSrc={sharedDevicesImg}
         imageAlt={t.features.sharedDeviceVisibility.imageAlt}
       />
     </div>

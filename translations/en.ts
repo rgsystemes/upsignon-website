@@ -410,9 +410,12 @@ const translations: typeof fr = {
     },
     securitySettings: {
       title: "Security settings",
-      details: [
-        "Deactivate offline mode, activate CSV export and choose the authorised platforms, require manual validation for enrolling a second device.",
-      ],
+      a: "Enable/disable manual validation by an administrator for password reset requests (enabled by default)",
+      b: "Enable/disable offline mode on desktops (enabled by default)",
+      c: "Enable/disable offline mode on phones and tablets (enabled by default)",
+      d: "Enable/disable CSV export (disabled by default)",
+      e: "Allow/disallow certain platforms (all allowed by default)",
+      f: "Enable/disable manual validation by an administrator for the addition of more than one device (disabled by default)",
       imageAlt: "Screenshot of bank settings from the supervision console.",
     },
     adminManagement: {
