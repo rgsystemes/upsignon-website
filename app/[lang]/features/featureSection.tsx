@@ -33,27 +33,21 @@ export default function FeatureSection(p: Props) {
         <h2>{p.title}</h2>
         <span className={styles.toggle_button}>{isOpen ? "-" : "+"}</span>
       </div>
-      <div className={styles.feature_section_compact_summary}>
+      <div className={styles.feature_section_compact_summary} style={isOpen ? { flexDirection: "column" } : null}>
         {p.imageSrc && (
-          <div>
+          <div className={styles.imageContainer}>
             <Image
               src={p.imageSrc}
               alt={p.imageAlt}
               className={styles.feature_img}
-              style={
-                p.platforms || p.tags
-                  ? {
-                      maxHeight: isOpen ? 450 : 350,
-                    }
-                  : null
-              }
+              style={!isOpen && (p.platforms || p.tags) ? { maxHeight: 350 } : null}
             />
           </div>
         )}
         {(p.platforms || p.tags) && (
-          <div className={styles.feature_tags}>
-            {p.platforms && <FeaturePlatforms platforms={p.platforms} lang={p.lang} />}
-            {p.tags && <ProPersoTags pro={p.tags?.pro} perso={p.tags?.perso} lang={p.lang} />}
+          <div className={styles.feature_tags} style={isOpen ? { alignItems: "center" } : null}>
+            {p.platforms && <FeaturePlatforms inline={isOpen} platforms={p.platforms} lang={p.lang} />}
+            {p.tags && <ProPersoTags inline={isOpen} pro={p.tags?.pro} perso={p.tags?.perso} lang={p.lang} />}
           </div>
         )}
       </div>

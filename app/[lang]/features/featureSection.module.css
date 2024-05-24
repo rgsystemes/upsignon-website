@@ -32,9 +32,15 @@
   justify-content: center;
 }
 
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
 .feature_tags {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   flex-grow: 0;
   margin-left: 50px;
@@ -76,10 +82,9 @@
     flex-direction: column;
   }
   .feature_tags {
-    flex-direction: column;
     width: 100%;
-    align-items: center;
     margin-left: 0;
+    align-items: center;
   }
 }
 
