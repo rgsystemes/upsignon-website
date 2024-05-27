@@ -4,6 +4,12 @@ const translations: typeof fr = {
   menu: {
     features: "Features",
   },
+  pitch: {
+    moto: "UpSignOn, the strong password vault\nfor private and professional use.",
+    subtitle: "Save, secure and forget\nyour passwords!",
+    french: "Made in France",
+    privacyByDesign: "Security and privacy by design",
+  },
   features: {
     pageTitle: "Features",
     tags: {

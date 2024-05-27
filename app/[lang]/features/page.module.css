@@ -1,6 +1,7 @@
 .content {
+  max-width: 900px;
+  margin: auto;
   padding: 20px;
-  background: rgb(44, 83, 132);
 }
 .content h1 {
   color: white;

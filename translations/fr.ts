@@ -2,6 +2,12 @@ const translations = {
   menu: {
     features: "Fonctionnalités",
   },
+  pitch: {
+    moto: "UpSignOn, le coffre de mots de passe forts\npour les particuliers et les pros.",
+    subtitle: "Enregistrez, sécurisez et oubliez\nvos mots de passe !",
+    french: "Une solution 100% française et souveraine",
+    privacyByDesign: "Sécurité et vie privée par conception",
+  },
   features: {
     pageTitle: "Fonctionnalités",
     tags: {
