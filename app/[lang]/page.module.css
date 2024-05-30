@@ -15,8 +15,14 @@
   color: white;
 }
 
+.videoContainer {
+  display: flex;
+  justify-content: center;
+}
+
 /* TAGS SECTION */
 .tagsSection {
+  padding: 50px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -42,4 +48,57 @@
 .tagsImgContainer img {
   width: auto;
   height: 120px;
+}
+
+
+/* KEY METRICS SECTION */
+.keyMetricsSection {
+  background-color: white;
+  color: rgb(44, 83, 132);
+  padding: 50px 20px;
+}
+.keyMetricsSectionContent {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ADVANTAGES SECTION */
+.advantagesSection {
+  color: white;
+  padding: 50px 20px;
+}
+.advantagesSectionContent {
+  max-width: 900px;
+  margin: auto;
+}
+/* PRO VS PERSO SECTION */
+.proVsPersoSection {
+  background-color: white;
+  color: rgb(44, 83, 132);
+  padding: 50px 20px;
+}
+.proVsPersoSectionContent {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* DEMO SECTION */
+.demoSection {
+  color: white;
+  padding: 50px 20px;
+}
+.demoSectionContent {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* SECURITY BY DESIGN SECTION */
+.securityByDesignSection {
+  background-color: white;
+  color: rgb(44, 83, 132);
+  padding: 50px 20px;
+}
+.securityByDesignSectionContent {
+  max-width: 900px;
+  margin: auto;
 }

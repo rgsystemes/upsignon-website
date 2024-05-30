@@ -7,6 +7,80 @@ const translations = {
     subtitle: "Enregistrez, sécurisez et oubliez\nvos mots de passe !",
     french: "Une solution 100% française et souveraine",
     privacyByDesign: "Sécurité et vie privée par conception",
+    keyMetrics1Title: "En entreprise, 80% des piratages sont liés à la faiblesse des mots de passe",
+    keyMetrics1Details:
+      "Les mots de passe faibles, réutilisés, ou obtenus par phishing sont en cause dans 80% des attaques réussies. C’est donc un enjeu majeur pour votre entreprise, association ou collectivité ! Les conséquences financières d’un piratage sont souvent catastrophiques pour l’organisation victime.",
+    keyMetrics2Title:
+      "59% des personnes utilisent le même mot de passe pour tous leurs comptes, professionnels ou personnels",
+    keyMetrics2Details:
+      "Réutiliser le même mot de passe est l'une des plus mauvaises pratiques car si l'un de vos sites subit une fuite de données, cela compromet en chaîne vos comptes sur tous vos autres sites.",
+    advantages: {
+      sectionTitle: "Les avantages d’un coffre-fort de mots de passe",
+      1: {
+        t: "Tous vos mots de passe en un seul endroit sécurisés et synchronisés sur tous vos appareils",
+        p1: 'Vous avez le même mot de passe pour tous vos sites ? vous utilisez la fonction "mot de passe oublié" à chaque connexion ? vous notez tout vos mots de passe sur un calepin ou dans un fichier Excel ? Stop ! c’est non seulement inefficace, mais c’est en plus un gros risque de sécurité !',
+        p2: "Avec UpSignOn, oubliez vos mots de passe ! L’application les enregistre pour vous et vous permet de les utiliser sur tous vos appareils avec une grande simplicité. UpSignOn est compatible avec toutes les plateformes (iOS, Android, MacOS, Windows, Linux).",
+      },
+      2: {
+        t: "Avoir des mots de passe très forts",
+        p1: 'Le mot de passe le plus utilisé reste encore le fameux "123456". Les pirates le savent et testeront ce mot de passe en premier ! La bonne pratique est donc d’utiliser un mot de passe fort, idéalement généré aléatoirement (c’est ce qui résiste le mieux aux tentatives de force-brute).',
+        p2: "Les pirates savent aussi que la plupart des personnes réutilise le même mot de passe partout. Si c’est le cas pour vous, il y a de fortes chances que ce mot de passe unique ait fuité au moins sur l’un de vos sites et soit enregistré dans une base de données facilement achetable sur le dark web.",
+        p3: "Pour vous aider à avoir des mots de passe très forts et uniques sur chaque site, UpSignOn intègre un générateur de mots de passe et de phrases de passe aléatoires. UpSignOn vous affiche aussi un score de sécurité pour chaque mot de passe pour vous aider à identifier très rapidement vos mots de passe les plus vulnérables.",
+      },
+      3: {
+        t: "Partager des mots de passe de façon sécurisée",
+        p1: "Partager ses mots de passe, nous le faisons tous. Mais, sans outil, cela conduit inévitablement à utiliser les plus mauvaises pratiques : utiliser un mot de passe trop simple, afficher le mot de passe sur un mur, ne jamais changer ce mot de passe. Grâce à UpSignOn, les mots de passe que vous partagez peuvent rester uniques et forts, et peuvent être modifiés et synchronisés auprès de tous les destinataires sans effort.",
+      },
+      4: {
+        t: "Remplissage et enregistrement automatique de vos mots de passe",
+        p1: "Avec UpSignOn, vous n’avez même plus besoin de taper vos mots de passe. Ils sont remplis automatiquement pour vous par l’application (smartphones) ou l’extension de navigateur (ordinateurs).",
+        p2: "L’extension de navigateur détecte aussi les mots de passe que vous saisissez manuellement pour les enregistrer dans votre coffre-fort.",
+      },
+      5: {
+        t: "[PRO] De la visibilité pour les administrateurs",
+        p1: "Déployer un gestionnaire de mots de passe pour vos employés c’est bien, mais pouvoir vous assurer qu’il est utilisé et qu’il permet effectivement le renforcement des mots de passe, c’est mieux !",
+        p2: "Grâce à notre console de supervision, obtenez de la visibilité sur l’état des mots de passe dans votre entreprise et ajustez certains paramètres de sécurité selon vos besoins.",
+      },
+    },
+    proVsPerso: {
+      sectionTitle: "Une seule application, deux types de coffres-forts",
+      perso: {
+        t: "UpSignOn PERSO, gratuit, privé, simple et convivial",
+        p1: "Les coffres-forts PERSO sont conçus pour un usage privé ou pour de petites équipes. Ils sont gratuits et illimités. Ils sont conçus pour maximiser la sécurité. L’entreprise UpSignOn ne reçoit aucune donnée personnelle, pas même votre adresse email !",
+      },
+      pro: {
+        t: "UpSignOn PRO, adapté aux enjeux professionnels",
+        p1: "En tant que directeur technique, responsable de la sécurité informatique de votre organisation, ou dirigeant d’entreprise vous devez vous assurer que tous vos collègues appliquent les bonnes pratiques dans la gestion de leurs mots de passe. Votre objectif est d’avoir 100% de mots de passe forts. Déployer un outil n’est pas suffisant. Vous devez pouvoir suivre son adoption et vérifier qu’il porte ses fruits.",
+        p2: "UpSignOn PRO vous donne donc accès à une console de supervision pour suivre l’évolution de la force des mots de passe, identifier les personnes qui ont besoin d’être accompagnées et contrôler ou ajuster les fonctionnalités les plus sensibles (e.g export CSV, réinitialisation de mot de passe maître, plateformes autorisées, mode hors-ligne, etc.).",
+        p3: "Bien que quasiment identiques en termes d’interface utilisateur, sous le capot, les coffres-forts PRO sont très différents des coffres-forts PERSO.",
+      },
+      more_1: "Pour plus de détails techniques, consultez cette ",
+      more_2: "page d’explication",
+      more_3: ". Vous pouvez également consulter la ",
+      more_4: "liste des fonctionnalités",
+      more_5: ".",
+    },
+    demo: {
+      sectionTitle: "On vous montre ?",
+      perso: "Démo des coffres-forts PERSO et de l'extension de navigateur",
+      pro: "Démo des coffres-forts PRO et de la console de supervision",
+    },
+    securityByDesign: {
+      sectionTitle: "Sécurité par conception",
+      e2eEnc: {
+        t: "Protection cryptographique, chiffrement de bout en bout",
+        p1: "Toutes les données sensibles sont chiffrées avant d’être stockées ou transférées via internet. La seule façon pour les déchiffrer est de connaître la clé de chiffrement (par exemple votre mot de passe maître). Les algorithmes et les paramètres que nous avons sélectionnés sont conçus de sorte que des pirates mettraient plusieurs années pour déchiffrer vos données, ce qui est totalement dissuasif financièrement pour eux.",
+        p2: 'Nous avons conçu UpSignOn pour respecter autant que possible le principe dit de "confiance nulle" : le système reste sécurisé même si nos serveurs sont compromis.',
+      },
+      mfa: {
+        t: "Authentification double facteur par conception",
+        p1: "Avant de pouvoir tenter de déchiffrer vos données, encore faut-il avoir accès aux fichiers bruts. Pour cela, un pirate doit nécessairement avoir accès à l’un de vos appareils autorisés, soit pour y obtenir le fichier chiffré directement, soit pour prouver au serveur qu’il a bien accès à l’un de vos appareils autorisés. Ainsi le déchiffrement de vos données nécessite toujours une preuve de possession (l’appareil autorisé) et une preuve de connaissance (votre mot de passe maître).",
+      },
+      zeroKnowledge: {
+        t: "Limitation des données personnelles stockées sur le cloud / principe de connaissance nulle",
+        p1: "Seules les données strictement essentielles sont stockées en clair sur les serveurs. Dans le cas des coffres-forts PRO, pour les besoins de la supervision, il s’agit de votre adresse email professionnelle, de vos appareils autorisés et d’informations sur la force des mots de passe de votre coffre-fort. Les coffres-forts PERSO quant à eux respectent totalement le principe dit de “connaissance nulle” : absolument aucune donnée personnelle n’est transmise au serveur, pas même votre adresse email.",
+      },
+    },
   },
   features: {
     pageTitle: "Fonctionnalités",

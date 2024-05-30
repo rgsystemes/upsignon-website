@@ -9,6 +9,79 @@ const translations: typeof fr = {
     subtitle: "Save, secure and forget\nyour passwords!",
     french: "Made in France",
     privacyByDesign: "Security and privacy by design",
+    keyMetrics1Title: "80% of corporate hacks are linked to weak passwords.",
+    keyMetrics1Details:
+      "Weak passwords, reused passwords, or passwords obtained through phishing are involved in 80% of successful attacks. So this is a major issue for your company, association or local authority! The financial consequences of a hacking attack are often catastrophic for the victim organisation.",
+    keyMetrics2Title: "59% of people use the same password for all their accounts, whether professional or personal.",
+    keyMetrics2Details:
+      "Reusing the same password is one of the worst practices because if one of your sites suffers a data leak, that compromises in chain your accounts on all your other sites.",
+    advantages: {
+      sectionTitle: "The advantages of a password vault",
+      1: {
+        t: "All your passwords in one secure place, synchronised across all your devices",
+        p1: 'Do you have the same password for all your sites? Do you use the "forgot password" function every time you log on? Do you write down all your passwords in a notebook or Excel file? Stop! Not only is this inefficient, it\'s also a major security risk!',
+        p2: "With UpSignOn, forget your passwords! The application saves them for you and lets you use them on all your devices with the greatest of ease. UpSignOn is compatible with all platforms (iOS, Android, MacOS, Windows, Linux).",
+      },
+      2: {
+        t: "Have very strong passwords",
+        p1: 'The most commonly used password is still the famous "123456". Hackers know this and will test this password first! The best practice is therefore to use a strong password, ideally randomly generated (this is the most resistant to brute force attempts).',
+        p2: "Hackers also know that most people reuse the same password everywhere. If this is the case for you, there's a good chance that this unique password has been leaked on at least one of your sites and is stored in a database that can easily be bought on the dark web.",
+        p3: "To help you have very strong and unique passwords on each site, UpSignOn includes a password generator and random passphrases. UpSignOn also displays a security score for each password to help you quickly identify your most vulnerable passwords.",
+      },
+      3: {
+        t: "Share passwords securely",
+        p1: "We all share passwords. But, without a tool, this inevitably leads to using the worst practices: using a password that is too simple, displaying the password on a wall, never changing the password. With UpSignOn, the passwords you share can remain unique and strong, and can be changed and synchronised across all recipients effortlessly.",
+      },
+      4: {
+        t: "Automatically fill in and save your passwords",
+        p1: "With UpSignOn, you don't even need to type in your passwords. They are automatically filled in for you by the application (smartphones) or browser extension (computers).",
+        p2: "The browser extension also detects passwords you enter manually and saves them in your vault.",
+      },
+      5: {
+        t: "[PRO] Visibility for administrators",
+        p1: "Deploying a password manager for your employees is fine, but being able to ensure that it is being used and that it actually enables passwords to be strengthened is even better!",
+        p2: "Thanks to our supervision console, you can gain visibility over the status of passwords in your company and adjust certain security parameters to suit your needs.",
+      },
+    },
+    proVsPerso: {
+      sectionTitle: "One app, two types of vaults",
+      perso: {
+        t: "UpSignOn PERSO, free, private, simple and friendly",
+        p1: "PERSO vaults are designed for private use or for small teams. They are free and unlimited. They are designed to maximize security. The UpSignOn company does not receive any personal data, not even your email address!",
+      },
+      pro: {
+        t: "UpSignOn PRO, adapted to professional challenges",
+        p1: "As a technical director, responsible for the IT security of your organization, or business manager you must ensure that all your colleagues apply good practices in managing their passwords. Your goal is to have 100% strong passwords. Deploying a tool is not enough. You need to be able to track its adoption and verify that it is paying off.",
+        p2: "UpSignOn PRO therefore gives you access to a supervision console for the evolution of the strength of passwords, identifying the people who need to be supported and controlled or adjust the most sensitive functionalities (for example CSV export , master password reset, authorized platforms, offline mode, etc.).",
+        p3: "While virtually identical in terms of user interface, under the hood, PRO vaults are very different from PERSO vaults.",
+      },
+      more_1: "For more technical details, see this",
+      more_2: "explanation page",
+      more_3: ". You can also consult the ",
+      more_4: "feature list",
+      more_5: ".",
+    },
+    demo: {
+      sectionTitle: "Shall we show you?",
+      perso: "PERSO vaults and browser extension demo",
+      pro: "PRO vaults and supervision console demo",
+    },
+    securityByDesign: {
+      sectionTitle: "Security by design",
+      e2eEnc: {
+        t: "Cryptographic protection, end-to-end encryption",
+        p1: "All sensitive data is encrypted before being stored or transferred over the internet. The only way to decrypt it is to know the encryption key (e.g. your master password). The algorithms and settings we have selected are designed so that hackers would take several years to decrypt your data, which is a complete financial disincentive for them.",
+        p2: 'We designed UpSignOn to respect as much as possible the so-called "zero trust" principle: the system remains secure even if our servers are compromised.',
+      },
+      mfa: {
+        t: "Multi-factor authentication by design",
+        p1: "Before you can attempt to decrypt your data, you must have access to the raw files. To do this, a hacker must necessarily have access to one of your authorized devices, either to obtain the encrypted file directly, or to prove to the server that it has access to one of your authorized devices. So decrypting your data always requires proof of possession (the authorized device) and proof of knowledge (your master password).",
+      },
+      zeroKnowledge: {
+        t: "Limitation of personal data stored on the cloud / zero knowledge principle",
+        p1: 'Only strictly essential data is stored in the clear on the servers. In the case of PRO vaults, for supervision purposes, this is your professional email address, your authorized devices and information on the strength of your vault\'s passwords. PERSO vaults completely respect the so-called "zero knowledge" principle: absolutely no personal data is transmitted to the server, not even your email address.',
+      },
+    },
   },
   features: {
     pageTitle: "Features",
