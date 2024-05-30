@@ -5,6 +5,7 @@ const translations = {
   pitch: {
     moto: "UpSignOn, le coffre de mots de passe forts\npour les particuliers et les pros.",
     subtitle: "Enregistrez, sécurisez et oubliez\nvos mots de passe !",
+    prezVideoTitle: "Vidéo de présentation d'UpSignOn",
     french: "Une solution 100% française et souveraine",
     privacyByDesign: "Sécurité et vie privée par conception",
     keyMetrics1Title: "En entreprise, 80% des piratages sont liés à la faiblesse des mots de passe",
@@ -61,9 +62,11 @@ const translations = {
       more_5: ".",
     },
     demo: {
-      sectionTitle: "On vous montre ?",
+      sectionTitle: "Allez, on vous montre !",
       perso: "Démo des coffres-forts PERSO et de l'extension de navigateur",
+      persoVideoTitle: "Vidéo de démonstration des coffres-forts PERSO et de l'extension de navigateur",
       pro: "Démo des coffres-forts PRO et de la console de supervision",
+      proVideoTitle: "Vidéo de démonstration des coffres-forts PRO et de la console de supervision",
     },
     securityByDesign: {
       sectionTitle: "Sécurité par conception",

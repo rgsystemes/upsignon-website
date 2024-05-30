@@ -7,6 +7,7 @@ const translations: typeof fr = {
   pitch: {
     moto: "UpSignOn, the strong password vault\nfor private and professional use.",
     subtitle: "Save, secure and forget\nyour passwords!",
+    prezVideoTitle: "UpSignOn presentation video",
     french: "Made in France",
     privacyByDesign: "Security and privacy by design",
     keyMetrics1Title: "80% of corporate hacks are linked to weak passwords.",
@@ -62,9 +63,11 @@ const translations: typeof fr = {
       more_5: ".",
     },
     demo: {
-      sectionTitle: "Shall we show you?",
+      sectionTitle: "Come on, let's show you!",
       perso: "PERSO vaults and browser extension demo",
+      persoVideoTitle: "PERSO vaults and browser extension demo video",
       pro: "PRO vaults and supervision console demo",
+      proVideoTitle: "PRO vaults and supervision console demo video",
     },
     securityByDesign: {
       sectionTitle: "Security by design",

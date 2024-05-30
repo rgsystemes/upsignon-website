@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import frenchImg from "../../public/images/french.svg";
 import privacyByDesignImg from "../../public/images/privacyByDesign.svg";
-import YoutubePlayer from "./youtubePlayer";
+import VimeoPlayer from "./vimeoPlayer";
 
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
@@ -16,9 +16,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         <p>
           <strong className={styles.subtitle}>{t.pitch.subtitle}</strong>
         </p>
-        <div className={styles.videoContainer}>
-          <YoutubePlayer lang={params.lang} videoId={"dLF8Fb12XbE"} width={640} height={320} />
-        </div>
+        <VimeoPlayer videoId="915105612" title={t.pitch.prezVideoTitle} className={styles.demoVideo} />
       </section>
       <section className={styles.tagsSection}>
         <div className={styles.tagsCard}>
@@ -94,13 +92,9 @@ export default function Page({ params }: { params: { lang: string } }) {
         <div className={styles.demoSectionContent}>
           <h1>{t.pitch.demo.sectionTitle}</h1>
           <h2>{t.pitch.demo.perso}</h2>
-          <div className={styles.videoContainer}>
-            <YoutubePlayer lang={params.lang} videoId={"ydO1DeDcbak"} width={640} height={320} />
-          </div>
+          <VimeoPlayer videoId="915105612" title={t.pitch.demo.persoVideoTitle} className={styles.demoVideo} />
           <h2>{t.pitch.demo.pro}</h2>
-          <div className={styles.videoContainer}>
-            <YoutubePlayer lang={params.lang} videoId={"TgUDr-UOr8Y"} width={640} height={320} />
-          </div>
+          <VimeoPlayer videoId="915105612" title={t.pitch.demo.proVideoTitle} className={styles.demoVideo} />
         </div>
       </section>
       <section className={styles.securityByDesignSection}>
