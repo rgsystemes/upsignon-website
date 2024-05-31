@@ -35,15 +35,16 @@ export default function Page({ params }: { params: { lang: string } }) {
       </section>
       <section className={styles.keyMetricsSection}>
         <div className={styles.keyMetricsSectionContent}>
-          <h2>{t.pitch.keyMetrics1Title}</h2>
-          <p>{t.pitch.keyMetrics1Details}</p>
-          <h2>{t.pitch.keyMetrics2Title}</h2>
-          <p>{t.pitch.keyMetrics2Details}</p>
+          <h1 className={styles.sectionTitle}>{t.pitch.keyMetrics.sectionTitle}</h1>
+          <h2>{t.pitch.keyMetrics.t1}</h2>
+          <p>{t.pitch.keyMetrics.d1}</p>
+          <h2>{t.pitch.keyMetrics.t2}</h2>
+          <p>{t.pitch.keyMetrics.d2}</p>
         </div>
       </section>
       <section className={styles.advantagesSection}>
         <div className={styles.advantagesSectionContent}>
-          <h1>{t.pitch.advantages.sectionTitle}</h1>
+          <h1 className={styles.sectionTitle}>{t.pitch.advantages.sectionTitle}</h1>
           <div className={styles.singleAdvantageCard}>
             <h2>{t.pitch.advantages[1].t}</h2>
             <p>{t.pitch.advantages[1].p1}</p>
@@ -73,7 +74,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       </section>
       <section className={styles.proVsPersoSection}>
         <div className={styles.proVsPersoSectionContent}>
-          <h1>{t.pitch.proVsPerso.sectionTitle}</h1>
+          <h1 className={styles.sectionTitle}>{t.pitch.proVsPerso.sectionTitle}</h1>
           <h2>{t.pitch.proVsPerso.perso.t}</h2>
           <p>{t.pitch.proVsPerso.perso.p1}</p>
           <h2>{t.pitch.proVsPerso.pro.t}</h2>
@@ -91,7 +92,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       </section>
       <section className={styles.demoSection}>
         <div className={styles.demoSectionContent}>
-          <h1>{t.pitch.demo.sectionTitle}</h1>
+          <h1 className={styles.sectionTitle}>{t.pitch.demo.sectionTitle}</h1>
           <h2>{t.pitch.demo.perso}</h2>
           <VimeoPlayer videoId="915105612" title={t.pitch.demo.persoVideoTitle} className={styles.demoVideo} />
           <h2>{t.pitch.demo.pro}</h2>
@@ -100,7 +101,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       </section>
       <section className={styles.securityByDesignSection}>
         <div className={styles.securityByDesignSectionContent}>
-          <h1>{t.pitch.securityByDesign.sectionTitle}</h1>
+          <h1 className={styles.sectionTitle}>{t.pitch.securityByDesign.sectionTitle}</h1>
           <div>
             <h2>{t.pitch.securityByDesign.e2eEnc.t}</h2>
             <p>{t.pitch.securityByDesign.e2eEnc.p1}</p>
@@ -125,9 +126,9 @@ export default function Page({ params }: { params: { lang: string } }) {
       </section>
       <section className={styles.customerListSection}>
         <div className={styles.customerListSectionContent}>
-          <h1>{t.pitch.customerList.sectionTitle}</h1>
-          <CustomerCarousel />
+          <h1 className={styles.sectionTitle}>{t.pitch.customerList.sectionTitle}</h1>
         </div>
+        <CustomerCarousel />
       </section>
       <Link href="/features">{t.menu.features}</Link>
     </div>

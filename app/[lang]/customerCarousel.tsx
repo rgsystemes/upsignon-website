@@ -21,16 +21,31 @@ import varImg from "../../public/customerLogos/var.png";
 import wapliImg from "../../public/customerLogos/wapli.png";
 
 export default function CustomerCarousel() {
-  return (
-    <div className={styles.carousel}>
+  const allChildren = (
+    <>
       <div className={styles.customer}>
-        <Image src={limogesMetropoleImg} alt="Limoges Métropole" height={150} />
-      </div>
-      <div className={styles.customer}>
-        <Image src={hauteGaronneNumeriqueImg} alt="Haute Garonne Numérique" height={150} />
+        <Image src={regionOccitanieImg} alt="La Région Occitanie" height={150} />
       </div>
       <div className={styles.customer}>
         <Image src={chambersignImg} alt="Chambersign" width={300} />
+      </div>
+      <div className={styles.customer}>
+        <Image src={tisseoImg} alt="Tisseo" height={150} />
+      </div>
+      <div className={styles.customer}>
+        <Image src={lafibre64Img} alt="La Fibre 64" height={120} />
+      </div>
+      <div className={styles.customer}>
+        <Image src={smicaImg} alt="SMICA" width={250} />
+      </div>
+      <div className={styles.customer}>
+        <Image src={adicoImg} alt="ADICO" height={120} />
+      </div>
+      <div className={styles.customer}>
+        <Image src={caletreImg} alt="Caletré" style={{ backgroundColor: "#261747", padding: 30 }} height={150} />
+      </div>
+      <div className={styles.customer}>
+        <Image src={hauteGaronneNumeriqueImg} alt="Haute Garonne Numérique" height={150} />
       </div>
       <div className={styles.customer}>
         <Image src={esigelecImg} alt="Esigelec" height={150} />
@@ -40,9 +55,6 @@ export default function CustomerCarousel() {
       </div>
       <div className={styles.customer}>
         <Image src={cd11Img} alt="Conseil Départemental de l'Aude" height={150} />
-      </div>
-      <div className={styles.customer}>
-        <Image src={tisseoImg} alt="Tisseo" height={150} />
       </div>
       <div className={styles.customer}>
         <Image src={orleansMetropoleImg} alt="Orléans-Métropole" height={150} />
@@ -60,22 +72,18 @@ export default function CustomerCarousel() {
         <Image src={urbasolarImg} alt="Urbasolar" width={300} />
       </div>
       <div className={styles.customer}>
-        <Image src={adicoImg} alt="ADICO" height={120} />
-      </div>
-      <div className={styles.customer}>
-        <Image src={lafibre64Img} alt="La Fibre 64" height={120} />
-      </div>
-      <div className={styles.customer}>
-        <Image src={smicaImg} alt="SMICA" width={250} />
-      </div>
-      <div className={styles.customer}>
-        <Image src={regionOccitanieImg} alt="La Région Occitanie" height={150} />
+        <Image src={limogesMetropoleImg} alt="Limoges Métropole" height={150} />
       </div>
       <div className={styles.customer}>
         <Image src={gersNumeriqueImg} alt="Gers Numérique" width={300} />
       </div>
-      <div className={styles.customer}>
-        <Image src={caletreImg} alt="Caletré" style={{ backgroundColor: "#261747", padding: 30 }} height={150} />
+    </>
+  );
+  return (
+    <div className={styles.carouselContainer}>
+      <div className={styles.carousel}>
+        {allChildren}
+        {allChildren}
       </div>
     </div>
   );

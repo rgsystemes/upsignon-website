@@ -1,9 +1,20 @@
-.carousel {
+.carouselContainer {
   background-color: white;
-  display: flex;
-  align-items: center;
-  flex-wrap:nowrap;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@keyframes carouselAnimation {
+  from { left: 0; }
+  to   { left: -5905px; }
+}
+
+.carousel {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  animation: 20s linear 1s infinite normal none running carouselAnimation;
 }
 
 .customer {

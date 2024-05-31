@@ -8,13 +8,13 @@ const translations = {
     prezVideoTitle: "Vidéo de présentation d'UpSignOn",
     french: "Une solution 100% française et souveraine",
     privacyByDesign: "Sécurité et vie privée par conception",
-    keyMetrics1Title: "En entreprise, 80% des piratages sont liés à la faiblesse des mots de passe",
-    keyMetrics1Details:
-      "Les mots de passe faibles, réutilisés, ou obtenus par phishing sont en cause dans 80% des attaques réussies. C’est donc un enjeu majeur pour votre entreprise, association ou collectivité ! Les conséquences financières d’un piratage sont souvent catastrophiques pour l’organisation victime.",
-    keyMetrics2Title:
-      "59% des personnes utilisent le même mot de passe pour tous leurs comptes, professionnels ou personnels",
-    keyMetrics2Details:
-      "Réutiliser le même mot de passe est l'une des plus mauvaises pratiques car si l'un de vos sites subit une fuite de données, cela compromet en chaîne vos comptes sur tous vos autres sites.",
+    keyMetrics: {
+      sectionTitle: "Quelques chiffres",
+      t1: "En entreprise, 80% des piratages sont liés à la faiblesse des mots de passe",
+      d1: "Les mots de passe faibles, réutilisés, ou obtenus par phishing sont en cause dans 80% des attaques réussies. C’est donc un enjeu majeur pour votre entreprise, association ou collectivité ! Les conséquences financières d’un piratage sont souvent catastrophiques pour l’organisation victime.",
+      t2: "59% des personnes utilisent le même mot de passe pour tous leurs comptes, professionnels ou personnels",
+      d2: "Réutiliser le même mot de passe est l'une des plus mauvaises pratiques car si l'un de vos sites subit une fuite de données, cela compromet en chaîne vos comptes sur tous vos autres sites.",
+    },
     advantages: {
       sectionTitle: "Les avantages d’un coffre-fort de mots de passe",
       1: {

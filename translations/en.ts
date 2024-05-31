@@ -10,12 +10,13 @@ const translations: typeof fr = {
     prezVideoTitle: "UpSignOn presentation video",
     french: "Made in France",
     privacyByDesign: "Security and privacy by design",
-    keyMetrics1Title: "80% of corporate hacks are linked to weak passwords.",
-    keyMetrics1Details:
-      "Weak passwords, reused passwords, or passwords obtained through phishing are involved in 80% of successful attacks. So this is a major issue for your company, association or local authority! The financial consequences of a hacking attack are often catastrophic for the victim organisation.",
-    keyMetrics2Title: "59% of people use the same password for all their accounts, whether professional or personal.",
-    keyMetrics2Details:
-      "Reusing the same password is one of the worst practices because if one of your sites suffers a data leak, that compromises in chain your accounts on all your other sites.",
+    keyMetrics: {
+      sectionTitle: "Some numbers",
+      t1: "80% of corporate hacks are linked to weak passwords.",
+      d1: "Weak passwords, reused passwords, or passwords obtained through phishing are involved in 80% of successful attacks. So this is a major issue for your company, association or local authority! The financial consequences of a hacking attack are often catastrophic for the victim organisation.",
+      t2: "59% of people use the same password for all their accounts, whether professional or personal.",
+      d2: "Reusing the same password is one of the worst practices because if one of your sites suffers a data leak, that compromises in chain your accounts on all your other sites.",
+    },
     advantages: {
       sectionTitle: "The advantages of a password vault",
       1: {
