@@ -6,6 +6,7 @@ import Image from "next/image";
 import frenchImg from "../../public/images/french.svg";
 import privacyByDesignImg from "../../public/images/privacyByDesign.svg";
 import VimeoPlayer from "./vimeoPlayer";
+import CustomerCarousel from "./customerCarousel";
 
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
@@ -113,6 +114,19 @@ export default function Page({ params }: { params: { lang: string } }) {
             <h2>{t.pitch.securityByDesign.zeroKnowledge.t}</h2>
             <p>{t.pitch.securityByDesign.zeroKnowledge.p1}</p>
           </div>
+          <div style={{ marginTop: 30 }}>
+            {t.pitch.securityByDesign.more_1}
+            <a href="/resources/technical-details/security-by-design-summary">{t.pitch.securityByDesign.more_2}</a>
+            {t.pitch.securityByDesign.more_3}
+            <a href="/resources/technical-details">{t.pitch.securityByDesign.more_4}</a>
+            {t.pitch.securityByDesign.more_5}
+          </div>
+        </div>
+      </section>
+      <section className={styles.customerListSection}>
+        <div className={styles.customerListSectionContent}>
+          <h1>{t.pitch.customerList.sectionTitle}</h1>
+          <CustomerCarousel />
         </div>
       </section>
       <Link href="/features">{t.menu.features}</Link>

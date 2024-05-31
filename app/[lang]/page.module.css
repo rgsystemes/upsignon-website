@@ -102,3 +102,14 @@
   max-width: 900px;
   margin: auto;
 }
+
+
+/* CUSTOMER LIST SECTION */
+.customerListSection {
+  color: white;
+  padding: 50px 20px;
+}
+.customerListSectionContent {
+  max-width: 900px;
+  margin: auto;
+}

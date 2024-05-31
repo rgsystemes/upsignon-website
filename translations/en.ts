@@ -84,6 +84,14 @@ const translations: typeof fr = {
         t: "Limitation of personal data stored on the cloud / zero knowledge principle",
         p1: 'Only strictly essential data is stored in the clear on the servers. In the case of PRO vaults, for supervision purposes, this is your professional email address, your authorized devices and information on the strength of your vault\'s passwords. PERSO vaults completely respect the so-called "zero knowledge" principle: absolutely no personal data is transmitted to the server, not even your email address.',
       },
+      more_1: "To know more, you can read the ",
+      more_2: "general public summary of our technical file",
+      more_3: "or the various detailed articles of our",
+      more_4: "technical file",
+      more_5: ".",
+    },
+    customerList: {
+      sectionTitle: "They trust us",
     },
   },
   features: {

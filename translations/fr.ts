@@ -83,6 +83,14 @@ const translations = {
         t: "Limitation des données personnelles stockées sur le cloud / principe de connaissance nulle",
         p1: "Seules les données strictement essentielles sont stockées en clair sur les serveurs. Dans le cas des coffres-forts PRO, pour les besoins de la supervision, il s’agit de votre adresse email professionnelle, de vos appareils autorisés et d’informations sur la force des mots de passe de votre coffre-fort. Les coffres-forts PERSO quant à eux respectent totalement le principe dit de “connaissance nulle” : absolument aucune donnée personnelle n’est transmise au serveur, pas même votre adresse email.",
       },
+      more_1: "Pour en savoir plus, vous pouvez lire le ",
+      more_2: "résumé grand public de notre dossier technique",
+      more_3: " ou les différents articles détaillés de notre ",
+      more_4: "dossier technique",
+      more_5: ".",
+    },
+    customerList: {
+      sectionTitle: "Ils nous font confiance",
     },
   },
   features: {

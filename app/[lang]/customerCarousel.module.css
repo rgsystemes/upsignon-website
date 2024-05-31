@@ -1,0 +1,18 @@
+.carousel {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-wrap:nowrap;
+  overflow-x: scroll;
+}
+
+.customer {
+  flex-shrink: 0;
+  flex-grow: 0;
+  height: 150px;
+  max-width: 300px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
