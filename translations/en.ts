@@ -7,6 +7,18 @@ const translations: typeof fr = {
     downloads: "Downloads",
     resources: "Resources",
   },
+  footer: {
+    nav: {
+      t: "Quick links",
+      home: "Home",
+    },
+    contactUs: "Contact us",
+    followUs: "Follow us",
+    legalNotice: "Legal notices",
+    publisher: "Publisher",
+    hostedBy: "Website hosted by",
+    copyright: "all rights reserved",
+  },
   pitch: {
     moto: "UpSignOn, the strong password vault\nfor private and professional use.",
     subtitle: "Save, secure and forget\nyour passwords!",

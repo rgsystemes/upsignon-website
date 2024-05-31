@@ -5,6 +5,18 @@ const translations = {
     downloads: "Téléchargements",
     resources: "Ressources",
   },
+  footer: {
+    nav: {
+      t: "Liens rapides",
+      home: "Accueil",
+    },
+    contactUs: "Contactez-nous",
+    followUs: "Suivez-nous",
+    legalNotice: "Mentions légales",
+    publisher: "Directeur de la publication",
+    hostedBy: "Site hébergé par",
+    copyright: "tous droits réservés",
+  },
   pitch: {
     moto: "UpSignOn, le coffre de mots de passe forts\npour les particuliers et les pros.",
     subtitle: "Enregistrez, sécurisez et oubliez\nvos mots de passe !",
