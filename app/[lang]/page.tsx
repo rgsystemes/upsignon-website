@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import { getDictionary } from "../../translations/translations";
 import styles from "./page.module.css";
@@ -130,7 +129,6 @@ export default function Page({ params }: { params: { lang: string } }) {
         </div>
         <CustomerCarousel />
       </section>
-      <Link href="/features">{t.menu.features}</Link>
     </div>
   );
 }

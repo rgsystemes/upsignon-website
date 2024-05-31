@@ -1,6 +1,9 @@
 const translations = {
   menu: {
     features: "Fonctionnalités",
+    pricing: "Tarifs",
+    downloads: "Téléchargements",
+    resources: "Ressources",
   },
   pitch: {
     moto: "UpSignOn, le coffre de mots de passe forts\npour les particuliers et les pros.",

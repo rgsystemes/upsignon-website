@@ -1,0 +1,101 @@
+.nav {
+  background-color: transparent;
+  background-image: linear-gradient(6deg, rgb(37,38,75) 33%, rgb(38, 101, 181) 86%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+.logoAndNameContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+}
+.logoAndNameContainer:-webkit-any-link {
+  color: white;
+}
+.logoAndNameContainer img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+.logoAndNameContainer span {
+  padding: 0 10px;
+  border-width: 4px 0;
+  border-style: solid;
+  border-color: transparent;
+}
+.logoAndNameContainer:hover span {
+  border-bottom: 4px solid rgb(0,171,169);
+}
+.spacer {
+  flex: 1;
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 10px;
+}
+.menuItem {
+  height: 50px;
+  padding: 0 10px;
+  margin: 20px 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 4px 0;
+  border-style: solid;
+  border-color: transparent;
+}
+.menuItem:-webkit-any-link {
+  color: white;
+}
+.menuItem:hover {
+  border-bottom: 4px solid rgb(0,171,169);
+}
+
+.navMenuIcon {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+  .logoAndNameContainer {
+    padding: 5px 0;
+    margin: 0 10px;
+  }
+  .logoAndNameContainer img{
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+  }
+  .navMenuIcon {
+    display: block;
+    padding: 5px 20px;
+    margin: 0;
+  }
+  .menuItems.folded {
+    display: none;
+  }
+  .menuItems.unfolded {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .menuItem {
+    height: auto;
+    padding: 0;
+    margin: 0 10px;
+  }
+}

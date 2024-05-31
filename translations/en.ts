@@ -3,6 +3,9 @@ import fr from "./fr";
 const translations: typeof fr = {
   menu: {
     features: "Features",
+    pricing: "Pricing",
+    downloads: "Downloads",
+    resources: "Resources",
   },
   pitch: {
     moto: "UpSignOn, the strong password vault\nfor private and professional use.",
