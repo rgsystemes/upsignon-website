@@ -1,5 +1,5 @@
 .blueBackground {
-  background-image: linear-gradient(0deg, rgb(37,38,75), rgb(38, 101, 181));
+  background-image: linear-gradient(0deg, rgb(0,38,75), rgb(38, 101, 181));
 }
 
 .titleSection {
@@ -133,6 +133,23 @@
   max-width: 900px;
   margin: auto;
 }
+.proVsPersoSectionContent p {
+  margin-bottom: 10px;
+}
+.persoTTag {
+  background-color:rgb(44, 83, 132);
+  color: white;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.proTTag {
+  background-color:rgb(246,164,0);
+  color: white;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 
 /* DEMO SECTION */
 .demoVideo {
@@ -151,22 +168,43 @@
 
 /* SECURITY BY DESIGN SECTION */
 .securityByDesignSection {
-  background-color: white;
-  color: rgb(44, 83, 132);
+  background-image: url("../../public/images/securityBackground.jpg");
+  background-size: cover;
   padding: 50px 20px;
+  color: white;
 }
 .securityByDesignSectionContent {
   max-width: 900px;
   margin: auto;
 }
 
+.securityArg {
+  background-color: white;
+  color: rgb(44, 83, 132);
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 15px;
+  padding: 20px;
+}
+.securityArgTitleContainer {
+  display: flex;
+  align-items: center;
+}
+.securityByDesignImg {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: auto;
+  height: 50px;
+  margin-right: 10px;
+}
 
 /* CUSTOMER LIST SECTION */
 .customerListSection {
-  color: white;
-  padding: 50px 20px;
+  background-color: white;
+  padding: 50px 0px;
 }
 .customerListSectionContent {
   max-width: 900px;
   margin: auto;
+  padding: 0 20px;
 }

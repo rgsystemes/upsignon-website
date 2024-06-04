@@ -23,9 +23,9 @@ const translations = {
     prezVideoTitle: "Vidéo de présentation d'UpSignOn",
     french: "Une solution 100% française et souveraine",
     privacyByDesign: "Sécurité et vie privée par conception",
-    crossPlatform: "Multi-platformes",
+    crossPlatform: "Multi-platformes (Windows, Linux, macOS, iOS, Android)",
     keyMetrics: {
-      sectionTitle: "Quelques chiffres",
+      sectionTitle: "Les mots de passe, un enjeu clé",
       t1: "En entreprise, 80% des piratages sont liés à la faiblesse des mots de passe.",
       d1: "Les mots de passe faibles, réutilisés, ou obtenus par phishing sont en cause dans 80% des attaques réussies. C’est donc un enjeu majeur pour votre entreprise, association ou collectivité ! Les conséquences financières d’un piratage sont souvent catastrophiques pour l’organisation victime.",
       t2: "59% des personnes utilisent le même mot de passe pour tous leurs comptes, professionnels ou personnels.",
@@ -79,20 +79,16 @@ const translations = {
     proVsPerso: {
       sectionTitle: "Une seule application, deux types de coffres-forts",
       perso: {
-        t: "UpSignOn PERSO, gratuit, privé, simple et convivial",
-        p1: "Les coffres-forts PERSO sont conçus pour un usage privé ou pour de petites équipes. Ils sont gratuits et illimités. Ils sont conçus pour maximiser la sécurité. L’entreprise UpSignOn ne reçoit aucune donnée personnelle, pas même votre adresse email !",
+        tTag: "UpSignOn PERSO",
+        t: "gratuit, illimité et privé",
+        p1: "Les coffres-forts PERSO sont conçus pour un usage privé et un partage en famille. Ils sont gratuits et illimités. Ils sont conçus pour maximiser la sécurité. L’entreprise UpSignOn ne reçoit aucune donnée personnelle, pas même votre adresse email !",
       },
       pro: {
-        t: "UpSignOn PRO, adapté aux enjeux professionnels",
-        p1: "En tant que directeur technique, responsable de la sécurité informatique de votre organisation, ou dirigeant d’entreprise vous devez vous assurer que tous vos collègues appliquent les bonnes pratiques dans la gestion de leurs mots de passe. Votre objectif est d’avoir 100% de mots de passe forts. Déployer un outil n’est pas suffisant. Vous devez pouvoir suivre son adoption et vérifier qu’il porte ses fruits.",
+        tTag: "UpSignOn PRO",
+        t: "adapté aux enjeux professionnels",
+        p1: "En tant responsable de la sécurité informatique de votre organisation vous devez vous assurer que tous vos collègues appliquent les bonnes pratiques dans la gestion de leurs mots de passe. Votre objectif est d’avoir 100% de mots de passe forts. Déployer un outil n’est pas suffisant. Vous devez pouvoir suivre son adoption et vérifier qu’il porte ses fruits.",
         p2: "UpSignOn PRO vous donne donc accès à une console de supervision pour suivre l’évolution de la force des mots de passe, identifier les personnes qui ont besoin d’être accompagnées et contrôler ou ajuster les fonctionnalités les plus sensibles (e.g export CSV, réinitialisation de mot de passe maître, plateformes autorisées, mode hors-ligne, etc.).",
-        p3: "Bien que quasiment identiques en termes d’interface utilisateur, sous le capot, les coffres-forts PRO sont très différents des coffres-forts PERSO.",
       },
-      more_1: "Pour plus de détails techniques, consultez cette ",
-      more_2: "page d’explication",
-      more_3: ". Vous pouvez également consulter la ",
-      more_4: "liste des fonctionnalités",
-      more_5: ".",
     },
     demo: {
       sectionTitle: "Allez, on vous montre !",
@@ -105,22 +101,17 @@ const translations = {
       sectionTitle: "Sécurité par conception",
       e2eEnc: {
         t: "Protection cryptographique, chiffrement de bout en bout",
-        p1: "Toutes les données sensibles sont chiffrées avant d’être stockées ou transférées via internet. La seule façon pour les déchiffrer est de connaître la clé de chiffrement (par exemple votre mot de passe maître). Les algorithmes et les paramètres que nous avons sélectionnés sont conçus de sorte que des pirates mettraient plusieurs années pour déchiffrer vos données, ce qui est totalement dissuasif financièrement pour eux.",
+        p1: "Toutes les données sensibles sont chiffrées avant d’être stockées ou transférées via internet. La seule façon pour les déchiffrer est de connaître la clé de chiffrement (par exemple votre mot de passe maître). Les algorithmes et les paramètres que nous avons sélectionnés sont conçus de sorte que des pirates mettraient plusieurs dizaines voire centaines d'années pour déchiffrer vos données, ce qui est totalement dissuasif financièrement pour eux.",
         p2: 'Nous avons conçu UpSignOn pour respecter autant que possible le principe dit de "confiance nulle" : le système reste sécurisé même si nos serveurs sont compromis.',
       },
       mfa: {
-        t: "Authentification double facteur par conception",
+        t: "Authentification multi-facteur par conception",
         p1: "Avant de pouvoir tenter de déchiffrer vos données, encore faut-il avoir accès aux fichiers bruts. Pour cela, un pirate doit nécessairement avoir accès à l’un de vos appareils autorisés, soit pour y obtenir le fichier chiffré directement, soit pour prouver au serveur qu’il a bien accès à l’un de vos appareils autorisés. Ainsi le déchiffrement de vos données nécessite toujours une preuve de possession (l’appareil autorisé) et une preuve de connaissance (votre mot de passe maître).",
       },
       zeroKnowledge: {
         t: "Limitation des données personnelles stockées sur le cloud / principe de connaissance nulle",
         p1: "Seules les données strictement essentielles sont stockées en clair sur les serveurs. Dans le cas des coffres-forts PRO, pour les besoins de la supervision, il s’agit de votre adresse email professionnelle, de vos appareils autorisés et d’informations sur la force des mots de passe de votre coffre-fort. Les coffres-forts PERSO quant à eux respectent totalement le principe dit de “connaissance nulle” : absolument aucune donnée personnelle n’est transmise au serveur, pas même votre adresse email.",
       },
-      more_1: "Pour en savoir plus, vous pouvez lire le ",
-      more_2: "résumé grand public de notre dossier technique",
-      more_3: " ou les différents articles détaillés de notre ",
-      more_4: "dossier technique",
-      more_5: ".",
     },
     customerList: {
       sectionTitle: "Ils nous font confiance",

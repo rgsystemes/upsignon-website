@@ -4,9 +4,10 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import frenchImg from "../../public/images/french.svg";
 import privacyByDesignImg from "../../public/images/privacyByDesign.svg";
+import multiDeviceImg from "../../public/images/multiDevice.svg";
+import cryptographyImg from "../../public/images/cryptography.svg";
 import VimeoPlayer from "./vimeoPlayer";
 import CustomerCarousel from "./customerCarousel";
-import MultiPlatformsTag from "./multiPlatformsTag";
 import SingleAdvantage from "./singleAdvantage";
 
 export default function Page({ params }: { params: { lang: string } }) {
@@ -33,7 +34,10 @@ export default function Page({ params }: { params: { lang: string } }) {
             <div>{t.pitch.privacyByDesign}</div>
           </div>
           <div className={styles.tagsCard}>
-            <MultiPlatformsTag containerStyle={styles.tagsImgContainerLogos} iconStyle={styles.platformLogo} />
+            <div className={styles.tagsImgContainer}>
+              <Image src={multiDeviceImg} alt="" />
+            </div>
+            {/* <MultiPlatformsTag containerStyle={styles.tagsImgContainerLogos} iconStyle={styles.platformLogo} /> */}
             <div>{t.pitch.crossPlatform}</div>
           </div>
         </section>
@@ -69,19 +73,17 @@ export default function Page({ params }: { params: { lang: string } }) {
       <section className={styles.proVsPersoSection}>
         <div className={styles.proVsPersoSectionContent}>
           <h1 className={styles.sectionTitle}>{t.pitch.proVsPerso.sectionTitle}</h1>
-          <h2>{t.pitch.proVsPerso.perso.t}</h2>
+          <h2>
+            <span className={styles.persoTTag}>{t.pitch.proVsPerso.perso.tTag}</span>
+            <span>{t.pitch.proVsPerso.perso.t}</span>
+          </h2>
           <p>{t.pitch.proVsPerso.perso.p1}</p>
-          <h2>{t.pitch.proVsPerso.pro.t}</h2>
+          <h2>
+            <span className={styles.proTTag}>{t.pitch.proVsPerso.pro.tTag}</span>
+            <span>{t.pitch.proVsPerso.pro.t}</span>
+          </h2>
           <p>{t.pitch.proVsPerso.pro.p1}</p>
           <p>{t.pitch.proVsPerso.pro.p2}</p>
-          <p>{t.pitch.proVsPerso.pro.p3}</p>
-          <div>
-            {t.pitch.proVsPerso.more_1}
-            <a href="/resources/technical-details/pro-vs-perso">{t.pitch.proVsPerso.more_2}</a>
-            {t.pitch.proVsPerso.more_3}
-            <a href="/features">{t.pitch.proVsPerso.more_4}</a>
-            {t.pitch.proVsPerso.more_5}
-          </div>
         </div>
       </section>
       <section className={`${styles.demoSection} ${styles.blueBackground}`}>
@@ -96,29 +98,31 @@ export default function Page({ params }: { params: { lang: string } }) {
       <section className={styles.securityByDesignSection}>
         <div className={styles.securityByDesignSectionContent}>
           <h1 className={styles.sectionTitle}>{t.pitch.securityByDesign.sectionTitle}</h1>
-          <div>
-            <h2>{t.pitch.securityByDesign.e2eEnc.t}</h2>
+          <div className={styles.securityArg}>
+            <div className={styles.securityArgTitleContainer}>
+              <Image src={cryptographyImg} alt="" className={styles.securityByDesignImg} />
+              <h2>{t.pitch.securityByDesign.e2eEnc.t}</h2>
+            </div>
             <p>{t.pitch.securityByDesign.e2eEnc.p1}</p>
             <p>{t.pitch.securityByDesign.e2eEnc.p2}</p>
           </div>
-          <div>
-            <h2>{t.pitch.securityByDesign.mfa.t}</h2>
+          <div className={styles.securityArg}>
+            <div className={styles.securityArgTitleContainer}>
+              <Image src={cryptographyImg} alt="" className={styles.securityByDesignImg} />
+              <h2>{t.pitch.securityByDesign.mfa.t}</h2>
+            </div>
             <p>{t.pitch.securityByDesign.mfa.p1}</p>
           </div>
-          <div>
-            <h2>{t.pitch.securityByDesign.zeroKnowledge.t}</h2>
+          <div className={styles.securityArg}>
+            <div className={styles.securityArgTitleContainer}>
+              <Image src={cryptographyImg} alt="" className={styles.securityByDesignImg} />
+              <h2>{t.pitch.securityByDesign.zeroKnowledge.t}</h2>
+            </div>
             <p>{t.pitch.securityByDesign.zeroKnowledge.p1}</p>
-          </div>
-          <div style={{ marginTop: 30 }}>
-            {t.pitch.securityByDesign.more_1}
-            <a href="/resources/technical-details/security-by-design-summary">{t.pitch.securityByDesign.more_2}</a>
-            {t.pitch.securityByDesign.more_3}
-            <a href="/resources/technical-details">{t.pitch.securityByDesign.more_4}</a>
-            {t.pitch.securityByDesign.more_5}
           </div>
         </div>
       </section>
-      <section className={`${styles.customerListSection} ${styles.blueBackground}`}>
+      <section className={styles.customerListSection}>
         <div className={styles.customerListSectionContent}>
           <h1 className={styles.sectionTitle}>{t.pitch.customerList.sectionTitle}</h1>
         </div>

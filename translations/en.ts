@@ -25,9 +25,9 @@ const translations: typeof fr = {
     prezVideoTitle: "UpSignOn presentation video",
     french: "Made in France",
     privacyByDesign: "Security and privacy by design",
-    crossPlatform: "Cross-platform",
+    crossPlatform: "Cross-platform (Windows, Linux, macOS, iOS, Android)",
     keyMetrics: {
-      sectionTitle: "Some numbers",
+      sectionTitle: "Passwords, a key challenge",
       t1: "80% of corporate hacks are linked to weak passwords.",
       d1: "Weak passwords, reused passwords, or passwords obtained through phishing are involved in 80% of successful attacks. So this is a major issue for your company, association or local authority! The financial consequences of a hacking attack are often catastrophic for the victim organisation.",
       t2: "59% of people use the same password for all their accounts, whether professional or personal.",
@@ -81,20 +81,16 @@ const translations: typeof fr = {
     proVsPerso: {
       sectionTitle: "One app, two types of vaults",
       perso: {
-        t: "UpSignOn PERSO, free, private, simple and friendly",
-        p1: "PERSO vaults are designed for private use or for small teams. They are free and unlimited. They are designed to maximize security. The UpSignOn company does not receive any personal data, not even your email address!",
+        tTag: "UpSignOn PERSO",
+        t: "free, unlimited and private",
+        p1: "PERSO vaults are designed for private use and family sharing. They are free and unlimited. They are designed to maximize security. The UpSignOn company does not receive any personal data, not even your email address!",
       },
       pro: {
-        t: "UpSignOn PRO, adapted to professional challenges",
-        p1: "As a technical director, responsible for the IT security of your organization, or business manager you must ensure that all your colleagues apply good practices in managing their passwords. Your goal is to have 100% strong passwords. Deploying a tool is not enough. You need to be able to track its adoption and verify that it is paying off.",
+        tTag: "UpSignOn PRO",
+        t: "adapted to professional challenges",
+        p1: "As responsible for the IT security of your organization you must ensure that all your colleagues apply good practices in managing their passwords. Your goal is to have 100% strong passwords. Deploying a tool is not enough. You need to be able to track its adoption and verify that it is paying off.",
         p2: "UpSignOn PRO therefore gives you access to a supervision console for the evolution of the strength of passwords, identifying the people who need to be supported and controlled or adjust the most sensitive functionalities (for example CSV export , master password reset, authorized platforms, offline mode, etc.).",
-        p3: "While virtually identical in terms of user interface, under the hood, PRO vaults are very different from PERSO vaults.",
       },
-      more_1: "For more technical details, see this",
-      more_2: "explanation page",
-      more_3: ". You can also consult the ",
-      more_4: "feature list",
-      more_5: ".",
     },
     demo: {
       sectionTitle: "Come on, let's show you!",
@@ -107,7 +103,7 @@ const translations: typeof fr = {
       sectionTitle: "Security by design",
       e2eEnc: {
         t: "Cryptographic protection, end-to-end encryption",
-        p1: "All sensitive data is encrypted before being stored or transferred over the internet. The only way to decrypt it is to know the encryption key (e.g. your master password). The algorithms and settings we have selected are designed so that hackers would take several years to decrypt your data, which is a complete financial disincentive for them.",
+        p1: "All sensitive data is encrypted before being stored or transferred over the internet. The only way to decrypt it is to know the encryption key (e.g. your master password). The algorithms and settings we have selected are designed so that hackers would take several decades, even hundreds of years to decrypt your data, which is a complete financial disincentive for them.",
         p2: 'We designed UpSignOn to respect as much as possible the so-called "zero trust" principle: the system remains secure even if our servers are compromised.',
       },
       mfa: {
@@ -118,11 +114,6 @@ const translations: typeof fr = {
         t: "Limitation of personal data stored on the cloud / zero knowledge principle",
         p1: 'Only strictly essential data is stored in the clear on the servers. In the case of PRO vaults, for supervision purposes, this is your professional email address, your authorized devices and information on the strength of your vault\'s passwords. PERSO vaults completely respect the so-called "zero knowledge" principle: absolutely no personal data is transmitted to the server, not even your email address.',
       },
-      more_1: "To know more, you can read the ",
-      more_2: "general public summary of our technical file",
-      more_3: "or the various detailed articles of our",
-      more_4: "technical file",
-      more_5: ".",
     },
     customerList: {
       sectionTitle: "They trust us",
