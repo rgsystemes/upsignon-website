@@ -20,7 +20,7 @@ const translations: typeof fr = {
     copyright: "all rights reserved",
   },
   pitch: {
-    moto: "UpSignOn, the strong password vault\nfor private and professional use.",
+    moto: "UpSignOn, the STRONG PASSWORD vault\nfor private and professional use.",
     subtitle: "Save, secure and forget\nyour passwords!",
     prezVideoTitle: "UpSignOn presentation video",
     french: "Made in France",

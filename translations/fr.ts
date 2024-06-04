@@ -18,7 +18,7 @@ const translations = {
     copyright: "tous droits réservés",
   },
   pitch: {
-    moto: "UpSignOn, le coffre de mots de passe forts\npour les particuliers et les pros.",
+    moto: "UpSignOn, le coffre de MOTS DE PASSE FORTS pour les particuliers et les pros.",
     subtitle: "Enregistrez, sécurisez et oubliez\nvos mots de passe !",
     prezVideoTitle: "Vidéo de présentation d'UpSignOn",
     french: "Une solution 100% française et souveraine",
