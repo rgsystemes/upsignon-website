@@ -12,41 +12,49 @@ export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
   return (
     <div>
-      <section className={styles.titleSection}>
-        <h1 className={styles.moto}>{t.pitch.moto}</h1>
-        <p>
-          <strong className={styles.subtitle}>{t.pitch.subtitle}</strong>
-        </p>
-        <VimeoPlayer videoId="915105612" title={t.pitch.prezVideoTitle} className={styles.demoVideo} />
-      </section>
-      <section className={styles.tagsSection}>
-        <div className={styles.tagsCard}>
-          <div className={styles.tagsImgContainer}>
-            <Image src={frenchImg} alt="" />
+      <div className={styles.blueBackground}>
+        <section className={styles.titleSection}>
+          <h1 className={styles.moto}>{t.pitch.moto}</h1>
+          <VimeoPlayer videoId="915105612" title={t.pitch.prezVideoTitle} className={styles.demoVideo} />
+          <p className={styles.subtitle}>{t.pitch.subtitle}</p>
+        </section>
+        <section className={styles.tagsSection}>
+          <div className={styles.tagsCard}>
+            <div className={styles.tagsImgContainer}>
+              <Image src={frenchImg} alt="" />
+            </div>
+            <div>{t.pitch.french}</div>
           </div>
-          <div>{t.pitch.french}</div>
-        </div>
-        <div className={styles.tagsCard}>
-          <div className={styles.tagsImgContainer}>
-            <Image src={privacyByDesignImg} alt="" />
+          <div className={styles.tagsCard}>
+            <div className={styles.tagsImgContainer}>
+              <Image src={privacyByDesignImg} alt="" />
+            </div>
+            <div>{t.pitch.privacyByDesign}</div>
           </div>
-          <div>{t.pitch.privacyByDesign}</div>
-        </div>
-        <div className={styles.tagsCard}>
-          <MultiPlatformsTag containerStyle={styles.tagsImgContainerLogos} iconStyle={styles.platformLogo} />
-          <div>{t.pitch.crossPlatform}</div>
-        </div>
-      </section>
+          <div className={styles.tagsCard}>
+            <MultiPlatformsTag containerStyle={styles.tagsImgContainerLogos} iconStyle={styles.platformLogo} />
+            <div>{t.pitch.crossPlatform}</div>
+          </div>
+        </section>
+      </div>
       <section className={styles.keyMetricsSection}>
         <div className={styles.keyMetricsSectionContent}>
           <h1 className={styles.sectionTitle}>{t.pitch.keyMetrics.sectionTitle}</h1>
-          <h2>{t.pitch.keyMetrics.t1}</h2>
-          <p>{t.pitch.keyMetrics.d1}</p>
-          <h2>{t.pitch.keyMetrics.t2}</h2>
-          <p>{t.pitch.keyMetrics.d2}</p>
+          <div className={styles.keyMetricsSubsections}>
+            <div className={styles.keyMetricsSubsection}>
+              <div className={styles.keyMetricsNumber}>80%</div>
+              <h2>{t.pitch.keyMetrics.t1}</h2>
+              <p>{t.pitch.keyMetrics.d1}</p>
+            </div>
+            <div className={styles.keyMetricsSubsection}>
+              <div className={styles.keyMetricsNumber}>59%</div>
+              <h2>{t.pitch.keyMetrics.t2}</h2>
+              <p>{t.pitch.keyMetrics.d2}</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section className={styles.advantagesSection}>
+      <section className={`${styles.advantagesSection} ${styles.blueBackground}`}>
         <div className={styles.advantagesSectionContent}>
           <h1 className={styles.sectionTitle}>{t.pitch.advantages.sectionTitle}</h1>
           <div className={styles.singleAdvantageCard}>
@@ -94,7 +102,7 @@ export default function Page({ params }: { params: { lang: string } }) {
           </div>
         </div>
       </section>
-      <section className={styles.demoSection}>
+      <section className={`${styles.demoSection} ${styles.blueBackground}`}>
         <div className={styles.demoSectionContent}>
           <h1 className={styles.sectionTitle}>{t.pitch.demo.sectionTitle}</h1>
           <h2>{t.pitch.demo.perso}</h2>
@@ -128,7 +136,7 @@ export default function Page({ params }: { params: { lang: string } }) {
           </div>
         </div>
       </section>
-      <section className={styles.customerListSection}>
+      <section className={`${styles.customerListSection} ${styles.blueBackground}`}>
         <div className={styles.customerListSectionContent}>
           <h1 className={styles.sectionTitle}>{t.pitch.customerList.sectionTitle}</h1>
         </div>

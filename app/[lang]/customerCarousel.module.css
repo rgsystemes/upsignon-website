@@ -5,6 +5,7 @@
   z-index: 0;
 }
 
+
 @keyframes carouselAnimation {
   from { left: 0; }
   to   { left: -5905px; }
@@ -15,7 +16,7 @@
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  animation: 25s linear 1s infinite normal none running carouselAnimation;
+  animation: 40s linear 1s infinite normal none running carouselAnimation;
 }
 
 .customer {

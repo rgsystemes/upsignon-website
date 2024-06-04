@@ -26,9 +26,9 @@ const translations = {
     crossPlatform: "Multi-platformes",
     keyMetrics: {
       sectionTitle: "Quelques chiffres",
-      t1: "En entreprise, 80% des piratages sont liés à la faiblesse des mots de passe",
+      t1: "En entreprise, 80% des piratages sont liés à la faiblesse des mots de passe.",
       d1: "Les mots de passe faibles, réutilisés, ou obtenus par phishing sont en cause dans 80% des attaques réussies. C’est donc un enjeu majeur pour votre entreprise, association ou collectivité ! Les conséquences financières d’un piratage sont souvent catastrophiques pour l’organisation victime.",
-      t2: "59% des personnes utilisent le même mot de passe pour tous leurs comptes, professionnels ou personnels",
+      t2: "59% des personnes utilisent le même mot de passe pour tous leurs comptes, professionnels ou personnels.",
       d2: "Réutiliser le même mot de passe est l'une des plus mauvaises pratiques car si l'un de vos sites subit une fuite de données, cela compromet en chaîne vos comptes sur tous vos autres sites.",
     },
     advantages: {
