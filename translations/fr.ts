@@ -32,31 +32,48 @@ const translations = {
       d2: "Réutiliser le même mot de passe est l'une des plus mauvaises pratiques car si l'un de vos sites subit une fuite de données, cela compromet en chaîne vos comptes sur tous vos autres sites.",
     },
     advantages: {
-      sectionTitle: "Les avantages d’un coffre-fort de mots de passe",
+      sectionTitle: "Les avantages de notre coffre-fort de mots de passe",
       1: {
         t: "Tous vos mots de passe en un seul endroit sécurisés et synchronisés sur tous vos appareils",
-        p1: 'Vous avez le même mot de passe pour tous vos sites ? vous utilisez la fonction "mot de passe oublié" à chaque connexion ? vous notez tout vos mots de passe sur un calepin ou dans un fichier Excel ? Stop ! c’est non seulement inefficace, mais c’est en plus un gros risque de sécurité !',
-        p2: "Avec UpSignOn, oubliez vos mots de passe ! L’application les enregistre pour vous et vous permet de les utiliser sur tous vos appareils avec une grande simplicité. UpSignOn est compatible avec toutes les plateformes (iOS, Android, MacOS, Windows, Linux).",
+        d: [
+          'Vous avez le même mot de passe pour tous vos sites ? vous utilisez la fonction "mot de passe oublié" à chaque connexion ? vous notez tout vos mots de passe sur un calepin ou dans un fichier Excel ? Stop ! c’est non seulement inefficace, mais c’est en plus un gros risque de sécurité !',
+          "Avec UpSignOn, oubliez vos mots de passe ! L’application les enregistre pour vous et vous permet de les utiliser sur tous vos appareils avec une grande simplicité. UpSignOn est compatible avec toutes les plateformes (iOS, Android, MacOS, Windows, Linux).",
+        ],
       },
       2: {
-        t: "Avoir des mots de passe très forts",
-        p1: 'Le mot de passe le plus utilisé reste encore le fameux "123456". Les pirates le savent et testeront ce mot de passe en premier ! La bonne pratique est donc d’utiliser un mot de passe fort, idéalement généré aléatoirement (c’est ce qui résiste le mieux aux tentatives de force-brute).',
-        p2: "Les pirates savent aussi que la plupart des personnes réutilise le même mot de passe partout. Si c’est le cas pour vous, il y a de fortes chances que ce mot de passe unique ait fuité au moins sur l’un de vos sites et soit enregistré dans une base de données facilement achetable sur le dark web.",
-        p3: "Pour vous aider à avoir des mots de passe très forts et uniques sur chaque site, UpSignOn intègre un générateur de mots de passe et de phrases de passe aléatoires. UpSignOn vous affiche aussi un score de sécurité pour chaque mot de passe pour vous aider à identifier très rapidement vos mots de passe les plus vulnérables.",
+        t: "N'ayez plus que des mots de passe très forts",
+        d: [
+          'Le mot de passe le plus utilisé reste encore le fameux "123456". Les pirates le savent et testeront ce mot de passe en premier ! La bonne pratique est donc d’utiliser un mot de passe fort, idéalement généré aléatoirement (c’est ce qui résiste le mieux aux tentatives de force-brute).',
+          "Les pirates savent aussi que la plupart des personnes réutilise le même mot de passe partout. Si c’est le cas pour vous, il y a de fortes chances que ce mot de passe unique ait fuité au moins sur l’un de vos sites et soit enregistré dans une base de données facilement achetable sur le dark web.",
+          "Pour vous aider à avoir des mots de passe très forts et uniques sur chaque site, UpSignOn intègre un générateur de mots de passe et de phrases de passe aléatoires. UpSignOn vous affiche aussi un score de sécurité pour chaque mot de passe pour vous aider à identifier très rapidement vos mots de passe les plus vulnérables.",
+        ],
       },
       3: {
-        t: "Partager des mots de passe de façon sécurisée",
-        p1: "Partager ses mots de passe, nous le faisons tous. Mais, sans outil, cela conduit inévitablement à utiliser les plus mauvaises pratiques : utiliser un mot de passe trop simple, afficher le mot de passe sur un mur, ne jamais changer ce mot de passe. Grâce à UpSignOn, les mots de passe que vous partagez peuvent rester uniques et forts, et peuvent être modifiés et synchronisés auprès de tous les destinataires sans effort.",
+        t: "Partagez des mots de passe de façon sécurisée",
+        d: [
+          "Partager ses mots de passe, nous le faisons tous. Mais, sans outil, cela conduit inévitablement à utiliser les plus mauvaises pratiques : utiliser un mot de passe trop simple, afficher le mot de passe sur un mur, ne jamais changer ce mot de passe. Grâce à UpSignOn, les mots de passe que vous partagez peuvent rester uniques et forts, et peuvent être modifiés et synchronisés auprès de tous les destinataires sans effort.",
+        ],
       },
       4: {
-        t: "Remplissage et enregistrement automatique de vos mots de passe",
-        p1: "Avec UpSignOn, vous n’avez même plus besoin de taper vos mots de passe. Ils sont remplis automatiquement pour vous par l’application (smartphones) ou l’extension de navigateur (ordinateurs).",
-        p2: "L’extension de navigateur détecte aussi les mots de passe que vous saisissez manuellement pour les enregistrer dans votre coffre-fort.",
+        t: "Remplissez et enregistrez vos mots de passe automatiquement",
+        d: [
+          "Avec UpSignOn, vous n’avez même plus besoin de taper vos mots de passe. Ils sont remplis automatiquement pour vous par l’application (smartphones) ou l’extension de navigateur (ordinateurs).",
+          "L’extension de navigateur détecte aussi les mots de passe que vous saisissez manuellement pour les enregistrer dans votre coffre-fort.",
+        ],
       },
       5: {
-        t: "[PRO] De la visibilité pour les administrateurs",
-        p1: "Déployer un gestionnaire de mots de passe pour vos employés c’est bien, mais pouvoir vous assurer qu’il est utilisé et qu’il permet effectivement le renforcement des mots de passe, c’est mieux !",
-        p2: "Grâce à notre console de supervision, obtenez de la visibilité sur l’état des mots de passe dans votre entreprise et ajustez certains paramètres de sécurité selon vos besoins.",
+        t: "Une ergonomie simple et conviviale, facile à prendre en main",
+        d: [
+          "Toutes les personnes n'ont pas le même niveau d'aisance avec l'informatique. La clé de l'adoption est donc l'ergonomie de l'application et la simplicité d'usage.",
+          "Nous avons conçu UpSignOn pour optimiser non pas la puissance des fonctionnalités, mais leur utilisabilité pour les personnes les moins technophiles. Nous avons par exemple fait le choix d'avoir exactement la même interface sur toutes les tailles d'écrans et sur toutes les plateformes pour que les utilisateurs n'aient pas à s'habituer à plusieurs interfaces. Nous limitons également au maximum le nombre de boutons dans l'interface, quitte à ce que certaines fonctionnalités plus avancées ne soient pas accessibles en one clic.",
+        ],
+      },
+      6: {
+        t: "PRO - De la visibilité pour les administrateurs",
+        d: [
+          "Déployer un gestionnaire de mots de passe pour vos employés c’est bien, mais pouvoir vous assurer qu’il est utilisé et qu’il permet effectivement le renforcement des mots de passe, c’est mieux !",
+          "Grâce à notre console de supervision, obtenez de la visibilité sur l’état des mots de passe dans votre entreprise et ajustez certains paramètres de sécurité selon vos besoins.",
+        ],
       },
     },
     proVsPerso: {

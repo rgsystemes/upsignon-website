@@ -34,31 +34,48 @@ const translations: typeof fr = {
       d2: "Reusing the same password is one of the worst practices because if one of your sites suffers a data leak, that compromises in chain your accounts on all your other sites.",
     },
     advantages: {
-      sectionTitle: "The advantages of a password vault",
+      sectionTitle: "The advantages of our password vault",
       1: {
         t: "All your passwords in one secure place, synchronised across all your devices",
-        p1: 'Do you have the same password for all your sites? Do you use the "forgot password" function every time you log on? Do you write down all your passwords in a notebook or Excel file? Stop! Not only is this inefficient, it\'s also a major security risk!',
-        p2: "With UpSignOn, forget your passwords! The application saves them for you and lets you use them on all your devices with the greatest of ease. UpSignOn is compatible with all platforms (iOS, Android, MacOS, Windows, Linux).",
+        d: [
+          'Do you have the same password for all your sites? Do you use the "forgot password" function every time you log on? Do you write down all your passwords in a notebook or Excel file? Stop! Not only is this inefficient, it\'s also a major security risk!',
+          "With UpSignOn, forget your passwords! The application saves them for you and lets you use them on all your devices with the greatest of ease. UpSignOn is compatible with all platforms (iOS, Android, MacOS, Windows, Linux).",
+        ],
       },
       2: {
-        t: "Have very strong passwords",
-        p1: 'The most commonly used password is still the famous "123456". Hackers know this and will test this password first! The best practice is therefore to use a strong password, ideally randomly generated (this is the most resistant to brute force attempts).',
-        p2: "Hackers also know that most people reuse the same password everywhere. If this is the case for you, there's a good chance that this unique password has been leaked on at least one of your sites and is stored in a database that can easily be bought on the dark web.",
-        p3: "To help you have very strong and unique passwords on each site, UpSignOn includes a password generator and random passphrases. UpSignOn also displays a security score for each password to help you quickly identify your most vulnerable passwords.",
+        t: "Have only very strong passwords",
+        d: [
+          'The most commonly used password is still the famous "123456". Hackers know this and will test this password first! The best practice is therefore to use a strong password, ideally randomly generated (this is the most resistant to brute force attempts).',
+          "Hackers also know that most people reuse the same password everywhere. If this is the case for you, there's a good chance that this unique password has been leaked on at least one of your sites and is stored in a database that can easily be bought on the dark web.",
+          "To help you have very strong and unique passwords on each site, UpSignOn includes a password generator and random passphrases. UpSignOn also displays a security score for each password to help you quickly identify your most vulnerable passwords.",
+        ],
       },
       3: {
         t: "Share passwords securely",
-        p1: "We all share passwords. But, without a tool, this inevitably leads to using the worst practices: using a password that is too simple, displaying the password on a wall, never changing the password. With UpSignOn, the passwords you share can remain unique and strong, and can be changed and synchronised across all recipients effortlessly.",
+        d: [
+          "We all share passwords. But, without a tool, this inevitably leads to using the worst practices: using a password that is too simple, displaying the password on a wall, never changing the password. With UpSignOn, the passwords you share can remain unique and strong, and can be changed and synchronised across all recipients effortlessly.",
+        ],
       },
       4: {
         t: "Automatically fill in and save your passwords",
-        p1: "With UpSignOn, you don't even need to type in your passwords. They are automatically filled in for you by the application (smartphones) or browser extension (computers).",
-        p2: "The browser extension also detects passwords you enter manually and saves them in your vault.",
+        d: [
+          "With UpSignOn, you don't even need to type in your passwords. They are automatically filled in for you by the application (smartphones) or browser extension (computers).",
+          "The browser extension also detects passwords you enter manually and saves them in your vault.",
+        ],
       },
       5: {
-        t: "[PRO] Visibility for administrators",
-        p1: "Deploying a password manager for your employees is fine, but being able to ensure that it is being used and that it actually enables passwords to be strengthened is even better!",
-        p2: "Thanks to our supervision console, you can gain visibility over the status of passwords in your company and adjust certain security parameters to suit your needs.",
+        t: "Simple and user-friendly ergonomics, easy to learn",
+        d: [
+          "Not everyone is at the same level of comfort with computers. The key to adoption is therefore the application's ergonomics and ease of use.",
+          "We designed UpSignOn not to optimise the power of its functions, but to make them as usable as possible for people who are less tech-savvy. For example, we chose to have exactly the same interface on all screen sizes and platforms so users don't have to get used to having several different interfaces. We've also kept the number of buttons in the interface to a minimum, even if it means that some of the more advanced functions can't be accessed with just one click.",
+        ],
+      },
+      6: {
+        t: "PRO - Visibility for administrators",
+        d: [
+          "Deploying a password manager for your employees is fine, but being able to ensure that it is being used and that it actually enables passwords to be strengthened is even better!",
+          "Thanks to our supervision console, you can gain visibility over the status of passwords in your company and adjust certain security parameters to suit your needs.",
+        ],
       },
     },
     proVsPerso: {

@@ -1,0 +1,25 @@
+
+.singleAdvantageCard {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.singleAdvantageCard h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.singleAdvantageCard p {
+  margin-bottom: 10px;
+}
+.checkIcon {
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 20px;
+}
+
+.checkIcon svg {
+  fill:rgb(0,171,169);
+  width: 60px;
+  height: 60px;
+}

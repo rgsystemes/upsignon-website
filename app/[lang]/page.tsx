@@ -7,6 +7,7 @@ import privacyByDesignImg from "../../public/images/privacyByDesign.svg";
 import VimeoPlayer from "./vimeoPlayer";
 import CustomerCarousel from "./customerCarousel";
 import MultiPlatformsTag from "./multiPlatformsTag";
+import SingleAdvantage from "./singleAdvantage";
 
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
@@ -57,31 +58,12 @@ export default function Page({ params }: { params: { lang: string } }) {
       <section className={`${styles.advantagesSection} ${styles.blueBackground}`}>
         <div className={styles.advantagesSectionContent}>
           <h1 className={styles.sectionTitle}>{t.pitch.advantages.sectionTitle}</h1>
-          <div className={styles.singleAdvantageCard}>
-            <h2>{t.pitch.advantages[1].t}</h2>
-            <p>{t.pitch.advantages[1].p1}</p>
-            <p>{t.pitch.advantages[1].p2}</p>
-          </div>
-          <div className={styles.singleAdvantageCard}>
-            <h2>{t.pitch.advantages[2].t}</h2>
-            <p>{t.pitch.advantages[2].p1}</p>
-            <p>{t.pitch.advantages[2].p2}</p>
-            <p>{t.pitch.advantages[2].p3}</p>
-          </div>
-          <div className={styles.singleAdvantageCard}>
-            <h2>{t.pitch.advantages[3].t}</h2>
-            <p>{t.pitch.advantages[3].p1}</p>
-          </div>
-          <div className={styles.singleAdvantageCard}>
-            <h2>{t.pitch.advantages[4].t}</h2>
-            <p>{t.pitch.advantages[4].p1}</p>
-            <p>{t.pitch.advantages[4].p2}</p>
-          </div>
-          <div className={styles.singleAdvantageCard}>
-            <h2>{t.pitch.advantages[5].t}</h2>
-            <p>{t.pitch.advantages[5].p1}</p>
-            <p>{t.pitch.advantages[5].p2}</p>
-          </div>
+          <SingleAdvantage title={t.pitch.advantages[1].t} details={t.pitch.advantages[1].d} />
+          <SingleAdvantage title={t.pitch.advantages[2].t} details={t.pitch.advantages[2].d} />
+          <SingleAdvantage title={t.pitch.advantages[3].t} details={t.pitch.advantages[3].d} />
+          <SingleAdvantage title={t.pitch.advantages[4].t} details={t.pitch.advantages[4].d} />
+          <SingleAdvantage title={t.pitch.advantages[5].t} details={t.pitch.advantages[5].d} />
+          <SingleAdvantage title={t.pitch.advantages[6].t} details={t.pitch.advantages[6].d} />
         </div>
       </section>
       <section className={styles.proVsPersoSection}>
