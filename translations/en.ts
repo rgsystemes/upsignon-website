@@ -25,6 +25,7 @@ const translations: typeof fr = {
     prezVideoTitle: "UpSignOn presentation video",
     french: "Made in France",
     privacyByDesign: "Security and privacy by design",
+    crossPlatform: "Cross-platform",
     keyMetrics: {
       sectionTitle: "Some numbers",
       t1: "80% of corporate hacks are linked to weak passwords.",

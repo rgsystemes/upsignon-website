@@ -23,6 +23,7 @@ const translations = {
     prezVideoTitle: "Vidéo de présentation d'UpSignOn",
     french: "Une solution 100% française et souveraine",
     privacyByDesign: "Sécurité et vie privée par conception",
+    crossPlatform: "Multi-platformes",
     keyMetrics: {
       sectionTitle: "Quelques chiffres",
       t1: "En entreprise, 80% des piratages sont liés à la faiblesse des mots de passe",

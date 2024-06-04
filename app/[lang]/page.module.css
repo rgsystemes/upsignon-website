@@ -50,6 +50,21 @@
   height: 120px;
 }
 
+.tagsImgContainerLogos {
+  margin-bottom: 10px;
+  height: 120px;
+  width: 125px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.platformLogo svg {
+  height: 55px;
+  margin: auto;
+}
+
 
 /* KEY METRICS SECTION */
 .keyMetricsSection {

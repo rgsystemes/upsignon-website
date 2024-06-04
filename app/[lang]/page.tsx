@@ -6,6 +6,7 @@ import frenchImg from "../../public/images/french.svg";
 import privacyByDesignImg from "../../public/images/privacyByDesign.svg";
 import VimeoPlayer from "./vimeoPlayer";
 import CustomerCarousel from "./customerCarousel";
+import MultiPlatformsTag from "./multiPlatformsTag";
 
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
@@ -30,6 +31,10 @@ export default function Page({ params }: { params: { lang: string } }) {
             <Image src={privacyByDesignImg} alt="" />
           </div>
           <div>{t.pitch.privacyByDesign}</div>
+        </div>
+        <div className={styles.tagsCard}>
+          <MultiPlatformsTag containerStyle={styles.tagsImgContainerLogos} iconStyle={styles.platformLogo} />
+          <div>{t.pitch.crossPlatform}</div>
         </div>
       </section>
       <section className={styles.keyMetricsSection}>
