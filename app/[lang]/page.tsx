@@ -86,7 +86,7 @@ export default function Page({ params }: { params: { lang: string } }) {
           <p>{t.pitch.proVsPerso.pro.p2}</p>
         </div>
       </section>
-      <section className={`${styles.demoSection} ${styles.blueBackground}`}>
+      <section className={`${styles.demoSection} ${styles.greenBackground}`}>
         <div className={styles.demoSectionContent}>
           <h1 className={styles.sectionTitle}>{t.pitch.demo.sectionTitle}</h1>
           <h2>{t.pitch.demo.perso}</h2>
