@@ -119,6 +119,26 @@ const translations: typeof fr = {
       sectionTitle: "They trust us",
     },
   },
+  pricing: {
+    pageTitle: "Pricing",
+    persoPricing: {
+      t: "PERSO",
+      free: "Free!",
+      details:
+        "Our PERSO vaults are entirely free and unlimited. But a good rating on stores and publicity among your relatives and your social will be of great value to us! 🙏🙏",
+    },
+    proPricing: {
+      t: "PRO",
+      licencePriceUnit: "/ vault / year",
+      licenceOver1000: "-5% for licenses beyond 1.000",
+      licenceOver12000: "-20% for licenses beyond 12.000",
+      licence3YearsReduction: "-10% for a 3-year order",
+      saasDetails: "SAAS hosting is included in the licence price.",
+      onPremOption: "Self hosting option: 1.000€ / year",
+      onPremDetails:
+        "The self-hosting package covers technical support costs and is independent of the number of licences.",
+    },
+  },
   features: {
     pageTitle: "Features",
     tags: {

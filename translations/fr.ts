@@ -117,6 +117,26 @@ const translations = {
       sectionTitle: "Ils nous font confiance",
     },
   },
+  pricing: {
+    pageTitle: "Tarifs",
+    persoPricing: {
+      t: "PERSO",
+      free: "Gratuit !",
+      details:
+        "Nos coffres-forts PERSO sont entièrement gratuits et illimités. Mais une bonne note sur les stores et de la publicité auprès de vos proches et sur vos réseaux aura une grande valeur pour nous ! 🙏🙏",
+    },
+    proPricing: {
+      t: "PRO",
+      licencePriceUnit: "/ coffre-fort / an",
+      licenceOver1000: "-5% sur les licences au delà de 1 000",
+      licenceOver12000: "-20% sur les licences au delà de 12 000",
+      licence3YearsReduction: "-10% pour une commande de 3 ans",
+      saasDetails: "L'hébergement SAAS est inclus dans le prix des licences.",
+      onPremOption: "Option auto-hébergement : 1 000€ / an",
+      onPremDetails:
+        "Le forfait d'auto-hébergement couvre les frais de support technique et est indépendant du nombre de licences.",
+    },
+  },
   features: {
     pageTitle: "Fonctionnalités",
     tags: {

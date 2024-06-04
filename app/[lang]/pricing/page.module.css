@@ -1,0 +1,61 @@
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  color: white;
+}
+.content h1 {
+  color: white;
+}
+
+.pricingsContainer {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+.pricingTitlePerso, .pricingTitlePro {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.pricingTitlePerso {
+  background-color: rgb(44, 83, 132);
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.pricingTitlePro {
+  background-color:rgb(246,164,0);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.persoPricing, .proPricing {
+  background-color: white;
+  color: rgb(44, 83, 132);
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.persoPrice {
+  font-size: 3em;
+  color: rgb(0,171,169);
+}
+.proPrice {
+  font-size: 3em;
+  color: rgb(246,164,0);
+  margin-bottom: 5px;
+}
+.proPriceUnit {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: rgb(246,164,0);
+}
+.selfHostingTitle {
+  margin: 20px 0;
+}
