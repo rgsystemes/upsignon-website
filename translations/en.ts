@@ -111,7 +111,7 @@ const translations: typeof fr = {
         p1: "Before you can attempt to decrypt your data, you must have access to the raw files. To do this, a hacker must necessarily have access to one of your authorized devices, either to obtain the encrypted file directly, or to prove to the server that it has access to one of your authorized devices. So decrypting your data always requires proof of possession (the authorized device) and proof of knowledge (your master password).",
       },
       zeroKnowledge: {
-        t: "Limitation of personal data stored on the cloud / zero knowledge principle",
+        t: "Limitation of personal data stored on the cloud - zero knowledge principle",
         p1: 'Only strictly essential data is stored in the clear on the servers. In the case of PRO vaults, for supervision purposes, this is your professional email address, your authorized devices and information on the strength of your vault\'s passwords. PERSO vaults completely respect the so-called "zero knowledge" principle: absolutely no personal data is transmitted to the server, not even your email address.',
       },
     },

@@ -109,7 +109,7 @@ const translations = {
         p1: "Avant de pouvoir tenter de déchiffrer vos données, encore faut-il avoir accès aux fichiers bruts. Pour cela, un pirate doit nécessairement avoir accès à l’un de vos appareils autorisés, soit pour y obtenir le fichier chiffré directement, soit pour prouver au serveur qu’il a bien accès à l’un de vos appareils autorisés. Ainsi le déchiffrement de vos données nécessite toujours une preuve de possession (l’appareil autorisé) et une preuve de connaissance (votre mot de passe maître).",
       },
       zeroKnowledge: {
-        t: "Limitation des données personnelles stockées sur le cloud / principe de connaissance nulle",
+        t: "Limitation des données personnelles stockées sur le cloud - principe de connaissance nulle",
         p1: "Seules les données strictement essentielles sont stockées en clair sur les serveurs. Dans le cas des coffres-forts PRO, pour les besoins de la supervision, il s’agit de votre adresse email professionnelle, de vos appareils autorisés et d’informations sur la force des mots de passe de votre coffre-fort. Les coffres-forts PERSO quant à eux respectent totalement le principe dit de “connaissance nulle” : absolument aucune donnée personnelle n’est transmise au serveur, pas même votre adresse email.",
       },
     },
