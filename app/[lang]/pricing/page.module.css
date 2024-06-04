@@ -1,18 +1,22 @@
 .content {
   max-width: 900px;
   margin: auto;
-  padding: 20px;
+  padding: 20px 20px 50px 20px;
   color: white;
 }
 .content h1 {
+  font-size: 1.5em;
   color: white;
+  margin-bottom: 20px;
 }
 
 .pricingsContainer {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   column-gap: 5px;
   row-gap: 5px;
+  margin-bottom: 40px;
 }
 
 .pricingTitlePerso, .pricingTitlePro {
@@ -33,6 +37,7 @@
 }
 
 .persoPricing, .proPricing {
+  min-width: 300px;
   background-color: white;
   color: rgb(44, 83, 132);
   padding: 20px;
@@ -58,4 +63,16 @@
 }
 .selfHostingTitle {
   margin: 20px 0;
+  text-align: center;
+}
+.priceDetail {
+  text-align: center;
+}
+
+.proPricingTestButton, .proPricingCallLater, .downloadAction {
+  color: rgb(0,171,169);
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 10px 0;
 }

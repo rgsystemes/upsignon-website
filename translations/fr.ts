@@ -124,6 +124,7 @@ const translations = {
       free: "Gratuit !",
       details:
         "Nos coffres-forts PERSO sont entièrement gratuits et illimités. Mais une bonne note sur les stores et de la publicité auprès de vos proches et sur vos réseaux aura une grande valeur pour nous ! 🙏🙏",
+      downloadAction: "Télécharger UpSignOn",
     },
     proPricing: {
       t: "PRO",
@@ -135,7 +136,11 @@ const translations = {
       onPremOption: "Option auto-hébergement : 1 000€ / an",
       onPremDetails:
         "Le forfait d'auto-hébergement couvre les frais de support technique et est indépendant du nombre de licences.",
+      test1month: "Tester 1 mois gratuitement",
+      beContactedLater: "Être recontacté plus tard",
     },
+    distribTitle: "Vous êtes revendeur ?",
+    distribDetails: "Nous avons un deal gagnant-gagnant à vous proposer. Contactez-nous !",
   },
   features: {
     pageTitle: "Fonctionnalités",

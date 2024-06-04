@@ -126,6 +126,7 @@ const translations: typeof fr = {
       free: "Free!",
       details:
         "Our PERSO vaults are entirely free and unlimited. But a good rating on stores and publicity among your relatives and your social will be of great value to us! 🙏🙏",
+      downloadAction: "Download UpSignOn",
     },
     proPricing: {
       t: "PRO",
@@ -137,7 +138,11 @@ const translations: typeof fr = {
       onPremOption: "Self hosting option: 1.000€ / year",
       onPremDetails:
         "The self-hosting package covers technical support costs and is independent of the number of licences.",
+      test1month: "Test 1 month for free",
+      beContactedLater: "Be contacted later",
     },
+    distribTitle: "Are you a reseller?",
+    distribDetails: "We have a win-win deal for you. Please contact us!",
   },
   features: {
     pageTitle: "Features",
