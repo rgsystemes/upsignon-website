@@ -60,7 +60,7 @@
 .menuItem:-webkit-any-link {
   color: white;
 }
-.menuItem:hover {
+.menuItem:hover, .currentMenu {
   border-bottom: 4px solid rgb(0,171,169);
 }
 

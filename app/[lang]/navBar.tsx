@@ -6,10 +6,12 @@ import styles from "./navBar.module.css";
 import Link from "next/link";
 import { getDictionary } from "../../translations/translations";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export function NavBar(p: { lang: string }) {
   const [unfolded, setUnfolded] = useState(false);
   const t = getDictionary(p.lang);
+  const pathName = usePathname();
   return (
     <nav className={styles.nav}>
       <Link href="/" className={styles.logoAndNameContainer}>
@@ -29,16 +31,28 @@ export function NavBar(p: { lang: string }) {
         )}
       </div>
       <div className={`${styles.menuItems} ${unfolded ? styles.unfolded : styles.folded}`}>
-        <Link href="/features" className={styles.menuItem}>
+        <Link
+          href="/features"
+          className={`${styles.menuItem} ${pathName.includes("/features") ? styles.currentMenu : null}`}
+        >
           {t.menu.features}
         </Link>
-        <Link href="/pricing" className={styles.menuItem}>
+        <Link
+          href="/pricing"
+          className={`${styles.menuItem} ${pathName.includes("/pricing") ? styles.currentMenu : null}`}
+        >
           {t.menu.pricing}
         </Link>
-        <Link href="/downloads" className={styles.menuItem}>
+        <Link
+          href="/downloads"
+          className={`${styles.menuItem} ${pathName.includes("/downloads") ? styles.currentMenu : null}`}
+        >
           {t.menu.downloads}
         </Link>
-        <Link href="/resources" className={styles.menuItem}>
+        <Link
+          href="/resources"
+          className={`${styles.menuItem} ${pathName.includes("/resources") ? styles.currentMenu : null}`}
+        >
           {t.menu.resources}
         </Link>
       </div>
