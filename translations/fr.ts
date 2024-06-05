@@ -142,6 +142,13 @@ const translations = {
     distribTitle: "Vous êtes revendeur ?",
     distribDetails: "Nous avons un deal gagnant-gagnant à vous proposer. Contactez-nous !",
   },
+  downloads: {
+    pageTitle: "Téléchargements (gratuits)",
+    appTitle: "1 - Téléchargez l'application",
+    windowsOtherOptions: "Autres options de téléchargement & GPO",
+    browserExtensionTitle: "2 - Téléchargez l'extension de navigateur",
+    chromiumBrowsers: "Navigateurs Chromium",
+  },
   features: {
     pageTitle: "Fonctionnalités",
     tags: {

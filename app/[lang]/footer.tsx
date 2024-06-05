@@ -59,7 +59,7 @@ export function Footer(p: { lang: string }) {
             <span className={styles.subsectionTitle}>{t.footer.hostedBy} </span>1&1 IONOS SARL
           </span>
           <span>7 place de la Gare, BP 70109, 57200 Sarreguemines, France</span>
-          <span>(tel : +339 70 808 911 ; e-mail : info@ionos.fr)</span>
+          <span>+339 70 808 911 - info@ionos.fr</span>
         </details>
       </div>
       <div className={styles.copyright}>

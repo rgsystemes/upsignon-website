@@ -144,6 +144,13 @@ const translations: typeof fr = {
     distribTitle: "Are you a reseller?",
     distribDetails: "We have a win-win deal for you. Please contact us!",
   },
+  downloads: {
+    pageTitle: "Donwloads (free)",
+    appTitle: "1 - Download the app",
+    windowsOtherOptions: "Other download options & GPO",
+    browserExtensionTitle: "2 - Download the browser extension",
+    chromiumBrowsers: "Chromium browsers",
+  },
   features: {
     pageTitle: "Features",
     tags: {

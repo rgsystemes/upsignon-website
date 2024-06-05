@@ -35,7 +35,7 @@ export default function Page({ params }: { params: { lang: string } }) {
       </div>
 
       <h1>{t.pricing.distribTitle}</h1>
-      <p>{t.pricing.distribDetails}</p>
+      <p className={styles.distribDetails}>{t.pricing.distribDetails}</p>
     </div>
   );
 }

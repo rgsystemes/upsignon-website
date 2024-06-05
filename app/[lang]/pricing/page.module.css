@@ -2,12 +2,11 @@
   max-width: 900px;
   margin: auto;
   padding: 20px 20px 50px 20px;
-  color: white;
 }
 .content h1 {
-  font-size: 1.5em;
-  color: white;
-  margin-bottom: 20px;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .pricingsContainer {
@@ -79,4 +78,8 @@
   text-decoration: underline;
   cursor: pointer;
   margin: 10px 0;
+}
+
+.distribDetails {
+  text-align: center;
 }

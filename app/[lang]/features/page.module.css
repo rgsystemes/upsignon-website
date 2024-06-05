@@ -1,9 +1,14 @@
+.page {
+  background-color: rgb(44, 83, 132);
+}
 .content {
   max-width: 900px;
   margin: auto;
   padding: 20px;
 }
 .content h1 {
+  font-size: 2em;
+  text-align: center;
   color: white;
 }
 
