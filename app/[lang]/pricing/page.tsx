@@ -10,10 +10,11 @@ export default function Page({ params }: { params: { lang: string } }) {
         <div className={styles.persoPricing}>
           <h3 className={styles.pricingTitlePerso}>{t.pricing.persoPricing.t}</h3>
           <div className={styles.persoPrice}>{t.pricing.persoPricing.free}</div>
-          <div className={styles.pricingDetails}>{t.pricing.persoPricing.details}</div>
           <a href="/downloads" className={styles.downloadAction}>
             {t.pricing.persoPricing.downloadAction}
           </a>
+          <div className={styles.pricingDetails}>{t.pricing.persoPricing.details}</div>
+          <div>🙏🙏</div>
         </div>
         <div className={styles.proPricing}>
           <h3 className={styles.pricingTitlePro}>{t.pricing.proPricing.t}</h3>
@@ -23,13 +24,13 @@ export default function Page({ params }: { params: { lang: string } }) {
           <div className={styles.priceDetail}>{t.pricing.proPricing.licenceOver1000}</div>
           <div className={styles.priceDetail}>{t.pricing.proPricing.licenceOver12000}</div>
           <div className={styles.priceDetail}>{t.pricing.proPricing.licence3YearsReduction}</div>
-          <h3 className={styles.selfHostingTitle}>{t.pricing.proPricing.onPremOption}</h3>
-          <div className={styles.pricingDetails}>{t.pricing.proPricing.saasDetails}</div>
-          <div className={styles.pricingDetails}>{t.pricing.proPricing.onPremDetails}</div>
-
+          <div className={styles.selfHostingTitle}>{t.pricing.proPricing.onPremOption}</div>
           {/* TODO implement call to Action */}
           <div className={styles.proPricingTestButton}>{t.pricing.proPricing.test1month}</div>
           <div className={styles.proPricingCallLater}>{t.pricing.proPricing.beContactedLater}</div>
+
+          <div className={styles.pricingDetails}>{t.pricing.proPricing.saasDetails}</div>
+          <div className={styles.pricingDetails}>{t.pricing.proPricing.onPremDetails}</div>
         </div>
       </div>
 

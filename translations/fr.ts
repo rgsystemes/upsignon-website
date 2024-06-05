@@ -121,9 +121,9 @@ const translations = {
     pageTitle: "Tarifs",
     persoPricing: {
       t: "PERSO",
-      free: "Gratuit !",
+      free: "0€",
       details:
-        "Nos coffres-forts PERSO sont entièrement gratuits et illimités. Mais une bonne note sur les stores et de la publicité auprès de vos proches et sur vos réseaux aura une grande valeur pour nous ! 🙏🙏",
+        "Nos coffres-forts PERSO sont entièrement gratuits et illimités. Mais une bonne note sur les stores et de la publicité auprès de vos proches et sur vos réseaux aura une grande valeur pour nous !",
       downloadAction: "Télécharger UpSignOn",
     },
     proPricing: {

@@ -123,9 +123,9 @@ const translations: typeof fr = {
     pageTitle: "Pricing",
     persoPricing: {
       t: "PERSO",
-      free: "Free!",
+      free: "0€",
       details:
-        "Our PERSO vaults are entirely free and unlimited. But a good rating on stores and publicity among your relatives and your social will be of great value to us! 🙏🙏",
+        "Our PERSO vaults are entirely free and unlimited. But a good rating on stores and publicity among your relatives and your social will be of great value to us!",
       downloadAction: "Download UpSignOn",
     },
     proPricing: {

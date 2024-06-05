@@ -68,6 +68,10 @@
 .priceDetail {
   text-align: center;
 }
+.pricingDetails {
+  font-size: small;
+  text-align: center;
+}
 
 .proPricingTestButton, .proPricingCallLater, .downloadAction {
   color: rgb(0,171,169);
