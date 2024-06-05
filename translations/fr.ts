@@ -118,7 +118,6 @@ const translations = {
     },
   },
   pricing: {
-    pageTitle: "Tarifs",
     persoPricing: {
       t: "PERSO",
       free: "0€",
@@ -602,6 +601,12 @@ const translations = {
       ],
       imageAlt: 'Capture d\'écran de la page "Autres requêtes" de la console de supervision.',
     },
+  },
+  resources: {
+    tutorials: "Tutoriels",
+    technicalExplanations: "Explications techniques",
+    articles: "Articles",
+    contractualCommitments: "Nos engagements contractuels",
   },
   techResources: {
     protectedClipboardBehaviour: {

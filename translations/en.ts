@@ -120,7 +120,6 @@ const translations: typeof fr = {
     },
   },
   pricing: {
-    pageTitle: "Pricing",
     persoPricing: {
       t: "PERSO",
       free: "0€",
@@ -591,6 +590,12 @@ const translations: typeof fr = {
       ],
       imageAlt: "Screenshot of the “Other requests” page in the supervision console.",
     },
+  },
+  resources: {
+    tutorials: "Tutorials",
+    technicalExplanations: "Technical explanations",
+    articles: "Articles",
+    contractualCommitments: "Our contractual commitments",
   },
   techResources: {
     protectedClipboardBehaviour: {

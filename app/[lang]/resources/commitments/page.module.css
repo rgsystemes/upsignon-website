@@ -1,0 +1,35 @@
+.article {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 20px 50px 20px;
+}
+.article header h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.article h2 {
+  font-size: 1.5em;
+  margin: 50px 0 20px 0;
+}
+
+.article table {
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+.article table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.article table td, .article table th {
+  padding: 10px;
+}
+
+.article li {
+  margin-bottom: 5px;
+}
+.article p {
+  margin-bottom: 10px;
+}

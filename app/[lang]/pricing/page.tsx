@@ -5,7 +5,7 @@ export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
   return (
     <div className={styles.content}>
-      <h1>{t.pricing.pageTitle}</h1>
+      <h1>{t.menu.pricing}</h1>
       <div className={styles.pricingsContainer}>
         <div className={styles.persoPricing}>
           <h3 className={styles.pricingTitlePerso}>{t.pricing.persoPricing.t}</h3>
