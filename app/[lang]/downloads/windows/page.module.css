@@ -75,7 +75,7 @@
   z-index: 0;
 }
 
-.content a:not(.buttonLink) {
+.content a:not(.buttonLink), .content .backArrow {
   color: rgb(0, 171, 169);
 }
 

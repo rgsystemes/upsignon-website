@@ -16,18 +16,35 @@ const allMsiVersions = [
   "7.1.0",
 ];
 const preConfigDeployScript = `## RUN AS ADMIN !
-$cUsersPath = "C:\Users"
+$cUsersPath = "C:\\Users"
 $usersPaths = (Get-ChildItem -Path $cUsersPath -Directory -ErrorAction SilentlyContinue).FullName
 $bankUrl = "https://<xxx.xx/xx>";
 Foreach($u in $usersPaths){
   if (Get-AppxPackage -Name 'dataSmine.UpSignOn' -AllUsers) {
       # Store package case
-      New-Item "$u\AppData\Local\Packages\dataSmine.UpSignOn_fqgssej11bscy\LocalState\v6-gpo-configuration.json" -ItemType File -Value "{\`"proConfigUrl\`":\`"$bankUrl\`"}" -Force
+      New-Item "$u\\AppData\\Local\\Packages\\dataSmine.UpSignOn_fqgssej11bscy\\LocalState\\v6-gpo-configuration.json" -ItemType File -Value "{\`"proConfigUrl\`":\`"$bankUrl\`"}" -Force
   } else {
       # MSI package case
-      New-Item "$u\AppData\Local\UpSignOn\v6-gpo-configuration.json" -ItemType File -Value "{\`"proConfigUrl\`":\`"$bankUrl\`"}" -Force
+      New-Item "$u\\AppData\\Local\\UpSignOn\\v6-gpo-configuration.json" -ItemType File -Value "{\`"proConfigUrl\`":\`"$bankUrl\`"}" -Force
   }
 }
+`;
+const msiMigrationScript = `## RUN AS ADMIN !
+$cUsersPath = "C:\\Users"
+$usersPaths = (Get-ChildItem -Path $cUsersPath -Directory -ErrorAction SilentlyContinue).FullName
+
+Foreach($u in $usersPaths){
+    $msiFolderPath = "$u\\AppData\\Local\\UpSignOn"
+    $storeFolderPath = "$u\\AppData\\Local\\Packages\\dataSmine.UpSignOn_fqgssej11bscy\\LocalState"
+    if (-Not (Test-Path $msiFolderPath) -And (Test-Path $storeFolderPath)) {
+        New-Item -ItemType Directory -Force -Path $msiFolderPath
+        Copy-Item -Path "$storeFolderPath\\*" -Destination "$msiFolderPath" -Recurse
+    }
+}
+Get-AppxPackage -Name 'dataSmine.UpSignOn' -AllUsers | Remove-AppxPackage -AllUsers
+`;
+const msiMigrationScript2 = `
+Start-Process \\\\srv\\partages$\\xxx\\UpSignOn-7.3.0-silent-installer.msi -ArgumentList "/quiet"
 `;
 export default function WindowsAllDownloadsPage({ params }: { params: { lang: string } }) {
   if (params.lang === "fr") {
@@ -40,6 +57,10 @@ export default function WindowsAllDownloadsPage({ params }: { params: { lang: st
 function FRWindowsAllDownloadPage() {
   return (
     <section className={styles.content}>
+      <div className={styles.backArrow}>
+        <span>&lt;  </span>
+        <a href="/downloads">Téléchargements</a>
+      </div>
       <h1>Téléchargements, déploiement et pré-configuration Windows</h1>
       <h2>Téléchargements (PC 64 bits uniquement)</h2>
       <div className={styles.downloadDiffs}>
@@ -155,9 +176,9 @@ function FRWindowsAllDownloadPage() {
         <table className={styles.msiTable}>
           <thead>
             <tr>
-              <th>version d’installation admin silencieuse</th>
-              <th>version d’installation interactive</th>
-              <th>version d’installation utilisateur silencieuse</th>
+              <th>Version d’installation admin silencieuse</th>
+              <th>Version d’installation interactive</th>
+              <th>Version d’installation utilisateur silencieuse</th>
             </tr>
           </thead>
           <tbody>
@@ -280,6 +301,51 @@ function FRWindowsAllDownloadPage() {
       <pre className={styles.code}>{`{"proConfigUrl":"https://<xxx.xx/xx>"}`}</pre>
       <p>Le script suivant peut être utilisé pour déployer ce fichier automatiquement (à ajuster avec votre url) :</p>
       <pre className={styles.code}>{preConfigDeployScript}</pre>
+
+      <h2>Documentation pour migrer vers le package msi (depuis la version store)</h2>
+      <details>
+        <summary>Voir</summary>
+        <p>Voici les choses à savoir avant de commencer cette migration :</p>
+        <ul className={styles.ul}>
+          <li>
+            la version store et la version msi de l’application, bien que fonctionnellement identiques et portant le
+            même nom, sont du point de vue de Windows des applications différentes.
+          </li>
+          <li>
+            la version store de l’application stocke ses données dans
+            C:\Users\xxx\AppData\Local\Packages\dataSmine.UpSignOn_fqgssej11bscy\LocalState
+          </li>
+          <li>la désinstallation de l’application store entraîne la suppression des données</li>
+          <li>la version msi de l’application stocke ses données dans C:\Users\xxx\AppData\Local\UpSignOn</li>
+          <li>
+            au lancement de la version msi de l’application, si le dossier C:\Users\xxx\AppData\Local\UpSignOn n’existe
+            pas, l’application copie les données de
+            C:\Users\xxx\AppData\Local\Packages\dataSmine.UpSignOn_fqgssej11bscy\LocalState si elles existent vers
+            C:\Users\xxx\AppData\Local\UpSignOn
+          </li>
+          <li>
+            Windows ne parvient pas à faire la différence entre les raccourcis de la version store et ceux de la version
+            msi.
+          </li>
+        </ul>
+        <p>La procédure idéale de migration est donc</p>
+
+        <ol className={styles.ul}>
+          <li>
+            exécuter un script qui copie, pour chaque utilisateur, les données de la version store vers le dossier de la
+            version msi
+          </li>
+          <li>désinstaller la version store</li>
+          <li>installer la version msi</li>
+        </ol>
+        <p>Pour l’étape 1. et 2. vous pouvez utiliser ce script powershell à exécuter en tant qu’administrateur :</p>
+        <pre className={styles.code}>{msiMigrationScript}</pre>
+        <p>
+          Pour l’étape 3., vous pouvez vous inspirer de cette ligne au script en adaptant le numéro de version de
+          l’application et le chemin du fichier.
+        </p>
+        <pre className={styles.code}>{msiMigrationScript2}</pre>
+      </details>
     </section>
   );
 }
@@ -287,6 +353,10 @@ function FRWindowsAllDownloadPage() {
 function ENWindowsAllDownloadPage() {
   return (
     <section className={styles.content}>
+      <div className={styles.backArrow}>
+        <span>&lt;  </span>
+        <a href="/downloads">Downloads</a>
+      </div>
       <h1>Windows downloads, deployment, and pre-configuration</h1>
       <h2>Downloads (64-bit PC only)</h2>
       <div className={styles.downloadDiffs}>
@@ -401,9 +471,9 @@ function ENWindowsAllDownloadPage() {
         <table className={styles.msiTable}>
           <thead>
             <tr>
-              <th>silent admin install version</th>
-              <th>interactive installation version</th>
-              <th>silent user install version</th>
+              <th>Silent admin install version</th>
+              <th>Interactive installation version</th>
+              <th>Silent user install version</th>
             </tr>
           </thead>
           <tbody>
@@ -525,6 +595,48 @@ function ENWindowsAllDownloadPage() {
       <pre className={styles.code}>{`{"proConfigUrl":"https://<xxx.xx/xx>"}`}</pre>
       <p>The following script can be used to deploy this file automatically (to be adjusted with your url):</p>
       <pre className={styles.code}>{preConfigDeployScript}</pre>
+
+      <h2>Documentation for migrating to the msi package (from the store version)</h2>
+      <details>
+        <summary>View</summary>
+        <p>Here are the things to know before starting this migration:</p>
+        <ul className={styles.ul}>
+          <li>
+            the store version and the msi version of the application, although functionally identical and bearing the
+            same name, are from Windows point of view different applications.
+          </li>
+          <li>
+            the store version of the application stores its data in
+            C:\Users\xxx\AppData\Local\Packages\dataSmine.UpSignOn_fqgssej11bscy\LocalState
+          </li>
+          <li>uninstalling the app store results in data deletion</li>
+          <li>the msi version of the application stores its data in C:\Users\xxx\AppData\Local\UpSignOn</li>
+          <li>
+            when launching the msi version of the application, if the C:\Users\xxx\AppData\Local\UpSignOn folder does
+            not exist, the application copies the data from
+            C:\Users\xxx\AppData\Local\Packages\dataSmine.UpSignOn_fqgssej11bscy\LocalState if they exist to
+            C:\Users\xxx\AppData\Local\UpSignOn
+          </li>
+          <li>Windows cannot tell the difference between store version and version shortcuts msi.</li>
+        </ul>
+        <p>The ideal migration procedure is therefore</p>
+
+        <ol className={styles.ul}>
+          <li>
+            execute a script which copies, for each user, the data from the version store to the folder of the msi
+            version
+          </li>
+          <li>uninstall store version</li>
+          <li>install msi version</li>
+        </ol>
+        <p>For step 1. and 2. you can use this powershell script to run as administrator:</p>
+        <pre className={styles.code}>{msiMigrationScript}</pre>
+        <p>
+          For step 3., you can take inspiration from this line in the script by adapting the version number of the
+          application and the file path.
+        </p>
+        <pre className={styles.code}>{msiMigrationScript2}</pre>
+      </details>
     </section>
   );
 }
