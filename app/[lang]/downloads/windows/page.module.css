@@ -1,0 +1,114 @@
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 20px 50px 20px;
+
+}
+.content h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.content h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.content h3 {
+  margin: 30px 0 10px 0;
+}
+.content p {
+  margin-bottom: 10px;
+}
+
+.downloadDiffs {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.tableContainer {
+  width: 100%;
+  overflow-x: scroll;
+  margin: 10px 0 20px 0;
+}
+
+.downloadDiffs table {
+  border: 3px solid rgb(44, 83, 132);
+  border-collapse: collapse;
+}
+.downloadDiffs table tr {
+  border-bottom: 1px solid rgb(44, 83, 132);
+}
+.downloadDiffs table tr td, .downloadDiffs table tr th{
+  padding: 10px;
+  min-width: 200px;
+  text-align: center;
+  border-right: 1px solid rgb(44, 83, 132);
+  text-wrap: wrap;
+
+}
+
+.downloadDiffs table tr td.largeCol {
+  min-width: 400px;
+}
+
+
+.buttonLink {
+  display: inline-block;
+  background-image: linear-gradient(0deg, rgb(12, 95, 94), rgb(0, 171, 169));
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.msixbundleSteps {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  padding: 30px 10px 20px 10px;
+  position: relative;
+  top: -20px;
+  z-index: 0;
+}
+
+.content a:not(.buttonLink) {
+  color: rgb(0, 171, 169);
+}
+
+.msiTable {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+.msiTable tr {
+  border-bottom: 1px solid rgb(44, 83, 132);
+}
+
+.msiTable td, .msiTable th {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid rgb(44, 83, 132);
+}
+.breakable {
+  word-break: break-all;
+}
+
+.msiTable td.versionList {
+  text-align: start;
+  vertical-align: top;
+}
+.ul {
+  margin-bottom: 20px;
+}
+pre.code {
+  background-color: #ddd;
+  font-family: monospace;
+  padding: 30px;
+  width: 100%;
+  overflow-x: auto;
+  margin: 10px 0;
+}

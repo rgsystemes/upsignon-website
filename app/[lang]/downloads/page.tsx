@@ -63,12 +63,7 @@ export default function Page({ params }: { params: { lang: string } }) {
                 >
                   Microsoft Store
                 </a>
-                <a
-                  href="https://upsignon.notion.site/T-l-chargement-et-pr-configuration-Windows-64-bits-482f5f9300794425a1f4fb27492e95be"
-                  target="_blank"
-                >
-                  {t.downloads.windowsOtherOptions}
-                </a>
+                <a href="/downloads/windows">{t.downloads.windowsOtherOptions}</a>
               </td>
             </tr>
             <tr>
