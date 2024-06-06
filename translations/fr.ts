@@ -605,6 +605,9 @@ const translations = {
   resources: {
     tutorials: "Tutoriels",
     technicalExplanations: "Explications techniques",
+    onPremDoc: "Auto-hébergement : documentation d'installation",
+    generalDesignPrinciples: "Principes de fonctionnement des coffres-forts PERSO et PRO",
+    releaseNotes: "Notes de version",
     articles: "Articles",
     contractualCommitments: "Nos engagements contractuels",
   },

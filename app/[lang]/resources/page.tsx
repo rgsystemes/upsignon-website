@@ -7,12 +7,45 @@ export default function Page({ params }: { params: { lang: string } }) {
   return (
     <div className={styles.content}>
       <h1>{t.menu.resources}</h1>
+      <h2 className={styles.mainResourceTitle}>{t.resources.tutorials}</h2>
+      <h2 className={styles.mainResourceTitle}>{t.resources.technicalExplanations}</h2>
       <ul>
-        <li>{t.resources.tutorials}</li>
-        <li>{t.resources.technicalExplanations}</li>
-        <li>{t.resources.contractualCommitments}</li>
-        <li>{t.resources.articles}</li>
+        <li>
+          <a className={styles.link} href="/resources/technical-details/pro-vs-perso">
+            {t.resources.generalDesignPrinciples}
+          </a>
+        </li>
+        <li>
+          <a className={styles.link} href="/resources/technical-details/protected-clipboard-behaviour">
+            {t.techResources.protectedClipboardBehaviour.title}
+          </a>
+        </li>
+        <li>
+          <a
+            className={styles.link}
+            href="https://github.com/UpSignOn/UpSignOn-pro-server/blob/production/doc/Install.md"
+            target="_blank"
+          >
+            {t.resources.onPremDoc}
+          </a>
+        </li>
       </ul>
+      <h2 className={styles.mainResourceTitle}>
+        <a
+          className={styles.link}
+          href="https://upsignon.notion.site/Notes-de-version-7b9253161210463083a638d116f40956?pvs=4"
+          target="_blank"
+        >
+          {t.resources.releaseNotes}
+        </a>
+      </h2>
+      <h2 className={styles.mainResourceTitle}>
+        <a className={styles.link} href="/resources/commitments">
+          {t.resources.contractualCommitments}
+        </a>
+      </h2>
+
+      <h2 className={styles.mainResourceTitle}>{t.resources.articles}</h2>
     </div>
   );
 }

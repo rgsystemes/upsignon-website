@@ -594,6 +594,9 @@ const translations: typeof fr = {
   resources: {
     tutorials: "Tutorials",
     technicalExplanations: "Technical explanations",
+    onPremDoc: "Self-hosting : installation documentation",
+    generalDesignPrinciples: "How the PERSO and PRO vaults work",
+    releaseNotes: "Release notes",
     articles: "Articles",
     contractualCommitments: "Our contractual commitments",
   },

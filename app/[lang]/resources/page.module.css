@@ -8,3 +8,66 @@
   text-align: center;
   margin-bottom: 50px;
 }
+
+.link {
+  color: rgb(0, 171, 169);
+}
+
+
+
+.article {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 20px 50px 20px;
+}
+.article header h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.article h2 {
+  font-size: 1.8em;
+  margin: 50px 0 20px 0;
+}
+.article h3 {
+  font-size: 1.3em;
+  margin: 20px 0 10px 0;
+}
+
+.article table {
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+.article table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.article table td, .article table th {
+  padding: 10px;
+}
+
+.article li {
+  margin-bottom: 5px;
+}
+.article p, .article blockquote {
+  margin-bottom: 10px;
+}
+.article a {
+  color: rgb(0, 171, 169);
+}
+.article mark {
+  background-color: rgb(0, 171, 169);
+  color: white;
+  padding: 0 5px;
+}
+.article mark a {
+  color: white;
+}
+
+.article blockquote {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 4px solid rgb(44, 83, 132);
+}
