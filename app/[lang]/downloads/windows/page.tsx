@@ -211,12 +211,12 @@ function FRWindowsAllDownloadPage() {
                   download
                   className={styles.buttonLink}
                 >
-                  Latest .msi
+                  Plus récent .msi
                 </a>
               </td>
               <td>
                 <a href="https://app.upsignon.eu/UpSignOn-latest-installer.msi" download className={styles.buttonLink}>
-                  Latest .msi
+                  Plus récent .msi
                 </a>
               </td>
               <td>
@@ -225,7 +225,7 @@ function FRWindowsAllDownloadPage() {
                   download
                   className={styles.buttonLink}
                 >
-                  Latest .msi
+                  Plus récent .msi
                 </a>
               </td>
             </tr>

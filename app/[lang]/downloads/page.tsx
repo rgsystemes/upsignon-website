@@ -75,6 +75,7 @@ export default function Page({ params }: { params: { lang: string } }) {
                 <a className={styles.buttonLink} href="https://app.upsignon.eu/UpSignOn-latest.AppImage" download>
                   AppImage
                 </a>
+                <a href="/downloads/linux">{t.downloads.linuxOtherOptions}</a>
               </td>
             </tr>
           </tbody>

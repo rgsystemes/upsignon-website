@@ -145,6 +145,7 @@ const translations = {
     pageTitle: "Téléchargements (gratuits)",
     appTitle: "1 - Téléchargez l'application",
     windowsOtherOptions: "Autres options de téléchargement & GPO",
+    linuxOtherOptions: "Informations et versions",
     browserExtensionTitle: "2 - Téléchargez l'extension de navigateur",
     chromiumBrowsers: "Navigateurs Chromium",
   },

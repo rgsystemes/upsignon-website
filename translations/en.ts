@@ -147,6 +147,7 @@ const translations: typeof fr = {
     pageTitle: "Donwloads (free)",
     appTitle: "1 - Download the app",
     windowsOtherOptions: "Other download options & GPO",
+    linuxOtherOptions: "Informations and versions",
     browserExtensionTitle: "2 - Download the browser extension",
     chromiumBrowsers: "Chromium browsers",
   },
