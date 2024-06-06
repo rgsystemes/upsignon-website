@@ -137,17 +137,13 @@ function FRCommitments() {
       </p>
       <p>Définitions</p>
       <ul>
+        <li>Incident majeur : l’accès aux coffres-forts n’est plus possible et il n’existe aucun contournement.</li>
         <li>
-          Incident majeur : l&apos;accès aux coffres-forts n&apos;est plus possible et il n&apos;existe aucun
-          contournement.
+          Incident modéré : l’accès aux coffre-forts est possible mais des fonctionnalités essentielles ne sont plus
+          disponibles ou sont fortement dégradées.
         </li>
         <li>
-          Incident modéré : l&apos;accès aux coffre-forts est possible mais des fonctionnalités essentielles ne sont
-          plus disponibles ou sont fortement dégradées.
-        </li>
-        <li>
-          Incident mineur : il existe un contournement acceptable ou la fonctionnalité concernée n&apos;est pas
-          essentielle.
+          Incident mineur : il existe un contournement acceptable ou la fonctionnalité concernée n’est pas essentielle.
         </li>
       </ul>
       <table>
@@ -190,14 +186,14 @@ function FRCommitments() {
       </table>
 
       <p>
-        En cas d&apos;incident impliquant le serveur, une solution de contournement acceptable consisterait dans la
-        plupart des cas à revenir à une version antérieure du serveur. Ceci nécessiterait une action manuelle pour les
-        clients ayant opté pour l&apos;auto-hébergement.
+        En cas d’incident impliquant le serveur, une solution de contournement acceptable consisterait dans la plupart
+        des cas à revenir à une version antérieure du serveur. Ceci nécessiterait une action manuelle pour les clients
+        ayant opté pour l’auto-hébergement.
       </p>
       <p>
-        En cas d&apos;incident impliquant l&apos;application, une solution de contournement acceptable consisterait la
-        plupart du temps à forcer manuellement la réinstallation d&apos;une version antérieure de l&apos;application. Ce
-        contournement est possible sur Windows et Linux, mais pas sur les autres plateformes.
+        En cas d’incident impliquant l’application, une solution de contournement acceptable consisterait la plupart du
+        temps à forcer manuellement la réinstallation d’une version antérieure de l’application. Ce contournement est
+        possible sur Windows et Linux, mais pas sur les autres plateformes.
       </p>
 
       <h2>Assurance</h2>
@@ -230,7 +226,7 @@ function ENCommitments() {
         <li>
           Total anonymization of data recorded on the PERSO server (zero knowledge)
           <ul>
-            <li>the user&apos;s IP address may be stored in the server logs</li>
+            <li>the user’s IP address may be stored in the server logs</li>
           </ul>
         </li>
         <li>
@@ -240,7 +236,7 @@ function ENCommitments() {
             <li>authorized devices</li>
             <li>password strength statistics by vault and shared vault</li>
             <li>url and login of shared vault accounts</li>
-            <li>the user&apos;s IP address may be stored in the server logs</li>
+            <li>the user’s IP address may be stored in the server logs</li>
           </ul>
         </li>
         <li>

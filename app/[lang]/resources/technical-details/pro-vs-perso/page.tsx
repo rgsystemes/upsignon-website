@@ -100,8 +100,8 @@ function FRArticle() {
       </p>
       <p>
         Si vous oubliez votre mot de passe maître, nous n’avons aucun moyen de vous aider à le réinitialiser. Si c’était
-        le cas, cela voudrait dire que nous serions en mesure de déchiffrer votre coffre-fort PERSO, ce qui n&apos;est
-        pas souhaité.
+        le cas, cela voudrait dire que nous serions en mesure de déchiffrer votre coffre-fort PERSO, ce qui n’est pas
+        souhaité.
       </p>
       <p>
         Pour résoudre ce problème, nous avons donc conçu un système de sauvegarde de votre mot de passe maître auprès
@@ -429,7 +429,7 @@ function ENArticle() {
       <h3>Trusted Contacts</h3>
       <p>
         A trusted contact is someone you know and with whom you share a secret key (obviously different from your
-        vault&apos;s secret key). This secret key is stored in each of your respective vaults and is initially exchanged
+        vault’s secret key). This secret key is stored in each of your respective vaults and is initially exchanged
         according to the same secure principle as for device pairing.
       </p>
       <p>
@@ -485,8 +485,8 @@ function ENArticle() {
       <h3>Cloud storage</h3>
       <p>
         PRO vaults are designed in the opposite logic to PERSO vaults. The server acts as a single source of truth and
-        stores the user&apos;s encrypted vault. Although some information is transmitted to the server for monitoring
-        purposes, passwords and other secrets stored in the vault remain inaccessible without the user&apos;s master
+        stores the user’s encrypted vault. Although some information is transmitted to the server for monitoring
+        purposes, passwords and other secrets stored in the vault remain inaccessible without the user’s master
         password.
       </p>
       <p> Each vault is also associated with an email address so that its owner can be identified by administrators.</p>
@@ -567,7 +567,7 @@ function ENArticle() {
         If the master password is forgotten, the user requests the sending of a one-time code by email. This code allows
         the server to temporarily authenticate it and allow the encrypted backup of the master password to be sent to
         the application. The application can then decrypt this backup with its locally stored private key to recover the
-        user&apos;s master password and ask them to choose a new one.
+        user’s master password and ask them to choose a new one.
       </p>
       <p>
         If your phone is hacked, the thief could try to use the forgotten password function and check your emails which
@@ -596,8 +596,8 @@ function ENArticle() {
       </p>
       <p>
         To display the contents of a shared vault, the application retrieves the encrypted secret key from the server,
-        decrypts it with the user&apos;s private sharing key (retrieved from the user&apos;s main vault), and finally
-        uses it to decrypt the contents of the shared vault.
+        decrypts it with the user’s private sharing key (retrieved from the user’s main vault), and finally uses it to
+        decrypt the contents of the shared vault.
       </p>
 
       <h2 id="cryptoAlgo">Details of the cryptographic algorithms used</h2>
