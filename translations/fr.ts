@@ -630,6 +630,12 @@ const translations = {
       },
     },
   },
+  releaseNotes: {
+    app: "Application",
+    extension: "Extension de navigateur",
+    server: "Serveur PRO",
+    dashboard: "Console de supervision PRO",
+  },
 };
 
 export default translations;

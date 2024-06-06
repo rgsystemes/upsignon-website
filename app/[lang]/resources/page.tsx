@@ -31,11 +31,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         </li>
       </ul>
       <h2 className={styles.mainResourceTitle}>
-        <a
-          className={styles.link}
-          href="https://upsignon.notion.site/Notes-de-version-7b9253161210463083a638d116f40956?pvs=4"
-          target="_blank"
-        >
+        <a className={styles.link} href="/resources/release-notes/app">
           {t.resources.releaseNotes}
         </a>
       </h2>

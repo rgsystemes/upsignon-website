@@ -619,6 +619,13 @@ const translations: typeof fr = {
       },
     },
   },
+
+  releaseNotes: {
+    app: "Application",
+    extension: "Browser extension",
+    server: "PRO server",
+    dashboard: "PRO supervision console",
+  },
 };
 
 export default translations;
