@@ -1,0 +1,67 @@
+.article {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 20px 50px 20px;
+}
+
+.article h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.articleSummary {
+  margin-bottom: 30px;
+}
+
+.article h2 {
+  font-size: 1.8em;
+  margin: 50px 0 20px 0;
+}
+.article h3 {
+  font-size: 1.3em;
+  margin: 20px 0 10px 0;
+}
+.article p {
+  margin-bottom: 10px;
+}
+
+.figure {
+  margin: 20px 0 30px 0;
+}
+.figure figcaption {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.pwdCrackTable {
+  overflow-x: auto;
+}
+.pwdCrackTable table {
+  min-width: 800px;
+  border-collapse:separate;
+}
+.pwdCrackTable th {
+  font-size: 0.9em;
+  background-color: rgb(44, 83, 132);
+  color: white;
+  padding: 3px 7px;
+}
+.timeCell {
+  text-align: center;
+  padding: 3px;
+  color: white;
+}
+
+.pwdCrackTable thead tr:first-of-type th:first-of-type {
+  border-top-left-radius: 15px;
+}
+.pwdCrackTable thead tr:first-of-type th:last-of-type {
+  border-top-right-radius: 15px;
+}
+.pwdCrackTable tbody tr:last-of-type th:last-of-type {
+  border-bottom-left-radius: 15px;
+}
+.pwdCrackTable tbody tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 15px;
+}

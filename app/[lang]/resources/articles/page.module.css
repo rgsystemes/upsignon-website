@@ -1,0 +1,81 @@
+.content {
+  margin: auto;
+  padding: 20px 20px 50px 20px;
+  max-width: 1100px;
+}
+.content h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.gridList {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+}
+.articleLink {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  color: rgb(44, 83, 132);
+  text-decoration: none;
+  width: 100%;
+}
+.articleLink:hover {
+  position: relative;
+  top: -5px;
+  left: -5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 5px 10px 15px 0px;
+}
+.articleLink .miniature {
+  width: 100%;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.articleLink .miniature img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2560/1778;
+}
+.articleLink h2 {
+  padding: 10px;
+  font-size: 1.4em;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.articleLink p {
+  padding: 0 10px;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  flex: 1;
+}
+.articleLink .readButton {
+  display: block;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: normal;
+  text-decoration: underline;
+  align-self: flex-end;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+@media (max-width: 1024px){
+  .gridList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+@media (max-width: 767px){
+  .gridList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

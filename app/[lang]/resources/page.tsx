@@ -41,7 +41,11 @@ export default function Page({ params }: { params: { lang: string } }) {
         </a>
       </h2>
 
-      <h2 className={styles.mainResourceTitle}>{t.resources.articles}</h2>
+      <h2 className={styles.mainResourceTitle}>
+        <a className={styles.link} href="/resources/articles">
+          {t.resources.articles}
+        </a>
+      </h2>
     </div>
   );
 }

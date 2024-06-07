@@ -637,6 +637,59 @@ const translations = {
     server: "Serveur PRO",
     dashboard: "Console de supervision PRO",
   },
+  articles: {
+    pageTitle: "Nos articles",
+    readArticle: "lire l'article",
+    1: {
+      title: "Qu'est-ce qu'un mot de passe fort ?",
+      summary:
+        "Un mot de passe qui contient des caractères spéciaux ? Oui et non. C'est en fait sa taille qui compte le plus. Explications.",
+      instantly: "Instantanément",
+      day: "j",
+      month: "mois",
+      years: "ans",
+      mYears: "M d'années",
+      bYears: "Mrd d'années",
+    },
+    2: {
+      title: "Vous utilisez le même mot de passe partout ?",
+      summary: "Stop ! C'est vraiment une très mauvaise idée ! On vous explique pourquoi.",
+    },
+    3: {
+      title: "Pourquoi utiliser un gestionnaire de mots de passe ?",
+      summary: "L'argumentaire étoffé en faveur de l'utilisation d'un coffre-fort de mots de passe.",
+    },
+    4: {
+      title: "Zoom sur 4 conceptions de la sécurité informatique",
+      summary: "On entend souvent qu'aucun système n'est infaillible. Cela dépend de ce dont on parle...",
+    },
+    5: {
+      title: "MFA, 2FA, authentification forte : quelles différences ?",
+      summary: "Définitions et explications de ces concepts fondamentaux.",
+    },
+    6: {
+      title: "Comment détecter les sites web non sécurisés ?",
+      summary: "Guide pratique pour adopter les bons réflexes lorsque vous naviguez sur internet.",
+    },
+    7: {
+      title: "Vous pensez que vos données personnelles n'intéressent pas les hackers ?",
+      summary: "Voici pourquoi vos données valent de l'or pour eux.",
+    },
+    8: {
+      title: "Navigateur vs. coffre-fort de mots de passe dédié",
+      summary:
+        "Quel est l'intérêt d'utiliser un coffre-fort de mots de passe dédié alors que votre navigateur vous propose déjà un outil intégré ?",
+    },
+    9: {
+      title: "Développeurs : les fausses bonnes idées répandues sur les formulaires de connexion",
+      summary:
+        "Obliger l'utilisation de caractères spéciaux, limiter la longueur des mots de passe, forcer à changer de mot de passe régulièrement...",
+    },
+    10: {
+      title: "Cybermenaces, et si on parlait des mots de passe de vos collaborateurs ?",
+      summary: "Résumé des enjeux.",
+    },
+  },
 };
 
 export default translations;

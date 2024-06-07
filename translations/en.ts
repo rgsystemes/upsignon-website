@@ -627,6 +627,58 @@ const translations: typeof fr = {
     server: "PRO server",
     dashboard: "PRO supervision console",
   },
+  articles: {
+    pageTitle: "Our articles",
+    readArticle: "read article",
+    1: {
+      title: "What is a strong password?",
+      summary:
+        "A password that contains special characters? Yes and no. It's actually the size that matters most. Explanations.",
+      instantly: "Instantly",
+      day: "d",
+      month: "month",
+      years: "years",
+      mYears: "M years",
+      bYears: "Billion years",
+    },
+    2: {
+      title: "Are you using the same password everywhere?",
+      summary: "Stop! This is a really bad idea! We'll explain why.",
+    },
+    3: {
+      title: "Why use a password manager?",
+      summary: "The strong case for using a password vault.",
+    },
+    4: {
+      title: "Focus on 4 concepts of computer security",
+      summary: "We often hear that no system is infallible. It depends on what we're talking about...",
+    },
+    5: {
+      title: "MFA, 2FA, strong authentication: what are the differences?",
+      summary: "Definitions and explanations of these fundamental concepts.",
+    },
+    6: {
+      title: "How to detect insecure websites?",
+      summary: "Practical guide to adopting good reflexes when browsing the internet.",
+    },
+    7: {
+      title: "Do you think that your personal data is of no interest to hackers?",
+      summary: "Here's why your data is worth gold to them.",
+    },
+    8: {
+      title: "Browser vs. dedicated password vault",
+      summary: "What's the point of using a dedicated password vault when your browser already offers a built-in tool?",
+    },
+    9: {
+      title: "Developers: common misconceptions about login forms",
+      summary:
+        "Require the use of special characters, limit the length of passwords, force passwords to be changed regularly...",
+    },
+    10: {
+      title: "Cyber threats, what if we talked about your employees' passwords?",
+      summary: "Summary of the issues.",
+    },
+  },
 };
 
 export default translations;
