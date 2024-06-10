@@ -1,9 +1,14 @@
-.article {
+.content {
   max-width: 900px;
   margin: auto;
   padding: 20px 20px 50px 20px;
 }
-
+.content a:not(.buttonLink), .content .backArrow {
+  color: rgb(0, 171, 169);
+}
+.article {
+  margin: 20px 0 50px 0;
+}
 .article h1 {
   font-size: 2em;
   text-align: center;
@@ -11,6 +16,8 @@
 }
 .articleSummary {
   margin-bottom: 30px;
+  font-size: 1.4em;
+  color: rgb(0, 171, 169);
 }
 
 .article h2 {

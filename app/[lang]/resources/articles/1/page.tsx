@@ -4,13 +4,23 @@ import styles from "../article.module.css";
 export default function Article1({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
   return (
-    <article className={styles.article}>
-      <h1>{t.articles[1].title}</h1>
-      <p className={styles.articleSummary}>
-        <strong>{t.articles[1].summary}</strong>
-      </p>
-      {params.lang === "fr" ? <FRArticle /> : <ENArticle />}
-    </article>
+    <div className={styles.content}>
+      <div className={styles.backArrow}>
+        <span>&lt;  </span>
+        <a href="/resources/articles">{t.resources.articles}</a>
+      </div>
+      <article className={styles.article}>
+        <h1>{t.articles[1].title}</h1>
+        <p className={styles.articleSummary}>
+          <strong>{t.articles[1].summary}</strong>
+        </p>
+        {params.lang === "fr" ? <FRArticle /> : <ENArticle />}
+      </article>
+      <div className={styles.backArrow}>
+        <span>&lt;  </span>
+        <a href="/resources/articles">{t.resources.articles}</a>
+      </div>
+    </div>
   );
 }
 
