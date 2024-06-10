@@ -72,3 +72,9 @@
 .pwdCrackTable tbody tr:last-of-type td:last-of-type {
   border-bottom-right-radius: 15px;
 }
+
+.techNote {
+  padding: 20px;
+  border: 1px solid black;
+  background-color: rgb(245,245,245);
+}
