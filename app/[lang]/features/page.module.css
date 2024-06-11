@@ -21,6 +21,11 @@
   border: 3px solid white;
 }
 
+.link {
+  color: rgb(0,171,169);
+}
+
+
 .supervision_general_intro {
   margin-bottom: 20px;
 }

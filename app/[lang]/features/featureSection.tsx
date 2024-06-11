@@ -5,7 +5,6 @@ import styles from "./featureSection.module.css";
 import ProPersoTags from "./proPersoTags";
 import { ReactNode, useState } from "react";
 import { getDictionary } from "../../../translations/translations";
-import { colors } from "../../colors";
 
 type Props = {
   lang: string;

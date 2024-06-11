@@ -53,6 +53,7 @@ import userManagementImg from "../../../public/images/console_userManagement.png
 import cryptographyImg from "../../../public/images/cryptography.svg";
 import multiDeviceImg from "../../../public/images/multiDevice.svg";
 import syncImg from "../../../public/images/sync.svg";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Fonctionnalités",
@@ -136,7 +137,11 @@ export default function Page({ params }: { params: { lang: string } }) {
           details={t.features.passwordStrength.details}
           imageSrc={passwordScoresImg}
           imageAlt={t.features.passwordStrength.imageAlt}
-        />
+        >
+          <Link className={styles.link} href="/resources/articles/1">
+            {t.articles[1].title}
+          </Link>
+        </FeatureSection>
         <FeatureSection
           lang={params.lang}
           title={t.features.passwordGenerator.title}
