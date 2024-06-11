@@ -250,6 +250,7 @@
 .whiteSectionContentLarge {
   max-width: 1200px;
   padding: 30px;
+  margin: auto;
 }
 .forUserAdvantages, .forAdminAdvantages {
   display: flex;

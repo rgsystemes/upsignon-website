@@ -7,6 +7,8 @@ import Link from "next/link";
 import { getDictionary } from "../../translations/translations";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 export function NavBar(p: { lang: string }) {
   const [unfolded, setUnfolded] = useState(false);
@@ -49,13 +51,70 @@ export function NavBar(p: { lang: string }) {
         >
           {t.menu.downloads}
         </Link>
-        <Link
-          href="/resources"
-          className={`${styles.menuItem} ${pathName.includes("/resources") ? styles.currentMenu : null}`}
-        >
-          {t.menu.resources}
-        </Link>
+        <ResourceMenu lang={p.lang} isCurrentMenu={pathName.includes("/resources")} />
       </div>
     </nav>
+  );
+}
+
+function ResourceMenu(p: { lang: string; isCurrentMenu: boolean }) {
+  const t = getDictionary(p.lang);
+  const [folded, setFolded] = useState(true);
+  const wrapperRef = useRef(null);
+  const submenuRef = useRef(null);
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+        setFolded(true);
+      }
+    }
+    function handlePressEscape(event) {
+      if (event.key === "Escape") {
+        setFolded(true);
+      }
+    }
+    function mouseLeave() {
+      setFolded(true);
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handlePressEscape);
+    submenuRef.current.addEventListener("mouseleave", mouseLeave);
+    submenuRef.current.addEventListener("click", mouseLeave);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handlePressEscape);
+      submenuRef.current.removeEventListener("mouseleave", mouseLeave);
+      submenuRef.current.removeEventListener("click", mouseLeave);
+    };
+  }, [wrapperRef, submenuRef]);
+  return (
+    <div ref={wrapperRef} className={styles.menuOpener}>
+      <div
+        className={`${styles.menuItem} ${p.isCurrentMenu ? styles.currentMenu : null}  ${
+          !folded ? styles.focusedMenu : null
+        }`}
+        onClick={() => setFolded(!folded)}
+      >
+        {t.menu.resources}
+      </div>
+      <div className={folded ? null : styles.foldspacer}></div>
+      <div className={folded ? styles.hidden : styles.subMenu} ref={submenuRef}>
+        <Link className={styles.subMenuItem} href="/resources/articles">
+          {t.resources.articles}
+        </Link>
+        {/* <Link className={styles.subMenuItem} href="/resources/tutorials">
+          {t.resources.tutorials}
+        </Link> */}
+        <Link className={styles.subMenuItem} href="/resources/tech-articles">
+          {t.resources.technicalExplanations}
+        </Link>
+        <Link className={styles.subMenuItem} href="/resources/release-notes/app">
+          {t.resources.releaseNotes}
+        </Link>
+        <Link className={styles.subMenuItem} href="/resources/commitments">
+          {t.resources.contractualCommitments}
+        </Link>
+      </div>
+    </div>
   );
 }

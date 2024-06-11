@@ -60,7 +60,7 @@
 .menuItem:-webkit-any-link {
   color: white;
 }
-.menuItem:hover, .currentMenu {
+.menuItem:hover:not(.focusedMenu), .currentMenu {
   border-bottom: 4px solid rgb(0,171,169);
 }
 
@@ -98,5 +98,63 @@
     height: auto;
     padding: 0;
     margin: 0 10px;
+  }
+}
+
+.menuOpener {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+.hidden {
+  display: none;
+}
+.menuOpener .focusedMenu {
+  background-color: white;
+  color: rgb(44, 83, 132);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.subMenu {
+  display: block;
+  position: absolute;
+  background-color: white;
+  color: rgb(44, 83, 132);
+  right: 10px;
+  top: calc(100% - 10px);
+  padding: 10px;
+  width: 290px;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  cursor:default;
+}
+.foldspacer {
+  background-color: white;
+  position: absolute;
+  top: calc(100% - 20px);
+  right: 10px;
+  height: 10px;
+  width: calc(100% - 20px);
+}
+
+.subMenuItem {
+  display: block;
+  padding: 5px;
+  color: rgb(0,171,169);
+  text-decoration: none;
+  cursor: pointer;
+}
+.subMenuItem:hover {
+  background-color: #F0F4FA;
+  text-decoration: underline;
+}
+
+@media (max-width: 750px) {
+  .foldspacer {
+    height: 0;
+  }
+  .subMenu {
+    top: 100%;
   }
 }

@@ -76,7 +76,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         >
           <TechFocusLink
             title={t.features.proPerso.techFocusTitle}
-            href={"/resources/technical-details/pro-vs-perso"}
+            href={"/resources/tech-articles/pro-vs-perso"}
             lang={params.lang}
           />
         </FeatureSection>
@@ -386,7 +386,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         >
           <TechFocusLink
             title={t.features.offlineAcess.techFocusTitle}
-            href={"/resources/technical-details/pro-vs-perso"}
+            href={"/resources/tech-articles/pro-vs-perso"}
             lang={params.lang}
           />
         </FeatureSection>
@@ -408,7 +408,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         >
           <TechFocusLink
             title={t.techResources.protectedClipboardBehaviour.title}
-            href="/resources/technical-details/protected-clipboard-behaviour"
+            href="/resources/tech-articles/protected-clipboard-behaviour"
             lang={params.lang}
           />
         </FeatureSection>

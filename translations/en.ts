@@ -598,7 +598,7 @@ const translations: typeof fr = {
     onPremDoc: "Self-hosting : installation documentation",
     generalDesignPrinciples: "How the PERSO and PRO vaults work",
     releaseNotes: "Release notes",
-    articles: "Articles",
+    articles: "Blog",
     contractualCommitments: "Our contractual commitments",
   },
   techResources: {
@@ -628,7 +628,6 @@ const translations: typeof fr = {
     dashboard: "PRO supervision console",
   },
   articles: {
-    pageTitle: "Our articles",
     readArticle: "read article",
     1: {
       title: "What is a strong password?",

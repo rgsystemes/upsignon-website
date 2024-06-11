@@ -17,7 +17,7 @@ export default function ArticlesPage({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
   return (
     <section className={styles.content}>
-      <h1>{t.articles.pageTitle}</h1>
+      <h1>{t.resources.articles}</h1>
       <div className={styles.gridList}>
         <Article
           link="/resources/articles/1"

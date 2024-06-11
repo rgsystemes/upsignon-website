@@ -210,9 +210,9 @@ function FRArticle() {
         </div>
       </section>
       <section className={styles.greySection}>
-        <h1>
+        <h2>
           <span className={styles.green}>Pourquoi utiliser</span> un gestionnaire de mots de passe ?
-        </h1>
+        </h2>
         <p>
           Personne n’a envie de gérer des mots de passe. Ce n’est pas un but en soi. Le but est d’avoir des mots de
           passe forts et uniques sur chaque site web, et ça, c’est impossible sans outil. Un gestionnaire de mots de

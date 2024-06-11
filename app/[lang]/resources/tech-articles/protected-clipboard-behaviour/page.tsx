@@ -1,9 +1,10 @@
 import { getDictionary } from "../../../../../translations/translations";
+import styles from "../../page.module.css";
 
 export default function ProtectedClipboardBehaviour({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
   return (
-    <article>
+    <article className={styles.article}>
       <h1>{t.techResources.protectedClipboardBehaviour.title}</h1>
       <h2>iOS</h2>
       <p>{t.techResources.protectedClipboardBehaviour.ios}</p>

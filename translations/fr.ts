@@ -609,7 +609,7 @@ const translations = {
     onPremDoc: "Auto-hébergement : documentation d'installation",
     generalDesignPrinciples: "Principes de fonctionnement des coffres-forts PERSO et PRO",
     releaseNotes: "Notes de version",
-    articles: "Articles",
+    articles: "Blog",
     contractualCommitments: "Nos engagements contractuels",
   },
   techResources: {
@@ -638,7 +638,6 @@ const translations = {
     dashboard: "Console de supervision PRO",
   },
   articles: {
-    pageTitle: "Nos articles",
     readArticle: "lire l'article",
     1: {
       title: "Qu'est-ce qu'un mot de passe fort ?",
