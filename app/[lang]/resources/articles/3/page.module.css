@@ -1,0 +1,302 @@
+
+.content a:not(.buttonLink), .content .backArrow {
+  color: rgb(0, 171, 169);
+}
+.content p {
+  margin-bottom: 10px;
+}
+.content h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.content .backArrow {
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+}
+.headerImgContainer {
+  width: 50%;
+}
+.headerImg {
+  aspect-ratio: 2560/1778;
+  height: auto;
+  width: 100%;
+}
+.articleTitle {
+  font-size: 3em;
+  width: 50%;
+  padding: 20px;
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+  }
+  .headerImgContainer, .articleTitle {
+    width: 100%;
+  }
+  .headerImgContainer {
+    max-width: 400px;
+    margin: auto;
+  }
+  .articleTitle {
+    padding: 20px 0;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .articleTitle {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 600px) {
+  .articleTitle {
+    font-size: 2em;
+  }
+}
+
+.green {
+  color: rgb(0,171,169);
+}
+
+.whiteSection {
+  background-color: white;
+}
+.whiteSectionContent {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+.greySection {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+.col3 {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  margin: 20px 0;
+}
+.col3 > div {
+  flex-basis: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 10px;
+}
+.col3IlluContainer {
+  max-width: 120px;
+  font-size: 3em;
+  font-weight: bold;
+  color: rgb(0,171,169);
+}
+.col3IlluContainer img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+@media (max-width: 600px) {
+  .col3 {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+.pwdManagerSection {
+  background-image: url('../../../../../public/articles/utilisateurVuDeDessus.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+.pwdManageSectionBackgroundLayer {
+  background-color: rgba(37,38,75,0.8);
+  width: 100%;
+  height: 100%;
+}
+.pwdManagerContent {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+
+/* Quinconce */
+.quinconce3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
+  column-gap: 40px;
+  row-gap: 40px;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+.quinconceCard {
+  border-radius: 15px;
+  background-color: white;
+  padding: 20px;
+  color: rgb(38,46,90);
+  text-align: start;
+}
+.quinconceCard:nth-child(3n+2)  {
+  position: relative;
+  top: 100px;
+}
+.featuresCard {
+  background-color: rgb(38,46,90);
+  color: white;
+}
+.quinconceCard:not(.featuresCard) svg {
+  fill: rgb(0, 171, 169);
+}
+.quinconceCard p {
+  margin-top: 20px;
+}
+
+@media (max-width: 750px) {
+  .quinconce3col {
+    grid-template-columns: 1fr 1fr;
+  }
+  .quinconceCard:nth-child(3n+2) {
+    position: initial;
+    top: auto;
+  }
+  .quinconceCard:nth-child(even)  {
+    position: relative;
+    top: 100px;
+  }
+}
+@media (max-width: 500px) {
+  .quinconce3col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .quinconceCard {
+    width: 300px;
+  }
+  .quinconceCard:nth-child(even)  {
+    position: initial;
+    top: auto;
+    align-self: flex-end;
+  }
+}
+
+
+.greenCard {
+  background-color: rgb(0, 171, 169);
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  padding: 20px;
+  margin: 30px 0;
+}
+
+.greenCard > div {
+  flex-basis: 50%;
+}
+
+.greenCardNumbersContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.greenCardNumber {
+  color: rgb(38,46,90);
+}
+.greenCardNumber > div:first-child {
+  font-size: 3em;
+  font-weight: 800;
+}
+@media (max-width: 750px) {
+  .greenCard {
+    flex-direction: column;
+  }
+}
+@media (max-width:500px) {
+  .greenCardNumbersContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.checkTickParagraph {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  column-gap: 20px;
+}
+.tick {
+  height: 40px;
+  width: 40px;
+}
+
+
+.whiteSectionContentLarge {
+  max-width: 1200px;
+  padding: 30px;
+}
+.forUserAdvantages, .forAdminAdvantages {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 30px;
+}
+.greenSectionCard {
+  background-color: rgb(0, 171, 169);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 550px;
+  flex-shrink: 0;
+}
+.greenSectionCard h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.forUserIlluContainer {
+  overflow: hidden;
+}
+.forUserIlluContainer img {
+  width: 110%;
+  max-width: none;
+  height: auto;
+}
+.forAdminAdvantages {
+  flex-direction: row-reverse;
+}
+.forAdminAdvantages .forUserIlluContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 1000px) {
+  .forUserAdvantages, .forAdminAdvantages {
+    flex-direction: column;
+  }
+  .forUserIlluContainer img {
+    max-width: 100%;
+    max-height: none;
+    width: auto;
+    position: relative;
+    top: 3px;
+  }
+  .greenSectionCard {
+    width: 100%;
+  }
+}
