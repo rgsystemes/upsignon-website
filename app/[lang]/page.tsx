@@ -11,6 +11,7 @@ import CustomerCarousel from "./customerCarousel";
 import SingleAdvantage from "./singleAdvantage";
 import Link from "next/link";
 import { ContactLaterButton } from "./contact-later/contactLaterButton";
+import { FreeTrialButton } from "./free-trial/freeTrial";
 
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
@@ -101,6 +102,7 @@ export default function Page({ params }: { params: { lang: string } }) {
           <VimeoPlayer videoId="915105612" title={t.pitch.demo.persoVideoTitle} className={styles.demoVideo} />
           <h2>{t.pitch.demo.pro}</h2>
           <VimeoPlayer videoId="915105612" title={t.pitch.demo.proVideoTitle} className={styles.demoVideo} />
+          <FreeTrialButton lang={params.lang} />
         </div>
       </section>
       <section className={styles.securityByDesignSection}>

@@ -3,10 +3,10 @@
 import { useState } from "react";
 import Modal from "react-modal";
 import { getDictionary } from "../../../translations/translations";
-import styles from "./contactLaterButton.module.css";
+import styles from "./freeTrial.module.css";
 
 Modal.setAppElement("#body");
-export function ContactLaterButton(p: { lang: string }) {
+export function FreeTrialButton(p: { lang: string }) {
   const [isOpen, setIsOpen] = useState(false);
   function openModal() {
     setIsOpen(true);
@@ -20,58 +20,56 @@ export function ContactLaterButton(p: { lang: string }) {
   return (
     <>
       <button onClick={openModal} className={styles.actionButton}>
-        {t.actions.callMeBackLater}
+        {t.actions.freeTrial}
       </button>
       <Modal
         isOpen={isOpen}
         onRequestClose={closeModal}
-        contentLabel={t.actions.callMeBackLater}
+        contentLabel={t.actions.freeTrial}
         preventScroll
         shouldReturnFocusAfterClose={false}
         className={styles.modal}
       >
-        <ContactLaterForm lang={p.lang} onRequestClose={closeModal} />
+        <FreeTrialForm lang={p.lang} onRequestClose={closeModal} />
       </Modal>
     </>
   );
 }
 
-function ContactLaterForm(p: { lang: string; onRequestClose: () => void }) {
+function FreeTrialForm(p: { lang: string; onRequestClose: () => void }) {
   const t = getDictionary(p.lang);
   function submit(ev) {
     ev.preventDefault();
     const name = ev.target[0].value;
     const company = ev.target[1].value;
-    const email = ev.target[2].value;
-    const tel = ev.target[3].value;
-    const date = ev.target[4].value;
-    const subject = t.callBackForm.mailSubject;
-    const body = t.callBackForm.mailBody
-      .replaceAll("$info", `${name}\n${company}\n${email}\n${tel}`)
-      .replaceAll("$date", date);
+    const siret = ev.target[2].value;
+    const email = ev.target[3].value;
+    const tel = ev.target[4].value;
+    const subject = t.freeTrialForm.mailSubject;
+    const body = t.freeTrialForm.mailBody.replaceAll("$info", `${name}\n${company}\nSIRET:${siret}\n${email}\n${tel}`);
     window.open(`mailto:contact@upsignon.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
     p.onRequestClose();
   }
   return (
     <div className={styles.modalContent}>
-      <h1>{t.actions.callMeBackLater}</h1>
+      <h1>{t.actions.freeTrial}</h1>
       <form onSubmit={submit} className={styles.form}>
-        <label htmlFor="name">{t.callBackForm.nameLabel}</label>
+        <label htmlFor="name">{t.freeTrialForm.nameLabel}</label>
         <input type="text" id="name" name="name" required />
 
-        <label htmlFor="company">{t.callBackForm.companyLabel}</label>
+        <label htmlFor="company">{t.freeTrialForm.companyLabel}</label>
         <input type="text" id="company" name="company" required />
 
-        <label htmlFor="email">{t.callBackForm.emailLabel}</label>
+        <label htmlFor="siret">{t.freeTrialForm.siret}</label>
+        <input type="text" id="siret" name="siret" required />
+
+        <label htmlFor="email">{t.freeTrialForm.emailLabel}</label>
         <input type="text" id="email" name="email" required />
 
-        <label htmlFor="tel">{t.callBackForm.telLabel}</label>
+        <label htmlFor="tel">{t.freeTrialForm.telLabel}</label>
         <input type="tel" id="tel" name="tel" required />
 
-        <label htmlFor="date">{t.callBackForm.callbackDate}</label>
-        <input type="text" id="date" name="date" required />
-
-        <input type="submit" value={t.callBackForm.submit} />
+        <input type="submit" value={t.freeTrialForm.submit} />
       </form>
       <button onClick={p.onRequestClose} className={styles.cancelButton}>
         {t.actions.cancel}

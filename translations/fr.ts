@@ -9,6 +9,7 @@ const translations = {
     contacUs: "Parlons-en !",
     callMeBackLater: "Être recontacté plus tard",
     cancel: "Annuler",
+    freeTrial: "Tester 1 mois gratuitement",
   },
   callBackForm: {
     nameLabel: "Votre nom",
@@ -16,9 +17,20 @@ const translations = {
     emailLabel: "Adresse email",
     telLabel: "Numéro de téléphone",
     callbackDate: "Quand voulez-vous être recontacté ?",
-    submit: "Valider",
+    submit: "Envoyer",
     mailSubject: "Merci de me contacter plus tard",
     mailBody: "Bonjour,\nVoici mes coordonnées pour être recontacté $date.\n\n$info\n\nCordialement,",
+  },
+  freeTrialForm: {
+    nameLabel: "Votre nom",
+    companyLabel: "Nom de votre organisation",
+    siret: "SIRET",
+    emailLabel: "Adresse email",
+    telLabel: "Numéro de téléphone",
+    submit: "Envoyer",
+    mailSubject: "Demande de test",
+    mailBody:
+      "Bonjour,\nJe souhaite pouvoir tester UpSignOn PRO pendant 1 mois. Voici les informations demandées :\n\n$info\n\nCordialement,",
   },
   footer: {
     nav: {

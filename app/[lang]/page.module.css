@@ -163,6 +163,10 @@
 .demoSection {
   color: white;
   padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .demoSectionContent {
   max-width: 900px;

@@ -11,6 +11,7 @@ const translations: typeof fr = {
     contacUs: "Let's talk about it!",
     callMeBackLater: "Be contacted later",
     cancel: "Cancel",
+    freeTrial: "Tester 1 mois gratuitement",
   },
   callBackForm: {
     nameLabel: "Your name",
@@ -18,9 +19,20 @@ const translations: typeof fr = {
     emailLabel: "Email adress",
     telLabel: "Phone number",
     callbackDate: "When do you wish to be contacted?",
-    submit: "Submit",
+    submit: "Send",
     mailSubject: "Please call me back later",
     mailBody: "Hello,\nPlease find below my contact details for being called back $date.\n\n$info\n\nRegards,",
+  },
+  freeTrialForm: {
+    nameLabel: "Your name",
+    companyLabel: "Name of your organisation",
+    siret: "SIRET",
+    emailLabel: "Email adress",
+    telLabel: "Phone number",
+    submit: "Send",
+    mailSubject: "Trial request",
+    mailBody:
+      "Hello,\nI would like to test UpSignOn PRO for a month. Here is the required information :\n\n$info\n\nRegards,",
   },
   footer: {
     nav: {
