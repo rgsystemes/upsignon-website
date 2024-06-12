@@ -10,8 +10,9 @@ import VimeoPlayer from "./vimeoPlayer";
 import CustomerCarousel from "./customerCarousel";
 import SingleAdvantage from "./singleAdvantage";
 import Link from "next/link";
-import { ContactLaterButton } from "./contact-later/contactLaterButton";
-import { FreeTrialButton } from "./free-trial/freeTrial";
+import { ContactLaterButton } from "./contactLaterButton/contactLaterButton";
+import { FreeTrialButton } from "./freeTrialButton/freeTrial";
+import { ContactUsButton } from "./contactUsButton/contactUsButton";
 
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
@@ -44,6 +45,11 @@ export default function Page({ params }: { params: { lang: string } }) {
             <div>{t.pitch.crossPlatform}</div>
           </div>
         </section>
+        <div className={styles.actionContainer}>
+          <ContactUsButton lang={params.lang} className={styles.actionLinkOnBlue} />
+          <ContactLaterButton lang={params.lang} className={styles.actionLinkOnBlue} />
+          <FreeTrialButton lang={params.lang} className={styles.actionLinkOnBlue} />
+        </div>
       </div>
       <section className={styles.keyMetricsSection}>
         <div className={styles.keyMetricsSectionContent}>
@@ -88,10 +94,11 @@ export default function Page({ params }: { params: { lang: string } }) {
           <p>{t.pitch.proVsPerso.pro.p1}</p>
           <p>{t.pitch.proVsPerso.pro.p2}</p>
           <div className={styles.actionContainer}>
-            <Link href="mailto:contact@upsignon.eu" className={styles.actionLink}>
-              {t.actions.contacUs}
-            </Link>
-            <ContactLaterButton lang={params.lang} />
+            <div className={styles.actionContainer}>
+              <ContactUsButton lang={params.lang} className={styles.actionLinkOnWhite} />
+              <ContactLaterButton lang={params.lang} className={styles.actionLinkOnWhite} />
+              <FreeTrialButton lang={params.lang} className={styles.actionLinkOnWhite} />
+            </div>
           </div>
         </div>
       </section>
@@ -102,7 +109,11 @@ export default function Page({ params }: { params: { lang: string } }) {
           <VimeoPlayer videoId="915105612" title={t.pitch.demo.persoVideoTitle} className={styles.demoVideo} />
           <h2>{t.pitch.demo.pro}</h2>
           <VimeoPlayer videoId="915105612" title={t.pitch.demo.proVideoTitle} className={styles.demoVideo} />
-          <FreeTrialButton lang={params.lang} />
+          <div className={styles.actionContainer}>
+            <ContactUsButton lang={params.lang} className={styles.actionLinkOnGreen} />
+            <ContactLaterButton lang={params.lang} className={styles.actionLinkOnGreen} />
+            <FreeTrialButton lang={params.lang} className={styles.actionLinkOnGreen} />
+          </div>
         </div>
       </section>
       <section className={styles.securityByDesignSection}>

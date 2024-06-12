@@ -223,14 +223,24 @@
   align-items: center;
   justify-content: center;
   column-gap: 20px;
+  padding-bottom: 30px;
 }
-.actionLink {
+.actionLinkOnBlue, .actionLinkOnWhite, .actionLinkOnGreen {
+  background: none;
+  border: none;
   display: block;
   padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.actionLinkOnBlue:hover, .actionLinkOnWhite:hover, .actionLinkOnGreen:hover {
+  text-decoration: underline;
+}
+.actionLinkOnBlue, .actionLinkOnGreen {
+  border: 3px solid white;
+  color: white;
+}
+.actionLinkOnWhite {
   border: 3px solid rgb(0, 171, 169);
   color: rgb(44, 83, 132);
-  text-decoration: none;
-}
-.actionLink:hover {
-  text-decoration: underline;
 }

@@ -1,6 +1,6 @@
 import { getDictionary } from "../../../translations/translations";
-import { ContactLaterButton } from "../contact-later/contactLaterButton";
-import { FreeTrialButton } from "../free-trial/freeTrial";
+import { ContactLaterButton } from "../contactLaterButton/contactLaterButton";
+import { FreeTrialButton } from "../freeTrialButton/freeTrial";
 import styles from "./page.module.css";
 
 export default function Page({ params }: { params: { lang: string } }) {

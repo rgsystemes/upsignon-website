@@ -54,6 +54,7 @@ import cryptographyImg from "../../../public/images/cryptography.svg";
 import multiDeviceImg from "../../../public/images/multiDevice.svg";
 import syncImg from "../../../public/images/sync.svg";
 import Link from "next/link";
+import { ContactUsButton } from "../contactUsButton/contactUsButton";
 
 export const metadata: Metadata = {
   title: "Fonctionnalités",
@@ -65,6 +66,10 @@ export default function Page({ params }: { params: { lang: string } }) {
     <div className={styles.page}>
       <div className={styles.content}>
         <h1>{t.features.pageTitle}</h1>
+        <div className={styles.actionContainer}>
+          <p>{t.features.questions}</p>
+          <ContactUsButton lang={params.lang} className={styles.contactAction} />
+        </div>
         <h2 className={styles.feature_family_title}>{t.features.generalSubtitle}</h2>
         <FeatureSection
           lang={params.lang}

@@ -6,7 +6,7 @@ import { getDictionary } from "../../../translations/translations";
 import styles from "./contactLaterButton.module.css";
 
 Modal.setAppElement("#body");
-export function ContactLaterButton(p: { lang: string; className?: string | null }) {
+export function ContactLaterButton(p: { lang: string; className: string }) {
   const [isOpen, setIsOpen] = useState(false);
   function openModal() {
     setIsOpen(true);
@@ -19,7 +19,7 @@ export function ContactLaterButton(p: { lang: string; className?: string | null 
 
   return (
     <>
-      <button onClick={openModal} className={p.className ?? styles.actionButton}>
+      <button onClick={openModal} className={p.className}>
         {t.actions.callMeBackLater}
       </button>
       <Modal

@@ -40,3 +40,27 @@
     margin-bottom: 10px;
   }
 }
+
+.actionContainer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+.contactAction {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 3px solid white;
+  color: white;
+}
+.contactAction:hover {
+  text-decoration: underline;
+}

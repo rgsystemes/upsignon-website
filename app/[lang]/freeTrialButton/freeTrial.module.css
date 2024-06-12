@@ -1,0 +1,65 @@
+.modal {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -0%;
+  transform: translate(-50%, 0);
+  max-height: calc(100% - 140px);
+  border: 2px solid rgb(44, 83, 132);
+  background: #fff;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 5px;
+  outline: none;
+  padding: 20px;
+}
+
+.modalContent {
+  text-align: center;
+  padding: 30px 20px;
+  width: 100%;
+}
+.form {
+  margin: 30px 0;
+}
+.form label, .form input {
+  display: block;
+  margin: auto;
+  min-width: 300px;
+}
+.form input {
+  margin-bottom: 20px;
+}
+.form label::after {
+  content: '*';
+  color: red;
+}
+.form input[type="submit"] {
+  margin-top: 40px;
+}
+.cancelButton {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  color: rgb(44, 83, 132);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+@media (max-width: 750px) {
+  .modal {
+    top: 60px;
+    max-height: calc(100% - 80px);
+    padding: 10px;
+  }
+  .modalContent {
+    padding: 10px 10px;
+  }
+  .form label, .form input {
+    min-width: none;
+    width: 100%;
+  }
+}

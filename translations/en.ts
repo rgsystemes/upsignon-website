@@ -8,9 +8,10 @@ const translations: typeof fr = {
     resources: "Resources",
   },
   actions: {
-    contacUs: "Let's talk about it!",
+    contactUs: "Let's talk about it!",
     callMeBackLater: "Be contacted later",
     cancel: "Cancel",
+    close: "Close",
     freeTrial: "Tester 1 mois gratuitement",
   },
   callBackForm: {
@@ -178,6 +179,7 @@ const translations: typeof fr = {
   },
   features: {
     pageTitle: "Features",
+    questions: "A question? A specific need?",
     tags: {
       pro: "PRO",
       perso: "PERSO",

@@ -6,9 +6,10 @@ const translations = {
     resources: "Ressources",
   },
   actions: {
-    contacUs: "Parlons-en !",
+    contactUs: "Parlons-en !",
     callMeBackLater: "Être recontacté plus tard",
     cancel: "Annuler",
+    close: "Fermer",
     freeTrial: "Tester 1 mois gratuitement",
   },
   callBackForm: {
@@ -176,6 +177,7 @@ const translations = {
   },
   features: {
     pageTitle: "Fonctionnalités",
+    questions: "Une question ? Un besoin spécifique ?",
     tags: {
       pro: "PRO",
       perso: "PERSO",
