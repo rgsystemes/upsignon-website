@@ -52,6 +52,9 @@ function ContactUsForm(p: { lang: string; onRequestClose: () => void }) {
       <Link href="tel:+33659290624" className={styles.link}>
         +33 6 59 29 06 24
       </Link>
+      <Link href="https://calendly.com/upsignon" className={styles.link}>
+        {t.actions.calendarLink}
+      </Link>
       <button onClick={p.onRequestClose} className={styles.closeButton}>
         {t.actions.close}
       </button>

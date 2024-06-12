@@ -13,6 +13,7 @@ const translations: typeof fr = {
     cancel: "Cancel",
     close: "Close",
     freeTrial: "Tester 1 mois gratuitement",
+    calendarLink: "Book a slot in my calendar",
   },
   callBackForm: {
     nameLabel: "Your name",

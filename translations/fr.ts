@@ -11,6 +11,7 @@ const translations = {
     cancel: "Annuler",
     close: "Fermer",
     freeTrial: "Tester 1 mois gratuitement",
+    calendarLink: "Réserver un créneau dans mon agenda",
   },
   callBackForm: {
     nameLabel: "Votre nom",
