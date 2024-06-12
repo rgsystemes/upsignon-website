@@ -18,7 +18,8 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: string } }) {
   return (
     <html lang={params.lang} className={fontClass.className}>
-      <body>
+      {/* set an id for Modal accessibility */}
+      <body id="body">
         <NavBar lang={params.lang} />
         <main>{children}</main>
         <Footer lang={params.lang} />

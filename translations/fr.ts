@@ -8,6 +8,7 @@ const translations = {
   actions: {
     contacUs: "Parlons-en !",
     callMeBackLater: "Être recontacté plus tard",
+    cancel: "Annuler",
   },
   callBackForm: {
     nameLabel: "Votre nom",

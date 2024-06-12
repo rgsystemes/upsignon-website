@@ -10,6 +10,7 @@ import VimeoPlayer from "./vimeoPlayer";
 import CustomerCarousel from "./customerCarousel";
 import SingleAdvantage from "./singleAdvantage";
 import Link from "next/link";
+import { ContactLaterButton } from "./contact-later/contactLaterButton";
 
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
@@ -89,9 +90,7 @@ export default function Page({ params }: { params: { lang: string } }) {
             <Link href="mailto:contact@upsignon.eu" className={styles.actionLink}>
               {t.actions.contacUs}
             </Link>
-            <Link href="/contact-later" className={styles.actionLink}>
-              {t.actions.callMeBackLater}
-            </Link>
+            <ContactLaterButton lang={params.lang} />
           </div>
         </div>
       </section>

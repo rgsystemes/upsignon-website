@@ -10,6 +10,7 @@ const translations: typeof fr = {
   actions: {
     contacUs: "Let's talk about it!",
     callMeBackLater: "Be contacted later",
+    cancel: "Cancel",
   },
   callBackForm: {
     nameLabel: "Your name",
