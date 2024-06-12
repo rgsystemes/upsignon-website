@@ -1,4 +1,6 @@
 import { getDictionary } from "../../../translations/translations";
+import { ContactLaterButton } from "../contact-later/contactLaterButton";
+import { FreeTrialButton } from "../free-trial/freeTrial";
 import styles from "./page.module.css";
 
 export default function Page({ params }: { params: { lang: string } }) {
@@ -25,9 +27,8 @@ export default function Page({ params }: { params: { lang: string } }) {
           <div className={styles.priceDetail}>{t.pricing.proPricing.licenceOver12000}</div>
           <div className={styles.priceDetail}>{t.pricing.proPricing.licence3YearsReduction}</div>
           <div className={styles.selfHostingTitle}>{t.pricing.proPricing.onPremOption}</div>
-          {/* TODO implement call to Action */}
-          <div className={styles.proPricingTestButton}>{t.pricing.proPricing.test1month}</div>
-          <div className={styles.proPricingCallLater}>{t.pricing.proPricing.beContactedLater}</div>
+          <FreeTrialButton lang={params.lang} className={styles.proPricingActionButton} />
+          <ContactLaterButton lang={params.lang} className={styles.proPricingActionButton} />
 
           <div className={styles.pricingDetails}>{t.pricing.proPricing.saasDetails}</div>
           <div className={styles.pricingDetails}>{t.pricing.proPricing.onPremDetails}</div>

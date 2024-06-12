@@ -187,7 +187,7 @@ export default function Page({ params }: { params: { lang: string } }) {
           imageSrc={totpImg}
           imageAlt={t.features.totp.imageAlt}
         >
-          <div>Comment configurer un TOTP dans UpSignOn ?</div>
+          {/* <div>Comment configurer un TOTP dans UpSignOn ?</div> */}
           {/* TODO */}
         </FeatureSection>
         <FeatureSection

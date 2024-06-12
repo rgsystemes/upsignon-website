@@ -164,8 +164,6 @@ const translations: typeof fr = {
       onPremOption: "Self hosting option: 1.000€ / year",
       onPremDetails:
         "The self-hosting package covers technical support costs and is independent of the number of licences.",
-      test1month: "Test 1 month for free",
-      beContactedLater: "Be contacted later",
     },
     distribTitle: "Are you a reseller?",
     distribDetails: "We have a win-win deal for you. Please contact us!",
