@@ -17,8 +17,8 @@ const translations = {
     telLabel: "Numéro de téléphone",
     callbackDate: "Quand voulez-vous être recontacté ?",
     submit: "Valider",
-    success: "Bien noté, nous vous recontacterons plus tard. Bonne journée !",
-    fail: "Mmmh... nous avons un problème. Pouvez-vous réessayer dans quelques secondes ?",
+    mailSubject: "Merci de me contacter plus tard",
+    mailBody: "Bonjour,\nVoici mes coordonnées pour être recontacté $date.\n\n$info\n\nCordialement,",
   },
   footer: {
     nav: {

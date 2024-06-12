@@ -19,8 +19,8 @@ const translations: typeof fr = {
     telLabel: "Phone number",
     callbackDate: "When do you wish to be contacted?",
     submit: "Submit",
-    success: "Noted, we'll get back to you later. Have a good day!",
-    fail: "Mmmh... we've got a problem. Can you try again in a few seconds?",
+    mailSubject: "Please call me back later",
+    mailBody: "Hello,\nPlease find below my contact details for being called back $date.\n\n$info\n\nRegards,",
   },
   footer: {
     nav: {

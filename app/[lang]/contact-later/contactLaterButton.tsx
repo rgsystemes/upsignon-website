@@ -40,29 +40,17 @@ function ContactLaterForm(p: { lang: string; onRequestClose: () => void }) {
   const t = getDictionary(p.lang);
   function submit(ev) {
     ev.preventDefault();
-    var req = new XMLHttpRequest();
-    req.open("POST", "https://app.upsignon.eu/contact-later", true);
-    req.setRequestHeader("Content-Type", "application/json");
-    req.onreadystatechange = function () {
-      if (req.readyState === 4) {
-        if (req.status === 200) {
-          ev.target.reset();
-          alert(t.callBackForm.success);
-          p.onRequestClose();
-        } else {
-          alert(t.callBackForm.fail);
-        }
-      }
-    };
-    req.send(
-      JSON.stringify({
-        name: ev.target[0].value,
-        company: ev.target[1].value,
-        email: ev.target[2].value,
-        tel: ev.target[3].value,
-        date: ev.target[4].value,
-      })
-    );
+    const name = ev.target[0].value;
+    const company = ev.target[1].value;
+    const email = ev.target[2].value;
+    const tel = ev.target[3].value;
+    const date = ev.target[4].value;
+    const subject = t.callBackForm.mailSubject;
+    const body = t.callBackForm.mailBody
+      .replaceAll("$info", `${name}\n${company}\n${email}\n${tel}`)
+      .replaceAll("$date", date);
+    window.open(`mailto:contact@upsignon.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
+    p.onRequestClose();
   }
   return (
     <div className={styles.modalContent}>
