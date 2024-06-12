@@ -7,6 +7,20 @@ const translations: typeof fr = {
     downloads: "Downloads",
     resources: "Resources",
   },
+  actions: {
+    contacUs: "Let's talk about it!",
+    callMeBackLater: "Be contacted later",
+  },
+  callBackForm: {
+    nameLabel: "Your name",
+    companyLabel: "Name of your organisation",
+    emailLabel: "Email adress",
+    telLabel: "Phone number",
+    callbackDate: "When do you wish to be contacted?",
+    submit: "Submit",
+    success: "Noted, we'll get back to you later. Have a good day!",
+    fail: "Mmmh... we've got a problem. Can you try again in a few seconds?",
+  },
   footer: {
     nav: {
       t: "Quick links",

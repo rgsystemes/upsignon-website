@@ -211,3 +211,22 @@
   margin: auto;
   padding: 0 20px;
 }
+
+
+/* ACTION LINK */
+.actionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+.actionLink {
+  display: block;
+  padding: 10px 20px;
+  border: 3px solid rgb(0, 171, 169);
+  color: rgb(44, 83, 132);
+  text-decoration: none;
+}
+.actionLink:hover {
+  text-decoration: underline;
+}

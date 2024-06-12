@@ -5,6 +5,20 @@ const translations = {
     downloads: "Téléchargements",
     resources: "Ressources",
   },
+  actions: {
+    contacUs: "Parlons-en !",
+    callMeBackLater: "Être recontacté plus tard",
+  },
+  callBackForm: {
+    nameLabel: "Votre nom",
+    companyLabel: "Nom de votre organisation",
+    emailLabel: "Adresse email",
+    telLabel: "Numéro de téléphone",
+    callbackDate: "Quand voulez-vous être recontacté ?",
+    submit: "Valider",
+    success: "Bien noté, nous vous recontacterons plus tard. Bonne journée !",
+    fail: "Mmmh... nous avons un problème. Pouvez-vous réessayer dans quelques secondes ?",
+  },
   footer: {
     nav: {
       t: "Liens rapides",

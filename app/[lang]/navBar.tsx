@@ -83,8 +83,8 @@ function ResourceMenu(p: { lang: string; isCurrentMenu: boolean }) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handlePressEscape);
-      submenuRef.current.removeEventListener("mouseleave", mouseLeave);
-      submenuRef.current.removeEventListener("click", mouseLeave);
+      // submenuRef.current.removeEventListener("mouseleave", mouseLeave);
+      // submenuRef.current.removeEventListener("click", mouseLeave);
     };
   }, [wrapperRef, submenuRef]);
   return (

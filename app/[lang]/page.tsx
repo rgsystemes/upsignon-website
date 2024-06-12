@@ -9,6 +9,7 @@ import cryptographyImg from "../../public/images/cryptography.svg";
 import VimeoPlayer from "./vimeoPlayer";
 import CustomerCarousel from "./customerCarousel";
 import SingleAdvantage from "./singleAdvantage";
+import Link from "next/link";
 
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
@@ -84,6 +85,14 @@ export default function Page({ params }: { params: { lang: string } }) {
           </h2>
           <p>{t.pitch.proVsPerso.pro.p1}</p>
           <p>{t.pitch.proVsPerso.pro.p2}</p>
+          <div className={styles.actionContainer}>
+            <Link href="mailto:contact@upsignon.eu" className={styles.actionLink}>
+              {t.actions.contacUs}
+            </Link>
+            <Link href="/contact-later" className={styles.actionLink}>
+              {t.actions.callMeBackLater}
+            </Link>
+          </div>
         </div>
       </section>
       <section className={`${styles.demoSection} ${styles.greenBackground}`}>
