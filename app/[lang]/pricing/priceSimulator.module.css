@@ -1,0 +1,49 @@
+input[type=number].licenceInput::-webkit-inner-spin-button,
+input[type=number].licenceInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.simulatorContainer {
+  margin-bottom: 120px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  overflow-x: scroll;
+}
+
+.simulatorTable td, .simulatorTable th {
+  text-align: center;
+  padding: 10px;
+}
+.simulatorTable {
+  border-collapse: collapse;
+  margin-top: 30px;
+  border-bottom: 1px solid #ddd;
+  min-width: 800px;
+}
+
+.simulatorTable tr {
+  border-top: 1px solid #ddd
+}
+.licenceInput {
+  margin-left: 10px;
+  width: 120px;
+}
+.selfHostingCheckbox, .years3Checkbox {
+  margin-left: 10px;
+}
+.grandTotal {
+  background-color: rgb(44, 83, 132);
+  color: white;
+}
+
+.simulatorTable td:first-child, .simulatorTable th:first-child {
+  text-align: left;
+  width: 150px;
+}
+
+.cashPayment {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 10px 0;
+}

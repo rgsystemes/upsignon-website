@@ -2,6 +2,7 @@ import { getDictionary } from "../../../translations/translations";
 import { ContactLaterButton } from "../contactLaterButton/contactLaterButton";
 import { FreeTrialButton } from "../freeTrialButton/freeTrial";
 import styles from "./page.module.css";
+import { PriceSimulator } from "./priceSimulator";
 
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
@@ -34,7 +35,7 @@ export default function Page({ params }: { params: { lang: string } }) {
           <div className={styles.pricingDetails}>{t.pricing.proPricing.onPremDetails}</div>
         </div>
       </div>
-
+      <PriceSimulator lang={params.lang} />
       <h1>{t.pricing.distribTitle}</h1>
       <p className={styles.distribDetails}>{t.pricing.distribDetails}</p>
     </div>

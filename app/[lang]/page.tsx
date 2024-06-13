@@ -9,7 +9,6 @@ import cryptographyImg from "../../public/images/cryptography.svg";
 import VimeoPlayer from "./vimeoPlayer";
 import CustomerCarousel from "./customerCarousel";
 import SingleAdvantage from "./singleAdvantage";
-import Link from "next/link";
 import { ContactLaterButton } from "./contactLaterButton/contactLaterButton";
 import { FreeTrialButton } from "./freeTrialButton/freeTrial";
 import { ContactUsButton } from "./contactUsButton/contactUsButton";
@@ -46,7 +45,6 @@ export default function Page({ params }: { params: { lang: string } }) {
           </div>
         </section>
         <div className={styles.actionContainer}>
-          <ContactUsButton lang={params.lang} className={styles.actionLinkOnBlue} />
           <ContactLaterButton lang={params.lang} className={styles.actionLinkOnBlue} />
           <FreeTrialButton lang={params.lang} className={styles.actionLinkOnBlue} />
         </div>

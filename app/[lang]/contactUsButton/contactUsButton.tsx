@@ -46,13 +46,13 @@ function ContactUsForm(p: { lang: string; onRequestClose: () => void }) {
       <h1>{t.actions.contactUs}</h1>
       <Image src={plpImg} alt="" className={styles.photo} />
       <div>Pierre-Loïc</div>
-      <Link href="mailto:contact@upsignon.eu" className={styles.link}>
+      <Link href="mailto:pierreloic.poirieux@upsignon.eu" className={styles.link}>
         pierreloic.poirieux@upsignon.eu
       </Link>
       <Link href="tel:+33659290624" className={styles.link}>
         +33 6 59 29 06 24
       </Link>
-      <Link href="https://calendly.com/upsignon" className={styles.link}>
+      <Link href="https://calendly.com/upsignon" className={styles.link} target="_blank">
         {t.actions.calendarLink}
       </Link>
       <button onClick={p.onRequestClose} className={styles.closeButton}>
