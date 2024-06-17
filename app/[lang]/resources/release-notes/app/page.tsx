@@ -11,6 +11,22 @@ export default function AppNotes({ params }: { params: { lang: string } }) {
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.8.0 */}
+      <h2>7.8.0</h2>
+      <p>
+        <em>Publiée le 17/06/2024</em>
+      </p>
+      <strong>Changement cassant</strong>
+      <ul>
+        <li>fin de compatibilité avec la v5 : la migration des données depuis la v5 n’est plus disponible.</li>
+      </ul>
+      <strong>Correctifs</strong>
+      <ul>
+        <li>
+          correction d’un problème empêchant l’ajout d’un compte depuis l’extension de navigateur lorsque le coffre-fort
+          contient une url incomplète
+        </li>
+      </ul>
       {/* 7.7.2 */}
       <h2>7.7.2</h2>
       <p>
@@ -292,6 +308,22 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.8.0 */}
+      <h2>7.8.0</h2>
+      <p>
+        <em>Published on 17/06/2024</em>
+      </p>
+      <strong>Breaking change</strong>
+      <ul>
+        <li>end of compatibility with v5: data migration from v5 is no longer available.</li>
+      </ul>
+      <strong>Fixes</strong>
+      <ul>
+        <li>
+          fixes a problem preventing an account from being added from the browser extension when the vault contains an
+          incomplete url.
+        </li>
+      </ul>
       {/* 7.7.2 */}
       <h2>7.7.2</h2>
       <p>

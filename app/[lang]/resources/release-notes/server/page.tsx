@@ -11,6 +11,14 @@ export default function ServerNotes({ params }: { params: { lang: string } }) {
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.1.0 */}
+      <h2>2.1.0</h2>
+      <em>Publiée le 17/06/2024</em>
+      <ul>
+        <li>
+          les versions de l’application inférieures strictement à la 7.1.1 ne peuvent plus modifier les coffres-forts.
+        </li>
+      </ul>
       {/* 2.0.0 */}
       <h2>2.0.0</h2>
       <em>Publiée le 17/05/2024</em>
@@ -106,6 +114,12 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.1.0 */}
+      <h2>2.1.0</h2>
+      <em>Published on 17/06/2024</em>
+      <ul>
+        <li>versions of the app stricly below 7.1.1 can no longer make changes to vaults.</li>
+      </ul>
       {/* 2.0.0 */}
       <h2>2.0.0</h2>
       <em>Published on 17/05/2024</em>
