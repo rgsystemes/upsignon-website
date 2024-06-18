@@ -102,9 +102,13 @@ function ResourceMenu(p: { lang: string; isCurrentMenu: boolean }) {
         <Link className={styles.subMenuItem} href="/resources/articles">
           {t.resources.articles}
         </Link>
-        {/* <Link className={styles.subMenuItem} href="/resources/tutorials">
+        <Link
+          className={styles.subMenuItem}
+          href="https://upsignon.notion.site/Notice-d-utilisation-d-UpSignOn-de4f8ba200e14ec1adcaba2613b38340?pvs=4"
+          target="_blank"
+        >
           {t.resources.tutorials}
-        </Link> */}
+        </Link>
         <Link className={styles.subMenuItem} href="/resources/tech-articles">
           {t.resources.technicalExplanations}
         </Link>
