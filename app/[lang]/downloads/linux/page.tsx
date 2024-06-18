@@ -1,6 +1,5 @@
+import { linuxVersions } from "../../resources/release-notes/app/versionList";
 import styles from "./page.module.css";
-
-const linuxVersions = ["7.7.2", "7.7.1", "7.6.0", "7.5.0", "7.4.1", "7.4.0", "7.3.0", "7.2.0", "7.1.2"];
 
 export default function LinuxOtherDownloads({ params }: { params: { lang: string } }) {
   if (params.lang === "fr") {

@@ -1,20 +1,10 @@
+import {
+  allMsiVersions,
+  allMsixBundleVersions,
+  currentAppStoreVersion,
+} from "../../resources/release-notes/app/versionList";
 import styles from "./page.module.css";
 
-const currentAppVersion = "7.7.2";
-const allMsixBundleVersions = ["7.7.2", "7.7.1", "7.6.0", "7.5.1", "7.4.1", "7.1.1"];
-const allMsiVersions = [
-  "7.7.2",
-  "7.7.1",
-  "7.6.0",
-  "7.5.1",
-  "7.4.1",
-  "7.4.0",
-  "7.3.0",
-  "7.2.0",
-  "7.1.2",
-  "7.1.1",
-  "7.1.0",
-];
 const preConfigDeployScript = `## RUN AS ADMIN !
 $cUsersPath = "C:\\Users"
 $usersPaths = (Get-ChildItem -Path $cUsersPath -Directory -ErrorAction SilentlyContinue).FullName
@@ -138,7 +128,7 @@ function FRWindowsAllDownloadPage() {
         UpSignOn_latest.zip
       </a>
       <div className={styles.msixbundleSteps}>
-        <em>Version actuelle : {currentAppVersion}</em>
+        <em>Version actuelle : {currentAppStoreVersion}</em>
         <ul>
           <li>Dézippez le fichier UpSignOn_latest.zip</li>
           <li>Exécutez ensuite le script d’installation powershell</li>
@@ -202,7 +192,7 @@ function FRWindowsAllDownloadPage() {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Version actuelle : {currentAppVersion}</td>
+              <td colSpan={3}>Version actuelle : {currentAppStoreVersion}</td>
             </tr>
             <tr>
               <td>
@@ -433,7 +423,7 @@ function ENWindowsAllDownloadPage() {
         UpSignOn_latest.zip
       </a>
       <div className={styles.msixbundleSteps}>
-        <em>Current version: {currentAppVersion}</em>
+        <em>Current version: {currentAppStoreVersion}</em>
         <ul>
           <li>Unzip the UpSignOn_latest.zip file</li>
           <li>Then run the powershell installation script</li>
@@ -497,7 +487,7 @@ function ENWindowsAllDownloadPage() {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Current version: {currentAppVersion}</td>
+              <td colSpan={3}>Current version: {currentAppStoreVersion}</td>
             </tr>
             <tr>
               <td>
