@@ -52,7 +52,7 @@ const translations: typeof fr = {
     moto: "UpSignOn, the STRONG PASSWORD vault\nfor private and professional use.",
     subtitle: "Save, secure and forget\nyour passwords!",
     prezVideoTitle: "UpSignOn presentation video",
-    french: "Made in France",
+    french: "Made and hosted in France",
     privacyByDesign: "Security and privacy by design",
     crossPlatform: "Cross-platform (Windows, Linux, macOS, iOS, Android)",
     keyMetrics: {

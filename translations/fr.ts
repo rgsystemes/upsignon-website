@@ -50,7 +50,7 @@ const translations = {
     moto: "UpSignOn, le coffre de MOTS DE PASSE FORTS pour les particuliers et les pros.",
     subtitle: "Enregistrez, sécurisez et oubliez\nvos mots de passe !",
     prezVideoTitle: "Vidéo de présentation d'UpSignOn",
-    french: "Une solution 100% française et souveraine",
+    french: "Une solution 100% française et hébergée en France",
     privacyByDesign: "Sécurité et vie privée par conception",
     crossPlatform: "Multi-platformes (Windows, Linux, macOS, iOS, Android)",
     keyMetrics: {
