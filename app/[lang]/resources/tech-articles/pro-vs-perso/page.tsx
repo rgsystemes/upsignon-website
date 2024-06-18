@@ -1,11 +1,21 @@
+import { getDictionary } from "../../../../../translations/translations";
 import styles from "../../page.module.css";
 
 export default function ProVsPerso({ params }: { params: { lang: string } }) {
-  if (params.lang === "fr") {
-    return <FRArticle />;
-  } else {
-    return <ENArticle />;
-  }
+  const t = getDictionary(params.lang);
+  return (
+    <div className={styles.content}>
+      <div className={styles.backArrow}>
+        <span>&lt;  </span>
+        <a href="/resources/tech-articles">{t.resources.technicalExplanations}</a>
+      </div>
+      {params.lang === "fr" ? <FRArticle /> : <ENArticle />}
+      <div className={styles.backArrow}>
+        <span>&lt;  </span>
+        <a href="/resources/tech-articles">{t.resources.technicalExplanations}</a>
+      </div>
+    </div>
+  );
 }
 
 function FRArticle() {

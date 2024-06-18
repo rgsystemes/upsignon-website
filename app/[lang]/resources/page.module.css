@@ -10,6 +10,13 @@
 }
 
 
+.content .backArrow, .content .backArrow a {
+  color: rgb(0, 171, 169);
+}
+.content .backArrow {
+  padding: 10px;
+}
+
 .article {
   max-width: 900px;
   margin: auto;
