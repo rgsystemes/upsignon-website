@@ -5,6 +5,7 @@ import { getDictionary } from "../../../translations/translations";
 import styles from "./priceSimulator.module.css";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { FormModalButton } from "../formModal/formModal";
 function f(n: number): string {
   return n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
@@ -65,6 +66,7 @@ export function PriceSimulator(p: { lang: string }) {
   const cHost = (selfHosting ? 1 : 0) * (y3 ? 3 : 1) * pHost;
   const cHostTTC = cHost * tva;
   const grandTotal = totalLicences + cHost;
+  const vatTotal = grandTotal * 0.2;
   const grandTotalTTC = grandTotal * tva;
   const avgLicencePrice = l > 0 ? totalLicences / (l * nY) : null;
   return (
@@ -115,7 +117,6 @@ export function PriceSimulator(p: { lang: string }) {
               <th>{t.pricing.simu.years}</th>
               <th>{t.pricing.simu.unitPrice}</th>
               <th>{t.pricing.simu.sumPrice}</th>
-              <th>{t.pricing.simu.sumPriceWithTaxes}</th>
               <th>{t.pricing.simu.sumDiscounts}</th>
             </tr>
           </thead>
@@ -127,7 +128,6 @@ export function PriceSimulator(p: { lang: string }) {
                 <td>{nY}</td>
                 <td>{f(p1)}€</td>
                 <td>{f(c1)}€</td>
-                <td>{f(c1TTC)}€</td>
                 <td>-</td>
               </tr>
             )}
@@ -142,7 +142,6 @@ export function PriceSimulator(p: { lang: string }) {
                 <td>{nY}</td>
                 <td>{f(p2)}€</td>
                 <td>{f(c2)}€</td>
-                <td>{f(c2TTC)}€</td>
                 <td>{f(reducC2)}€</td>
               </tr>
             )}
@@ -153,7 +152,6 @@ export function PriceSimulator(p: { lang: string }) {
                 <td>{nY}</td>
                 <td>{f(p3)}€</td>
                 <td>{f(c3)}€</td>
-                <td>{f(c3TTC)}€</td>
                 <td>{f(reducC3)}€</td>
               </tr>
             )}
@@ -164,7 +162,6 @@ export function PriceSimulator(p: { lang: string }) {
                 <td></td>
                 <td>-10%</td>
                 <td>{f(reduc3Y)}€</td>
-                <td>{f(reduc3YTTC)}€</td>
                 <td>{f(reduc3Y)}€</td>
               </tr>
             )}
@@ -174,7 +171,6 @@ export function PriceSimulator(p: { lang: string }) {
               <th>{nY}</th>
               <th>{f(avgLicencePrice)}€</th>
               <th>{f(totalLicences)}€</th>
-              <th>{f(totalLicencesTTC)}€</th>
               <th>{totalLicencesReduc < 0 ? `${f(totalLicencesReduc)}€` : "-"}</th>
             </tr>
             {selfHosting && (
@@ -184,16 +180,30 @@ export function PriceSimulator(p: { lang: string }) {
                 <td>{nY}</td>
                 <td>{f(pHost)}€</td>
                 <td>{f(cHost)}€</td>
-                <td>{f(cHostTTC)}€</td>
                 <td>-</td>
               </tr>
             )}
-            <tr>
+            <tr className={styles.bigBorder}>
               <th>{t.pricing.simu.total}</th>
               <th></th>
               <th></th>
               <th></th>
               <th className={styles.grandTotal}>{f(grandTotal)}€</th>
+              <th></th>
+            </tr>
+            <tr className={styles.bigBorder}>
+              <th>{t.pricing.simu.vat}</th>
+              <th></th>
+              <th></th>
+              <th>20%</th>
+              <th>{f(vatTotal)}€</th>
+              <th></th>
+            </tr>
+            <tr className={styles.taxNoBorder}>
+              <th>{t.pricing.simu.totalInclTax}</th>
+              <th></th>
+              <th></th>
+              <th></th>
               <th>{f(grandTotalTTC)}€</th>
               <th></th>
             </tr>
@@ -201,6 +211,56 @@ export function PriceSimulator(p: { lang: string }) {
         </table>
       )}
       <div className={styles.cashPayment}>{t.pricing.simu.singlePayment}</div>
+
+      <div className={styles.alignEnd}>
+        <FormModalButton
+          lang={p.lang}
+          className={styles.getQuoteButton}
+          buttonText={t.pricing.getQuote.button}
+          submitButtonText={t.pricing.getQuote.submit}
+          modalTitle={t.pricing.getQuote.button}
+          fields={[
+            { t: t.pricing.getQuote.companyName, k: "companyName", r: true },
+            { t: t.pricing.getQuote.companySiret, k: "companySiret", r: true },
+            { t: t.pricing.getQuote.companyVAT, k: "companyVAT", r: true },
+            { t: t.pricing.getQuote.companyAddress1, k: "companyAddress1", r: true },
+            { t: t.pricing.getQuote.companyAddress2, k: "companyAddress2", r: false },
+            { t: t.pricing.getQuote.companyAddress3, k: "companyAddress3", r: true },
+            { t: t.pricing.getQuote.contactName, k: "contactName", r: true },
+            { t: t.pricing.getQuote.contactEmail, k: "contactEmail", r: true },
+            { t: t.pricing.getQuote.contactPhone, k: "contactPhone", r: true },
+          ]}
+          onSubmit={(values: { [k: string]: string }, close: () => void): Promise<void> | void => {
+            const req = new XMLHttpRequest();
+            req.open("POST", "http://app.upsignon.eu/get-quote", true);
+            req.onload = function () {
+              if (req.status != 200) {
+                alert(`Error ${req.status}: ${req.statusText}`);
+              } else {
+                alert(t.pricing.getQuote.success);
+                close();
+              }
+            };
+            req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            req.send(
+              JSON.stringify({
+                nLicences: l,
+                year3: y3,
+                selfHosting,
+                companyName: values.companyName,
+                companySiret: values.companySiret,
+                companyVAT: values.companyVAT,
+                companyAddress1: values.companyAddress1,
+                companyAddress2: values.companyAddress2,
+                companyAddress3: values.companyAddress3,
+                contactName: values.contactName,
+                contactEmail: values.contactEmail,
+                contactPhone: values.contactPhone,
+              })
+            );
+          }}
+        />
+      </div>
     </div>
   );
 }

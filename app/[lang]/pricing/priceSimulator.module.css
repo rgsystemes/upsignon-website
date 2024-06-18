@@ -17,7 +17,6 @@ input[type=number].licenceInput::-webkit-outer-spin-button {
 .simulatorTable {
   border-collapse: collapse;
   margin-top: 30px;
-  border-bottom: 1px solid #ddd;
   min-width: 800px;
 }
 
@@ -46,4 +45,22 @@ input[type=number].licenceInput::-webkit-outer-spin-button {
   font-weight: bold;
   text-decoration: underline;
   margin: 10px 0;
+}
+
+.simulatorTable .bigBorder {
+  border-top: 2px solid rgb(44, 83, 132);
+}
+.simulatorTable .taxNoBorder {
+  border-top: none;
+}
+
+.alignEnd {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.getQuoteButton {
+  background-color: rgb(0,171, 169);
+  color: white;
 }
