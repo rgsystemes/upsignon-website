@@ -63,7 +63,7 @@ function FRArticle() {
               <div className={styles.col3IlluContainer}>
                 <Image src={itChartSVG} alt="" />
               </div>
-              <strong>Maintenir le bon fonctionnement du système d'information</strong>
+              <strong>Maintenir le bon fonctionnement du système d’information</strong>
             </div>
             <div>
               <div className={styles.col3IlluContainer}>
@@ -180,7 +180,7 @@ function FRArticle() {
               </div>
               <div className={styles.greenCardNumber}>
                 <div>53%</div>
-                <div>n'ont pas changé leur mot de passe au cours des 12 derniers mois</div>
+                <div>n’ont pas changé leur mot de passe au cours des 12 derniers mois</div>
               </div>
               <div className={styles.greenCardNumber}>
                 <div>59%</div>
@@ -245,16 +245,16 @@ function FRArticle() {
         <div className={styles.checkTickParagraph}>
           <Image src={checkTickSVG} alt="" className={styles.tick} />
           <p>
-            Mots de passe uniques : réutiliser le même mot de passe partout, c'est comme dire "si vous pouvez crocheter
-            ma boîte aux lettres, alors vous pouvez ouvrir ma porte d'entrée, ma voiture, mon coffre à bijoux, mon
-            compte en banque."
+            Mots de passe uniques : réutiliser le même mot de passe partout, c’est comme dire “si vous pouvez crocheter
+            ma boîte aux lettres, alors vous pouvez ouvrir ma porte d’entrée, ma voiture, mon coffre à bijoux, mon
+            compte en banque.“
           </p>
         </div>
         <div className={styles.checkTickParagraph}>
           <Image src={checkTickSVG} alt="" className={styles.tick} />
           <p>
-            Mots de passe forts : la force d'un mot de passe, c'est le temps qu'il faut à un hacker pour le trouver.
-            "P@$$w0rd!" n'est pas du tout un mot de passe fort, bien qu'il respecte tous les critères habituels. En
+            Mots de passe forts : la force d’un mot de passe, c’est le temps qu’il faut à un hacker pour le trouver.
+            “P@$$w0rd!“ n’est pas du tout un mot de passe fort, bien qu’il respecte tous les critères habituels. En
             pratique, les mots de passe les plus forts sont les mots de passe générés aléatoirement, comme
             HCTGkN-bJzEE4-A8mqdK-rPWXnw
           </p>

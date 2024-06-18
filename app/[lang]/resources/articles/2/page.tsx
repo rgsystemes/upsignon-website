@@ -54,8 +54,8 @@ function FRArticle() {
 
       <p>
         <strong>
-          Lorsqu'un pirate réussit à voler vos identifiants sur un site, la première chose qu'il va faire sera de tester
-          ces identifiants sur d'autres sites beaucoup plus sensibles.
+          Lorsqu’un pirate réussit à voler vos identifiants sur un site, la première chose qu’il va faire sera de tester
+          ces identifiants sur d’autres sites beaucoup plus sensibles.
         </strong>
       </p>
 
@@ -66,8 +66,8 @@ function FRArticle() {
       </p>
       <h2>Conclusion : utilisez un coffre-fort de mots de passe</h2>
       <p>
-        Pour limiter les piratages en cascade, il est donc indispensable d'utiliser un mot de passe unique pour chaque
-        site sur lequel vous vous connectez. Et comme cela va vite devenir compliqué à retenir, nous vous conseillons d'
+        Pour limiter les piratages en cascade, il est donc indispensable d’utiliser un mot de passe unique pour chaque
+        site sur lequel vous vous connectez. Et comme cela va vite devenir compliqué à retenir, nous vous conseillons d’
         <strong>utiliser un coffre-fort de mots de passe</strong>. Non seulement cela renforcera fortement la sécurité
         de vos comptes et de vos données, mais cela vous rendra aussi la vie plus simple.
       </p>

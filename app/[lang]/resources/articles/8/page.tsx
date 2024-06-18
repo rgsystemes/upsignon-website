@@ -29,17 +29,17 @@ function FRArticle() {
     <>
       <h2>Une plus grande sécurité</h2>
       <p>
-        Certains navigateurs ne vous demandent pas d'authentification pour accéder à vos mots de passe. Si vous laissez
+        Certains navigateurs ne vous demandent pas d’authentification pour accéder à vos mots de passe. Si vous laissez
         votre ordinateur déverrouillé sans surveillance (ce qui est certes une mauvaise pratique), une personne
         malveillante pourra facilement se connecter à vos sites. Avec UpSignOn, vos mots de passe ne sont pas
-        utilisables tant que vous n'avez pas déverrouillé votre coffre-fort et celui-ci se verrouille automatiquement au
-        bout d'un certain délai (paramétrable selon votre besoin).
+        utilisables tant que vous n’avez pas déverrouillé votre coffre-fort et celui-ci se verrouille automatiquement au
+        bout d’un certain délai (paramétrable selon votre besoin).
       </p>
 
       <h2>Portabilité des données</h2>
       <p>
         Les gestionnaires de mots de passe intégrés des navigateurs sont conçus pour vous encourager à rester dans un
-        écosystèmes (celui d'Apple, de Microsoft, ou de Google). Un utilisateur d'iPhone ne pourra pas synchroniser ses
+        écosystèmes (celui d’Apple, de Microsoft, ou de Google). Un utilisateur d’iPhone ne pourra pas synchroniser ses
         mots de passe vers son PC windows.
       </p>
 
@@ -55,10 +55,10 @@ function FRArticle() {
         comptes personnels, ils sont tous stockés au même niveau. UpSignOn propose des coffres-forts PRO et PERSO.
       </p>
 
-      <h2>Un offre-fort organisé et rangé, avec des notes et d'autres types de secrets</h2>
+      <h2>Un offre-fort organisé et rangé, avec des notes et d’autres types de secrets</h2>
       <p>
-        Les gestionnaires de mots de passe des navigateurs ont vocation à enlever la gestion à l'utilisateur et à
-        s'afficher le moins possible à l'utilisateur (ce qui a la vertu de la simplicité, mais ce qui a l'inconvénient
+        Les gestionnaires de mots de passe des navigateurs ont vocation à enlever la gestion à l’utilisateur et à
+        s’afficher le moins possible à l’utilisateur (ce qui a la vertu de la simplicité, mais ce qui a l’inconvénient
         de cacher les problèmes sur la sécurité des mots de passe). Un coffre-fort de mots de passe dédié est conçu au
         contraire comme un outil du quotidien, que vous pouvez organiser, dans lequel vous pouvez ajouter des notes, des
         codes TOTP et des secrets qui ne sont pas forcément des mots de passe.
@@ -66,9 +66,9 @@ function FRArticle() {
 
       <h2>Une console de supervision</h2>
       <p>
-        Les coffres-forts PRO d'UpSignOn sont supervisés pour permettre aux administrateurs (RSSI, DSI) de visualiser
-        l'évolution de la force des mots de passe et d'identifier les personnes ayant besoin d'être accompagnées plus
-        spécifiquement. Les coffres-forts de navigateur ne sont à l'inverse pas conçus pour les enjeux professionnels.
+        Les coffres-forts PRO d’UpSignOn sont supervisés pour permettre aux administrateurs (RSSI, DSI) de visualiser
+        l’évolution de la force des mots de passe et d’identifier les personnes ayant besoin d’être accompagnées plus
+        spécifiquement. Les coffres-forts de navigateur ne sont à l’inverse pas conçus pour les enjeux professionnels.
       </p>
     </>
   );
@@ -86,7 +86,7 @@ function ENArticle() {
 
       <h2>Data portability</h2>
       <p>
-        Browsers' built-in password managers are designed to encourage you to stay within one ecosystem (that of Apple,
+        Browsers’ built-in password managers are designed to encourage you to stay within one ecosystem (that of Apple,
         Microsoft, or Google). An iPhone user will not be able to synchronize their passwords to their Windows PC.
       </p>
 
@@ -107,12 +107,12 @@ function ENArticle() {
         Browser password managers are intended to remove management from the user and to appear as little as possible to
         the user (which has the virtue of simplicity, but which has the disadvantage of hiding password security
         issues). Instead, a dedicated password vault is designed as an everyday tool that you can organize, where you
-        can add notes, TOTP codes and secrets that aren't necessarily passwords.
+        can add notes, TOTP codes and secrets that aren’t necessarily passwords.
       </p>
 
       <h2>A supervision console</h2>
       <p>
-        UpSignOn's PRO vaults are supervised to allow administrators (CISO, CIO) to view the evolution of password
+        UpSignOn’s PRO vaults are supervised to allow administrators (CISO, CIO) to view the evolution of password
         strength and identify people who need more specific support. Conversely, browser vaults are not designed for
         professional issues.
       </p>

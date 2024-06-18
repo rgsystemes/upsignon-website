@@ -68,14 +68,14 @@ function FRArticle() {
       <h2>Comment accompagner les collaborateurs vers plus de sécurité ?</h2>
       <Image src={EmployeesPasswordsImg} alt="" width="425" style={{ float: "left", marginRight: 10 }} />
       <p>
-        Votre objectif est d'<strong>emmener tout le monde vers l'adoption des bonnes pratiques</strong> essentielles de
-        gestion de mots de passe. Chez UpSignOn, nous pensons que la clé, c'est d'offrir à vos collaborateurs un outil
-        simple qu'ils auront envie d'utiliser, et de vous faire remonter les informations qui vous permettront de cibler
-        vos actions de sensibilisation et d'accompagnement.
+        Votre objectif est d’<strong>emmener tout le monde vers l’adoption des bonnes pratiques</strong> essentielles de
+        gestion de mots de passe. Chez UpSignOn, nous pensons que la clé, c’est d’offrir à vos collaborateurs un outil
+        simple qu’ils auront envie d’utiliser, et de vous faire remonter les informations qui vous permettront de cibler
+        vos actions de sensibilisation et d’accompagnement.
       </p>
       <p>
         Notre application agit déjà comme un premier outil de sensibilisation en tant que tel en affichant de façon
-        explicite aux utilisateurs les mots de passe qu'il faut changer en priorité.
+        explicite aux utilisateurs les mots de passe qu’il faut changer en priorité.
       </p>
       <p>
         Depuis la <strong>console de supervision</strong>, le RSSI et ses équipes peuvent suivre l’évolution des scores
@@ -91,8 +91,8 @@ function ENArticle() {
     <>
       <p>
         As a CISO, you are responsible for IT security and maintaining digital access, which is essential for the smooth
-        running of the company's activity. So you take care on a daily basis not to become a target for hackers:
-        managing the firewall, updating antiviruses, monitoring your employees' passwords, etc. What? This last point is
+        running of the company’s activity. So you take care on a daily basis not to become a target for hackers:
+        managing the firewall, updating antiviruses, monitoring your employees’ passwords, etc. What? This last point is
         not yet one of your concerns? However, we confirm it to you: password breaking is indeed one of the most common
         cyberattacks in organizations. And employees are not necessarily aware of the extent of the risks they pose to
         the company by using passwords that are too weak or by using the same one everywhere...
@@ -113,7 +113,7 @@ function ENArticle() {
         In light of these issues,{" "}
         <strong>the role of the CISO is to help employees implement and maintain a sufficient level of security</strong>
         . Without making their daily tasks heavier, nor being too intrusive... Nor even by adding strong constraints,
-        which until now was the CISO's only recourse (e.g. replacing a password every six weeks). Now, with the advanced
+        which until now was the CISO’s only recourse (e.g. replacing a password every six weeks). Now, with the advanced
         management tools that exist, the CISO has new means to enforce password management rules by all employees,
         effortlessly.
       </p>

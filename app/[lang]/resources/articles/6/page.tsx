@@ -50,14 +50,14 @@ function FRArticle() {
 
       <h2>L’usage du protocole HTTP au lieu de HTTPS</h2>
       <p>
-        L'utilisation du protocol http n'est quasiment plus possible aujourd'hui car les navigateurs modernes bloquent
-        l'accès à ces sites et affichent un avertissement de sécurité. Mais si vous naviguez avec un navigateur ancien
-        ou si vous choisissez de contourner le blocage en forçant l'affichage du site, sachez que vous tout le monde
+        L’utilisation du protocol http n’est quasiment plus possible aujourd’hui car les navigateurs modernes bloquent
+        l’accès à ces sites et affichent un avertissement de sécurité. Mais si vous naviguez avec un navigateur ancien
+        ou si vous choisissez de contourner le blocage en forçant l’affichage du site, sachez que vous tout le monde
         peut voir tout ce que vous écrivez sur le site, y compris vos mots de passe, vos informations de paiement, etc.!
       </p>
       <p>
-        À l'inverse, le protocol https permet de chiffrer toutes les communications entre vous et le site. Ce n'est pas
-        une garantie de sécurité parfaite, mais c'est vraiment le strict minimum que vous pouvez exiger d'un site!
+        À l’inverse, le protocol https permet de chiffrer toutes les communications entre vous et le site. Ce n’est pas
+        une garantie de sécurité parfaite, mais c’est vraiment le strict minimum que vous pouvez exiger d’un site!
       </p>
       <div className={styles.techNote}>
         <p>
@@ -66,7 +66,7 @@ function FRArticle() {
         <p>
           Toutes les connexions https ne se valent pas. Le protocol a évolué au cours du temps. Les premières versions
           du procotol (SSLv2 puis SSLv3) ne sont plus considérées comme sûres. Le protocol TLS qui leur a succédé a lui
-          aussi évolué: TLS 1.0 et TLS1.1 sont désormais obsolètes et seul TLS 1.2 et TLS 1.3 sont aujourd'hui
+          aussi évolué: TLS 1.0 et TLS1.1 sont désormais obsolètes et seul TLS 1.2 et TLS 1.3 sont aujourd’hui
           recommandés. Or les vieux navigateurs ne sont pas compatibles avec ces protocoles.{" "}
           <strong>
             Pensez donc à mettre à jour vos navigateurs pour éviter d’utiliser des protocoles de sécurité obsolètes.
@@ -74,7 +74,7 @@ function FRArticle() {
         </p>
       </div>
       <p>
-        Attention, des liens https:// peuvent aussi ne pas être sûrs si le certificat associé n'est pas reconnu. Dans ce
+        Attention, des liens https:// peuvent aussi ne pas être sûrs si le certificat associé n’est pas reconnu. Dans ce
         cas votre navigateur vous affichera un avertissement de sécurité et un cadenas barré.
       </p>
       <ul>
@@ -86,7 +86,7 @@ function FRArticle() {
         </li>
         <li>
           <strong>
-            N'ignorez pas les avertissements de sécurité de votre navigateur, sauf si vous savez vraiment ce que vous
+            N’ignorez pas les avertissements de sécurité de votre navigateur, sauf si vous savez vraiment ce que vous
             faites.
           </strong>
         </li>
@@ -94,7 +94,7 @@ function FRArticle() {
 
       <h2>La composition de l’url d’un site web</h2>
       <p>
-        Attention, un site web https:// sans alrte de sécurité n'est pas forcément le site web que vous vous attendiez
+        Attention, un site web https:// sans alrte de sécurité n’est pas forcément le site web que vous vous attendiez
         vraiment à visiter. Imaginons que vous cherchiez à contacter le site de votre banque. Son url légitime serait
         par exemple ma-banque.com.
       </p>
@@ -146,7 +146,7 @@ function FRArticle() {
       <h2>Le renvoi d’un mot de passe par email</h2>
       <p>
         Les sites webs ne sont pas censés stockés vos mots de passe tels quels. Ils sont censés stocker seulement une
-        empreinte de votre mot de passe pour être incapable de lire votre mot de passe eux-mêmes et pour qu'un pirate
+        empreinte de votre mot de passe pour être incapable de lire votre mot de passe eux-mêmes et pour qu’un pirate
         ayant pris le contrôle du site ne puisse pas non plus récupérer les mots de passe des utilisateurs.
       </p>
       <p>
@@ -156,7 +156,7 @@ function FRArticle() {
       <p>
         <strong>
           Donc si un site vous renvoie votre mot de passe par email lorsque vous utilisez le bouton mot de passe oublié,
-          c'est qu'il n'a absolument pas respecté ce principe de base.
+          c’est qu’il n’a absolument pas respecté ce principe de base.
         </strong>{" "}
         Fuyez et changez immédiatement votre mot de passe sur vos autres sites si vous avez eu la mauvaise idée de
         réutiliser le même partout.
@@ -200,8 +200,8 @@ function ENArticle() {
         including your passwords, payment details, etc.!
       </p>
       <p>
-        Conversely, the https protocol allows all communications between you and the site to be encrypted. It's not a
-        perfect security guarantee, but it's really the bare minimum you can ask for from a site!
+        Conversely, the https protocol allows all communications between you and the site to be encrypted. It’s not a
+        perfect security guarantee, but it’s really the bare minimum you can ask for from a site!
       </p>
       <div className={styles.techNote}>
         <p>
@@ -224,19 +224,19 @@ function ENArticle() {
           <strong>Avoid clicking on links starting with http://, only click on links starting with https://</strong>
         </li>
         <li>
-          <strong>Do not ignore your browser's security warnings except if you really know what you are doing.</strong>
+          <strong>Do not ignore your browser’s security warnings except if you really know what you are doing.</strong>
         </li>
       </ul>
 
       <h2>The composition of the URL of a website</h2>
       <p>
         Be careful, an https:// website without security alerts is not necessarily the website you really expected to
-        visit. Let's say you're trying to contact your bank's website. Its legitimate URL would be, for example,
+        visit. Let’s say you’re trying to contact your bank’s website. Its legitimate URL would be, for example,
         ma-banque.com.
       </p>
       <h4>Step 1: identify the domain name</h4>
       <p>
-        In a URL, the domain name is everything after https:// and before the first character ‘/’ or '#' Or '?'.
+        In a URL, the domain name is everything after https:// and before the first character ‘/’ or ’#’ Or ’?’.
         <br />
         For example, in https://ma-banque.com/login, the domain name is ma-banque.com.
         <br />
@@ -248,13 +248,13 @@ function ENArticle() {
         main domain. For example, login.ma-banque.com is a subdomain of ma-banque.com and not the other way around. You
         can add as many sub(-sub)domains as you want.
       </p>
-      <h4>Step 3: don't confuse the domains</h4>
+      <h4>Step 3: don’t confuse the domains</h4>
       <p>Hackers use several methods to trick you:</p>
       <ul>
         <li>use of a domain name with the wrong extension (.org instead of .com for example)</li>
         <li>
           using a similar domain name, for example by adding a period in the middle, replacing a special character with
-          another, or changing an 'o' to '0'. This could result in:
+          another, or changing an ’o’ to ’0’. This could result in:
           <ul>
             <li>https://ma.banque.com</li>
             <li>https://mabanque.com</li>

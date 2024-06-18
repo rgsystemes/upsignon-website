@@ -99,15 +99,15 @@ function getTableBody(lang: string) {
 function FRArticle() {
   return (
     <>
-      <p>La force d'un mot de passe correspond au temps qu'un pirate mettra en moyenne pour le trouver.</p>
+      <p>La force d’un mot de passe correspond au temps qu’un pirate mettra en moyenne pour le trouver.</p>
       <p>Quelques exemples :</p>
       <ul>
         <li>
-          Si vous utilisez le mot de passe "123456", le pirate le trouvera immédiatement car c'est le mot de passe le
-          plus utilisé au monde, et c'est donc le premier mot de passe qu'il testera.
+          Si vous utilisez le mot de passe “123456“, le pirate le trouvera immédiatement car c’est le mot de passe le
+          plus utilisé au monde, et c’est donc le premier mot de passe qu’il testera.
         </li>
         <li>
-          Si vous utilisez une information personnelle (date de naissance, prénom d'un enfant, nom de la ville où vous
+          Si vous utilisez une information personnelle (date de naissance, prénom d’un enfant, nom de la ville où vous
           passez vos vacances), votre mot de passe sera également très facile à deviner car ces informations peuvent
           être trouvées facilement sur internet.
         </li>
@@ -116,18 +116,18 @@ function FRArticle() {
 
       <h3>Cas théorique : attaque par force brute</h3>
       <p>
-        Prenons le cas théorique d'un pirate pas très malin qui souhaite trouver le mot de passe que vous utilisez sur
+        Prenons le cas théorique d’un pirate pas très malin qui souhaite trouver le mot de passe que vous utilisez sur
         un site en testant chaque mot de passe possible un par un. Évidemment, il ne fait pas cela manuellement, il
         utilise un script qui peut tester un très grand nombre de mots de passe par seconde.
       </p>
       <p>
-        Le nombre N de mots de passe de longueur L qu'on peut former à partir d'un nombre C de caractères différents est
+        Le nombre N de mots de passe de longueur L qu’on peut former à partir d’un nombre C de caractères différents est
         N=C^L. Par exemple, le nombre de mots de passe de 5 caractères ne contenant que des lettres minuscules (26
         lettres) est 26^5 = 11 881 376.
       </p>
       <p>
         En moyenne, le pirate devra tester la moitié des mots de passe avant de trouver le bon (après en avoir testé la
-        moitié, il a plus de chance d'avoir déjà trouvé le mot de passe que de ne pas l'avoir déjà trouvé). Le nombre de
+        moitié, il a plus de chance d’avoir déjà trouvé le mot de passe que de ne pas l’avoir déjà trouvé). Le nombre de
         tests que le pirate devra faire est donc C^L/2.
       </p>
       <p>
@@ -139,7 +139,7 @@ function FRArticle() {
         alors les temps de cassage suivants :
       </p>
       <figure className={styles.figure}>
-        <figcaption>Temps requis pour extraire un mot de passe à partir d'un hash par force brute</figcaption>
+        <figcaption>Temps requis pour extraire un mot de passe à partir d’un hash par force brute</figcaption>
         <div className={styles.pwdCrackTable}>
           <table>
             <thead>
@@ -157,22 +157,22 @@ function FRArticle() {
         </div>
       </figure>
       <p>
-        Si vous partez d'un mot de passe à 9 caractères alphanumériques c'est à dire sans caractères spéciaux
+        Si vous partez d’un mot de passe à 9 caractères alphanumériques c’est à dire sans caractères spéciaux
         (résistance 33 secondes), il est plus efficace de rajouter un dixième caractère (résistance 35 minutes) que de
         remplacer un caractère dans le mot de passe par un caractère spécial (résistance 2 minutes).
       </p>
       <p>
         <strong>
-          Un bon mot de passe doit aujourd'hui contenir au moins 12 caractères alphanumériques et spéciaux.
+          Un bon mot de passe doit aujourd’hui contenir au moins 12 caractères alphanumériques et spéciaux.
         </strong>
-        C'est d'ailleurs ce que recommandent les agences étatiques, comme l'ANSSI en France.
+        C’est d’ailleurs ce que recommandent les agences étatiques, comme l’ANSSI en France.
       </p>
       <p>
         <strong>
           Un mot de passe de 16 caractères contenant des caractères alphanumériques sera très fort, même si le pirate
-          est un million de fois plus puissant que l'hypothèse que nous avons prise
+          est un million de fois plus puissant que l’hypothèse que nous avons prise
         </strong>
-        (ça couterait très très cher d'avoir autant de puissance de calcul...)
+        (ça couterait très très cher d’avoir autant de puissance de calcul...)
       </p>
       <p>
         Évidemment, moins un mot de passe permet d’accéder à des ressources sensibles, moins le pirate a d’intérêt
@@ -243,16 +243,16 @@ function FRArticle() {
         En pratique, utilisez une phrase qui n’est pas une citation célèbre et qui aboutit à un mot de passe contenant
         une combinaison de tous les caractères pour que votre mot de passe remplissent les critères habituels exigés par
         les sites. Ce genre de mots de passe est probablement légèrement plus difficile à taper que ceux de la méthode
-        précédente, mais est en théorie plus fort qu'une phrase de passe.
+        précédente, mais est en théorie plus fort qu’une phrase de passe.
       </p>
 
       <h2>Conclusion</h2>
       <p>
-        Retenez que la meilleure façon d'obtenir un mot de passe fort est d'utiliser un générateur de mot de passe
+        Retenez que la meilleure façon d’obtenir un mot de passe fort est d’utiliser un générateur de mot de passe
         aléatoire et de choisir une longueur supérieure à 16.
       </p>
       <p>
-        Évidemment, cela suppose l'utilisation d'un coffre-fort de mots de passe comme UpSignOn pour les enregistrer.
+        Évidemment, cela suppose l’utilisation d’un coffre-fort de mots de passe comme UpSignOn pour les enregistrer.
       </p>
     </>
   );
@@ -264,7 +264,7 @@ function ENArticle() {
       <p>Some examples:</p>
       <ul>
         <li>
-          If you use the password "123456", the hacker will find it immediately because it is the most used password in
+          If you use the password “123456“, the hacker will find it immediately because it is the most used password in
           the world, and therefore it is the first password he will test.
         </li>
         <li>
@@ -277,8 +277,8 @@ function ENArticle() {
 
       <h3>Theoretical case: brute force attack</h3>
       <p>
-        Let's take the theoretical case of a not-so-smart hacker who wants to find the password you use on a site by
-        testing each possible password one by one. Obviously he doesn't do this manually, he uses a script that can test
+        Let’s take the theoretical case of a not-so-smart hacker who wants to find the password you use on a site by
+        testing each possible password one by one. Obviously he doesn’t do this manually, he uses a script that can test
         a very large number of passwords per second.
       </p>
       <p>
@@ -293,7 +293,7 @@ function ENArticle() {
       </p>
       <p>
         The question is how many passwords the hacker can test per second. This will depend on several conditions (the
-        computing power of the hacker, the storing method for the password), but let's take for example the case of a
+        computing power of the hacker, the storing method for the password), but let’s take for example the case of a
         hacker using modern computers. Each computer has 8 cores running at 2.6 GHz. It can therefore perform roughly 20
         billion tests per second under the best conditions. The most organized hackers will probably have computing
         powers 10,000 times higher. We then obtain the following breaking times:
@@ -343,15 +343,15 @@ function ENArticle() {
         attack. The idea is simple: rather than testing passwords randomly, the hacker uses lists of passwords that have
         already leaked. These lists contain several hundred million passwords actually used by Internet users and sorted
         by number of occurrences. The hacker will therefore start by testing the most used password in the world, that
-        is to say “123456”. Then it will test “123456789”, then “azerty”, etc. If you're using one of these passwords,
-        you're really asking for trouble.
+        is to say “123456”. Then it will test “123456789”, then “azerty”, etc. If you’re using one of these passwords,
+        you’re really asking for trouble.
       </p>
       <p>
         <strong>
           The cybercriminal then tests variations of these passwords, with the classic mechanisms of replacing letters
           with numbers or symbols.
         </strong>
-        For example, an "a" becomes an "@", an "o" becomes a "0", etc. Passwords composed of sequences, such as abcd,
+        For example, an “a“ becomes an “@“, an “o“ becomes a “0“, etc. Passwords composed of sequences, such as abcd,
         1234, azerty, or with a root containing the name of the site or personal information are also tested.
       </p>
       <p>
@@ -390,8 +390,8 @@ function ENArticle() {
       </p>
       <p>
         Another technique for generating relatively strong passwords is to start with a fairly long sentence and choose
-        the initials or phonetic spellings of the words in that sentence. For example, let's start with the sentence
-        "Here is a password containing special characters and numbers. ". This could result in the following password:
+        the initials or phonetic spellings of the words in that sentence. For example, let’s start with the sentence
+        “Here is a password containing special characters and numbers.“. This could result in the following password:
         “Hia$csc&nbs”.
       </p>
       <p>

@@ -35,14 +35,14 @@ function FRArticle() {
 
       <p>On distingue 4 objectifs de sécurité :</p>
       <ul>
-        <li>la confidentialité des données (le fait qu'une personne non autorisée ne puisse pas lire les données) ;</li>
+        <li>la confidentialité des données (le fait qu’une personne non autorisée ne puisse pas lire les données) ;</li>
         <li>
-          l'authenticité des données (le fait de pouvoir garantir que les données proviennent bien d'une personne ou
+          l’authenticité des données (le fait de pouvoir garantir que les données proviennent bien d’une personne ou
           entité en particulier) ;
         </li>
-        <li>l'intégrité des données (le fait que les données ne pourront pas être altérées) ;</li>
+        <li>l’intégrité des données (le fait que les données ne pourront pas être altérées) ;</li>
         <li>
-          la disponibilité des données (le fait que les données soient toujours accessibles lorsque l'utilisateur en
+          la disponibilité des données (le fait que les données soient toujours accessibles lorsque l’utilisateur en
           fait la demande).
         </li>
       </ul>
@@ -89,8 +89,8 @@ function FRArticle() {
         cryptographique par d’autres moyens.
       </p>
       <p>
-        Des erreurs d'implémentation peuvent être faite par les développeurs qui codent ces algorithmes
-        cryptographiques, mais comme l'enjeu est élevé, les algorithmes en question sont relus et challengés en
+        Des erreurs d’implémentation peuvent être faite par les développeurs qui codent ces algorithmes
+        cryptographiques, mais comme l’enjeu est élevé, les algorithmes en question sont relus et challengés en
         permanence par des chercheurs experts. Seuls des gouvernenements ou des organisations de grande envergure
         peuvent donc éventuellement découvrir et exploiter des vulnérabilités dans ces algorithmes.
       </p>
@@ -155,7 +155,7 @@ function ENArticle() {
         will be more secondary than others. For example, the availability objective is not always very critical. If your
         Fnac account is no longer accessible for a few hours (unavailability), this will not have much impact on your
         life (although it will have potentially a high impact on their business). If your postal address is replaced by
-        a poem in the Fnac database (non-integrity), you won't make a big deal out of it either. But if UpSignOn leaks
+        a poem in the Fnac database (non-integrity), you won’t make a big deal out of it either. But if UpSignOn leaks
         your passwords (non-confidentiality), you will come and complain.
       </p>
       <p>So here are 4 security concepts or models to know and distinguish.</p>
@@ -204,7 +204,7 @@ function ENArticle() {
         A zero knowledge design aims at not giving any personal information to the publisher or administrators in plain
         text. The only data sent to the server is completely encrypted and unusable. For example, the UpSignOn
         application does not send any email address to the UpSignOn server to operate personal vaults. Even we, the
-        publisher, don't know our users! So there is simply nothing to steal from our servers.
+        publisher, don’t know our users! So there is simply nothing to steal from our servers.
       </p>
       <h2>Conclusion</h2>
       <p>
@@ -215,7 +215,7 @@ function ENArticle() {
       </p>
       <p>
         Remember the idea that just because the press announces that an attack is in progress does not mean that your
-        data will necessarily leak. It's also not because some data has leaked that all your secrets have been leaked.
+        data will necessarily leak. It’s also not because some data has leaked that all your secrets have been leaked.
         It is also possible for encrypted data to leak, but this would not be a problem if the system was designed
         following the zero-trust principles.
       </p>

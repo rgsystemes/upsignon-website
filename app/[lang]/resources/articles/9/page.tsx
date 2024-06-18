@@ -41,20 +41,20 @@ function FRArticle() {
       <h2>1- Imposer un nombre maximum de caractères</h2>
       <p>
         Aujourd’hui encore, de nombreux formulaires de mots de passe limitent la saisie à un certain nombre de
-        caractères, parfois 8 ou 12 caractères seulement ! Cette restriction provient peut-être d'une volonté d’éviter
-        les attaques par déni de service (2) via l'envoi de contenus de plusieurs mégabits voire gigabits. Elle découle
+        caractères, parfois 8 ou 12 caractères seulement ! Cette restriction provient peut-être d’une volonté d’éviter
+        les attaques par déni de service (2) via l’envoi de contenus de plusieurs mégabits voire gigabits. Elle découle
         peut-être aussi de l’idée que l’utilisateur ne sera pas en capacité de retenir le mot de passe s’il est trop
         long.
       </p>
       <p>
         Le problème est que cette contrainte empêche les utilisateurs de choisir des mots de passe vraiment forts et
-        générés aléatoirement. Donc cette pratique est un frein majeur à l'adoption des coffres-forts de mots de passe
-        et produit donc l'effet inverse de l'effet désiré sur la sécurité de l'utilisateur !
+        générés aléatoirement. Donc cette pratique est un frein majeur à l’adoption des coffres-forts de mots de passe
+        et produit donc l’effet inverse de l’effet désiré sur la sécurité de l’utilisateur !
       </p>
       <p>
         <strong>
-          Pour répondre au deux enjeux (éviter les attaques par déni de service et permettre l'utilisation des
-          coffre-forts de mots de passe), définissez la longueur maximal d'un champ mot de passe à 500 caractères. C'est
+          Pour répondre au deux enjeux (éviter les attaques par déni de service et permettre l’utilisation des
+          coffre-forts de mots de passe), définissez la longueur maximal d’un champ mot de passe à 500 caractères. C’est
           largement suffisant dans les deux cas.
         </strong>
       </p>
@@ -66,21 +66,21 @@ function FRArticle() {
         pour un hacker.
       </p>
       <p>
-        Le problème, c'est que cela n'a pas un gros effet sur la sécurité des mots de passe car les utilisateurs vont
-        utiliser des mécanismes de substitution évidents qui ralentiront à peine les pirates. Par exemple 'i' deviendra
-        '1', 'a' deviendra '@' et 's' deviendra '$'.
+        Le problème, c’est que cela n’a pas un gros effet sur la sécurité des mots de passe car les utilisateurs vont
+        utiliser des mécanismes de substitution évidents qui ralentiront à peine les pirates. Par exemple ’i’ deviendra
+        ’1’, ’a’ deviendra ’@’ et ’s’ deviendra ’$’.
       </p>
       <p>
-        Comme nous l'expliquons dans notre article{" "}
-        <a href="/resources/articles/1">"Qu'est-ce qu'un mot de passe fort ?"</a>, la force d'un mot de passe dépend
+        Comme nous l’expliquons dans notre article{" "}
+        <a href="/resources/articles/1">“Qu’est-ce qu’un mot de passe fort ?“</a>, la force d’un mot de passe dépend
         avant tout de sa longueur.
       </p>
       <p>
         <strong>
-          Notre conseil est donc d'imposer surtout une longueur de mots de passe d'au moins 12 caractères (voire 14) et
-          d'afficher à l'utilisateur une évaluation de la force de son mot de passe grâce à des librairies comme zxcvbn.
+          Notre conseil est donc d’imposer surtout une longueur de mots de passe d’au moins 12 caractères (voire 14) et
+          d’afficher à l’utilisateur une évaluation de la force de son mot de passe grâce à des librairies comme zxcvbn.
         </strong>{" "}
-        Imposez aussi d'utiliser tous les types de caractères puisque les utilisateurs y sont habitués et que ça ne fait
+        Imposez aussi d’utiliser tous les types de caractères puisque les utilisateurs y sont habitués et que ça ne fait
         pas de mal.
       </p>
       <h2>3- Imposer un renouvellement régulier des mots de passe de vos collaborateurs</h2>
@@ -133,21 +133,21 @@ function FRArticle() {
       </p>
       <p>
         Imposer un changement de mots de passe régulièrement à vos collaborateurs, oui, mais commencez par imposer
-        l'utilisation d'un coffre-fort de mots de passe !
+        l’utilisation d’un coffre-fort de mots de passe !
       </p>
 
       <h2>4- Essayer d’empêcher les robots de remplir votre formulaire</h2>
       <p>
-        Certains site tentent d'empêcher des robots de remplir les formulaires de mots de passe pour une ou plusieurs
+        Certains site tentent d’empêcher des robots de remplir les formulaires de mots de passe pour une ou plusieurs
         des raisons suivantes:
       </p>
       <ul>
         <li>Éviter les attaques par scripts automatiques</li>
-        <li>Forcer l'utilisateur à saisir son mot de passe pour qu'il ne l'oublie pas</li>
+        <li>Forcer l’utilisateur à saisir son mot de passe pour qu’il ne l’oublie pas</li>
       </ul>
       <p>
-        Certains sites empêchent également de copier-coller une valeur dans les formulaires de choix d'un nouveau mot de
-        passe pour minimiser les chances peut-être que l'utilisateur ait mal saisi son premier mot de passe et se
+        Certains sites empêchent également de copier-coller une valeur dans les formulaires de choix d’un nouveau mot de
+        passe pour minimiser les chances peut-être que l’utilisateur ait mal saisi son premier mot de passe et se
         retrouve ensuite coincé.
       </p>
 
@@ -158,32 +158,32 @@ function FRArticle() {
           après plus de 3 essais échoués pour le même utilisateur
         </li>
         <li>
-          si l'utilisateur oublie son mot de passe ou l'a mal saisi, sauf cas spécifique, vous devez lui proposer un
+          si l’utilisateur oublie son mot de passe ou l’a mal saisi, sauf cas spécifique, vous devez lui proposer un
           système de mot de passe oublié
         </li>
       </ul>
       <p></p>
       <p>
-        Mais ce qui est le plus gênant, c'est que ces mécanismes anti-robot empêchent les coffres-fort de mot de passe
+        Mais ce qui est le plus gênant, c’est que ces mécanismes anti-robot empêchent les coffres-fort de mot de passe
         de bien fonctionner lors du remplissage automatiquement les formulaires, ce qui est extrêmement frustrant pour
         les utilisateurs.{" "}
         <strong>
-          En utilisant ces méthodes, vous rendez encore plus difficle l'adoption d'un coffre-fort de mots de passe et
+          En utilisant ces méthodes, vous rendez encore plus difficle l’adoption d’un coffre-fort de mots de passe et
           contribuez à rendre le web moins sûr.
         </strong>
       </p>
       <p>
-        Notre recommandation est donc au contraire de laisser les robots légitimes faire leur travail et d'
+        Notre recommandation est donc au contraire de laisser les robots légitimes faire leur travail et d’
         <strong>adopter les bonnes pratiques suivantes :</strong>
       </p>
       <ul style={{ fontWeight: "bold" }}>
         <li>ne pas interdir le copier-coller dans un champ mot de passe</li>
         <li>
           ne pas refuser les événements javascript émis par les robots (ie ne pas refuser les événements ayant
-          l'attribut "trusted" à faux)
+          l’attribut “trusted“ à faux)
         </li>
         <li>
-          utiliser systématiquement les attributs sémantiques "type" et "autocomplete" standards sur les champs input
+          utiliser systématiquement les attributs sémantiques “type“ et “autocomplete“ standards sur les champs input
           <ul>
             <li>
               <pre>{`<input type="text" autocomplete="username"/>`}</pre>
@@ -256,12 +256,12 @@ function ENArticle() {
         different characters the password contains, the more complex it will be for a hacker to decipher.
       </p>
       <p>
-        The problem is that this doesn't have a big effect on password security in real-life because users will use
-        obvious substitution mechanisms that will barely slow down hackers. For example 'i' will become '1', 'a' will
-        become '@' and 's' will become '$'.
+        The problem is that this doesn’t have a big effect on password security in real-life because users will use
+        obvious substitution mechanisms that will barely slow down hackers. For example ’i’ will become ’1’, ’a’ will
+        become ’@’ and ’s’ will become ’$’.
       </p>
       <p>
-        As we explain in our article <a href="/resources/articles/1">"What is a strong password?"</a>, the strength of a
+        As we explain in our article <a href="/resources/articles/1">“What is a strong password?“</a>, the strength of a
         password depends primarily on its length.
       </p>
       <p>
@@ -269,7 +269,7 @@ function ENArticle() {
           Our advice is therefore to impose a password length of at least 12 characters (or even 14) and to display to
           the user an evaluation of the strength of their password using libraries like zxcvbn.
         </strong>{" "}
-        Also impose the use of all types of characters since users are used to it and it doesn't hurt.
+        Also impose the use of all types of characters since users are used to it and it doesn’t hurt.
       </p>
       <h2>3- Require regular renewal of your employees’ passwords</h2>
       <p>
@@ -285,7 +285,7 @@ function ENArticle() {
         </li>
         <li>
           Over-demanding users by requiring them to change their passwords too often risks discouraging them or creating
-          behaviors in them that won't stop any hacker, such as adding a date or number at the end of the existing
+          behaviors in them that won’t stop any hacker, such as adding a date or number at the end of the existing
           password for example…
         </li>
         <li>
@@ -306,8 +306,8 @@ function ENArticle() {
           security.
         </strong>{" "}
         Indeed, the user will be able to define a random password which prevents the hacker from extracting the password
-        from its hashed version (unless the site being hacked stores the password in clear text, but there, it's not
-        your users' fault, it's yours).
+        from its hashed version (unless the site being hacked stores the password in clear text, but there, it’s not
+        your users’ fault, it’s yours).
       </p>
       <p>
         The other benefit of a password vault is to{" "}
@@ -326,7 +326,7 @@ function ENArticle() {
       </p>
       <ul>
         <li>Avoid automatic scripted attacks</li>
-        <li>Force the user to enter their password so they don't forget it</li>
+        <li>Force the user to enter their password so they don’t forget it</li>
       </ul>
       <p>
         Some sites also prevent copying and pasting a value into new password forms to minimize the chance that perhaps
@@ -346,7 +346,7 @@ function ENArticle() {
       </ul>
       <p></p>
       <p>
-        But what's most annoying is that these anti-bot mechanisms prevent password vaults from working properly when
+        But what’s most annoying is that these anti-bot mechanisms prevent password vaults from working properly when
         autofilling forms, which is extremely frustrating for users.{" "}
         <strong>
           By using these methods, you are making it even more difficult to adopt password vaults and you contribute to
@@ -360,7 +360,7 @@ function ENArticle() {
       <ul style={{ fontWeight: "bold" }}>
         <li>do not prohibit copying and pasting into a password field</li>
         <li>
-          do not refuse javascript events emitted by robots (ie do not refuse events with the "trusted" attribute set to
+          do not refuse javascript events emitted by robots (ie do not refuse events with the “trusted“ attribute set to
           false)
         </li>
         <li>

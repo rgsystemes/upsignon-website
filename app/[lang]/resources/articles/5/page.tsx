@@ -50,12 +50,12 @@ function FRArticle() {
         <h4>Identification vs. Authentification</h4>
         <ul>
           <li>
-            <strong>L'identification</strong> consiste à reconnaître un individu unique par son état civil (nom, prénom,
+            <strong>L’identification</strong> consiste à reconnaître un individu unique par son état civil (nom, prénom,
             date de naissance, nationalité, etc.). Présenter une carte d’identité ou un passeport permet d’être
             identifié.
           </li>
           <li>
-            <strong>L'authentification</strong> est le fait de vérifier la légitimité d’une personne ou d’un système à
+            <strong>L’authentification</strong> est le fait de vérifier la légitimité d’une personne ou d’un système à
             accéder à une ressource. Selon le contexte, il sera nécessaire ou non de s’identifier pour être authentifié.
             Pour ouvrir un compte en banque, vous devrez être identifié, mais pour accéder à l’espace client d’un site
             de e-commerce, votre identité ne sera pas exigée. Autrement dit, ne pas confondre identifiant avec identité.
@@ -72,7 +72,7 @@ function FRArticle() {
       <p>
         Les 2 preuves doivent appartenir à des catégories différentes d’authentification (cf préambule). Lorsque deux
         preuves du même type sont demandées, on parle plutôt de double authentification. Par abus de langage, certaines
-        personnes parlent de double authentification à la place d'authentification à deux facteurs qui est plus précis.
+        personnes parlent de double authentification à la place d’authentification à deux facteurs qui est plus précis.
       </p>
       <p>
         Typiquement, un facteur de connaissance et un facteur de possession seront combinés. Par exemple possession
@@ -98,14 +98,14 @@ function FRArticle() {
           observer le canal de communication entre le prouveur et le vérifieur : par exemple un code PIN d’immeuble
           n’est pas résistant à ce type d’attaque car quelqu’un qui vous observe peut voir le secret que vous tapez et
           rentrer dans l’immeuble. La plupart des systèmes d’authentification à base de facteur de connaissance, comme
-          le mot de passe, ne résistent pas aux attaques par écoute (du moins pas sans l'utilisation d'un autre système
+          le mot de passe, ne résistent pas aux attaques par écoute (du moins pas sans l’utilisation d’un autre système
           de sécurité) et sont donc des systèmes d’authentification faibles.
         </li>
         <li>
           <strong>résistance aux attaques par rejeu</strong> qui consistent pour un attaquant à rejouer une séquence
-          d'authentification qu'ils ont observé. Le mot de passe par exemple ne résiste pas à ce genre d'attaque car le
-          même mot de passe est utilisé pour se connecter à chaque session. À l'inverse, un lien à usage unique pour
-          réinitialiser un mot de passe ou un code TOTP n'est valide qu'une seule fois et ne peut donc pas être rejoué.
+          d’authentification qu’ils ont observé. Le mot de passe par exemple ne résiste pas à ce genre d’attaque car le
+          même mot de passe est utilisé pour se connecter à chaque session. À l’inverse, un lien à usage unique pour
+          réinitialiser un mot de passe ou un code TOTP n’est valide qu’une seule fois et ne peut donc pas être rejoué.
         </li>
         <li>
           <strong>résistance aux attaques de l’homme du milieu</strong> qui consistent pour un attaquant à intercepter
@@ -128,13 +128,13 @@ function FRArticle() {
 
       <p>
         Un système d’authentification forte n’a en théorie pas besoin d’être multi-facteurs. En pratique, les systèmes
-        d'authentification forte reposent le plus souvent sur un facteur de possession lui-même verrouillé par un mot de
+        d’authentification forte reposent le plus souvent sur un facteur de possession lui-même verrouillé par un mot de
         passe ou par biométrie pour qu’il ne soit pas compromis en cas de vol.
       </p>
 
-      <p>Les exemples de systèmes d'authentification forte reposant sur un facteur de possession sont :</p>
+      <p>Les exemples de systèmes d’authentification forte reposant sur un facteur de possession sont :</p>
       <ul>
-        <li>l'authentification par certificat (sur carte à puce ou sur clé usb)</li>
+        <li>l’authentification par certificat (sur carte à puce ou sur clé usb)</li>
         <li>les protocles FIDO2 et FIDO U2F</li>
         <li>les protocles TOTP</li>
       </ul>
