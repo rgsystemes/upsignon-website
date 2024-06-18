@@ -232,7 +232,7 @@ export function PriceSimulator(p: { lang: string }) {
           ]}
           onSubmit={(values: { [k: string]: string }, close: () => void): Promise<void> | void => {
             const req = new XMLHttpRequest();
-            req.open("POST", "http://app.upsignon.eu/get-quote", true);
+            req.open("POST", "https://app.upsignon.eu/get-quote", true);
             req.onload = function () {
               if (req.status != 200) {
                 alert(`Error ${req.status}: ${req.statusText}`);
