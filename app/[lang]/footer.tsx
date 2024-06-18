@@ -16,15 +16,20 @@ export function Footer(p: { lang: string }) {
           <Link href="/features">{t.menu.features}</Link>
           <Link href="/pricing">{t.menu.pricing}</Link>
           <Link href="/downloads">{t.menu.downloads}</Link>
-          <Link href="/resources">{t.menu.resources}</Link>
+          <Link href="/downloads/windows">{t.downloads.windowsOtherOptions}</Link>
+          <Link href="/resources/articles">{t.resources.articles}</Link>
+          <Link href="https://upsignon.notion.site/Notice-d-utilisation-d-UpSignOn-de4f8ba200e14ec1adcaba2613b38340?pvs=4">
+            {t.resources.tutorials}
+          </Link>
+          <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
+          <Link href="/resources/release-notes/app">{t.resources.releaseNotes}</Link>
+          <Link href="/resources/commitments">{t.resources.contractualCommitments}</Link>
         </nav>
         <div className={styles.footerSection}>
           <section>
             <h1>{t.footer.contactUs}</h1>
             <address>
               <a href="mailto:contact@upsignon.eu">contact@upsignon.eu</a>
-              <br />
-              <a href="tel:+33670743299">(+33) 6 70 74 32 99</a>
             </address>
           </section>
           <section>
