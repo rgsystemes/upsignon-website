@@ -1,5 +1,13 @@
+import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../../page.module.css";
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const t = getDictionary(params.lang);
+  return {
+    title: t.techResources.protectedClipboardBehaviour.title,
+  };
+}
 
 export default function ProtectedClipboardBehaviour({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);

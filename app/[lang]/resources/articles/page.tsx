@@ -12,6 +12,14 @@ import strongPwdMini from "../../../../public/articles/strongPwdMini.jpg";
 import pwdMini from "../../../../public/articles/pwdMini.jpeg";
 import passwordManagerImg from "../../../../public/articles/passwordManager.png";
 import { getDictionary } from "../../../../translations/translations";
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const t = getDictionary(params.lang);
+  return {
+    title: t.resources.articles,
+  };
+}
 
 export default function ArticlesPage({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);

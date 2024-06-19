@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "../page.module.css";
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const t = getDictionary(params.lang);
+  return {
+    title: t.resources.technicalExplanations,
+  };
+}
 
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);

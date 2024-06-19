@@ -1,4 +1,17 @@
+import { Metadata } from "next";
 import styles from "../page.module.css";
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  if (params.lang === "fr") {
+    return {
+      title: "Nos engagements contractuels",
+    };
+  } else {
+    return {
+      title: "Our contractual commitments",
+    };
+  }
+}
 
 export default function Page({ params }: { params: { lang: string } }) {
   if (params.lang === "fr") {

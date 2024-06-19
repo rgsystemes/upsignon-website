@@ -4,7 +4,14 @@ import styles from "../article.module.css";
 
 import EmployeesPasswordsImg from "../../../../../public/articles/employeesPasswords.jpg";
 import EmployeesPasswordsPostitsImg from "../../../../../public/articles/employeesPasswordsPostits.jpg";
+import { Metadata } from "next";
 
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const t = getDictionary(params.lang);
+  return {
+    title: t.articles[10].title,
+  };
+}
 export default function Article10({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
   return (

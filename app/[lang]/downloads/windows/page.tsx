@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import {
   allMsiVersions,
   allMsixBundleVersions,
@@ -36,6 +37,19 @@ Get-AppxPackage -Name 'dataSmine.UpSignOn' -AllUsers | Remove-AppxPackage -AllUs
 const msiMigrationScript2 = `
 Start-Process \\\\srv\\partages$\\xxx\\UpSignOn-7.3.0-silent-installer.msi -ArgumentList "/quiet"
 `;
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  if (params.lang === "fr") {
+    return {
+      title: "Téléchargements - Windows",
+    };
+  } else {
+    return {
+      title: "Downloads - Windows",
+    };
+  }
+}
+
 export default function WindowsAllDownloadsPage({ params }: { params: { lang: string } }) {
   if (params.lang === "fr") {
     return <FRWindowsAllDownloadPage />;

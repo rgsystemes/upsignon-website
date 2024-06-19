@@ -10,7 +10,14 @@ import ChromeImg from "../../../public/icons/Chrome.svg";
 import BraveImg from "../../../public/icons/Brave.svg";
 import OperaImg from "../../../public/icons/Opera.svg";
 import Image from "next/image";
+import { Metadata } from "next";
 
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const t = getDictionary(params.lang);
+  return {
+    title: t.downloads.pageTitle,
+  };
+}
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
   return (

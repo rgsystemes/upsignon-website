@@ -1,11 +1,24 @@
+import { Metadata } from "next";
 import { linuxVersions } from "../../resources/release-notes/app/versionList";
 import styles from "./page.module.css";
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  if (params.lang === "fr") {
+    return {
+      title: "Téléchargements - Linux",
+    };
+  } else {
+    return {
+      title: "Downloads - Linux",
+    };
+  }
+}
 
 export default function LinuxOtherDownloads({ params }: { params: { lang: string } }) {
   if (params.lang === "fr") {
     return FRLinuxOtherDownloads();
   } else {
-    return;
+    return ENLinuxOtherDownloads();
   }
 }
 
@@ -49,6 +62,51 @@ function FRLinuxOtherDownloads() {
           ouvrir l’application UpSignOn)
         </li>
         <li>signature de l’application</li>
+      </ul>
+    </section>
+  );
+}
+
+function ENLinuxOtherDownloads() {
+  const currentVersion = linuxVersions[0];
+  return (
+    <section className={styles.content}>
+      <div className={styles.backArrow}>
+        <span>&lt;  </span>
+        <a href="/downloads">Downloads</a>
+      </div>
+      <h1>Linux downloads and information</h1>
+      <p>Direct AppImage downloads</p>
+      <p>
+        <a
+          className={styles.buttonLink}
+          href={`https://app.upsignon.eu/UpSignOn-${currentVersion}-x86_64.AppImage`}
+          download
+        >
+          Latest AppImage
+        </a>
+      </p>
+
+      <p>All versions</p>
+      <ul className={styles.ul}>
+        {linuxVersions.map((v) => (
+          <li key={v}>
+            <a href={`https://app.upsignon.eu/UpSignOn-${v}-x86_64.AppImage`} download>
+              {v}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <p>Beware, the following features are not yet available or documented:</p>
+      <ul>
+        <li>application icon</li>
+        <li>automatic locking and locking with user session</li>
+        <li>
+          browser extensions setup (the procedure to activate the upsignon:// to open the UpSignOn app has not been
+          documented yet)
+        </li>
+        <li>application signing</li>
       </ul>
     </section>
   );

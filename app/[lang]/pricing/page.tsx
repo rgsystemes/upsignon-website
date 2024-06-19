@@ -1,9 +1,16 @@
+import { Metadata } from "next";
 import { getDictionary } from "../../../translations/translations";
 import { ContactLaterButton } from "../contactLaterButton/contactLaterButton";
 import { FreeTrialButton } from "../freeTrialButton/freeTrial";
 import styles from "./page.module.css";
 import { PriceSimulator } from "./priceSimulator";
 
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const t = getDictionary(params.lang);
+  return {
+    title: t.menu.pricing,
+  };
+}
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
   return (

@@ -1,6 +1,13 @@
+import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../article.module.css";
 
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const t = getDictionary(params.lang);
+  return {
+    title: t.articles[6].title,
+  };
+}
 export default function Article6({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
   return (

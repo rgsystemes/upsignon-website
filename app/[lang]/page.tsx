@@ -12,6 +12,14 @@ import SingleAdvantage from "./singleAdvantage";
 import { ContactLaterButton } from "./contactLaterButton/contactLaterButton";
 import { FreeTrialButton } from "./freeTrialButton/freeTrial";
 import { ContactUsButton } from "./contactUsButton/contactUsButton";
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const t = getDictionary(params.lang);
+  return {
+    title: t.pitch.moto,
+  };
+}
 
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);

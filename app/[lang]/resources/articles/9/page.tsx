@@ -1,7 +1,13 @@
-import Image from "next/image";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../article.module.css";
+import { Metadata } from "next";
 
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const t = getDictionary(params.lang);
+  return {
+    title: t.articles[9].title,
+  };
+}
 export default function Article9({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
   return (

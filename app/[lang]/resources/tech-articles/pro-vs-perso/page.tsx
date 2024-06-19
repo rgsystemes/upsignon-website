@@ -1,5 +1,18 @@
+import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../../page.module.css";
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  if (params.lang === "fr") {
+    return {
+      title: "Principes de fonctionnement des coffres-forts PERSO et PRO",
+    };
+  } else {
+    return {
+      title: "Operating principles of PERSO and PRO vaults",
+    };
+  }
+}
 
 export default function ProVsPerso({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);

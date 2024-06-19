@@ -56,9 +56,12 @@ import syncImg from "../../../public/images/sync.svg";
 import Link from "next/link";
 import { ContactUsButton } from "../contactUsButton/contactUsButton";
 
-export const metadata: Metadata = {
-  title: "Fonctionnalités",
-};
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const t = getDictionary(params.lang);
+  return {
+    title: t.features.pageTitle,
+  };
+}
 
 export default function Page({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);

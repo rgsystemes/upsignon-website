@@ -14,7 +14,14 @@ import keySvg from "../../../../../public/articles/key.svg";
 import checkTickSVG from "../../../../../public/articles/tick.svg";
 import forUsersImg from "../../../../../public/articles/for-users.png";
 import forAdminImg from "../../../../../public/articles/responsable.png";
+import { Metadata } from "next";
 
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const t = getDictionary(params.lang);
+  return {
+    title: t.articles[3].title,
+  };
+}
 export default function Article2({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
   return (
