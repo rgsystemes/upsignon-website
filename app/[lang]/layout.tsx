@@ -30,7 +30,7 @@ export default function RootLayout({ children, params }: { children: React.React
         <link rel="icon" type="image/png" sizes="32x32" href={favicon32.src} />
         <link rel="icon" type="image/png" sizes="192x192" href={favicon192.src} />
         <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon.src} />
-        <link rel="mask-icon" href={safariPinnedTab} color="#00aba8" />
+        <link rel="mask-icon" href={safariPinnedTab.src} color="#00aba8" />
       </head>
       {/* set an id for Modal accessibility */}
       <body id="body">
