@@ -9,6 +9,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const t = getDictionary(params.lang);
   return {
     title: t.menu.pricing,
+    description: t.pricing.metaDescription,
   };
 }
 export default function Page({ params }: { params: { lang: string } }) {

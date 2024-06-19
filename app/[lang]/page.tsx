@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const t = getDictionary(params.lang);
   return {
     title: t.pitch.moto,
+    description: t.pitch.metaDescription,
   };
 }
 

@@ -5,10 +5,14 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   if (params.lang === "fr") {
     return {
       title: "Nos engagements contractuels",
+      description:
+        "Résumé simplifié de nos engagements en terme de RGPD, de maintenance, d'hébergement, de support et autres garanties.",
     };
   } else {
     return {
       title: "Our contractual commitments",
+      description:
+        "Simplified summary of our commitments in terms of GDPR, maintenance, hosting, support and other guarantees.",
     };
   }
 }

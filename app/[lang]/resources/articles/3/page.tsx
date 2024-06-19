@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const t = getDictionary(params.lang);
   return {
     title: t.articles[3].title,
+    description: t.articles[3].metaDescription,
   };
 }
 export default function Article2({ params }: { params: { lang: string } }) {

@@ -47,6 +47,8 @@ const translations = {
     copyright: "tous droits réservés",
   },
   pitch: {
+    metaDescription:
+      "Découvrez UpSignOn, notre solution de gestion de mots de passe française, conviviale, sécurisée et multi-plateforme. Sécurisez et oubliez vos mots de passe. Obtenez une vue d'ensemble des mots de passe dans votre entreprise et partagez-les avec vos collègues.",
     moto: "UpSignOn, le coffre de MOTS DE PASSE FORTS pour les particuliers et les pros.",
     subtitle: "Enregistrez, sécurisez et oubliez\nvos mots de passe !",
     prezVideoTitle: "Vidéo de présentation d'UpSignOn",
@@ -147,6 +149,7 @@ const translations = {
     },
   },
   pricing: {
+    metaDescription: "Obtenez notre tarification claire et transparente et recevez un devis par email.",
     persoPricing: {
       t: "PERSO",
       free: "0€",
@@ -205,14 +208,19 @@ const translations = {
     distribDetails: "Nous avons un deal gagnant-gagnant à vous proposer. Contactez-nous !",
   },
   downloads: {
+    metaDescription:
+      "Téléchargez UpSignOn et ses extensions de navigateur sur Windows, macOS, Linux, iOS et Android et sur Chrome, Edge, Firefox et Safari.",
     pageTitle: "Téléchargements (gratuits)",
     appTitle: "1 - Téléchargez l'application",
     windowsOtherOptions: "Autres options de téléchargement & GPO",
     linuxOtherOptions: "Informations et versions",
     browserExtensionTitle: "2 - Téléchargez l'extension de navigateur",
     chromiumBrowsers: "Navigateurs Chromium",
+    safariIncludedInApp: "Livrée avec l'application macOS",
   },
   features: {
+    metaDescription:
+      "Découvrez et visualisez la liste quasi-exhaustive des fonctionnalités de notre application, de notre extension de navigateur et de notre console de supervision.",
     pageTitle: "Fonctionnalités",
     questions: "Une question ? Un besoin spécifique ?",
     tags: {
@@ -670,6 +678,7 @@ const translations = {
   resources: {
     tutorials: "Tutoriels",
     technicalExplanations: "Explications techniques",
+    technicalExplanationsMetaDesc: "Tous nos articles pour comprendre le fonctionnement interne d'UpSignOn.",
     onPremDoc: "Auto-hébergement : documentation d'installation",
     generalDesignPrinciples: "Principes de fonctionnement des coffres-forts PERSO et PRO",
     releaseNotes: "Notes de version",
@@ -678,6 +687,8 @@ const translations = {
   },
   techResources: {
     protectedClipboardBehaviour: {
+      metaDescription:
+        "Explication des différences de fonctionnement de la fonctionnalité de protection du presse-papier selon les plateformes.",
       title: "Détail de fonctionnement du presse-papier sécurisé",
       ios: "L’information sensible ajoutée au presse-papier s’efface automatiquement au bout de 45 secondes, même si l’application est éteinte.",
       desktop:
@@ -696,14 +707,19 @@ const translations = {
     },
   },
   releaseNotes: {
+    metaDescription:
+      "Notes de version détaillées des différents composants d'UpSignOn (application, extension de navigateur, serveur PRO, console de supervision PRO).",
     app: "Application",
     extension: "Extension de navigateur",
     server: "Serveur PRO",
     dashboard: "Console de supervision PRO",
   },
   articles: {
+    metaDescription: "Tous nos articles pour mieux comprendre le monde des mots de passe et de la cybersécurité.",
     readArticle: "lire l'article",
     1: {
+      metaDescription:
+        "Comprenez ce qu'est véritablement un mot de passe fort, ce qu'est une attaque par force brute, une attaque par dictionnaire et leurs implications sur la façon de créer des mots de passe résistants aux pirates.",
       title: "Qu'est-ce qu'un mot de passe fort ?",
       summary:
         "Un mot de passe qui contient des caractères spéciaux ? Oui et non. C'est en fait sa taille qui compte le plus. Explications.",
@@ -715,40 +731,58 @@ const translations = {
       bYears: "Mrd d'années",
     },
     2: {
+      metaDescription:
+        "Comprenez pourquoi il est urgent que vous utilisiez des mots de passe différents sur tous vos comptes et comment vous pouvez faire en pratique pour y parvenir.",
       title: "Vous utilisez le même mot de passe partout ?",
       summary: "Stop ! C'est vraiment une très mauvaise idée ! On vous explique pourquoi.",
     },
     3: {
+      metaDescription:
+        "Découvrez l'ensemble des enjeux de sécurité liés aux mots de passe et comprenez comment l'adoption d'un coffre-fort de mots de passe dans votre entreprise peut y répondre.",
       title: "Pourquoi utiliser un gestionnaire de mots de passe ?",
       summary: "L'argumentaire étoffé en faveur de l'utilisation d'un coffre-fort de mots de passe.",
     },
     4: {
+      metaDescription:
+        "Creusons ensemble les concepts de sécurité logique, de sécurité cryptographique, de conception à confiance nulle et de conception à connaissance nulle.",
       title: "Zoom sur 4 conceptions de la sécurité informatique",
       summary: "On entend souvent qu'aucun système n'est infaillible. Cela dépend de ce dont on parle...",
     },
     5: {
+      metaDescription:
+        "Bien comprendre les différents facteurs d'authentification (connaissance, inhérence, possession) et ce que sont réellement la MFA, la 2FA et l'authentification forte.",
       title: "MFA, 2FA, authentification forte : quelles différences ?",
       summary: "Définitions et explications de ces concepts fondamentaux.",
     },
     6: {
+      metaDescription:
+        "Guide pratique pour adopter les bons réflexes lorsque vous naviguez sur internet pour éviter d'être victimes d'arnaques et de phishing.",
       title: "Comment détecter les sites web non sécurisés ?",
       summary: "Guide pratique pour adopter les bons réflexes lorsque vous naviguez sur internet.",
     },
     7: {
+      metaDescription:
+        "Vos données personnelles, que vous pensez souvent anodines, peuvent en réalité être utilisée pour usurper votre identité, vous dérober de l'argent, ou voler de l'argent à vos proches !",
       title: "Vous pensez que vos données personnelles n'intéressent pas les hackers ?",
       summary: "Voici pourquoi vos données valent de l'or pour eux.",
     },
     8: {
+      metaDescription:
+        "Utilisez un coffre-fort de mots de passe dédié pour une plus grande sécurité, portabilité, pour pouvoir partager vos secrets, bien séparer vos mots de passe pro et perso, ajouter des notes et TOTP, et superviser les mots de passe dans votre entreprise.",
       title: "Navigateur vs. coffre-fort de mots de passe dédié",
       summary:
         "Quel est l'intérêt d'utiliser un coffre-fort de mots de passe dédié alors que votre navigateur vous propose déjà un outil intégré ?",
     },
     9: {
+      metaDescription:
+        "Développeurs, ne faites plus ces erreurs courantes : imposer un nombre maximum de caractères trop faible, imposer des mots de passe trop complexes, imposer des changements de mots de passe trop fréquents et empêcher les robots de remplir vos formulaires.",
       title: "Développeurs : les fausses bonnes idées répandues sur les formulaires de connexion",
       summary:
         "Obliger l'utilisation de caractères spéciaux, limiter la longueur des mots de passe, forcer à changer de mot de passe régulièrement...",
     },
     10: {
+      metaDescription:
+        "Vos collaborateurs sont le maillon faible de votre cyber-défense, notamment via leurs mots de passe. Apprenez pourquoi et comment mieux les accompagner vers le renforcement de leurs mots de passe.",
       title: "Cybermenaces, et si on parlait des mots de passe de vos collaborateurs ?",
       summary: "Résumé des enjeux.",
     },

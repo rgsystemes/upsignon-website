@@ -1,6 +1,7 @@
 import { getDictionary } from "../../../translations/translations";
 import styles from "./page.module.css";
 import EdgeImg from "../../../public/icons/Edge.svg";
+import SafariImg from "../../../public/icons/Safari.svg";
 import AppleImg from "../../../public/icons/Apple.svg";
 import AndroidImg from "../../../public/icons/Android.svg";
 import WindowsImg from "../../../public/icons/Windows.svg";
@@ -16,6 +17,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const t = getDictionary(params.lang);
   return {
     title: t.downloads.pageTitle,
+    description: t.downloads.metaDescription,
   };
 }
 export default function Page({ params }: { params: { lang: string } }) {
@@ -144,6 +146,13 @@ export default function Page({ params }: { params: { lang: string } }) {
                 </a>
               </td>
             </tr>
+            <tr>
+              <td className={styles.platformHeader}>
+                <SafariLogo />
+              </td>
+              <td>Safari (macOS)</td>
+              <td>{t.downloads.safariIncludedInApp}</td>
+            </tr>
           </tbody>
         </table>
       </section>
@@ -191,6 +200,14 @@ function FirefoxLogo() {
   );
 }
 
+function SafariLogo() {
+  return (
+    <div className={styles.platformLogo}>
+      <Image src={SafariImg} alt="Safari (macOS)" width="50" />
+    </div>
+  );
+}
+
 function EdgeLogo() {
   return (
     <div className={styles.platformLogo}>
@@ -198,6 +215,7 @@ function EdgeLogo() {
     </div>
   );
 }
+
 function EdgeLogoAlt() {
   return (
     <div className={styles.platformLogo}>

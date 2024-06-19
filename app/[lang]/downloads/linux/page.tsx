@@ -6,10 +6,12 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   if (params.lang === "fr") {
     return {
       title: "Téléchargements - Linux",
+      description: "Tous les liens et informations utiles pour télécharger et installer UpSignOn sur Linux.",
     };
   } else {
     return {
       title: "Downloads - Linux",
+      description: "All links and useful information to download and install UpSignOn on Linux.",
     };
   }
 }

@@ -49,6 +49,8 @@ const translations: typeof fr = {
     copyright: "all rights reserved",
   },
   pitch: {
+    metaDescription:
+      "Discover UpSignOn, our user-friendly, secure and multi-platform password management solution. Secure and forget your passwords. Get an overview of the passwords in your company and share them with colleagues.",
     moto: "UpSignOn, the STRONG PASSWORD vault\nfor private and professional use.",
     subtitle: "Save, secure and forget\nyour passwords!",
     prezVideoTitle: "UpSignOn presentation video",
@@ -149,6 +151,7 @@ const translations: typeof fr = {
     },
   },
   pricing: {
+    metaDescription: "Get our clear and transparent pricing and receive a quote by email.",
     persoPricing: {
       t: "PERSO",
       free: "0€",
@@ -207,14 +210,19 @@ const translations: typeof fr = {
     distribDetails: "We have a win-win deal for you. Please contact us!",
   },
   downloads: {
+    metaDescription:
+      "Download UpSignOn and its browser extensions on Windows, macOS, Linux, iOS and Android and on Chrome, Edge, Firefox and Safari.",
     pageTitle: "Donwloads (free)",
     appTitle: "1 - Download the app",
     windowsOtherOptions: "Other download options & GPO",
     linuxOtherOptions: "Informations and versions",
     browserExtensionTitle: "2 - Download the browser extension",
     chromiumBrowsers: "Chromium browsers",
+    safariIncludedInApp: "Shipping with the macOS app.",
   },
   features: {
+    metaDescription:
+      "Discover and view the almost exhaustive list of features of our application, our browser extension and our supervision console.",
     pageTitle: "Features",
     questions: "A question? A specific need?",
     tags: {
@@ -659,6 +667,7 @@ const translations: typeof fr = {
   resources: {
     tutorials: "Tutorials",
     technicalExplanations: "Technical explanations",
+    technicalExplanationsMetaDesc: "All our articles to help you understand the inner workings of UpSignOn.",
     onPremDoc: "Self-hosting : installation documentation",
     generalDesignPrinciples: "How the PERSO and PRO vaults work",
     releaseNotes: "Release notes",
@@ -667,6 +676,8 @@ const translations: typeof fr = {
   },
   techResources: {
     protectedClipboardBehaviour: {
+      metaDescription:
+        "Explanation of the behavior differences of the clipboard protection function on different platforms.",
       title: "Details of how the secure clipboard works",
       ios: "Sensitive information added to the clipboard is automatically deleted after 45 seconds, even if the application is turned off.",
       desktop:
@@ -686,14 +697,19 @@ const translations: typeof fr = {
   },
 
   releaseNotes: {
+    metaDescription:
+      "Detailed release notes for the various components of UpSignOn (application, browser extension, PRO server, PRO supervision console).",
     app: "Application",
     extension: "Browser extension",
     server: "PRO server",
     dashboard: "PRO supervision console",
   },
   articles: {
+    metaDescription: "All our articles to better understand the password and cybersecurity world.",
     readArticle: "read article",
     1: {
+      metaDescription:
+        "Understand what a strong password really is, what a brute force attack and a dictionary attack are and their implications on how to create hacker resistant passwords.",
       title: "What is a strong password?",
       summary:
         "A password that contains special characters? Yes and no. It's actually the size that matters most. Explanations.",
@@ -705,39 +721,57 @@ const translations: typeof fr = {
       bYears: "Billion years",
     },
     2: {
+      metaDescription:
+        "Understand why it's urgent that you use different passwords on all your accounts and what you can do in practice to achieve this.",
       title: "Are you using the same password everywhere?",
       summary: "Stop! This is a really bad idea! We'll explain why.",
     },
     3: {
+      metaDescription:
+        "Discover the full range of password security issues and understand how adopting a password vault in your business can address them.",
       title: "Why use a password manager?",
       summary: "The strong case for using a password vault.",
     },
     4: {
+      metaDescription:
+        "Let's dig into the concepts of logical security, cryptographic security, zero-trust design and zero-knowledge design.",
       title: "Focus on 4 concepts of computer security",
       summary: "We often hear that no system is infallible. It depends on what we're talking about...",
     },
     5: {
+      metaDescription:
+        "Get a good understanding of the different authentication factors (knowledge, inherence, possession) and what MFA, 2FA and strong authentication really are.",
       title: "MFA, 2FA, strong authentication: what are the differences?",
       summary: "Definitions and explanations of these fundamental concepts.",
     },
     6: {
+      metaDescription:
+        "A practical guide to adopting the right reflexes when surfing the Internet to avoid falling victim to scams and phishing.",
       title: "How to detect insecure websites?",
       summary: "Practical guide to adopting good reflexes when browsing the internet.",
     },
     7: {
+      metaDescription:
+        "Your personal data, which you often think is harmless, can in fact be used to steal your identity, your money or the money of your loved ones!",
       title: "Do you think that your personal data is of no interest to hackers?",
       summary: "Here's why your data is worth gold to them.",
     },
     8: {
+      metaDescription:
+        "Use a dedicated password vault for greater security, portability, to be able to share your secrets, keep your pro and personal passwords well separated, add notes and TOTP, and supervise passwords across your business.",
       title: "Browser vs. dedicated password vault",
       summary: "What's the point of using a dedicated password vault when your browser already offers a built-in tool?",
     },
     9: {
+      metaDescription:
+        "Developers, stop making these common mistakes: imposing a maximum number of characters that is too low, imposing passwords that are too complex, imposing password changes that are too frequent and preventing robots from filling in your forms.",
       title: "Developers: common misconceptions about login forms",
       summary:
         "Require the use of special characters, limit the length of passwords, force passwords to be changed regularly...",
     },
     10: {
+      metaDescription:
+        "Your employees are the weak link in your cyber defence, particularly via their passwords. Find out why and how to help them strengthen their passwords.",
       title: "Cyber threats, what if we talked about your employees' passwords?",
       summary: "Summary of the issues.",
     },

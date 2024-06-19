@@ -7,6 +7,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   const t = getDictionary(params.lang);
   return {
     title: t.resources.technicalExplanations,
+    description: t.resources.technicalExplanationsMetaDesc,
   };
 }
 
