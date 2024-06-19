@@ -23,11 +23,27 @@ function getLocale(request: NextRequest) {
   return match(languages, locales, defaultLocale);
 }
 
+const unlocalizedAssets = [
+  "/favicon.ico",
+  "/apple-touch-icon.png",
+  "/favicon-16x16.png",
+  "/favicon-32x32.png",
+  "/favicon-192x192.png",
+  "/safari-pinned-tab.svg",
+  "/robots.txt",
+  "/sitemap.xml",
+];
+
 export function translationMiddleware(request: NextRequest): NextResponse {
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
-  const pathnameHasLocale = locales.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`);
 
+  const isUnlocalizedAsset = unlocalizedAssets.some((p) => {
+    return pathname.indexOf(p) >= 0;
+  });
+  if (isUnlocalizedAsset) return;
+
+  const pathnameHasLocale = locales.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`);
   if (pathnameHasLocale) return;
 
   // Redirect if there is no locale
