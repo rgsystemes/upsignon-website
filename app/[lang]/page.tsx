@@ -115,7 +115,7 @@ export default function Page({ params }: { params: { lang: string } }) {
           <h2>{t.pitch.demo.appDemo}</h2>
           <VimeoPlayer videoId="964351571" title={t.pitch.demo.appDemo} className={styles.demoVideo} />
           <h2>{t.pitch.demo.extensionDemo}</h2>
-          <VimeoPlayer videoId="964354492" title={t.pitch.demo.extensionDemo} className={styles.demoVideo} />
+          <VimeoPlayer videoId="964418300" title={t.pitch.demo.extensionDemo} className={styles.demoVideo} />
           <div className={styles.actionContainer}>
             <ContactUsButton lang={params.lang} className={styles.actionLinkOnGreen} />
             <ContactLaterButton lang={params.lang} className={styles.actionLinkOnGreen} />
