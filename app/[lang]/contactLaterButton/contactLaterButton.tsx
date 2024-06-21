@@ -19,7 +19,7 @@ export function ContactLaterButton(p: { lang: string; className: string }) {
         { t: t.callBackForm.telLabel, k: "contactPhone", r: true },
         { t: t.callBackForm.callbackDate, k: "callbackDate", r: true },
       ]}
-      onSubmit={(values: { [k: string]: string }, close: () => void): Promise<void> | void => {
+      onSubmit={(values: { [k: string]: string }): Promise<void> => {
         const subject = t.callBackForm.mailSubject;
         const body = t.callBackForm.mailBody
           .replaceAll(
@@ -30,7 +30,7 @@ export function ContactLaterButton(p: { lang: string; className: string }) {
         window.open(
           `mailto:contact@upsignon.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
         );
-        close();
+        return Promise.resolve();
       }}
     />
   );

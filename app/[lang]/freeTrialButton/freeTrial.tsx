@@ -21,7 +21,7 @@ export function FreeTrialButton(p: { lang: string; className: string }) {
         { t: t.freeTrialForm.emailLabel, k: "contactEmail", r: true },
         { t: t.freeTrialForm.telLabel, k: "contactPhone", r: true },
       ]}
-      onSubmit={(values: { [k: string]: string }, close: () => void): Promise<void> | void => {
+      onSubmit={(values: { [k: string]: string }): Promise<void> => {
         const subject = t.freeTrialForm.mailSubject;
         const body = t.freeTrialForm.mailBody.replaceAll(
           "$info",
@@ -30,7 +30,7 @@ export function FreeTrialButton(p: { lang: string; className: string }) {
         window.open(
           `mailto:contact@upsignon.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
         );
-        close();
+        return Promise.resolve();
       }}
     />
   );
