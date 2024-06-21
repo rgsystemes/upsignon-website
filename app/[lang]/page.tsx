@@ -112,10 +112,10 @@ export default function Page({ params }: { params: { lang: string } }) {
       <section className={`${styles.demoSection} ${styles.greenBackground}`}>
         <div className={styles.demoSectionContent}>
           <h1 className={styles.sectionTitle}>{t.pitch.demo.sectionTitle}</h1>
-          <h2>{t.pitch.demo.perso}</h2>
-          <VimeoPlayer videoId="915105612" title={t.pitch.demo.persoVideoTitle} className={styles.demoVideo} />
-          <h2>{t.pitch.demo.pro}</h2>
-          <VimeoPlayer videoId="915105612" title={t.pitch.demo.proVideoTitle} className={styles.demoVideo} />
+          <h2>{t.pitch.demo.appDemo}</h2>
+          <VimeoPlayer videoId="964351571" title={t.pitch.demo.appDemo} className={styles.demoVideo} />
+          <h2>{t.pitch.demo.extensionDemo}</h2>
+          <VimeoPlayer videoId="964354492" title={t.pitch.demo.extensionDemo} className={styles.demoVideo} />
           <div className={styles.actionContainer}>
             <ContactUsButton lang={params.lang} className={styles.actionLinkOnGreen} />
             <ContactLaterButton lang={params.lang} className={styles.actionLinkOnGreen} />

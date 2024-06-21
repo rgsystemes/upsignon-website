@@ -125,10 +125,8 @@ const translations: typeof fr = {
     },
     demo: {
       sectionTitle: "Come on, let's show you!",
-      perso: "PERSO vaults and browser extension demo",
-      persoVideoTitle: "PERSO vaults and browser extension demo video",
-      pro: "PRO vaults and supervision console demo",
-      proVideoTitle: "PRO vaults and supervision console demo video",
+      appDemo: "Presentation of the application's interface - PERSO and PRO vaults",
+      extensionDemo: "Presentation of the browser extension - autofill and autosave",
     },
     securityByDesign: {
       sectionTitle: "Security by design",

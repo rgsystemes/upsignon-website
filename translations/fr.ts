@@ -123,10 +123,8 @@ const translations = {
     },
     demo: {
       sectionTitle: "Allez, on vous montre !",
-      perso: "Démo des coffres-forts PERSO et de l'extension de navigateur",
-      persoVideoTitle: "Vidéo de démonstration des coffres-forts PERSO et de l'extension de navigateur",
-      pro: "Démo des coffres-forts PRO et de la console de supervision",
-      proVideoTitle: "Vidéo de démonstration des coffres-forts PRO et de la console de supervision",
+      appDemo: "Présentation de l'interface de l'application - coffres-forts PERSO et PRO",
+      extensionDemo: "Présentation de l'extension de navigateur - remplissage et enregistrement automatique",
     },
     securityByDesign: {
       sectionTitle: "Sécurité par conception",
