@@ -61,10 +61,10 @@ export function Footer(p: { lang: string }) {
             <span className={styles.subsectionTitle}>{t.footer.publisher}</span>: Gireg de Kerdanet
           </span>
           <span>
-            <span className={styles.subsectionTitle}>{t.footer.hostedBy} </span>1&1 IONOS SARL
+            <span className={styles.subsectionTitle}>{t.footer.hostedBy} </span>Vercel Inc.
           </span>
-          <span>7 place de la Gare, BP 70109, 57200 Sarreguemines, France</span>
-          <span>+339 70 808 911 - info@ionos.fr</span>
+          <span>340 S Lemon Ave #4133, Walnut, CA 91789, USA</span>
+          <span>(559) 288-7060</span>
         </details>
       </div>
       <div className={styles.copyright}>
