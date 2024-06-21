@@ -58,7 +58,7 @@ function FRCommitments() {
         <li>
           Nos sous-traitants
           <ul>
-            <li>hébergement : OVH (société française)</li>
+            <li>hébergement : Scaleway (entreprise française)</li>
             <li>
               gestion des logs d’erreur : Sentry (société américaine)
               <ul>
@@ -97,7 +97,7 @@ function FRCommitments() {
       <h2>Hébergement SAAS</h2>
       <ul>
         <li>
-          <strong>Hébergement</strong> par une entreprise française (OVH) sur des datacenters en France.
+          <strong>Hébergement</strong> par une entreprise française (Scaleway) sur des datacenters en France.
         </li>
         <li>
           <strong>Engagement de Niveau de Service :</strong> 99,6% du temps 24h/24h, 7j/7j, sous réserve des éventuelles
@@ -259,7 +259,7 @@ function ENCommitments() {
         <li>
           Our subcontractors
           <ul>
-            <li>hosting: OVH (French company)</li>
+            <li>hosting: Scaleway (French company)</li>
             <li>
               error log management: Sentry (American company)
               <ul>
@@ -298,7 +298,7 @@ function ENCommitments() {
       <h2>SAAS Hosting</h2>
       <ul>
         <li>
-          <strong>Hosted</strong> by a French company (OVH) on data centers in France.
+          <strong>Hosted</strong> by a French company (Scaleway) on data centers in France.
         </li>
         <li>
           <strong>Service Level Agreement:</strong> 99.6% of the time 24 hours a day, 7 days a week, subject to any
