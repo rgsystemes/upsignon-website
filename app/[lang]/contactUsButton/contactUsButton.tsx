@@ -22,7 +22,7 @@ export function ContactUsButton(p: { lang: string; className: string }) {
 
   return (
     <>
-      <button onClick={openModal} className={p.className}>
+      <button onClick={openModal} className={`${styles.modalDefaultButton} ${p.className}`}>
         {t.actions.contactUs}
       </button>
       <Modal

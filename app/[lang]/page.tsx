@@ -54,6 +54,7 @@ export default function Page({ params }: { params: { lang: string } }) {
           </div>
         </section>
         <div className={styles.actionContainer}>
+          <ContactUsButton lang={params.lang} className={styles.actionLinkOnBlue} />
           <ContactLaterButton lang={params.lang} className={styles.actionLinkOnBlue} />
           <FreeTrialButton lang={params.lang} className={styles.actionLinkOnBlue} />
         </div>
@@ -106,20 +107,6 @@ export default function Page({ params }: { params: { lang: string } }) {
               <ContactLaterButton lang={params.lang} className={styles.actionLinkOnWhite} />
               <FreeTrialButton lang={params.lang} className={styles.actionLinkOnWhite} />
             </div>
-          </div>
-        </div>
-      </section>
-      <section className={`${styles.demoSection} ${styles.greenBackground}`}>
-        <div className={styles.demoSectionContent}>
-          <h1 className={styles.sectionTitle}>{t.pitch.demo.sectionTitle}</h1>
-          <h2>{t.pitch.demo.appDemo}</h2>
-          <VimeoPlayer videoId="964351571" title={t.pitch.demo.appDemo} className={styles.demoVideo} />
-          <h2>{t.pitch.demo.extensionDemo}</h2>
-          <VimeoPlayer videoId="964418300" title={t.pitch.demo.extensionDemo} className={styles.demoVideo} />
-          <div className={styles.actionContainer}>
-            <ContactUsButton lang={params.lang} className={styles.actionLinkOnGreen} />
-            <ContactLaterButton lang={params.lang} className={styles.actionLinkOnGreen} />
-            <FreeTrialButton lang={params.lang} className={styles.actionLinkOnGreen} />
           </div>
         </div>
       </section>

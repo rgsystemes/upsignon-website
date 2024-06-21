@@ -55,6 +55,9 @@ import multiDeviceImg from "../../../public/images/multiDevice.svg";
 import syncImg from "../../../public/images/sync.svg";
 import Link from "next/link";
 import { ContactUsButton } from "../contactUsButton/contactUsButton";
+import VimeoPlayer from "../vimeoPlayer";
+import { ContactLaterButton } from "../contactLaterButton/contactLaterButton";
+import { FreeTrialButton } from "../freeTrialButton/freeTrial";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
@@ -70,9 +73,23 @@ export default function Page({ params }: { params: { lang: string } }) {
     <div className={styles.page}>
       <div className={styles.content}>
         <h1>{t.features.pageTitle}</h1>
+        <section className={`${styles.demoSection} ${styles.greenBackground}`}>
+          <div className={styles.demoSectionContent}>
+            <h2 className={styles.demoTitle}>{t.pitch.demo.appDemo}</h2>
+            <VimeoPlayer videoId="964351571" title={t.pitch.demo.appDemo} className={styles.demoVideo} />
+            <h2 className={styles.demoTitle}>{t.pitch.demo.extensionDemo}</h2>
+            <VimeoPlayer videoId="964418300" title={t.pitch.demo.extensionDemo} className={styles.demoVideo} />
+            <h2 className={styles.demoTitle}>{t.pitch.demo.consoleDemo}</h2>
+            <VimeoPlayer videoId="964669787" title={t.pitch.demo.extensionDemo} className={styles.demoVideo} />
+          </div>
+        </section>
         <div className={styles.actionContainer}>
           <p>{t.features.questions}</p>
           <ContactUsButton lang={params.lang} className={styles.contactAction} />
+        </div>
+        <div className={styles.otherActionContainer}>
+          <ContactLaterButton lang={params.lang} className={styles.otherAction} />
+          <FreeTrialButton lang={params.lang} className={styles.otherAction} />
         </div>
         <h2 className={styles.feature_family_title}>{t.features.generalSubtitle}</h2>
         <FeatureSection

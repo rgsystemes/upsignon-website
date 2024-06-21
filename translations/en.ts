@@ -2,7 +2,7 @@ import fr from "./fr";
 
 const translations: typeof fr = {
   menu: {
-    features: "Features",
+    features: "Features & demos",
     pricing: "Pricing",
     downloads: "Downloads",
     resources: "Resources",
@@ -124,9 +124,9 @@ const translations: typeof fr = {
       },
     },
     demo: {
-      sectionTitle: "Come on, let's show you!",
       appDemo: "Presentation of the application's interface - PERSO and PRO vaults",
       extensionDemo: "Presentation of the browser extension - autofill and autosave",
+      consoleDemo: "Presentation of the supervision dashboard - overview, support and security options",
     },
     securityByDesign: {
       sectionTitle: "Security by design",
@@ -221,7 +221,7 @@ const translations: typeof fr = {
   features: {
     metaDescription:
       "Discover and view the almost exhaustive list of features of our application, our browser extension and our supervision console.",
-    pageTitle: "Features",
+    pageTitle: "Features & demos",
     questions: "A question? A specific need?",
     tags: {
       pro: "PRO",

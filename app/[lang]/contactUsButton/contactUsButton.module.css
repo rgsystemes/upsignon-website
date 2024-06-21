@@ -57,3 +57,19 @@
     padding: 10px 10px;
   }
 }
+
+
+.modalDefaultButton {
+background: none;
+  border: none;
+  background-color: rgb(0,171, 169);
+  color: white;
+  border-radius: 5px;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modalDefaultButton:hover {
+  text-decoration: underline;
+}

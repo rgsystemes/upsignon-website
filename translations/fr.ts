@@ -1,6 +1,6 @@
 const translations = {
   menu: {
-    features: "Fonctionnalités",
+    features: "Fonctionnalités & démos",
     pricing: "Tarifs",
     downloads: "Téléchargements",
     resources: "Ressources",
@@ -67,7 +67,7 @@ const translations = {
       1: {
         t: "Tous vos mots de passe en un seul endroit sécurisés et synchronisés sur tous vos appareils",
         d: [
-          'Vous avez le même mot de passe pour tous vos sites ? vous utilisez la fonction "mot de passe oublié" à chaque connexion ? vous notez tout vos mots de passe sur un calepin ou dans un fichier Excel ? Stop ! c’est non seulement inefficace, mais c’est en plus un gros risque de sécurité !',
+          'Vous avez le même mot de passe pour tous vos sites ? Vous utilisez la fonction "mot de passe oublié" à chaque connexion ? Vous notez tout vos mots de passe sur un calepin ou dans un fichier Excel ? Stop ! c’est non seulement inefficace, mais c’est en plus un gros risque de sécurité !',
           "Avec UpSignOn, oubliez vos mots de passe ! L’application les enregistre pour vous et vous permet de les utiliser sur tous vos appareils avec une grande simplicité. UpSignOn est compatible avec toutes les plateformes (iOS, Android, MacOS, Windows, Linux).",
         ],
       },
@@ -122,9 +122,9 @@ const translations = {
       },
     },
     demo: {
-      sectionTitle: "Allez, on vous montre !",
       appDemo: "Présentation de l'interface de l'application - coffres-forts PERSO et PRO",
       extensionDemo: "Présentation de l'extension de navigateur - remplissage et enregistrement automatique",
+      consoleDemo: "Présentation de la console de supervision - vue d'ensemble, accompagnement et options de sécurité",
     },
     securityByDesign: {
       sectionTitle: "Sécurité par conception",
@@ -219,7 +219,7 @@ const translations = {
   features: {
     metaDescription:
       "Découvrez et visualisez la liste quasi-exhaustive des fonctionnalités de notre application, de notre extension de navigateur et de notre console de supervision.",
-    pageTitle: "Fonctionnalités",
+    pageTitle: "Fonctionnalités & démos",
     questions: "Une question ? Un besoin spécifique ?",
     tags: {
       pro: "PRO",
