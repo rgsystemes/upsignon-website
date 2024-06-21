@@ -37,7 +37,7 @@ function FRLinuxOtherDownloads() {
       <p>
         <a
           className={styles.buttonLink}
-          href={`https://app.upsignon.eu/UpSignOn-${currentVersion}-x86_64.AppImage`}
+          href={`https://app.upsignon.eu/UpSignOn-${currentVersion}-latest.AppImage`}
           download
         >
           Plus récent AppImage
@@ -82,7 +82,7 @@ function ENLinuxOtherDownloads() {
       <p>
         <a
           className={styles.buttonLink}
-          href={`https://app.upsignon.eu/UpSignOn-${currentVersion}-x86_64.AppImage`}
+          href={`https://app.upsignon.eu/UpSignOn-${currentVersion}-latest.AppImage`}
           download
         >
           Latest AppImage
