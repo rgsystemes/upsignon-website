@@ -1,3 +1,5 @@
+import { GoogleTagManager } from "@next/third-parties/google";
+
 import "../reset.css";
 import "../global.css";
 import { getTranslationStaticParams } from "../../translations/translations";
@@ -38,6 +40,7 @@ export default function RootLayout({ children, params }: { children: React.React
         <main>{children}</main>
         <Footer lang={params.lang} />
       </body>
+      <GoogleTagManager gtmId="G-6W6E211N81" />
     </html>
   );
 }
