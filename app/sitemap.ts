@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemap = [];
   for (var cl of canonicalLinks) {
     sitemap.push({
-      url: "https://upsignon.eu" + cl.u,
+      url: "https://upsignon.eu/fr" + cl.u,
       changeFrequency: cl.f,
       priority: cl.p,
       alternates: {
