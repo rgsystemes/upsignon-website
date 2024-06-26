@@ -6,6 +6,160 @@ module.exports = async (phase, { defaultConfig }) => {
    */
   const nextConfig = {
     poweredByHeader: false,
+    redirects: () =>
+      Promise.resolve([
+        {
+          source: "/upsignon-perso",
+          destination: "/",
+          permanent: true,
+        },
+        {
+          source: "/en/upsignon-perso",
+          destination: "/en",
+          permanent: true,
+        },
+        {
+          source: "/fr/upsignon-perso",
+          destination: "/fr",
+          permanent: true,
+        },
+        {
+          source: "/upsignon-pro",
+          destination: "/",
+          permanent: true,
+        },
+        {
+          source: "/en/upsignon-pro",
+          destination: "/en",
+          permanent: true,
+        },
+        {
+          source: "/fr/upsignon-pro",
+          destination: "/fr",
+          permanent: true,
+        },
+        {
+          source: "/blog",
+          destination: "/resources/articles",
+          permanent: true,
+        },
+        {
+          source: "/en/blog",
+          destination: "/en/resources/articles",
+          permanent: true,
+        },
+        {
+          source: "/fr/blog",
+          destination: "/fr/resources/articles",
+          permanent: true,
+        },
+        {
+          source: "/download",
+          destination: "/downloads",
+          permanent: true,
+        },
+        {
+          source: "/en/download",
+          destination: "/en/downloads",
+          permanent: true,
+        },
+        {
+          source: "/en/download-upsignon",
+          destination: "/en/downloads",
+          permanent: true,
+        },
+        {
+          source: "/fr/download",
+          destination: "/fr/downloads",
+          permanent: true,
+        },
+        {
+          source: "/faq",
+          destination: "/features",
+          permanent: true,
+        },
+        {
+          source: "/en/faq",
+          destination: "/en/features",
+          permanent: true,
+        },
+        {
+          source: "/fr/faq",
+          destination: "/fr/features",
+          permanent: true,
+        },
+        {
+          source: "/about",
+          destination: "/",
+          permanent: true,
+        },
+        {
+          source: "/en/about-us",
+          destination: "/en",
+          permanent: true,
+        },
+        {
+          source: "/fr/about-us",
+          destination: "/en",
+          permanent: true,
+        },
+        {
+          source: "/quest-ce-quun-mot-de-passe-fort",
+          destination: "/resources/articles/1",
+          permanent: true,
+        },
+        {
+          source: "/pourquoi-est-il-deconseille-dutiliser-le-meme-mot-de-passe-partout",
+          destination: "/resources/articles/2",
+          permanent: true,
+        },
+        {
+          source: "/pourquoi-utiliser-un-gestionnaire-de-mots-de-passe",
+          destination: "/resources/articles/3",
+          permanent: true,
+        },
+        {
+          source: "/securite-informatique-zoom-sur-4-modeles-de-securite",
+          destination: "/resources/articles/4",
+          permanent: true,
+        },
+        {
+          source:
+            "/authentification-multifacteur-double-authentification-et-authentification-forte-quelles-differences",
+          destination: "/resources/articles/5",
+          permanent: true,
+        },
+        {
+          source: "/detecter-sites-web-non-securises",
+          destination: "/resources/articles/6",
+          permanent: true,
+        },
+        {
+          source: "/hackers-donnees-personnelles",
+          destination: "/resources/articles/7",
+          permanent: true,
+        },
+        {
+          source: "/navigateur-vs-coffre-fort-de-mots-de-passe-dedie-quel-outil-privilegier",
+          destination: "/resources/articles/8",
+          permanent: true,
+        },
+        {
+          source: "/les-4-fausses-bonnes-idees-repandues-dans-les-formulaires-de-mots-de-passe",
+          destination: "/resources/articles/9",
+          permanent: true,
+        },
+        {
+          source: "/privacy-policy/fr/20200209.pdf",
+          destination: "https://app.upsignon.eu/privacy-policy/fr/20200209.pdf",
+          permanent: true,
+        },
+        {
+          source: "/protocol/:param*",
+          destination: "https://app.upsignon.eu/protocol/:path*",
+          permanent: true,
+        },
+      ]),
   };
   return nextConfig;
 };
