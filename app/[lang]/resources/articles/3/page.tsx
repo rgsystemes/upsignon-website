@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     description: t.articles[3].metaDescription,
   };
 }
-export default function Article2({ params }: { params: { lang: string } }) {
+export default function Article3({ params }: { params: { lang: string } }) {
   const t = getDictionary(params.lang);
   return (
     <div className={styles.content}>
@@ -334,5 +334,278 @@ function FRArticle() {
   );
 }
 function ENArticle() {
-  return <></>;
+  return (
+    <>
+      <header className={styles.header}>
+        <div className={styles.headerImgContainer}>
+          <Image src={passwordManagerImg} alt="" className={styles.headerImg} />
+        </div>
+        <h1 className={styles.articleTitle}>
+          Why use a <span className={styles.green}>password manager</span>?
+        </h1>
+      </header>
+      <section className={styles.whiteSection}>
+        <div className={styles.whiteSectionContent}>
+          <p>
+            The issue of IT security is now being tackled head-on by the vast majority of SMEs. IT departments are
+            implementing increasingly sophisticated cybersecurity strategies to prevent security breaches, including :
+          </p>
+          <div className={styles.col3}>
+            <div>
+              <div className={styles.col3IlluContainer}>
+                <Image src={dataSecuritySvg} alt="" />
+              </div>
+              <strong>Guaranteeing data integrity and confidentiality</strong>
+            </div>
+            <div>
+              <div className={styles.col3IlluContainer}>
+                <Image src={itChartSVG} alt="" />
+              </div>
+              <strong>Keeping the information system running smoothly</strong>
+            </div>
+            <div>
+              <div className={styles.col3IlluContainer}>
+                <Image src={customerSatisfactionSvg} alt="" />
+              </div>
+              <strong>Ensuring that only authorised people have access to resources</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className={styles.greySection}>
+        <p>
+          That said, it should be kept in mind that the main security vulnerability in SMEs remains in the hands of
+          employees.
+        </p>
+        <div className={styles.col3}>
+          <div>
+            <div className={styles.col3IlluContainer}>
+              <span>20%</span>
+            </div>
+            <div>admit to regularly opening emails from unknown sources</div>
+          </div>
+          <div>
+            <div className={styles.col3IlluContainer}>
+              <span>26%</span>
+            </div>
+            <div>admit to using applications without IT department approval</div>
+          </div>
+          <div>
+            <div className={styles.col3IlluContainer}>
+              <span>54%</span>
+            </div>
+            <div>are aware of adopting insecure password practices</div>
+          </div>
+        </div>
+
+        <p>
+          So, no matter how hard IT security managers try to secure their systems and tools, it is difficult to control
+          the behaviour of all their employees...
+        </p>
+        <p>
+          Fortunately, not everything is totally out of control! IT managers can (and should as far as possible!)
+          control certain practices. This applies in particular to employee passwords!
+        </p>
+      </section>
+      <section className={styles.pwdManagerSection}>
+        <div className={styles.pwdManageSectionBackgroundLayer}>
+          <div className={styles.pwdManagerContent}>
+            <h2>What is a password manager?</h2>
+            <p>
+              A password manager (or password vault) is a digital tool that centralises all logins and passwords of a
+              user in a single database. The user accesses the database via a master password (which is the only one
+              that needs to be remembered). The solution makes it possible to manage and memorise passwords, and above
+              all strengthen security by easily generating strong and unique passwords for each account.
+            </p>
+            <div className={styles.quinconce3col}>
+              <div className={`${styles.quinconceCard} ${styles.featuresCard}`}>
+                <Image src={featuresSvg} alt="" width={80} height={80} />
+                <p>Main features</p>
+              </div>
+              <div className={styles.quinconceCard}>
+                <Image src={vaultSvg} alt="" width={80} height={80} />
+                <p>Storage of passwords in vaults (shared or not).</p>
+              </div>
+              <div className={styles.quinconceCard}>
+                <Image src={lockSvg} alt="" width={80} height={80} />
+                <p>Automatic generation of strong passwords.</p>
+              </div>
+              <div className={styles.quinconceCard}>
+                <Image src={pwdFormSvg} alt="" width={80} height={80} />
+                <p>Automatic filling of logins and passwords on web forms.</p>
+              </div>
+              <div className={styles.quinconceCard}>
+                <Image src={sharingSvg} alt="" width={80} height={80} />
+                <p>Secure sharing of certain passwords with access rights management.</p>
+              </div>
+              <div className={styles.quinconceCard}>
+                <Image src={keySvg} alt="" width={80} height={80} />
+                <p>Company-wide supervision of password security.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className={styles.whiteSection}>
+        <div className={styles.whiteSectionContent}>
+          <h2>
+            <span className={styles.green}>Password manager:</span>
+            <br />
+            high security challenges for SMEs
+          </h2>
+          <p>
+            In the early 2000s, employees only had to remember a few passwords to access company systems and software.
+            Today, with the proliferation of digital tools, there are dozens of passwords to remember. If not more.
+          </p>
+          <div className={styles.greenCard}>
+            <div>
+              <p>
+                And there is plenty to attract hackers: although aware of the risks involved, most employees of SMEs
+                prefer simplicity and convenience when it comes to their passwords.
+              </p>
+              <p>
+                64% of them prefer to keep a password that is easy to remember rather than a more secure code. Studies
+                around employee passwords reveal other alarming figures:
+              </p>
+            </div>
+            <div className={styles.greenCardNumbersContainer}>
+              <div className={styles.greenCardNumber}>
+                <div>59%</div>
+                <div>use the same password for all their accounts</div>
+              </div>
+              <div className={styles.greenCardNumber}>
+                <div>53%</div>
+                <div>have not changed their password in the last 12 months</div>
+              </div>
+              <div className={styles.greenCardNumber}>
+                <div>59%</div>
+                <div>use the same professional and personal password</div>
+              </div>
+            </div>
+          </div>
+          <p>
+            For their part, hackers have refined their techniques to steal confidential company data, and in particular
+            passwords. Among the most effective hacking methods is phishing, which consists of creating a fake website
+            resembling a legitimate service and tricking the user into connecting to it. His password, in clear text,
+            can then be stolen without any difficulty. Hackers also use the brute force attack, which consists of
+            automatically testing thousands of passwords per second. Short passwords without special characters are
+            cracked in no time. We can also cite the man-in-the-middle attack, widely used to glean passwords entered on
+            the web. The principle is simple: hackers compromise, for example, a public WiFi access point and observe
+            the traffic passing through it. Finally, data leaks – which have never cost businesses so much according to
+            a recent report from IBM Security – are particularly feared in SMEs.
+          </p>
+          <p>
+            As cyberattacks have intensified, SMBs have realized the importance of securing passwords across the
+            enterprise. That said, they do not always know how to proceed or where to start. Using a password manager
+            shared by everyone appears to be the most reliable and secure solution.
+          </p>
+        </div>
+      </section>
+      <section className={styles.greySection}>
+        <h2>
+          <span className={styles.green}>Why use</span> a password manager?
+        </h2>
+        <p>
+          Nobody wants to manage passwords. It is not a goal in itself. The goal is to have strong and unique passwords
+          on each website, and that is impossible without a tool. A password manager is just for that: having strong and
+          unique passwords. The Password Vault is not there to make your life easier. There is nothing simpler than
+          always using the same password. Of course, the tool does everything to make use as simple as possible,
+          including in cases of shared secrets.
+        </p>
+        <p>
+          Remember that hackers go after the least protected targets first. It is because they see an open door that
+          they enter it. It iss much more cost-effective than trying to break down an armored door.{" "}
+          <strong>
+            Using a password manager is therefore one of the most effective ways to avoid becoming the first target of
+            hackers.
+          </strong>{" "}
+          It is a fundamental tool for a good corporate cybersecurity policy.
+        </p>
+        <p>
+          The tool alone of course does not do everything. As simple as it is, the adoption of a password safe by all
+          employees remains a major challenge. People who are less comfortable with digital technology will always be a
+          little apprehensive about adopting a new tool. They may feel like they are losing control of their passwords
+          and are afraid of not knowing how to log in to their sites and applications. This is why initial support in
+          getting started with the tool remains very important for these people. In any case, an initial effort must be
+          made by everyone to import all their passwords into their vault. Subsequently, the ability for the IT manager
+          to supervise the use of the tool and monitor the strength of the passwords becomes a key success factor.
+        </p>
+
+        <div className={styles.checkTickParagraph}>
+          <Image src={checkTickSVG} alt="" className={styles.tick} />
+          <p>
+            Unique passwords: Reusing the same password everywhere is like saying “if you can hack my mailbox, then you
+            can open my front door, my car, my jewelry box, my bank account.“
+          </p>
+        </div>
+        <div className={styles.checkTickParagraph}>
+          <Image src={checkTickSVG} alt="" className={styles.tick} />
+          <p>
+            Strong passwords: the strength of a password is the time it takes a hacker to find it. “P@$$w0rd!” is not a
+            strong password at all, although it meets all the usual criteria. In practice, the strongest passwords are
+            randomly generated passwords, like HCTGkN-bJzEE4-A8mqdK-rPWXnw.
+          </p>
+        </div>
+      </section>
+      <section className={styles.whiteSection}>
+        <div className={styles.whiteSectionContentLarge}>
+          <h2>
+            <span className={styles.green}>Password managers:</span>
+            <br />
+            what benefits to expect?
+          </h2>
+          <div className={styles.forUserAdvantages}>
+            <div className={styles.forUserIlluContainer}>
+              <Image src={forUsersImg} alt="" />
+            </div>
+            <div className={styles.greenSectionCard}>
+              <h3>For users</h3>
+              <p>
+                what benefits can you expect? The password manager is today the only reliable tool for generating and
+                memorizing strong, random passwords that are never otherwise used. It provides SME employees with real
+                comfort thanks to <strong>automatic entry</strong> of passwords. So no more passwords designed by teams
+                and saved in files hosted in the Cloud or written on post-it notes. Only one password must be remembered
+                – the master password – which allows access to the solution. The good news is that it can afford to be
+                less secure because the application integrates security mechanisms (that is its job) which make
+                everything secure even in the case of passwords that is a little weak.
+              </p>
+              <p>
+                <strong>Sharing</strong> is also secure via the safe, which allows you to definitively turn the page on
+                confidential data disclosed in plain text between colleagues on the company chat or by e-mail.
+              </p>
+              <p>
+                Finally, in a password manager, <strong>stored data is encrypted</strong> and protected by various
+                mechanisms.
+              </p>
+            </div>
+          </div>
+          <div className={styles.forAdminAdvantages}>
+            <div className={styles.forUserIlluContainer}>
+              <Image src={forAdminImg} alt="" />
+            </div>
+            <div className={styles.greenSectionCard}>
+              <h3>For IT security managers</h3>
+              <p>
+                The implementation of a dedicated tool allows IT security managers of SMEs to clarify and share the
+                password security policy internally. They will thus be able to ensure that good practices are understood
+                and applied by everyone. The solution will enable them to effectively track{" "}
+                <strong>password strengthening</strong> across the enterprise.
+              </p>
+              <p>
+                IT managers can also hope to save time by limiting requests from employees regarding the management of
+                their passwords (forgotten passwords, non-renewed passwords, etc.). In this way, they will be able to
+                devote more time to raising awareness among employees who are least involved in the joint process
+                initiated.
+              </p>
+              <p>
+                Finally… all this is only possible by choosing a password manager allowing{" "}
+                <strong>control and supervision</strong>. The monitoring functionality allows administrators to ensure
+                user buy-in and effective security reinforcement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
