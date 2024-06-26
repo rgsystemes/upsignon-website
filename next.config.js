@@ -156,7 +156,12 @@ module.exports = async (phase, { defaultConfig }) => {
         },
         {
           source: "/protocol/:param*",
-          destination: "https://app.upsignon.eu/protocol/:path*",
+          destination: "https://app.upsignon.eu/protocol/:param*",
+          permanent: true,
+        },
+        {
+          source: "/.well-known/:param*",
+          destination: "https://app.upsignon.eu/.well-known/:param*",
           permanent: true,
         },
       ]),
