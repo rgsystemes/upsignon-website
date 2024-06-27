@@ -13,6 +13,16 @@ function FRServerNotes() {
     <section className={styles.section}>
       {/* 2.1.0 */}
       <h2>2.1.0</h2>
+      <em>Publiée le 27/06/2024</em>
+      <ul>
+        <li>
+          correction de la courbe d’évolution de la force des mots de passe avec prise en compte de la suppression des
+          coffres et éléments partagés (auparavant, les coffres et éléments partagés supprimés continuaient à compter
+          avec leur dernière valeur connue).
+        </li>
+      </ul>
+      {/* 2.0.1 */}
+      <h2>2.0.1</h2>
       <em>Publiée le 17/06/2024</em>
       <ul>
         <li>
@@ -116,6 +126,15 @@ function ENServerNotes() {
     <section className={styles.section}>
       {/* 2.1.0 */}
       <h2>2.1.0</h2>
+      <em>Published on 27/06/2024</em>
+      <ul>
+        <li>
+          correction of the password strength evolution curve taking into account the deletion of vaults and shared
+          elements (previously, deleted vaults and shared elements continued to count with their last known value).
+        </li>
+      </ul>
+      {/* 2.0.1 */}
+      <h2>2.0.1</h2>
       <em>Published on 17/06/2024</em>
       <ul>
         <li>versions of the app stricly below 7.1.1 can no longer make changes to vaults.</li>

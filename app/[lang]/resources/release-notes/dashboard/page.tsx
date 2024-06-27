@@ -11,6 +11,14 @@ export default function DashboardNotes({ params }: { params: { lang: string } })
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.1.0 */}
+      <h2>2.1.0</h2>
+      <em>Publiée le 27/06/2024</em>
+      <ul>
+        <li>mise-à-jour des liens vers les pages de téléchargement et de notes de version</li>
+        <li>la liste des éléments d’un dossier partagé est désormais repliable</li>
+        <li>compatibilité avec le serveur UpSignOn PRO 2.1.0</li>
+      </ul>
       {/* 2.0.2 */}
       <h2>2.0.2</h2>
       <em>Publiée le 30/05/2024</em>
@@ -143,6 +151,15 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.1.0 */}
+      <h2>2.1.0</h2>
+      <em>Published on 27/06/2024</em>
+      <ul>
+        <li>updated links to download and release notes pages</li>
+        <li>the list of items in a shared folder is now collapsible</li>
+        <li>compatibility with UpSignOn PRO 2.1.0 server</li>
+      </ul>
+
       {/* 2.0.2 */}
       <h2>2.0.2</h2>
       <em>Published on 30/05/2024</em>
