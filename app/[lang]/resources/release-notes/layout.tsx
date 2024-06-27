@@ -8,6 +8,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   return {
     title: t.resources.releaseNotes,
     description: t.releaseNotes.metaDescription,
+    robots: "noindex, nofollow",
   };
 }
 

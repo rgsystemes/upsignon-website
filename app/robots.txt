@@ -1,5 +1,3 @@
 User-Agent: *
-Disallow: /resources/release-notes/
-Disallow: /resources/commitments
 
 Sitemap: https://upsignon.eu/sitemap.xml

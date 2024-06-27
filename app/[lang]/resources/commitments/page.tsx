@@ -7,22 +7,20 @@ export async function generateMetadata({ params }: { params: { lang: string } })
       title: "Nos engagements contractuels",
       description:
         "Résumé simplifié de nos engagements en terme de RGPD, de maintenance, d'hébergement, de support et autres garanties.",
+      robots: "noindex, nofollow",
     };
   } else {
     return {
       title: "Our contractual commitments",
       description:
         "Simplified summary of our commitments in terms of GDPR, maintenance, hosting, support and other guarantees.",
+      robots: "noindex, nofollow",
     };
   }
 }
 
 export default function Page({ params }: { params: { lang: string } }) {
-  if (params.lang === "fr") {
-    return <FRCommitments />;
-  } else {
-    return <ENCommitments />;
-  }
+  return <>{params.lang === "fr" ? <FRCommitments /> : <ENCommitments />}</>;
 }
 
 function FRCommitments() {
