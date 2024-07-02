@@ -11,6 +11,22 @@ export default function AppNotes({ params }: { params: { lang: string } }) {
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.8.3 */}
+      <h2>7.8.3</h2>
+      <p>
+        <em>En cours de publication (02/07/2024)</em>
+      </p>
+      <strong>Correctifs</strong>
+      <ul>
+        <li>
+          (PRO) correction des statistiques de nombre de mots de passe dupliqués envoyés à la console de supervision
+        </li>
+        <li>
+          (Windows) correction d’un crash dû à la non reconnaissance des informations de l’appareil sur certains PC
+          Windows (cas rare)
+        </li>
+        <li>(Windows) correction d’un crash au démarrage de l’application sur certains PC Windows (cas très rare)</li>
+      </ul>
       {/* 7.8.0 */}
       <h2>7.8.0</h2>
       <p>
@@ -308,6 +324,17 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.8.3 */}
+      <h2>7.8.3</h2>
+      <p>
+        <em>In progress (02/07/2024)</em>
+      </p>
+      <strong>Fixes</strong>
+      <ul>
+        <li>(PRO) correction of statistics for the number of duplicate passwords sent to the monitoring console</li>
+        <li>(Windows) fixed a crash due to not recognizing device information on some Windows PCs (rare case)</li>
+        <li>(Windows) fixed a crash at application start on certain Windows PCs (very rare case)</li>
+      </ul>
       {/* 7.8.0 */}
       <h2>7.8.0</h2>
       <p>
