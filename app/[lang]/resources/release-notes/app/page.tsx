@@ -11,11 +11,15 @@ export default function AppNotes({ params }: { params: { lang: string } }) {
 function FRAppNotes() {
   return (
     <section className={styles.section}>
-      {/* 7.8.3 */}
-      <h2>7.8.3</h2>
+      {/* 7.8.4 */}
+      <h2>7.8.4</h2>
       <p>
         <em>En cours de publication (02/07/2024)</em>
       </p>
+      <strong>Nouveautés</strong>
+      <ul>
+        <li>Ajout d’un lien et d’une popup pour proposer aux utilisateurs de noter l’application</li>
+      </ul>
       <strong>Correctifs</strong>
       <ul>
         <li>
@@ -324,11 +328,15 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
-      {/* 7.8.3 */}
-      <h2>7.8.3</h2>
+      {/* 7.8.4 */}
+      <h2>7.8.4</h2>
       <p>
         <em>In progress (02/07/2024)</em>
       </p>
+      <strong>New feature</strong>
+      <ul>
+        <li>Add a link and a popup to suggest users to rate the app</li>
+      </ul>
       <strong>Fixes</strong>
       <ul>
         <li>(PRO) correction of statistics for the number of duplicate passwords sent to the monitoring console</li>
