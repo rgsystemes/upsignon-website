@@ -14,7 +14,7 @@ function FRAppNotes() {
       {/* 7.8.4 */}
       <h2>7.8.4</h2>
       <p>
-        <em>En cours de publication (02/07/2024)</em>
+        <em>Publiée le 03/07/2024</em>
       </p>
       <strong>Nouveautés</strong>
       <ul>
@@ -331,7 +331,7 @@ function ENAppNotes() {
       {/* 7.8.4 */}
       <h2>7.8.4</h2>
       <p>
-        <em>In progress (02/07/2024)</em>
+        <em>Published on 02/07/2024</em>
       </p>
       <strong>New feature</strong>
       <ul>
