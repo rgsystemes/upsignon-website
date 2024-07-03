@@ -6,7 +6,7 @@ import Negotiator from "negotiator";
 import fr from "./fr";
 import en from "./en";
 
-const defaultLocale = "en";
+const defaultLocale = "fr";
 const dictionaries: { [lang: string]: typeof fr } = {
   en,
   fr,

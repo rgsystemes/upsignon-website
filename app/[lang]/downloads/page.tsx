@@ -18,6 +18,13 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   return {
     title: t.downloads.pageTitle,
     description: t.downloads.metaDescription,
+    alternates: {
+      canonical: "https://upsignon.eu/fr/downloads",
+      languages: {
+        fr: "https://upsignon.eu/fr/downloads",
+        en: "https://upsignon.eu/en/downloads",
+      },
+    },
   };
 }
 export default function Page({ params }: { params: { lang: string } }) {

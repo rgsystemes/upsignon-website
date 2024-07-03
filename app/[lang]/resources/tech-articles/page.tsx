@@ -8,6 +8,13 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   return {
     title: t.resources.technicalExplanations,
     description: t.resources.technicalExplanationsMetaDesc,
+    alternates: {
+      canonical: "https://upsignon.eu/fr/resources/tech-articles",
+      languages: {
+        fr: "https://upsignon.eu/fr/resources/tech-articles",
+        en: "https://upsignon.eu/en/resources/tech-articles",
+      },
+    },
   };
 }
 

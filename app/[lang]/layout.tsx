@@ -12,6 +12,7 @@ import favicon32 from "../../public/favicon-32x32.png";
 import favicon192 from "../../public/favicon-192x192.png";
 import appleTouchIcon from "../../public/apple-touch-icon.png";
 import safariPinnedTab from "../../public/safari-pinned-tab.svg";
+import Head from "next/head";
 
 // If loading a variable font, you don't need to specify the font weight
 const fontClass = Montserrat({

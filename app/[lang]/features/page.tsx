@@ -64,6 +64,13 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   return {
     title: t.features.pageTitle,
     description: t.features.metaDescription,
+    alternates: {
+      canonical: "https://upsignon.eu/fr/features",
+      languages: {
+        fr: "https://upsignon.eu/fr/features",
+        en: "https://upsignon.eu/en/features",
+      },
+    },
   };
 }
 

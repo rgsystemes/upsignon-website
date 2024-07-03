@@ -7,6 +7,13 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   return {
     title: t.articles[1].title,
     description: t.articles[1].metaDescription,
+    alternates: {
+      canonical: "https://upsignon.eu/fr/resources/articles/1",
+      languages: {
+        fr: "https://upsignon.eu/fr/resources/articles/1",
+        en: "https://upsignon.eu/en/resources/articles/1",
+      },
+    },
   };
 }
 

@@ -13,12 +13,20 @@ import { ContactLaterButton } from "./contactLaterButton/contactLaterButton";
 import { FreeTrialButton } from "./freeTrialButton/freeTrial";
 import { ContactUsButton } from "./contactUsButton/contactUsButton";
 import { Metadata } from "next";
+import Head from "next/head";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
   return {
     title: t.pitch.moto,
     description: t.pitch.metaDescription,
+    alternates: {
+      canonical: "https://upsignon.eu/fr",
+      languages: {
+        fr: "https://upsignon.eu/fr",
+        en: "https://upsignon.eu/en",
+      },
+    },
   };
 }
 

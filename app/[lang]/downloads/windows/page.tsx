@@ -39,15 +39,26 @@ Start-Process \\\\srv\\partages$\\xxx\\UpSignOn-7.3.0-silent-installer.msi -Argu
 `;
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const template = {
+    alternates: {
+      canonical: "https://upsignon.eu/fr/downloads/windows",
+      languages: {
+        fr: "https://upsignon.eu/fr/downloads/windows",
+        en: "https://upsignon.eu/en/downloads/windows",
+      },
+    },
+  };
   if (params.lang === "fr") {
     return {
       title: "Téléchargements - Windows",
       description: "Tous les liens et informations utiles pour télécharger et installer UpSignOn sur Windows.",
+      ...template,
     };
   } else {
     return {
       title: "Downloads - Windows",
       description: "All links and useful information to download and install UpSignOn on Windows.",
+      ...template,
     };
   }
 }

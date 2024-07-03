@@ -10,6 +10,13 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   return {
     title: t.menu.pricing,
     description: t.pricing.metaDescription,
+    alternates: {
+      canonical: "https://upsignon.eu/fr/pricing",
+      languages: {
+        fr: "https://upsignon.eu/fr/pricing",
+        en: "https://upsignon.eu/en/pricing",
+      },
+    },
   };
 }
 export default function Page({ params }: { params: { lang: string } }) {

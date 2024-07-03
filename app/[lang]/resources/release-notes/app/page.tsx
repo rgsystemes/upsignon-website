@@ -1,4 +1,22 @@
+import { Metadata } from "next";
 import styles from "../notes.module.css";
+import { getDictionary } from "../../../../../translations/translations";
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const t = getDictionary(params.lang);
+  return {
+    title: t.resources.releaseNotes,
+    description: t.releaseNotes.metaDescription,
+    robots: "noindex, nofollow",
+    alternates: {
+      canonical: "https://upsignon.eu/fr/resources/release-notes/app",
+      languages: {
+        fr: "https://upsignon.eu/fr/resources/release-notes/app",
+        en: "https://upsignon.eu/en/resources/release-notes/app",
+      },
+    },
+  };
+}
 
 export default function AppNotes({ params }: { params: { lang: string } }) {
   if (params.lang === "fr") {

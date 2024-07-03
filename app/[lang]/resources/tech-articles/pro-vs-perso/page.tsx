@@ -3,17 +3,28 @@ import { getDictionary } from "../../../../../translations/translations";
 import styles from "../../page.module.css";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const template = {
+    alternates: {
+      canonical: "https://upsignon.eu/fr/resources/tech-articles/pro-vs-perso",
+      languages: {
+        fr: "https://upsignon.eu/fr/resources/tech-articles/pro-vs-perso",
+        en: "https://upsignon.eu/en/resources/tech-articles/pro-vs-perso",
+      },
+    },
+  };
   if (params.lang === "fr") {
     return {
       title: "Principes de fonctionnement des coffres-forts PERSO et PRO",
       description:
         "Explications détaillées de la conception et du fonctionnement des fonctionnalités suivantes des coffres-forts PERSO et PRO : ajout de nouveaux appareils, synchronisation, partage, sauvegardes, stockage et chiffrement.",
+      ...template,
     };
   } else {
     return {
       title: "Operating principles of PERSO and PRO vaults",
       description:
         "Detailed explanations of the design and operation of the following features of the PERSO and PRO vaults: adding new devices, synchronisation, sharing, backups, storage and encryption.",
+      ...template,
     };
   }
 }

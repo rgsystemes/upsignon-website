@@ -7,6 +7,13 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   return {
     title: t.techResources.protectedClipboardBehaviour.title,
     description: t.techResources.protectedClipboardBehaviour.metaDescription,
+    alternates: {
+      canonical: "https://upsignon.eu/fr/resources/tech-articles/protected-clipboard-behaviour",
+      languages: {
+        fr: "https://upsignon.eu/fr/resources/tech-articles/protected-clipboard-behaviour",
+        en: "https://upsignon.eu/en/resources/tech-articles/protected-clipboard-behaviour",
+      },
+    },
   };
 }
 

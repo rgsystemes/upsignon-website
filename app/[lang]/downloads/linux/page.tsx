@@ -3,15 +3,26 @@ import { linuxVersions } from "../../resources/release-notes/app/versionList";
 import styles from "./page.module.css";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const template = {
+    alternates: {
+      canonical: "https://upsignon.eu/fr/downloads/linux",
+      languages: {
+        fr: "https://upsignon.eu/fr/downloads/linux",
+        en: "https://upsignon.eu/en/downloads/linux",
+      },
+    },
+  };
   if (params.lang === "fr") {
     return {
       title: "Téléchargements - Linux",
       description: "Tous les liens et informations utiles pour télécharger et installer UpSignOn sur Linux.",
+      ...template,
     };
   } else {
     return {
       title: "Downloads - Linux",
       description: "All links and useful information to download and install UpSignOn on Linux.",
+      ...template,
     };
   }
 }
