@@ -147,11 +147,7 @@ function FRWindowsAllDownloadPage() {
         Cette méthode vous permet d’installer le fichier provenant du Microsoft Store sans passer par l’application
         Microsoft Store. Ainsi l’application recevra les mises-à-jour automatiquement.
       </p>
-      <a
-        href="https://app.upsignon.eu/windows-sideloading-gpo/UpSignOn_latest.zip"
-        target="_blank"
-        className={styles.buttonLink}
-      >
+      <a href="https://app.upsignon.eu/downloads/UpSignOn_latest.zip" target="_blank" className={styles.buttonLink}>
         UpSignOn_latest.zip
       </a>
       <div className={styles.msixbundleSteps}>
@@ -170,7 +166,7 @@ function FRWindowsAllDownloadPage() {
         <ul>
           {allMsixBundleVersions.map((v) => (
             <li key={v}>
-              <a href={`https://app.upsignon.eu/UpSignOn_${v.replace(".", "_")}.zip`} download>
+              <a href={`https://app.upsignon.eu/downloads/UpSignOn_${v.replace(".", "_")}.zip`} download>
                 {v}
               </a>
             </li>
@@ -224,7 +220,7 @@ function FRWindowsAllDownloadPage() {
             <tr>
               <td>
                 <a
-                  href="https://app.upsignon.eu/UpSignOn-latest-silent-installer.msi"
+                  href="https://app.upsignon.eu/downloads/UpSignOn-latest-silent-installer.msi"
                   download
                   className={styles.buttonLink}
                 >
@@ -232,13 +228,17 @@ function FRWindowsAllDownloadPage() {
                 </a>
               </td>
               <td>
-                <a href="https://app.upsignon.eu/UpSignOn-latest-installer.msi" download className={styles.buttonLink}>
+                <a
+                  href="https://app.upsignon.eu/downloads/UpSignOn-latest-installer.msi"
+                  download
+                  className={styles.buttonLink}
+                >
                   Plus récent .msi
                 </a>
               </td>
               <td>
                 <a
-                  href="https://app.upsignon.eu/UpSignOn-latest-silent-user-installer.msi"
+                  href="https://app.upsignon.eu/downloads/UpSignOn-latest-silent-user-installer.msi"
                   download
                   className={styles.buttonLink}
                 >
@@ -253,7 +253,7 @@ function FRWindowsAllDownloadPage() {
                   <ul>
                     {allMsiVersions.map((v) => (
                       <li key={v}>
-                        <a download href={`https://app.upsignon.eu/UpSignOn-${v}-silent-installer.msi`}>
+                        <a download href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-silent-installer.msi`}>
                           {v}
                         </a>
                       </li>
@@ -267,7 +267,7 @@ function FRWindowsAllDownloadPage() {
                   <ul>
                     {allMsiVersions.map((v) => (
                       <li key={v}>
-                        <a download href={`https://app.upsignon.eu/UpSignOn-${v}-installer.msi`}>
+                        <a download href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-installer.msi`}>
                           {v}
                         </a>
                       </li>
@@ -281,7 +281,7 @@ function FRWindowsAllDownloadPage() {
                   <ul>
                     {allMsiVersions.map((v) => (
                       <li key={v}>
-                        <a download href={`https://app.upsignon.eu/UpSignOn-${v}-silent-user-installer.msi`}>
+                        <a download href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-silent-user-installer.msi`}>
                           {v}
                         </a>
                       </li>
@@ -442,11 +442,7 @@ function ENWindowsAllDownloadPage() {
         This method allows you to install the file from the Microsoft Store without going through the Microsoft Store
         application. So the application will receive updates automatically.
       </p>
-      <a
-        href="https://app.upsignon.eu/windows-sideloading-gpo/UpSignOn_latest.zip"
-        target="_blank"
-        className={styles.buttonLink}
-      >
+      <a href="https://app.upsignon.eu/downloads/UpSignOn_latest.zip" target="_blank" className={styles.buttonLink}>
         UpSignOn_latest.zip
       </a>
       <div className={styles.msixbundleSteps}>
@@ -465,7 +461,7 @@ function ENWindowsAllDownloadPage() {
         <ul>
           {allMsixBundleVersions.map((v) => (
             <li key={v}>
-              <a href={`https://app.upsignon.eu/UpSignOn_${v.replace(".", "_")}.zip`} download>
+              <a href={`https://app.upsignon.eu/downloads/UpSignOn_${v.replace(".", "_")}.zip`} download>
                 {v}
               </a>
             </li>
@@ -519,7 +515,7 @@ function ENWindowsAllDownloadPage() {
             <tr>
               <td>
                 <a
-                  href="https://app.upsignon.eu/UpSignOn-latest-silent-installer.msi"
+                  href="https://app.upsignon.eu/downloads/UpSignOn-latest-silent-installer.msi"
                   download
                   className={styles.buttonLink}
                 >
@@ -527,13 +523,17 @@ function ENWindowsAllDownloadPage() {
                 </a>
               </td>
               <td>
-                <a href="https://app.upsignon.eu/UpSignOn-latest-installer.msi" download className={styles.buttonLink}>
+                <a
+                  href="https://app.upsignon.eu/downloads/UpSignOn-latest-installer.msi"
+                  download
+                  className={styles.buttonLink}
+                >
                   Latest.msi
                 </a>
               </td>
               <td>
                 <a
-                  href="https://app.upsignon.eu/UpSignOn-latest-silent-user-installer.msi"
+                  href="https://app.upsignon.eu/downloads/UpSignOn-latest-silent-user-installer.msi"
                   download
                   className={styles.buttonLink}
                 >
@@ -548,7 +548,7 @@ function ENWindowsAllDownloadPage() {
                   <ul>
                     {allMsiVersions.map((v) => (
                       <li key={v}>
-                        <a download href={`https://app.upsignon.eu/UpSignOn-${v}-silent-installer.msi`}>
+                        <a download href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-silent-installer.msi`}>
                           {v}
                         </a>
                       </li>
@@ -562,7 +562,7 @@ function ENWindowsAllDownloadPage() {
                   <ul>
                     {allMsiVersions.map((v) => (
                       <li key={v}>
-                        <a download href={`https://app.upsignon.eu/UpSignOn-${v}-installer.msi`}>
+                        <a download href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-installer.msi`}>
                           {v}
                         </a>
                       </li>
@@ -576,7 +576,7 @@ function ENWindowsAllDownloadPage() {
                   <ul>
                     {allMsiVersions.map((v) => (
                       <li key={v}>
-                        <a download href={`https://app.upsignon.eu/UpSignOn-${v}-silent-user-installer.msi`}>
+                        <a download href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-silent-user-installer.msi`}>
                           {v}
                         </a>
                       </li>

@@ -48,7 +48,7 @@ function FRLinuxOtherDownloads() {
       <p>
         <a
           className={styles.buttonLink}
-          href={`https://app.upsignon.eu/UpSignOn-${currentVersion}-latest.AppImage`}
+          href={`https://app.upsignon.eu/downloads/UpSignOn-${currentVersion}-latest.AppImage`}
           download
         >
           Plus récent AppImage
@@ -59,7 +59,7 @@ function FRLinuxOtherDownloads() {
       <ul className={styles.ul}>
         {linuxVersions.map((v) => (
           <li key={v}>
-            <a href={`https://app.upsignon.eu/UpSignOn-${v}-x86_64.AppImage`} download>
+            <a href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-x86_64.AppImage`} download>
               {v}
             </a>
           </li>
@@ -93,7 +93,7 @@ function ENLinuxOtherDownloads() {
       <p>
         <a
           className={styles.buttonLink}
-          href={`https://app.upsignon.eu/UpSignOn-${currentVersion}-latest.AppImage`}
+          href={`https://app.upsignon.eu/downloads/UpSignOn-${currentVersion}-latest.AppImage`}
           download
         >
           Latest AppImage
@@ -104,7 +104,7 @@ function ENLinuxOtherDownloads() {
       <ul className={styles.ul}>
         {linuxVersions.map((v) => (
           <li key={v}>
-            <a href={`https://app.upsignon.eu/UpSignOn-${v}-x86_64.AppImage`} download>
+            <a href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-x86_64.AppImage`} download>
               {v}
             </a>
           </li>
