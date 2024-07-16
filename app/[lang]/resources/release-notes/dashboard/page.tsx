@@ -29,19 +29,6 @@ export default function DashboardNotes({ params }: { params: { lang: string } })
 function FRServerNotes() {
   return (
     <section className={styles.section}>
-      {/* 2.2.0 */}
-      <h2>2.2.0</h2>
-      <em>Publiée le 01/07/2024</em>
-      <ul>
-        <li>
-          correction d’un bug où la validation manuelle d’un admin est demandée dès le premier appareil au lieu du
-          deuxième lorsque l’option est activée.
-        </li>
-        <li>
-          les notifications de mot de passe oublié et de validation de deuxième appareil ne sont plus envoyées aux
-          superadministrateurs, sauf s’il n’y a aucun administrateur dédié pour la banque.
-        </li>
-      </ul>
       {/* 2.1.0 */}
       <h2>2.1.0</h2>
       <em>Publiée le 27/06/2024</em>
@@ -182,19 +169,6 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
-      {/* 2.2.0 */}
-      <h2>2.2.0</h2>
-      <em>Published on 01/07/2024</em>
-      <ul>
-        <li>
-          Fixed a bug where manual validation from an admin is requested from the first device instead of the second
-          when the option is activated.
-        </li>
-        <li>
-          Forgotten password and second device validation notifications are no longer sent to super administrators
-          except if if there is no dedicated administrator for the bank.
-        </li>
-      </ul>
       {/* 2.1.0 */}
       <h2>2.1.0</h2>
       <em>Published on 27/06/2024</em>
