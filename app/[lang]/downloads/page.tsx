@@ -164,6 +164,16 @@ export default function Page({ params }: { params: { lang: string } }) {
               <td>Safari (macOS)</td>
               <td>{t.downloads.safariIncludedInApp}</td>
             </tr>
+            <tr>
+              <td colSpan={3}>
+                <a
+                  href="https://github.com/UpSignOn/UpSignOn-pro-server/blob/production/doc/GPO_deployment.md"
+                  target="_blank"
+                >
+                  {t.downloads.extensionGPO}
+                </a>
+              </td>
+            </tr>
           </tbody>
         </table>
       </section>

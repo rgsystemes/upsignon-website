@@ -215,6 +215,7 @@ const translations = {
     browserExtensionTitle: "2 - Téléchargez l'extension de navigateur",
     chromiumBrowsers: "Navigateurs Chromium",
     safariIncludedInApp: "Livrée avec l'application macOS",
+    extensionGPO: "Déploiement des extensions par GPO",
   },
   features: {
     metaDescription:

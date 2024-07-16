@@ -217,6 +217,7 @@ const translations: typeof fr = {
     browserExtensionTitle: "2 - Download the browser extension",
     chromiumBrowsers: "Chromium browsers",
     safariIncludedInApp: "Shipping with the macOS app.",
+    extensionGPO: "Extensions GPO deployment",
   },
   features: {
     metaDescription:
