@@ -20,15 +20,26 @@ export async function generateMetadata({ params }: { params: { lang: string } })
 
 export default function DashboardNotes({ params }: { params: { lang: string } }) {
   if (params.lang === "fr") {
-    return <FRServerNotes />;
+    return <FRDashboardNotes />;
   } else {
-    return <ENServerNotes />;
+    return <ENDashboardNotes />;
   }
 }
 
-function FRServerNotes() {
+function FRDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.2.0 */}
+      <h2>2.2.0</h2>
+      <em>Publiée le 19/07/2024</em>
+      <ul>
+        <li>ajout d’un onglet “Licences“ affichant les licences passées et actives dont vous êtes titulaire</li>
+        <li>les banques de test sans date d’expiration sont désormais considérées comme expirées</li>
+        <li>correction d’un bug empêchant l’ajout d’un administrateur existant à une nouvelle banque</li>
+        <li>(superadmin) suppression du statut de chaîne de certification qui ne fonctionnait pas correctement</li>
+        <li>améliorations d’affichage</li>
+        <li>suppression des derniers reliquats d’interface des coffres-forts non-migrés</li>
+      </ul>
       {/* 2.1.0 */}
       <h2>2.1.0</h2>
       <em>Publiée le 27/06/2024</em>
@@ -166,9 +177,20 @@ function FRServerNotes() {
     </section>
   );
 }
-function ENServerNotes() {
+function ENDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.2.0 */}
+      <h2>2.2.0</h2>
+      <em>Published on 19/07/2024</em>
+      <ul>
+        <li>adds a “Licences“ tab displaying all passed and active licences that you hold</li>
+        <li>test banks without an expiry date are now considered expired</li>
+        <li>fixed a bug preventing an existing administrator from being added to a new bank</li>
+        <li>(superadmin) removal of certification chain status that was not working correctly</li>
+        <li>interface improvements</li>
+        <li>deletion of the last interface remains of non-migrated vaults</li>
+      </ul>
       {/* 2.1.0 */}
       <h2>2.1.0</h2>
       <em>Published on 27/06/2024</em>

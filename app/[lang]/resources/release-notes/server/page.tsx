@@ -29,6 +29,13 @@ export default function ServerNotes({ params }: { params: { lang: string } }) {
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.3.0 */}
+      <h2>2.3.0</h2>
+      <em>Publiée le 19/07/2024</em>
+      <ul>
+        <li>suppression définitive des coffres PRO non migrés en version 7</li>
+        <li>CASSANT : les banques de test sans date d’expiration sont désormais considérées comme expirées</li>
+      </ul>
       {/* 2.2.0 */}
       <h2>2.2.0</h2>
       <em>Publiée le 01/07/2024</em>
@@ -155,6 +162,13 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.3.0 */}
+      <h2>2.3.0</h2>
+      <em>Published on 19/07/2024</em>
+      <ul>
+        <li>DEFINITIVE DELETION of PRO vaults not migrated to version 7</li>
+        <li>BREAKING: test banks without expiration date are now considered expired</li>
+      </ul>
       {/* 2.2.0 */}
       <h2>2.2.0</h2>
       <em>Published on 01/07/2024</em>
