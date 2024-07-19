@@ -4,6 +4,7 @@ import { ContactLaterButton } from "../contactLaterButton/contactLaterButton";
 import { FreeTrialButton } from "../freeTrialButton/freeTrial";
 import styles from "./page.module.css";
 import { PriceSimulator } from "./priceSimulator";
+import { ContactUsButton } from "../contactUsButton/contactUsButton";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
@@ -45,6 +46,7 @@ export default function Page({ params }: { params: { lang: string } }) {
           <div className={styles.selfHostingTitle}>{t.pricing.proPricing.onPremOption}</div>
           <FreeTrialButton lang={params.lang} className={styles.proPricingActionButton} />
           <ContactLaterButton lang={params.lang} className={styles.proPricingActionButton} />
+          <ContactUsButton lang={params.lang} className={styles.proPricingActionButton} />
 
           <div className={styles.pricingDetails}>{t.pricing.proPricing.saasDetails}</div>
           <div className={styles.pricingDetails}>{t.pricing.proPricing.onPremDetails}</div>

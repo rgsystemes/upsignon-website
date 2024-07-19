@@ -30,6 +30,8 @@ export function Footer(p: { lang: string }) {
             <h1>{t.footer.contactUs}</h1>
             <address>
               <a href="mailto:contact@upsignon.eu">contact@upsignon.eu</a>
+              <br />
+              <a href="tel:+33670743299">+33 6 70 74 32 99</a>
             </address>
           </section>
           <section>
