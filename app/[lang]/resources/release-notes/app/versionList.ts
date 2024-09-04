@@ -17,6 +17,7 @@ export const allMsiVersions = [
 ];
 
 export const linuxVersions = [
+  "7.8.5",
   "7.8.4",
   "7.8.0",
   "7.7.2",

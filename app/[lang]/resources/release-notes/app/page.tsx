@@ -29,6 +29,15 @@ export default function AppNotes({ params }: { params: { lang: string } }) {
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.8.5 */}
+      <h2>7.8.5 (Linux uniquement)</h2>
+      <p>
+        <em>Publiée le 04/09/2024</em>
+      </p>
+      <strong>Correctif</strong>
+      <ul>
+        <li>Corrige un bug empêchant la connexion des extensions de navigateur sur Linux</li>
+      </ul>
       {/* 7.8.4 */}
       <h2>7.8.4</h2>
       <p>
@@ -346,6 +355,15 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.8.5 */}
+      <h2>7.8.5 (Linux only)</h2>
+      <p>
+        <em>Published on 04/09/2024</em>
+      </p>
+      <strong>Fix</strong>
+      <ul>
+        <li>Fixes a bug preventing browser extension connection on Linux</li>
+      </ul>
       {/* 7.8.4 */}
       <h2>7.8.4</h2>
       <p>
