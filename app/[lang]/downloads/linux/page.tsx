@@ -36,7 +36,6 @@ export default function LinuxOtherDownloads({ params }: { params: { lang: string
 }
 
 function FRLinuxOtherDownloads() {
-  const currentVersion = linuxVersions[0];
   return (
     <section className={styles.content}>
       <div className={styles.backArrow}>
@@ -46,11 +45,7 @@ function FRLinuxOtherDownloads() {
       <h1>Téléchargements Linux et informations</h1>
       <p>Téléchargement direct AppImage</p>
       <p>
-        <a
-          className={styles.buttonLink}
-          href={`https://app.upsignon.eu/downloads/UpSignOn-${currentVersion}-latest.AppImage`}
-          download
-        >
+        <a className={styles.buttonLink} href={`https://app.upsignon.eu/downloads/UpSignOn-latest.AppImage`} download>
           Plus récent AppImage
         </a>
       </p>
@@ -116,7 +111,6 @@ MimeType=x-scheme-handler/upsignon;
 }
 
 function ENLinuxOtherDownloads() {
-  const currentVersion = linuxVersions[0];
   return (
     <section className={styles.content}>
       <div className={styles.backArrow}>
@@ -126,11 +120,7 @@ function ENLinuxOtherDownloads() {
       <h1>Linux downloads and information</h1>
       <p>Direct AppImage downloads</p>
       <p>
-        <a
-          className={styles.buttonLink}
-          href={`https://app.upsignon.eu/downloads/UpSignOn-${currentVersion}-latest.AppImage`}
-          download
-        >
+        <a className={styles.buttonLink} href={`https://app.upsignon.eu/downloads/UpSignOn-latest.AppImage`} download>
           Latest AppImage
         </a>
       </p>
