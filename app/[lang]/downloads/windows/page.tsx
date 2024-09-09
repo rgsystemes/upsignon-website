@@ -5,7 +5,10 @@ import {
   currentAppStoreVersion,
 } from "../../resources/release-notes/app/versionList";
 import styles from "./page.module.css";
+import { Code } from "@geist-ui/core";
+import { CodeBlock } from "../../components/codeBlock/codeBlock";
 
+const gpoConfigContent = `{"proConfigUrl":"https://<xxx.xx/xx>"}`;
 const preConfigDeployScript = `## RUN AS ADMIN !
 $cUsersPath = "C:\\Users"
 $usersPaths = (Get-ChildItem -Path $cUsersPath -Directory -ErrorAction SilentlyContinue).FullName
@@ -34,9 +37,7 @@ Foreach($u in $usersPaths){
 }
 Get-AppxPackage -Name 'dataSmine.UpSignOn' -AllUsers | Remove-AppxPackage -AllUsers
 `;
-const msiMigrationScript2 = `
-Start-Process \\\\srv\\partages$\\xxx\\UpSignOn-7.3.0-silent-installer.msi -ArgumentList "/quiet"
-`;
+const msiMigrationScript2 = `Start-Process \\\\srv\\partages$\\xxx\\UpSignOn-7.3.0-silent-installer.msi -ArgumentList "/quiet"`;
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const template = {
@@ -315,9 +316,9 @@ function FRWindowsAllDownloadPage() {
         </li>
       </ul>
       <p>Contenu du fichier (à adapter selon votre cas) :</p>
-      <pre className={styles.code}>{`{"proConfigUrl":"https://<xxx.xx/xx>"}`}</pre>
+      <CodeBlock name="v6-gpo-configuration.json">{gpoConfigContent}</CodeBlock>
       <p>Le script suivant peut être utilisé pour déployer ce fichier automatiquement (à ajuster avec votre url) :</p>
-      <pre className={styles.code}>{preConfigDeployScript}</pre>
+      <CodeBlock name="upsignonGPO.sh">{preConfigDeployScript}</CodeBlock>
 
       <h2>Documentation pour migrer vers le package msi (depuis la version store)</h2>
       <details>
@@ -356,12 +357,12 @@ function FRWindowsAllDownloadPage() {
           <li>installer la version msi</li>
         </ol>
         <p>Pour l’étape 1. et 2. vous pouvez utiliser ce script powershell à exécuter en tant qu’administrateur :</p>
-        <pre className={styles.code}>{msiMigrationScript}</pre>
+        <CodeBlock name="upsignonMigrateFromStoreToMsi_Steps_1_2.sh">{msiMigrationScript}</CodeBlock>
         <p>
-          Pour l’étape 3., vous pouvez vous inspirer de cette ligne au script en adaptant le numéro de version de
-          l’application et le chemin du fichier.
+          Pour l’étape 3., vous pouvez vous inspirer de ce script en adaptant le numéro de version de l’application et
+          le chemin du fichier.
         </p>
-        <pre className={styles.code}>{msiMigrationScript2}</pre>
+        <CodeBlock name="upsignonMigrateFromStoreToMsi_Step_3.sh">{msiMigrationScript2}</CodeBlock>
       </details>
     </section>
   );
@@ -609,9 +610,9 @@ function ENWindowsAllDownloadPage() {
         </li>
       </ul>
       <p>Content of the file (to be adapted according to your case):</p>
-      <pre className={styles.code}>{`{"proConfigUrl":"https://<xxx.xx/xx>"}`}</pre>
+      <CodeBlock name="v6-gpo-configuration.json">{gpoConfigContent}</CodeBlock>
       <p>The following script can be used to deploy this file automatically (to be adjusted with your url):</p>
-      <pre className={styles.code}>{preConfigDeployScript}</pre>
+      <CodeBlock name="upsignonGPO.sh">{preConfigDeployScript}</CodeBlock>
 
       <h2>Documentation for migrating to the msi package (from the store version)</h2>
       <details>
@@ -647,12 +648,12 @@ function ENWindowsAllDownloadPage() {
           <li>install msi version</li>
         </ol>
         <p>For step 1. and 2. you can use this powershell script to run as administrator:</p>
-        <pre className={styles.code}>{msiMigrationScript}</pre>
+        <CodeBlock name="upsignonMigrateFromStoreToMsi_Steps_1_2.sh">{msiMigrationScript}</CodeBlock>
         <p>
-          For step 3., you can take inspiration from this line in the script by adapting the version number of the
-          application and the file path.
+          For step 3., you can take inspiration from this script by adapting the version number of the application and
+          the file path.
         </p>
-        <pre className={styles.code}>{msiMigrationScript2}</pre>
+        <CodeBlock name="upsignonMigrateFromStoreToMsi_Step_3.sh">{msiMigrationScript2}</CodeBlock>
       </details>
     </section>
   );

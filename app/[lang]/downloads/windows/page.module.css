@@ -103,11 +103,3 @@
 .ul {
   margin-bottom: 20px;
 }
-pre.code {
-  background-color: #ddd;
-  font-family: monospace;
-  padding: 30px;
-  width: 100%;
-  overflow-x: auto;
-  margin: 10px 0;
-}

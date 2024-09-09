@@ -32,12 +32,3 @@
 .ul {
   margin-bottom: 20px;
 }
-
-.pre {
-  display: block;
-  font-size: 14px;
-  font-family: monospace;
-  padding-left: 10px;
-  margin-left: 10px;
-  border-left: 4px solid rgb(0, 171, 169);
-}

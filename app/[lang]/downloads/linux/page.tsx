@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { linuxVersions } from "../../resources/release-notes/app/versionList";
 import styles from "./page.module.css";
+import { CodeBlock } from "../../components/codeBlock/codeBlock";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const template = {
@@ -34,6 +35,10 @@ export default function LinuxOtherDownloads({ params }: { params: { lang: string
     return ENLinuxOtherDownloads();
   }
 }
+
+const makeAppImageExecutable = `chmod +x /home/<votre_nom_utilisateur>/Applications/UpSignOn-${linuxVersions[0]}-x86_64.AppImage`;
+const makeDesktopExecutable = `chmod +x /usr/share/applications/UpSignOn.desktop`;
+const updateDesktopDatabase = `sudo update-desktop-database`;
 
 function FRLinuxOtherDownloads() {
   return (
@@ -72,38 +77,36 @@ function FRLinuxOtherDownloads() {
       </p>
       <strong>Installation manuelle</strong>
       <ul>
-        <li>{`Déplacez le fichier UpSignOn-7.8.4-x86_64.AppImage dans /home/<votre_nom_utilisateur>/Applications/`}</li>
+        <li>{`Déplacez le fichier UpSignOn-${linuxVersions[0]}-x86_64.AppImage dans /home/<votre_nom_utilisateur>/Applications/`}</li>
         <li>
-          Rendez ce fichier exécutable{" "}
-          <pre
-            className={styles.pre}
-          >{`chmod +x /home/<votre_nom_utilisateur>/Applications/UpSignOn-7.8.4-x86_64.AppImage`}</pre>
+          Rendez ce fichier exécutable
+          <CodeBlock>{makeAppImageExecutable}</CodeBlock>
         </li>
         <li>
           Créez le fichier /usr/share/applications/UpSignOn.desktop, et ajoutez-y le contenu suivant
-          <pre className={styles.pre}>
+          <CodeBlock name="/usr/share/applications/UpSignOn.desktop">
             {`[Desktop Entry]
 Encoding=UTF-8
 Type=Application
 Categories=Utility;
 Name=UpSignOn
 Comment=Coffre-fort de mots de passe
-Exec=/home/<votre_nom_utilisateur>/Applications/UpSignOn-7.8.4-x86_64.AppImage %u
+Exec=/home/<votre_nom_utilisateur>/Applications/UpSignOn-${linuxVersions[0]}-x86_64.AppImage %u
 Icon=eu.upsignon.upsignon
 StartupNotify=false
 Terminal=false
 Hidden=false
 MimeType=x-scheme-handler/upsignon;
 `}
-          </pre>
+          </CodeBlock>
         </li>
         <li>
-          Rendez ce fichier exécutable{" "}
-          <pre className={styles.pre}>chmod +x /usr/share/applications/UpSignOn.desktop</pre>
+          Rendez ce fichier exécutable
+          <CodeBlock>{makeDesktopExecutable}</CodeBlock>
         </li>
         <li>
-          Mettez-à-jour le cache des applications de bureau{" "}
-          <pre className={styles.pre}>sudo update-desktop-database</pre>
+          Mettez-à-jour le cache des applications de bureau
+          <CodeBlock>{updateDesktopDatabase}</CodeBlock>
         </li>
       </ul>
     </section>
@@ -147,36 +150,36 @@ function ENLinuxOtherDownloads() {
       </p>
       <strong>Manual installation </strong>
       <ul>
-        <li>{`Move the file UpSignOn-7.8.4-x86_64.AppImage to /home/<your_user_name>/Applications/`}</li>
+        <li>{`Move the file UpSignOn-${linuxVersions[0]}-x86_64.AppImage to /home/<your_user_name>/Applications/`}</li>
         <li>
-          Make this file executable{" "}
-          <pre
-            className={styles.pre}
-          >{`chmod +x /home/<your_user_name>/Applications/UpSignOn-7.8.4-x86_64.AppImage`}</pre>
+          Make this file executable
+          <CodeBlock>{makeAppImageExecutable}</CodeBlock>
         </li>
         <li>
           Create the file /usr/share/applications/UpSignOn.desktop, and add the following content to it
-          <pre className={styles.pre}>
+          <CodeBlock name="/usr/share/applications/UpSignOn.desktop">
             {`[Desktop Entry]
 Encoding=UTF-8
 Type=Application
 Categories=Utility;
 Name=UpSignOn
 Comment=Password manager
-Exec=/home/<your_user_name>/Applications/UpSignOn-7.8.4-x86_64.AppImage %u
+Exec=/home/<your_user_name>/Applications/UpSignOn-${linuxVersions[0]}-x86_64.AppImage %u
 Icon=eu.upsignon.upsignon
 StartupNotify=false
 Terminal=false
 Hidden=false
 MimeType=x-scheme-handler/upsignon;
 `}
-          </pre>
+          </CodeBlock>
         </li>
         <li>
-          Make this file executable <pre className={styles.pre}>chmod +x /usr/share/applications/UpSignOn.desktop</pre>
+          Make this file executable
+          <CodeBlock>{makeDesktopExecutable}</CodeBlock>
         </li>
         <li>
-          Update the desktop entry cache <pre className={styles.pre}>sudo update-desktop-database</pre>
+          Update the desktop entry cache
+          <CodeBlock>{updateDesktopDatabase}</CodeBlock>
         </li>
       </ul>
     </section>
