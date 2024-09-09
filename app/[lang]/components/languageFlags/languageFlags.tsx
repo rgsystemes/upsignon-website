@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 
-import FranceFlag from "../../public/flags/France.svg";
-import UKFlag from "../../public/flags/UK.svg";
-import { getDictionary } from "../../translations/translations";
+import FranceFlag from "../../../../public/flags/France.svg";
+import UKFlag from "../../../../public/flags/UK.svg";
+import { getDictionary } from "../../../../translations/translations";
 import styles from "./languageFlags.module.css";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { Tooltip } from "@geist-ui/core";

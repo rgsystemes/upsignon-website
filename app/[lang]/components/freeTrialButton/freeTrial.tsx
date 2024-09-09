@@ -1,7 +1,7 @@
 "use client";
 
 import Modal from "react-modal";
-import { getDictionary } from "../../../translations/translations";
+import { getDictionary } from "../../../../translations/translations";
 import { FormModalButton } from "../formModal/formModal";
 
 Modal.setAppElement("#body");

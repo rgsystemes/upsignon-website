@@ -1,20 +1,22 @@
 import React from "react";
 import { getDictionary } from "../../translations/translations";
 import styles from "./page.module.css";
+import { Metadata } from "next";
 import Image from "next/image";
+
 import frenchImg from "../../public/images/french.svg";
 import privacyByDesignImg from "../../public/images/privacyByDesign.svg";
 import multiDeviceImg from "../../public/images/multiDevice.svg";
 import cryptographyImg from "../../public/images/cryptography.svg";
-import VimeoPlayer from "./vimeoPlayer";
-import CustomerCarousel from "./customerCarousel";
-import SingleAdvantage from "./singleAdvantage";
-import { ContactLaterButton } from "./contactLaterButton/contactLaterButton";
-import { FreeTrialButton } from "./freeTrialButton/freeTrial";
-import { ContactUsButton } from "./contactUsButton/contactUsButton";
-import { Metadata } from "next";
-import { GreenCheckIcon } from "./greenCheckIcon";
-import { LanguageFlags } from "./languageFlags";
+
+import VimeoPlayer from "./components/vimeoPlayer/vimeoPlayer";
+import CustomerCarousel from "./components/customerCarousel/customerCarousel";
+import SingleAdvantage from "./components/singleAdvantage/singleAdvantage";
+import { ContactLaterButton } from "./components/contactLaterButton/contactLaterButton";
+import { FreeTrialButton } from "./components/freeTrialButton/freeTrial";
+import { ContactUsButton } from "./components/contactUsButton/contactUsButton";
+import { GreenCheckIcon } from "./components/greenCheckIcon/greenCheckIcon";
+import { LanguageFlags } from "./components/languageFlags/languageFlags";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
@@ -58,7 +60,6 @@ export default function Page({ params }: { params: { lang: string } }) {
             <div className={styles.tagsImgContainer}>
               <Image src={multiDeviceImg} alt="" />
             </div>
-            {/* <MultiPlatformsTag containerStyle={styles.tagsImgContainerLogos} iconStyle={styles.platformLogo} /> */}
             <div>{t.pitch.crossPlatform}</div>
           </div>
         </section>

@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Modal from "react-modal";
-import { getDictionary } from "../../../translations/translations";
+import { getDictionary } from "../../../../translations/translations";
 import styles from "./contactUsButton.module.css";
 import Link from "next/link";
-import plpImg from "../../../public/images/plp.jpeg";
+import plpImg from "../../../../public/images/plp.jpeg";
 import Image from "next/image";
 
 Modal.setAppElement("#body");

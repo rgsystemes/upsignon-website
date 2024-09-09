@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Modal from "react-modal";
-import { getDictionary } from "../../../translations/translations";
+import { getDictionary } from "../../../../translations/translations";
 import styles from "./formModal.module.css";
 
 Modal.setAppElement("#body");

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { getDictionary } from "../../translations/translations";
+import { getDictionary } from "../../../../translations/translations";
 import styles from "./footer.module.css";
 
 export function Footer(p: { lang: string }) {

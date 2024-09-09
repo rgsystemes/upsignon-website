@@ -5,7 +5,7 @@ import { getDictionary } from "../../../translations/translations";
 import styles from "./priceSimulator.module.css";
 import { useRef } from "react";
 import { useEffect } from "react";
-import { FormModalButton } from "../formModal/formModal";
+import { FormModalButton } from "../components/formModal/formModal";
 function f(n: number): string {
   return n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }

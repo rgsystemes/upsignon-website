@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import logoImg from "../../public/icons/logo-round.svg";
+import logoImg from "../../../../public/icons/logo-round.svg";
 import styles from "./navBar.module.css";
 import Link from "next/link";
-import { getDictionary } from "../../translations/translations";
+import { getDictionary } from "../../../../translations/translations";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useRef } from "react";

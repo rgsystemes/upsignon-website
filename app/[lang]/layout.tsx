@@ -1,8 +1,8 @@
 import "../reset.css";
 import "../global.css";
 import { getTranslationStaticParams } from "../../translations/translations";
-import { NavBar } from "./navBar";
-import { Footer } from "./footer";
+import { NavBar } from "./components/navBar/navBar";
+import { Footer } from "./components/footer/footer";
 import { Montserrat } from "next/font/google";
 import favicon from "../../public/favicon.ico";
 import favicon16 from "../../public/favicon-16x16.png";

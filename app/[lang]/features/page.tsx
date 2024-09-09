@@ -54,10 +54,10 @@ import cryptographyImg from "../../../public/images/cryptography.svg";
 import multiDeviceImg from "../../../public/images/multiDevice.svg";
 import syncImg from "../../../public/images/sync.svg";
 import Link from "next/link";
-import { ContactUsButton } from "../contactUsButton/contactUsButton";
-import VimeoPlayer from "../vimeoPlayer";
-import { ContactLaterButton } from "../contactLaterButton/contactLaterButton";
-import { FreeTrialButton } from "../freeTrialButton/freeTrial";
+import { ContactUsButton } from "../components/contactUsButton/contactUsButton";
+import VimeoPlayer from "../components/vimeoPlayer/vimeoPlayer";
+import { ContactLaterButton } from "../components/contactLaterButton/contactLaterButton";
+import { FreeTrialButton } from "../components//freeTrialButton/freeTrial";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);

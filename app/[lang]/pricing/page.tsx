@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import { getDictionary } from "../../../translations/translations";
-import { ContactLaterButton } from "../contactLaterButton/contactLaterButton";
-import { FreeTrialButton } from "../freeTrialButton/freeTrial";
 import styles from "./page.module.css";
 import { PriceSimulator } from "./priceSimulator";
-import { ContactUsButton } from "../contactUsButton/contactUsButton";
+import { ContactLaterButton } from "../components/contactLaterButton/contactLaterButton";
+import { FreeTrialButton } from "../components/freeTrialButton/freeTrial";
+import { ContactUsButton } from "../components/contactUsButton/contactUsButton";
+import { getDictionary } from "../../../translations/translations";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);

@@ -1,6 +1,6 @@
 "use client";
 
-import { getDictionary } from "../../../translations/translations";
+import { getDictionary } from "../../../../translations/translations";
 import { FormModalButton } from "../formModal/formModal";
 
 export function ContactLaterButton(p: { lang: string; className: string }) {

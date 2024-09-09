@@ -1,4 +1,4 @@
-import { GreenCheckIcon } from "./greenCheckIcon";
+import { GreenCheckIcon } from "../greenCheckIcon/greenCheckIcon";
 import styles from "./singleAdvantage.module.css";
 
 export default function SingleAdvantage(p: { title: string; details: string[]; children?: React.ReactNode }) {
