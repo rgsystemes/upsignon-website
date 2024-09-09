@@ -114,6 +114,12 @@ function FRArticle() {
         autoriser son extension de navigateur. L'extension utilise un port différent pour chaque utilisateur et
         l'échange de données entre l'extension et l'application de sessions utilisateur différentes n'est pas possible.
       </p>
+      <h3>Cas particulier de Linux</h3>
+      <p>
+        La configuration des extensions de navigateur nécessite que le protocole <em>upsignon:</em> soit associé à
+        l'application UpSignOn et fonctionne correctement. Voir les instructions d'installation sur la{" "}
+        <a href="https://upsignon.eu/downloads/linux">page dédiée à Linux</a>.
+      </p>
 
       <h2>Sécurité et limitations du remplissage automatique</h2>
       <p>
@@ -237,6 +243,12 @@ function ENArticle() {
         application and of the extension that is specific to him. Each user must authorize his browser extension. The
         extension uses a different port for each user and data exchange between the extension and the application of
         different user sessions is not possible.
+      </p>
+      <h3>Special case of Linux</h3>
+      <p>
+        Configuring browser extensions requires the <em>upsignon:</em> protocol to be associated with the UpSignOn
+        application and to be working correctly. See installation instructions on{" "}
+        <a href="https://upsignon.eu/downloads/linux">the page dedicated to Linux</a>.
       </p>
 
       <h2>Security and limitations of autofill</h2>
