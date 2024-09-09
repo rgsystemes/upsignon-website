@@ -14,6 +14,7 @@ import { FreeTrialButton } from "./freeTrialButton/freeTrial";
 import { ContactUsButton } from "./contactUsButton/contactUsButton";
 import { Metadata } from "next";
 import Head from "next/head";
+import { GreenCheckIcon } from "./greenCheckIcon";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
@@ -59,6 +60,16 @@ export default function Page({ params }: { params: { lang: string } }) {
             </div>
             {/* <MultiPlatformsTag containerStyle={styles.tagsImgContainerLogos} iconStyle={styles.platformLogo} /> */}
             <div>{t.pitch.crossPlatform}</div>
+          </div>
+        </section>
+        <section className={styles.hostingSection}>
+          <div className={styles.hostingBadge}>
+            <GreenCheckIcon />
+            <div>{t.pitch.saas}</div>
+          </div>
+          <div className={styles.hostingBadge}>
+            <GreenCheckIcon />
+            <div>{t.pitch.onprem}</div>
           </div>
         </section>
         <div className={styles.actionContainer}>

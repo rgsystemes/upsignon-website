@@ -57,6 +57,8 @@ const translations: typeof fr = {
     french: "Made and hosted in France",
     privacyByDesign: "Security and privacy by design",
     crossPlatform: "Cross-platform (Windows, Linux, macOS, iOS, Android)",
+    saas: "SaaS",
+    onprem: "On-Premise",
     keyMetrics: {
       sectionTitle: "Passwords, a key challenge",
       t1: "80% of corporate hacks are linked to weak passwords.",

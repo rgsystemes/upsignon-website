@@ -1,0 +1,17 @@
+.checkIcon {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.checkIcon svg {
+  fill:rgb(0,171,169);
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 500px) {
+  .checkIcon svg {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -55,6 +55,8 @@ const translations = {
     french: "Une solution 100% française et hébergée en France",
     privacyByDesign: "Sécurité et vie privée par conception",
     crossPlatform: "Multi-platformes (Windows, Linux, macOS, iOS, Android)",
+    saas: "SaaS",
+    onprem: "Auto-hébergé",
     keyMetrics: {
       sectionTitle: "Les mots de passe, un enjeu clé",
       t1: "En entreprise, 80% des piratages sont liés à la faiblesse des mots de passe.",
