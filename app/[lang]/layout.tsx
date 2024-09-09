@@ -1,5 +1,3 @@
-import { GoogleTagManager } from "@next/third-parties/google";
-
 import "../reset.css";
 import "../global.css";
 import { getTranslationStaticParams } from "../../translations/translations";
@@ -34,6 +32,7 @@ export default function RootLayout({ children, params }: { children: React.React
         <link rel="icon" type="image/png" sizes="192x192" href={favicon192.src} />
         <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon.src} />
         <link rel="mask-icon" href={safariPinnedTab.src} color="#00aba8" />
+        <meta name="google-site-verification" content="yNxeZNw0jlQy8ywG1nUXNCi1zgL61n9KqWv3kb4zmEE" />
       </head>
       {/* set an id for Modal accessibility */}
       <body id="body">
@@ -42,7 +41,6 @@ export default function RootLayout({ children, params }: { children: React.React
         <Footer lang={params.lang} />
         <Analytics />
       </body>
-      <GoogleTagManager gtmId="G-6W6E211N81" />
     </html>
   );
 }
