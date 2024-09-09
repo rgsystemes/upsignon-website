@@ -681,6 +681,7 @@ const translations: typeof fr = {
     technicalExplanationsMetaDesc: "All our articles to help you understand the inner workings of UpSignOn.",
     onPremDoc: "Linux self-hosting : installation documentation",
     generalDesignPrinciples: "How the PERSO and PRO vaults work",
+    browserExtensionSecurity: "Operation and security principles of the browser extension",
     releaseNotes: "Release notes",
     articles: "Blog",
     contractualCommitments: "Our contractual commitments",

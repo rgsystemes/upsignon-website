@@ -692,6 +692,7 @@ const translations = {
     technicalExplanationsMetaDesc: "Tous nos articles pour comprendre le fonctionnement interne d'UpSignOn.",
     onPremDoc: "Auto-hébergement Linux : documentation d'installation",
     generalDesignPrinciples: "Principes de fonctionnement des coffres-forts PERSO et PRO",
+    browserExtensionSecurity: "Principe de fonctionnement et de sécurité de l'extension de navigateur",
     releaseNotes: "Notes de version",
     articles: "Blog",
     contractualCommitments: "Nos engagements contractuels",

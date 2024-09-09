@@ -27,6 +27,9 @@ export default function Page({ params }: { params: { lang: string } }) {
       <Link className={styles.techArticle} href="/resources/tech-articles/pro-vs-perso">
         {t.resources.generalDesignPrinciples}
       </Link>
+      <Link className={styles.techArticle} href="/resources/tech-articles/browser-extension-security">
+        {t.resources.browserExtensionSecurity}
+      </Link>
       <Link className={styles.techArticle} href="/resources/tech-articles/protected-clipboard-behaviour">
         {t.techResources.protectedClipboardBehaviour.title}
       </Link>
