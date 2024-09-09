@@ -12,7 +12,7 @@ import favicon32 from "../../public/favicon-32x32.png";
 import favicon192 from "../../public/favicon-192x192.png";
 import appleTouchIcon from "../../public/apple-touch-icon.png";
 import safariPinnedTab from "../../public/safari-pinned-tab.svg";
-import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
 // If loading a variable font, you don't need to specify the font weight
 const fontClass = Montserrat({
@@ -40,6 +40,7 @@ export default function RootLayout({ children, params }: { children: React.React
         <NavBar lang={params.lang} />
         <main>{children}</main>
         <Footer lang={params.lang} />
+        <Analytics />
       </body>
       <GoogleTagManager gtmId="G-6W6E211N81" />
     </html>
