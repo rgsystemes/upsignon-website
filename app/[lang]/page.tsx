@@ -13,8 +13,8 @@ import { ContactLaterButton } from "./contactLaterButton/contactLaterButton";
 import { FreeTrialButton } from "./freeTrialButton/freeTrial";
 import { ContactUsButton } from "./contactUsButton/contactUsButton";
 import { Metadata } from "next";
-import Head from "next/head";
 import { GreenCheckIcon } from "./greenCheckIcon";
+import { LanguageFlags } from "./languageFlags";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
@@ -104,6 +104,9 @@ export default function Page({ params }: { params: { lang: string } }) {
           <SingleAdvantage title={t.pitch.advantages[4].t} details={t.pitch.advantages[4].d} />
           <SingleAdvantage title={t.pitch.advantages[5].t} details={t.pitch.advantages[5].d} />
           <SingleAdvantage title={t.pitch.advantages[6].t} details={t.pitch.advantages[6].d} />
+          <SingleAdvantage title={t.pitch.advantages[7].t} details={t.pitch.advantages[7].d}>
+            <LanguageFlags lang={params.lang} />
+          </SingleAdvantage>
         </div>
       </section>
       <section className={styles.proVsPersoSection}>

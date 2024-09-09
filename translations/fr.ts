@@ -46,6 +46,10 @@ const translations = {
     hostedBy: "Site hébergé par",
     copyright: "tous droits réservés",
   },
+  languageFlags: {
+    french: "Français",
+    english: "Anglais",
+  },
   pitch: {
     metaDescription:
       "Découvrez UpSignOn, notre solution de gestion de mots de passe française, conviviale, sécurisée et multi-plateforme. Sécurisez et oubliez vos mots de passe. Obtenez une vue d'ensemble des mots de passe dans votre entreprise et partagez-les avec vos collègues.",
@@ -106,6 +110,12 @@ const translations = {
         d: [
           "Déployer un gestionnaire de mots de passe pour vos employés c’est bien, mais pouvoir vous assurer qu’il est utilisé et qu’il permet effectivement le renforcement des mots de passe, c’est mieux !",
           "Grâce à notre console de supervision, obtenez de la visibilité sur l’état des mots de passe dans votre entreprise et ajustez certains paramètres de sécurité selon vos besoins.",
+        ],
+      },
+      7: {
+        t: "Disponible en plusieurs langues",
+        d: [
+          "L'application, l'extension de navigateur et la console de supervision sont disponibles en français et anglais. Si vous souhaitez qu'UpSignOn soit traduite dans une autre langue, n'hésitez pas à nous en faire la demande en nous envoyant un email.",
         ],
       },
     },

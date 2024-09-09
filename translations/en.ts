@@ -48,6 +48,10 @@ const translations: typeof fr = {
     hostedBy: "Website hosted by",
     copyright: "all rights reserved",
   },
+  languageFlags: {
+    french: "French",
+    english: "English",
+  },
   pitch: {
     metaDescription:
       "Discover UpSignOn, our user-friendly, secure and multi-platform password management solution. Secure and forget your passwords. Get an overview of the passwords in your company and share them with colleagues.",
@@ -108,6 +112,12 @@ const translations: typeof fr = {
         d: [
           "Deploying a password manager for your employees is fine, but being able to ensure that it is being used and that it actually enables passwords to be strengthened is even better!",
           "Thanks to our supervision console, you can gain visibility over the status of passwords in your company and adjust certain security parameters to suit your needs.",
+        ],
+      },
+      7: {
+        t: "Available in several languages",
+        d: [
+          "The app, the browser extension and the supervision console are available in french and english. If you would like UpSignOn to be translated into another language, please send us an email.",
         ],
       },
     },
