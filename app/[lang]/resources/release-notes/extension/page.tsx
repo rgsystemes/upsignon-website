@@ -29,6 +29,16 @@ export default function ExtensionNotes({ params }: { params: { lang: string } })
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.1.0 */}
+      <h2>1.1.0</h2>
+      <em>Publiée le 10/09/2024</em>
+      <ul>
+        <li>
+          Permet le remplissage et l'enregistrement automatique des formulaires contenus dans une iframe si cet iframe
+          est directement enfant du cadre principal et si le nom de domaine de cet iframe est égal au nom de domaine de
+          la page.
+        </li>
+      </ul>
       {/* 1.0.0 */}
       <h2>1.0.0</h2>
       <em>Publiée le 29/05/2024</em>
@@ -112,6 +122,15 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.1.0 */}
+      <h2>1.1.0</h2>
+      <em>Published on 10/09/2024</em>
+      <ul>
+        <li>
+          Allows forms contained in an iframe to be filled in and saved automatically if the iframe is a direct child of
+          the main frame and if the iframe's domain name is equal to the page's domain name.
+        </li>
+      </ul>
       {/* 1.0.0 */}
       <h2>1.0.0</h2>
       <em>Published on 29/05/2024</em>

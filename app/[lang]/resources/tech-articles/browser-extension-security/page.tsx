@@ -156,8 +156,11 @@ function FRArticle() {
       </p>
       <ul>
         <li>
-          le formulaire est ajouté dans la page via une iframe (ce cas pose des difficultés de sécurité et n'est pas
-          encore géré)
+          le formulaire est ajouté dans la page via une iframe qui n'est pas un enfant direct de la page principale
+        </li>
+        <li>
+          le formulaire est ajouté dans la page via une iframe dont le nom de domaine n'est pas identique au nom de
+          domaine de la page principale (ce cas pose des problèmes de sécurité et n'est pas encore géré)
         </li>
         <li>si la façon dont est codé le formulaire ne permet pas l'identification des champs login et mot de passe</li>
         <li>
@@ -281,7 +284,11 @@ function ENArticle() {
         action), if:
       </p>
       <ul>
-        <li>the form is added to the page via an iframe (this case poses security issues and is not yet managed)</li>
+        <li>the form is added to the page via an iframe that is not a direct child of the main page</li>
+        <li>
+          the form is added to the page via an iframe whose domain name is not identical to the domain name of the main
+          page (this case poses security issues and is not yet handled)
+        </li>
         <li>if the way the form is coded does not allow the login and password fields to be identified</li>
         <li>if the website publisher has implemented mechanisms to prevent automatic filling by robots</li>
       </ul>
