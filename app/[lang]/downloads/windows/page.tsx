@@ -5,7 +5,6 @@ import {
   currentAppStoreVersion,
 } from "../../resources/release-notes/app/versionList";
 import styles from "./page.module.css";
-import { Code } from "@geist-ui/core";
 import { CodeBlock } from "../../components/codeBlock/codeBlock";
 
 const gpoConfigContent = `{"proConfigUrl":"https://<xxx.xx/xx>"}`;
@@ -36,6 +35,150 @@ Foreach($u in $usersPaths){
     }
 }
 Get-AppxPackage -Name 'dataSmine.UpSignOn' -AllUsers | Remove-AppxPackage -AllUsers
+`;
+const updateScriptFR = `# Save with UTF-8-with-BOM encoding
+
+##############################################
+# CONSTANTES À MODIFIER SELON VOTRE CONTEXTE #
+##############################################
+# Emplacement du dossier de mise-à-jour
+$updateFolderPath = "C:\\chemin\\vers\\dossier\\maj-upsignon"
+
+# Choix du mode d'installation parmi "SILENT_MSI", "SILENT_USER_MSI", "STORE"
+$packageType = "SILENT_MSI"
+
+
+#########################
+# SCRIPT DE MISE-À-JOUR #
+# Ce script télécharge le dernier package de l'application uniquement si une nouvelle version est disponible.
+#########################
+
+# Latest available version URLs per package type
+$latestMSIVersionUrl = "https://app.upsignon.eu/downloads/latest_windows_msi.txt"
+$latestStoreVersionUrl = "https://app.upsignon.eu/downloads/latest_windows_store.txt"
+
+# Latest available package download URLs
+$silentMsiDownloadUrl = "https://app.upsignon.eu/downloads/UpSignOn-latest-silent-installer.msi"
+$silentUserMsiDownloadUrl = "https://app.upsignon.eu/downloads/UpSignOn-latest-silent-user-installer.msi"
+$storeDownloadUrl = "https://app.upsignon.eu/downloads/UpSignOn_latest.zip"
+
+$packageLatestVersionUrl = $latestMSIVersionUrl
+$packageDownloadUrl = $silentMsiDownloadUrl
+$localPackagePath = "$updateFolderPath\\upsignon.msi"
+if($packageType -eq "SILENT_USER_MSI") {
+    $packageDownloadUrl = $silentUserMsiDownloadUrl
+} elseif($packageType -eq "STORE") {
+    $packageLatestVersionUrl = $latestStoreVersionUrl
+    $packageDownloadUrl = $storeDownloadUrl
+    $localPackagePath = "$updateFolderPath\\upsignon.zip"
+}
+
+$currentVersionFilePath = "$updateFolderPath\\currentVersion.txt"
+$latestVersionFilePath = "$updateFolderPath\\latestVersion.txt"
+
+
+# Download latest version file
+Invoke-WebRequest -Uri $packageLatestVersionUrl -OutFile $latestVersionFilePath
+
+# Read current version and latest version
+$currentVersion = Get-Content -Path $currentVersionFilePath
+$latestVersion = Get-Content -Path $latestVersionFilePath
+
+# Compare versions
+if ($currentVersion -ne $latestVersion) {
+    Write-Output "Une nouvelle version est disponible : $latestVersion. Mise à jour en cours..."
+
+    # Remove previous package
+    if (Test-Path $localPackagePath) {
+        Remove-Item $localPackagePath
+    }
+
+    # Download the new package
+    Invoke-WebRequest -Uri $packageDownloadUrl -OutFile $localPackagePath
+
+    # Update current version
+    Set-Content -Path $currentVersionFilePath -Value $latestVersion
+
+    # Remove latest version file
+    Remove-Item $latestVersionFilePath
+
+    Write-Output "Le package est désormais en version $latestVersion. $localPackagePath"
+} else {
+    Write-Output "Le package est déjà en version $currentVersion."
+    # Remove latest version file
+    Remove-Item $latestVersionFilePath
+}
+`;
+const updateScriptEN = `######################################
+# CONSTANTS TO ADAPT TO YOUR CONTEXT #
+######################################
+# Path of the update folder
+$updateFolderPath = "C:\\path\\to\\upsignon-update\\folder"
+
+# Choice of the installation mode amongst "SILENT_MSI", "SILENT_USER_MSI", "STORE"
+$packageType = "SILENT_MSI"
+
+
+#################
+# UPDATE SCRIPT #
+# This script downloads the last package of the app only if a new version is available.
+#########################
+
+# Latest available version URLs per package type
+$latestMSIVersionUrl = "https://app.upsignon.eu/downloads/latest_windows_msi.txt"
+$latestStoreVersionUrl = "https://app.upsignon.eu/downloads/latest_windows_store.txt"
+
+# Latest available package download URLs
+$silentMsiDownloadUrl = "https://app.upsignon.eu/downloads/UpSignOn-latest-silent-installer.msi"
+$silentUserMsiDownloadUrl = "https://app.upsignon.eu/downloads/UpSignOn-latest-silent-user-installer.msi"
+$storeDownloadUrl = "https://app.upsignon.eu/downloads/UpSignOn_latest.zip"
+
+$packageLatestVersionUrl = $latestMSIVersionUrl
+$packageDownloadUrl = $silentMsiDownloadUrl
+$localPackagePath = "$updateFolderPath\\upsignon.msi"
+if($packageType -eq "SILENT_USER_MSI") {
+    $packageDownloadUrl = $silentUserMsiDownloadUrl
+} elseif($packageType -eq "STORE") {
+    $packageLatestVersionUrl = $latestStoreVersionUrl
+    $packageDownloadUrl = $storeDownloadUrl
+    $localPackagePath = "$updateFolderPath\\upsignon.zip"
+}
+
+$currentVersionFilePath = "$updateFolderPath\\currentVersion.txt"
+$latestVersionFilePath = "$updateFolderPath\\latestVersion.txt"
+
+
+# Download latest version file
+Invoke-WebRequest -Uri $packageLatestVersionUrl -OutFile $latestVersionFilePath
+
+# Read current version and latest version
+$currentVersion = Get-Content -Path $currentVersionFilePath
+$latestVersion = Get-Content -Path $latestVersionFilePath
+
+# Compare versions
+if ($currentVersion -ne $latestVersion) {
+    Write-Output "A new version is available: $latestVersion. Updating..."
+
+    # Remove previous package
+    if (Test-Path $localPackagePath) {
+        Remove-Item $localPackagePath
+    }
+
+    # Download the new package
+    Invoke-WebRequest -Uri $packageDownloadUrl -OutFile $localPackagePath
+
+    # Update current version
+    Set-Content -Path $currentVersionFilePath -Value $latestVersion
+
+    # Remove latest version file
+    Remove-Item $latestVersionFilePath
+
+    Write-Output "The package is now in version $latestVersion. $localPackagePath"
+} else {
+    Write-Output "The package is already in version $currentVersion."
+    # Remove latest version file
+    Remove-Item $latestVersionFilePath
+}
 `;
 const msiMigrationScript2 = `Start-Process \\\\srv\\partages$\\xxx\\UpSignOn-7.3.0-silent-installer.msi -ArgumentList "/quiet"`;
 
@@ -319,6 +462,14 @@ function FRWindowsAllDownloadPage() {
       <CodeBlock name="v6-gpo-configuration.json">{gpoConfigContent}</CodeBlock>
       <p>Le script suivant peut être utilisé pour déployer ce fichier automatiquement (à ajuster avec votre url) :</p>
       <CodeBlock name="upsignonGPO.sh">{preConfigDeployScript}</CodeBlock>
+
+      <h2>Script de mise-à-jour automatique par GPO</h2>
+      <p>
+        Si vous souhaitez mettre à jour l'application automatiquement par GPO, vous pouvez utiliser ce script pour
+        télécharger automatiquement la dernière version de l'application à chaque fois qu'une nouvelle version est
+        publiée.
+      </p>
+      <CodeBlock name="upsignon-update.ps1">{updateScriptFR}</CodeBlock>
 
       <h2>Documentation pour migrer vers le package msi (depuis la version store)</h2>
       <details>
@@ -613,6 +764,13 @@ function ENWindowsAllDownloadPage() {
       <CodeBlock name="v6-gpo-configuration.json">{gpoConfigContent}</CodeBlock>
       <p>The following script can be used to deploy this file automatically (to be adjusted with your url):</p>
       <CodeBlock name="upsignonGPO.sh">{preConfigDeployScript}</CodeBlock>
+
+      <h2>GPO auto update script</h2>
+      <p>
+        If you wish to automatically update the app by GPO, you can use this script to automatically download the latest
+        version of the app each time a new release is published.
+      </p>
+      <CodeBlock name="upsignon-update.ps1">{updateScriptEN}</CodeBlock>
 
       <h2>Documentation for migrating to the msi package (from the store version)</h2>
       <details>
