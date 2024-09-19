@@ -13,7 +13,6 @@ import VimeoPlayer from "./components/vimeoPlayer/vimeoPlayer";
 import CustomerCarousel from "./components/customerCarousel/customerCarousel";
 import SingleAdvantage from "./components/singleAdvantage/singleAdvantage";
 import { ContactLaterButton } from "./components/contactLaterButton/contactLaterButton";
-import { FreeTrialButton } from "./components/freeTrialButton/freeTrial";
 import { ContactUsButton } from "./components/contactUsButton/contactUsButton";
 import { GreenCheckIcon } from "./components/greenCheckIcon/greenCheckIcon";
 import { LanguageFlags } from "./components/languageFlags/languageFlags";
@@ -76,7 +75,6 @@ export default function Page({ params }: { params: { lang: string } }) {
         <div className={styles.actionContainer}>
           <ContactUsButton lang={params.lang} className={styles.actionLinkOnBlue} />
           <ContactLaterButton lang={params.lang} className={styles.actionLinkOnBlue} />
-          <FreeTrialButton lang={params.lang} className={styles.actionLinkOnBlue} />
         </div>
       </div>
       <section className={styles.keyMetricsSection}>
@@ -128,7 +126,6 @@ export default function Page({ params }: { params: { lang: string } }) {
             <div className={styles.actionContainer}>
               <ContactUsButton lang={params.lang} className={styles.actionLinkOnWhite} />
               <ContactLaterButton lang={params.lang} className={styles.actionLinkOnWhite} />
-              <FreeTrialButton lang={params.lang} className={styles.actionLinkOnWhite} />
             </div>
           </div>
         </div>

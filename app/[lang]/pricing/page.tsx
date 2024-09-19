@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import styles from "./page.module.css";
 import { PriceSimulator } from "./priceSimulator";
 import { ContactLaterButton } from "../components/contactLaterButton/contactLaterButton";
-import { FreeTrialButton } from "../components/freeTrialButton/freeTrial";
 import { ContactUsButton } from "../components/contactUsButton/contactUsButton";
 import { getDictionary } from "../../../translations/translations";
 
@@ -44,7 +43,6 @@ export default function Page({ params }: { params: { lang: string } }) {
           <div className={styles.priceDetail}>{t.pricing.proPricing.licenceOver12000}</div>
           <div className={styles.priceDetail}>{t.pricing.proPricing.licence3YearsReduction}</div>
           <div className={styles.selfHostingTitle}>{t.pricing.proPricing.onPremOption}</div>
-          <FreeTrialButton lang={params.lang} className={styles.proPricingActionButton} />
           <ContactLaterButton lang={params.lang} className={styles.proPricingActionButton} />
           <ContactUsButton lang={params.lang} className={styles.proPricingActionButton} />
 
