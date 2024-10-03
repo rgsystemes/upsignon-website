@@ -29,6 +29,32 @@ export default function AppNotes({ params }: { params: { lang: string } }) {
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.9.0 */}
+      <h2>7.9.0</h2>
+      <p>
+        <em>Pas encore publiée</em>
+      </p>
+      <strong>Nouveautés</strong>
+      <ul>
+        <li>
+          L'application prend en compte un nouveau paramètre administrateur pour désactiver l'affichage de la popup de
+          mise-à-jour.
+        </li>
+        <li>
+          Version 1.1.0 de l'application sur Safari (voir les{" "}
+          <a href="https://upsignon.eu/resources/release-notes/extension">notes associées</a>)
+        </li>
+        <li>Le bouton "Nous contacter" permet désormais également d'envoyer les logs anonymisés de l'application.</li>
+      </ul>
+      <strong>Correctifs</strong>
+      <ul>
+        <li>
+          L'avertissement "mode hors-ligne" s'affiche désormais aussi quand l'application est connectée à internet mais
+          ne parvient pas à communiquer avec le serveur.
+        </li>
+        <li>Corrige un problème de fréquence d'affichage de la popup de mise-à-jour sur macOS.</li>
+        <li>Évite le blocage de l'application en cas d'erreur de mise-à-jour (Windows).</li>
+      </ul>
       {/* 7.8.5 */}
       <h2>7.8.5 (Linux uniquement)</h2>
       <p>
@@ -355,6 +381,29 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.9.0 */}
+      <h2>7.9.0</h2>
+      <p>
+        <em>Not published yet</em>
+      </p>
+      <strong>New features</strong>
+      <ul>
+        <li>The app takes into account a new administrator parameter to prevent the display of the update popup.</li>
+        <li>
+          Version 1.1.0 of the Safari extension (see the{" "}
+          <a href="https://upsignon.eu/resources/release-notes/extension">associated notes</a>)
+        </li>
+        <li>The "Contact us" button now also makes it possible to send anonymised app logs.</li>
+      </ul>
+      <strong>Fixes</strong>
+      <ul>
+        <li>
+          The "Offline mode" warning now also displays when the application is connected to the internet but cannot
+          communicate with the server.
+        </li>
+        <li>Fixes an issue with the frequency of display of the update popup on macOS.</li>
+        <li>Prevents the blocking of the application in case of update error (Windows).</li>
+      </ul>
       {/* 7.8.5 */}
       <h2>7.8.5 (Linux only)</h2>
       <p>

@@ -29,6 +29,18 @@ export default function ServerNotes({ params }: { params: { lang: string } }) {
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.4.0 */}
+      <h2>2.4.0</h2>
+      <em>Publiée le 03/10/2024</em>
+      <ul>
+        <li>
+          ajout d'un paramètre pour empêcher l'affichage de la popup de mise-à-jour dans l'application (à partir de la
+          version 7.9.0 de l'application)
+        </li>
+        <li>
+          corrige un problème de synchronisation avec Microsoft Entra ID empêchant la désactivation des utilisateurs
+        </li>
+      </ul>
       {/* 2.3.0 */}
       <h2>2.3.0</h2>
       <em>Publiée le 19/07/2024</em>
@@ -162,6 +174,16 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.4.0 */}
+      <h2>2.4.0</h2>
+      <em>Published on 03/10/2024</em>
+      <ul>
+        <li>
+          adds a parameter to prevent the display of the app update popup in the app (since version 7.9.0 of the
+          application)
+        </li>
+        <li>fixes an issue when synchronising with Microsoft Entra ID preventing the deactivation of users</li>
+      </ul>
       {/* 2.3.0 */}
       <h2>2.3.0</h2>
       <em>Published on 19/07/2024</em>

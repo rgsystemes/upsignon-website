@@ -29,6 +29,16 @@ export default function DashboardNotes({ params }: { params: { lang: string } })
 function FRDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.3.0 */}
+      <h2>2.3.0</h2>
+      <em>Publiée le 03/10/2024</em>
+      <ul>
+        <li>
+          ajout d'un paramètre pour empêcher l'affichage de la popup de mise-à-jour dans l'application (à partir de la
+          version 7.9.0 de l'application)
+        </li>
+        <li>correction d'affichage (notamment sur le test de configuration Microsoft Entra)</li>
+      </ul>
       {/* 2.2.0 */}
       <h2>2.2.0</h2>
       <em>Publiée le 19/07/2024</em>
@@ -180,6 +190,16 @@ function FRDashboardNotes() {
 function ENDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.3.0 */}
+      <h2>2.3.0</h2>
+      <em>Published on 03/10/2024</em>
+      <ul>
+        <li>
+          adds a parameter to prevent the display of the app update popup in the app (since version 7.9.0 of the
+          application)
+        </li>
+        <li>fixes wording and displays (in particular on the Microsoft Entra configuration test)</li>
+      </ul>
       {/* 2.2.0 */}
       <h2>2.2.0</h2>
       <em>Published on 19/07/2024</em>
