@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../notes.module.css";
+import { LinkToAnchor } from "../../../components/linkToAnchor/linkToAnchor";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
@@ -30,7 +31,9 @@ function FRExtensionNotes() {
   return (
     <section className={styles.section}>
       {/* 1.1.0 */}
-      <h2>1.1.0</h2>
+      <h2>
+        <LinkToAnchor id="1.1.0">1.1.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 10/09/2024</em>
       <ul>
         <li>
@@ -40,7 +43,9 @@ function FRExtensionNotes() {
         </li>
       </ul>
       {/* 1.0.0 */}
-      <h2>1.0.0</h2>
+      <h2>
+        <LinkToAnchor id="1.0.0">1.0.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 29/05/2024</em>
       <ul>
         <li>
@@ -55,7 +60,9 @@ function FRExtensionNotes() {
       </ul>
 
       {/* 0.11.0 */}
-      <h2>0.11.0</h2>
+      <h2>
+        <LinkToAnchor id="0.11.0">0.11.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 26/03/2024</em>
       <ul>
         <li>Amélioration de l’affichage des mots de passe non enregistrés</li>
@@ -65,7 +72,9 @@ function FRExtensionNotes() {
       </ul>
 
       {/* 0.10.5 */}
-      <h2>0.10.5</h2>
+      <h2>
+        <LinkToAnchor id="0.10.5">0.10.5</LinkToAnchor>
+      </h2>
       <em>Publiée le 20/02/2024</em>
       <ul>
         <li>amélioration de l’heuristique de détection des champs mot de passe</li>
@@ -73,7 +82,9 @@ function FRExtensionNotes() {
       </ul>
 
       {/* 0.10.4 */}
-      <h2>0.10.4</h2>
+      <h2>
+        <LinkToAnchor id="0.10.4">0.10.4</LinkToAnchor>
+      </h2>
       <em>Publiée le 13/02/2024</em>
       <ul>
         <li>correction de la modification d’un mot de passe d’un compte partagé pour un coffre-fort PRO</li>
@@ -85,14 +96,18 @@ function FRExtensionNotes() {
       </ul>
 
       {/* 0.10.3 */}
-      <h2>0.10.3</h2>
+      <h2>
+        <LinkToAnchor id="0.10.3">0.10.3</LinkToAnchor>
+      </h2>
       <em>Publiée le 12/02/2024</em>
       <ul>
         <li>ajout d’une option pour désactiver l’enregistrement automatique par défaut sur le site actuel</li>
       </ul>
 
       {/* 0.10.2 */}
-      <h2>0.10.2</h2>
+      <h2>
+        <LinkToAnchor id="0.10.2">0.10.2</LinkToAnchor>
+      </h2>
       <em>Publiée le 12/02/2024</em>
       <ul>
         <li>
@@ -102,7 +117,9 @@ function FRExtensionNotes() {
       </ul>
 
       {/* 0.10.1 */}
-      <h2>0.10.1</h2>
+      <h2>
+        <LinkToAnchor id="0.10.1">0.10.1</LinkToAnchor>
+      </h2>
       <em>Publiée le 9/02/2024</em>
       <ul>
         <li>enregistrement automatique des logins et mots de passe saisis manuellement (coffres-forts Pro et Perso)</li>
@@ -123,7 +140,9 @@ function ENExtensionNotes() {
   return (
     <section className={styles.section}>
       {/* 1.1.0 */}
-      <h2>1.1.0</h2>
+      <h2>
+        <LinkToAnchor id="1.1.0">1.1.0</LinkToAnchor>
+      </h2>
       <em>Published on 10/09/2024</em>
       <ul>
         <li>
@@ -132,7 +151,9 @@ function ENExtensionNotes() {
         </li>
       </ul>
       {/* 1.0.0 */}
-      <h2>1.0.0</h2>
+      <h2>
+        <LinkToAnchor id="1.0.0">1.0.0</LinkToAnchor>
+      </h2>
       <em>Published on 29/05/2024</em>
       <ul>
         <li>
@@ -147,7 +168,9 @@ function ENExtensionNotes() {
       </ul>
 
       {/* 0.11.0 */}
-      <h2>0.11.0</h2>
+      <h2>
+        <LinkToAnchor id="0.11.0">0.11.0</LinkToAnchor>
+      </h2>
       <em>Published on 26/03/2024</em>
       <ul>
         <li>Improves display of unsaved passwords</li>
@@ -157,7 +180,9 @@ function ENExtensionNotes() {
       </ul>
 
       {/* 0.10.5 */}
-      <h2>0.10.5</h2>
+      <h2>
+        <LinkToAnchor id="0.10.5">0.10.5</LinkToAnchor>
+      </h2>
       <em>Published on 20/02/2024</em>
       <ul>
         <li>improves password field detection heuristics</li>
@@ -165,7 +190,9 @@ function ENExtensionNotes() {
       </ul>
 
       {/* 0.10.4 */}
-      <h2>0.10.4</h2>
+      <h2>
+        <LinkToAnchor id="0.10.4">0.10.4</LinkToAnchor>
+      </h2>
       <em>Published 13/02/2024</em>
       <ul>
         <li>fixes changing a shared account password for a PRO vault</li>
@@ -177,21 +204,27 @@ function ENExtensionNotes() {
       </ul>
 
       {/* 0.10.3 */}
-      <h2>0.10.3</h2>
+      <h2>
+        <LinkToAnchor id="0.10.3">0.10.3</LinkToAnchor>
+      </h2>
       <em>Published 12/02/2024</em>
       <ul>
         <li>adds option to disable autosave by default on the current site</li>
       </ul>
 
       {/* 0.10.2 */}
-      <h2>0.10.2</h2>
+      <h2>
+        <LinkToAnchor id="0.10.2">0.10.2</LinkToAnchor>
+      </h2>
       <em>Published 12/02/2024</em>
       <ul>
         <li>improvement of the field detection heuristic to allow (semi-)automatic filling in some special cases</li>
       </ul>
 
       {/* 0.10.1 */}
-      <h2>0.10.1</h2>
+      <h2>
+        <LinkToAnchor id="0.10.1">0.10.1</LinkToAnchor>
+      </h2>
       <em>Published 9/02/2024</em>
       <ul>
         <li>automatic saving of logins and passwords entered manually (Pro and Personal vaults)</li>

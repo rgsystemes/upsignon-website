@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../notes.module.css";
+import { LinkToAnchor } from "../../../components/linkToAnchor/linkToAnchor";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
@@ -30,7 +31,9 @@ function FRDashboardNotes() {
   return (
     <section className={styles.section}>
       {/* 2.3.0 */}
-      <h2>2.3.0</h2>
+      <h2>
+        <LinkToAnchor id="2.3.0">2.3.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 03/10/2024</em>
       <ul>
         <li>
@@ -40,7 +43,9 @@ function FRDashboardNotes() {
         <li>correction d'affichage (notamment sur le test de configuration Microsoft Entra)</li>
       </ul>
       {/* 2.2.0 */}
-      <h2>2.2.0</h2>
+      <h2>
+        <LinkToAnchor id="2.2.0">2.2.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 19/07/2024</em>
       <ul>
         <li>ajout d’un onglet “Licences“ affichant les licences passées et actives dont vous êtes titulaire</li>
@@ -51,7 +56,9 @@ function FRDashboardNotes() {
         <li>suppression des derniers reliquats d’interface des coffres-forts non-migrés</li>
       </ul>
       {/* 2.1.0 */}
-      <h2>2.1.0</h2>
+      <h2>
+        <LinkToAnchor id="2.1.0">2.1.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 27/06/2024</em>
       <ul>
         <li>mise-à-jour des liens vers les pages de téléchargement et de notes de version</li>
@@ -59,7 +66,9 @@ function FRDashboardNotes() {
         <li>compatibilité avec le serveur UpSignOn PRO 2.1.0</li>
       </ul>
       {/* 2.0.2 */}
-      <h2>2.0.2</h2>
+      <h2>
+        <LinkToAnchor id="2.0.2">2.0.2</LinkToAnchor>
+      </h2>
       <em>Publiée le 30/05/2024</em>
       <ul>
         <li>correctifs d’affichage mineurs d’affichage</li>
@@ -67,7 +76,9 @@ function FRDashboardNotes() {
       </ul>
 
       {/* 2.0.1 */}
-      <h2>2.0.1</h2>
+      <h2>
+        <LinkToAnchor id="2.0.1">2.0.1</LinkToAnchor>
+      </h2>
       <em>Publiée le 21/05/2024</em>
       <ul>
         <li>
@@ -77,7 +88,9 @@ function FRDashboardNotes() {
       </ul>
 
       {/* 2.0.0 */}
-      <h2>2.0.0</h2>
+      <h2>
+        <LinkToAnchor id="2.0.0">2.0.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 17/05/2024</em>
       <p>
         <strong>⚠️ Cette version nécessite NodeJS 20 ou ultérieur.</strong>
@@ -95,7 +108,9 @@ function FRDashboardNotes() {
       </ul>
 
       {/* 1.15.0 */}
-      <h2>1.15.0</h2>
+      <h2>
+        <LinkToAnchor id="1.15.0">1.15.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 30/04/2024</em>
       <ul>
         <li>ajoute un mécanisme pour simplifier le changement d’URL du serveur</li>
@@ -106,7 +121,9 @@ function FRDashboardNotes() {
       </ul>
 
       {/* 1.14.0 */}
-      <h2>1.14.0</h2>
+      <h2>
+        <LinkToAnchor id="1.14.0">1.14.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 09/04/2024</em>
       <ul>
         <li>
@@ -118,14 +135,18 @@ function FRDashboardNotes() {
       </ul>
 
       {/* 1.13.1 */}
-      <h2>1.13.1</h2>
+      <h2>
+        <LinkToAnchor id="1.13.1">1.13.1</LinkToAnchor>
+      </h2>
       <em>Publiée le 04/04/2024</em>
       <ul>
         <li>affichage de l’email de l’admin qui autorise la réinitialisation de mot de passe d’un utilisateur</li>
       </ul>
 
       {/* 1.13.0 */}
-      <h2>1.13.0</h2>
+      <h2>
+        <LinkToAnchor id="1.13.0">1.13.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 03/04/2024</em>
       <ul>
         <li>ajoute une fonction pour récupérer les utilisateurs ayant une version msi de l’application sur Windows</li>
@@ -147,7 +168,9 @@ function FRDashboardNotes() {
       </ul>
 
       {/* 1.12.0 */}
-      <h2>1.12.0</h2>
+      <h2>
+        <LinkToAnchor id="1.12.0">1.12.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 20/12/2023</em>
       <ul>
         <li>
@@ -164,7 +187,9 @@ function FRDashboardNotes() {
       </ul>
 
       {/* 1.11.0 */}
-      <h2>1.11.0</h2>
+      <h2>
+        <LinkToAnchor id="1.11.0">1.11.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 13/12/2023</em>
       <ul>
         <li>ajout de la page notes de version</li>
@@ -191,7 +216,9 @@ function ENDashboardNotes() {
   return (
     <section className={styles.section}>
       {/* 2.3.0 */}
-      <h2>2.3.0</h2>
+      <h2>
+        <LinkToAnchor id="2.3.0">2.3.0</LinkToAnchor>
+      </h2>
       <em>Published on 03/10/2024</em>
       <ul>
         <li>
@@ -201,7 +228,9 @@ function ENDashboardNotes() {
         <li>fixes wording and displays (in particular on the Microsoft Entra configuration test)</li>
       </ul>
       {/* 2.2.0 */}
-      <h2>2.2.0</h2>
+      <h2>
+        <LinkToAnchor id="2.2.0">2.2.0</LinkToAnchor>
+      </h2>
       <em>Published on 19/07/2024</em>
       <ul>
         <li>adds a “Licences“ tab displaying all passed and active licences that you hold</li>
@@ -212,7 +241,9 @@ function ENDashboardNotes() {
         <li>deletion of the last interface remains of non-migrated vaults</li>
       </ul>
       {/* 2.1.0 */}
-      <h2>2.1.0</h2>
+      <h2>
+        <LinkToAnchor id="2.1.0">2.1.0</LinkToAnchor>
+      </h2>
       <em>Published on 27/06/2024</em>
       <ul>
         <li>updated links to download and release notes pages</li>
@@ -221,7 +252,9 @@ function ENDashboardNotes() {
       </ul>
 
       {/* 2.0.2 */}
-      <h2>2.0.2</h2>
+      <h2>
+        <LinkToAnchor id="2.0.2">2.0.2</LinkToAnchor>
+      </h2>
       <em>Published on 30/05/2024</em>
       <ul>
         <li>minor display fixes</li>
@@ -229,7 +262,9 @@ function ENDashboardNotes() {
       </ul>
 
       {/* 2.0.1 */}
-      <h2>2.0.1</h2>
+      <h2>
+        <LinkToAnchor id="2.0.1">2.0.1</LinkToAnchor>
+      </h2>
       <em>Published on 21/05/2024</em>
       <ul>
         <li>
@@ -239,7 +274,9 @@ function ENDashboardNotes() {
       </ul>
 
       {/* 2.0.0 */}
-      <h2>2.0.0</h2>
+      <h2>
+        <LinkToAnchor id="2.0.0">2.0.0</LinkToAnchor>
+      </h2>
       <em>Published on 17/05/2024</em>
       <p>
         <strong>⚠️ This version requires NodeJS 20 or later.</strong>
@@ -254,7 +291,9 @@ function ENDashboardNotes() {
       </ul>
 
       {/* 1.15.0 */}
-      <h2>1.15.0</h2>
+      <h2>
+        <LinkToAnchor id="1.15.0">1.15.0</LinkToAnchor>
+      </h2>
       <em>Published on 30/04/2024</em>
       <ul>
         <li>adds a mechanism to simplify changing server URL</li>
@@ -265,7 +304,9 @@ function ENDashboardNotes() {
       </ul>
 
       {/* 1.14.0 */}
-      <h2>1.14.0</h2>
+      <h2>
+        <LinkToAnchor id="1.14.0">1.14.0</LinkToAnchor>
+      </h2>
       <em>Published on 09/04/2024</em>
       <ul>
         <li>
@@ -276,14 +317,18 @@ function ENDashboardNotes() {
       </ul>
 
       {/* 1.13.1 */}
-      <h2>1.13.1</h2>
+      <h2>
+        <LinkToAnchor id="1.13.1">1.13.1</LinkToAnchor>
+      </h2>
       <em>Published on 04/04/2024</em>
       <ul>
         <li>display of the admin email which authorizes the reset of a user’s password</li>
       </ul>
 
       {/* 1.13.0 */}
-      <h2>1.13.0</h2>
+      <h2>
+        <LinkToAnchor id="1.13.0">1.13.0</LinkToAnchor>
+      </h2>
       <em>Published on 03/04/2024</em>
       <ul>
         <li>adds a function to retrieve users with an msi version of the application on Windows</li>
@@ -299,7 +344,9 @@ function ENDashboardNotes() {
       </ul>
 
       {/* 1.12.0 */}
-      <h2>1.12.0</h2>
+      <h2>
+        <LinkToAnchor id="1.12.0">1.12.0</LinkToAnchor>
+      </h2>
       <em>Published on 20/12/2023</em>
       <ul>
         <li>
@@ -316,7 +363,9 @@ function ENDashboardNotes() {
       </ul>
 
       {/* 1.11.0 */}
-      <h2>1.11.0</h2>
+      <h2>
+        <LinkToAnchor id="1.11.0">1.11.0</LinkToAnchor>
+      </h2>
       <em>Published on 12/13/2023</em>
       <ul>
         <li>adds a release notes page</li>

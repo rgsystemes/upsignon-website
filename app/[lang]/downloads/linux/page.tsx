@@ -2,6 +2,11 @@ import { Metadata } from "next";
 import { linuxVersions } from "../../resources/release-notes/app/versionList";
 import styles from "./page.module.css";
 import { CodeBlock } from "../../components/codeBlock/codeBlock";
+import { LinkToAnchor } from "../../components/linkToAnchor/linkToAnchor";
+
+const anchors = {
+  installInstructions: "install",
+};
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const template = {
@@ -66,7 +71,9 @@ function FRLinuxOtherDownloads() {
         ))}
       </ul>
 
-      <h2>Instructions d’installation</h2>
+      <h2>
+        <LinkToAnchor id={anchors.installInstructions}>Instructions d’installation</LinkToAnchor>
+      </h2>
       <strong>Installation automatique avec AppImageLauncher</strong>
       <p>
         Nous recommandons de suivre les explications de la page{" "}
@@ -139,7 +146,9 @@ function ENLinuxOtherDownloads() {
         ))}
       </ul>
 
-      <h2>Installation instructions</h2>
+      <h2>
+        <LinkToAnchor id={anchors.installInstructions}>Installation instructions</LinkToAnchor>
+      </h2>
       <strong>Automatic installation with AppImageLauncher</strong>
       <p>
         We recommend to follow the explanations on the page{" "}

@@ -70,7 +70,9 @@ function FRAppNotes() {
         <li>Corrige un bug empêchant la connexion des extensions de navigateur sur Linux</li>
       </ul>
       {/* 7.8.4 */}
-      <h2>7.8.4</h2>
+      <h2>
+        <LinkToAnchor id="7.8.4">7.8.4</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée le 03/07/2024</em>
       </p>
@@ -90,7 +92,9 @@ function FRAppNotes() {
         <li>(Windows) correction d’un crash au démarrage de l’application sur certains PC Windows (cas très rare)</li>
       </ul>
       {/* 7.8.0 */}
-      <h2>7.8.0</h2>
+      <h2>
+        <LinkToAnchor id="7.8.0">7.8.0</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée le 17/06/2024</em>
       </p>
@@ -106,7 +110,9 @@ function FRAppNotes() {
         </li>
       </ul>
       {/* 7.7.2 */}
-      <h2>7.7.2</h2>
+      <h2>
+        <LinkToAnchor id="7.7.2">7.7.2</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée le 3/06/2024</em>
       </p>
@@ -123,7 +129,9 @@ function FRAppNotes() {
       </ul>
 
       {/* 7.7.1 */}
-      <h2>7.7.1</h2>
+      <h2>
+        <LinkToAnchor id="7.7.1">7.7.1</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée le 21/05/2024</em>
       </p>
@@ -142,7 +150,9 @@ function FRAppNotes() {
       </ul>
 
       {/* 7.6.0 */}
-      <h2>7.6.0</h2>
+      <h2>
+        <LinkToAnchor id="7.6.0">7.6.0</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée le 30/04/2024</em>
       </p>
@@ -156,7 +166,9 @@ function FRAppNotes() {
       </ul>
 
       {/* 7.5.1 */}
-      <h2>7.5.0 (7.5.1 sur windows)</h2>
+      <h2>
+        <LinkToAnchor id="7.5.0">7.5.0 (7.5.1 sur windows)</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée le 22/04/2024 et 23/04/2024</em>
       </p>
@@ -196,7 +208,9 @@ function FRAppNotes() {
       </ul>
 
       {/* 7.4.1 */}
-      <h2>7.4.1</h2>
+      <h2>
+        <LinkToAnchor id="7.4.1">7.4.1</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée entre le 18/03/2024 et le 19/03/2024</em>
       </p>
@@ -213,7 +227,9 @@ function FRAppNotes() {
       </ul>
 
       {/* 7.4.0 */}
-      <h2>7.4.0</h2>
+      <h2>
+        <LinkToAnchor id="7.4.0">7.4.0</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée entre le 11/03/2024 et le 13/03/2024</em>
       </p>
@@ -254,14 +270,17 @@ function FRAppNotes() {
       </ul>
 
       {/* 7.3.1 */}
-      <h2>7.3.1 - 7.3.2 - 7.3.3 (macos)</h2>
+      <h2>
+        <LinkToAnchor id="7.3.1">7.3.1 - 7.3.2 - 7.3.3 (macos)</LinkToAnchor>
+      </h2>
       <ul>
         <li>mises-à-jour de l’extension pour Safari</li>
       </ul>
 
       {/* 7.3.0 */}
-      <h2>7.3.0</h2>
-
+      <h2>
+        <LinkToAnchor id="7.3.0">7.3.0</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée le 9 février 2024</em>
       </p>
@@ -285,7 +304,9 @@ function FRAppNotes() {
       </ul>
 
       {/* 7.2.0 */}
-      <h2>7.2.0</h2>
+      <h2>
+        <LinkToAnchor id="7.2.0">7.2.0</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée le 22/12/2023</em>
       </p>
@@ -314,14 +335,18 @@ function FRAppNotes() {
       </ul>
 
       {/* 7.1.2 */}
-      <h2>7.1.2 (uniquement pour les msi)</h2>
+      <h2>
+        <LinkToAnchor id="7.1.2">7.1.2 (uniquement pour les msi)</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée le 21/12/2023</em>
       </p>
       <p>Corrige le lien de mise-à-jour sur les applications Windows installées par msi.</p>
 
       {/* 7.1.1 */}
-      <h2>7.1.1</h2>
+      <h2>
+        <LinkToAnchor id="7.1.1">7.1.1</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée le 19/12/2023</em>
       </p>
@@ -331,7 +356,9 @@ function FRAppNotes() {
       </p>
 
       {/* 7.1.0 */}
-      <h2>7.1.0</h2>
+      <h2>
+        <LinkToAnchor id="7.1.0">7.1.0</LinkToAnchor>
+      </h2>
       <p>
         <em>Publiée le 18/12/2023</em>
       </p>
@@ -387,7 +414,9 @@ function ENAppNotes() {
   return (
     <section className={styles.section}>
       {/* 7.9.0 */}
-      <h2>7.9.0</h2>
+      <h2>
+        <LinkToAnchor id="7.9.0">7.9.0</LinkToAnchor>
+      </h2>
       <p>
         <em>Publishing (04/10/2024)</em>
       </p>
@@ -410,7 +439,9 @@ function ENAppNotes() {
         <li>Prevents the blocking of the application in case of update error (Windows).</li>
       </ul>
       {/* 7.8.5 */}
-      <h2>7.8.5 (Linux only)</h2>
+      <h2>
+        <LinkToAnchor id="7.8.5">7.8.5 (Linux only)</LinkToAnchor>
+      </h2>
       <p>
         <em>Published on 04/09/2024</em>
       </p>
@@ -419,7 +450,9 @@ function ENAppNotes() {
         <li>Fixes a bug preventing browser extension connection on Linux</li>
       </ul>
       {/* 7.8.4 */}
-      <h2>7.8.4</h2>
+      <h2>
+        <LinkToAnchor id="7.8.4">7.8.4</LinkToAnchor>
+      </h2>
       <p>
         <em>Published on 02/07/2024</em>
       </p>
@@ -434,7 +467,9 @@ function ENAppNotes() {
         <li>(Windows) fixed a crash at application start on certain Windows PCs (very rare case)</li>
       </ul>
       {/* 7.8.0 */}
-      <h2>7.8.0</h2>
+      <h2>
+        <LinkToAnchor id="7.8.0">7.8.0</LinkToAnchor>
+      </h2>
       <p>
         <em>Published on 17/06/2024</em>
       </p>
@@ -450,7 +485,9 @@ function ENAppNotes() {
         </li>
       </ul>
       {/* 7.7.2 */}
-      <h2>7.7.2</h2>
+      <h2>
+        <LinkToAnchor id="7.7.2">7.7.2</LinkToAnchor>
+      </h2>
       <p>
         <em>Published on 3/06/2024</em>
       </p>
@@ -467,7 +504,9 @@ function ENAppNotes() {
       </ul>
 
       {/* 7.7.1 */}
-      <h2>7.7.1</h2>
+      <h2>
+        <LinkToAnchor id="7.7.1">7.7.1</LinkToAnchor>
+      </h2>
       <p>
         <em>Published on 21/05/2024</em>
       </p>
@@ -486,7 +525,9 @@ function ENAppNotes() {
       </ul>
 
       {/* 7.6.0 */}
-      <h2>7.6.0</h2>
+      <h2>
+        <LinkToAnchor id="7.6.0">7.6.0</LinkToAnchor>
+      </h2>
       <p>
         <em>Published on 30/04/2024</em>
       </p>
@@ -500,7 +541,9 @@ function ENAppNotes() {
       </ul>
 
       {/* 7.5.1 */}
-      <h2>7.5.0 (7.5.1 for Windows)</h2>
+      <h2>
+        <LinkToAnchor id="7.5.1">7.5.0 (7.5.1 for Windows)</LinkToAnchor>
+      </h2>
       <p>
         <em>Published on 22/04/2024 and 23/04/2024</em>
       </p>
@@ -529,7 +572,9 @@ function ENAppNotes() {
       </ul>
 
       {/* 7.4.1 */}
-      <h2>7.4.1</h2>
+      <h2>
+        <LinkToAnchor id="7.4.1">7.4.1</LinkToAnchor>
+      </h2>
       <p>
         <em>Published between 18/03/2024 and 19/03/2024</em>
       </p>
@@ -546,7 +591,9 @@ function ENAppNotes() {
       </ul>
 
       {/* 7.4.0 */}
-      <h2>7.4.0</h2>
+      <h2>
+        <LinkToAnchor id="7.4.0">7.4.0</LinkToAnchor>
+      </h2>
       <p>
         <em>Published between 11/03/2024 and 13/03/2024</em>
       </p>
@@ -574,13 +621,17 @@ function ENAppNotes() {
       </ul>
 
       {/* 7.3.1 */}
-      <h2>7.3.1 - 7.3.2 - 7.3.3 (macos)</h2>
+      <h2>
+        <LinkToAnchor id="7.3.1">7.3.1 - 7.3.2 - 7.3.3 (macos)</LinkToAnchor>
+      </h2>
       <ul>
         <li>Safari extension updates</li>
       </ul>
 
       {/* 7.3.0 */}
-      <h2>7.3.0</h2>
+      <h2>
+        <LinkToAnchor id="7.3.0">7.3.0</LinkToAnchor>
+      </h2>
 
       <p>
         <em>Published on 9/02/2024</em>
@@ -605,7 +656,9 @@ function ENAppNotes() {
       </ul>
 
       {/* 7.2.0 */}
-      <h2>7.2.0</h2>
+      <h2>
+        <LinkToAnchor id="7.2.0">7.2.0</LinkToAnchor>
+      </h2>
       <p>
         <em>Published on 22/12/2023</em>
       </p>
@@ -631,14 +684,18 @@ function ENAppNotes() {
       </ul>
 
       {/* 7.1.2 */}
-      <h2>7.1.2 (only for msi)</h2>
+      <h2>
+        <LinkToAnchor id="7.1.2">7.1.2 (only for msi)</LinkToAnchor>
+      </h2>
       <p>
         <em>Published on 21/12/2023</em>
       </p>
       <p>Fixes the update ling on Windows for apps installed via msi.</p>
 
       {/* 7.1.1 */}
-      <h2>7.1.1</h2>
+      <h2>
+        <LinkToAnchor id="7.1.1">7.1.1</LinkToAnchor>
+      </h2>
       <p>
         <em>Published on 19/12/2023</em>
       </p>
@@ -648,7 +705,9 @@ function ENAppNotes() {
       </p>
 
       {/* 7.1.0 */}
-      <h2>7.1.0</h2>
+      <h2>
+        <LinkToAnchor id="7.1.0">7.1.0</LinkToAnchor>
+      </h2>
       <p>
         <em>Published on 18/12/2023</em>
       </p>

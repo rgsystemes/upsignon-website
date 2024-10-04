@@ -6,6 +6,7 @@ import {
 } from "../../resources/release-notes/app/versionList";
 import styles from "./page.module.css";
 import { CodeBlock } from "../../components/codeBlock/codeBlock";
+import { LinkToAnchor } from "../../components/linkToAnchor/linkToAnchor";
 
 const gpoConfigContent = `{"proConfigUrl":"https://<xxx.xx/xx>"}`;
 const preConfigDeployScript = `## RUN AS ADMIN !
@@ -182,6 +183,13 @@ if ($currentVersion -ne $latestVersion) {
 `;
 const msiMigrationScript2 = `Start-Process \\\\srv\\partages$\\xxx\\UpSignOn-7.3.0-silent-installer.msi -ArgumentList "/quiet"`;
 
+const anchors = {
+  downloads: "downloads",
+  gpoPreconfig: "gpoPreconfig",
+  gpoAutoUpdate: "gpoAutoUpdate",
+  storeToMsiMigration: "storeToMsiMigration",
+};
+
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const template = {
     alternates: {
@@ -223,7 +231,9 @@ function FRWindowsAllDownloadPage() {
         <a href="/downloads">Téléchargements</a>
       </div>
       <h1>Téléchargements, déploiement et pré-configuration Windows</h1>
-      <h2>Téléchargements (PC 64 bits uniquement)</h2>
+      <h2>
+        <LinkToAnchor id={anchors.downloads}>Téléchargements (PC 64 bits uniquement)</LinkToAnchor>
+      </h2>
       <div className={styles.downloadDiffs}>
         <strong>Différences entre les modes de téléchargement</strong>
         <div className={styles.tableContainer}>
@@ -438,7 +448,9 @@ function FRWindowsAllDownloadPage() {
         </table>
       </div>
 
-      <h2>Pré-configuration par GPO</h2>
+      <h2>
+        <LinkToAnchor id={anchors.gpoPreconfig}>Pré-configuration par GPO</LinkToAnchor>
+      </h2>
       <p>
         <em>(à partir de la version 7.7.0 de l’application)</em>
       </p>
@@ -463,7 +475,9 @@ function FRWindowsAllDownloadPage() {
       <p>Le script suivant peut être utilisé pour déployer ce fichier automatiquement (à ajuster avec votre url) :</p>
       <CodeBlock name="upsignonGPO.sh">{preConfigDeployScript}</CodeBlock>
 
-      <h2>Script de mise-à-jour automatique par GPO</h2>
+      <h2>
+        <LinkToAnchor id={anchors.gpoAutoUpdate}>Script de mise-à-jour automatique par GPO</LinkToAnchor>
+      </h2>
       <p>
         Si vous souhaitez mettre à jour l'application automatiquement par GPO, vous pouvez utiliser ce script pour
         télécharger automatiquement la dernière version de l'application à chaque fois qu'une nouvelle version est
@@ -471,7 +485,11 @@ function FRWindowsAllDownloadPage() {
       </p>
       <CodeBlock name="upsignon-update.ps1">{updateScriptFR}</CodeBlock>
 
-      <h2>Documentation pour migrer vers le package msi (depuis la version store)</h2>
+      <h2>
+        <LinkToAnchor id={anchors.storeToMsiMigration}>
+          Documentation pour migrer vers le package msi (depuis la version store)
+        </LinkToAnchor>
+      </h2>
       <details>
         <summary>Voir</summary>
         <p>Voici les choses à savoir avant de commencer cette migration :</p>
@@ -527,7 +545,9 @@ function ENWindowsAllDownloadPage() {
         <a href="/downloads">Downloads</a>
       </div>
       <h1>Windows downloads, deployment, and pre-configuration</h1>
-      <h2>Downloads (64-bit PC only)</h2>
+      <h2>
+        <LinkToAnchor id={anchors.downloads}>Downloads (64-bit PC only)</LinkToAnchor>
+      </h2>
       <div className={styles.downloadDiffs}>
         <strong>Differences between download modes</strong>
         <div className={styles.tableContainer}>
@@ -740,7 +760,9 @@ function ENWindowsAllDownloadPage() {
           </tbody>
         </table>
       </div>
-      <h2>Pre-configuration by GPO</h2>
+      <h2>
+        <LinkToAnchor id={anchors.gpoPreconfig}>Pre-configuration by GPO</LinkToAnchor>
+      </h2>
       <p>
         <em>(from version 7.7.0 of the application)</em>
       </p>
@@ -765,14 +787,20 @@ function ENWindowsAllDownloadPage() {
       <p>The following script can be used to deploy this file automatically (to be adjusted with your url):</p>
       <CodeBlock name="upsignonGPO.sh">{preConfigDeployScript}</CodeBlock>
 
-      <h2>GPO auto update script</h2>
+      <h2>
+        <LinkToAnchor id={anchors.gpoAutoUpdate}>GPO auto update script</LinkToAnchor>
+      </h2>
       <p>
         If you wish to automatically update the app by GPO, you can use this script to automatically download the latest
         version of the app each time a new release is published.
       </p>
       <CodeBlock name="upsignon-update.ps1">{updateScriptEN}</CodeBlock>
 
-      <h2>Documentation for migrating to the msi package (from the store version)</h2>
+      <h2>
+        <LinkToAnchor id={anchors.storeToMsiMigration}>
+          Documentation for migrating to the msi package (from the store version)
+        </LinkToAnchor>
+      </h2>
       <details>
         <summary>View</summary>
         <p>Here are the things to know before starting this migration:</p>

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../notes.module.css";
+import { LinkToAnchor } from "../../../components/linkToAnchor/linkToAnchor";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
@@ -30,7 +31,9 @@ function FRServerNotes() {
   return (
     <section className={styles.section}>
       {/* 2.4.0 */}
-      <h2>2.4.0</h2>
+      <h2>
+        <LinkToAnchor id="2.4.0">2.4.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 03/10/2024</em>
       <ul>
         <li>
@@ -42,14 +45,18 @@ function FRServerNotes() {
         </li>
       </ul>
       {/* 2.3.0 */}
-      <h2>2.3.0</h2>
+      <h2>
+        <LinkToAnchor id="2.3.0">2.3.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 19/07/2024</em>
       <ul>
         <li>suppression définitive des coffres PRO non migrés en version 7</li>
         <li>CASSANT : les banques de test sans date d’expiration sont désormais considérées comme expirées</li>
       </ul>
       {/* 2.2.0 */}
-      <h2>2.2.0</h2>
+      <h2>
+        <LinkToAnchor id="2.2.0">2.2.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 01/07/2024</em>
       <ul>
         <li>
@@ -62,7 +69,9 @@ function FRServerNotes() {
         </li>
       </ul>
       {/* 2.1.0 */}
-      <h2>2.1.0</h2>
+      <h2>
+        <LinkToAnchor id="2.1.0">2.1.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 27/06/2024</em>
       <ul>
         <li>
@@ -72,7 +81,9 @@ function FRServerNotes() {
         </li>
       </ul>
       {/* 2.0.1 */}
-      <h2>2.0.1</h2>
+      <h2>
+        <LinkToAnchor id="2.0.1">2.0.1</LinkToAnchor>
+      </h2>
       <em>Publiée le 17/06/2024</em>
       <ul>
         <li>
@@ -80,7 +91,9 @@ function FRServerNotes() {
         </li>
       </ul>
       {/* 2.0.0 */}
-      <h2>2.0.0</h2>
+      <h2>
+        <LinkToAnchor id="2.0.0">2.0.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 17/05/2024</em>
       <p>
         <strong>⚠️ Cette version nécessite node 20 ou ultérieur.</strong>
@@ -102,14 +115,18 @@ function FRServerNotes() {
       </ul>
 
       {/* 1.11.0 */}
-      <h2>1.11.0</h2>
+      <h2>
+        <LinkToAnchor id="1.11.0">1.11.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 30/04/2024</em>
       <ul>
         <li>ajoute un mécanisme pour simplifier le changement d’URL du serveur</li>
       </ul>
 
       {/* 1.10.0 */}
-      <h2>1.10.0</h2>
+      <h2>
+        <LinkToAnchor id="1.10.0">1.10.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 9/04/2024</em>
       <ul>
         <li>
@@ -119,14 +136,18 @@ function FRServerNotes() {
       </ul>
 
       {/* 1.9.2 */}
-      <h2>1.9.2</h2>
+      <h2>
+        <LinkToAnchor id="1.9.2">1.9.2</LinkToAnchor>
+      </h2>
       <em>Publiée le 4/04/2024</em>
       <ul>
         <li>correctif sur la vérification de plateforme pour l’enrôlement d’un nouvel appareil</li>
       </ul>
 
       {/* 1.9.0 */}
-      <h2>1.9.0</h2>
+      <h2>
+        <LinkToAnchor id="1.9.0">1.9.0</LinkToAnchor>
+      </h2>
       <em>Publiée le 3/04/2024</em>
       <ul>
         <li>
@@ -146,7 +167,9 @@ function FRServerNotes() {
       </ul>
 
       {/* 1.8.6 */}
-      <h2>1.8.6</h2>
+      <h2>
+        <LinkToAnchor id="1.8.6">1.8.6</LinkToAnchor>
+      </h2>
       <ul>
         <li>
           correction sur la demande de réinitialisation de mot de passe maître si une demande antérieure avait déjà été
@@ -160,7 +183,9 @@ function FRServerNotes() {
       </ul>
 
       {/* 1.8.5 */}
-      <h2>1.8.5</h2>
+      <h2>
+        <LinkToAnchor id="1.8.5">1.8.5</LinkToAnchor>
+      </h2>
       <ul>
         <li>
           ajout d’un mécanisme spécifique pour permettre la migration des coffres-forts PRO après leur enrôlement sur
@@ -175,7 +200,9 @@ function ENServerNotes() {
   return (
     <section className={styles.section}>
       {/* 2.4.0 */}
-      <h2>2.4.0</h2>
+      <h2>
+        <LinkToAnchor id="2.4.0">2.4.0</LinkToAnchor>
+      </h2>
       <em>Published on 03/10/2024</em>
       <ul>
         <li>
@@ -185,14 +212,18 @@ function ENServerNotes() {
         <li>fixes an issue when synchronising with Microsoft Entra ID preventing the deactivation of users</li>
       </ul>
       {/* 2.3.0 */}
-      <h2>2.3.0</h2>
+      <h2>
+        <LinkToAnchor id="2.3.0">2.3.0</LinkToAnchor>
+      </h2>
       <em>Published on 19/07/2024</em>
       <ul>
         <li>DEFINITIVE DELETION of PRO vaults not migrated to version 7</li>
         <li>BREAKING: test banks without expiration date are now considered expired</li>
       </ul>
       {/* 2.2.0 */}
-      <h2>2.2.0</h2>
+      <h2>
+        <LinkToAnchor id="2.2.0">2.2.0</LinkToAnchor>
+      </h2>
       <em>Published on 01/07/2024</em>
       <ul>
         <li>
@@ -205,7 +236,9 @@ function ENServerNotes() {
         </li>
       </ul>
       {/* 2.1.0 */}
-      <h2>2.1.0</h2>
+      <h2>
+        <LinkToAnchor id="2.1.0">2.1.0</LinkToAnchor>
+      </h2>
       <em>Published on 27/06/2024</em>
       <ul>
         <li>
@@ -214,13 +247,17 @@ function ENServerNotes() {
         </li>
       </ul>
       {/* 2.0.1 */}
-      <h2>2.0.1</h2>
+      <h2>
+        <LinkToAnchor id="2.0.1">2.0.1</LinkToAnchor>
+      </h2>
       <em>Published on 17/06/2024</em>
       <ul>
         <li>versions of the app stricly below 7.1.1 can no longer make changes to vaults.</li>
       </ul>
       {/* 2.0.0 */}
-      <h2>2.0.0</h2>
+      <h2>
+        <LinkToAnchor id="2.0.0">2.0.0</LinkToAnchor>
+      </h2>
       <em>Published on 17/05/2024</em>
       <p>
         <strong>⚠️ This version requires node 20 or later.</strong>
@@ -241,14 +278,18 @@ function ENServerNotes() {
       </ul>
 
       {/* 1.11.0 */}
-      <h2>1.11.0</h2>
+      <h2>
+        <LinkToAnchor id="1.11.0">1.11.0</LinkToAnchor>
+      </h2>
       <em>Published on 30/04/2024</em>
       <ul>
         <li>adds a mechanism to simplify changing server URL</li>
       </ul>
 
       {/* 1.10.0 */}
-      <h2>1.10.0</h2>
+      <h2>
+        <LinkToAnchor id="1.10.0">1.10.0</LinkToAnchor>
+      </h2>
       <em>Published on 09/04/2024</em>
       <ul>
         <li>
@@ -258,14 +299,18 @@ function ENServerNotes() {
       </ul>
 
       {/* 1.9.2 */}
-      <h2>1.9.2</h2>
+      <h2>
+        <LinkToAnchor id="1.9.2">1.9.2</LinkToAnchor>
+      </h2>
       <em>Published on 04/04/2024</em>
       <ul>
         <li>fixes platform verification for new device enrollment</li>
       </ul>
 
       {/* 1.9.0 */}
-      <h2>1.9.0</h2>
+      <h2>
+        <LinkToAnchor id="1.9.0">1.9.0</LinkToAnchor>
+      </h2>
       <em>Published on 03/04/2024</em>
       <ul>
         <li>
@@ -285,7 +330,9 @@ function ENServerNotes() {
       </ul>
 
       {/* 1.8.6 */}
-      <h2>1.8.6</h2>
+      <h2>
+        <LinkToAnchor id="1.8.6">1.8.6</LinkToAnchor>
+      </h2>
       <ul>
         <li>correction on the master password reset request if a previous request had already been done</li>
         <li>
@@ -296,7 +343,9 @@ function ENServerNotes() {
       </ul>
 
       {/* 1.8.5 */}
-      <h2>1.8.5</h2>
+      <h2>
+        <LinkToAnchor id="1.8.5">1.8.5</LinkToAnchor>
+      </h2>
       <ul>
         <li>
           adds a specific mechanism to allow the migration of PRO vaults after their enrollment on a v7 application
