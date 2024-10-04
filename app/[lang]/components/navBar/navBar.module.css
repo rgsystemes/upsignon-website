@@ -5,9 +5,6 @@
   flex-direction: row;
   flex-wrap: nowrap;
   color: white;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 .logoAndNameContainer {
   display: flex;

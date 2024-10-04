@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import styles from "../notes.module.css";
 import { getDictionary } from "../../../../../translations/translations";
+import { LinkToAnchor } from "../../../components/linkToAnchor";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
@@ -30,7 +31,9 @@ function FRAppNotes() {
   return (
     <section className={styles.section}>
       {/* 7.9.0 */}
-      <h2>7.9.0</h2>
+      <LinkToAnchor id="7.9.0">
+        <h2>7.9.0</h2>
+      </LinkToAnchor>
       <p>
         <em>En cours de publication (04/10/2024)</em>
       </p>
@@ -56,7 +59,9 @@ function FRAppNotes() {
         <li>Évite le blocage de l'application en cas d'erreur de mise-à-jour (Windows).</li>
       </ul>
       {/* 7.8.5 */}
-      <h2>7.8.5 (Linux uniquement)</h2>
+      <LinkToAnchor id="7.8.5">
+        <h2>7.8.5 (Linux uniquement)</h2>
+      </LinkToAnchor>
       <p>
         <em>Publiée le 04/09/2024</em>
       </p>

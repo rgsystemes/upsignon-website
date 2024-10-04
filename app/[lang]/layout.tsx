@@ -11,6 +11,7 @@ import favicon192 from "../../public/favicon-192x192.png";
 import appleTouchIcon from "../../public/apple-touch-icon.png";
 import safariPinnedTab from "../../public/safari-pinned-tab.svg";
 import { Analytics } from "@vercel/analytics/react";
+import { AnchorScrollWithFixedHeaderBody } from "./components/anchorScrollWithFixedHeaderBody/anchorScrollWithFixedHeaderBody";
 
 // If loading a variable font, you don't need to specify the font weight
 const fontClass = Montserrat({
@@ -34,13 +35,11 @@ export default function RootLayout({ children, params }: { children: React.React
         <link rel="mask-icon" href={safariPinnedTab.src} color="#00aba8" />
         <meta name="google-site-verification" content="yNxeZNw0jlQy8ywG1nUXNCi1zgL61n9KqWv3kb4zmEE" />
       </head>
-      {/* set an id for Modal accessibility */}
-      <body id="body">
-        <NavBar lang={params.lang} />
+      <AnchorScrollWithFixedHeaderBody fixedComponent={<NavBar lang={params.lang} />}>
         <main>{children}</main>
         <Footer lang={params.lang} />
         <Analytics />
-      </body>
+      </AnchorScrollWithFixedHeaderBody>
     </html>
   );
 }

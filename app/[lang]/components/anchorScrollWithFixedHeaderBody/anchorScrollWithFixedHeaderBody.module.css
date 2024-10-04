@@ -1,0 +1,21 @@
+.body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.fixedContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.contentContainer {
+  height: 100%;
+  flex: 1;
+  overflow: scroll;
+}
+.spacer {
+  display: block;
+  flex-shrink: 0;
+}
