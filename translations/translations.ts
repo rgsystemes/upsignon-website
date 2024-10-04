@@ -6,7 +6,7 @@ import Negotiator from "negotiator";
 import fr from "./fr";
 import en from "./en";
 
-const defaultLocale = "fr";
+export const defaultLocale = "fr";
 const dictionaries: { [lang: string]: typeof fr } = {
   en,
   fr,
@@ -56,9 +56,4 @@ export const getDictionary = (locale: string): typeof fr => dictionaries[locale]
 
 export const getTranslationStaticParams = () => {
   return Object.keys(dictionaries).map((l) => ({ lang: l }));
-};
-
-export const getDictionaryFromLocationLocale = () => {
-  const locale = window.location.pathname.split("/")?.[1] || defaultLocale;
-  return getDictionary(locale);
 };

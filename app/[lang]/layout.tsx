@@ -14,6 +14,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { AnchorScrollWithFixedHeaderBody } from "./components/anchorScrollWithFixedHeaderBody/anchorScrollWithFixedHeaderBody";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { CssBaseline, GeistProvider } from "@geist-ui/core";
 
 // If loading a variable font, you don't need to specify the font weight
 const fontClass = Montserrat({

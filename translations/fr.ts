@@ -1,5 +1,5 @@
 const translations = {
-  anchorCopyTitle: "Copier $link",
+  anchorCopyTitle: "Copier le lien vers ce paragraphe.",
   anchorCopied: "Lien copié",
   menu: {
     features: "Fonctionnalités & démos",
