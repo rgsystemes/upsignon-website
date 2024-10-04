@@ -1,6 +1,8 @@
 import fr from "./fr";
 
 const translations: typeof fr = {
+  anchorCopyTitle: "Copy $link",
+  anchorCopied: "Link copied",
   menu: {
     features: "Features & demos",
     pricing: "Pricing",

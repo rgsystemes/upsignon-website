@@ -57,3 +57,8 @@ export const getDictionary = (locale: string): typeof fr => dictionaries[locale]
 export const getTranslationStaticParams = () => {
   return Object.keys(dictionaries).map((l) => ({ lang: l }));
 };
+
+export const getDictionaryFromLocationLocale = () => {
+  const locale = window.location.pathname.split("/")?.[1] || defaultLocale;
+  return getDictionary(locale);
+};

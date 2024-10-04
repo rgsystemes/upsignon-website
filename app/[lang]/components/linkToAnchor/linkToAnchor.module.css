@@ -1,0 +1,9 @@
+.anchorHash {
+  display: none;
+}
+.anchorContainer:hover .anchorHash {
+  display: inline;
+}
+.anchorContainer {
+  cursor: pointer;
+}
