@@ -57,6 +57,7 @@ import Link from "next/link";
 import { ContactUsButton } from "../components/contactUsButton/contactUsButton";
 import VimeoPlayer from "../components/vimeoPlayer/vimeoPlayer";
 import { ContactLaterButton } from "../components/contactLaterButton/contactLaterButton";
+import { LinkToAnchor } from "../components/linkToAnchor/linkToAnchor";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
@@ -81,11 +82,17 @@ export default function Page({ params }: { params: { lang: string } }) {
         <h1>{t.features.pageTitle}</h1>
         <section className={`${styles.demoSection} ${styles.greenBackground}`}>
           <div className={styles.demoSectionContent}>
-            <h2 className={styles.demoTitle}>{t.pitch.demo.appDemo}</h2>
+            <h2 className={styles.demoTitle}>
+              <LinkToAnchor id="appDemo">{t.pitch.demo.appDemo}</LinkToAnchor>
+            </h2>
             <VimeoPlayer videoId="964351571" title={t.pitch.demo.appDemo} className={styles.demoVideo} />
-            <h2 className={styles.demoTitle}>{t.pitch.demo.extensionDemo}</h2>
+            <h2 className={styles.demoTitle}>
+              <LinkToAnchor id="extensionDemo">{t.pitch.demo.extensionDemo}</LinkToAnchor>
+            </h2>
             <VimeoPlayer videoId="964418300" title={t.pitch.demo.extensionDemo} className={styles.demoVideo} />
-            <h2 className={styles.demoTitle}>{t.pitch.demo.consoleDemo}</h2>
+            <h2 className={styles.demoTitle}>
+              <LinkToAnchor id="dashboardDemo">{t.pitch.demo.consoleDemo}</LinkToAnchor>
+            </h2>
             <VimeoPlayer videoId="964669787" title={t.pitch.demo.extensionDemo} className={styles.demoVideo} />
           </div>
         </section>
@@ -96,7 +103,9 @@ export default function Page({ params }: { params: { lang: string } }) {
         <div className={styles.otherActionContainer}>
           <ContactLaterButton lang={params.lang} className={styles.otherAction} />
         </div>
-        <h2 className={styles.feature_family_title}>{t.features.generalSubtitle}</h2>
+        <h2 className={styles.feature_family_title}>
+          <LinkToAnchor id="proPerso">{t.features.generalSubtitle}</LinkToAnchor>
+        </h2>
         <FeatureSection
           lang={params.lang}
           title={t.features.proPerso.title}
@@ -132,7 +141,9 @@ export default function Page({ params }: { params: { lang: string } }) {
           imageSrc={syncImg}
           imageAlt={""}
         />
-        <h2 className={styles.feature_family_title}>{t.features.dataSubtitle}</h2>
+        <h2 className={styles.feature_family_title}>
+          <LinkToAnchor id="secrets">{t.features.dataSubtitle}</LinkToAnchor>
+        </h2>
         <FeatureSection
           lang={params.lang}
           title={t.features.unlimitedAccounts.title}
@@ -230,7 +241,9 @@ export default function Page({ params }: { params: { lang: string } }) {
           imageSrc={bankDetailsImg}
           imageAlt={t.features.paymentData.imageAlt}
         />
-        <h2 className={styles.feature_family_title}>{t.features.sharingSubtitle}</h2>
+        <h2 className={styles.feature_family_title}>
+          <LinkToAnchor id="sharing">{t.features.sharingSubtitle}</LinkToAnchor>
+        </h2>
         <FeatureSection
           lang={params.lang}
           title={t.features.trustedContacts.title}
@@ -273,7 +286,9 @@ export default function Page({ params }: { params: { lang: string } }) {
             </li>
           </ul>
         </FeatureSection>
-        <h2 className={styles.feature_family_title}>{t.features.autofillAutosaveSubtitle}</h2>
+        <h2 className={styles.feature_family_title}>
+          <LinkToAnchor id="autofill">{t.features.autofillAutosaveSubtitle}</LinkToAnchor>
+        </h2>
         <AutofillSection lang={params.lang} />
         <FeatureSection
           lang={params.lang}
@@ -284,7 +299,9 @@ export default function Page({ params }: { params: { lang: string } }) {
           imageSrc={autosaveDesktopImg}
           imageAlt={t.features.autosaveDesktop.imageAlt}
         />
-        <h2 className={styles.feature_family_title}>{t.features.searchFilterOrganizeSubtitle}</h2>
+        <h2 className={styles.feature_family_title}>
+          <LinkToAnchor id="organize">{t.features.searchFilterOrganizeSubtitle}</LinkToAnchor>
+        </h2>
         <FeatureSection
           lang={params.lang}
           title={t.features.search.title}
@@ -312,7 +329,9 @@ export default function Page({ params }: { params: { lang: string } }) {
           imageSrc={foldersImg}
           imageAlt={t.features.organize.imageAlt}
         />
-        <h2 className={styles.feature_family_title}>{t.features.importExportSubtitle}</h2>
+        <h2 className={styles.feature_family_title}>
+          <LinkToAnchor id="importExport">{t.features.importExportSubtitle}</LinkToAnchor>
+        </h2>
         <FeatureSection
           lang={params.lang}
           title={t.features.csvImport.title}
@@ -333,7 +352,9 @@ export default function Page({ params }: { params: { lang: string } }) {
         >
           <strong>{t.features.csvExport.warningPro}</strong>
         </FeatureSection>
-        <h2 className={styles.feature_family_title}>{t.features.securityFeaturesSubtitle}</h2>
+        <h2 className={styles.feature_family_title}>
+          <LinkToAnchor id="securityFeatures">{t.features.securityFeaturesSubtitle}</LinkToAnchor>
+        </h2>
         <FeatureSection
           lang={params.lang}
           title={t.features.endToEndEncryption.title}
@@ -457,7 +478,9 @@ export default function Page({ params }: { params: { lang: string } }) {
           imageSrc={screenshotProtectionImg}
           imageAlt={t.features.screenshotProtection.imageAlt}
         />
-        <h2 className={styles.feature_family_title}>{t.features.supervisionSubtitle}</h2>
+        <h2 className={styles.feature_family_title}>
+          <LinkToAnchor id="dashboard">{t.features.supervisionSubtitle}</LinkToAnchor>
+        </h2>
         <p className={styles.supervision_general_intro}>{t.features.supervisionGeneralExplanation}</p>
         <FeatureSection
           lang={params.lang}

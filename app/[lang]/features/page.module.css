@@ -28,6 +28,7 @@
 
 .supervision_general_intro {
   margin-bottom: 20px;
+  color: white;
 }
 @media (max-width: 550) {
   .content {
