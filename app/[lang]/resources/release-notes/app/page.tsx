@@ -32,7 +32,7 @@ function FRAppNotes() {
       {/* 7.9.0 */}
       <h2>7.9.0</h2>
       <p>
-        <em>En cours de publication</em>
+        <em>En cours de publication (04/10/2024)</em>
       </p>
       <strong>Nouveautés</strong>
       <ul>
@@ -384,7 +384,7 @@ function ENAppNotes() {
       {/* 7.9.0 */}
       <h2>7.9.0</h2>
       <p>
-        <em>Publishing</em>
+        <em>Publishing (04/10/2024)</em>
       </p>
       <strong>New features</strong>
       <ul>
