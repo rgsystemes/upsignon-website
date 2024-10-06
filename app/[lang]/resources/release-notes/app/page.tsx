@@ -35,7 +35,7 @@ function FRAppNotes() {
         <LinkToAnchor id="7.9.0">7.9.0</LinkToAnchor>
       </h2>
       <p>
-        <em>En cours de publication (04/10/2024)</em>
+        <em>Publiée le 04/10/2024</em>
       </p>
       <strong>Nouveautés</strong>
       <ul>
@@ -418,7 +418,7 @@ function ENAppNotes() {
         <LinkToAnchor id="7.9.0">7.9.0</LinkToAnchor>
       </h2>
       <p>
-        <em>Publishing (04/10/2024)</em>
+        <em>Publiée le 04/10/2024</em>
       </p>
       <strong>New features</strong>
       <ul>
