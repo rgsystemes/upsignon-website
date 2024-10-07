@@ -407,7 +407,10 @@ function FRWindowsAllDownloadPage() {
                   <ul>
                     {allMsiVersions.map((v) => (
                       <li key={v}>
-                        <a download href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-silent-installer.msi`}>
+                        <a
+                          download
+                          href={`https://app.upsignon.eu/downloads/windows-msi/UpSignOn-${v}-silent-installer.msi`}
+                        >
                           {v}
                         </a>
                       </li>
@@ -421,7 +424,7 @@ function FRWindowsAllDownloadPage() {
                   <ul>
                     {allMsiVersions.map((v) => (
                       <li key={v}>
-                        <a download href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-installer.msi`}>
+                        <a download href={`https://app.upsignon.eu/downloads/windows-msi/UpSignOn-${v}-installer.msi`}>
                           {v}
                         </a>
                       </li>
@@ -435,7 +438,10 @@ function FRWindowsAllDownloadPage() {
                   <ul>
                     {allMsiVersions.map((v) => (
                       <li key={v}>
-                        <a download href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-silent-user-installer.msi`}>
+                        <a
+                          download
+                          href={`https://app.upsignon.eu/downloads/windows-msi/UpSignOn-${v}-silent-user-installer.msi`}
+                        >
                           {v}
                         </a>
                       </li>
@@ -720,7 +726,10 @@ function ENWindowsAllDownloadPage() {
                   <ul>
                     {allMsiVersions.map((v) => (
                       <li key={v}>
-                        <a download href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-silent-installer.msi`}>
+                        <a
+                          download
+                          href={`https://app.upsignon.eu/downloads/windows-msi/UpSignOn-${v}-silent-installer.msi`}
+                        >
                           {v}
                         </a>
                       </li>
@@ -734,7 +743,7 @@ function ENWindowsAllDownloadPage() {
                   <ul>
                     {allMsiVersions.map((v) => (
                       <li key={v}>
-                        <a download href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-installer.msi`}>
+                        <a download href={`https://app.upsignon.eu/downloads/windows-msi/UpSignOn-${v}-installer.msi`}>
                           {v}
                         </a>
                       </li>
@@ -748,7 +757,10 @@ function ENWindowsAllDownloadPage() {
                   <ul>
                     {allMsiVersions.map((v) => (
                       <li key={v}>
-                        <a download href={`https://app.upsignon.eu/downloads/UpSignOn-${v}-silent-user-installer.msi`}>
+                        <a
+                          download
+                          href={`https://app.upsignon.eu/downloads/windows-msi/UpSignOn-${v}-silent-user-installer.msi`}
+                        >
                           {v}
                         </a>
                       </li>
