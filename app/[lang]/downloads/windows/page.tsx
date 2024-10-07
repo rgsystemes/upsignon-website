@@ -301,7 +301,7 @@ function FRWindowsAllDownloadPage() {
         Cette méthode vous permet d’installer le fichier provenant du Microsoft Store sans passer par l’application
         Microsoft Store. Ainsi l’application recevra les mises-à-jour automatiquement.
       </p>
-      <a href="https://app.upsignon.eu/downloads/UpSignOn_latest.zip" target="_blank" className={styles.buttonLink}>
+      <a href="https://app.upsignon.eu/downloads/UpSignOn_latest.zip" download className={styles.buttonLink}>
         UpSignOn_latest.zip
       </a>
       <div className={styles.msixbundleSteps}>
@@ -623,7 +623,7 @@ function ENWindowsAllDownloadPage() {
         This method allows you to install the file from the Microsoft Store without going through the Microsoft Store
         application. So the application will receive updates automatically.
       </p>
-      <a href="https://app.upsignon.eu/downloads/UpSignOn_latest.zip" target="_blank" className={styles.buttonLink}>
+      <a href="https://app.upsignon.eu/downloads/UpSignOn_latest.zip" download className={styles.buttonLink}>
         UpSignOn_latest.zip
       </a>
       <div className={styles.msixbundleSteps}>
