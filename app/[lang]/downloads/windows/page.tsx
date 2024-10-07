@@ -320,7 +320,7 @@ function FRWindowsAllDownloadPage() {
         <ul>
           {allMsixBundleVersions.map((v) => (
             <li key={v}>
-              <a href={`https://app.upsignon.eu/downloads/UpSignOn_${v.replace(".", "_")}.zip`} download>
+              <a href={`https://app.upsignon.eu/downloads/UpSignOn_${v.replaceAll(".", "_")}.zip`} download>
                 {v}
               </a>
             </li>
@@ -633,7 +633,7 @@ function ENWindowsAllDownloadPage() {
         <ul>
           {allMsixBundleVersions.map((v) => (
             <li key={v}>
-              <a href={`https://app.upsignon.eu/downloads/UpSignOn_${v.replace(".", "_")}.zip`} download>
+              <a href={`https://app.upsignon.eu/downloads/UpSignOn_${v.replaceAll(".", "_")}.zip`} download>
                 {v}
               </a>
             </li>
