@@ -30,6 +30,14 @@ export default function DashboardNotes({ params }: { params: { lang: string } })
 function FRDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.3.1 */}
+      <h2>
+        <LinkToAnchor id="2.3.1">2.3.1</LinkToAnchor>
+      </h2>
+      <em>Publiée le 09/10/2024</em>
+      <ul>
+        <li>correction d'un crash sur la fonction d'export de la base de données</li>
+      </ul>
       {/* 2.3.0 */}
       <h2>
         <LinkToAnchor id="2.3.0">2.3.0</LinkToAnchor>
@@ -215,6 +223,14 @@ function FRDashboardNotes() {
 function ENDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.3.1 */}
+      <h2>
+        <LinkToAnchor id="2.3.1">2.3.1</LinkToAnchor>
+      </h2>
+      <em>Published on 09/10/2024</em>
+      <ul>
+        <li>fixes a crash on the extract database function</li>
+      </ul>
       {/* 2.3.0 */}
       <h2>
         <LinkToAnchor id="2.3.0">2.3.0</LinkToAnchor>
