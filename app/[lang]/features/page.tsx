@@ -58,6 +58,7 @@ import { ContactUsButton } from "../components/contactUsButton/contactUsButton";
 import VimeoPlayer from "../components/vimeoPlayer/vimeoPlayer";
 import { ContactLaterButton } from "../components/contactLaterButton/contactLaterButton";
 import { LinkToAnchor } from "../components/linkToAnchor/linkToAnchor";
+import { FreeTrialButton } from "../components/freeTrialButton/freeTrial";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
@@ -102,6 +103,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         </div>
         <div className={styles.otherActionContainer}>
           <ContactLaterButton lang={params.lang} className={styles.otherAction} />
+          <FreeTrialButton lang={params.lang} className={styles.otherAction} />
         </div>
         <h2 className={styles.feature_family_title}>
           <LinkToAnchor id="proPerso">{t.features.generalSubtitle}</LinkToAnchor>

@@ -1,8 +1,8 @@
 "use client";
 
 import Modal from "react-modal";
-import { FormModalButton } from "../../formModal/formModal";
-import { getDictionary } from "../../../../../translations/translations";
+import { FormModalButton } from "../formModal/formModal";
+import { getDictionary } from "../../../../translations/translations";
 
 Modal.setAppElement("#body");
 export function FreeTrialButton(p: { lang: string; className: string }) {

@@ -16,6 +16,7 @@ import { ContactLaterButton } from "./components/contactLaterButton/contactLater
 import { ContactUsButton } from "./components/contactUsButton/contactUsButton";
 import { GreenCheckIcon } from "./components/greenCheckIcon/greenCheckIcon";
 import { LanguageFlags } from "./components/languageFlags/languageFlags";
+import { FreeTrialButton } from "./components/freeTrialButton/freeTrial";
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const t = getDictionary(params.lang);
@@ -75,6 +76,7 @@ export default function Page({ params }: { params: { lang: string } }) {
         <div className={styles.actionContainer}>
           <ContactUsButton lang={params.lang} className={styles.actionLinkOnBlue} />
           <ContactLaterButton lang={params.lang} className={styles.actionLinkOnBlue} />
+          <FreeTrialButton lang={params.lang} className={styles.actionLinkOnBlue} />
         </div>
       </div>
       <section className={styles.keyMetricsSection}>
