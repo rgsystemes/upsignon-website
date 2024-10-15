@@ -7,6 +7,7 @@ import styles from "./contactUsButton.module.css";
 import Link from "next/link";
 import plpImg from "../../../../public/images/plp.jpeg";
 import Image from "next/image";
+import { useModalLinkOpener } from "../../../useModalLinkOpener";
 
 Modal.setAppElement("#body");
 export function ContactUsButton(p: { lang: string; className: string }) {
@@ -19,6 +20,8 @@ export function ContactUsButton(p: { lang: string; className: string }) {
     setIsOpen(false);
   }
   const t = getDictionary(p.lang);
+
+  useModalLinkOpener("contact-us", setIsOpen);
 
   return (
     <>

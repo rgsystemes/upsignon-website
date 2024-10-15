@@ -32,6 +32,7 @@ export function FreeTrialButton(p: { lang: string; className: string }) {
         );
         return Promise.resolve();
       }}
+      modalLinkValue="free-trial"
     />
   );
 }

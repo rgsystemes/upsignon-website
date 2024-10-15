@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Modal from "react-modal";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "./formModal.module.css";
+import { useModalLinkOpener } from "../../../useModalLinkOpener";
 
 Modal.setAppElement("#body");
 export function FormModalButton(p: {
@@ -14,6 +15,7 @@ export function FormModalButton(p: {
   modalTitle: string;
   fields: { t: string; k: string; r: boolean }[];
   onSubmit: (values: { [k: string]: string }) => Promise<void>;
+  modalLinkValue?: string | null;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   function openModal() {
@@ -23,6 +25,7 @@ export function FormModalButton(p: {
   function closeModal() {
     setIsOpen(false);
   }
+  useModalLinkOpener(p.modalLinkValue, setIsOpen);
 
   return (
     <>
