@@ -7,7 +7,7 @@ import styles from "./contactUsButton.module.css";
 import Link from "next/link";
 import plpImg from "../../../../public/images/plp.jpeg";
 import Image from "next/image";
-import { useModalLinkOpener } from "../../../useModalLinkOpener";
+import { ModalLinkOpener } from "../../../useModalLinkOpener";
 
 Modal.setAppElement("#body");
 export function ContactUsButton(p: { lang: string; className: string }) {
@@ -21,13 +21,12 @@ export function ContactUsButton(p: { lang: string; className: string }) {
   }
   const t = getDictionary(p.lang);
 
-  useModalLinkOpener("contact-us", setIsOpen);
-
   return (
     <>
       <button onClick={openModal} className={`${styles.modalDefaultButton} ${p.className}`}>
         {t.actions.contactUs}
       </button>
+      <ModalLinkOpener modalLinkValue={"contact-us"} setIsOpen={setIsOpen} />
       <Modal
         isOpen={isOpen}
         onRequestClose={closeModal}
