@@ -72,14 +72,14 @@
   text-align: center;
 }
 
-.proPricingActionButton, .downloadAction {
+button.proPricingActionButton, .downloadAction {
   background: none;
   border: none;
   color: rgb(0,171,169);
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .distribDetails {

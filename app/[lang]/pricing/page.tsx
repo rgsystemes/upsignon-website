@@ -44,8 +44,6 @@ export default function Page({ params }: { params: { lang: string } }) {
           <div className={styles.priceDetail}>{t.pricing.proPricing.licenceOver12000}</div>
           <div className={styles.priceDetail}>{t.pricing.proPricing.licence3YearsReduction}</div>
           <div className={styles.selfHostingTitle}>{t.pricing.proPricing.onPremOption}</div>
-          <ContactLaterButton lang={params.lang} className={styles.proPricingActionButton} />
-          <ContactUsButton lang={params.lang} className={styles.proPricingActionButton} />
           <FreeTrialButton lang={params.lang} className={styles.proPricingActionButton} />
 
           <div className={styles.pricingDetails}>{t.pricing.proPricing.saasDetails}</div>
