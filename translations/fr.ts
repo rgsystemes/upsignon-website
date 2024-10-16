@@ -1,6 +1,7 @@
 const translations = {
   anchorCopyTitle: "Copier le lien vers ce paragraphe.",
   anchorCopied: "Lien copié",
+  successMessage: "Demande envoyée",
   menu: {
     features: "Fonctionnalités & démos",
     pricing: "Tarifs",
@@ -22,8 +23,6 @@ const translations = {
     telLabel: "Numéro de téléphone",
     callbackDate: "Quand voulez-vous être recontacté ?",
     submit: "Envoyer",
-    mailSubject: "Merci de me contacter plus tard",
-    mailBody: "Bonjour,\nVoici mes coordonnées pour être recontacté $date.\n\n$info\n\nCordialement,",
   },
   freeTrialForm: {
     nameLabel: "Votre nom",
@@ -32,9 +31,6 @@ const translations = {
     emailLabel: "Adresse email",
     telLabel: "Numéro de téléphone",
     submit: "Envoyer",
-    mailSubject: "Demande de test",
-    mailBody:
-      "Bonjour,\nJe souhaite pouvoir tester UpSignOn PRO pendant 1 mois. Voici les informations demandées :\n\n$info\n\nCordialement,",
   },
   footer: {
     nav: {

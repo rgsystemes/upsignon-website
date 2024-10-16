@@ -6,6 +6,7 @@ import styles from "./priceSimulator.module.css";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { FormModalButton } from "../components/formModal/formModal";
+import { sendAppServerRequest } from "../components/helpers/sendAppServerRequest";
 function f(n: number): string {
   return n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
@@ -231,35 +232,19 @@ export function PriceSimulator(p: { lang: string }) {
             { t: t.pricing.getQuote.contactPhone, k: "contactPhone", r: true },
           ]}
           onSubmit={(values: { [k: string]: string }): Promise<void> => {
-            return new Promise((resolve, reject) => {
-              const req = new XMLHttpRequest();
-              req.open("POST", "https://app.upsignon.eu/get-quote", true);
-              req.onload = function () {
-                if (req.status != 200) {
-                  reject();
-                  alert(`Error ${req.status}: ${req.statusText}`);
-                } else {
-                  resolve();
-                  alert(t.pricing.getQuote.success);
-                }
-              };
-              req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-              req.send(
-                JSON.stringify({
-                  nLicences: l,
-                  year3: y3,
-                  selfHosting,
-                  companyName: values.companyName,
-                  companySiret: values.companySiret,
-                  companyVAT: values.companyVAT,
-                  companyAddress1: values.companyAddress1,
-                  companyAddress2: values.companyAddress2,
-                  companyAddress3: values.companyAddress3,
-                  contactName: values.contactName,
-                  contactEmail: values.contactEmail,
-                  contactPhone: values.contactPhone,
-                })
-              );
+            return sendAppServerRequest("get-quote", t.pricing.getQuote.success, {
+              nLicences: l,
+              year3: y3,
+              selfHosting,
+              companyName: values.companyName,
+              companySiret: values.companySiret,
+              companyVAT: values.companyVAT,
+              companyAddress1: values.companyAddress1,
+              companyAddress2: values.companyAddress2,
+              companyAddress3: values.companyAddress3,
+              contactName: values.contactName,
+              contactEmail: values.contactEmail,
+              contactPhone: values.contactPhone,
             });
           }}
         />

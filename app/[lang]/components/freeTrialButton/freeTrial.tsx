@@ -3,6 +3,7 @@
 import Modal from "react-modal";
 import { FormModalButton } from "../formModal/formModal";
 import { getDictionary } from "../../../../translations/translations";
+import { sendAppServerRequest } from "../helpers/sendAppServerRequest";
 
 Modal.setAppElement("#body");
 export function FreeTrialButton(p: { lang: string; className: string }) {
@@ -22,15 +23,13 @@ export function FreeTrialButton(p: { lang: string; className: string }) {
         { t: t.freeTrialForm.telLabel, k: "contactPhone", r: true },
       ]}
       onSubmit={(values: { [k: string]: string }): Promise<void> => {
-        const subject = t.freeTrialForm.mailSubject;
-        const body = t.freeTrialForm.mailBody.replaceAll(
-          "$info",
-          `${values.contactName}\n${values.companyName}\nSIRET:${values.companySiret}\n${values.contactEmail}\n${values.contactPhone}`
-        );
-        window.open(
-          `mailto:contact@upsignon.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-        );
-        return Promise.resolve();
+        return sendAppServerRequest("request-test", t.successMessage, {
+          contactName: values.contactName,
+          contactEmail: values.contactEmail,
+          contactPhone: values.contactPhone,
+          companyName: values.companyName,
+          companySiret: values.companySiret,
+        });
       }}
       modalLinkValue="free-trial"
     />

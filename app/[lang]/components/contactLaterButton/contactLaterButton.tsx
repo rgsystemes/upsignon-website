@@ -2,6 +2,7 @@
 
 import { getDictionary } from "../../../../translations/translations";
 import { FormModalButton } from "../formModal/formModal";
+import { sendAppServerRequest } from "../helpers/sendAppServerRequest";
 
 export function ContactLaterButton(p: { lang: string; className: string }) {
   const t = getDictionary(p.lang);
@@ -20,17 +21,13 @@ export function ContactLaterButton(p: { lang: string; className: string }) {
         { t: t.callBackForm.callbackDate, k: "callbackDate", r: true },
       ]}
       onSubmit={(values: { [k: string]: string }): Promise<void> => {
-        const subject = t.callBackForm.mailSubject;
-        const body = t.callBackForm.mailBody
-          .replaceAll(
-            "$info",
-            `${values.contactName}\n${values.companyName}\n${values.contactEmail}\n${values.contactPhone}`
-          )
-          .replaceAll("$date", values.callbackDate);
-        window.open(
-          `mailto:contact@upsignon.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-        );
-        return Promise.resolve();
+        return sendAppServerRequest("contact-later", t.successMessage, {
+          contactName: values.contactName,
+          contactEmail: values.contactEmail,
+          contactPhone: values.contactPhone,
+          companyName: values.companyName,
+          callbackDate: values.callbackDate,
+        });
       }}
       modalLinkValue="contact-later"
     />

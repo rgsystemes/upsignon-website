@@ -3,6 +3,7 @@ import fr from "./fr";
 const translations: typeof fr = {
   anchorCopyTitle: "Copy the link to this paragraph.",
   anchorCopied: "Link copied",
+  successMessage: "Request sent",
   menu: {
     features: "Features & demos",
     pricing: "Pricing",
@@ -24,8 +25,6 @@ const translations: typeof fr = {
     telLabel: "Phone number",
     callbackDate: "When do you wish to be contacted?",
     submit: "Send",
-    mailSubject: "Please call me back later",
-    mailBody: "Hello,\nPlease find below my contact details for being called back $date.\n\n$info\n\nRegards,",
   },
   freeTrialForm: {
     nameLabel: "Your name",
@@ -34,9 +33,6 @@ const translations: typeof fr = {
     emailLabel: "Email adress",
     telLabel: "Phone number",
     submit: "Send",
-    mailSubject: "Trial request",
-    mailBody:
-      "Hello,\nI would like to test UpSignOn PRO for a month. Here is the required information :\n\n$info\n\nRegards,",
   },
   footer: {
     nav: {

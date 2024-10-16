@@ -5,6 +5,7 @@ import Modal from "react-modal";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "./formModal.module.css";
 import { ModalLinkOpener } from "../../../useModalLinkOpener";
+import { Spinner } from "@geist-ui/core";
 
 Modal.setAppElement("#body");
 export function FormModalButton(p: {
@@ -40,7 +41,7 @@ export function FormModalButton(p: {
         shouldReturnFocusAfterClose={false}
         className={styles.modal}
       >
-        <GetQuoteForm
+        <GetForm
           lang={p.lang}
           modalTitle={p.modalTitle}
           submitButtonText={p.submitButtonText}
@@ -53,7 +54,7 @@ export function FormModalButton(p: {
   );
 }
 
-function GetQuoteForm(p: {
+function GetForm(p: {
   lang: string;
   modalTitle: string;
   submitButtonText: string;
@@ -62,6 +63,7 @@ function GetQuoteForm(p: {
   fields: { t: string; k: string; r: boolean }[];
 }) {
   const lock = useRef(false);
+  const [loading, setLoading] = useState(false);
   const submit = (ev) => {
     ev.preventDefault();
     if (lock.current) return;
@@ -70,6 +72,7 @@ function GetQuoteForm(p: {
     p.fields.forEach((f, i) => {
       val[f.k] = ev.target[i].value;
     });
+    setLoading(true);
     p.onSubmit(val)
       .then(() => {
         close();
@@ -78,6 +81,7 @@ function GetQuoteForm(p: {
         // ignore
       })
       .finally(() => {
+        setLoading(false);
         lock.current = false;
       });
   };
@@ -92,9 +96,12 @@ function GetQuoteForm(p: {
 
         <input type="submit" value={p.submitButtonText} />
       </form>
-      <button onClick={p.close} className={styles.cancelButton}>
-        {t.actions.cancel}
-      </button>
+      <div className={styles.buttonWithLoaderContainer}>
+        <button onClick={p.close} className={styles.cancelButton}>
+          {t.actions.cancel}
+        </button>
+        {loading && <Spinner />}
+      </div>
     </div>
   );
 }
