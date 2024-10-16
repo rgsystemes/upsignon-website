@@ -17,7 +17,7 @@ export function AnchorScrollWithFixedHeaderBody(p: { fixedComponent: ReactNode; 
   }, []);
   return (
     /* set an id for Modal accessibility */
-    <body id="body" className={styles.body}>
+    <body id="body" className={styles.body} aria-hidden={false}>
       <div id="fixedComponentContainer" className={styles.fixedContainer}>
         {p.fixedComponent}
       </div>
