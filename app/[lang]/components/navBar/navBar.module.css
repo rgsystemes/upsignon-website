@@ -18,6 +18,9 @@
 .logoAndNameContainer:-webkit-any-link {
   color: white;
 }
+.logoAndNameContainer:link, .logoAndNameContainer:visited {
+  color: white;
+}
 .logoAndNameContainer img {
   height: 50px;
   width: 50px;
@@ -55,8 +58,13 @@
   border-color: transparent;
 }
 .menuItem:-webkit-any-link {
+  /* do not add this selector at the start of a list of rules because firefox will stop at the first webkit rule */
   color: white;
 }
+.menuItem:visited, .menuItem:link {
+  color: white;
+}
+
 .menuItem:hover:not(.focusedMenu), .currentMenu {
   border-bottom: 4px solid rgb(0,171,169);
 }

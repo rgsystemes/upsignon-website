@@ -35,19 +35,19 @@ export function NavBar(p: { lang: string }) {
       <div className={`${styles.menuItems} ${unfolded ? styles.unfolded : styles.folded}`}>
         <Link
           href="/features"
-          className={`${styles.menuItem} ${pathName.includes("/features") ? styles.currentMenu : null}`}
+          className={`${styles.menuItem} ${pathName.includes("/features") ? styles.currentMenu : ""}`}
         >
           {t.menu.features}
         </Link>
         <Link
           href="/pricing"
-          className={`${styles.menuItem} ${pathName.includes("/pricing") ? styles.currentMenu : null}`}
+          className={`${styles.menuItem} ${pathName.includes("/pricing") ? styles.currentMenu : ""}`}
         >
           {t.menu.pricing}
         </Link>
         <Link
           href="/downloads"
-          className={`${styles.menuItem} ${pathName.includes("/downloads") ? styles.currentMenu : null}`}
+          className={`${styles.menuItem} ${pathName.includes("/downloads") ? styles.currentMenu : ""}`}
         >
           {t.menu.downloads}
         </Link>
