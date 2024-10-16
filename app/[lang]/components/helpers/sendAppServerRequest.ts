@@ -13,8 +13,9 @@ export const sendAppServerRequest = (urlPath: String, successMessage: String, re
     };
     req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     req.send(JSON.stringify(requestBody));
-    req.onerror = function () {
+    req.onerror = function (e) {
       reject();
+      alert(`Error ${e.type}`);
     };
   });
 };
