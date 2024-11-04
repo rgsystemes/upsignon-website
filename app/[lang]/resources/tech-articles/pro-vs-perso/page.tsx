@@ -94,9 +94,9 @@ function FRArticle() {
       <p>
         Une fois que l’identifiant et la clé sont partagés entre les deux appareils, ils peuvent échanger des
         informations de façon totalement sécurisée via n’importe quel canal de communication (même non sécurisé) en
-        chiffrant les messages avec leur clé secrète. Chacun envoie alors aux autres appareils les modifications qu’il
-        effectue dans le coffre-fort pour que les autres appareils puissent également les appliquer sur leur coffre-fort
-        local.
+        chiffrant les messages avec leur clé secrète. Chaque appareil envoie au serveur, de façon chiffrée, les
+        modifications qu'il effectue dans le coffre-fort et inversement, récupère les modifications envoyées par les
+        autres appareils.
       </p>
       <p>
         L’avantage de ce système est que le serveur ne connaît aucune information sur vous (il ne connaît pas votre
@@ -443,8 +443,8 @@ function ENArticle() {
       <p>
         Once the ID and key are shared between the two devices, they can exchange information completely securely over
         any communication channel (even unsecured ones) by encrypting messages with their secret key. Each device then
-        sends the changes it makes in the vault to other devices so that other devices can also apply them to their
-        local vault.
+        sends to the server, in an encrypted form, the changes it makes to the vault and conversely, retrieves the
+        changes made by the other devices.
       </p>
       <p>
         The advantage of this system is that the server does not know any information about you (it does not know your
