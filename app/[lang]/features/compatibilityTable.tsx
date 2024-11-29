@@ -20,25 +20,25 @@ export default function CompatibilityTable({ lang }: { lang: string }) {
             <tr>
               <td>iOS</td>
               <td>12</td>
-              <td>17</td>
+              <td>18</td>
               <td>Arm64</td>
             </tr>
             <tr>
               <td>Android</td>
               <td>5</td>
-              <td>14</td>
+              <td>15</td>
               <td>x64, Arm32, Arm64</td>
             </tr>
             <tr>
               <td>Windows</td>
-              <td>7</td>
+              <td>10</td>
               <td>11</td>
               <td>x64, Arm64</td>
             </tr>
             <tr>
               <td>MacOS</td>
               <td>10.14</td>
-              <td>14.2</td>
+              <td>15</td>
               <td>x64, Arm64</td>
             </tr>
             <tr>

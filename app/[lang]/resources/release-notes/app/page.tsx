@@ -30,6 +30,63 @@ export default function AppNotes({ params }: { params: { lang: string } }) {
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.10.0 */}
+      <h2>
+        <LinkToAnchor id="7.10.0">7.10.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 29/11/2024</em>
+      </p>
+      <strong>Export/import amélioré</strong>
+      <ul>
+        <li>export/import XLSX</li>
+        <li>export/import JSON</li>
+        <li>export PDF</li>
+        <li>tri des entrées par chemin, puis titre, puis login dans les exports générés</li>
+      </ul>
+      <strong>Recherche améliorée</strong>
+      <ul>
+        <li>la reherche exclue désormais le champ login par défaut</li>
+        <li>
+          la recherche avancée permet désormais de sélectionner les champs de recherche (y compris les login et les
+          notes)
+        </li>
+        <li>la recherche reconnaît désormais l'utilisation du caractère '/' comme séparateur de dossiers</li>
+      </ul>
+      <strong>Améliorations pour l'extension de navigateur</strong>
+      <ul>
+        <li>
+          Ajoute une deuxième méthode de configuration pour l'extension de navigateur, sans utiliser le lien
+          d'application (à partir de la version 1.2.0 de l'extension).
+        </li>
+        <li>
+          Permet l'affichage des codes TOTP dans l'extension de navigateur (à partir de la version 1.2.0 de
+          l'extension).
+        </li>
+      </ul>
+      <strong>Autres améliorations</strong>
+      <ul>
+        <li>
+          Les fonctionnalités utilisant les liens d'application (configuration d'une extension de navigateur, appairage
+          d'un coffre-fort perso, ouverture d'un lien de configuration TOTP, acceptation d'une invitation d'un contact
+          de confiance perso, import d'un compte connecté)
+          <ul>
+            <li>
+              ne demandent plus le déverrouillage du coffre-fort si l'utilisateur choisit le coffre déjà déverrouillé ;
+            </li>
+            <li>ne verrouillent plus le coffre-fort si l'utilisateur annule l'action ;</li>
+            <li>et conservent le coffre-fort sélectionné dans l'état déverrouillé après la fin de l'action.</li>
+          </ul>
+        </li>
+        <li>Le changement de mot de passe est désormais autorisable par biométrie.</li>
+        <li>Améliore l'outil "nous contacter" renommé en "contacter le support".</li>
+        <li>Corrige la taille maximale des clés TOTP qui était trop courte dans certains cas.</li>
+      </ul>
+      <strong>Changements techniques</strong>
+      <ul>
+        <li>Perte de compatibilité avec Windows 8.</li>
+        <li>Améliore la gestion des erreurs et des logs.</li>
+      </ul>
       {/* 7.9.0 */}
       <h2>
         <LinkToAnchor id="7.9.0">7.9.0</LinkToAnchor>
@@ -413,6 +470,54 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.10.0 */}
+      <h2>
+        <LinkToAnchor id="7.10.0">7.10.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 29/11/2024</em>
+      </p>
+      <strong>Improved export/import</strong>
+      <ul>
+        <li>XLSX export/import</li>
+        <li>JSON export/import</li>
+        <li>PDF export</li>
+        <li>sort entries by path, then title, then login in generated exports</li>
+      </ul>
+      <strong>Improved search</strong>
+      <ul>
+        <li>search now excludes login field by default</li>
+        <li>advanced search now allows to select search fields (including login and notes)</li>
+        <li>search now recognizes the use of the '/' character as a folder separator</li>
+      </ul>
+      <strong>Browser extension improvements</strong>
+      <ul>
+        <li>
+          Adds a second configuration method for the browser extension, without using the application link (starting
+          with extension version 1.2.0).
+        </li>
+        <li>Allows TOTP codes to be displayed in the browser extension (starting with extension version 1.2.0).</li>
+      </ul>
+      <strong>Other improvements</strong>
+      <ul>
+        <li>
+          Features that use application links (configuring a browser extension, pairing a personal vault, opening a TOTP
+          configuration link, accepting an invitation from a personal trusted contact, importing a connected account)
+          <ul>
+            <li>no longer ask to unlock the vault if the user chooses the already unlocked vault;</li>
+            <li>no longer lock the vault if the user cancels the action;</li>
+            <li>and keep the selected vault in the unlocked state after the action is completed.</li>
+          </ul>
+        </li>
+        <li>Password change can now be authorized biometrically.</li>
+        <li>Improves the "contact us" tool renamed to "contact support".</li>
+        <li>Fixes the maximum size of TOTP keys which was too short in some cases.</li>
+      </ul>
+      <strong>Technical changes</strong>
+      <ul>
+        <li>Loss of compatibility with Windows 8.</li>
+        <li>Improves error and log handling.</li>
+      </ul>
       {/* 7.9.0 */}
       <h2>
         <LinkToAnchor id="7.9.0">7.9.0</LinkToAnchor>

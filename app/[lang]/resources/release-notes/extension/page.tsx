@@ -30,6 +30,30 @@ export default function ExtensionNotes({ params }: { params: { lang: string } })
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.2.0 */}
+      <h2>
+        <LinkToAnchor id="1.2.0">1.2.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 29/11/2024</em>
+      <ul>
+        <li>
+          Ajoute une méthode de configuration alternative pour les appareils sur lesquels le lien d'application ne
+          fonctionne pas (par exemple sur certaines distributions linux).{" "}
+          <em>Nécessite une version 7.10.0 ou ultérieure de l'application.</em>
+        </li>
+        <li>
+          La popup de l'extension (vue au clic sur l'icône de l'extension dans la barre d'acitons du navigateur) permet
+          désormais d'afficher les codes TOTP. <em>Nécessite une version 7.10.0 ou ultérieure de l'application.</em>
+        </li>
+        <li>
+          Affiche les comptes qui correspondent à la page avec leur arborescence pour faciliter leur distinction en cas
+          de correspondances multiples.
+        </li>
+        <li>Ajoute la possibilité de réinitialiser l'extension en cliquant 7 fois sur le numéro de version.</li>
+        <li>Améliore l'heuristique de remplissage automatique sur certains sites.</li>
+        <li>Corrige un cas où l'extension empêche l'affichage du clavier virtuel d'un site bancaire.</li>
+        <li>Corrige divers bugs mineurs.</li>
+      </ul>
       {/* 1.1.0 */}
       <h2>
         <LinkToAnchor id="1.1.0">1.1.0</LinkToAnchor>
@@ -139,6 +163,29 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.2.0 */}
+      <h2>
+        <LinkToAnchor id="1.2.0">1.2.0</LinkToAnchor>
+      </h2>
+      <em>Published on 29/11/2024</em>
+      <ul>
+        <li>
+          Adds an alternative configuration method for devices on which the application link does not work (for example
+          on some Linux distributions). <em>Requires version 7.10.0 or later of the application.</em>
+        </li>
+        <li>
+          The extension popup (seen when you click on the extension icon in the browser toolbar) now displays TOTP
+          codes. <em>Requires version 7.10.0 or later of the application.</em>
+        </li>
+        <li>
+          Displays the accounts that correspond to the page with their tree structure to make it easier to distinguish
+          them in the event of multiple matches.
+        </li>
+        <li>Adds the ability to reset the extension by clicking 7 times on the version number.</li>
+        <li>Improves auto-fill heuristics on certain sites.</li>
+        <li>Fixes a case where the extension prevents the virtual keyboard of a banking site from being displayed.</li>
+        <li>Fixes various minor bugs.</li>
+      </ul>
       {/* 1.1.0 */}
       <h2>
         <LinkToAnchor id="1.1.0">1.1.0</LinkToAnchor>
