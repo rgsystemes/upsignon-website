@@ -30,9 +30,9 @@ export default function AppNotes({ params }: { params: { lang: string } }) {
 function FRAppNotes() {
   return (
     <section className={styles.section}>
-      {/* 7.10.0 */}
+      {/* 7.10.2 */}
       <h2>
-        <LinkToAnchor id="7.10.0">7.10.0</LinkToAnchor>
+        <LinkToAnchor id="7.10.2">7.10.2</LinkToAnchor>
       </h2>
       <p>
         <em>Publiée le 29/11/2024</em>
@@ -46,7 +46,7 @@ function FRAppNotes() {
       </ul>
       <strong>Recherche améliorée</strong>
       <ul>
-        <li>la reherche exclue désormais le champ login par défaut</li>
+        <li>la recherche exclue désormais le champ login par défaut</li>
         <li>
           la recherche avancée permet désormais de sélectionner les champs de recherche (y compris les login et les
           notes)
@@ -470,9 +470,9 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
-      {/* 7.10.0 */}
+      {/* 7.10.2 */}
       <h2>
-        <LinkToAnchor id="7.10.0">7.10.0</LinkToAnchor>
+        <LinkToAnchor id="7.10.2">7.10.2</LinkToAnchor>
       </h2>
       <p>
         <em>Published on 29/11/2024</em>
