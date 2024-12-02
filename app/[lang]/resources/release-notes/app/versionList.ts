@@ -1,5 +1,16 @@
-export const currentAppStoreVersion = "7.9.0";
-export const allMsixBundleVersions = ["7.9.0", "7.8.4", "7.8.0", "7.7.2", "7.7.1", "7.6.0", "7.5.1", "7.4.1", "7.1.1"];
+export const currentAppStoreVersion = "7.10.2";
+export const allMsixBundleVersions = [
+  "7.10.2",
+  "7.9.0",
+  "7.8.4",
+  "7.8.0",
+  "7.7.2",
+  "7.7.1",
+  "7.6.0",
+  "7.5.1",
+  "7.4.1",
+  "7.1.1",
+];
 export const allMsiVersions = [
   "7.10.2",
   "7.9.0",
