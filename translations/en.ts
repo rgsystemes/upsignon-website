@@ -130,7 +130,7 @@ const translations: typeof fr = {
         tTag: "UpSignOn PRO",
         t: "adapted to professional challenges",
         p1: "As responsible for the IT security of your organization you must ensure that all your colleagues apply good practices in managing their passwords. Your goal is to have 100% strong passwords. Deploying a tool is not enough. You need to be able to track its adoption and verify that it is paying off.",
-        p2: "UpSignOn PRO therefore gives you access to a supervision console for the evolution of the strength of passwords, identifying the people who need to be supported and controlled or adjust the most sensitive functionalities (for example CSV export , master password reset, authorized platforms, offline mode, etc.).",
+        p2: "UpSignOn PRO therefore gives you access to a supervision console for the evolution of the strength of passwords, identifying the people who need to be supported and controlled or adjust the most sensitive functionalities (for example export, master password reset, authorized platforms, offline mode, etc.).",
       },
     },
     demo: {
@@ -438,7 +438,7 @@ const translations: typeof fr = {
     filter: {
       title: "Filters by type and password strength",
       details: [
-        "In addition to searching, you can filter you vault by secret type (account or code), by password strength, or display only shared elements. You can also choose to hide elements of the root folder if you have many of them.",
+        "In addition to searching, you can filter you vault by secret type (account or code), by password strength, or display only shared elements. You can choose the fields to which the search applies, typically for instance to search inside your notes. You can also choose to hide elements of the root folder if you have many of them.",
       ],
       imageAlt: "Screenshot of the application showing the various filters that are available.",
     },
@@ -451,23 +451,23 @@ const translations: typeof fr = {
     },
     importExportSubtitle: "Import & Export your data",
     csvImport: {
-      title: "CSV & XML import",
+      title: "CSV, XLSX, JSON & XML (Keepass) import",
       details: [
         "You have passwords saved in your browser or in another tool? Export them in .csv format and import them into your UpSignOn vault in just a few clicks!",
         "NB : to transfer your date from KeePass, prefer to use the XML format to preserver the tree structure of your folders.",
         "Remember to completely erase the CSV (or XML) file once you have finished importing so that your secrets are not accessible in an unprotected format!",
       ],
-      imageAlt: "Screenshot of the CSV import page.",
+      imageAlt: "Screenshot of the import page.",
     },
     csvExport: {
-      title: "CSV export",
+      title: "CSV, XLSX, JSON & PDF export",
       details: [
-        "If you decide to change tools, you can export your passwords in .csv format at any time and re-import them into another tool.",
+        "If you decide to change tools, you can export your passwords in .csv or .xlsx format at any time and re-import them into another tool.",
         "Please note that this function is not designed to back up your data. We offer dedicated and secure mechanisms for this purpose.",
       ],
       warningPro:
         "NB PRO vaults: this feature is disabled by default and can only be activated by an administrator from the supervision console (see below).",
-      imageAlt: "Screenshot of the CSV export button.",
+      imageAlt: "Screenshot of the export button.",
     },
     securityFeaturesSubtitle: "Security features",
     endToEndEncryption: {

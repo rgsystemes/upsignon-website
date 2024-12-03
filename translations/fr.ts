@@ -128,7 +128,7 @@ const translations = {
         tTag: "UpSignOn PRO",
         t: "adapté aux enjeux professionnels",
         p1: "En tant responsable de la sécurité informatique de votre organisation vous devez vous assurer que tous vos collègues appliquent les bonnes pratiques dans la gestion de leurs mots de passe. Votre objectif est d’avoir 100% de mots de passe forts. Déployer un outil n’est pas suffisant. Vous devez pouvoir suivre son adoption et vérifier qu’il porte ses fruits.",
-        p2: "UpSignOn PRO vous donne donc accès à une console de supervision pour suivre l’évolution de la force des mots de passe, identifier les personnes qui ont besoin d’être accompagnées et contrôler ou ajuster les fonctionnalités les plus sensibles (e.g export CSV, réinitialisation de mot de passe maître, plateformes autorisées, mode hors-ligne, etc.).",
+        p2: "UpSignOn PRO vous donne donc accès à une console de supervision pour suivre l’évolution de la force des mots de passe, identifier les personnes qui ont besoin d’être accompagnées et contrôler ou ajuster les fonctionnalités les plus sensibles (e.g export, réinitialisation de mot de passe maître, plateformes autorisées, mode hors-ligne, etc.).",
       },
     },
     demo: {
@@ -440,7 +440,7 @@ const translations = {
     filter: {
       title: "Filtres par type et force de mot de passe",
       details: [
-        "En complément de la recherche, vous pouvez filtrer votre coffre-fort par type de secret (compte ou code), par force de mot de passe, ou n'afficher que les éléments partagés. Vous pouvez également choisir de cacher les éléments du dossier racine si vous en avez beaucoup.",
+        "En complément de la recherche, vous pouvez filtrer votre coffre-fort par type de secret (compte ou code), par force de mot de passe, ou n'afficher que les éléments partagés. Vous pouvez choisir les champs sur lesquels s'appliquent la recherche, typiquement pour rechercher par exmple dans les notes. Vous pouvez également choisir de cacher les éléments du dossier racine si vous en avez beaucoup.",
       ],
       imageAlt: "Capture d'écran de l'application montrant les différents filtres disponibles.",
     },
@@ -453,23 +453,23 @@ const translations = {
     },
     importExportSubtitle: "Import & Export de vos données",
     csvImport: {
-      title: "Import CSV & XML",
+      title: "Import CSV, XLSX, JSON & XML (Keepass)",
       details: [
         "Vous avez des mots de passe enregistrés dans votre navigateur ou dans un autre outil ? Exportez-les au format .csv puis importez-les en quelques clics dans votre coffre-fort UpSignOn !",
         "NB : pour transférer vos données depuis KeePass utilisez plutôt le format XML pour conserver l'aborescence de vos dossiers.",
         "Attention, pensez à effacer complètement le fichier CSV (ou XML) après avoir terminé l’import pour que vos secrets ne restent pas accessibles dans un format non protégé !",
       ],
-      imageAlt: "Capture d'écran de la page d'import CSV.",
+      imageAlt: "Capture d'écran de la page d'import.",
     },
     csvExport: {
-      title: "Export CSV",
+      title: "Export CSV, XLSX, JSON & PDF",
       details: [
-        "Si vous décidez de changer d’outil, vous pouvez à tout moment exporter vos mots de passe au format .csv pour les réimporter dans un autre outil.",
+        "Si vous décidez de changer d’outil, vous pouvez à tout moment exporter vos mots de passe au format .csv ou .xlsx pour les réimporter dans un autre outil.",
         "Attention, cette fonctionnalité n’est pas conçue pour faire une sauvegarde de vos données. Nous vous proposons des mécanismes dédiés et sécurisés pour cela.",
       ],
       warningPro:
         "NB coffres-forts PRO : cette fonctionnalité est désactivée par défaut et ne peut être activée que par un administrateur depuis la console de supervision (voir plus bas).",
-      imageAlt: "Capture d'écran du bouton d'export CSV.",
+      imageAlt: "Capture d'écran du bouton d'export.",
     },
     securityFeaturesSubtitle: "Fonctionnalités de sécurité",
     endToEndEncryption: {
