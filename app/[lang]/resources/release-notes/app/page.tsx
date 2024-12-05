@@ -30,6 +30,20 @@ export default function AppNotes({ params }: { params: { lang: string } }) {
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.10.3 */}
+      <h2>
+        <LinkToAnchor id="7.10.3">7.10.3</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 05/12/2024</em>
+      </p>
+      <ul>
+        <li>corrige une lenteur observée lors de la recherche dans certains cas.</li>
+        <li>corrige la migration des paramètres de coffres-forts PRO survenus après le démarrage de l'application.</li>
+        <li>
+          corrige le délai de verrouillage qui n'utilisait pas les paramètres définis au cours d'une précédente session.
+        </li>
+      </ul>
       {/* 7.10.2 */}
       <h2>
         <LinkToAnchor id="7.10.2">7.10.2</LinkToAnchor>
@@ -470,6 +484,18 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.10.3 */}
+      <h2>
+        <LinkToAnchor id="7.10.3">7.10.3</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 05/12/2024</em>
+      </p>
+      <ul>
+        <li>fixes a slowness observed while searching in some cases.</li>
+        <li>fixes the migration of PRO vaults settings that occured after the app start.</li>
+        <li>fixes the lock delay that did not reuse the settings configured in a previous session.</li>
+      </ul>
       {/* 7.10.2 */}
       <h2>
         <LinkToAnchor id="7.10.2">7.10.2</LinkToAnchor>
