@@ -1,9 +1,5 @@
 import { Metadata } from "next";
-import {
-  allMsiVersions,
-  allMsixBundleVersions,
-  currentAppStoreVersion,
-} from "../../resources/release-notes/app/versionList";
+import { allMsiVersions, allMsixBundleVersions } from "../../resources/release-notes/app/versionList";
 import styles from "./page.module.css";
 import { CodeBlock } from "../../components/codeBlock/codeBlock";
 import { LinkToAnchor } from "../../components/linkToAnchor/linkToAnchor";
@@ -305,7 +301,7 @@ function FRWindowsAllDownloadPage() {
         UpSignOn_latest.zip
       </a>
       <div className={styles.msixbundleSteps}>
-        <em>Version actuelle : {currentAppStoreVersion}</em>
+        <em>Version actuelle : {allMsixBundleVersions[0]}</em>
         <ul>
           <li>Dézippez le fichier UpSignOn_latest.zip</li>
           <li>Exécutez ensuite le script d’installation powershell</li>
@@ -372,7 +368,7 @@ function FRWindowsAllDownloadPage() {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Version actuelle : {currentAppStoreVersion}</td>
+              <td colSpan={3}>Version actuelle : {allMsiVersions[0]}</td>
             </tr>
             <tr>
               <td>
@@ -627,7 +623,7 @@ function ENWindowsAllDownloadPage() {
         UpSignOn_latest.zip
       </a>
       <div className={styles.msixbundleSteps}>
-        <em>Current version: {currentAppStoreVersion}</em>
+        <em>Current version: {allMsixBundleVersions[0]}</em>
         <ul>
           <li>Unzip the UpSignOn_latest.zip file</li>
           <li>Then run the powershell installation script</li>
@@ -694,7 +690,7 @@ function ENWindowsAllDownloadPage() {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Current version: {currentAppStoreVersion}</td>
+              <td colSpan={3}>Current version: {allMsiVersions[0]}</td>
             </tr>
             <tr>
               <td>
