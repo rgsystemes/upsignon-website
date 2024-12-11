@@ -30,6 +30,14 @@ export default function ExtensionNotes({ params }: { params: { lang: string } })
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.2.1 */}
+      <h2>
+        <LinkToAnchor id="1.2.1">1.2.1</LinkToAnchor>
+      </h2>
+      <em>Publiée le 11/12/2024</em>
+      <ul>
+        <li>Corrige un cas d'affichage de la page de configuration au lieu de la page d'erreur.</li>
+      </ul>
       {/* 1.2.0 */}
       <h2>
         <LinkToAnchor id="1.2.0">1.2.0</LinkToAnchor>
@@ -163,6 +171,14 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.2.1 */}
+      <h2>
+        <LinkToAnchor id="1.2.1">1.2.1</LinkToAnchor>
+      </h2>
+      <em>Published on 11/12/2024</em>
+      <ul>
+        <li>Fixes a case when the setup page is displayed instead of the error page.</li>
+      </ul>
       {/* 1.2.0 */}
       <h2>
         <LinkToAnchor id="1.2.0">1.2.0</LinkToAnchor>

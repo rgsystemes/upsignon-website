@@ -30,6 +30,22 @@ export default function AppNotes({ params }: { params: { lang: string } }) {
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.10.5 */}
+      <h2>
+        <LinkToAnchor id="7.10.5">7.10.5</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 11/12/2024</em>
+      </p>
+      <ul>
+        <li>
+          Extension Safari 1.2.1 (cf les{" "}
+          <a href="https://upsignon.eu/fr/resources/release-notes/extension#1.2.1">notes de version dédiées</a>)
+        </li>
+        <li>corrige un blocage de l'application après l'affichage de la popup de mise-à-jour.</li>
+        <li>corrige la gestion de la réauthentification automatique des coffres-forts PRO en cours de session.</li>
+        <li>corrige d'autres problèmes mineurs</li>
+      </ul>
       {/* 7.10.3 */}
       <h2>
         <LinkToAnchor id="7.10.3">7.10.3</LinkToAnchor>
@@ -484,6 +500,22 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.10.5 */}
+      <h2>
+        <LinkToAnchor id="7.10.5">7.10.5</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 11/12/2024</em>
+      </p>
+      <ul>
+        <li>
+          Safari extension 1.2.1 (see the{" "}
+          <a href="https://upsignon.eu/en/resources/release-notes/extension#1.2.1">dedicated release notes</a>)
+        </li>
+        <li>fixes an application crash after the update popup is displayed</li>
+        <li>fixes the automatic reauthentication of PRO vaults during a session</li>
+        <li>fixes other minor issues</li>
+      </ul>
       {/* 7.10.3 */}
       <h2>
         <LinkToAnchor id="7.10.3">7.10.3</LinkToAnchor>
