@@ -33,7 +33,7 @@ export const allMsiVersions = [
 ];
 
 export const linuxVersions = [
-  "7.10.5",
+  // "7.10.5",
   "7.10.3",
   "7.10.2",
   "7.9.0",
