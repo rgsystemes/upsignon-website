@@ -30,6 +30,18 @@ export default function DashboardNotes({ params }: { params: { lang: string } })
 function FRDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.4.0 */}
+      <h2>
+        <LinkToAnchor id="2.4.0">2.4.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 17/12/2024</em>
+      <ul>
+        <li>L'envoi d'un email d'invitation aux nouveaux administrateurs n'est plus automatique.</li>
+        <li>
+          Les administrateurs autorisés peuvent regénérer leur lien d'invitation de façon autonome depuis la page de
+          login.
+        </li>
+      </ul>
       {/* 2.3.2 */}
       <h2>
         <LinkToAnchor id="2.3.2">2.3.2</LinkToAnchor>
@@ -231,6 +243,15 @@ function FRDashboardNotes() {
 function ENDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.4.0 */}
+      <h2>
+        <LinkToAnchor id="2.4.0">2.4.0</LinkToAnchor>
+      </h2>
+      <em>Published on 17/12/2024</em>
+      <ul>
+        <li>Sending an invitation email to new administrators is no longer automatic.</li>
+        <li>Authorised administrators can regenerate their invitation link autonomously from the login page.</li>
+      </ul>
       {/* 2.3.2 */}
       <h2>
         <LinkToAnchor id="2.3.2">2.3.2</LinkToAnchor>
