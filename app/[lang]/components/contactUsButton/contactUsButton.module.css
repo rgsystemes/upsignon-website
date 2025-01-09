@@ -26,6 +26,8 @@
   width: 120px;
   height: 120px;
   margin: 30px auto 5px auto;
+  object-fit: cover;
+  object-position: 55% 0;
 }
 .link {
   display: block;

@@ -5,7 +5,7 @@ import Modal from "react-modal";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "./contactUsButton.module.css";
 import Link from "next/link";
-import plpImg from "../../../../public/images/plp.jpeg";
+import giregImg from "../../../../public/images/gireg.jpg";
 import Image from "next/image";
 import { ModalLinkOpener } from "../../../useModalLinkOpener";
 
@@ -46,17 +46,17 @@ function ContactUsForm(p: { lang: string; onRequestClose: () => void }) {
   return (
     <div className={styles.modalContent}>
       <h1>{t.actions.contactUs}</h1>
-      <Image src={plpImg} alt="" className={styles.photo} />
-      <div>Pierre-Loïc</div>
-      <Link href="mailto:pierreloic.poirieux@upsignon.eu" className={styles.link}>
-        pierreloic.poirieux@upsignon.eu
+      <Image src={giregImg} alt="" className={styles.photo} />
+      <div>Gireg</div>
+      <Link href="mailto:contact@upsignon.eu" className={styles.link}>
+        contact@upsignon.eu
       </Link>
-      <Link href="tel:+33659290624" className={styles.link}>
-        +33 6 59 29 06 24
+      <Link href="tel:+33670743299" className={styles.link}>
+        +33 6 70 74 32 99
       </Link>
-      <Link href="https://calendly.com/upsignon" className={styles.link} target="_blank">
+      {/* <Link href="https://calendly.com/upsignon" className={styles.link} target="_blank">
         {t.actions.calendarLink}
-      </Link>
+      </Link> */}
       <button onClick={p.onRequestClose} className={styles.closeButton}>
         {t.actions.close}
       </button>
