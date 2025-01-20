@@ -30,6 +30,19 @@ export default function AppNotes({ params }: { params: { lang: string } }) {
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.10.6 */}
+      <h2>
+        <LinkToAnchor id="7.10.6">7.10.6</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 20/01/2025</em>
+      </p>
+      <ul>
+        <li>
+          Correctif sur le package MSI pour Windows : l'ouverture de plusieurs fenêtres de l'application n'est plus
+          possible.
+        </li>
+      </ul>
       {/* 7.10.5 */}
       <h2>
         <LinkToAnchor id="7.10.5">7.10.5</LinkToAnchor>
@@ -500,6 +513,16 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.10.6 */}
+      <h2>
+        <LinkToAnchor id="7.10.6">7.10.6</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 20/01/2025</em>
+      </p>
+      <ul>
+        <li>Fix on the MSI package for Windows: opening more than one window of the app is no longer possible.</li>
+      </ul>
       {/* 7.10.5 */}
       <h2>
         <LinkToAnchor id="7.10.5">7.10.5</LinkToAnchor>
