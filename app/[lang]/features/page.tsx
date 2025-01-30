@@ -457,7 +457,7 @@ export default function Page({ params }: { params: { lang: string } }) {
             android: "warning",
             windows: "yes",
             macos: "yes",
-            linux: "yes",
+            linux: "no",
             chromeos: "warning",
           }}
           tags={{ pro: "yes", perso: "yes" }}
