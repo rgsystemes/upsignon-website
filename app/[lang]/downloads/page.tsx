@@ -88,12 +88,8 @@ export default function Page({ params }: { params: { lang: string } }) {
               </td>
               <td>Linux</td>
               <td>
-                <a
-                  className={styles.buttonLink}
-                  href="https://app.upsignon.eu/downloads/UpSignOn-latest.AppImage"
-                  download
-                >
-                  AppImage
+                <a className={styles.buttonLink} href="https://snapcraft.io/upsignon" download>
+                  Snap
                 </a>
                 <a href="/downloads/linux">{t.downloads.linuxOtherOptions}</a>
               </td>

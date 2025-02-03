@@ -53,46 +53,58 @@ function FRLinuxOtherDownloads() {
         <a href="/downloads">Téléchargements</a>
       </div>
       <h1>Téléchargements Linux et informations</h1>
-      <p>Téléchargement direct AppImage</p>
-      <p>
-        <a className={styles.buttonLink} href={`https://app.upsignon.eu/downloads/UpSignOn-latest.AppImage`} download>
-          Plus récent AppImage
-        </a>
-      </p>
-
-      <h2>Toutes les versions</h2>
-      <ul className={styles.ul}>
-        {linuxVersions.map((v) => (
-          <li key={v}>
-            <a href={`https://app.upsignon.eu/downloads/linux/UpSignOn-${v}-x86_64.AppImage`} download>
-              {v}
-            </a>
-          </li>
-        ))}
-      </ul>
-
-      <h2>
-        <LinkToAnchor id={anchors.installInstructions}>Instructions d’installation</LinkToAnchor>
-      </h2>
-      <strong>Installation automatique avec AppImageLauncher</strong>
-      <p>
-        Nous recommandons de suivre les explications de la page{" "}
-        <a href="https://doc.ubuntu-fr.org/appimage#installer_un_appimage" target="_blank">
-          https://doc.ubuntu-fr.org/appimage#installer_un_appimage
-        </a>{" "}
-        et d’utiliser AppImageLauncher pour installer l’application.
-      </p>
-      <strong>Installation manuelle</strong>
+      <h2>Installation via snapcraft</h2>
       <ul>
-        <li>{`Déplacez le fichier UpSignOn-${linuxVersions[0]}-x86_64.AppImage dans /home/<votre_nom_utilisateur>/Applications/`}</li>
         <li>
-          Rendez ce fichier exécutable
-          <CodeBlock>{makeAppImageExecutable}</CodeBlock>
+          Installer snapd (cf instructions spécifiques à votre OS sur{" "}
+          <a href="https://snapcraft.io/upsignon" target="_blank">
+            https://snapcraft.io/upsignon
+          </a>
+          )
         </li>
         <li>
-          Créez le fichier /usr/share/applications/UpSignOn.desktop, et ajoutez-y le contenu suivant
-          <CodeBlock name="/usr/share/applications/UpSignOn.desktop">
-            {`[Desktop Entry]
+          Installer le snap upsignon
+          <pre>sudo snap install upsignon</pre>
+        </li>
+      </ul>
+      <br />
+      <br />
+      <details>
+        <summary>Anciennes versions AppImage</summary>
+        <p>Nous ne livrons plus l'application au format AppImage. Veuillez nous excuser pour le désagrément.</p>
+        <h2>Liste des anciennes versions</h2>
+        <ul className={styles.ul}>
+          {linuxVersions.map((v) => (
+            <li key={v}>
+              <a href={`https://app.upsignon.eu/downloads/linux/UpSignOn-${v}-x86_64.AppImage`} download>
+                {v}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <h2>
+          <LinkToAnchor id={anchors.installInstructions}>Instructions d’installation</LinkToAnchor>
+        </h2>
+        <strong>Installation automatique avec AppImageLauncher</strong>
+        <p>
+          Nous recommandons de suivre les explications de la page{" "}
+          <a href="https://doc.ubuntu-fr.org/appimage#installer_un_appimage" target="_blank">
+            https://doc.ubuntu-fr.org/appimage#installer_un_appimage
+          </a>{" "}
+          et d’utiliser AppImageLauncher pour installer l’application.
+        </p>
+        <strong>Installation manuelle</strong>
+        <ul>
+          <li>{`Déplacez le fichier UpSignOn-${linuxVersions[0]}-x86_64.AppImage dans /home/<votre_nom_utilisateur>/Applications/`}</li>
+          <li>
+            Rendez ce fichier exécutable
+            <CodeBlock>{makeAppImageExecutable}</CodeBlock>
+          </li>
+          <li>
+            Créez le fichier /usr/share/applications/UpSignOn.desktop, et ajoutez-y le contenu suivant
+            <CodeBlock name="/usr/share/applications/UpSignOn.desktop">
+              {`[Desktop Entry]
 Encoding=UTF-8
 Type=Application
 Categories=Utility;
@@ -105,17 +117,18 @@ Terminal=false
 Hidden=false
 MimeType=x-scheme-handler/upsignon;
 `}
-          </CodeBlock>
-        </li>
-        <li>
-          Rendez ce fichier exécutable
-          <CodeBlock>{makeDesktopExecutable}</CodeBlock>
-        </li>
-        <li>
-          Mettez-à-jour le cache des applications de bureau
-          <CodeBlock>{updateDesktopDatabase}</CodeBlock>
-        </li>
-      </ul>
+            </CodeBlock>
+          </li>
+          <li>
+            Rendez ce fichier exécutable
+            <CodeBlock>{makeDesktopExecutable}</CodeBlock>
+          </li>
+          <li>
+            Mettez-à-jour le cache des applications de bureau
+            <CodeBlock>{updateDesktopDatabase}</CodeBlock>
+          </li>
+        </ul>
+      </details>
     </section>
   );
 }
@@ -128,46 +141,59 @@ function ENLinuxOtherDownloads() {
         <a href="/downloads">Downloads</a>
       </div>
       <h1>Linux downloads and information</h1>
-      <p>Direct AppImage downloads</p>
-      <p>
-        <a className={styles.buttonLink} href={`https://app.upsignon.eu/downloads/UpSignOn-latest.AppImage`} download>
-          Latest AppImage
-        </a>
-      </p>
-
-      <h2>All versions</h2>
-      <ul className={styles.ul}>
-        {linuxVersions.map((v) => (
-          <li key={v}>
-            <a href={`https://app.upsignon.eu/downloads/linux/UpSignOn-${v}-x86_64.AppImage`} download>
-              {v}
-            </a>
-          </li>
-        ))}
-      </ul>
-
-      <h2>
-        <LinkToAnchor id={anchors.installInstructions}>Installation instructions</LinkToAnchor>
-      </h2>
-      <strong>Automatic installation with AppImageLauncher</strong>
-      <p>
-        We recommend to follow the explanations on the page{" "}
-        <a href="https://doc.ubuntu-fr.org/appimage#installer_un_appimage" target="_blank">
-          https://doc.ubuntu-fr.org/appimage#installer_un_appimage
-        </a>{" "}
-        and to use AppImageLauncher to install the app.
-      </p>
-      <strong>Manual installation </strong>
+      <h2>Installation via snapcraft</h2>
       <ul>
-        <li>{`Move the file UpSignOn-${linuxVersions[0]}-x86_64.AppImage to /home/<your_user_name>/Applications/`}</li>
         <li>
-          Make this file executable
-          <CodeBlock>{makeAppImageExecutable}</CodeBlock>
+          Install snapd (see specific instructions for your OS at{" "}
+          <a href="https://snapcraft.io/upsignon" target="_blank">
+            https://snapcraft.io/upsignon
+          </a>
+          )
         </li>
         <li>
-          Create the file /usr/share/applications/UpSignOn.desktop, and add the following content to it
-          <CodeBlock name="/usr/share/applications/UpSignOn.desktop">
-            {`[Desktop Entry]
+          Install the upsignon snap
+          <pre>sudo snap install upsignon</pre>
+        </li>
+      </ul>
+      <br />
+      <br />
+      <details>
+        <summary>Older AppImage versions</summary>
+
+        <p>We no longer build the app as an AppImage. Sorry for the inconvenience.</p>
+        <h2>List of older versions</h2>
+        <ul className={styles.ul}>
+          {linuxVersions.map((v) => (
+            <li key={v}>
+              <a href={`https://app.upsignon.eu/downloads/linux/UpSignOn-${v}-x86_64.AppImage`} download>
+                {v}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <h2>
+          <LinkToAnchor id={anchors.installInstructions}>Installation instructions</LinkToAnchor>
+        </h2>
+        <strong>Automatic installation with AppImageLauncher</strong>
+        <p>
+          We recommend to follow the explanations on the page{" "}
+          <a href="https://doc.ubuntu-fr.org/appimage#installer_un_appimage" target="_blank">
+            https://doc.ubuntu-fr.org/appimage#installer_un_appimage
+          </a>{" "}
+          and to use AppImageLauncher to install the app.
+        </p>
+        <strong>Manual installation </strong>
+        <ul>
+          <li>{`Move the file UpSignOn-${linuxVersions[0]}-x86_64.AppImage to /home/<your_user_name>/Applications/`}</li>
+          <li>
+            Make this file executable
+            <CodeBlock>{makeAppImageExecutable}</CodeBlock>
+          </li>
+          <li>
+            Create the file /usr/share/applications/UpSignOn.desktop, and add the following content to it
+            <CodeBlock name="/usr/share/applications/UpSignOn.desktop">
+              {`[Desktop Entry]
 Encoding=UTF-8
 Type=Application
 Categories=Utility;
@@ -180,17 +206,18 @@ Terminal=false
 Hidden=false
 MimeType=x-scheme-handler/upsignon;
 `}
-          </CodeBlock>
-        </li>
-        <li>
-          Make this file executable
-          <CodeBlock>{makeDesktopExecutable}</CodeBlock>
-        </li>
-        <li>
-          Update the desktop entry cache
-          <CodeBlock>{updateDesktopDatabase}</CodeBlock>
-        </li>
-      </ul>
+            </CodeBlock>
+          </li>
+          <li>
+            Make this file executable
+            <CodeBlock>{makeDesktopExecutable}</CodeBlock>
+          </li>
+          <li>
+            Update the desktop entry cache
+            <CodeBlock>{updateDesktopDatabase}</CodeBlock>
+          </li>
+        </ul>
+      </details>
     </section>
   );
 }
