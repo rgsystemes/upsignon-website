@@ -1,9 +1,11 @@
 import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../../page.module.css";
+import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const t = getDictionary(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   const template = {
     alternates: {
       canonical: "https://upsignon.eu/fr/resources/tech-articles/browser-extension-security",
@@ -13,7 +15,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
       },
     },
   };
-  if (params.lang === "fr") {
+  if (lang === "fr") {
     return {
       title: t.resources.browserExtensionSecurity,
       description: "Explications détaillées du fonctionnement et de la sécurité de l'extension de navigateur.",
@@ -28,18 +30,19 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   }
 }
 
-export default function BrowserExtensionSecurity({ params }: { params: { lang: string } }) {
-  const t = getDictionary(params.lang);
+export default async function BrowserExtensionSecurity({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return (
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/resources/tech-articles">{t.resources.technicalExplanations}</a>
+        <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
       </div>
-      {params.lang === "fr" ? <FRArticle /> : <ENArticle />}
+      {lang === "fr" ? <FRArticle /> : <ENArticle />}
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/resources/tech-articles">{t.resources.technicalExplanations}</a>
+        <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
       </div>
     </div>
   );
@@ -55,7 +58,8 @@ function FRArticle() {
       <h2>Compatibilité</h2>
       <p>
         L'extension de navigateur est compatible avec la plupart des navigateurs couramments utilisés sur MacOS, Windows
-        et Linux (voir <a href="https://upsignon.eu/downloads">la page de téléchargements</a> pour plus de détails).
+        et Linux (voir <Link href="https://upsignon.eu/downloads">la page de téléchargements</Link> pour plus de
+        détails).
       </p>
       <p>
         L'extension de navigateur n'est pas compatible avec iOS et Android. Sur ces plateformes, UpSignOn propose le
@@ -118,7 +122,7 @@ function FRArticle() {
       <p>
         La configuration des extensions de navigateur nécessite que le protocole <em>upsignon:</em> soit associé à
         l'application UpSignOn et fonctionne correctement. Voir les instructions d'installation sur la{" "}
-        <a href="https://upsignon.eu/downloads/linux">page dédiée à Linux</a>.
+        <Link href="https://upsignon.eu/downloads/linux">page dédiée à Linux</Link>.
       </p>
 
       <h2>Sécurité et limitations du remplissage automatique</h2>
@@ -170,7 +174,10 @@ function FRArticle() {
       </ul>
       <p>
         Nous conseillons au développeurs de consulter{" "}
-        <a href="https://upsignon.eu/resources/articles/9">nos recommandations sur les formulaires de connexion</a>.
+        <Link href="https://upsignon.eu/resources/articles/9">
+          nos recommandations sur les formulaires de connexion
+        </Link>
+        .
       </p>
       <p>
         Lorsque ni le remplissage automatique ni le remplissage forcé ne fonctionne, l'utilisateur a toujours la
@@ -190,7 +197,7 @@ function ENArticle() {
       <h2>Compatibility</h2>
       <p>
         The browser extension is compatible with most commonly used browsers on MacOS, Windows and Linux (see{" "}
-        <a href="https://upsignon.eu/downloads">the downloads page</a> for more details).
+        <Link href="https://upsignon.eu/downloads">the downloads page</Link> for more details).
       </p>
       <p>
         The browser extension is not compatible with iOS and Android. On these platforms, UpSignOn offers the autofill
@@ -251,7 +258,7 @@ function ENArticle() {
       <p>
         Configuring browser extensions requires the <em>upsignon:</em> protocol to be associated with the UpSignOn
         application and to be working correctly. See installation instructions on{" "}
-        <a href="https://upsignon.eu/downloads/linux">the page dedicated to Linux</a>.
+        <Link href="https://upsignon.eu/downloads/linux">the page dedicated to Linux</Link>.
       </p>
 
       <h2>Security and limitations of autofill</h2>
@@ -294,7 +301,7 @@ function ENArticle() {
       </ul>
       <p>
         We advise developers to consult{" "}
-        <a href="https://upsignon.eu/resources/articles/9">our recommendations on login forms</a>.{" "}
+        <Link href="https://upsignon.eu/resources/articles/9">our recommendations on login forms</Link>.{" "}
       </p>
       <p>
         When neither autofill nor forcefill works, the user still has the option to copy-paste the login and password

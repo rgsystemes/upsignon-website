@@ -12,9 +12,11 @@ import BraveImg from "../../../public/icons/Brave.svg";
 import OperaImg from "../../../public/icons/Opera.svg";
 import Image from "next/image";
 import { Metadata } from "next";
+import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const t = getDictionary(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return {
     title: t.downloads.pageTitle,
     description: t.downloads.metaDescription,
@@ -27,8 +29,9 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     },
   };
 }
-export default function Page({ params }: { params: { lang: string } }) {
-  const t = getDictionary(params.lang);
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return (
     <div className={styles.content}>
       <h1>{t.downloads.pageTitle}</h1>
@@ -42,13 +45,13 @@ export default function Page({ params }: { params: { lang: string } }) {
               </td>
               <td>iOS / macOS</td>
               <td>
-                <a
+                <Link
                   className={styles.buttonLink}
                   href="https://apps.apple.com/us/app/upsignon/id1474805603?l=fr"
                   target="_blank"
                 >
                   App Store
-                </a>
+                </Link>
               </td>
             </tr>
             <tr>
@@ -57,13 +60,13 @@ export default function Page({ params }: { params: { lang: string } }) {
               </td>
               <td>Android / ChromeOS</td>
               <td>
-                <a
+                <Link
                   className={styles.buttonLink}
                   href="https://play.google.com/store/apps/details?id=eu.upsignon&hl=fr&gl=US"
                   target="_blank"
                 >
                   Google Play
-                </a>
+                </Link>
               </td>
             </tr>
             <tr>
@@ -72,14 +75,14 @@ export default function Page({ params }: { params: { lang: string } }) {
               </td>
               <td>Windows</td>
               <td>
-                <a
+                <Link
                   className={styles.buttonLink}
                   href="https://www.microsoft.com/fr-fr/p/upsignon/9n811tstg52w"
                   target="_blank"
                 >
                   Microsoft Store
-                </a>
-                <a href="/downloads/windows">{t.downloads.windowsOtherOptions}</a>
+                </Link>
+                <Link href="/downloads/windows">{t.downloads.windowsOtherOptions}</Link>
               </td>
             </tr>
             <tr>
@@ -88,10 +91,10 @@ export default function Page({ params }: { params: { lang: string } }) {
               </td>
               <td>Linux</td>
               <td>
-                <a className={styles.buttonLink} href="https://snapcraft.io/upsignon" download>
+                <Link className={styles.buttonLink} href="https://snapcraft.io/upsignon" download>
                   Snap
-                </a>
-                <a href="/downloads/linux">{t.downloads.linuxOtherOptions}</a>
+                </Link>
+                <Link href="/downloads/linux">{t.downloads.linuxOtherOptions}</Link>
               </td>
             </tr>
           </tbody>
@@ -107,13 +110,13 @@ export default function Page({ params }: { params: { lang: string } }) {
               </td>
               <td>Mozilla Firefox</td>
               <td>
-                <a
+                <Link
                   className={styles.buttonLink}
                   href="https://addons.mozilla.org/af/firefox/addon/upsignon/"
                   target="_blank"
                 >
                   Firefox Add-Ons
-                </a>
+                </Link>
               </td>
             </tr>
             <tr>
@@ -129,13 +132,13 @@ export default function Page({ params }: { params: { lang: string } }) {
                 </div>
               </td>
               <td>
-                <a
+                <Link
                   className={styles.buttonLink}
                   href="https://chromewebstore.google.com/detail/upsignon/ikddeecpbbbnfmnkldhnhjlljddnjbon"
                   target="_blank"
                 >
                   Chrome Web Store
-                </a>
+                </Link>
               </td>
             </tr>
             <tr>
@@ -144,13 +147,13 @@ export default function Page({ params }: { params: { lang: string } }) {
               </td>
               <td>Microsoft Edge</td>
               <td>
-                <a
+                <Link
                   className={styles.buttonLink}
                   href="https://microsoftedge.microsoft.com/addons/detail/upsignon/jhglfkcppgkgenonjpoopfbobcdlffgg"
                   target="_blank"
                 >
                   Microsoft Edge
-                </a>
+                </Link>
               </td>
             </tr>
             <tr>
@@ -162,12 +165,12 @@ export default function Page({ params }: { params: { lang: string } }) {
             </tr>
             <tr>
               <td colSpan={3}>
-                <a
+                <Link
                   href="https://github.com/UpSignOn/UpSignOn-pro-server/blob/production/doc/GPO_deployment.md"
                   target="_blank"
                 >
                   {t.downloads.extensionGPO}
-                </a>
+                </Link>
               </td>
             </tr>
           </tbody>

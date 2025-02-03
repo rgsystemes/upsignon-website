@@ -2,12 +2,19 @@ import { getDictionary } from "../../../../translations/translations";
 import styles from "./layout.module.css";
 import { TabsNav } from "./tabsNav";
 
-export default function Page({ children, params }: { children: React.ReactNode; params: { lang: string } }) {
-  const t = getDictionary(params.lang);
+export default async function Page({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return (
     <div className={styles.content}>
       <h1>{t.resources.releaseNotes}</h1>
-      <TabsNav lang={params.lang} />
+      <TabsNav lang={lang} />
       {children}
     </div>
   );

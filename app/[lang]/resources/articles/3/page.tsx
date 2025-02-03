@@ -15,9 +15,11 @@ import checkTickSVG from "../../../../../public/articles/tick.svg";
 import forUsersImg from "../../../../../public/articles/for-users.png";
 import forAdminImg from "../../../../../public/articles/responsable.png";
 import { Metadata } from "next";
+import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const t = getDictionary(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return {
     title: t.articles[3].title,
     description: t.articles[3].metaDescription,
@@ -30,19 +32,20 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     },
   };
 }
-export default function Article3({ params }: { params: { lang: string } }) {
-  const t = getDictionary(params.lang);
+export default async function Article3({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return (
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/resources/articles">{t.resources.articles}</a>
+        <Link href="/resources/articles">{t.resources.articles}</Link>
       </div>
-      <article className={styles.article}>{params.lang === "fr" ? <FRArticle /> : <ENArticle />}</article>
+      <article className={styles.article}>{lang === "fr" ? <FRArticle /> : <ENArticle />}</article>
       <div style={{ backgroundColor: "white", padding: 10 }}>
         <div className={styles.backArrow}>
           <span>&lt;  </span>
-          <a href="/resources/articles">{t.resources.articles}</a>
+          <Link href="/resources/articles">{t.resources.articles}</Link>
         </div>
       </div>
     </div>

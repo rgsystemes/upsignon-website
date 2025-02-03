@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../../page.module.css";
+import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
   const template = {
     alternates: {
       canonical: "https://upsignon.eu/fr/resources/tech-articles/pro-vs-perso",
@@ -12,7 +14,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
       },
     },
   };
-  if (params.lang === "fr") {
+  if (lang === "fr") {
     return {
       title: "Principes de fonctionnement des coffres-forts PERSO et PRO",
       description:
@@ -29,18 +31,19 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   }
 }
 
-export default function ProVsPerso({ params }: { params: { lang: string } }) {
-  const t = getDictionary(params.lang);
+export default async function ProVsPerso({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return (
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/resources/tech-articles">{t.resources.technicalExplanations}</a>
+        <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
       </div>
-      {params.lang === "fr" ? <FRArticle /> : <ENArticle />}
+      {lang === "fr" ? <FRArticle /> : <ENArticle />}
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/resources/tech-articles">{t.resources.technicalExplanations}</a>
+        <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
       </div>
     </div>
   );
@@ -59,7 +62,7 @@ function FRArticle() {
       <p>
         <em>
           Vous retrouverez le détail des algorithmes cryptographiques utilisés{" "}
-          <a href="#cryptoAlgo">à la fin de cette page.</a>
+          <Link href="#cryptoAlgo">à la fin de cette page.</Link>
         </em>
       </p>
       <h2>Principe de fonctionnement des coffres-forts PERSO</h2>
@@ -322,17 +325,17 @@ function FRArticle() {
       <h2 id="cryptoAlgo">Détails des algorithmes cryptographiques utilisés</h2>
       <p>
         Librairie utilisée :{" "}
-        <a className={styles.link} target="_blank" href="https://doc.libsodium.org/">
+        <Link className={styles.link} target="_blank" href="https://doc.libsodium.org/">
           libsodium
-        </a>
+        </Link>
       </p>
       <ul>
         <li>
           <strong>Dérivation de mot de passe :</strong>{" "}
           <mark>
-            <a target="_blank" href="https://libsodium.gitbook.io/doc/password_hashing/default_phf#key-derivation">
+            <Link target="_blank" href="https://libsodium.gitbook.io/doc/password_hashing/default_phf#key-derivation">
               Argon2ID
-            </a>
+            </Link>
           </mark>
           <ul>
             <li>dérivation des mot de passe maître PRO et PERSO</li>
@@ -340,9 +343,9 @@ function FRArticle() {
         </li>
         <li>
           <strong>Chiffrement symétrique authentifié :</strong>{" "}
-          <a target="_blank" href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox">
+          <Link target="_blank" href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox">
             secret box de libsodium
-          </a>{" "}
+          </Link>{" "}
           (<mark>XSalsa20 + Poly1305 MAC</mark>)
           <ul>
             <li>chiffrement des coffres-forts PRO et PERSO après dérivation du mot de passe maître</li>
@@ -355,9 +358,9 @@ function FRArticle() {
         </li>
         <li>
           <strong>Chiffrement asymétrique :</strong>{" "}
-          <a target="_blank" href="https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes">
+          <Link target="_blank" href="https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes">
             sealed box de libsodium
-          </a>{" "}
+          </Link>{" "}
           (<mark>X25519 + XSalsa20-Poly1305</mark>)
           <ul>
             <li>chiffrement des clés secrètes de coffres-forts partagés PRO</li>
@@ -367,12 +370,12 @@ function FRArticle() {
         <li>
           <strong>Signature :</strong>{" "}
           <mark>
-            <a
+            <Link
               target="_blank"
               href="https://libsodium.gitbook.io/doc/public-key_cryptography/public-key_signatures#algorithm-details"
             >
               Ed25519
-            </a>
+            </Link>
           </mark>
           <ul>
             <li>authentification forte d’appareil PRO</li>
@@ -381,9 +384,9 @@ function FRArticle() {
         <li>
           <strong>Authentification de challenges :</strong>{" "}
           <mark>
-            <a target="_blank" href="https://libsodium.gitbook.io/doc/advanced/hmac-sha2#hmac-sha-512-256">
+            <Link target="_blank" href="https://libsodium.gitbook.io/doc/advanced/hmac-sha2#hmac-sha-512-256">
               HMAC-SHA-256
-            </a>
+            </Link>
           </mark>
           <ul>
             <li>
@@ -410,7 +413,7 @@ function ENArticle() {
       <p>
         <em>
           You will find the details of the cryptographic algorithms used{" "}
-          <a href="#cryptoAlgo">at the end of this page.</a>
+          <Link href="#cryptoAlgo">at the end of this page.</Link>
         </em>
       </p>
       <h2>Operating principles of PERSO vaults</h2>
@@ -641,17 +644,17 @@ function ENArticle() {
       <h2 id="cryptoAlgo">Details of the cryptographic algorithms used</h2>
       <p>
         Library used:{" "}
-        <a className={styles.link} target="_blank" href="https://doc.libsodium.org/">
+        <Link className={styles.link} target="_blank" href="https://doc.libsodium.org/">
           libsodium
-        </a>
+        </Link>
       </p>
       <ul>
         <li>
           <strong>Password derivation:</strong>{" "}
           <mark>
-            <a target="_blank" href="https://libsodium.gitbook.io/doc/password_hashing/default_phf#key-derivation">
+            <Link target="_blank" href="https://libsodium.gitbook.io/doc/password_hashing/default_phf#key-derivation">
               ARGON2ID
-            </a>
+            </Link>
           </mark>
           <ul>
             <li>derivation of PRO and PERSO master password</li>
@@ -659,9 +662,9 @@ function ENArticle() {
         </li>
         <li>
           <strong>Authenticated symmetric encryption:</strong>{" "}
-          <a target="_blank" href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox">
+          <Link target="_blank" href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox">
             libsodium secret box
-          </a>{" "}
+          </Link>{" "}
           (<mark>XSalsa20 + Poly1305 MAC</mark>)
           <ul>
             <li>encryption of PRO and PERSO vaults after derivation of the master password</li>
@@ -674,9 +677,9 @@ function ENArticle() {
         </li>
         <li>
           <strong>Asymmetric encryption:</strong>{" "}
-          <a target="_blank" href="https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes">
+          <Link target="_blank" href="https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes">
             libsodium sealed box
-          </a>{" "}
+          </Link>{" "}
           (<mark>X25519 + XSalsa20-Poly1305</mark>)
           <ul>
             <li>encryption of PRO shared vault secret keys</li>
@@ -686,12 +689,12 @@ function ENArticle() {
         <li>
           <strong>Signature:</strong>{" "}
           <mark>
-            <a
+            <Link
               target="_blank"
               href="https://libsodium.gitbook.io/doc/public-key_cryptography/public-key_signatures#algorithm-details"
             >
               Ed25519
-            </a>
+            </Link>
           </mark>
           <ul>
             <li>strong PRO device authentication</li>
@@ -700,9 +703,9 @@ function ENArticle() {
         <li>
           <strong>Challenge authentication:</strong>{" "}
           <mark>
-            <a target="_blank" href="https://libsodium.gitbook.io/doc/advanced/hmac-sha2#hmac-sha-512-256">
+            <Link target="_blank" href="https://libsodium.gitbook.io/doc/advanced/hmac-sha2#hmac-sha-512-256">
               HMAC-SHA-256
-            </a>
+            </Link>
           </mark>
           <ul>
             <li>

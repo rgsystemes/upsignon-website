@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import styles from "../page.module.css";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
   const template = {
     alternates: {
       canonical: "https://upsignon.eu/fr/resources/commitments",
@@ -11,7 +12,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
       },
     },
   };
-  if (params.lang === "fr") {
+  if (lang === "fr") {
     return {
       title: "Nos engagements contractuels",
       description:
@@ -30,8 +31,9 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   }
 }
 
-export default function Page({ params }: { params: { lang: string } }) {
-  return <>{params.lang === "fr" ? <FRCommitments /> : <ENCommitments />}</>;
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  return <>{lang === "fr" ? <FRCommitments /> : <ENCommitments />}</>;
 }
 
 function FRCommitments() {

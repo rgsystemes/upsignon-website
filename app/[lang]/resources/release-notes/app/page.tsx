@@ -2,9 +2,11 @@ import { Metadata } from "next";
 import styles from "../notes.module.css";
 import { getDictionary } from "../../../../../translations/translations";
 import { LinkToAnchor } from "../../../components/linkToAnchor/linkToAnchor";
+import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const t = getDictionary(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return {
     title: t.resources.releaseNotes,
     description: t.releaseNotes.metaDescription,
@@ -19,8 +21,9 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 }
 
-export default function AppNotes({ params }: { params: { lang: string } }) {
-  if (params.lang === "fr") {
+export default async function AppNotes({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  if (lang === "fr") {
     return <FRAppNotes />;
   } else {
     return <ENAppNotes />;
@@ -53,7 +56,7 @@ function FRAppNotes() {
       <ul>
         <li>
           Extension Safari 1.2.1 (cf les{" "}
-          <a href="https://upsignon.eu/fr/resources/release-notes/extension#1.2.1">notes de version dédiées</a>)
+          <Link href="https://upsignon.eu/fr/resources/release-notes/extension#1.2.1">notes de version dédiées</Link>)
         </li>
         <li>corrige un blocage de l'application après l'affichage de la popup de mise-à-jour.</li>
         <li>corrige la gestion de la réauthentification automatique des coffres-forts PRO en cours de session.</li>
@@ -145,7 +148,7 @@ function FRAppNotes() {
         </li>
         <li>
           Version 1.1.0 de l'application sur Safari (voir les{" "}
-          <a href="https://upsignon.eu/resources/release-notes/extension">notes associées</a>)
+          <Link href="https://upsignon.eu/resources/release-notes/extension">notes associées</Link>)
         </li>
         <li>Le bouton "Nous contacter" permet désormais également d'envoyer les logs anonymisés de l'application.</li>
       </ul>
@@ -533,7 +536,7 @@ function ENAppNotes() {
       <ul>
         <li>
           Safari extension 1.2.1 (see the{" "}
-          <a href="https://upsignon.eu/en/resources/release-notes/extension#1.2.1">dedicated release notes</a>)
+          <Link href="https://upsignon.eu/en/resources/release-notes/extension#1.2.1">dedicated release notes</Link>)
         </li>
         <li>fixes an application crash after the update popup is displayed</li>
         <li>fixes the automatic reauthentication of PRO vaults during a session</li>
@@ -611,7 +614,7 @@ function ENAppNotes() {
         <li>The app takes into account a new administrator parameter to prevent the display of the update popup.</li>
         <li>
           Version 1.1.0 of the Safari extension (see the{" "}
-          <a href="https://upsignon.eu/resources/release-notes/extension">associated notes</a>)
+          <Link href="https://upsignon.eu/resources/release-notes/extension">associated notes</Link>)
         </li>
         <li>The "Contact us" button now also makes it possible to send anonymised app logs.</li>
       </ul>

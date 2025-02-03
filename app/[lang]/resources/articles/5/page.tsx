@@ -1,9 +1,11 @@
 import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../article.module.css";
+import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const t = getDictionary(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return {
     title: t.articles[5].title,
     description: t.articles[5].metaDescription,
@@ -16,24 +18,25 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     },
   };
 }
-export default function Article5({ params }: { params: { lang: string } }) {
-  const t = getDictionary(params.lang);
+export default async function Article5({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return (
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/resources/articles">{t.resources.articles}</a>
+        <Link href="/resources/articles">{t.resources.articles}</Link>
       </div>
       <article className={styles.article}>
         <h1>{t.articles[5].title}</h1>
         <p className={styles.articleSummary}>
           <strong>{t.articles[5].summary}</strong>
         </p>
-        {params.lang === "fr" ? <FRArticle /> : <ENArticle />}
+        {lang === "fr" ? <FRArticle /> : <ENArticle />}
       </article>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/resources/articles">{t.resources.articles}</a>
+        <Link href="/resources/articles">{t.resources.articles}</Link>
       </div>
     </div>
   );
@@ -100,12 +103,12 @@ function FRArticle() {
         Il ne faut pas confondre l’authentification forte avec l’authentification multifacteurs. La notion
         d’authentification forte correspond à un système souvent à base de cryptographie et qui répond à certains
         critères de sécurité bien précis{" "}
-        <a
+        <Link
           target="_blank"
           href="https://www.ssi.gouv.fr/uploads/2021/10/anssi-guide-authentification_multifacteur_et_mots_de_passe.pdf"
         >
           définis par l’ANSSI ainsi :
-        </a>
+        </Link>
       </p>
       <ul>
         <li>
@@ -223,12 +226,12 @@ function ENArticle() {
         Strong authentication should not be confused with multi-factor authentication. The concept of strong
         authentication corresponds to a system often based on cryptography and which meets certain very specific
         security criteria{" "}
-        <a
+        <Link
           target="_blank"
           href="https://www.ssi.gouv.fr/uploads/2021/10/anssi-guide-AUTH_multifacteur_et_mots_de_passe.pdf"
         >
           defined by ANSSI as follows:
-        </a>
+        </Link>
       </p>
       <ul>
         <li>

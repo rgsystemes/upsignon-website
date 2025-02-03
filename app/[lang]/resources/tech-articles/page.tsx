@@ -3,8 +3,9 @@ import { getDictionary } from "../../../../translations/translations";
 import styles from "../page.module.css";
 import { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const t = getDictionary(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return {
     title: t.resources.technicalExplanations,
     description: t.resources.technicalExplanationsMetaDesc,
@@ -18,8 +19,9 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 }
 
-export default function Page({ params }: { params: { lang: string } }) {
-  const t = getDictionary(params.lang);
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const t = getDictionary(lang);
 
   return (
     <div className={styles.article}>

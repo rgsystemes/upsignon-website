@@ -5,9 +5,11 @@ import { ContactLaterButton } from "../components/contactLaterButton/contactLate
 import { ContactUsButton } from "../components/contactUsButton/contactUsButton";
 import { getDictionary } from "../../../translations/translations";
 import { FreeTrialButton } from "../components/freeTrialButton/freeTrial";
+import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const t = getDictionary(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return {
     title: t.menu.pricing,
     description: t.pricing.metaDescription,
@@ -20,8 +22,9 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     },
   };
 }
-export default function Page({ params }: { params: { lang: string } }) {
-  const t = getDictionary(params.lang);
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return (
     <div className={styles.content}>
       <h1>{t.menu.pricing}</h1>
@@ -29,9 +32,9 @@ export default function Page({ params }: { params: { lang: string } }) {
         <div className={styles.persoPricing}>
           <h3 className={styles.pricingTitlePerso}>{t.pricing.persoPricing.t}</h3>
           <div className={styles.persoPrice}>{t.pricing.persoPricing.free}</div>
-          <a href="/downloads" className={styles.downloadAction}>
+          <Link href="/downloads" className={styles.downloadAction}>
             {t.pricing.persoPricing.downloadAction}
-          </a>
+          </Link>
           <div className={styles.pricingDetails}>{t.pricing.persoPricing.details}</div>
           <div>🙏🙏</div>
         </div>
@@ -44,13 +47,13 @@ export default function Page({ params }: { params: { lang: string } }) {
           <div className={styles.priceDetail}>{t.pricing.proPricing.licenceOver12000}</div>
           <div className={styles.priceDetail}>{t.pricing.proPricing.licence3YearsReduction}</div>
           <div className={styles.selfHostingTitle}>{t.pricing.proPricing.onPremOption}</div>
-          <FreeTrialButton lang={params.lang} className={styles.proPricingActionButton} />
+          <FreeTrialButton lang={lang} className={styles.proPricingActionButton} />
 
           <div className={styles.pricingDetails}>{t.pricing.proPricing.saasDetails}</div>
           <div className={styles.pricingDetails}>{t.pricing.proPricing.onPremDetails}</div>
         </div>
       </div>
-      <PriceSimulator lang={params.lang} />
+      <PriceSimulator lang={lang} />
       <h1>{t.pricing.distribTitle}</h1>
       <p className={styles.distribDetails}>{t.pricing.distribDetails}</p>
     </div>

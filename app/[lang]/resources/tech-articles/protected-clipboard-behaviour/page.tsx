@@ -1,9 +1,11 @@
 import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../../page.module.css";
+import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const t = getDictionary(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return {
     title: t.techResources.protectedClipboardBehaviour.title,
     description: t.techResources.protectedClipboardBehaviour.metaDescription,
@@ -17,13 +19,14 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 }
 
-export default function ProtectedClipboardBehaviour({ params }: { params: { lang: string } }) {
-  const t = getDictionary(params.lang);
+export default async function ProtectedClipboardBehaviour({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return (
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/resources/tech-articles">{t.resources.technicalExplanations}</a>
+        <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
       </div>
       <article className={styles.article}>
         <h1>{t.techResources.protectedClipboardBehaviour.title}</h1>
@@ -42,7 +45,7 @@ export default function ProtectedClipboardBehaviour({ params }: { params: { lang
       </article>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/resources/tech-articles">{t.resources.technicalExplanations}</a>
+        <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
       </div>
     </div>
   );

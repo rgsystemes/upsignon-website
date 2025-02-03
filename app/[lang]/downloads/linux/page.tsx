@@ -3,12 +3,14 @@ import { linuxVersions } from "../../resources/release-notes/app/versionList";
 import styles from "./page.module.css";
 import { CodeBlock } from "../../components/codeBlock/codeBlock";
 import { LinkToAnchor } from "../../components/linkToAnchor/linkToAnchor";
+import Link from "next/link";
 
 const anchors = {
   installInstructions: "install",
 };
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
   const template = {
     alternates: {
       canonical: "https://upsignon.eu/fr/downloads/linux",
@@ -18,7 +20,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
       },
     },
   };
-  if (params.lang === "fr") {
+  if (lang === "fr") {
     return {
       title: "Téléchargements - Linux",
       description: "Tous les liens et informations utiles pour télécharger et installer UpSignOn sur Linux.",
@@ -33,8 +35,9 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   }
 }
 
-export default function LinuxOtherDownloads({ params }: { params: { lang: string } }) {
-  if (params.lang === "fr") {
+export default async function LinuxOtherDownloads({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  if (lang === "fr") {
     return FRLinuxOtherDownloads();
   } else {
     return ENLinuxOtherDownloads();
@@ -50,16 +53,16 @@ function FRLinuxOtherDownloads() {
     <section className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/downloads">Téléchargements</a>
+        <Link href="/downloads">Téléchargements</Link>
       </div>
       <h1>Téléchargements Linux et informations</h1>
       <h2>Installation via snapcraft</h2>
       <ul>
         <li>
           Installer snapd (cf instructions spécifiques à votre OS sur{" "}
-          <a href="https://snapcraft.io/upsignon" target="_blank">
+          <Link href="https://snapcraft.io/upsignon" target="_blank">
             https://snapcraft.io/upsignon
-          </a>
+          </Link>
           )
         </li>
         <li>
@@ -76,9 +79,9 @@ function FRLinuxOtherDownloads() {
         <ul className={styles.ul}>
           {linuxVersions.map((v) => (
             <li key={v}>
-              <a href={`https://app.upsignon.eu/downloads/linux/UpSignOn-${v}-x86_64.AppImage`} download>
+              <Link href={`https://app.upsignon.eu/downloads/linux/UpSignOn-${v}-x86_64.AppImage`} download>
                 {v}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -89,9 +92,9 @@ function FRLinuxOtherDownloads() {
         <strong>Installation automatique avec AppImageLauncher</strong>
         <p>
           Nous recommandons de suivre les explications de la page{" "}
-          <a href="https://doc.ubuntu-fr.org/appimage#installer_un_appimage" target="_blank">
+          <Link href="https://doc.ubuntu-fr.org/appimage#installer_un_appimage" target="_blank">
             https://doc.ubuntu-fr.org/appimage#installer_un_appimage
-          </a>{" "}
+          </Link>{" "}
           et d’utiliser AppImageLauncher pour installer l’application.
         </p>
         <strong>Installation manuelle</strong>
@@ -138,16 +141,16 @@ function ENLinuxOtherDownloads() {
     <section className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/downloads">Downloads</a>
+        <Link href="/downloads">Downloads</Link>
       </div>
       <h1>Linux downloads and information</h1>
       <h2>Installation via snapcraft</h2>
       <ul>
         <li>
           Install snapd (see specific instructions for your OS at{" "}
-          <a href="https://snapcraft.io/upsignon" target="_blank">
+          <Link href="https://snapcraft.io/upsignon" target="_blank">
             https://snapcraft.io/upsignon
-          </a>
+          </Link>
           )
         </li>
         <li>
@@ -165,9 +168,9 @@ function ENLinuxOtherDownloads() {
         <ul className={styles.ul}>
           {linuxVersions.map((v) => (
             <li key={v}>
-              <a href={`https://app.upsignon.eu/downloads/linux/UpSignOn-${v}-x86_64.AppImage`} download>
+              <Link href={`https://app.upsignon.eu/downloads/linux/UpSignOn-${v}-x86_64.AppImage`} download>
                 {v}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -178,9 +181,9 @@ function ENLinuxOtherDownloads() {
         <strong>Automatic installation with AppImageLauncher</strong>
         <p>
           We recommend to follow the explanations on the page{" "}
-          <a href="https://doc.ubuntu-fr.org/appimage#installer_un_appimage" target="_blank">
+          <Link href="https://doc.ubuntu-fr.org/appimage#installer_un_appimage" target="_blank">
             https://doc.ubuntu-fr.org/appimage#installer_un_appimage
-          </a>{" "}
+          </Link>{" "}
           and to use AppImageLauncher to install the app.
         </p>
         <strong>Manual installation </strong>

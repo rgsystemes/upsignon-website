@@ -1,9 +1,11 @@
+import Link from "next/link";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../article.module.css";
 import { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const t = getDictionary(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return {
     title: t.articles[9].title,
     description: t.articles[9].metaDescription,
@@ -16,24 +18,25 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     },
   };
 }
-export default function Article9({ params }: { params: { lang: string } }) {
-  const t = getDictionary(params.lang);
+export default async function Article9({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return (
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/resources/articles">{t.resources.articles}</a>
+        <Link href="/resources/articles">{t.resources.articles}</Link>
       </div>
       <article className={styles.article}>
         <h1>{t.articles[9].title}</h1>
         <p className={styles.articleSummary}>
           <strong>{t.articles[9].summary}</strong>
         </p>
-        {params.lang === "fr" ? <FRArticle /> : <ENArticle />}
+        {lang === "fr" ? <FRArticle /> : <ENArticle />}
       </article>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <a href="/resources/articles">{t.resources.articles}</a>
+        <Link href="/resources/articles">{t.resources.articles}</Link>
       </div>
     </div>
   );
@@ -86,8 +89,8 @@ function FRArticle() {
       </p>
       <p>
         Comme nous l’expliquons dans notre article{" "}
-        <a href="/resources/articles/1">“Qu’est-ce qu’un mot de passe fort ?“</a>, la force d’un mot de passe dépend
-        avant tout de sa longueur.
+        <Link href="/resources/articles/1">“Qu’est-ce qu’un mot de passe fort ?“</Link>, la force d’un mot de passe
+        dépend avant tout de sa longueur.
       </p>
       <p>
         <strong>
@@ -275,8 +278,8 @@ function ENArticle() {
         become ’@’ and ’s’ will become ’$’.
       </p>
       <p>
-        As we explain in our article <a href="/resources/articles/1">“What is a strong password?“</a>, the strength of a
-        password depends primarily on its length.
+        As we explain in our article <Link href="/resources/articles/1">“What is a strong password?“</Link>, the
+        strength of a password depends primarily on its length.
       </p>
       <p>
         <strong>

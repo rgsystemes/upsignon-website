@@ -13,9 +13,11 @@ import pwdMini from "../../../../public/articles/pwdMini.jpeg";
 import passwordManagerImg from "../../../../public/articles/passwordManager.png";
 import { getDictionary } from "../../../../translations/translations";
 import { Metadata } from "next";
+import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const t = getDictionary(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return {
     title: t.resources.articles,
     description: t.articles.metaDescription,
@@ -29,78 +31,79 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 }
 
-export default function ArticlesPage({ params }: { params: { lang: string } }) {
-  const t = getDictionary(params.lang);
+export default async function ArticlesPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return (
     <section className={styles.content}>
       <h1>{t.resources.articles}</h1>
       <div className={styles.gridList}>
         <Article
           link="/resources/articles/1"
-          lang={params.lang}
+          lang={lang}
           image={strongPwdMini}
           title={t.articles[1].title}
           summary={t.articles[1].summary}
         />
         <Article
           link="/resources/articles/2"
-          lang={params.lang}
+          lang={lang}
           image={samePwdMini}
           title={t.articles[2].title}
           summary={t.articles[2].summary}
         />
         <Article
           link="/resources/articles/3"
-          lang={params.lang}
+          lang={lang}
           image={passwordManagerImg}
           title={t.articles[3].title}
           summary={t.articles[3].summary}
         />
         <Article
           link="/resources/articles/4"
-          lang={params.lang}
+          lang={lang}
           image={securityModelsMini}
           title={t.articles[4].title}
           summary={t.articles[4].summary}
         />
         <Article
           link="/resources/articles/5"
-          lang={params.lang}
+          lang={lang}
           image={authenticationMini}
           title={t.articles[5].title}
           summary={t.articles[5].summary}
         />
         <Article
           link="/resources/articles/6"
-          lang={params.lang}
+          lang={lang}
           image={unsecureWebsitesMini}
           title={t.articles[6].title}
           summary={t.articles[6].summary}
         />
         <Article
           link="/resources/articles/7"
-          lang={params.lang}
+          lang={lang}
           image={privacyMini}
           title={t.articles[7].title}
           summary={t.articles[7].summary}
         />
         <Article
           link="/resources/articles/8"
-          lang={params.lang}
+          lang={lang}
           image={navVSPwdManagersMini}
           title={t.articles[8].title}
           summary={t.articles[8].summary}
         />
         <Article
           link="/resources/articles/9"
-          lang={params.lang}
+          lang={lang}
           image={pwdFormsMini}
           title={t.articles[9].title}
           summary={t.articles[9].summary}
         />
         <Article
           link="/resources/articles/10"
-          lang={params.lang}
+          lang={lang}
           image={pwdMini}
           title={t.articles[10].title}
           summary={t.articles[10].summary}
@@ -113,13 +116,13 @@ export default function ArticlesPage({ params }: { params: { lang: string } }) {
 function Article(p: { image: StaticImageData; title: string; summary: string; lang: string; link: string }) {
   const t = getDictionary(p.lang);
   return (
-    <a className={styles.articleLink} href={p.link}>
+    <Link className={styles.articleLink} href={p.link}>
       <div className={styles.miniature}>
         <Image src={p.image} alt="" />
       </div>
       <h2>{p.title}</h2>
       <p>{p.summary}</p>
       <p className={styles.readButton}>{`${t.articles.readArticle} »`}</p>
-    </a>
+    </Link>
   );
 }

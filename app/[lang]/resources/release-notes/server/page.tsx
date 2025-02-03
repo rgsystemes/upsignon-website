@@ -3,8 +3,9 @@ import { getDictionary } from "../../../../../translations/translations";
 import styles from "../notes.module.css";
 import { LinkToAnchor } from "../../../components/linkToAnchor/linkToAnchor";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const t = getDictionary(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return {
     title: t.resources.releaseNotes,
     description: t.releaseNotes.metaDescription,
@@ -19,8 +20,9 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 }
 
-export default function ServerNotes({ params }: { params: { lang: string } }) {
-  if (params.lang === "fr") {
+export default async function ServerNotes({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  if (lang === "fr") {
     return <FRServerNotes />;
   } else {
     return <ENServerNotes />;
