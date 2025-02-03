@@ -26,9 +26,16 @@ export async function generateStaticParams() {
   return getTranslationStaticParams();
 }
 
-export default function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: string } }) {
+export default async function RootLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
   return (
-    <html lang={params.lang} className={fontClass.className}>
+    <html lang={lang} className={fontClass.className}>
       <head>
         <link rel="shortcut icon" href={favicon.src} />
         <link rel="icon" type="image/png" sizes="16x16" href={favicon16.src} />
@@ -38,10 +45,10 @@ export default function RootLayout({ children, params }: { children: React.React
         <link rel="mask-icon" href={safariPinnedTab.src} color="#00aba8" />
         <meta name="google-site-verification" content="yNxeZNw0jlQy8ywG1nUXNCi1zgL61n9KqWv3kb4zmEE" />
       </head>
-      <AnchorScrollWithFixedHeaderBody fixedComponent={<NavBar lang={params.lang} />}>
+      <AnchorScrollWithFixedHeaderBody fixedComponent={<NavBar lang={lang} />}>
         <ToastContainer />
         <main>{children}</main>
-        <Footer lang={params.lang} />
+        <Footer lang={lang} />
         <Analytics />
       </AnchorScrollWithFixedHeaderBody>
       <GoogleAnalytics gaId="G-2CQXP4PHH2" />

@@ -18,8 +18,9 @@ import { GreenCheckIcon } from "./components/greenCheckIcon/greenCheckIcon";
 import { LanguageFlags } from "./components/languageFlags/languageFlags";
 import { FreeTrialButton } from "./components/freeTrialButton/freeTrial";
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const t = getDictionary(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return {
     title: t.pitch.moto,
     description: t.pitch.metaDescription,
@@ -33,8 +34,9 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 }
 
-export default function Page({ params }: { params: { lang: string } }) {
-  const t = getDictionary(params.lang);
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const t = getDictionary(lang);
   return (
     <div>
       <div className={styles.blueBackground}>
@@ -74,9 +76,9 @@ export default function Page({ params }: { params: { lang: string } }) {
           </div>
         </section>
         <div className={styles.actionContainer}>
-          <ContactUsButton lang={params.lang} className={styles.actionLinkOnBlue} />
-          <ContactLaterButton lang={params.lang} className={styles.actionLinkOnBlue} />
-          <FreeTrialButton lang={params.lang} className={styles.actionLinkOnBlue} />
+          <ContactUsButton lang={lang} className={styles.actionLinkOnBlue} />
+          <ContactLaterButton lang={lang} className={styles.actionLinkOnBlue} />
+          <FreeTrialButton lang={lang} className={styles.actionLinkOnBlue} />
         </div>
       </div>
       <section className={styles.keyMetricsSection}>
@@ -106,7 +108,7 @@ export default function Page({ params }: { params: { lang: string } }) {
           <SingleAdvantage title={t.pitch.advantages[5].t} details={t.pitch.advantages[5].d} />
           <SingleAdvantage title={t.pitch.advantages[6].t} details={t.pitch.advantages[6].d} />
           <SingleAdvantage title={t.pitch.advantages[7].t} details={t.pitch.advantages[7].d}>
-            <LanguageFlags lang={params.lang} />
+            <LanguageFlags lang={lang} />
           </SingleAdvantage>
         </div>
       </section>
@@ -126,8 +128,8 @@ export default function Page({ params }: { params: { lang: string } }) {
           <p>{t.pitch.proVsPerso.pro.p2}</p>
           <div className={styles.actionContainer}>
             <div className={styles.actionContainer}>
-              <ContactUsButton lang={params.lang} className={styles.actionLinkOnWhite} />
-              <ContactLaterButton lang={params.lang} className={styles.actionLinkOnWhite} />
+              <ContactUsButton lang={lang} className={styles.actionLinkOnWhite} />
+              <ContactLaterButton lang={lang} className={styles.actionLinkOnWhite} />
             </div>
           </div>
         </div>
