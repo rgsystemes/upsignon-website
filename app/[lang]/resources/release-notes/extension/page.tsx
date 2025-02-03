@@ -30,6 +30,15 @@ export default function ExtensionNotes({ params }: { params: { lang: string } })
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.2.2 */}
+      <h2>
+        <LinkToAnchor id="1.2.2">1.2.2</LinkToAnchor>
+      </h2>
+      <em>Publiée le 03/02/2025</em>
+      <ul>
+        <li>Corrige un problème de redimensionnement de la bulle au clic sur les onglets.</li>
+        <li>Corrige la copie des codes TOTP.</li>
+      </ul>
       {/* 1.2.1 */}
       <h2>
         <LinkToAnchor id="1.2.1">1.2.1</LinkToAnchor>
@@ -171,6 +180,15 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.2.2 */}
+      <h2>
+        <LinkToAnchor id="1.2.2">1.2.2</LinkToAnchor>
+      </h2>
+      <em>Published on 03/02/2025</em>
+      <ul>
+        <li>Fixes a bubble resizing issue when clicking on tabs.</li>
+        <li>Fixes copying TOTP codes.</li>
+      </ul>
       {/* 1.2.1 */}
       <h2>
         <LinkToAnchor id="1.2.1">1.2.1</LinkToAnchor>
