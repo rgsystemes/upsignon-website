@@ -54,19 +54,19 @@ export function Footer(p: { lang: string }) {
       <div className={styles.footerSections}>
         <details className={styles.footerLegalNotice}>
           <summary>{t.footer.legalNotice}</summary>
-          <span>
+          <div>
             <span className={styles.subsectionTitle}>SAS UPSIGNON </span>au capital de 11 834€
-          </span>
-          <span>121 rue Achille Viadieu, 31400 Toulouse, France</span>
-          <span>RCS Toulouse 849 484 290</span>
-          <span>
+          </div>
+          <div>121 rue Achille Viadieu, 31400 Toulouse, France</div>
+          <div>RCS Toulouse 849 484 290</div>
+          <div>
             <span className={styles.subsectionTitle}>{t.footer.publisher}</span>: Gireg de Kerdanet
-          </span>
-          <span>
+          </div>
+          <div>
             <span className={styles.subsectionTitle}>{t.footer.hostedBy} </span>Vercel Inc.
-          </span>
-          <span>340 S Lemon Ave #4133, Walnut, CA 91789, USA</span>
-          <span>(559) 288-7060</span>
+          </div>
+          <div>340 S Lemon Ave #4133, Walnut, CA 91789, USA</div>
+          <div>(559) 288-7060</div>
         </details>
       </div>
       <div className={styles.copyright}>
