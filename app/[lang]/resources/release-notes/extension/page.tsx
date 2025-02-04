@@ -32,6 +32,14 @@ export default async function ExtensionNotes({ params }: { params: Promise<{ lan
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.2.3 */}
+      <h2>
+        <LinkToAnchor id="1.2.3">1.2.3</LinkToAnchor>
+      </h2>
+      <em>Publiée le 04/02/2025</em>
+      <ul>
+        <li>Corrige un problème de redimensionnement de la bulle au clic (nouveaux cas).</li>
+      </ul>
       {/* 1.2.2 */}
       <h2>
         <LinkToAnchor id="1.2.2">1.2.2</LinkToAnchor>
@@ -182,6 +190,14 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.2.3 */}
+      <h2>
+        <LinkToAnchor id="1.2.3">1.2.3</LinkToAnchor>
+      </h2>
+      <em>Published on 04/02/2025</em>
+      <ul>
+        <li>Fixes a bubble resizing issue on click (new cases).</li>
+      </ul>
       {/* 1.2.2 */}
       <h2>
         <LinkToAnchor id="1.2.2">1.2.2</LinkToAnchor>
