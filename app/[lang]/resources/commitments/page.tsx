@@ -229,11 +229,6 @@ function FRCommitments() {
         <li>Assurance Responsabilité Civile Professionnelle et Cyber : 100 000€ par an</li>
         <li>Assurance Responsabilité Civile d’Exploitation : 8 000 000€ par sinistre</li>
       </ul>
-      <h2>Pérennité de la solution</h2>
-      <p>
-        Si l’entreprise UpSignOn devait un jour être liquidée, le code de l’application serait rendu open source sur
-        Github afin de permettre sa maintenance par la communauté.
-      </p>
     </article>
   );
 }
@@ -428,11 +423,6 @@ function ENCommitments() {
         <li>Professional Civil Liability and Cyber Insurance: €100,000 per year</li>
         <li>Operating Civil Liability Insurance: €8,000,000 per claim</li>
       </ul>
-      <h2>Sustainability of the solution</h2>
-      <p>
-        If the UpSignOn company were to be liquidated some day, the application code would be made open source on Github
-        to allow its maintenance by the community.
-      </p>
     </article>
   );
 }
