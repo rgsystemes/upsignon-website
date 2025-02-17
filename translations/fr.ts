@@ -383,12 +383,16 @@ const translations = {
         "Dans la page de gestion des destinataires d'un coffre-fort partagé, vous pouvez attribuer plusieurs niveaux de droits aux destinataires de votre partage :",
       ],
       rightLevels: {
+        blind: {
+          title: "Lecture aveugle : (PRO uniquement)",
+          def: "le destinataire peut utiliser le mot de passe via remplissage automatique mais ne peut ni l'afficher ni le copier.",
+        },
         readOnly: {
           title: "Lecture seule :",
           def: "le destinataire ne peut rien modifier dans l'élément partagé.",
         },
         editor: {
-          title: "Éditeur :",
+          title: "Éditeur : (PRO uniquement)",
           def: "le destinataire peut modifier le contenu de l'élément partagé.",
         },
         owner: {

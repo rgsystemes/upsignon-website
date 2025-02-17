@@ -384,12 +384,16 @@ const translations: typeof fr = {
         "In the recipients management page of a shared vault, you can grant several levels of access to the recipients of your shared element:",
       ],
       rightLevels: {
+        blind: {
+          title: "Blind reading: (PRO only)",
+          def: "the recipient can use the password via autofill but cannot show it or copy it.",
+        },
         readOnly: {
           title: "Read only:",
           def: "the recipient can not change anything in the shared element.",
         },
         editor: {
-          title: "Editor:",
+          title: "Editor: (PRO only)",
           def: "the recipient can change the content of the shared element.",
         },
         owner: {

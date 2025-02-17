@@ -277,13 +277,17 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         >
           <ul>
             <li>
+              <strong>{t.features.rightsManagement.rightLevels.blind.title}</strong>{" "}
+              {t.features.rightsManagement.rightLevels.blind.def}
+            </li>
+            <li>
               <strong>{t.features.rightsManagement.rightLevels.readOnly.title}</strong>{" "}
               {t.features.rightsManagement.rightLevels.readOnly.def}
             </li>
-            {/* <li>
-            <strong>{t.features.rightsManagement.rightLevels.editor.title}</strong>{" "}
-            {t.features.rightsManagement.rightLevels.editor.def}
-          </li> */}
+            <li>
+              <strong>{t.features.rightsManagement.rightLevels.editor.title}</strong>{" "}
+              {t.features.rightsManagement.rightLevels.editor.def}
+            </li>
             <li>
               <strong>{t.features.rightsManagement.rightLevels.owner.title}</strong>{" "}
               {t.features.rightsManagement.rightLevels.owner.def}
