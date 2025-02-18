@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../notes.module.css";
 import { LinkToAnchor } from "../../../components/linkToAnchor/linkToAnchor";
+import Link from "next/link";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -41,7 +42,7 @@ function FRDashboardNotes() {
         <li>Ajout de paramètres pour contrôler les durées de verrouillage automatique maximale et par défaut.</li>
         <li>
           Ajout de 2 niveaux d'accès supplémentaires aux coffres-forts partagés - éditeur et aveugle. Voir les notes de
-          version de la <a href="/fr/resources/release-notes/app#7.11.0">version 7.11.0 de l'application</a>.
+          version de la <Link href="/fr/resources/release-notes/app#7.11.0">version 7.11.0 de l'application</Link>.
         </li>
         <li>Amélioration de la documentation et les tests de la configuration de Microsoft Entra.</li>
       </ul>
@@ -267,7 +268,7 @@ function ENDashboardNotes() {
         <li>Adds parameters to control the maximum and default autolock durations.</li>
         <li>
           Adds 2 levels of access to shared vaults - editor and blind. See release notes for{" "}
-          <a href="/en/resources/release-notes/app#7.11.0">version 7.11.0 of the application</a>.
+          <Link href="/en/resources/release-notes/app#7.11.0">version 7.11.0 of the application</Link>.
         </li>
         <li>Improves the documentation and tests for the configuration of Microsoft Entra.</li>
       </ul>

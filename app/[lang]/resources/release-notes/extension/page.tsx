@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../notes.module.css";
 import { LinkToAnchor } from "../../../components/linkToAnchor/linkToAnchor";
+import Link from "next/link";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -40,8 +41,8 @@ function FRExtensionNotes() {
       <ul>
         <li>
           Applique le nouveau modèle de niveaux d'accès des coffres-forts partagés (see{" "}
-          <a href="/fr/resources/release-notes/app#7.11.0">app v7.11.0</a>) et conserve la rétro-compatibilité avec les
-          anciennes versions de l'application.
+          <Link href="/fr/resources/release-notes/app#7.11.0">app v7.11.0</Link>) et conserve la rétro-compatibilité
+          avec les anciennes versions de l'application.
         </li>
       </ul>
       {/* 1.2.3 */}
@@ -210,8 +211,8 @@ function ENExtensionNotes() {
       <ul>
         <li>
           Applies the new shared vault access level model (see{" "}
-          <a href="/fr/resources/release-notes/app#7.11.0">app v7.11.0</a>) and keep backwards compatibility with older
-          app versions.
+          <Link href="/fr/resources/release-notes/app#7.11.0">app v7.11.0</Link>) and keep backwards compatibility with
+          older app versions.
         </li>
       </ul>
       {/* 1.2.3 */}
