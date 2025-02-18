@@ -32,6 +32,18 @@ export default async function ExtensionNotes({ params }: { params: Promise<{ lan
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.3.0 */}
+      <h2>
+        <LinkToAnchor id="1.3.0">1.3.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 18/02/2025</em>
+      <ul>
+        <li>
+          Applique le nouveau modèle de niveaux d'accès des coffres-forts partagés (see{" "}
+          <a href="/fr/resources/release-notes/app#7.11.0">app v7.11.0</a>) et conserve la rétro-compatibilité avec les
+          anciennes versions de l'application.
+        </li>
+      </ul>
       {/* 1.2.3 */}
       <h2>
         <LinkToAnchor id="1.2.3">1.2.3</LinkToAnchor>
@@ -190,6 +202,18 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.3.0 */}
+      <h2>
+        <LinkToAnchor id="1.3.0">1.3.0</LinkToAnchor>
+      </h2>
+      <em>Published on 18/02/2025</em>
+      <ul>
+        <li>
+          Applies the new shared vault access level model (see{" "}
+          <a href="/fr/resources/release-notes/app#7.11.0">app v7.11.0</a>) and keep backwards compatibility with older
+          app versions.
+        </li>
+      </ul>
       {/* 1.2.3 */}
       <h2>
         <LinkToAnchor id="1.2.3">1.2.3</LinkToAnchor>

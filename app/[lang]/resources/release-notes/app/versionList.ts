@@ -1,4 +1,5 @@
 export const allMsixBundleVersions = [
+  "7.11.0",
   "7.10.5",
   "7.10.3",
   "7.10.2",
@@ -13,6 +14,7 @@ export const allMsixBundleVersions = [
   "7.1.1",
 ];
 export const allMsiVersions = [
+  "7.11.0",
   "7.10.6",
   "7.10.5",
   "7.10.3",

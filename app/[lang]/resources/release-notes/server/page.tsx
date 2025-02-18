@@ -32,6 +32,18 @@ export default async function ServerNotes({ params }: { params: Promise<{ lang: 
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.5.0 */}
+      <h2>
+        <LinkToAnchor id="2.5.0">2.5.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 18/02/2025</em>
+      <ul>
+        <li>Ajout de paramètres pour contrôler les durées de verrouillage automatique maximale et par défaut.</li>
+        <li>
+          Ajout de 2 niveaux d'accès supplémentaires aux coffres-forts partagés - éditeur et aveugle. Voir les notes de
+          version de la <a href="/fr/resources/release-notes/app#7.11.0">version 7.11.0 de l'application</a>.
+        </li>
+      </ul>
       {/* 2.4.0 */}
       <h2>
         <LinkToAnchor id="2.4.0">2.4.0</LinkToAnchor>
@@ -201,6 +213,18 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.5.0 */}
+      <h2>
+        <LinkToAnchor id="2.5.0">2.5.0</LinkToAnchor>
+      </h2>
+      <em>Published on 18/02/2025</em>
+      <ul>
+        <li>Adds parameters to control the maximum and default autolock durations.</li>
+        <li>
+          Adds 2 levels of access to shared vaults - editor and blind. See release notes for{" "}
+          <a href="/en/resources/release-notes/app#7.11.0">version 7.11.0 of the application</a>.
+        </li>
+      </ul>
       {/* 2.4.0 */}
       <h2>
         <LinkToAnchor id="2.4.0">2.4.0</LinkToAnchor>

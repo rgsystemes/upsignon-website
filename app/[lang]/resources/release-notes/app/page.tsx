@@ -33,6 +33,34 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.11.0 */}
+      <h2>
+        <LinkToAnchor id="7.11.0">7.11.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 18/02/2025</em>
+      </p>
+      <ul>
+        <li>
+          PRO - Utilise un nouveau modèle de niveaux d'accès aux coffres-forts partagés en ajoutant les niveaux
+          "éditeur" et "aveugle" en plus des niveaux "propriétaire" et "lecteur" précédents.
+        </li>
+        <li>
+          PRO - Applique les valeurs maximum et par défaut du délai de verrouillage automatique définis par les
+          administrateurs depuis la console.
+        </li>
+        <li>
+          ajoute un champ de recherche dans la popup de sélection d'un dossier cible lors du placement ou du déplacement
+          d'un élément.
+        </li>
+        <li>ajoute une explication sur les raisons de la note de force d'un mot de passe.</li>
+        <li>corrige des bugs d'affichage et de navigation.</li>
+        <li>
+          Windows MSI - les packages msi proposent désormais une interface de mise-à-jour intégrée, sans ouverture du
+          site web.
+        </li>
+        <li>Linux - publication via snapcraft uniquement au lieu de AppImage.</li>
+      </ul>
       {/* 7.10.6 */}
       <h2>
         <LinkToAnchor id="7.10.6">7.10.6</LinkToAnchor>
@@ -516,6 +544,28 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.11.0 */}
+      <h2>
+        <LinkToAnchor id="7.11.0">7.11.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 18/02/2025</em>
+      </p>
+      <ul>
+        <li>
+          PRO - Uses a new model of shared vault access levels by adding the levels "editor" and "blind" in addition to
+          the previous "owner" and "reader" levels.
+        </li>
+        <li>
+          PRO - Applies the maximum and default values of the auto-lock delay defined by the administrators from the
+          console.
+        </li>
+        <li>adds a search field in the target folder selection popup when placing or moving of an element.</li>
+        <li>adds explanations for the strength rate of a password.</li>
+        <li>fixes display and navigation bugs.</li>
+        <li>Windows MSI - msi packages now offers a built-in update interface, without opening the website.</li>
+        <li>Linux - the app is now only available via snapcraft instead of AppImage.</li>
+      </ul>
       {/* 7.10.6 */}
       <h2>
         <LinkToAnchor id="7.10.6">7.10.6</LinkToAnchor>
