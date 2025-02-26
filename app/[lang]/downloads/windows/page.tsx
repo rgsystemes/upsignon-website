@@ -260,15 +260,15 @@ function FRWindowsAllDownloadPage() {
               </tr>
               <tr>
                 <th>msixbundle</th>
-                <td>OUI</td>
+                <td>OUI (mais déprécié)</td>
               </tr>
               <tr>
                 <th>MSI</th>
                 <td>OUI</td>
                 <td>
-                  NON
+                  OUI
                   <br />
-                  mais possible avec un script GPO
+                  (semi-automatique)
                 </td>
                 <td>NON</td>
                 <td>UPSIGNON</td>
@@ -299,39 +299,42 @@ function FRWindowsAllDownloadPage() {
         Microsoft Store
       </Link>
 
-      <h3>Téléchargement msixbundle</h3>
-      <p>
-        Cette méthode vous permet d’installer le fichier provenant du Microsoft Store sans passer par l’application
-        Microsoft Store. Ainsi l’application recevra les mises-à-jour automatiquement.
-      </p>
-      <Link href="https://app.upsignon.eu/downloads/UpSignOn_latest.zip" download className={styles.buttonLink}>
-        UpSignOn_latest.zip
-      </Link>
-      <div className={styles.msixbundleSteps}>
-        <em>Version actuelle : {allMsixBundleVersions[0]}</em>
-        <ul>
-          <li>Dézippez le fichier UpSignOn_latest.zip</li>
-          <li>Exécutez ensuite le script d’installation powershell</li>
-          <li>
-            Attention, si vous utilisez cette méthode pour le déploiement par GPO, il faut appliquer le script pour
-            l’utilisateur et non pour l’ordinateur
-          </li>
-        </ul>
-      </div>
+      <h3>Téléchargement msixbundle (déprécié)</h3>
       <details>
-        <summary>Toutes les versions</summary>
-        <ul>
-          {allMsixBundleVersions.map((v) => (
-            <li key={v}>
-              <Link
-                href={`https://app.upsignon.eu/downloads/windows-store/UpSignOn_${v.replaceAll(".", "_")}.zip`}
-                download
-              >
-                {v}
-              </Link>
+        <summary>Déprécié</summary>
+        <p>
+          Cette méthode vous permet d’installer le fichier provenant du Microsoft Store sans passer par l’application
+          Microsoft Store. Ainsi l’application recevra les mises-à-jour automatiquement.
+        </p>
+        <Link href="https://app.upsignon.eu/downloads/UpSignOn_latest.zip" download className={styles.buttonLink}>
+          UpSignOn_latest.zip
+        </Link>
+        <div className={styles.msixbundleSteps}>
+          <em>Version actuelle : {allMsixBundleVersions[0]}</em>
+          <ul>
+            <li>Dézippez le fichier UpSignOn_latest.zip</li>
+            <li>Exécutez ensuite le script d’installation powershell</li>
+            <li>
+              Attention, si vous utilisez cette méthode pour le déploiement par GPO, il faut appliquer le script pour
+              l’utilisateur et non pour l’ordinateur
             </li>
-          ))}
-        </ul>
+          </ul>
+        </div>
+        <details>
+          <summary>Toutes les versions</summary>
+          <ul>
+            {allMsixBundleVersions.map((v) => (
+              <li key={v}>
+                <Link
+                  href={`https://app.upsignon.eu/downloads/windows-store/UpSignOn_${v.replaceAll(".", "_")}.zip`}
+                  download
+                >
+                  {v}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </details>
       </details>
 
       <h3>Téléchargements MSI</h3>
@@ -496,7 +499,9 @@ function FRWindowsAllDownloadPage() {
       <p>
         Si vous souhaitez mettre à jour l'application automatiquement par GPO, vous pouvez utiliser ce script pour
         télécharger automatiquement la dernière version de l'application à chaque fois qu'une nouvelle version est
-        publiée.
+        publiée. Vous pouvez ensuite configurer une tâche quotidienne ou hebdomadaire qui lance ce script. Ensuite vous
+        pouvez configurer une GPO qui installe le fichier téléchargé pour tous vos utilisateurs lorsque ce fichier
+        change.
       </p>
       <CodeBlock name="upsignon-update.ps1">{updateScriptFR}</CodeBlock>
 
@@ -590,15 +595,15 @@ function ENWindowsAllDownloadPage() {
               </tr>
               <tr>
                 <th>msixbundle</th>
-                <td>YES</td>
+                <td>YES (but deprecated)</td>
               </tr>
               <tr>
                 <th>MSI</th>
                 <td>YES</td>
                 <td>
-                  NO
+                  YES
                   <br />
-                  but possible with a GPO script
+                  (semi-automatic)
                 </td>
                 <td>NO</td>
                 <td>UPSIGNON</td>
@@ -628,39 +633,42 @@ function ENWindowsAllDownloadPage() {
         Microsoft Store
       </Link>
 
-      <h3>msixbundle download</h3>
-      <p>
-        This method allows you to install the file from the Microsoft Store without going through the Microsoft Store
-        application. So the application will receive updates automatically.
-      </p>
-      <Link href="https://app.upsignon.eu/downloads/UpSignOn_latest.zip" download className={styles.buttonLink}>
-        UpSignOn_latest.zip
-      </Link>
-      <div className={styles.msixbundleSteps}>
-        <em>Current version: {allMsixBundleVersions[0]}</em>
-        <ul>
-          <li>Unzip the UpSignOn_latest.zip file</li>
-          <li>Then run the powershell installation script</li>
-          <li>
-            Please note, if you use this method for GPO deployment, you must apply the script to the user and not for
-            the computer
-          </li>
-        </ul>
-      </div>
+      <h3>msixbundle download (deprecated)</h3>
       <details>
-        <summary>All versions</summary>
-        <ul>
-          {allMsixBundleVersions.map((v) => (
-            <li key={v}>
-              <Link
-                href={`https://app.upsignon.eu/downloads/windows-store/UpSignOn_${v.replaceAll(".", "_")}.zip`}
-                download
-              >
-                {v}
-              </Link>
+        <summary>Deprecated</summary>
+        <p>
+          This method allows you to install the file from the Microsoft Store without going through the Microsoft Store
+          application. So the application will receive updates automatically.
+        </p>
+        <Link href="https://app.upsignon.eu/downloads/UpSignOn_latest.zip" download className={styles.buttonLink}>
+          UpSignOn_latest.zip
+        </Link>
+        <div className={styles.msixbundleSteps}>
+          <em>Current version: {allMsixBundleVersions[0]}</em>
+          <ul>
+            <li>Unzip the UpSignOn_latest.zip file</li>
+            <li>Then run the powershell installation script</li>
+            <li>
+              Please note, if you use this method for GPO deployment, you must apply the script to the user and not for
+              the computer
             </li>
-          ))}
-        </ul>
+          </ul>
+        </div>
+        <details>
+          <summary>All versions</summary>
+          <ul>
+            {allMsixBundleVersions.map((v) => (
+              <li key={v}>
+                <Link
+                  href={`https://app.upsignon.eu/downloads/windows-store/UpSignOn_${v.replaceAll(".", "_")}.zip`}
+                  download
+                >
+                  {v}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </details>
       </details>
 
       <h3>MSI Downloads</h3>
@@ -823,7 +831,8 @@ function ENWindowsAllDownloadPage() {
       </h2>
       <p>
         If you wish to automatically update the app by GPO, you can use this script to automatically download the latest
-        version of the app each time a new release is published.
+        version of the app each time a new release is published. Add a task to launch this script every day or week,
+        then add a GPO to install the downloaded app for all your users when the file changes.
       </p>
       <CodeBlock name="upsignon-update.ps1">{updateScriptEN}</CodeBlock>
 
