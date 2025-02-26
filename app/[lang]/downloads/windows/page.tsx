@@ -354,14 +354,14 @@ function FRWindowsAllDownloadPage() {
             <tr>
               <th>Version d’installation admin silencieuse</th>
               <th>Version d’installation interactive</th>
-              <th>Version d’installation utilisateur silencieuse</th>
+              <th>Version d’installation utilisateur silencieuse (déconseillée)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>idéale pour les GPO</td>
               <td>pour les installations manuelles</td>
-              <td>utilisable pour les GPO</td>
+              <td>utilisable pour les GPO mais déconseillée</td>
             </tr>
             <tr>
               <td>
@@ -688,14 +688,14 @@ function ENWindowsAllDownloadPage() {
             <tr>
               <th>Silent admin install version</th>
               <th>Interactive installation version</th>
-              <th>Silent user install version</th>
+              <th>Silent user install version (not advised)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>ideal for GPOs</td>
               <td>for manual installations</td>
-              <td>usable for GPOs</td>
+              <td>usable for GPOs but not advised</td>
             </tr>
             <tr>
               <td>
