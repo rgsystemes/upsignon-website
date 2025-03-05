@@ -12,7 +12,7 @@
   "author": "",
   "license": "none",
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.5.10",
+    "@formatjs/intl-localematcher": "^0.6.0",
     "@geist-ui/core": "^2.3.8",
     "@next/third-parties": "^15.1.6",
     "@types/negotiator": "^0.6.3",
