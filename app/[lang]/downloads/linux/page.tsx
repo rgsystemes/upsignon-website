@@ -72,10 +72,14 @@ function FRLinuxOtherDownloads() {
       </ul>
       <br />
       <br />
+      <h2>Téléchargement AppImage (déconseillé)</h2>
       <details>
-        <summary>Anciennes versions AppImage</summary>
-        <p>Nous ne livrons plus l'application au format AppImage. Veuillez nous excuser pour le désagrément.</p>
-        <h2>Liste des anciennes versions</h2>
+        <summary>Afficher</summary>
+        <p>
+          L'application est fournie au format AppImage pour les utilisateurs qui le souhaitent, mais nous ne fournissons
+          pas de support pour l'installation.
+        </p>
+        <h3>Liste des versions</h3>
         <ul className={styles.ul}>
           {linuxVersions.map((v) => (
             <li key={v}>
@@ -86,9 +90,9 @@ function FRLinuxOtherDownloads() {
           ))}
         </ul>
 
-        <h2>
+        <h3>
           <LinkToAnchor id={anchors.installInstructions}>Instructions d’installation</LinkToAnchor>
-        </h2>
+        </h3>
         <strong>Installation automatique avec AppImageLauncher</strong>
         <p>
           Nous recommandons de suivre les explications de la page{" "}
@@ -161,10 +165,13 @@ function ENLinuxOtherDownloads() {
       <br />
       <br />
       <details>
-        <summary>Older AppImage versions</summary>
-
-        <p>We no longer build the app as an AppImage. Sorry for the inconvenience.</p>
-        <h2>List of older versions</h2>
+        <h2>AppImage download (not advised)</h2>
+        <summary>Show</summary>
+        <p>
+          The app is provided with the AppImage format for those who want it, but but offer no support for installation
+          with this format.
+        </p>
+        <h3>List of versions</h3>
         <ul className={styles.ul}>
           {linuxVersions.map((v) => (
             <li key={v}>
@@ -175,9 +182,9 @@ function ENLinuxOtherDownloads() {
           ))}
         </ul>
 
-        <h2>
+        <h3>
           <LinkToAnchor id={anchors.installInstructions}>Installation instructions</LinkToAnchor>
-        </h2>
+        </h3>
         <strong>Automatic installation with AppImageLauncher</strong>
         <p>
           We recommend to follow the explanations on the page{" "}
