@@ -6,6 +6,7 @@ import { ContactUsButton } from "../components/contactUsButton/contactUsButton";
 import { getDictionary } from "../../../translations/translations";
 import { FreeTrialButton } from "../components/freeTrialButton/freeTrial";
 import Link from "next/link";
+import { defaultLicencePrice } from "./priceHelper";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -41,7 +42,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <div className={styles.proPricing}>
           <h3 className={styles.pricingTitlePro}>{t.pricing.proPricing.t}</h3>
           <div className={styles.proPrice}>
-            18€ <span className={styles.proPriceUnit}>{t.pricing.proPricing.licencePriceUnit}</span>
+            {defaultLicencePrice}€ <span className={styles.proPriceUnit}>{t.pricing.proPricing.licencePriceUnit}</span>
           </div>
           <div className={styles.priceDetail}>{t.pricing.proPricing.licenceOver1000}</div>
           <div className={styles.priceDetail}>{t.pricing.proPricing.licenceOver12000}</div>
