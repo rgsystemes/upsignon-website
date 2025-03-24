@@ -46,7 +46,8 @@ function FRCommitments() {
           peuvent nous être opposées.
         </em>
       </header>
-      <h2>RGPD</h2>
+      <h2>Page en chantier</h2>
+      {/* <h2>RGPD</h2>
       <ul>
         <li>Aucune donnée revendue, évidemment.</li>
         <li>Pas d’outil de statistiques (trackeur) intégré à l’application</li>
@@ -228,7 +229,7 @@ function FRCommitments() {
       <ul>
         <li>Assurance Responsabilité Civile Professionnelle et Cyber : 100 000€ par an</li>
         <li>Assurance Responsabilité Civile d’Exploitation : 8 000 000€ par sinistre</li>
-      </ul>
+      </ul> */}
     </article>
   );
 }
@@ -242,7 +243,8 @@ function ENCommitments() {
           Terms of Sales which alone can be opposed to us.
         </em>
       </header>
-      <h2>GDPR</h2>
+      <h2>Page under construction</h2>
+      {/* <h2>GDPR</h2>
       <ul>
         <li>No data resold, obviously.</li>
         <li>No statistics tool (tracker) integrated into the application</li>
@@ -422,7 +424,7 @@ function ENCommitments() {
       <ul>
         <li>Professional Civil Liability and Cyber Insurance: €100,000 per year</li>
         <li>Operating Civil Liability Insurance: €8,000,000 per claim</li>
-      </ul>
+      </ul> */}
     </article>
   );
 }
