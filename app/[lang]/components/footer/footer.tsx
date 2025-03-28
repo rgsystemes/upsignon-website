@@ -49,28 +49,14 @@ export function Footer(p: { lang: string }) {
               </Link>
             </div>
           </section>
+          <section>
+            <h1>{t.footer.legalNotice}</h1>
+            <Link href="/legalNotice">{t.legalNotice.seeButton}</Link>
+          </section>
         </div>
       </div>
-      <div className={styles.footerSections}>
-        <details className={styles.footerLegalNotice}>
-          <summary>{t.footer.legalNotice}</summary>
-          <div>
-            <span className={styles.subsectionTitle}>SAS UPSIGNON </span>au capital de 11 834€
-          </div>
-          <div>121 rue Achille Viadieu, 31400 Toulouse, France</div>
-          <div>RCS Toulouse 849 484 290</div>
-          <div>
-            <span className={styles.subsectionTitle}>{t.footer.publisher}</span>: Gireg de Kerdanet
-          </div>
-          <div>
-            <span className={styles.subsectionTitle}>{t.footer.hostedBy} </span>Vercel Inc.
-          </div>
-          <div>340 S Lemon Ave #4133, Walnut, CA 91789, USA</div>
-          <div>(559) 288-7060</div>
-        </details>
-      </div>
       <div className={styles.copyright}>
-        UpSignOn - © {year} SAS UPSIGNON {t.footer.copyright}
+        UpSignOn - © {year} {t.legalNotice.editor.name} {t.footer.copyright}
       </div>
     </footer>
   );

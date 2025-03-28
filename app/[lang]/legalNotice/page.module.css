@@ -1,0 +1,23 @@
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 20px 50px 20px;
+
+}
+.content h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.detailContainer {
+  margin-left: 20px;
+}
+.bold {
+  font-weight: bold;
+}
+

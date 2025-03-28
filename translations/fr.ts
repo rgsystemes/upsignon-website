@@ -32,6 +32,60 @@ const translations = {
     telLabel: "Numéro de téléphone",
     submit: "Envoyer",
   },
+  legalNotice: {
+    seeButton: "Voir les mentions légales",
+    pageTitle: "Mentions légales",
+    metaDescription: "Mentions légales du site upsignon.eu",
+    editor: {
+      title: "Éditeur",
+      intro:
+        'Le présent site web, accessible à partir de l\'adresse URL https://upsignon.eu (ci-après dénommé le "Site") est une publication de la société :',
+      name: "RG SYSTEMES",
+      mainLocationTitle: "Siège social :",
+      mainLocationContent: "194 avenue de la Gare Sud de France, Font de la Banquière, 34970 LATTES (France)",
+      statusTitle: "Statut ou forme juridique :",
+      statusContent: "Société par Actions Simplifiée (SAS)",
+      capitalTitle: "Capital social :",
+      capitalContent: "408 568 euros",
+      rcsTitle: "RCS :",
+      rcsContent: "508 920 683 Montpellier",
+      siretTitle: "SIRET du siège social :",
+      siretContent: "508 920 683 00077",
+      registerLocationTitle: "Lieu d'enregistrement :",
+      registerLocationContent: "Montpellier (Hérault) - France",
+      apeTitle: "Code APE du siège :",
+      apeContent: "6201Z",
+      fiscalIDTitle: "Code d'identification fiscale :",
+      fiscalIDContent: "FR06508920683 (ou n°TVA intracommunautaire)",
+      phoneTitle: "Numéro de téléphone :",
+      phoneContent: "+33 (0)4 11 93 42 00",
+      emailTitle: "Email :",
+      emailContent: "contact@rgsystem.septeo.com",
+      representedByTitle: "Représentée par :",
+      representedByContent: "SEVEN TOPCO (RCS Montpellier 888 802 988)",
+    },
+    intellectualProperty: {
+      title: "Propriété des signes",
+      intro: "La marque UpSignOn est la propriété de RG SYSTEMES.",
+    },
+    publicationDirector: {
+      title: "Directeur de la publication",
+    },
+    hosting: {
+      title: "Hébergement du site",
+      name: "Vercel Inc.",
+      addressTitle: "Addresse :",
+      addressContent: "340 S Lemon Ave #4133, Walnut, CA 91789, USA",
+    },
+    websiteCreation: {
+      title: "Réalisation du site web et référencement",
+      url: "https://www.rgsystem.fr",
+    },
+    footer1:
+      "L'ensemble du site relève de la législation française sur le droit d'auteur et la propriété intellectuelle.",
+    footer2:
+      "Tous les droits de reproduction, de représentation et de mise à disposition du public sont réservés. Sauf autorisation expresse et écrite de la société RG SYSTEMES.",
+  },
   footer: {
     nav: {
       t: "Liens rapides",
