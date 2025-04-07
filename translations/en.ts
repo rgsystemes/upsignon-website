@@ -222,6 +222,7 @@ const translations: typeof fr = {
     },
     proPricing: {
       t: "PRO",
+      contactUs: "Contact us",
       licencePriceUnit: "/ vault / year",
       licenceOver1000: "-5% for licenses beyond 1.000",
       licenceOver12000: "-20% for licenses beyond 12.000",

@@ -10,7 +10,7 @@ import Image from "next/image";
 import { ModalLinkOpener } from "../../../useModalLinkOpener";
 
 Modal.setAppElement("#body");
-export function ContactUsButton(p: { lang: string; className: string }) {
+export function ContactUsButton(p: { lang: string; className: string; text?: string }) {
   const [isOpen, setIsOpen] = useState(false);
   function openModal() {
     setIsOpen(true);
@@ -24,7 +24,7 @@ export function ContactUsButton(p: { lang: string; className: string }) {
   return (
     <>
       <button onClick={openModal} className={`${styles.modalDefaultButton} ${p.className}`}>
-        {t.actions.contactUs}
+        {p.text ?? t.actions.contactUs}
       </button>
       <ModalLinkOpener modalLinkValue={"contact-us"} setIsOpen={setIsOpen} />
       <Modal

@@ -221,6 +221,7 @@ const translations = {
     },
     proPricing: {
       t: "PRO",
+      contactUs: "Contactez-nous",
       licencePriceUnit: "/ coffre-fort / an",
       licenceOver1000: "-5% sur les licences au delà de 1 000",
       licenceOver12000: "-20% sur les licences au delà de 12 000",
