@@ -48,11 +48,11 @@ function ContactUsForm(p: { lang: string; onRequestClose: () => void }) {
       <h1>{t.actions.contactUs}</h1>
       <Image src={giregImg} alt="" className={styles.photo} />
       <div>Gireg</div>
-      <Link href="mailto:contact@upsignon.eu" className={styles.link}>
-        contact@upsignon.eu
+      <Link href="mailto:contact@rgsystem.septeo.com" className={styles.link}>
+        contact@rgsystem.septeo.com
       </Link>
-      <Link href="tel:+33670743299" className={styles.link}>
-        +33 6 70 74 32 99
+      <Link href="tel:+33411934200" className={styles.link}>
+        +33 4 11 93 42 99
       </Link>
       {/* <Link href="https://calendly.com/upsignon" className={styles.link} target="_blank">
         {t.actions.calendarLink}

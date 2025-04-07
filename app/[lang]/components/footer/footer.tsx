@@ -29,9 +29,9 @@ export function Footer(p: { lang: string }) {
           <section>
             <h1>{t.footer.contactUs}</h1>
             <address>
-              <Link href="mailto:contact@upsignon.eu">contact@upsignon.eu</Link>
+              <Link href="mailto:contact@rgsystem.septeo.com">contact@rgsystem.septeo.com</Link>
               <br />
-              <Link href="tel:+33670743299">+33 6 70 74 32 99</Link>
+              <Link href="tel:+33411934200">+33 4 11 93 42 00</Link>
             </address>
           </section>
           <section>
