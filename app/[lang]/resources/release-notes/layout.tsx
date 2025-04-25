@@ -12,10 +12,12 @@ export default async function Page({
   const { lang } = await params;
   const t = getDictionary(lang);
   return (
-    <div className={styles.content}>
-      <h1>{t.resources.releaseNotes}</h1>
-      <TabsNav lang={lang} />
-      {children}
+    <div className={styles.contentBackground}>
+      <div className={styles.content}>
+        <h1>{t.resources.releaseNotes}</h1>
+        <TabsNav lang={lang} />
+        {children}
+      </div>
     </div>
   );
 }

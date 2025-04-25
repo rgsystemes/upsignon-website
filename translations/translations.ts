@@ -25,10 +25,8 @@ function getLocale(request: NextRequest) {
 
 const unlocalizedAssets = [
   "/favicon.ico",
-  "/apple-touch-icon.png",
-  "/favicon-16x16.png",
   "/favicon-32x32.png",
-  "/favicon-192x192.png",
+  "/favicon-256x256.png",
   "/safari-pinned-tab.svg",
   "/robots.txt",
   "/sitemap.xml",

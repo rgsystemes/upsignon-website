@@ -94,7 +94,7 @@ function GetForm(p: {
           return <FieldInput key={f.k} t={f.t} k={f.k} r={f.r} />;
         })}
 
-        <input type="submit" value={p.submitButtonText} />
+        <input type="submit" value={p.submitButtonText} className={styles.submitButton} />
       </form>
       <div className={styles.buttonWithLoaderContainer}>
         <button onClick={p.close} className={styles.cancelButton}>

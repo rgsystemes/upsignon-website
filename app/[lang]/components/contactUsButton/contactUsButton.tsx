@@ -23,7 +23,7 @@ export function ContactUsButton(p: { lang: string; className: string; text?: str
 
   return (
     <>
-      <button onClick={openModal} className={`${styles.modalDefaultButton} ${p.className}`}>
+      <button onClick={openModal} className={p.className}>
         {p.text ?? t.actions.contactUs}
       </button>
       <ModalLinkOpener modalLinkValue={"contact-us"} setIsOpen={setIsOpen} />

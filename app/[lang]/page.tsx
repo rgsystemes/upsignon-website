@@ -76,9 +76,9 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
           </div>
         </section>
         <div className={styles.actionContainer}>
-          <ContactUsButton lang={lang} className={styles.actionLinkOnBlue} />
-          <ContactLaterButton lang={lang} className={styles.actionLinkOnBlue} />
-          <FreeTrialButton lang={lang} className={styles.actionLinkOnBlue} />
+          <ContactUsButton lang={lang} className={styles.actionLink} />
+          <ContactLaterButton lang={lang} className={styles.actionLink} />
+          <FreeTrialButton lang={lang} className={styles.actionLinkPrimary} />
         </div>
       </div>
       <section className={styles.keyMetricsSection}>
@@ -91,14 +91,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
               <p>{t.pitch.keyMetrics.d1}</p>
             </div>
             <div className={styles.keyMetricsSubsection}>
-              <div className={styles.keyMetricsNumber}>59%</div>
+              <div className={styles.keyMetricsNumberAlt}>59%</div>
               <h2>{t.pitch.keyMetrics.t2}</h2>
               <p>{t.pitch.keyMetrics.d2}</p>
             </div>
           </div>
         </div>
       </section>
-      <section className={`${styles.advantagesSection} ${styles.blueBackground}`}>
+      <section className={`${styles.advantagesSection} ${styles.advantagesBackground}`}>
         <div className={styles.advantagesSectionContent}>
           <h1 className={styles.sectionTitle}>{t.pitch.advantages.sectionTitle}</h1>
           <SingleAdvantage title={t.pitch.advantages[1].t} details={t.pitch.advantages[1].d} />
@@ -128,8 +128,8 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
           <p>{t.pitch.proVsPerso.pro.p2}</p>
           <div className={styles.actionContainer}>
             <div className={styles.actionContainer}>
-              <ContactUsButton lang={lang} className={styles.actionLinkOnWhite} />
-              <ContactLaterButton lang={lang} className={styles.actionLinkOnWhite} />
+              <ContactUsButton lang={lang} className={styles.actionLinkPrimary} />
+              <ContactLaterButton lang={lang} className={styles.actionLink} />
             </div>
           </div>
         </div>

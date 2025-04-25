@@ -43,16 +43,24 @@
 
 .downloadTable .buttonLink {
   display: block;
-  background-image: linear-gradient(0deg, rgb(12, 95, 94), rgb(0, 171, 169));
-  border-radius: 5px;
-  color: white;
+  border: 1px solid var(--primary);
+  color: var(--text-color);
+  border-radius: 100px;
   text-decoration: none;
   padding: 10px 20px;
   text-align: center;
 }
+
+.downloadTable .buttonLink:hover {
+  background-color: var(--primary);
+  color: white;
+}
 .downloadTable a:not(.buttonLink) {
   margin-top: 5px;
   display: block;
-  color: rgb(12, 95, 94);
+  color: var(--text-color);
   text-align: center;
+}
+.downloadTable a:not(.buttonLink):hover {
+  text-decoration-color: var(--primary);
 }

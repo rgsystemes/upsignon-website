@@ -6,7 +6,7 @@
   margin: auto;
   margin-bottom: 30px;
   background-color: white;
-  color:rgb(44, 83, 132);
+  color:var(--text-color);
 }
 .feature_section .feature_title {
   cursor: pointer;
@@ -22,7 +22,7 @@
   line-height: 1.2em;
 }
 .toggle_button {
-  background-color: rgb(44, 83, 132);
+  background-color: var(--text-color);
   border-radius: 50%;
   color: white;
   width: 20px;

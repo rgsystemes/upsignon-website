@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { CodeBlock } from "../../components/codeBlock/codeBlock";
 import { LinkToAnchor } from "../../components/linkToAnchor/linkToAnchor";
 import Link from "next/link";
+import { PlatformWarningIcon } from "../../features/availabilityIcons";
 
 const gpoConfigContent = `{"proConfigUrl":"https://<xxx.xx/xx>"}`;
 const preConfigDeployScript = `## RUN AS ADMIN !
@@ -252,7 +253,10 @@ function FRWindowsAllDownloadPage() {
                 <th>Microsoft Store</th>
                 <td>NON</td>
                 <td rowSpan={2}>OUI</td>
-                <td rowSpan={2}>OUI ⚠️</td>
+                <td rowSpan={2}>
+                  OUI 
+                  <PlatformWarningIcon />
+                </td>
                 <td rowSpan={2}>Microsoft</td>
                 <td rowSpan={2} className={styles.largeCol}>
                   C:\Users\xxx\AppData\Local\Packages\dataSmine.UpSignOn_fqgssej11bscy\LocalState
@@ -277,7 +281,10 @@ function FRWindowsAllDownloadPage() {
             </tbody>
           </table>
         </div>
-        <strong>⚠️ NB: conséquences de l’effacement des données locales</strong>
+        <strong>
+          <PlatformWarningIcon />
+           NB: conséquences de l’effacement des données locales
+        </strong>
         <ul>
           <li>
             coffres-forts PERSO : le coffre est perdu s’il n’y a pas d’autre appareil synchronisé ni de sauvegarde
@@ -587,7 +594,9 @@ function ENWindowsAllDownloadPage() {
                 <th>Microsoft Store</th>
                 <td>NO</td>
                 <td rowSpan={2}>YES</td>
-                <td rowSpan={2}>YES ⚠️</td>
+                <td rowSpan={2}>
+                  YES <PlatformWarningIcon />
+                </td>
                 <td rowSpan={2}>Microsoft</td>
                 <td rowSpan={2} className={styles.largeCol}>
                   C:\Users\xxx\AppData\Local\Packages\dataSmine.UpSignOn_fqgssej11bscy\LocalState
@@ -612,7 +621,9 @@ function ENWindowsAllDownloadPage() {
             </tbody>
           </table>
         </div>
-        <strong>⚠️ NB: consequences of erasing local data</strong>
+        <strong>
+          <PlatformWarningIcon /> NB: consequences of erasing local data
+        </strong>
         <ul>
           <li>
             PERSO vaults: the vault is lost if there is no other synchronized device or backup from a trusted contact

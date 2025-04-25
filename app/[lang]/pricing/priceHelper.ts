@@ -1,1 +1,1 @@
-export const defaultLicencePrice = 30;
+export const defaultLicencePrice = 42;

@@ -1,10 +1,29 @@
 html {
   scroll-behavior: smooth;
-  background-color: #F0F4FA;
+  --perso-vault: rgb(44, 83, 132);
+  --pro-vault: rgb(246, 164, 0);
+  --background-color: white;
+  --title-color: #101828;
+  --text-color: #101828;
+  --text-color-alt: #475467;
+  --primary: #FF6136;
+  --secondary: #2e3862;
+  --tertiary: #4e549f;
+  --quaternary: #636fc1;
+  --quinternary: #7096ff;
+  --quinternary05: rgb(112,150,255,0.05);
+  --quinternary15: rgb(112,150,255,0.15);
+  --sexternary: #65d5c5;
+  --sexternary15: rgb(101,213,197,0.15);
+  --grey: #f2f4f7;
+  --grey100: #eaecf0;
+  --grey300: #D0d5DD;
+  --tab-background: #F2F4F7;
+  background-color: var(--background-color);
 }
 
 body {
-  color: rgb(44, 83, 132);
+  color: var(--text-color);
 }
 
 details summary {

@@ -73,19 +73,19 @@ function FRArticle() {
           <div className={styles.col3}>
             <div>
               <div className={styles.col3IlluContainer}>
-                <Image src={dataSecuritySvg} alt="" />
+                <Image src={dataSecuritySvg} alt="" className={styles.articleImg} />
               </div>
               <strong>Garantir l’intégrité et la confidentialité des données</strong>
             </div>
             <div>
               <div className={styles.col3IlluContainer}>
-                <Image src={itChartSVG} alt="" />
+                <Image src={itChartSVG} alt="" className={styles.articleImg} />
               </div>
               <strong>Maintenir le bon fonctionnement du système d’information</strong>
             </div>
             <div>
               <div className={styles.col3IlluContainer}>
-                <Image src={customerSatisfactionSvg} alt="" />
+                <Image src={customerSatisfactionSvg} alt="" className={styles.articleImg} />
               </div>
               <strong>Assurer l’accès aux ressources aux seules personnes autorisées</strong>
             </div>
@@ -141,27 +141,27 @@ function FRArticle() {
             </p>
             <div className={styles.quinconce3col}>
               <div className={`${styles.quinconceCard} ${styles.featuresCard}`}>
-                <Image src={featuresSvg} alt="" width={80} height={80} />
+                <Image src={featuresSvg} alt="" width={80} height={80} className={styles.articleImg} />
                 <p>Les principales fonctionnalités</p>
               </div>
               <div className={styles.quinconceCard}>
-                <Image src={vaultSvg} alt="" width={80} height={80} />
+                <Image src={vaultSvg} alt="" width={80} height={80} className={styles.articleImg} />
                 <p>Stockage de mots de passe dans des coffres-forts (partagés ou non).</p>
               </div>
               <div className={styles.quinconceCard}>
-                <Image src={lockSvg} alt="" width={80} height={80} />
+                <Image src={lockSvg} alt="" width={80} height={80} className={styles.articleImg} />
                 <p>Génération automatique de mots de passe robustes.</p>
               </div>
               <div className={styles.quinconceCard}>
-                <Image src={pwdFormSvg} alt="" width={80} height={80} />
+                <Image src={pwdFormSvg} alt="" width={80} height={80} className={styles.articleImg} />
                 <p>Saisie automatique des identifiants et mots de passe sur les formulaires web.</p>
               </div>
               <div className={styles.quinconceCard}>
-                <Image src={sharingSvg} alt="" width={80} height={80} />
+                <Image src={sharingSvg} alt="" width={80} height={80} className={styles.articleImg} />
                 <p>Partage sécurisé de certains mots de passe avec gestion de droits d’accès</p>
               </div>
               <div className={styles.quinconceCard}>
-                <Image src={keySvg} alt="" width={80} height={80} />
+                <Image src={keySvg} alt="" width={80} height={80} className={styles.articleImg} />
                 <p>Supervision de la sécurité des mots de passe à l’échelle de l’entreprise.</p>
               </div>
             </div>
@@ -287,7 +287,7 @@ function FRArticle() {
           </h2>
           <div className={styles.forUserAdvantages}>
             <div className={styles.forUserIlluContainer}>
-              <Image src={forUsersImg} alt="" />
+              <Image src={forUsersImg} alt="" className={styles.articleImg} />
             </div>
             <div className={styles.greenSectionCard}>
               <h3>Pour les utilisateurs</h3>
@@ -314,7 +314,7 @@ function FRArticle() {
           </div>
           <div className={styles.forAdminAdvantages}>
             <div className={styles.forUserIlluContainer}>
-              <Image src={forAdminImg} alt="" />
+              <Image src={forAdminImg} alt="" className={styles.articleImg} />
             </div>
             <div className={styles.greenSectionCard}>
               <h3>Pour les responsables de la sécurité IT</h3>
@@ -363,19 +363,19 @@ function ENArticle() {
           <div className={styles.col3}>
             <div>
               <div className={styles.col3IlluContainer}>
-                <Image src={dataSecuritySvg} alt="" />
+                <Image src={dataSecuritySvg} alt="" className={styles.articleImg} />
               </div>
               <strong>Guaranteeing data integrity and confidentiality</strong>
             </div>
             <div>
               <div className={styles.col3IlluContainer}>
-                <Image src={itChartSVG} alt="" />
+                <Image src={itChartSVG} alt="" className={styles.articleImg} />
               </div>
               <strong>Keeping the information system running smoothly</strong>
             </div>
             <div>
               <div className={styles.col3IlluContainer}>
-                <Image src={customerSatisfactionSvg} alt="" />
+                <Image src={customerSatisfactionSvg} alt="" className={styles.articleImg} />
               </div>
               <strong>Ensuring that only authorised people have access to resources</strong>
             </div>
@@ -429,27 +429,27 @@ function ENArticle() {
             </p>
             <div className={styles.quinconce3col}>
               <div className={`${styles.quinconceCard} ${styles.featuresCard}`}>
-                <Image src={featuresSvg} alt="" width={80} height={80} />
+                <Image src={featuresSvg} alt="" width={80} height={80} className={styles.articleImg} />
                 <p>Main features</p>
               </div>
               <div className={styles.quinconceCard}>
-                <Image src={vaultSvg} alt="" width={80} height={80} />
+                <Image src={vaultSvg} alt="" width={80} height={80} className={styles.articleImg} />
                 <p>Storage of passwords in vaults (shared or not).</p>
               </div>
               <div className={styles.quinconceCard}>
-                <Image src={lockSvg} alt="" width={80} height={80} />
+                <Image src={lockSvg} alt="" width={80} height={80} className={styles.articleImg} />
                 <p>Automatic generation of strong passwords.</p>
               </div>
               <div className={styles.quinconceCard}>
-                <Image src={pwdFormSvg} alt="" width={80} height={80} />
+                <Image src={pwdFormSvg} alt="" width={80} height={80} className={styles.articleImg} />
                 <p>Automatic filling of logins and passwords on web forms.</p>
               </div>
               <div className={styles.quinconceCard}>
-                <Image src={sharingSvg} alt="" width={80} height={80} />
+                <Image src={sharingSvg} alt="" width={80} height={80} className={styles.articleImg} />
                 <p>Secure sharing of certain passwords with access rights management.</p>
               </div>
               <div className={styles.quinconceCard}>
-                <Image src={keySvg} alt="" width={80} height={80} />
+                <Image src={keySvg} alt="" width={80} height={80} className={styles.articleImg} />
                 <p>Company-wide supervision of password security.</p>
               </div>
             </div>
@@ -566,7 +566,7 @@ function ENArticle() {
           </h2>
           <div className={styles.forUserAdvantages}>
             <div className={styles.forUserIlluContainer}>
-              <Image src={forUsersImg} alt="" />
+              <Image src={forUsersImg} alt="" className={styles.articleImg} />
             </div>
             <div className={styles.greenSectionCard}>
               <h3>For users</h3>
@@ -591,7 +591,7 @@ function ENArticle() {
           </div>
           <div className={styles.forAdminAdvantages}>
             <div className={styles.forUserIlluContainer}>
-              <Image src={forAdminImg} alt="" />
+              <Image src={forAdminImg} alt="" className={styles.articleImg} />
             </div>
             <div className={styles.greenSectionCard}>
               <h3>For IT security managers</h3>

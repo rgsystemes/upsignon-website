@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: flex-start;
   text-decoration: none;
-  color: rgb(246, 164, 0);
+  color: var(--primary);
 }
 .tech_focus:hover {
   text-decoration: underline;

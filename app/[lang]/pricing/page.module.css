@@ -1,7 +1,11 @@
 .content {
-  max-width: 900px;
+  background-image: linear-gradient(0deg, transparent, var(--quinternary15));
+}
+.section {
   margin: auto;
+  max-width: 900px;
   padding: 20px 20px 50px 20px;
+
 }
 .content h1 {
   font-size: 2em;
@@ -13,7 +17,7 @@
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  column-gap: 5px;
+  column-gap: 1.5rem;
   row-gap: 5px;
   margin-bottom: 40px;
 }
@@ -23,42 +27,45 @@
   font-weight: bold;
 }
 .pricingTitlePerso {
-  background-color: rgb(44, 83, 132);
+  background-color: var(--perso-vault);
   color: white;
-  border-radius: 5px;
-  padding: 5px 10px;
+  border-radius: 100px;
+  padding: 4px 18px;
 }
 .pricingTitlePro {
-  background-color:rgb(246,164,0);
+  background-color:var(--pro-vault);
   color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 4px 18px;
+  border-radius: 100px;
 }
 
 .persoPricing, .proPricing {
   min-width: 300px;
   background-color: white;
-  color: rgb(44, 83, 132);
+  color: var(--text-color);
   padding: 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 1rem;
+  border: 1px solid var(--grey100);
+  box-shadow: 0 12px 20px -4px var(--quinternary15), 0 4px 6px -2px var(--quinternary05);
 }
 
 .persoPrice {
   font-size: 3em;
-  color: rgb(0,171,169);
+  color: var(--text-color);
 }
 .proPrice {
   font-size: 3em;
-  color: rgb(246,164,0);
+  color: var(--text-color);
   margin-bottom: 5px;
 }
 .proPriceUnit {
   font-size: 1.2rem;
   font-style: italic;
-  color: rgb(246,164,0);
+  color: var(--text-color);
 }
 .selfHostingTitle {
   margin: 20px 0;
@@ -75,13 +82,42 @@
 button.proPricingActionButton, .downloadAction {
   background: none;
   border: none;
-  color: rgb(0,171,169);
+  background-color: var(--primary);
+  color: white;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
   margin: 5px 0;
+  border-radius: 100px;
+  padding: 10px 20px;
+}
+button.proPricingActionButton:hover, .downloadAction:hover {
+  text-decoration: none;
+  background-color: var(--quinternary);
+}
+
+button.proPricingActionButtonSecondary {
+  background: none;
+  background-color: none;
+  color: var(--text-color);
+  border-radius: 100px;
+  border: 1px solid var(--primary);
+  text-decoration: none;
+  padding: 10px 20px;
+}
+button.proPricingActionButtonSecondary:hover {
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
 }
 
 .distribDetails {
   text-align: center;
+}
+
+.centerContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -1,39 +1,21 @@
 .nav {
-  background-color: transparent;
-  background-image: linear-gradient(10deg, rgb(0,38,75) 20%, rgb(38, 101, 181) 75%);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  color: white;
-}
-.logoAndNameContainer {
+  background-color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: nowrap;
+  color: var(--title-color);
   font-weight: bold;
-  padding: 10px;
-  margin: 10px;
-  text-decoration: none;
+  border-bottom: 1px solid var(--grey);
 }
-.logoAndNameContainer:-webkit-any-link {
-  color: white;
-}
-.logoAndNameContainer:link, .logoAndNameContainer:visited {
-  color: white;
+.logoAndNameContainer {
+  margin: 20px;
+  display: block;
+  height: 50px;
 }
 .logoAndNameContainer img {
-  height: 50px;
-  width: 50px;
-  margin-right: 10px;
-}
-.logoAndNameContainer span {
-  padding: 0 10px;
-  border-width: 4px 0;
-  border-style: solid;
-  border-color: transparent;
-}
-.logoAndNameContainer:hover span {
-  border-bottom: 4px solid rgb(0,171,169);
+  height: 100%;
+  width: auto;
 }
 .spacer {
   flex: 1;
@@ -59,14 +41,14 @@
 }
 .menuItem:-webkit-any-link {
   /* do not add this selector at the start of a list of rules because firefox will stop at the first webkit rule */
-  color: white;
+  color: var(--text-color);
 }
 .menuItem:visited, .menuItem:link {
-  color: white;
+  color: var(--text-color);
 }
 
 .menuItem:hover:not(.focusedMenu), .currentMenu {
-  border-bottom: 4px solid rgb(0,171,169);
+  border-bottom: 4px solid var(--primary);
 }
 
 .navMenuIcon {
@@ -78,13 +60,13 @@
     flex-wrap: wrap;
   }
   .logoAndNameContainer {
-    padding: 5px 0;
-    margin: 0 10px;
+    margin: 25px 20px 15px 20px;
+    padding: 0;
+    height: 40px;
   }
   .logoAndNameContainer img{
-    height: 40px;
-    width: 40px;
-    margin-right: 5px;
+    height: 100%;
+    width: auto;
   }
   .navMenuIcon {
     display: block;
@@ -115,16 +97,16 @@
   display: none;
 }
 .menuOpener .focusedMenu {
-  background-color: white;
-  color: rgb(44, 83, 132);
+  background-color: var(--background-color);
+  color: var(--text-color);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 .subMenu {
   display: block;
   position: absolute;
-  background-color: white;
-  color: rgb(44, 83, 132);
+  background-color: var(--background-color);
+  color: var(--text-color);
   right: 10px;
   top: calc(100% - 10px);
   padding: 10px;
@@ -135,7 +117,7 @@
   cursor:default;
 }
 .foldspacer {
-  background-color: white;
+  background-color: var(--background-color);;
   position: absolute;
   top: calc(100% - 20px);
   right: 10px;
@@ -146,13 +128,14 @@
 .subMenuItem {
   display: block;
   padding: 5px;
-  color: rgb(0,171,169);
+  color: var(--text-color);
   text-decoration: none;
   cursor: pointer;
 }
 .subMenuItem:hover {
-  background-color: #F0F4FA;
+  background-color: var(--background-color);
   text-decoration: underline;
+  text-decoration-color: var(--primary);
 }
 
 @media (max-width: 750px) {

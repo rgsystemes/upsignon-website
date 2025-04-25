@@ -269,7 +269,7 @@ const translations: typeof fr = {
       success: "Quote sent",
     },
     distribTitle: "Are you a reseller?",
-    distribDetails: "We have a win-win deal for you. Please contact us!",
+    distribDetails: "We have a win-win deal for you.",
   },
   downloads: {
     metaDescription:

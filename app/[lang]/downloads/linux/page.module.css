@@ -13,20 +13,8 @@
   margin-bottom: 10px;
 }
 
-.buttonLink {
-  display: inline-block;
-  background-image: linear-gradient(0deg, rgb(12, 95, 94), rgb(0, 171, 169));
-  border-radius: 5px;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  text-align: center;
-  z-index: 10;
-  position: relative;
-}
-
-.content a:not(.buttonLink), .content .backArrow {
-  color: rgb(0, 171, 169);
+.content a, .content .backArrow {
+  color: var(--primary);
 }
 
 .ul {

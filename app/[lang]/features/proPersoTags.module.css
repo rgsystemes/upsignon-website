@@ -32,19 +32,20 @@
   color: white;
   font-weight: bold;
   font-size: 0.8rem;
-  border-radius: 5px;
-  padding: 0 5px;
+  border-radius: 100px;
+  padding: 2px 10px;
   margin-right: 10px;
 }
 .pro_tag:last-of-type,
 .perso_tag:last-of-type {
   margin-right: 0px;
 }
-.pro_tag {
-  background-color: rgb(246, 164, 0);
-}
 .perso_tag {
-  background-color: rgb(44, 83, 132);
+  background-color: var(--perso-vault);
+  margin-bottom: 4px;
+}
+.pro_tag {
+  background-color: var(--pro-vault);
 }
 
 

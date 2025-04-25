@@ -1,3 +1,6 @@
+.contentBackground {
+  background-image: linear-gradient(0deg, transparent, var(--quinternary15));
+}
 .content {
   margin: auto;
   padding: 20px 20px 50px 20px;
@@ -16,19 +19,15 @@
 
 }
 .articleLink {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  color: rgb(44, 83, 132);
+  color: var(--text-color);
   text-decoration: none;
   width: 100%;
 }
-.articleLink:hover {
-  position: relative;
-  top: -5px;
-  left: -5px;
-  box-shadow: rgba(0, 0, 0, 0.5) 5px 10px 15px 0px;
+.articleLink:hover .readArrow  {
+  margin-left: 20px;
 }
 .articleLink .miniature {
   width: 100%;
@@ -40,11 +39,12 @@
   width: 100%;
   height: auto;
   aspect-ratio: 2560/1778;
+  border-radius: 12px;
 }
 .articleLink h2 {
   padding: 10px;
   font-size: 1.4em;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.2em;
   margin: 0;
   flex-shrink: 0;
@@ -61,11 +61,15 @@
   display: block;
   padding: 10px;
   font-size: 1em;
-  font-weight: normal;
-  text-decoration: underline;
-  align-self: flex-end;
+  font-weight: bold;
+  text-decoration: none;
+  align-self: flex-start;
   flex-shrink: 0;
   flex-grow: 0;
+}
+.articleLink .readArrow {
+  color: var(--primary);
+  margin-left: 10px;
 }
 
 @media (max-width: 1024px){

@@ -5,7 +5,7 @@
       d="M684.315,577.667c112.563,0,203.812,91.249,203.812,203.812S796.878,985.293,684.315,985.293,480.5,894.041,480.5,781.479,571.752,577.667,684.315,577.667Z"
       transform="translate(0 0)" fill="#e7e7ef"></path>
     <rect id="Rectangle_633" data-name="Rectangle 633" width="176.752" height="234.329" rx="3.156"
-      transform="translate(610.233 672.181)" fill="#00aba9"></rect>
+      transform="translate(610.233 672.181)" fill="#65D5C5"></rect>
     <g id="Groupe_1945" data-name="Groupe 1945" transform="translate(553.897 658.315)">
       <rect id="Rectangle_633-2" data-name="Rectangle 633" width="176.752" height="234.329"
         rx="3.156" transform="translate(42.419)" fill="#fff"></rect>
@@ -15,10 +15,10 @@
           transform="translate(-494.689 -617.053)" fill="#313566"></path>
         <path id="Tracé_17374" data-name="Tracé 17374"
           d="M544.4,729.294l-29.837-17.222a24.784,24.784,0,0,1-12.395-21.463V629.77l42.2-11.175,42.2,11.175V690.6a24.761,24.761,0,0,1-12.4,21.463Z"
-          transform="translate(-502.167 -613.371)" fill="#00aba9"></path>
+          transform="translate(-502.167 -613.371)" fill="#65D5C5"></path>
         <path id="Tracé_17375" data-name="Tracé 17375"
           d="M541.042,620.463l-.22-.065-37.157,9.837v53.546a21.81,21.81,0,0,0,10.9,18.885L540.8,717.82l.227-.132Z"
-          transform="translate(-498.59 -609.064)" fill="#04bab1"></path>
+          transform="translate(-498.59 -609.064)" fill="#5bc0b1"></path>
         <line id="Ligne_34" data-name="Ligne 34" x1="19.611" y2="5.018"
           transform="translate(16.884 12.972)" fill="none" stroke="#fff" stroke-linecap="round"
           stroke-miterlimit="10" stroke-width="0.564"></line>

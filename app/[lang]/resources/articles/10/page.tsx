@@ -59,7 +59,13 @@ function FRArticle() {
         courir à l’entreprise en utilisant des mots de passe trop faibles ou en utilisant le même partout…
       </p>
       <h2>Les mots de passe : une faille de sécurité qui peut être évitée</h2>
-      <Image src={EmployeesPasswordsPostitsImg} alt="" width="425" style={{ float: "right", marginLeft: 10 }} />
+      <Image
+        src={EmployeesPasswordsPostitsImg}
+        alt=""
+        width="425"
+        className={styles.articleImg}
+        style={{ float: "right", marginLeft: 10 }}
+      />
       <p>
         Chaque collaborateur possède plusieurs plateformes professionnelles auxquelles il a besoin de se connecter
         fréquemment à l’aide d’un mot de passe. Pour des raisons de sécurité, ce dernier doit impérativement être
@@ -84,7 +90,13 @@ function FRArticle() {
         appliquer les règles de gestion de mots de passe par tous les collaborateurs, sans effort.
       </p>
       <h2>Comment accompagner les collaborateurs vers plus de sécurité ?</h2>
-      <Image src={EmployeesPasswordsImg} alt="" width="425" style={{ float: "left", marginRight: 10 }} />
+      <Image
+        src={EmployeesPasswordsImg}
+        alt=""
+        width="425"
+        className={styles.articleImg}
+        style={{ float: "left", marginRight: 10 }}
+      />
       <p>
         Votre objectif est d’<strong>emmener tout le monde vers l’adoption des bonnes pratiques</strong> essentielles de
         gestion de mots de passe. Chez UpSignOn, nous pensons que la clé, c’est d’offrir à vos collaborateurs un outil
@@ -116,7 +128,13 @@ function ENArticle() {
         the company by using passwords that are too weak or by using the same one everywhere...
       </p>
       <h2>Passwords: a security breach that can be avoided</h2>
-      <Image src={EmployeesPasswordsPostitsImg} alt="" width="425" style={{ float: "right", marginLeft: 10 }} />
+      <Image
+        src={EmployeesPasswordsPostitsImg}
+        alt=""
+        width="425"
+        className={styles.articleImg}
+        style={{ float: "right", marginLeft: 10 }}
+      />
       <p>
         Each employee has several professional platforms to which they need to connect frequently using a password. For
         security reasons, the latter must be specific for each account. As it is quite impossible to remember them all,
@@ -136,7 +154,13 @@ function ENArticle() {
         effortlessly.
       </p>
       <h2>How can we support employees towards greater security?</h2>
-      <Image src={EmployeesPasswordsImg} alt="" width="425" style={{ float: "left", marginRight: 10 }} />
+      <Image
+        src={EmployeesPasswordsImg}
+        alt=""
+        width="425"
+        className={styles.articleImg}
+        style={{ float: "left", marginRight: 10 }}
+      />
       <p>
         Your goal is to{" "}
         <strong>get everyone towards the adoption of essential password management best practices</strong>. At UpSignOn,

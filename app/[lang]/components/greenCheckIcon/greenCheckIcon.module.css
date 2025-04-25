@@ -4,7 +4,7 @@
 }
 
 .checkIcon svg {
-  fill:rgb(0,171,169);
+  fill:var(--sexternary);
   width: 60px;
   height: 60px;
 }

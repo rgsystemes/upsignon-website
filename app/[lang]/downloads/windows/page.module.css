@@ -33,17 +33,17 @@
 }
 
 .downloadDiffs table {
-  border: 3px solid rgb(44, 83, 132);
+  border: 3px solid var(--grey300);
   border-collapse: collapse;
 }
 .downloadDiffs table tr {
-  border-bottom: 1px solid rgb(44, 83, 132);
+  border-bottom: 1px solid var(--grey300);
 }
 .downloadDiffs table tr td, .downloadDiffs table tr th{
   padding: 10px;
   min-width: 200px;
   text-align: center;
-  border-right: 1px solid rgb(44, 83, 132);
+  border-right: 1px solid var(--grey300);
   text-wrap: wrap;
 
 }
@@ -55,14 +55,19 @@
 
 .buttonLink {
   display: inline-block;
-  background-image: linear-gradient(0deg, rgb(12, 95, 94), rgb(0, 171, 169));
-  border-radius: 5px;
+  background-color: var(--primary);
+  border-radius: 100px;
   color: white;
   text-decoration: none;
   padding: 10px 20px;
   text-align: center;
   z-index: 10;
   position: relative;
+}
+
+.buttonLink:hover {
+  background-color: var(--quinternary);
+  text-decoration: none;
 }
 
 .msixbundleSteps {
@@ -75,7 +80,7 @@
 }
 
 .content a:not(.buttonLink), .content .backArrow {
-  color: rgb(0, 171, 169);
+  color: var(--primary);
 }
 
 .msiTable {
@@ -84,13 +89,13 @@
   width: 100%;
 }
 .msiTable tr {
-  border-bottom: 1px solid rgb(44, 83, 132);
+  border-bottom: 1px solid var(--grey300);
 }
 
 .msiTable td, .msiTable th {
   text-align: center;
   padding: 10px;
-  border: 1px solid rgb(44, 83, 132);
+  border: 1px solid var(--grey300);
 }
 .breakable {
   word-break: break-all;

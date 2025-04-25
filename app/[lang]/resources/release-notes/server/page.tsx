@@ -3,6 +3,7 @@ import { getDictionary } from "../../../../../translations/translations";
 import styles from "../notes.module.css";
 import { LinkToAnchor } from "../../../components/linkToAnchor/linkToAnchor";
 import Link from "next/link";
+import { PlatformWarningIcon } from "../../../features/availabilityIcons";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -111,7 +112,10 @@ function FRServerNotes() {
       </h2>
       <em>Publiée le 17/05/2024</em>
       <p>
-        <strong>⚠️ Cette version nécessite node 20 ou ultérieur.</strong>
+        <strong>
+          <PlatformWarningIcon />
+           Cette version nécessite node 20 ou ultérieur.
+        </strong>
       </p>
       <ul>
         <li>mise-à-jour des dépendances (node 20 ou ultérieur requis)</li>
@@ -287,7 +291,9 @@ function ENServerNotes() {
       </h2>
       <em>Published on 17/05/2024</em>
       <p>
-        <strong>⚠️ This version requires node 20 or later.</strong>
+        <strong>
+          <PlatformWarningIcon /> This version requires node 20 or later.
+        </strong>
       </p>
       <ul>
         <li>dependency update (node 20 or later required)</li>

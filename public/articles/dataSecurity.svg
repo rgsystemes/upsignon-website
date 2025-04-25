@@ -11,7 +11,7 @@
         <rect id="Rectangle_647" data-name="Rectangle 647" width="191.525" height="129.615"
           rx="1.225" fill="#313566"></rect>
         <rect id="Rectangle_648" data-name="Rectangle 648" width="177.496" height="102.472"
-          rx="1.225" transform="translate(7.014 6.71)" fill="#04bab1"></rect>
+          rx="1.225" transform="translate(7.014 6.71)" fill="#5bc0b1"></rect>
         <path id="Rectangle_649" data-name="Rectangle 649"
           d="M1.005,0H62.43a1.005,1.005,0,0,1,1.005,1.005V4.88a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V1.005A1.005,1.005,0,0,1,1.005,0Z"
           transform="translate(64.045 155.843)" fill="#313566"></path>
@@ -19,13 +19,13 @@
       <rect id="Rectangle_650" data-name="Rectangle 650" width="91.364" height="116.006" rx="1.367"
         transform="translate(0 46.874) rotate(-0.279)" fill="#313566"></rect>
       <rect id="Rectangle_651" data-name="Rectangle 651" width="76.276" height="99.233"
-        transform="matrix(1, -0.005, 0.005, 1, 7.48, 55.041)" fill="#04bab1"></rect>
+        transform="matrix(1, -0.005, 0.005, 1, 7.48, 55.041)" fill="#5bc0b1"></rect>
       <g id="Groupe_1960" data-name="Groupe 1960" transform="translate(43.412 49.387)">
         <g id="Groupe_1959" data-name="Groupe 1959" transform="translate(142.261 31.548)">
           <rect id="Rectangle_652" data-name="Rectangle 652" width="45.224" height="80.965"
             rx="1.428" fill="#313566"></rect>
           <rect id="Rectangle_653" data-name="Rectangle 653" width="35.285" height="66.195"
-            transform="translate(4.833 6.565)" fill="#04bab1"></rect>
+            transform="translate(4.833 6.565)" fill="#5bc0b1"></rect>
         </g>
         <ellipse id="Ellipse_95" data-name="Ellipse 95" cx="0.889" cy="0.889" rx="0.889" ry="0.889"
           transform="translate(165.096 34.121)" fill="#fff"></ellipse>
@@ -253,10 +253,10 @@
         transform="translate(-626.89 -235.357)" fill="#313566"></path>
       <path id="Tracé_17528" data-name="Tracé 17528"
         d="M701.372,379.087l-34.4-19.864a28.6,28.6,0,0,1-14.3-24.765v-70.17l48.7-12.9,48.7,12.9v70.17a28.6,28.6,0,0,1-14.3,24.765Z"
-        transform="translate(-633.786 -231.945)" fill="#00aba9"></path>
+        transform="translate(-633.786 -231.945)" fill="#65D5C5"></path>
       <path id="Tracé_17529" data-name="Tracé 17529"
         d="M698.341,254.537l-.266-.071-42.857,11.35v61.749A25.164,25.164,0,0,0,667.8,349.358l30.276,17.479.266-.154Z"
-        transform="translate(-630.489 -227.967)" fill="#04bab1"></path>
+        transform="translate(-630.489 -227.967)" fill="#5bc0b1"></path>
       <g id="Groupe_1956" data-name="Groupe 1956" transform="translate(33.228 46.579)">
         <path id="Tracé_17530" data-name="Tracé 17530"
           d="M721.831,293.4a28.33,28.33,0,0,0-4.8-11.776l4.208-5.291-5.646-5.646-5.259,4.183a28.3,28.3,0,0,0-11.721-4.928l-.766-6.724h-7.985l-.761,6.68a28.333,28.333,0,0,0-11.776,4.8l-5.291-4.208-5.646,5.646,4.183,5.259a28.321,28.321,0,0,0-4.926,11.719l-6.726.768v7.985l6.68.759a28.332,28.332,0,0,0,4.8,11.776l-4.208,5.293,5.646,5.646,5.259-4.183a28.326,28.326,0,0,0,11.721,4.926l.766,6.724h7.985l.759-6.68a28.293,28.293,0,0,0,11.778-4.8l5.291,4.21,5.646-5.648-4.183-5.256a28.343,28.343,0,0,0,4.926-11.721l6.724-.766v-7.985Zm-28.113,26.783a22.173,22.173,0,1,1,22.174-22.171A22.172,22.172,0,0,1,693.718,320.187Z"

@@ -268,7 +268,7 @@ const translations = {
       success: "Devis envoyé",
     },
     distribTitle: "Vous êtes revendeur ?",
-    distribDetails: "Nous avons un deal gagnant-gagnant à vous proposer. Contactez-nous !",
+    distribDetails: "Nous avons un deal gagnant-gagnant à vous proposer.",
   },
   downloads: {
     metaDescription:

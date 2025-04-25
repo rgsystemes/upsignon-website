@@ -1,6 +1,6 @@
 
 .content a:not(.buttonLink), .content .backArrow {
-  color: rgb(0, 171, 169);
+  color: var(--primary);
 }
 .content p {
   margin-bottom: 10px;
@@ -63,7 +63,7 @@
 }
 
 .green {
-  color: rgb(0,171,169);
+  color: var(--primary);
 }
 
 .whiteSection {
@@ -97,7 +97,7 @@
   max-width: 120px;
   font-size: 3em;
   font-weight: bold;
-  color: rgb(0,171,169);
+  color: var(--primary);
 }
 .col3IlluContainer img {
   width: 100%;
@@ -159,7 +159,7 @@
   color: white;
 }
 .quinconceCard:not(.featuresCard) svg {
-  fill: rgb(0, 171, 169);
+  fill: var(--primary);
 }
 .quinconceCard p {
   margin-top: 20px;
@@ -196,7 +196,7 @@
 
 
 .greenCard {
-  background-color: rgb(0, 171, 169);
+  background-color: var(--secondary);
   color: white;
   border-radius: 15px;
   display: flex;
@@ -215,9 +215,6 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
   row-gap: 20px;
-}
-.greenCardNumber {
-  color: rgb(38,46,90);
 }
 .greenCardNumber > div:first-child {
   font-size: 3em;
@@ -260,7 +257,7 @@
   margin-bottom: 30px;
 }
 .greenSectionCard {
-  background-color: rgb(0, 171, 169);
+  background-color: var(--secondary);
   color: white;
   padding: 30px;
   border-radius: 15px;
