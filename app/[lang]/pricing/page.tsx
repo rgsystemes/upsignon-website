@@ -41,13 +41,13 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         </div>
         <div className={styles.proPricing}>
           <h3 className={styles.pricingTitlePro}>{t.pricing.proPricing.t}</h3>
-          {/* <div className={styles.proPrice}>
+          <div className={styles.proPrice}>
             {defaultLicencePrice}€ <span className={styles.proPriceUnit}>{t.pricing.proPricing.licencePriceUnit}</span>
           </div>
           <div className={styles.priceDetail}>{t.pricing.proPricing.licenceOver1000}</div>
           <div className={styles.priceDetail}>{t.pricing.proPricing.licenceOver12000}</div>
           <div className={styles.priceDetail}>{t.pricing.proPricing.licence3YearsReduction}</div>
-          <div className={styles.selfHostingTitle}>{t.pricing.proPricing.onPremOption}</div> */}
+          <div className={styles.selfHostingTitle}>{t.pricing.proPricing.onPremOption}</div>
           <ContactUsButton
             lang={lang}
             className={styles.proPricingActionButton}
@@ -55,11 +55,11 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
           />
           <FreeTrialButton lang={lang} className={styles.proPricingActionButton} />
 
-          {/* <div className={styles.pricingDetails}>{t.pricing.proPricing.saasDetails}</div>
-          <div className={styles.pricingDetails}>{t.pricing.proPricing.onPremDetails}</div> */}
+          <div className={styles.pricingDetails}>{t.pricing.proPricing.saasDetails}</div>
+          <div className={styles.pricingDetails}>{t.pricing.proPricing.onPremDetails}</div>
         </div>
       </div>
-      {/* <PriceSimulator lang={lang} /> */}
+      <PriceSimulator lang={lang} />
       <h1>{t.pricing.distribTitle}</h1>
       <p className={styles.distribDetails}>{t.pricing.distribDetails}</p>
     </div>
