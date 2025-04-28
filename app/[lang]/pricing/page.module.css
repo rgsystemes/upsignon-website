@@ -56,15 +56,16 @@
 .persoPrice {
   font-size: 3em;
   color: var(--text-color);
+  font-weight: 900;
 }
 .proPrice {
   font-size: 3em;
+  font-weight: 900;
   color: var(--text-color);
   margin-bottom: 5px;
 }
 .proPriceUnit {
-  font-size: 1.2rem;
-  font-style: italic;
+  font-size: 0.8rem;
   color: var(--text-color);
 }
 .selfHostingTitle {

@@ -223,7 +223,7 @@ const translations: typeof fr = {
     proPricing: {
       t: "PRO",
       contactUs: "Contact us",
-      licencePriceUnit: "/ vault / year",
+      licencePriceUnit: "per vault per month. Billed annually.",
       saasDetails: "SAAS hosting is included in the licence price.",
       onPremOption: "Self hosting option (Linux): 1.000€ / year",
       onPremDetails:

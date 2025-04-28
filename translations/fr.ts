@@ -222,7 +222,7 @@ const translations = {
     proPricing: {
       t: "PRO",
       contactUs: "Contactez-nous",
-      licencePriceUnit: "/ coffre-fort / an",
+      licencePriceUnit: "par coffre-fort par mois. Facturé annuellement.",
       saasDetails: "L'hébergement SAAS est inclus dans le prix des licences.",
       onPremOption: "Option auto-hébergement (Linux) : 1 000€ / an",
       onPremDetails:
