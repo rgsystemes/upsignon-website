@@ -45,9 +45,6 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
               {defaultLicencePrice}€{" "}
               <span className={styles.proPriceUnit}>{t.pricing.proPricing.licencePriceUnit}</span>
             </div>
-            <div className={styles.priceDetail}>{t.pricing.proPricing.licenceOver1000}</div>
-            <div className={styles.priceDetail}>{t.pricing.proPricing.licenceOver12000}</div>
-            <div className={styles.priceDetail}>{t.pricing.proPricing.licence3YearsReduction}</div>
             <div className={styles.selfHostingTitle}>{t.pricing.proPricing.onPremOption}</div>
             <ContactUsButton
               lang={lang}

@@ -224,9 +224,6 @@ const translations: typeof fr = {
       t: "PRO",
       contactUs: "Contact us",
       licencePriceUnit: "/ vault / year",
-      licenceOver1000: "-5% for licenses beyond 1.000",
-      licenceOver12000: "-20% for licenses beyond 12.000",
-      licence3YearsReduction: "-10% for a 3-year order",
       saasDetails: "SAAS hosting is included in the licence price.",
       onPremOption: "Self hosting option (Linux): 1.000€ / year",
       onPremDetails:
