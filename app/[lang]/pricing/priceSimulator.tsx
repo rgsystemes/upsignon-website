@@ -7,7 +7,7 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { FormModalButton } from "../components/formModal/formModal";
 import { sendAppServerRequest } from "../components/helpers/sendAppServerRequest";
-import { defaultLicencePrice } from "./priceHelper";
+import { defaultLicencePriceNumber } from "./priceHelper";
 function f(n: number): string {
   return n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
@@ -45,7 +45,7 @@ export function PriceSimulator(p: { lang: string }) {
   const [y3, setY3] = useState(true);
 
   const nY = y3 ? 3 : 1;
-  const p1 = defaultLicencePrice;
+  const p1 = defaultLicencePriceNumber;
   const p2 = p1 * 0.95;
   const p3 = p1 * 0.8;
   const tva = 1.2;
