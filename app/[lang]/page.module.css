@@ -203,7 +203,7 @@
 
 /* SECURITY BY DESIGN SECTION */
 .securityByDesignSection {
-  background-image: url("../../public/images/securityBackground.jpg");
+  background-image: url("../../public/backgrounds/securityBackground.jpg");
   background-size: cover;
   padding: 50px 20px;
   color: white;
