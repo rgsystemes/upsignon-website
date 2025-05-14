@@ -12,19 +12,10 @@ const translations: typeof fr = {
   },
   actions: {
     contactUs: "Let's talk about it!",
-    callMeBackLater: "Be contacted later",
     cancel: "Cancel",
     close: "Close",
-    freeTrial: "Tester 1 mois gratuitement",
+    freeTrial: "Test 1 month for free",
     calendarLink: "Book a slot in my calendar",
-  },
-  callBackForm: {
-    nameLabel: "Your name",
-    companyLabel: "Name of your organisation",
-    emailLabel: "Email adress",
-    telLabel: "Phone number",
-    callbackDate: "When do you wish to be contacted?",
-    submit: "Send",
   },
   freeTrialForm: {
     nameLabel: "Your name",

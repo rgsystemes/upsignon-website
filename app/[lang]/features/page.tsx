@@ -56,11 +56,14 @@ import syncImg from "../../../public/images/sync.svg";
 import Link from "next/link";
 import { ContactUsButton } from "../components/contactUsButton/contactUsButton";
 import VimeoPlayer from "../components/vimeoPlayer/vimeoPlayer";
-import { ContactLaterButton } from "../components/contactLaterButton/contactLaterButton";
 import { LinkToAnchor } from "../components/linkToAnchor/linkToAnchor";
 import { FreeTrialButton } from "../components/freeTrialButton/freeTrial";
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await params;
   const t = getDictionary(lang);
   return {
@@ -76,7 +79,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
-export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
   const { lang } = await params;
   const t = getDictionary(lang);
   return (
@@ -88,15 +95,31 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
             <h2 className={styles.demoTitle}>
               <LinkToAnchor id="appDemo">{t.pitch.demo.appDemo}</LinkToAnchor>
             </h2>
-            <VimeoPlayer videoId="964351571" title={t.pitch.demo.appDemo} className={styles.demoVideo} />
+            <VimeoPlayer
+              videoId="964351571"
+              title={t.pitch.demo.appDemo}
+              className={styles.demoVideo}
+            />
             <h2 className={styles.demoTitle}>
-              <LinkToAnchor id="extensionDemo">{t.pitch.demo.extensionDemo}</LinkToAnchor>
+              <LinkToAnchor id="extensionDemo">
+                {t.pitch.demo.extensionDemo}
+              </LinkToAnchor>
             </h2>
-            <VimeoPlayer videoId="964418300" title={t.pitch.demo.extensionDemo} className={styles.demoVideo} />
+            <VimeoPlayer
+              videoId="964418300"
+              title={t.pitch.demo.extensionDemo}
+              className={styles.demoVideo}
+            />
             <h2 className={styles.demoTitle}>
-              <LinkToAnchor id="dashboardDemo">{t.pitch.demo.consoleDemo}</LinkToAnchor>
+              <LinkToAnchor id="dashboardDemo">
+                {t.pitch.demo.consoleDemo}
+              </LinkToAnchor>
             </h2>
-            <VimeoPlayer videoId="964669787" title={t.pitch.demo.extensionDemo} className={styles.demoVideo} />
+            <VimeoPlayer
+              videoId="964669787"
+              title={t.pitch.demo.extensionDemo}
+              className={styles.demoVideo}
+            />
           </div>
         </section>
         <div className={styles.actionContainer}>
@@ -104,16 +127,24 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
           <ContactUsButton lang={lang} className={styles.contactAction} />
         </div>
         <div className={styles.otherActionContainer}>
-          <ContactLaterButton lang={lang} className={styles.otherAction} />
           <FreeTrialButton lang={lang} className={styles.otherAction} />
         </div>
         <h2 className={styles.feature_family_title}>
-          <LinkToAnchor id="proPerso">{t.features.generalSubtitle}</LinkToAnchor>
+          <LinkToAnchor id="proPerso">
+            {t.features.generalSubtitle}
+          </LinkToAnchor>
         </h2>
         <FeatureSection
           lang={lang}
           title={t.features.proPerso.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.proPerso.details}
           imageSrc={vaultListImg}
@@ -128,7 +159,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.crossPlatform.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.crossPlatform.details}
           imageSrc={multiDeviceImg}
@@ -139,7 +177,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.syncing.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.syncing.details}
           imageSrc={syncImg}
@@ -151,7 +196,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.unlimitedAccounts.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.unlimitedAccounts.details}
           imageSrc={addAccountImg}
@@ -160,7 +212,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.unlimitedCodes.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.unlimitedCodes.details}
           imageSrc={addCodeImg}
@@ -169,7 +228,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.quickView.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.quickView.details}
           imageSrc={quickViewImg}
@@ -178,7 +244,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.passwordStrength.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.passwordStrength.details}
           imageSrc={passwordScoresImg}
@@ -191,7 +264,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.passwordGenerator.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.passwordGenerator.details}
           imageSrc={passwordGeneratorImg}
@@ -200,7 +280,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.passwordHistory.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.passwordHistory.details}
           imageSrc={passwordHistoryImg}
@@ -209,7 +296,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.multiUrls.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.multiUrls.details}
           imageSrc={manyUrlsImg}
@@ -218,7 +312,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.notes.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.notes.details}
           imageSrc={notesImg}
@@ -227,7 +328,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.totp.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.totp.details}
           imageSrc={totpImg}
@@ -239,7 +347,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.paymentData.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.paymentData.details}
           imageSrc={bankDetailsImg}
@@ -251,7 +366,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.trustedContacts.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "no", perso: "yes" }}
           details={t.features.trustedContacts.details}
           imageSrc={trustedContactsImg}
@@ -260,7 +382,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.sharing.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.sharing.details}
           imageSrc={sharingImg}
@@ -269,7 +398,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.rightsManagement.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.rightsManagement.details}
           imageSrc={sharingRightsManagementImg}
@@ -277,43 +413,69 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         >
           <ul>
             <li>
-              <strong>{t.features.rightsManagement.rightLevels.blind.title}</strong>{" "}
+              <strong>
+                {t.features.rightsManagement.rightLevels.blind.title}
+              </strong>{" "}
               {t.features.rightsManagement.rightLevels.blind.def}
             </li>
             <li>
-              <strong>{t.features.rightsManagement.rightLevels.readOnly.title}</strong>{" "}
+              <strong>
+                {t.features.rightsManagement.rightLevels.readOnly.title}
+              </strong>{" "}
               {t.features.rightsManagement.rightLevels.readOnly.def}
             </li>
             <li>
-              <strong>{t.features.rightsManagement.rightLevels.editor.title}</strong>{" "}
+              <strong>
+                {t.features.rightsManagement.rightLevels.editor.title}
+              </strong>{" "}
               {t.features.rightsManagement.rightLevels.editor.def}
             </li>
             <li>
-              <strong>{t.features.rightsManagement.rightLevels.owner.title}</strong>{" "}
+              <strong>
+                {t.features.rightsManagement.rightLevels.owner.title}
+              </strong>{" "}
               {t.features.rightsManagement.rightLevels.owner.def}
             </li>
           </ul>
         </FeatureSection>
         <h2 className={styles.feature_family_title}>
-          <LinkToAnchor id="autofill">{t.features.autofillAutosaveSubtitle}</LinkToAnchor>
+          <LinkToAnchor id="autofill">
+            {t.features.autofillAutosaveSubtitle}
+          </LinkToAnchor>
         </h2>
         <AutofillSection lang={lang} />
         <FeatureSection
           lang={lang}
           title={t.features.autosaveDesktop.title}
-          platforms={{ ios: "no", android: "no", windows: "yes", macos: "yes", linux: "yes", chromeos: "no" }}
+          platforms={{
+            ios: "no",
+            android: "no",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "no",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.autosaveDesktop.details}
           imageSrc={autosaveDesktopImg}
           imageAlt={t.features.autosaveDesktop.imageAlt}
         />
         <h2 className={styles.feature_family_title}>
-          <LinkToAnchor id="organize">{t.features.searchFilterOrganizeSubtitle}</LinkToAnchor>
+          <LinkToAnchor id="organize">
+            {t.features.searchFilterOrganizeSubtitle}
+          </LinkToAnchor>
         </h2>
         <FeatureSection
           lang={lang}
           title={t.features.search.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.search.details}
           imageSrc={searchImg}
@@ -322,7 +484,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.filter.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.filter.details}
           imageSrc={filtersImg}
@@ -331,19 +500,35 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.organize.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.organize.details}
           imageSrc={foldersImg}
           imageAlt={t.features.organize.imageAlt}
         />
         <h2 className={styles.feature_family_title}>
-          <LinkToAnchor id="importExport">{t.features.importExportSubtitle}</LinkToAnchor>
+          <LinkToAnchor id="importExport">
+            {t.features.importExportSubtitle}
+          </LinkToAnchor>
         </h2>
         <FeatureSection
           lang={lang}
           title={t.features.csvImport.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.csvImport.details}
           imageSrc={csvImportImg}
@@ -352,7 +537,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.csvExport.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.csvExport.details}
           imageSrc={csvExportImg}
@@ -361,12 +553,21 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
           <strong>{t.features.csvExport.warningPro}</strong>
         </FeatureSection>
         <h2 className={styles.feature_family_title}>
-          <LinkToAnchor id="securityFeatures">{t.features.securityFeaturesSubtitle}</LinkToAnchor>
+          <LinkToAnchor id="securityFeatures">
+            {t.features.securityFeaturesSubtitle}
+          </LinkToAnchor>
         </h2>
         <FeatureSection
           lang={lang}
           title={t.features.endToEndEncryption.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.endToEndEncryption.details}
           imageSrc={cryptographyImg}
@@ -376,7 +577,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.passwordLocking.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.passwordLocking.details}
           imageSrc={passwordLockingImg}
@@ -386,7 +594,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.biometricUnlock.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "no", chromeos: "no" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "no",
+            chromeos: "no",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.biometricUnlock.details}
           imageSrc={biometryImg}
@@ -395,7 +610,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.autolock.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.autolock.details}
           imageSrc={autolockImg}
@@ -406,7 +628,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.forgottenPassword.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "warning" }}
           details={t.features.forgottenPassword.details}
           imageSrc={proForgottenPasswordImg}
@@ -415,7 +644,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.dataBackup.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "warning" }}
           details={t.features.dataBackup.details}
           imageSrc={persoDataRecoveryImg}
@@ -424,7 +660,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.mfaByDesign.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.mfaByDesign.details}
           imageSrc={mfaImg}
@@ -434,7 +677,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.deviceRevocation.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.deviceRevocation.details}
           imageSrc={deviceManagementImg}
@@ -443,7 +693,14 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.offlineAcess.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "yes", linux: "yes", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "yes",
+            linux: "yes",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.offlineAcess.details}
           imageSrc={offlineModeImg}
@@ -480,16 +737,27 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <FeatureSection
           lang={lang}
           title={t.features.screenshotProtection.title}
-          platforms={{ ios: "yes", android: "yes", windows: "yes", macos: "no", linux: "no", chromeos: "yes" }}
+          platforms={{
+            ios: "yes",
+            android: "yes",
+            windows: "yes",
+            macos: "no",
+            linux: "no",
+            chromeos: "yes",
+          }}
           tags={{ pro: "yes", perso: "yes" }}
           details={t.features.screenshotProtection.details}
           imageSrc={screenshotProtectionImg}
           imageAlt={t.features.screenshotProtection.imageAlt}
         />
         <h2 className={styles.feature_family_title}>
-          <LinkToAnchor id="dashboard">{t.features.supervisionSubtitle}</LinkToAnchor>
+          <LinkToAnchor id="dashboard">
+            {t.features.supervisionSubtitle}
+          </LinkToAnchor>
         </h2>
-        <p className={styles.supervision_general_intro}>{t.features.supervisionGeneralExplanation}</p>
+        <p className={styles.supervision_general_intro}>
+          {t.features.supervisionGeneralExplanation}
+        </p>
         <FeatureSection
           lang={lang}
           title={t.features.passwordStrengthEvolutionCurve.title}

@@ -12,7 +12,6 @@ import cryptographyImg from "../../public/images/cryptography.svg";
 import VimeoPlayer from "./components/vimeoPlayer/vimeoPlayer";
 import CustomerCarousel from "./components/customerCarousel/customerCarousel";
 import SingleAdvantage from "./components/singleAdvantage/singleAdvantage";
-import { ContactLaterButton } from "./components/contactLaterButton/contactLaterButton";
 import { ContactUsButton } from "./components/contactUsButton/contactUsButton";
 import { GreenCheckIcon } from "./components/greenCheckIcon/greenCheckIcon";
 import { LanguageFlags } from "./components/languageFlags/languageFlags";
@@ -90,7 +89,6 @@ export default async function Page({
         </section>
         <div className={styles.actionContainer}>
           <ContactUsButton lang={lang} className={styles.actionLink} />
-          <ContactLaterButton lang={lang} className={styles.actionLink} />
           <FreeTrialButton lang={lang} className={styles.actionLinkPrimary} />
         </div>
       </div>
@@ -178,7 +176,6 @@ export default async function Page({
                 lang={lang}
                 className={styles.actionLinkPrimary}
               />
-              <ContactLaterButton lang={lang} className={styles.actionLink} />
             </div>
           </div>
         </div>
