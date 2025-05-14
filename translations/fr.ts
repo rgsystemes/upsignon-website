@@ -9,11 +9,10 @@ const translations = {
     resources: "Ressources",
   },
   actions: {
-    contactUs: "Parlons-en !",
+    contactUs: "Contactez-nous",
     cancel: "Annuler",
     close: "Fermer",
     freeTrial: "Tester 1 mois gratuitement",
-    calendarLink: "Réserver un créneau dans mon agenda",
   },
   freeTrialForm: {
     nameLabel: "Votre nom",

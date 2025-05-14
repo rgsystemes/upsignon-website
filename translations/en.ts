@@ -11,11 +11,10 @@ const translations: typeof fr = {
     resources: "Resources",
   },
   actions: {
-    contactUs: "Let's talk about it!",
+    contactUs: "Contact us",
     cancel: "Cancel",
     close: "Close",
     freeTrial: "Test 1 month for free",
-    calendarLink: "Book a slot in my calendar",
   },
   freeTrialForm: {
     nameLabel: "Your name",

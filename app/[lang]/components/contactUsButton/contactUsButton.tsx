@@ -4,13 +4,17 @@ import { useState } from "react";
 import Modal from "react-modal";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "./contactUsButton.module.css";
-import Link from "next/link";
-import giregImg from "../../../../public/images/gireg.jpg";
 import Image from "next/image";
 import { ModalLinkOpener } from "../../../useModalLinkOpener";
+import { useHubspotForm } from "next-hubspot";
+import Link from "next/link";
 
 Modal.setAppElement("#body");
-export function ContactUsButton(p: { lang: string; className: string; text?: string }) {
+export function ContactUsButton(p: {
+  lang: string;
+  className: string;
+  text?: string;
+}) {
   const [isOpen, setIsOpen] = useState(false);
   function openModal() {
     setIsOpen(true);
@@ -46,20 +50,24 @@ function ContactUsForm(p: { lang: string; onRequestClose: () => void }) {
   return (
     <div className={styles.modalContent}>
       <h1>{t.actions.contactUs}</h1>
-      <Image src={giregImg} alt="" className={styles.photo} />
-      <div>Gireg</div>
       <Link href="mailto:contact@rgsystem.septeo.com" className={styles.link}>
         contact@rgsystem.septeo.com
       </Link>
       <Link href="tel:+33411934200" className={styles.link}>
         +33 4 11 93 42 99
       </Link>
-      {/* <Link href="https://calendly.com/upsignon" className={styles.link} target="_blank">
-        {t.actions.calendarLink}
-      </Link> */}
-      <button onClick={p.onRequestClose} className={styles.closeButton}>
-        {t.actions.close}
-      </button>
+      <HubspotForm />
     </div>
   );
 }
+
+const HubspotForm = () => {
+  const { isFormCreated, isError, error } = useHubspotForm({
+    portalId: "145668054",
+    formId: "3fd5d5c6-2c01-4dc7-bace-d9f412f7bdbe",
+    region: "eu1",
+    target: "#hubspot-form-wrapper",
+  });
+
+  return <div id="hubspot-form-wrapper" />;
+};

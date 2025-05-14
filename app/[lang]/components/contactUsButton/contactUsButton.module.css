@@ -21,14 +21,6 @@
   padding: 30px 30px;
   width: 100%;
 }
-.photo {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  margin: 30px auto 5px auto;
-  object-fit: cover;
-  object-position: 55% 0;
-}
 .link {
   display: block;
   color: var(--primary);
@@ -38,15 +30,6 @@
 .link:hover {
   text-decoration: underline;
   text-decoration-color: var(--primary);
-}
-.closeButton {
-  background: none!important;
-  border: none;
-  padding: 0!important;
-  color: var(--text-color-alt);
-  text-decoration: underline;
-  cursor: pointer;
-  margin-top: 20px;
 }
 
 
