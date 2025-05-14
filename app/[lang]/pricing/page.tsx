@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import styles from "./page.module.css";
-import { PriceSimulator } from "./priceSimulator";
 import { ContactUsButton } from "../components/contactUsButton/contactUsButton";
 import { getDictionary } from "../../../translations/translations";
 import { FreeTrialButton } from "../components/freeTrialButton/freeTrial";
@@ -79,7 +78,6 @@ export default async function Page({
             </div>
           </div>
         </div>
-        <PriceSimulator lang={lang} />
         <h1>{t.pricing.distribTitle}</h1>
         <p className={styles.distribDetails}>{t.pricing.distribDetails}</p>
         <div className={styles.centerContainer}>
