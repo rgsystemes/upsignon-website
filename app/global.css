@@ -19,6 +19,10 @@ html {
   --grey100: #eaecf0;
   --grey300: #D0d5DD;
   --tab-background: #F2F4F7;
+  --purple: #636fc1;
+  --dark-purple: #4e549f;
+  --border-blue: #d4e0ff;
+  --white-70: #ffffffb3;
   background-color: var(--background-color);
 }
 

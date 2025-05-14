@@ -17,8 +17,13 @@ import { ContactUsButton } from "./components/contactUsButton/contactUsButton";
 import { GreenCheckIcon } from "./components/greenCheckIcon/greenCheckIcon";
 import { LanguageFlags } from "./components/languageFlags/languageFlags";
 import { FreeTrialButton } from "./components/freeTrialButton/freeTrial";
+import CustomerQuotes from "./components/customerQuotes/customerQuotes";
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await params;
   const t = getDictionary(lang);
   return {
@@ -34,7 +39,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
-export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
   const { lang } = await params;
   const t = getDictionary(lang);
   return (
@@ -42,7 +51,11 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
       <div className={styles.blueBackground}>
         <section className={styles.titleSection}>
           <h1 className={styles.moto}>{t.pitch.moto}</h1>
-          <VimeoPlayer videoId="915105612" title={t.pitch.prezVideoTitle} className={styles.demoVideo} />
+          <VimeoPlayer
+            videoId="915105612"
+            title={t.pitch.prezVideoTitle}
+            className={styles.demoVideo}
+          />
           <p className={styles.subtitle}>{t.pitch.subtitle}</p>
         </section>
         <section className={styles.tagsSection}>
@@ -83,7 +96,9 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
       </div>
       <section className={styles.keyMetricsSection}>
         <div className={styles.keyMetricsSectionContent}>
-          <h1 className={styles.sectionTitle}>{t.pitch.keyMetrics.sectionTitle}</h1>
+          <h1 className={styles.sectionTitle}>
+            {t.pitch.keyMetrics.sectionTitle}
+          </h1>
           <div className={styles.keyMetricsSubsections}>
             <div className={styles.keyMetricsSubsection}>
               <div className={styles.keyMetricsNumber}>80%</div>
@@ -98,37 +113,71 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
           </div>
         </div>
       </section>
-      <section className={`${styles.advantagesSection} ${styles.advantagesBackground}`}>
+      <section
+        className={`${styles.advantagesSection} ${styles.advantagesBackground}`}
+      >
         <div className={styles.advantagesSectionContent}>
-          <h1 className={styles.sectionTitle}>{t.pitch.advantages.sectionTitle}</h1>
-          <SingleAdvantage title={t.pitch.advantages[1].t} details={t.pitch.advantages[1].d} />
-          <SingleAdvantage title={t.pitch.advantages[2].t} details={t.pitch.advantages[2].d} />
-          <SingleAdvantage title={t.pitch.advantages[3].t} details={t.pitch.advantages[3].d} />
-          <SingleAdvantage title={t.pitch.advantages[4].t} details={t.pitch.advantages[4].d} />
-          <SingleAdvantage title={t.pitch.advantages[5].t} details={t.pitch.advantages[5].d} />
-          <SingleAdvantage title={t.pitch.advantages[6].t} details={t.pitch.advantages[6].d} />
-          <SingleAdvantage title={t.pitch.advantages[7].t} details={t.pitch.advantages[7].d}>
+          <h1 className={styles.sectionTitle}>
+            {t.pitch.advantages.sectionTitle}
+          </h1>
+          <SingleAdvantage
+            title={t.pitch.advantages[1].t}
+            details={t.pitch.advantages[1].d}
+          />
+          <SingleAdvantage
+            title={t.pitch.advantages[2].t}
+            details={t.pitch.advantages[2].d}
+          />
+          <SingleAdvantage
+            title={t.pitch.advantages[3].t}
+            details={t.pitch.advantages[3].d}
+          />
+          <SingleAdvantage
+            title={t.pitch.advantages[4].t}
+            details={t.pitch.advantages[4].d}
+          />
+          <SingleAdvantage
+            title={t.pitch.advantages[5].t}
+            details={t.pitch.advantages[5].d}
+          />
+          <SingleAdvantage
+            title={t.pitch.advantages[6].t}
+            details={t.pitch.advantages[6].d}
+          />
+          <SingleAdvantage
+            title={t.pitch.advantages[7].t}
+            details={t.pitch.advantages[7].d}
+          >
             <LanguageFlags lang={lang} />
           </SingleAdvantage>
         </div>
       </section>
       <section className={styles.proVsPersoSection}>
         <div className={styles.proVsPersoSectionContent}>
-          <h1 className={styles.sectionTitle}>{t.pitch.proVsPerso.sectionTitle}</h1>
+          <h1 className={styles.sectionTitle}>
+            {t.pitch.proVsPerso.sectionTitle}
+          </h1>
           <h2>
-            <span className={styles.persoTTag}>{t.pitch.proVsPerso.perso.tTag}</span>
+            <span className={styles.persoTTag}>
+              {t.pitch.proVsPerso.perso.tTag}
+            </span>
             <span>{t.pitch.proVsPerso.perso.t}</span>
           </h2>
           <p>{t.pitch.proVsPerso.perso.p1}</p>
           <h2>
-            <span className={styles.proTTag}>{t.pitch.proVsPerso.pro.tTag}</span>
+            <span className={styles.proTTag}>
+              {t.pitch.proVsPerso.pro.tTag}
+            </span>
             <span>{t.pitch.proVsPerso.pro.t}</span>
           </h2>
           <p>{t.pitch.proVsPerso.pro.p1}</p>
           <p>{t.pitch.proVsPerso.pro.p2}</p>
           <div className={styles.actionContainer}>
             <div className={styles.actionContainer}>
-              <ContactUsButton lang={lang} className={styles.actionLinkPrimary} />
+              <ContactUsButton
+                lang={lang}
+                className={styles.actionLinkPrimary}
+              />
               <ContactLaterButton lang={lang} className={styles.actionLink} />
             </div>
           </div>
@@ -136,10 +185,16 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
       </section>
       <section className={styles.securityByDesignSection}>
         <div className={styles.securityByDesignSectionContent}>
-          <h1 className={styles.sectionTitle}>{t.pitch.securityByDesign.sectionTitle}</h1>
+          <h1 className={styles.sectionTitle}>
+            {t.pitch.securityByDesign.sectionTitle}
+          </h1>
           <div className={styles.securityArg}>
             <div className={styles.securityArgTitleContainer}>
-              <Image src={cryptographyImg} alt="" className={styles.securityByDesignImg} />
+              <Image
+                src={cryptographyImg}
+                alt=""
+                className={styles.securityByDesignImg}
+              />
               <h2>{t.pitch.securityByDesign.e2eEnc.t}</h2>
             </div>
             <p>{t.pitch.securityByDesign.e2eEnc.p1}</p>
@@ -147,14 +202,22 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
           </div>
           <div className={styles.securityArg}>
             <div className={styles.securityArgTitleContainer}>
-              <Image src={cryptographyImg} alt="" className={styles.securityByDesignImg} />
+              <Image
+                src={cryptographyImg}
+                alt=""
+                className={styles.securityByDesignImg}
+              />
               <h2>{t.pitch.securityByDesign.mfa.t}</h2>
             </div>
             <p>{t.pitch.securityByDesign.mfa.p1}</p>
           </div>
           <div className={styles.securityArg}>
             <div className={styles.securityArgTitleContainer}>
-              <Image src={cryptographyImg} alt="" className={styles.securityByDesignImg} />
+              <Image
+                src={cryptographyImg}
+                alt=""
+                className={styles.securityByDesignImg}
+              />
               <h2>{t.pitch.securityByDesign.zeroKnowledge.t}</h2>
             </div>
             <p>{t.pitch.securityByDesign.zeroKnowledge.p1}</p>
@@ -163,9 +226,12 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
       </section>
       <section className={styles.customerListSection}>
         <div className={styles.customerListSectionContent}>
-          <h1 className={styles.sectionTitle}>{t.pitch.customerList.sectionTitle}</h1>
+          <h1 className={styles.sectionTitle}>
+            {t.pitch.customerList.sectionTitle}
+          </h1>
         </div>
         <CustomerCarousel />
+        <CustomerQuotes lang={lang} />
       </section>
     </div>
   );

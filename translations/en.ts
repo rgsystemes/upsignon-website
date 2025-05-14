@@ -210,6 +210,17 @@ const translations: typeof fr = {
     customerList: {
       sectionTitle: "They trust us",
     },
+    customerQuotes: {
+      title: "Customer testimonial",
+      quotes: {
+        metavonics: {
+          name: "Steve Bazin",
+          quote: "I deployed and trained 3 of my colleagues on UpSignOn today. 30 minutes were enough. They appreciate the simplicity and ergonomics of the solution. I hope that the acquisition by RG System will allow your solution to be discovered more, it deserves it!",
+          jobTitle: "IT Manager",
+          companyName: "Metavonics",
+        }
+      }
+    },
   },
   pricing: {
     metaDescription: "Get our clear and transparent pricing and receive a quote by email.",
