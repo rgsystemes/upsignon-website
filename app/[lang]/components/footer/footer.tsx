@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "./footer.module.css";
+import { ContactUsButton } from "../contactUsButton/contactUsButton";
 
 export function Footer(p: { lang: string }) {
   const t = getDictionary(p.lang);
@@ -36,13 +37,7 @@ export function Footer(p: { lang: string }) {
         <div className={styles.footerSection}>
           <section>
             <h1>{t.footer.contactUs}</h1>
-            <address>
-              <Link href="mailto:contact@rgsystem.septeo.com">
-                contact@rgsystem.septeo.com
-              </Link>
-              <br />
-              <Link href="tel:+33411934200">+33 4 11 93 42 00</Link>
-            </address>
+            <ContactUsButton lang={p.lang} className={styles.contactUsBtn} />
           </section>
           <section>
             <h1>{t.footer.followUs}</h1>

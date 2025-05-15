@@ -4,10 +4,8 @@ import { useState } from "react";
 import Modal from "react-modal";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "./contactUsButton.module.css";
-import Image from "next/image";
 import { ModalLinkOpener } from "../../../useModalLinkOpener";
 import { useHubspotForm } from "next-hubspot";
-import Link from "next/link";
 
 Modal.setAppElement("#body");
 export function ContactUsButton(p: {
@@ -50,12 +48,6 @@ function ContactUsForm(p: { lang: string; onRequestClose: () => void }) {
   return (
     <div className={styles.modalContent}>
       <h1>{t.actions.contactUs}</h1>
-      <Link href="mailto:contact@rgsystem.septeo.com" className={styles.link}>
-        contact@rgsystem.septeo.com
-      </Link>
-      <Link href="tel:+33411934200" className={styles.link}>
-        +33 4 11 93 42 99
-      </Link>
       <HubspotForm />
     </div>
   );

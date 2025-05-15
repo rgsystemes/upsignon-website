@@ -45,7 +45,17 @@
   padding: 10px;
 }
 
-
+.contactUsBtn {
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  padding: 0;
+  cursor: pointer;
+}
+.contactUsBtn:hover {
+  text-decoration: underline;
+}
 @media (max-width:950px) {
   .subsectionTitle {
     margin-top: 10px;
