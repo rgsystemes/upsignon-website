@@ -205,7 +205,7 @@ const translations: typeof fr = {
       quotes: {
         metavonics: {
           name: "Steve Bazin",
-          quote: "I deployed and trained 3 of my colleagues on UpSignOn today. 30 minutes were enough. They appreciate the simplicity and ergonomics of the solution. I hope that the acquisition by RG System will allow your solution to be discovered more, it deserves it!",
+          quote: "In just 30 minutes, I was able to deploy UpSignon and train 3 of my colleagues. They immediately appreciated the simplicity and usability of the solution. I hope that the acquisition by RG System will help to promote this solution which truly deserves it.",
           jobTitle: "IT Manager",
           companyName: "Metavonics",
         }

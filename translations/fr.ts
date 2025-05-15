@@ -204,7 +204,7 @@ const translations = {
       quotes: {
         metavonics: {
           name: "Steve Bazin",
-          quote:"J’ai déployé et formé aujourd’hui 3 de mes collaborateurs sur UpSignOn. 30 minutes auront suffi. Ils apprécient la simplicité et l’ergonomie de la solution. J’espère que le rachat par RG System va permettre de faire découvrir davantage votre solution, elle le mérite !",
+          quote:"En seulement 30 minutes, j’ai pu déployer UpSignon et former 3 de mes collaborateurs. Ils ont immédiatement apprécié la simplicité et l’ergonomie de la solution. J’espère que le rachat par RG System permettra de faire connaître davantage cette solution qui le mérite amplement.",
           jobTitle: "IT Manager",
           companyName: "Metavonics",
         }
