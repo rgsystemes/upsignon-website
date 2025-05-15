@@ -1,7 +1,11 @@
 import { Metadata } from "next";
 import styles from "../page.module.css";
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await params;
   const template = {
     alternates: {
@@ -31,7 +35,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   }
 }
 
-export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
   const { lang } = await params;
   return <>{lang === "fr" ? <FRCommitments /> : <ENCommitments />}</>;
 }
@@ -42,8 +50,8 @@ function FRCommitments() {
       <header>
         <h1>Nos engagements contractuels</h1>
         <em>
-          Attention, ceci est un résumé simplifié de nos engagements mais ne remplace pas nos CGU et CGV qui seules
-          peuvent nous être opposées.
+          Attention, ceci est un résumé simplifié de nos engagements mais ne
+          remplace pas nos CGU et CGV qui seules peuvent nous être opposées.
         </em>
       </header>
       <h2>Page en chantier</h2>
@@ -58,7 +66,7 @@ function FRCommitments() {
           </ul>
         </li>
         <li>
-          Minimisation des données accessibles en clair sur le serveur UpSignOn PRO
+          Minimisation des données accessibles en clair sur le serveur UpSignon PRO
           <ul>
             <li>adresse email</li>
             <li>appareils autorisés</li>
@@ -114,7 +122,7 @@ function FRCommitments() {
         <li>
           <strong>Engagement de Niveau de Service :</strong> 99,6% du temps 24h/24h, 7j/7j, sous réserve des éventuelles
           pannes et interventions de maintenance nécessaires au bon fonctionnement du service, sauf en cas de force
-          majeure. En cas d’interruption du service, UpSignOn en informera le client dans les meilleurs délais.
+          majeure. En cas d’interruption du service, UpSignon en informera le client dans les meilleurs délais.
         </li>
         <li>
           <strong>Plan de Continuité d’Activité :</strong>
@@ -239,8 +247,9 @@ function ENCommitments() {
       <header>
         <h1>Our contractual commitments</h1>
         <em>
-          Please note, this is a simplified summary of our commitments but does not replace our Terms of Service and
-          Terms of Sales which alone can be opposed to us.
+          Please note, this is a simplified summary of our commitments but does
+          not replace our Terms of Service and Terms of Sales which alone can be
+          opposed to us.
         </em>
       </header>
       <h2>Page under construction</h2>
@@ -255,7 +264,7 @@ function ENCommitments() {
           </ul>
         </li>
         <li>
-          Minimization of data accessible in clear text on the UpSignOn PRO server
+          Minimization of data accessible in clear text on the UpSignon PRO server
           <ul>
             <li>email address</li>
             <li>authorized devices</li>
@@ -311,7 +320,7 @@ function ENCommitments() {
         <li>
           <strong>Service Level Agreement:</strong> 99.6% of the time 24 hours a day, 7 days a week, subject to any
           breakdowns and maintenance interventions necessary for the proper functioning of the service, except in cases
-          of force majeure. In the event of an interruption of the service, UpSignOn will inform the customer as soon as
+          of force majeure. In the event of an interruption of the service, UpSignon will inform the customer as soon as
           possible.
         </li>
         <li>

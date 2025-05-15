@@ -341,7 +341,7 @@ export default async function Page({
           imageSrc={totpImg}
           imageAlt={t.features.totp.imageAlt}
         >
-          {/* <div>Comment configurer un TOTP dans UpSignOn ?</div> */}
+          {/* <div>Comment configurer un TOTP dans UpSignon ?</div> */}
           {/* TODO */}
         </FeatureSection>
         <FeatureSection

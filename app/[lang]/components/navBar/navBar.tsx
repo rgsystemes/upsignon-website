@@ -17,10 +17,13 @@ export function NavBar(p: { lang: string }) {
   return (
     <nav className={styles.nav}>
       <Link href="/" className={styles.logoAndNameContainer}>
-        <Image src={logoImg} alt="UpSignOn logo" />
+        <Image src={logoImg} alt="UpSignon logo" />
       </Link>
       <div className={styles.spacer} />
-      <div className={styles.navMenuIcon} onClick={() => setUnfolded(!unfolded)}>
+      <div
+        className={styles.navMenuIcon}
+        onClick={() => setUnfolded(!unfolded)}
+      >
         {unfolded ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -43,26 +46,39 @@ export function NavBar(p: { lang: string }) {
           </svg>
         )}
       </div>
-      <div className={`${styles.menuItems} ${unfolded ? styles.unfolded : styles.folded}`}>
+      <div
+        className={`${styles.menuItems} ${
+          unfolded ? styles.unfolded : styles.folded
+        }`}
+      >
         <Link
           href="/features"
-          className={`${styles.menuItem} ${pathName.includes("/features") ? styles.currentMenu : ""}`}
+          className={`${styles.menuItem} ${
+            pathName.includes("/features") ? styles.currentMenu : ""
+          }`}
         >
           {t.menu.features}
         </Link>
         <Link
           href="/pricing"
-          className={`${styles.menuItem} ${pathName.includes("/pricing") ? styles.currentMenu : ""}`}
+          className={`${styles.menuItem} ${
+            pathName.includes("/pricing") ? styles.currentMenu : ""
+          }`}
         >
           {t.menu.pricing}
         </Link>
         <Link
           href="/downloads"
-          className={`${styles.menuItem} ${pathName.includes("/downloads") ? styles.currentMenu : ""}`}
+          className={`${styles.menuItem} ${
+            pathName.includes("/downloads") ? styles.currentMenu : ""
+          }`}
         >
           {t.menu.downloads}
         </Link>
-        <ResourceMenu lang={p.lang} isCurrentMenu={pathName.includes("/resources")} />
+        <ResourceMenu
+          lang={p.lang}
+          isCurrentMenu={pathName.includes("/resources")}
+        />
       </div>
     </nav>
   );
@@ -101,9 +117,9 @@ function ResourceMenu(p: { lang: string; isCurrentMenu: boolean }) {
   return (
     <div ref={wrapperRef} className={styles.menuOpener}>
       <div
-        className={`${styles.menuItem} ${p.isCurrentMenu ? styles.currentMenu : null}  ${
-          !folded ? styles.focusedMenu : null
-        }`}
+        className={`${styles.menuItem} ${
+          p.isCurrentMenu ? styles.currentMenu : null
+        }  ${!folded ? styles.focusedMenu : null}`}
         onClick={() => setFolded(!folded)}
       >
         {t.menu.resources}
@@ -123,7 +139,10 @@ function ResourceMenu(p: { lang: string; isCurrentMenu: boolean }) {
         <Link className={styles.subMenuItem} href="/resources/tech-articles">
           {t.resources.technicalExplanations}
         </Link>
-        <Link className={styles.subMenuItem} href="/resources/release-notes/app">
+        <Link
+          className={styles.subMenuItem}
+          href="/resources/release-notes/app"
+        >
           {t.resources.releaseNotes}
         </Link>
         <Link className={styles.subMenuItem} href="/resources/commitments">
