@@ -225,9 +225,7 @@ const translations = {
       contactUs: "Contactez-nous",
       licencePriceUnit: "par coffre-fort par mois. Facturé annuellement.",
       saasDetails: "L'hébergement SAAS est inclus dans le prix des licences.",
-      onPremOption: "Option auto-hébergement (Linux) : 1 000€ / an",
-      onPremDetails:
-        "Le forfait d'auto-hébergement couvre les frais de support technique et est indépendant du nombre de licences.",
+      onPremOption: "Option auto-hébergement (Linux) : à partir de 1 000€ / an",
     },
     distribTitle: "Vous êtes revendeur ?",
     distribDetails: "Nous avons un deal gagnant-gagnant à vous proposer.",

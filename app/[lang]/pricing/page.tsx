@@ -73,9 +73,6 @@ export default async function Page({
             <div className={styles.pricingDetails}>
               {t.pricing.proPricing.saasDetails}
             </div>
-            <div className={styles.pricingDetails}>
-              {t.pricing.proPricing.onPremDetails}
-            </div>
           </div>
         </div>
         <h1>{t.pricing.distribTitle}</h1>

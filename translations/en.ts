@@ -226,9 +226,7 @@ const translations: typeof fr = {
       contactUs: "Contact us",
       licencePriceUnit: "per vault per month. Billed annually.",
       saasDetails: "SAAS hosting is included in the licence price.",
-      onPremOption: "Self hosting option (Linux): 1.000€ / year",
-      onPremDetails:
-        "The self-hosting package covers technical support costs and is independent of the number of licences.",
+      onPremOption: "Self hosting option (Linux): from 1,000€ / year",
     },
     distribTitle: "Are you a reseller?",
     distribDetails: "We have a win-win deal for you.",
