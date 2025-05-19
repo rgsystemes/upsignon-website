@@ -13,6 +13,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { HubspotProvider } from "next-hubspot";
+import { Banner } from "./components/banner/banner";
 
 // If loading a variable font, you don't need to specify the font weight
 const fontClass = Poppins({
@@ -38,19 +39,18 @@ export default async function RootLayout({
       <head>
         <link rel="shortcut icon" href={favicon.src} />
         <link rel="icon" type="image/png" sizes="32x32" href={favicon32.src} />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="256x256"
-          href={favicon256.src}
-        />
-        <meta
-          name="google-site-verification"
-          content="yNxeZNw0jlQy8ywG1nUXNCi1zgL61n9KqWv3kb4zmEE"
-        />
+        <link rel="icon" type="image/png" sizes="256x256" href={favicon256.src} />
+        <meta name="google-site-verification" content="yNxeZNw0jlQy8ywG1nUXNCi1zgL61n9KqWv3kb4zmEE" />
       </head>
 
-      <AnchorScrollWithFixedHeaderBody fixedComponent={<NavBar lang={lang} />}>
+      <AnchorScrollWithFixedHeaderBody
+        fixedComponent={
+          <div>
+            <Banner lang={lang} />
+            <NavBar lang={lang} />
+          </div>
+        }
+      >
         <ToastContainer />
         <HubspotProvider>
           <main>{children}</main>

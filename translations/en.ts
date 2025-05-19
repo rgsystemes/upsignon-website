@@ -4,6 +4,12 @@ const translations: typeof fr = {
   anchorCopyTitle: "Copy the link to this paragraph.",
   anchorCopied: "Link copied",
   successMessage: "Request sent",
+  banner: {
+    1: "UpSignOn becomes ",
+    2: "UpSignon by Septeo",
+    3: " to strenghen the French-style security.",
+    more: "Find out more.",
+  },
   menu: {
     features: "Features & demos",
     pricing: "Pricing",
@@ -205,11 +211,12 @@ const translations: typeof fr = {
       quotes: {
         metavonics: {
           name: "Steve Bazin",
-          quote: "In just 30 minutes, I was able to deploy UpSignon and train 3 of my colleagues. They immediately appreciated the simplicity and usability of the solution.",
+          quote:
+            "In just 30 minutes, I was able to deploy UpSignon and train 3 of my colleagues. They immediately appreciated the simplicity and usability of the solution.",
           jobTitle: "IT Manager",
           companyName: "Metavonics",
-        }
-      }
+        },
+      },
     },
   },
   pricing: {

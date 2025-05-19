@@ -2,6 +2,12 @@ const translations = {
   anchorCopyTitle: "Copier le lien vers ce paragraphe.",
   anchorCopied: "Lien copié",
   successMessage: "Demande envoyée",
+  banner: {
+    1: "UpSignOn devient ",
+    2: "UpSignon by Septeo",
+    3: " pour renforcer la sécurité à la française.",
+    more: "En savoir plus.",
+  },
   menu: {
     features: "Fonctionnalités & démos",
     pricing: "Tarifs",
@@ -204,11 +210,12 @@ const translations = {
       quotes: {
         metavonics: {
           name: "Steve Bazin",
-          quote:"En seulement 30 minutes, j’ai pu déployer UpSignon et former 3 de mes collaborateurs. Ils ont immédiatement apprécié la simplicité et l’ergonomie de la solution.",
+          quote:
+            "En seulement 30 minutes, j’ai pu déployer UpSignon et former 3 de mes collaborateurs. Ils ont immédiatement apprécié la simplicité et l’ergonomie de la solution.",
           jobTitle: "IT Manager",
           companyName: "Metavonics",
-        }
-      }
+        },
+      },
     },
   },
   pricing: {

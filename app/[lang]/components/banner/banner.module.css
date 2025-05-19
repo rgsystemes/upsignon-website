@@ -1,0 +1,12 @@
+.banner {
+  text-align: center;
+  background-color: var(--sexternary15);
+  padding: 10px;
+}
+
+.banner a{
+  color: var(--text-color-alt);
+}
+.banner a:hover {
+  color: var(--primary);
+}
