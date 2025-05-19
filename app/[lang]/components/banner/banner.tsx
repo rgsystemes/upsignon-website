@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "./banner.module.css";
 
@@ -12,7 +13,7 @@ export const Banner = (p: { lang?: string }) => {
         {t.banner[3]}
       </span>
       &nbsp;
-      <a href="/resources/articles/upsignon-rejoint-rg-system-groupe-septeo">{t.banner.more}</a>
+      <Link href="/resources/articles/upsignon-rejoint-rg-system-groupe-septeo">{t.banner.more}</Link>
     </div>
   );
 };
