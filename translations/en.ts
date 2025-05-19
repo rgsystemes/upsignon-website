@@ -91,7 +91,7 @@ const translations: typeof fr = {
     followUs: "Follow us",
     legalNotice: "Legal notices",
     privacyPolicy: "Privacy policy",
-    termsOfUse: "Terms",
+    termsOfUse: "Terms of sale and use",
     publisher: "Publisher",
     hostedBy: "Website hosted by",
     copyright: "all rights reserved",
@@ -708,7 +708,6 @@ const translations: typeof fr = {
     browserExtensionSecurity: "Operation and security principles of the browser extension",
     releaseNotes: "Release notes",
     articles: "Blog",
-    contractualCommitments: "Our contractual commitments",
   },
   techResources: {
     protectedClipboardBehaviour: {

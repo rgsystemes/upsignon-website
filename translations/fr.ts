@@ -90,7 +90,7 @@ const translations = {
     followUs: "Suivez-nous",
     legalNotice: "Mentions légales",
     privacyPolicy: "Politique de confidentialité",
-    termsOfUse: "Conditions générales",
+    termsOfUse: "Conditions générales de ventes et d'utilisation",
     publisher: "Directeur de la publication",
     hostedBy: "Site hébergé par",
     copyright: "tous droits réservés",
@@ -720,7 +720,6 @@ const translations = {
     browserExtensionSecurity: "Principe de fonctionnement et de sécurité de l'extension de navigateur",
     releaseNotes: "Notes de version",
     articles: "Blog",
-    contractualCommitments: "Nos engagements contractuels",
   },
   techResources: {
     protectedClipboardBehaviour: {

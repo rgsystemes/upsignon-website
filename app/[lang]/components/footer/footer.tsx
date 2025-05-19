@@ -30,9 +30,6 @@ export function Footer(p: { lang: string }) {
           <Link href="/resources/release-notes/app">
             {t.resources.releaseNotes}
           </Link>
-          <Link href="/resources/commitments">
-            {t.resources.contractualCommitments}
-          </Link>
         </nav>
         <div className={styles.footerSection}>
           <section>
@@ -67,8 +64,10 @@ export function Footer(p: { lang: string }) {
         <Link href="/docs/ANNEXE%20SUR%20LA%20PROTECTION%20DES%20DONNEES%20A%20CARACTERE%20PERSONNEL%20USO.pdf">
           {t.footer.privacyPolicy}
         </Link>
-        {/* <span className={styles.spacer} />
-        <Link href="/docs/">{t.footer.termsOfUse}</Link> */}
+        <span className={styles.spacer} />
+        <Link href="/docs/CGVU_directe_Upsignon_20250425.pdf">
+          {t.footer.termsOfUse}
+        </Link>
       </div>
     </footer>
   );

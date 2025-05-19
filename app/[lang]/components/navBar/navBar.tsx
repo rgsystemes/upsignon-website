@@ -145,9 +145,6 @@ function ResourceMenu(p: { lang: string; isCurrentMenu: boolean }) {
         >
           {t.resources.releaseNotes}
         </Link>
-        <Link className={styles.subMenuItem} href="/resources/commitments">
-          {t.resources.contractualCommitments}
-        </Link>
       </div>
     </div>
   );
