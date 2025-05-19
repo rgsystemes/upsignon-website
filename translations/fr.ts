@@ -29,7 +29,6 @@ const translations = {
     submit: "Envoyer",
   },
   legalNotice: {
-    seeButton: "Voir les mentions légales",
     pageTitle: "Mentions légales",
     metaDescription: "Mentions légales du site upsignon.eu",
     editor: {
@@ -90,6 +89,8 @@ const translations = {
     contactUs: "Contactez-nous",
     followUs: "Suivez-nous",
     legalNotice: "Mentions légales",
+    privacyPolicy: "Politique de confidentialité",
+    termsOfUse: "Conditions générales",
     publisher: "Directeur de la publication",
     hostedBy: "Site hébergé par",
     copyright: "tous droits réservés",

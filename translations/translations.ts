@@ -30,6 +30,7 @@ const unlocalizedAssets = [
   "/safari-pinned-tab.svg",
   "/robots.txt",
   "/sitemap.xml",
+  "/docs/"
 ];
 
 export function translationMiddleware(request: NextRequest): NextResponse {

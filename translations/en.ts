@@ -31,7 +31,6 @@ const translations: typeof fr = {
     submit: "Send",
   },
   legalNotice: {
-    seeButton: "See legal notice",
     pageTitle: "Legal notice",
     metaDescription: "Legal notice for the website upsignon.eu",
     editor: {
@@ -91,6 +90,8 @@ const translations: typeof fr = {
     contactUs: "Contact us",
     followUs: "Follow us",
     legalNotice: "Legal notices",
+    privacyPolicy: "Privacy policy",
+    termsOfUse: "Terms",
     publisher: "Publisher",
     hostedBy: "Website hosted by",
     copyright: "all rights reserved",
