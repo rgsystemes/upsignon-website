@@ -41,6 +41,19 @@ export default async function AppNotes({
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.12.0 */}
+      <h2>
+        <LinkToAnchor id="7.12.0">7.12.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 20/05/2025</em>
+      </p>
+      <ul>
+        <li>Nouveau logo dans l'application pour annoncer le rachat par RG System, groupe Septeo.</li>
+        <li>
+          Nouveau système d'autorisation de l'extension de navigateur apportant des améliorations de sécurité et d'UX.
+        </li>
+      </ul>
       {/* 7.11.0 */}
       <h2>
         <LinkToAnchor id="7.11.0">7.11.0</LinkToAnchor>
@@ -717,6 +730,17 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.12.0 */}
+      <h2>
+        <LinkToAnchor id="7.12.0">7.12.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 20/05/2025</em>
+      </p>
+      <ul>
+        <li>New logo inside the application to announce the acquisition by RG System, Septeo group.</li>
+        <li>New browser extension authorisation system that improves security and UX.</li>
+      </ul>
       {/* 7.11.0 */}
       <h2>
         <LinkToAnchor id="7.11.0">7.11.0</LinkToAnchor>

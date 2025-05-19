@@ -33,6 +33,20 @@ export default async function ExtensionNotes({ params }: { params: Promise<{ lan
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.4.0 */}
+      <h2>
+        <LinkToAnchor id="1.4.0">1.4.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 19/05/2025</em>
+      <ul>
+        <li>Améliorations de sécurité</li>
+        <li>
+          Nouveau système de configuration du canal de communication entre l'extension et l'application UpSignOn pour
+          une meilleure sécurité et une meilleure expérience utilisateur. Voir les notes de versions de{" "}
+          <Link href="/fr/resources/release-notes/app#7.11.0">l'application v7.12.0</Link>). (NB : cette version reste
+          rétrocompatible avec les anciennes versions de l'application.)
+        </li>
+      </ul>
       {/* 1.3.0 */}
       <h2>
         <LinkToAnchor id="1.3.0">1.3.0</LinkToAnchor>
@@ -203,6 +217,20 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.4.0 */}
+      <h2>
+        <LinkToAnchor id="1.4.0">1.4.0</LinkToAnchor>
+      </h2>
+      <em>Published on 19/05/2025</em>
+      <ul>
+        <li>Security improvements</li>
+        <li>
+          New setup system for the communication channel between the extension and the UpSignOn app to enhance security
+          and UX. See version notes of
+          <Link href="/fr/resources/release-notes/app#7.11.0">app v7.12.0</Link>). (Note : this version remains
+          backwards-compatible with previous versions of the app.)
+        </li>
+      </ul>
       {/* 1.3.0 */}
       <h2>
         <LinkToAnchor id="1.3.0">1.3.0</LinkToAnchor>
