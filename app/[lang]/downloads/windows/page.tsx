@@ -202,13 +202,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (lang === "fr") {
     return {
       title: "Téléchargements - Windows",
-      description: "Tous les liens et informations utiles pour télécharger et installer UpSignOn sur Windows.",
+      description: "Tous les liens et informations utiles pour télécharger et installer UpSignon sur Windows.",
       ...template,
     };
   } else {
     return {
       title: "Downloads - Windows",
-      description: "All links and useful information to download and install UpSignOn on Windows.",
+      description: "All links and useful information to download and install UpSignon on Windows.",
       ...template,
     };
   }
