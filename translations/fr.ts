@@ -753,6 +753,10 @@ const translations = {
   articles: {
     metaDescription: "Tous nos articles pour mieux comprendre le monde des mots de passe et de la cybersécurité.",
     readArticle: "lire l'article",
+    upsignonJoinsRG: {
+      metaDescription: "UpSignOn rejoint RG System, groupe Septeo.",
+      title: "UpSignOn rejoint RG System, groupe Septeo.",
+    },
     1: {
       metaDescription:
         "Comprenez ce qu'est véritablement un mot de passe fort, ce qu'est une attaque par force brute, une attaque par dictionnaire et leurs implications sur la façon de créer des mots de passe résistants aux pirates.",

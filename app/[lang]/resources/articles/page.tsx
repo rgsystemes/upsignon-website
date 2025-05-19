@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import styles from "./page.module.css";
 
+import acquisitionBySepteo from "../../../../public/articles/acquisitionBySepteo.png";
 import authenticationMini from "../../../../public/articles/authentificationMini.jpg";
 import unsecureWebsitesMini from "../../../../public/articles/unsecureWebsitesMini.jpg";
 import privacyMini from "../../../../public/articles/privacyMini.jpg";
@@ -38,6 +39,16 @@ export default async function ArticlesPage({ params }: { params: Promise<{ lang:
     <div className={styles.contentBackground}>
       <section className={styles.content}>
         <h1>{t.resources.articles}</h1>
+        <div className={styles.gridList2}>
+          <div />
+          <Article
+            link="/resources/articles/upsignon-rejoint-rg-system-groupe-septeo"
+            lang={lang}
+            image={acquisitionBySepteo}
+            title={t.articles.upsignonJoinsRG.title}
+          />
+          <div />
+        </div>
         <div className={styles.gridList}>
           <Article
             link="/resources/articles/1"
@@ -115,15 +126,15 @@ export default async function ArticlesPage({ params }: { params: Promise<{ lang:
   );
 }
 
-function Article(p: { image: StaticImageData; title: string; summary: string; lang: string; link: string }) {
+function Article(p: { image: StaticImageData; title: string; summary?: string; lang: string; link: string }) {
   const t = getDictionary(p.lang);
   return (
     <Link className={styles.articleLink} href={p.link}>
       <div className={styles.miniature}>
-        <Image src={p.image} alt="" />
+        <Image src={p.image} alt="" unoptimized />
       </div>
       <h2>{p.title}</h2>
-      <p>{p.summary}</p>
+      {p.summary && <p>{p.summary}</p>}
       <p className={styles.readButton}>
         {t.articles.readArticle}
         <span className={styles.readArrow}>➜</span>

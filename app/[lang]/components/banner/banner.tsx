@@ -12,7 +12,7 @@ export const Banner = (p: { lang?: string }) => {
         {t.banner[3]}
       </span>
       &nbsp;
-      <a href="/resources/articles/upsignon-rejoint-rgsystem-groupe-septeo">{t.banner.more}</a>
+      <a href="/resources/articles/upsignon-rejoint-rg-system-groupe-septeo">{t.banner.more}</a>
     </div>
   );
 };

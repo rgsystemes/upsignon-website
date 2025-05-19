@@ -6,6 +6,15 @@
 .content a:not(.buttonLink), .content .backArrow {
   color: var(--primary);
 }
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.image img {
+  border-radius: 12px;
+}
 .article {
   margin: 20px 0 50px 0;
 }
@@ -81,4 +90,24 @@
 
 .articleImg {
   border-radius: 12px;
+}
+
+.blockquote {
+  font-style: italic;
+  margin: 20px 40px;
+  display: flex;
+
+}
+
+.blockquote::before {
+  content: "\"";
+  color: var(--primary);
+  font-size: 100px;
+  line-height: 1px;
+  display: block;
+  position: relative;
+  top: 30px;
+  width: 70px;
+  flex-shrink: 0;
+  flex-grow: 0;
 }

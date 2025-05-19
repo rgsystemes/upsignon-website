@@ -11,6 +11,13 @@
   text-align: center;
   margin-bottom: 50px;
 }
+.gridList2 {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
 .gridList {
   display: grid;
   justify-content: center;
@@ -80,6 +87,9 @@
 }
 @media (max-width: 767px){
   .gridList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .gridList2 {
     grid-template-columns: repeat(1, 1fr);
   }
 }

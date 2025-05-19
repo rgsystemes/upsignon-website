@@ -742,6 +742,10 @@ const translations: typeof fr = {
   articles: {
     metaDescription: "All our articles to better understand the password and cybersecurity world.",
     readArticle: "read article",
+    upsignonJoinsRG: {
+      metaDescription: "UpSignOn joins RG System, Septeo group.",
+      title: "UpSignOn joins RG System, Septeo group.",
+    },
     1: {
       metaDescription:
         "Understand what a strong password really is, what a brute force attack and a dictionary attack are and their implications on how to create hacker resistant passwords.",
