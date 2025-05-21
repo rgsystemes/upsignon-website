@@ -11,9 +11,9 @@ import { Analytics } from "@vercel/analytics/react";
 import { AnchorScrollWithFixedHeaderBody } from "./components/anchorScrollWithFixedHeaderBody/anchorScrollWithFixedHeaderBody";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { HubspotProvider } from "next-hubspot";
 import { Banner } from "./components/banner/banner";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 // If loading a variable font, you don't need to specify the font weight
 const fontClass = Poppins({
@@ -56,9 +56,10 @@ export default async function RootLayout({
           <main>{children}</main>
         </HubspotProvider>
         <Footer lang={lang} />
-        <Analytics />
       </AnchorScrollWithFixedHeaderBody>
-      <GoogleAnalytics gaId="G-2CQXP4PHH2" />
+
+      <Analytics />
+      <GoogleTagManager gtmId="GTM-T4LDV3ND" />
     </html>
   );
 }
