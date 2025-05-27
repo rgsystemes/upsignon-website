@@ -101,7 +101,7 @@ export default async function Page({
             buttonText={t.actions.freeTrial}
             modalTitle={t.actions.freeTrial}
             modalLinkValue="free-trial"
-            isFreeTrialForm={false}
+            isFreeTrialForm={true}
           />
         </div>
       </div>
