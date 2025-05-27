@@ -19,7 +19,7 @@
 .modalContent {
   text-align: center;
   padding: 30px 20px;
-  width: 300px;
+  width: 100%;
 }
 .modalDefaultButton {
   background: none;

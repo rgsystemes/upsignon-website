@@ -57,11 +57,14 @@ export function FormModalButton(p: {
 
 function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
   const t = getDictionary(p.lang);
-  const [isReseller, setIsReseller] = useState(true);
+  const [isReseller, setIsReseller] = useState<boolean | null>(null);
   useEffect(() => {
-    localStorage.getItem("isReseller") === "false"
-      ? setIsReseller(false)
-      : setIsReseller(true);
+    const isResellerCache = localStorage.getItem("isReseller");
+    if (isResellerCache === "false") {
+      setIsReseller(false);
+    } else if (isResellerCache === "true") {
+      setIsReseller(true);
+    }
   }, []);
   const updateIsReseller = (value: boolean) => {
     setIsReseller(value);
@@ -80,7 +83,7 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
             type="radio"
             name="msp"
             value="yes"
-            checked={isReseller}
+            checked={isReseller === true}
             onChange={() => updateIsReseller(true)}
           />
           <label htmlFor="msp">{t.contactUsForm.activityMSP}</label>
@@ -93,13 +96,13 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
             type="radio"
             name="company"
             value="no"
-            checked={!isReseller}
+            checked={isReseller === false}
             onChange={() => updateIsReseller(false)}
           />
           <label htmlFor="company">{t.contactUsForm.activityEnterprise}</label>
         </div>
       </div>
-      {p.isFreeTrialForm ? (
+      {isReseller === null ? null : p.isFreeTrialForm ? (
         <div className={styles.hubspotFormContainer}>
           <HubspotForm
             isVisible={isReseller}
