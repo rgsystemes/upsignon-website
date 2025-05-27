@@ -58,18 +58,6 @@ export function FormModalButton(p: {
 function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
   const t = getDictionary(p.lang);
   const [isReseller, setIsReseller] = useState<boolean | null>(null);
-  useEffect(() => {
-    const isResellerCache = localStorage.getItem("isReseller");
-    if (isResellerCache === "false") {
-      setIsReseller(false);
-    } else if (isResellerCache === "true") {
-      setIsReseller(true);
-    }
-  }, []);
-  const updateIsReseller = (value: boolean) => {
-    setIsReseller(value);
-    localStorage.setItem("isReseller", value.toString());
-  };
   return (
     <div className={styles.modalContent}>
       <h1>{p.title}</h1>
@@ -77,27 +65,27 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
         <p>{t.contactUsForm.activity}</p>
         <div
           className={styles.choiceContainer}
-          onClick={() => updateIsReseller(true)}
+          onClick={() => setIsReseller(true)}
         >
           <input
             type="radio"
             name="msp"
             value="yes"
             checked={isReseller === true}
-            onChange={() => updateIsReseller(true)}
+            onChange={() => setIsReseller(true)}
           />
           <label htmlFor="msp">{t.contactUsForm.activityMSP}</label>
         </div>
         <div
           className={styles.choiceContainer}
-          onClick={() => updateIsReseller(false)}
+          onClick={() => setIsReseller(false)}
         >
           <input
             type="radio"
             name="company"
             value="no"
             checked={isReseller === false}
-            onChange={() => updateIsReseller(false)}
+            onChange={() => setIsReseller(false)}
           />
           <label htmlFor="company">{t.contactUsForm.activityEnterprise}</label>
         </div>
