@@ -1,10 +1,9 @@
 import { Metadata } from "next";
 import styles from "./page.module.css";
-import { ContactUsButton } from "../components/contactUsButton/contactUsButton";
 import { getDictionary } from "../../../translations/translations";
-import { FreeTrialButton } from "../components/freeTrialButton/freeTrial";
 import Link from "next/link";
 import { defaultLicencePrice } from "./priceHelper";
+import { FormModalButton } from "../components/formModal/formModal";
 
 export async function generateMetadata({
   params,
@@ -60,14 +59,21 @@ export default async function Page({
             <div className={styles.selfHostingTitle}>
               {t.pricing.proPricing.onPremOption}
             </div>
-            <ContactUsButton
+            <FormModalButton
               lang={lang}
               className={styles.proPricingActionButtonSecondary}
-              text={t.pricing.proPricing.contactUs}
+              buttonText={t.actions.contactUs}
+              modalTitle={t.actions.contactUs}
+              modalLinkValue="contact-us"
+              isFreeTrialForm={false}
             />
-            <FreeTrialButton
+            <FormModalButton
               lang={lang}
               className={styles.proPricingActionButton}
+              buttonText={t.actions.freeTrial}
+              modalTitle={t.actions.freeTrial}
+              modalLinkValue="free-trial"
+              isFreeTrialForm={true}
             />
 
             <div className={styles.pricingDetails}>
@@ -78,10 +84,13 @@ export default async function Page({
         <h1>{t.pricing.distribTitle}</h1>
         <p className={styles.distribDetails}>{t.pricing.distribDetails}</p>
         <div className={styles.centerContainer}>
-          <ContactUsButton
+          <FormModalButton
             lang={lang}
             className={styles.proPricingActionButtonSecondary}
-            text={t.pricing.proPricing.contactUs}
+            buttonText={t.actions.contactUs}
+            modalTitle={t.actions.contactUs}
+            modalLinkValue="contact-us"
+            isFreeTrialForm={false}
           />
         </div>
       </section>

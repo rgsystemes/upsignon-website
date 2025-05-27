@@ -19,7 +19,7 @@
 .modalContent {
   text-align: center;
   padding: 30px 20px;
-  width: 100%;
+  width: 300px;
 }
 .modalDefaultButton {
   background: none;
@@ -34,51 +34,47 @@
 .modalDefaultButton:hover {
   text-decoration: underline;
 }
-.form {
-  margin: 30px 0;
-}
-.form label, .form input {
-  display: block;
-  margin: auto;
-  min-width: 300px;
-}
-.form input {
+
+.activityForm {
+  text-align: left;
+  align-self: left;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
-.form label.required::after {
-  content: '*';
-  color: red;
+.activityForm input {
+  margin-right: 10px;
 }
-.form input[type="submit"] {
-  margin-top: 40px;
-}
-.submitButton {
-  background-color: var(--primary);
-  color: white;
-  border-radius: 100px;
-  border: none;
-  padding: 10px;
-  font-weight: bold;
+.choiceContainer, .choiceContainer input, .choiceContainer label {
   cursor: pointer;
 }
-.submitButton:hover{
-  background-color: var(--quaternary);
+.choiceContainer {
+  margin-bottom: 5px
 }
-.cancelButton {
-  background: none!important;
-  border: none;
-  padding: 0!important;
-  color: var(--text-color-alt);
-  text-decoration: underline;
+.choiceContainer input[type="radio"] {
+  display: none;
+}
+.choiceContainer label {
+  position: relative;
+  padding-left: 28px;
   cursor: pointer;
+  line-height: 22px;
+  user-select: none;
 }
-.buttonWithLoaderContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+.choiceContainer label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  background: transparent;
 }
-
+.choiceContainer input[type="radio"]:checked + label::before {
+  background: var(--primary);
+  border-color: var(--primary);
+}
 
 @media (max-width: 750px) {
   .modal {
@@ -88,9 +84,5 @@
   }
   .modalContent {
     padding: 10px 10px;
-  }
-  .form label, .form input {
-    min-width: none;
-    width: 100%;
   }
 }

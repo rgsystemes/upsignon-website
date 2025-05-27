@@ -16,17 +16,13 @@ const translations = {
   },
   actions: {
     contactUs: "Contactez-nous",
-    cancel: "Annuler",
     close: "Fermer",
     freeTrial: "Tester 1 mois gratuitement",
   },
-  freeTrialForm: {
-    nameLabel: "Votre nom",
-    companyLabel: "Nom de votre organisation",
-    siret: "SIRET",
-    emailLabel: "Adresse email",
-    telLabel: "Numéro de téléphone",
-    submit: "Envoyer",
+  contactUsForm: {
+    activity: "Quelle est votre activité ?",
+    activityMSP: "MSP, Revendeur, Infogérance",
+    activityEnterprise: "Entreprise privée ou publique",
   },
   legalNotice: {
     pageTitle: "Mentions légales",
@@ -230,7 +226,6 @@ const translations = {
     },
     proPricing: {
       t: "PRO",
-      contactUs: "Contactez-nous",
       licencePriceUnit: "par coffre-fort par mois. Facturé annuellement.",
       saasDetails: "L'hébergement SAAS est inclus dans le prix des licences.",
       onPremOption: "Option auto-hébergement (Linux) : à partir de 1 000€ / an",

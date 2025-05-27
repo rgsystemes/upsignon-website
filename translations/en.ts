@@ -18,17 +18,13 @@ const translations: typeof fr = {
   },
   actions: {
     contactUs: "Contact us",
-    cancel: "Cancel",
     close: "Close",
     freeTrial: "Test 1 month for free",
   },
-  freeTrialForm: {
-    nameLabel: "Your name",
-    companyLabel: "Name of your organisation",
-    siret: "SIRET",
-    emailLabel: "Email adress",
-    telLabel: "Phone number",
-    submit: "Send",
+  contactUsForm: {
+    activity: "What is your activity?",
+    activityMSP: "MSP, Reseller, Outsourcing",
+    activityEnterprise: "Private or public company",
   },
   legalNotice: {
     pageTitle: "Legal notice",
@@ -231,7 +227,6 @@ const translations: typeof fr = {
     },
     proPricing: {
       t: "PRO",
-      contactUs: "Contact us",
       licencePriceUnit: "per vault per month. Billed annually.",
       saasDetails: "SAAS hosting is included in the licence price.",
       onPremOption: "Self hosting option (Linux): from 1,000€ / year",

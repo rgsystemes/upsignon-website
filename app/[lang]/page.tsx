@@ -12,11 +12,10 @@ import cryptographyImg from "../../public/images/cryptography.svg";
 import VimeoPlayer from "./components/vimeoPlayer/vimeoPlayer";
 import CustomerCarousel from "./components/customerCarousel/customerCarousel";
 import SingleAdvantage from "./components/singleAdvantage/singleAdvantage";
-import { ContactUsButton } from "./components/contactUsButton/contactUsButton";
 import { GreenCheckIcon } from "./components/greenCheckIcon/greenCheckIcon";
 import { LanguageFlags } from "./components/languageFlags/languageFlags";
-import { FreeTrialButton } from "./components/freeTrialButton/freeTrial";
 import CustomerQuotes from "./components/customerQuotes/customerQuotes";
+import { FormModalButton } from "./components/formModal/formModal";
 
 export async function generateMetadata({
   params,
@@ -88,8 +87,22 @@ export default async function Page({
           </div>
         </section>
         <div className={styles.actionContainer}>
-          <ContactUsButton lang={lang} className={styles.actionLink} />
-          <FreeTrialButton lang={lang} className={styles.actionLinkPrimary} />
+          <FormModalButton
+            lang={lang}
+            className={styles.actionLink}
+            buttonText={t.actions.contactUs}
+            modalTitle={t.actions.contactUs}
+            modalLinkValue="contact-us"
+            isFreeTrialForm={false}
+          />
+          <FormModalButton
+            lang={lang}
+            className={styles.actionLinkPrimary}
+            buttonText={t.actions.freeTrial}
+            modalTitle={t.actions.freeTrial}
+            modalLinkValue="free-trial"
+            isFreeTrialForm={false}
+          />
         </div>
       </div>
       <section className={styles.keyMetricsSection}>
@@ -172,9 +185,13 @@ export default async function Page({
           <p>{t.pitch.proVsPerso.pro.p2}</p>
           <div className={styles.actionContainer}>
             <div className={styles.actionContainer}>
-              <ContactUsButton
+              <FormModalButton
                 lang={lang}
                 className={styles.actionLinkPrimary}
+                buttonText={t.actions.contactUs}
+                modalTitle={t.actions.contactUs}
+                modalLinkValue="contact-us"
+                isFreeTrialForm={false}
               />
             </div>
           </div>

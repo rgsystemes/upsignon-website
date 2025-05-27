@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "./footer.module.css";
-import { ContactUsButton } from "../contactUsButton/contactUsButton";
+import { FormModalButton } from "../formModal/formModal";
 
 export function Footer(p: { lang: string }) {
   const t = getDictionary(p.lang);
@@ -34,7 +34,14 @@ export function Footer(p: { lang: string }) {
         <div className={styles.footerSection}>
           <section>
             <h1>{t.footer.contactUs}</h1>
-            <ContactUsButton lang={p.lang} className={styles.contactUsBtn} />
+            <FormModalButton
+              lang={p.lang}
+              className={styles.contactUsBtn}
+              buttonText={t.actions.contactUs}
+              modalTitle={t.actions.contactUs}
+              modalLinkValue="contact-us"
+              isFreeTrialForm={false}
+            />
           </section>
           <section>
             <h1>{t.footer.followUs}</h1>

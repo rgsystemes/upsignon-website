@@ -54,10 +54,9 @@ import cryptographyImg from "../../../public/images/cryptography.svg";
 import multiDeviceImg from "../../../public/images/multiDevice.svg";
 import syncImg from "../../../public/images/sync.svg";
 import Link from "next/link";
-import { ContactUsButton } from "../components/contactUsButton/contactUsButton";
 import VimeoPlayer from "../components/vimeoPlayer/vimeoPlayer";
 import { LinkToAnchor } from "../components/linkToAnchor/linkToAnchor";
-import { FreeTrialButton } from "../components/freeTrialButton/freeTrial";
+import { FormModalButton } from "../components/formModal/formModal";
 
 export async function generateMetadata({
   params,
@@ -124,10 +123,24 @@ export default async function Page({
         </section>
         <div className={styles.actionContainer}>
           <p>{t.features.questions}</p>
-          <ContactUsButton lang={lang} className={styles.contactAction} />
+          <FormModalButton
+            lang={lang}
+            className={styles.contactAction}
+            buttonText={t.actions.contactUs}
+            modalTitle={t.actions.contactUs}
+            modalLinkValue="contact-us"
+            isFreeTrialForm={false}
+          />
         </div>
         <div className={styles.otherActionContainer}>
-          <FreeTrialButton lang={lang} className={styles.otherAction} />
+          <FormModalButton
+            lang={lang}
+            className={styles.otherAction}
+            buttonText={t.actions.freeTrial}
+            modalTitle={t.actions.freeTrial}
+            modalLinkValue="free-trial"
+            isFreeTrialForm={true}
+          />
         </div>
         <h2 className={styles.feature_family_title}>
           <LinkToAnchor id="proPerso">

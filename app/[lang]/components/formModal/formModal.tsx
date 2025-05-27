@@ -1,22 +1,20 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "./formModal.module.css";
 import { ModalLinkOpener } from "../../../useModalLinkOpener";
-import { Spinner } from "@geist-ui/core";
+import { useHubspotForm } from "next-hubspot";
 
 Modal.setAppElement("#body");
 export function FormModalButton(p: {
   lang: string;
   className: string;
   buttonText: string;
-  submitButtonText: string;
   modalTitle: string;
-  fields: { t: string; k: string; r: boolean }[];
-  onSubmit: (values: { [k: string]: string }) => Promise<void>;
-  modalLinkValue?: string | null;
+  modalLinkValue: string;
+  isFreeTrialForm?: boolean;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   function openModal() {
@@ -29,10 +27,16 @@ export function FormModalButton(p: {
 
   return (
     <>
-      <button onClick={openModal} className={`${styles.modalDefaultButton} ${p.className}`}>
-        {p.modalTitle}
+      <button
+        onClick={openModal}
+        className={`${styles.modalDefaultButton} ${p.className}`}
+      >
+        {p.buttonText}
       </button>
-      <ModalLinkOpener modalLinkValue={p.modalLinkValue} setIsOpen={setIsOpen} />
+      <ModalLinkOpener
+        modalLinkValue={p.modalLinkValue}
+        setIsOpen={setIsOpen}
+      />
       <Modal
         isOpen={isOpen}
         onRequestClose={closeModal}
@@ -41,89 +45,113 @@ export function FormModalButton(p: {
         shouldReturnFocusAfterClose={false}
         className={styles.modal}
       >
-        <GetForm
+        <Forms
           lang={p.lang}
-          modalTitle={p.modalTitle}
-          submitButtonText={p.submitButtonText}
-          onSubmit={(values: { [k: string]: string }) => p.onSubmit(values)}
-          close={closeModal}
-          fields={p.fields}
-        />
+          title={p.modalTitle}
+          isFreeTrialForm={p.isFreeTrialForm}
+        ></Forms>
       </Modal>
     </>
   );
 }
 
-function GetForm(p: {
-  lang: string;
-  modalTitle: string;
-  submitButtonText: string;
-  onSubmit: (values: { [k: string]: string }) => Promise<void>;
-  close: () => void;
-  fields: { t: string; k: string; r: boolean }[];
-}) {
-  const lock = useRef(false);
-  const [loading, setLoading] = useState(false);
-  const submit = (ev) => {
-    ev.preventDefault();
-    if (lock.current) return;
-    lock.current = true;
-    var val = {};
-    p.fields.forEach((f, i) => {
-      val[f.k] = ev.target[i].value;
-    });
-    setLoading(true);
-    p.onSubmit(val)
-      .then(() => {
-        close();
-      })
-      .catch(() => {
-        // ignore
-      })
-      .finally(() => {
-        setLoading(false);
-        lock.current = false;
-      });
-  };
+function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
   const t = getDictionary(p.lang);
+  const [isReseller, setIsReseller] = useState(true);
+  useEffect(() => {
+    localStorage.getItem("isReseller") === "false"
+      ? setIsReseller(false)
+      : setIsReseller(true);
+  }, []);
+  const updateIsReseller = (value: boolean) => {
+    setIsReseller(value);
+    localStorage.setItem("isReseller", value.toString());
+  };
   return (
     <div className={styles.modalContent}>
-      <h1>{p.modalTitle}</h1>
-      <form onSubmit={submit} className={styles.form}>
-        {p.fields.map((f) => {
-          return <FieldInput key={f.k} t={f.t} k={f.k} r={f.r} />;
-        })}
-
-        <input type="submit" value={p.submitButtonText} className={styles.submitButton} />
-      </form>
-      <div className={styles.buttonWithLoaderContainer}>
-        <button onClick={p.close} className={styles.cancelButton}>
-          {t.actions.cancel}
-        </button>
-        {loading && <Spinner />}
+      <h1>{p.title}</h1>
+      <div className={styles.activityForm}>
+        <p>{t.contactUsForm.activity}</p>
+        <div
+          className={styles.choiceContainer}
+          onClick={() => updateIsReseller(true)}
+        >
+          <input
+            type="radio"
+            name="msp"
+            value="yes"
+            checked={isReseller}
+            onChange={() => updateIsReseller(true)}
+          />
+          <label htmlFor="msp">{t.contactUsForm.activityMSP}</label>
+        </div>
+        <div
+          className={styles.choiceContainer}
+          onClick={() => updateIsReseller(false)}
+        >
+          <input
+            type="radio"
+            name="company"
+            value="no"
+            checked={!isReseller}
+            onChange={() => updateIsReseller(false)}
+          />
+          <label htmlFor="company">{t.contactUsForm.activityEnterprise}</label>
+        </div>
       </div>
+      {p.isFreeTrialForm ? (
+        <div className={styles.hubspotFormContainer}>
+          <HubspotForm
+            isVisible={isReseller}
+            id="trial-reseller"
+            portalId="7012322"
+            formId="fecb3f74-49fd-44c4-b742-4498e618b374"
+            region="na1"
+          />
+          <HubspotForm
+            isVisible={!isReseller}
+            id="trial-company"
+            portalId="145668054"
+            formId="9d1a1951-13da-4052-a657-2b9ad22c0e82"
+            region="eu1"
+          />
+        </div>
+      ) : (
+        <div className={styles.hubspotFormContainer}>
+          <HubspotForm
+            isVisible={isReseller}
+            id="contact-reseller"
+            portalId="7012322"
+            formId="82f08dec-7d52-4184-a1ce-a15143c4329f"
+            region="na1"
+          />
+          <HubspotForm
+            isVisible={!isReseller}
+            id="contact-company"
+            portalId="145668054"
+            formId="3fd5d5c6-2c01-4dc7-bace-d9f412f7bdbe"
+            region="eu1"
+          />
+        </div>
+      )}
     </div>
   );
 }
 
-function FieldInput(p: { t: string; k: string; r: boolean }) {
-  const [v, setV] = useState<string>("");
+const HubspotForm = (p: {
+  id: string;
+  portalId: string;
+  formId: string;
+  region: string;
+  isVisible: boolean;
+}) => {
+  const htmlId = `hubspot-form-${p.id}`;
+  const { isFormCreated, isError, error } = useHubspotForm({
+    portalId: p.portalId,
+    formId: p.formId,
+    region: p.region,
+    target: `#${htmlId}`,
+  });
 
-  useEffect(() => {
-    setV(localStorage.getItem(p.k));
-  }, [p.k]);
-
-  const onChange = (ev) => {
-    setV(ev.target.value);
-    localStorage.setItem(p.k, ev.target.value);
-  };
-
-  return (
-    <>
-      <label htmlFor={p.k} className={p.r ? styles.required : null}>
-        {p.t}
-      </label>
-      <input type="text" id={p.k} name={p.k} required={p.r} value={v} onChange={onChange} />
-    </>
-  );
-}
+  return <div id={htmlId} style={p.isVisible ? null : { display: "none" }} />;
+};
