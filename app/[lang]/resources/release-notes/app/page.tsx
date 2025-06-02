@@ -33,6 +33,19 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.12.1 */}
+      <h2>
+        <LinkToAnchor id="7.12.1">7.12.1</LinkToAnchor>
+      </h2>
+      <p>
+        <em>En attente de publication</em>
+      </p>
+      <ul>
+        <li>
+          Permet de façon optionnelle l'utilisation d'un protocol simplifié d'autorisation des extensions de navigateur.
+        </li>
+        <li>Import/export des graines TOTP.</li>
+      </ul>
       {/* 7.12.0 */}
       <h2>
         <LinkToAnchor id="7.12.0">7.12.0</LinkToAnchor>
@@ -559,12 +572,23 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.12.1 */}
+      <h2>
+        <LinkToAnchor id="7.12.1">7.12.1</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Awaiting publication</em>
+      </p>
+      <ul>
+        <li>Allows an optional simplified browser extension authorization protocol.</li>
+        <li>Imports/exports TOTP seeds.</li>
+      </ul>
       {/* 7.12.0 */}
       <h2>
         <LinkToAnchor id="7.12.0">7.12.0</LinkToAnchor>
       </h2>
       <p>
-        <em>Awaiting publication</em>
+        <em>Publication skipped</em>
       </p>
       <ul>
         <li>New logo inside the application to announce the acquisition by RG System, Septeo group.</li>
