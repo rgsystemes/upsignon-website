@@ -164,6 +164,12 @@ module.exports = async (phase, { defaultConfig }) => {
           destination: "https://app.upsignon.eu/.well-known/:param*",
           permanent: true,
         },
+        {
+          // redirect a link mistyped in the app
+          source: "/resources/articles/upsignon-rejoint-rg-system-group-septeo",
+          destination: "/resources/articles/upsignon-rejoint-rg-system-groupe-septeo",
+          permanent: true,
+        },
       ]),
   };
   return nextConfig;
