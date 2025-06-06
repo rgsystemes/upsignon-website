@@ -33,9 +33,9 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
-      {/* 7.12.1 */}
+      {/* 7.12.2 */}
       <h2>
-        <LinkToAnchor id="7.12.1">7.12.1</LinkToAnchor>
+        <LinkToAnchor id="7.12.2">7.12.2</LinkToAnchor>
       </h2>
       <p>
         <em>En attente de publication</em>
@@ -572,9 +572,9 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
-      {/* 7.12.1 */}
+      {/* 7.12.2 */}
       <h2>
-        <LinkToAnchor id="7.12.1">7.12.1</LinkToAnchor>
+        <LinkToAnchor id="7.12.2">7.12.2</LinkToAnchor>
       </h2>
       <p>
         <em>Awaiting publication</em>
