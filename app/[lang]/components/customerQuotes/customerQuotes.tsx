@@ -18,7 +18,7 @@ export default function CustomerQuotes(p: { lang: string }) {
           <div key={key} className={styles.quote}>
             <p className={styles.quoteText}>{q.quote}</p>
             <div className={styles.quoteImage}>
-              <Image src={customerLogos[key]} alt={""} objectFit="contain" />
+              <Image src={customerLogos[key]} alt="" />
             </div>
             <p className={styles.quoteName}>{q.name}</p>
             <p className={styles.quoteNameSubtitle}>{q.jobTitle}</p>
