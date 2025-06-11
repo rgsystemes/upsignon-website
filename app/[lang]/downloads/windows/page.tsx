@@ -272,7 +272,7 @@ function FRWindowsAllDownloadPage() {
                 <td>
                   OUI
                   <br />
-                  (semi-automatique)
+                  (avec validation manuelle)
                 </td>
                 <td>NON</td>
                 <td>UPSIGNON</td>
@@ -501,16 +501,19 @@ function FRWindowsAllDownloadPage() {
       <CodeBlock name="upsignonGPO.sh">{preConfigDeployScript}</CodeBlock>
 
       <h2>
-        <LinkToAnchor id={anchors.gpoAutoUpdate}>Script de mise-à-jour automatique par GPO</LinkToAnchor>
+        <LinkToAnchor id={anchors.gpoAutoUpdate}>Script de mise-à-jour automatique par GPO (déprécié)</LinkToAnchor>
       </h2>
-      <p>
-        Si vous souhaitez mettre à jour l'application automatiquement par GPO, vous pouvez utiliser ce script pour
-        télécharger automatiquement la dernière version de l'application à chaque fois qu'une nouvelle version est
-        publiée. Vous pouvez ensuite configurer une tâche quotidienne ou hebdomadaire qui lance ce script. Ensuite vous
-        pouvez configurer une GPO qui installe le fichier téléchargé pour tous vos utilisateurs lorsque ce fichier
-        change.
-      </p>
-      <CodeBlock name="upsignon-update.ps1">{updateScriptFR}</CodeBlock>
+      <details>
+        <summary>(Ce script n'est plus nécessaire depuis la version 7.11.0 de l'application.) Voir :</summary>
+        <p>
+          Si vous souhaitez mettre à jour l'application automatiquement par GPO, vous pouvez utiliser ce script pour
+          télécharger automatiquement la dernière version de l'application à chaque fois qu'une nouvelle version est
+          publiée. Vous pouvez ensuite configurer une tâche quotidienne ou hebdomadaire qui lance ce script. Ensuite
+          vous pouvez configurer une GPO qui installe le fichier téléchargé pour tous vos utilisateurs lorsque ce
+          fichier change.
+        </p>
+        <CodeBlock name="upsignon-update.ps1">{updateScriptFR}</CodeBlock>
+      </details>
 
       <h2>
         <LinkToAnchor id={anchors.storeToMsiMigration}>
@@ -612,7 +615,7 @@ function ENWindowsAllDownloadPage() {
                 <td>
                   YES
                   <br />
-                  (semi-automatic)
+                  (with manual validation)
                 </td>
                 <td>NO</td>
                 <td>UPSIGNON</td>
@@ -838,14 +841,17 @@ function ENWindowsAllDownloadPage() {
       <CodeBlock name="upsignonGPO.sh">{preConfigDeployScript}</CodeBlock>
 
       <h2>
-        <LinkToAnchor id={anchors.gpoAutoUpdate}>GPO auto update script</LinkToAnchor>
+        <LinkToAnchor id={anchors.gpoAutoUpdate}>GPO auto update script (deprecated)</LinkToAnchor>
       </h2>
-      <p>
-        If you wish to automatically update the app by GPO, you can use this script to automatically download the latest
-        version of the app each time a new release is published. Add a task to launch this script every day or week,
-        then add a GPO to install the downloaded app for all your users when the file changes.
-      </p>
-      <CodeBlock name="upsignon-update.ps1">{updateScriptEN}</CodeBlock>
+      <details>
+        <summary>(This script is no longer necessary since version 7.11.0 of the app.) View:</summary>
+        <p>
+          If you wish to automatically update the app by GPO, you can use this script to automatically download the
+          latest version of the app each time a new release is published. Add a task to launch this script every day or
+          week, then add a GPO to install the downloaded app for all your users when the file changes.
+        </p>
+        <CodeBlock name="upsignon-update.ps1">{updateScriptEN}</CodeBlock>
+      </details>
 
       <h2>
         <LinkToAnchor id={anchors.storeToMsiMigration}>
