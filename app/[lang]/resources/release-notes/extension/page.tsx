@@ -63,7 +63,7 @@ function FRExtensionNotes() {
         <li>
           Nouveau système de configuration du canal de communication entre l'extension et l'application UpSignOn pour
           une meilleure sécurité et une meilleure expérience utilisateur. Voir les notes de versions de{" "}
-          <Link href="/fr/resources/release-notes/app#7.12.0">l'application v7.12.0</Link>). (NB : cette version reste
+          <Link href="/fr/resources/release-notes/app#7.12.2">l'application v7.12.2</Link>). (NB : cette version reste
           rétrocompatible avec les anciennes versions de l'application.)
         </li>
       </ul>
@@ -267,7 +267,7 @@ function ENExtensionNotes() {
         <li>
           New setup system for the communication channel between the extension and the UpSignOn app to enhance security
           and UX. See version notes of
-          <Link href="/fr/resources/release-notes/app#7.12.0">app v7.12.0</Link>). (Note : this version remains
+          <Link href="/fr/resources/release-notes/app#7.12.2">app v7.12.2</Link>). (Note : this version remains
           backwards-compatible with previous versions of the app.)
         </li>
       </ul>

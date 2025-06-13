@@ -35,28 +35,20 @@ function FRAppNotes() {
     <section className={styles.section}>
       {/* 7.12.2 */}
       <h2>
-        <LinkToAnchor id="7.12.2">7.12.2</LinkToAnchor>
+        <LinkToAnchor id="7.12.2">7.12.1 et 7.12.2</LinkToAnchor>
       </h2>
       <p>
-        <em>En attente de publication</em>
+        <em>Publiée le 13/06/2025</em>
       </p>
       <ul>
-        <li>
-          Permet de façon optionnelle l'utilisation d'un protocol simplifié d'autorisation des extensions de navigateur.
-        </li>
         <li>Import/export des graines TOTP.</li>
-      </ul>
-      {/* 7.12.0 */}
-      <h2>
-        <LinkToAnchor id="7.12.0">7.12.0</LinkToAnchor>
-      </h2>
-      <p>
-        <em>En attente de publication</em>
-      </p>
-      <ul>
         <li>Nouveau logo dans l'application pour annoncer le rachat par RG System, groupe Septeo.</li>
         <li>
           Nouveau système d'autorisation de l'extension de navigateur apportant des améliorations de sécurité et d'UX.
+        </li>
+        <li>
+          Possibilité d'activer une version simplifiée mais moins sécurisée du nouveau protocole d'autorisation des
+          extensions de navigateur.
         </li>
       </ul>
       {/* 7.11.0 */}
@@ -574,25 +566,16 @@ function ENAppNotes() {
     <section className={styles.section}>
       {/* 7.12.2 */}
       <h2>
-        <LinkToAnchor id="7.12.2">7.12.2</LinkToAnchor>
+        <LinkToAnchor id="7.12.2">7.12.1 and 7.12.2</LinkToAnchor>
       </h2>
       <p>
-        <em>Awaiting publication</em>
+        <em>Published on 13/06/2025</em>
       </p>
       <ul>
-        <li>Allows an optional simplified browser extension authorization protocol.</li>
         <li>Imports/exports TOTP seeds.</li>
-      </ul>
-      {/* 7.12.0 */}
-      <h2>
-        <LinkToAnchor id="7.12.0">7.12.0</LinkToAnchor>
-      </h2>
-      <p>
-        <em>Publication skipped</em>
-      </p>
-      <ul>
         <li>New logo inside the application to announce the acquisition by RG System, Septeo group.</li>
         <li>New browser extension authorisation system that improves security and UX.</li>
+        <li>Allows an optional simplified browser extension authorization protocol.</li>
       </ul>
       {/* 7.11.0 */}
       <h2>
