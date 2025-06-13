@@ -34,6 +34,14 @@ export default async function ServerNotes({ params }: { params: Promise<{ lang: 
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.6.1 */}
+      <h2>
+        <LinkToAnchor id="2.6.1">2.6.1</LinkToAnchor>
+      </h2>
+      <em>Publiée le 13/06/2025</em>
+      <ul>
+        <li>Mise à jour des dépendances.</li>
+      </ul>
       {/* 2.6.0 */}
       <h2>
         <LinkToAnchor id="2.6.0">2.6.0</LinkToAnchor>
@@ -230,6 +238,14 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.6.1 */}
+      <h2>
+        <LinkToAnchor id="2.6.1">2.6.1</LinkToAnchor>
+      </h2>
+      <em>Published on 13/06/2025</em>
+      <ul>
+        <li>Dependency updates.</li>
+      </ul>
       {/* 2.6.0 */}
       <h2>
         <LinkToAnchor id="2.6.0">2.6.0</LinkToAnchor>

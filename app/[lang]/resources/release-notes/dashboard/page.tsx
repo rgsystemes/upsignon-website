@@ -34,6 +34,15 @@ export default async function DashboardNotes({ params }: { params: Promise<{ lan
 function FRDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.7.0 */}
+      <h2>
+        <LinkToAnchor id="2.7.0">2.7.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 13/06/2025</em>
+      <ul>
+        <li>(Superadmin) Amélioration du formulaire de création de banque</li>
+        <li>Autres correctifs</li>
+      </ul>
       {/* 2.6.0 */}
       <h2>
         <LinkToAnchor id="2.6.0">2.6.0</LinkToAnchor>
@@ -274,6 +283,15 @@ function FRDashboardNotes() {
 function ENDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.7.0 */}
+      <h2>
+        <LinkToAnchor id="2.7.0">2.7.0</LinkToAnchor>
+      </h2>
+      <em>Published on 13/06/2025</em>
+      <ul>
+        <li>(Superadmin) Improves the bank creation form</li>
+        <li>Other fixes</li>
+      </ul>
       {/* 2.6.0 */}
       <h2>
         <LinkToAnchor id="2.6.0">2.6.0</LinkToAnchor>
