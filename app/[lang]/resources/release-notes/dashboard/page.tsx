@@ -34,6 +34,17 @@ export default async function DashboardNotes({ params }: { params: Promise<{ lan
 function FRDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.7.1 */}
+      <h2>
+        <LinkToAnchor id="2.7.1">2.7.1</LinkToAnchor>
+      </h2>
+      <em>Publiée le 19/06/2025</em>
+      <ul>
+        <li>
+          Le mode simple est désormais le mode par défaut pour les autorisations de navigateur. Les administrateurs
+          peuvent choisir de forcer le mode sécurisé.
+        </li>
+      </ul>
       {/* 2.7.0 */}
       <h2>
         <LinkToAnchor id="2.7.0">2.7.0</LinkToAnchor>
@@ -283,6 +294,17 @@ function FRDashboardNotes() {
 function ENDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.7.1 */}
+      <h2>
+        <LinkToAnchor id="2.7.1">2.7.1</LinkToAnchor>
+      </h2>
+      <em>Published on 19/06/2025</em>
+      <ul>
+        <li>
+          The easy mode is now the default for browser authorizations. Administrators can choose to force the secure
+          mode.
+        </li>
+      </ul>
       {/* 2.7.0 */}
       <h2>
         <LinkToAnchor id="2.7.0">2.7.0</LinkToAnchor>

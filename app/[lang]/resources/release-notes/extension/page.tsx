@@ -33,11 +33,23 @@ export default async function ExtensionNotes({ params }: { params: Promise<{ lan
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.5.2 */}
+      <h2>
+        <LinkToAnchor id="1.5.2">1.5.2</LinkToAnchor>
+      </h2>
+      <em>Publiée le 19/06/2025</em>
+      <ul>
+        <li>Corrige un bug empêchant de valider l'alerte du navigateur au clic sur le bouton "Connecter à l'appli".</li>
+        <li>
+          Corrige un bug où l'extension affiche la page d'erreur alors qu'elle est bien connectée à l'application (cas
+          où le navigateur a éteint une partie du code de l'extension pour consommer moins de ressources).
+        </li>
+      </ul>
       {/* 1.5.1 */}
       <h2>
         <LinkToAnchor id="1.5.1">1.5.1</LinkToAnchor>
       </h2>
-      <em>Publié le 06/06/2025</em>
+      <em>Publiée le 06/06/2025</em>
       <ul>
         <li>Correction de bugs</li>
       </ul>
@@ -237,6 +249,18 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.5.2 */}
+      <h2>
+        <LinkToAnchor id="1.5.2">1.5.2</LinkToAnchor>
+      </h2>
+      <em>Published on 19/06/2025</em>
+      <ul>
+        <li>Fixes a bug preventing to validate the browser alert when clicking on te "Connect to the app" button.</li>
+        <li>
+          Fixes a bug where the extension displays the error page despite being connected to the app (case when the
+          browser kills parts of the extension to use less resources).
+        </li>
+      </ul>
       {/* 1.5.1 */}
       <h2>
         <LinkToAnchor id="1.5.1">1.5.1</LinkToAnchor>

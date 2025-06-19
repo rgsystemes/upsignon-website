@@ -33,6 +33,25 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.12.3 */}
+      <h2>
+        <LinkToAnchor id="7.12.3">7.12.3</LinkToAnchor>
+      </h2>
+      <p>
+        <em>En cours de publication</em>
+      </p>
+      <ul>
+        <li>
+          Adapte l'application pour utiliser par défaut le mode simple pour l'autorisation des extensions de navigateur.
+          L'utilisateur peut choisir d'activer manuellement le mode de sécurité renforcée.
+        </li>
+        <li>
+          Améliore la détection des navigateurs sur Windows et ajoute un bouton pour autoriser un navigateur qui
+          n'apparait pas dans la liste.
+        </li>
+        <li>Améliore certaines formulations.</li>
+        <li>Corrige le cas de déclenchement de la recherche de mise-à-jour pour les applications Windows msi.</li>
+      </ul>
       {/* 7.12.2 */}
       <h2>
         <LinkToAnchor id="7.12.2">7.12.1 et 7.12.2</LinkToAnchor>
@@ -564,6 +583,25 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.12.3 */}
+      <h2>
+        <LinkToAnchor id="7.12.3">7.12.3</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Awaiting publishing</em>
+      </p>
+      <ul>
+        <li>
+          Adapts the application to default to simple mode for browser extension authorization. The user can choose to
+          manually activate the strengthened security mode.
+        </li>
+        <li>
+          Improves the browser detection on Windows and adds a button to authorize a browser that doesn't appear in the
+          list.
+        </li>
+        <li>Improves some wordings.</li>
+        <li>Fixes the trigger to search for app updates on Windows msi apps.</li>
+      </ul>
       {/* 7.12.2 */}
       <h2>
         <LinkToAnchor id="7.12.2">7.12.1 and 7.12.2</LinkToAnchor>

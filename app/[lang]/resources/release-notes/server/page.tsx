@@ -34,6 +34,14 @@ export default async function ServerNotes({ params }: { params: Promise<{ lang: 
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.6.2 */}
+      <h2>
+        <LinkToAnchor id="2.6.2">2.6.2</LinkToAnchor>
+      </h2>
+      <em>Publiée le 19/06/2025</em>
+      <ul>
+        <li>Le mode simple pour les autorisations de navigateur est désormais le mode par défaut.</li>
+      </ul>
       {/* 2.6.1 */}
       <h2>
         <LinkToAnchor id="2.6.1">2.6.1</LinkToAnchor>
@@ -238,6 +246,14 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.6.2 */}
+      <h2>
+        <LinkToAnchor id="2.6.2">2.6.2</LinkToAnchor>
+      </h2>
+      <em>Published on 19/06/2025</em>
+      <ul>
+        <li>The easy mode is now the default for browser authorizations.</li>
+      </ul>
       {/* 2.6.1 */}
       <h2>
         <LinkToAnchor id="2.6.1">2.6.1</LinkToAnchor>
