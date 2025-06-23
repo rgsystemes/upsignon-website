@@ -15,8 +15,9 @@
 
 .pricingsContainer {
   display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
   column-gap: 1.5rem;
   row-gap: 5px;
   margin-bottom: 40px;
@@ -41,16 +42,20 @@
 
 .persoPricing, .proPricing {
   min-width: 300px;
-  background-color: white;
+  max-width: 500px;
   color: var(--text-color);
   padding: 20px;
+  margin-bottom: 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 1rem;
   border: 1px solid var(--grey100);
-  box-shadow: 0 12px 20px -4px var(--quinternary15), 0 4px 6px -2px var(--quinternary05);
+  box-shadow: 0 0 20px -4px var(--quinternary15), 0 0 6px -2px var(--quinternary05);
+}
+.proPricing {
+  background-color: white;
 }
 
 .persoPrice {
@@ -80,7 +85,7 @@
   text-align: center;
 }
 
-button.proPricingActionButton, .downloadAction {
+button.proPricingActionButton {
   background: none;
   border: none;
   background-color: var(--primary);
@@ -92,12 +97,13 @@ button.proPricingActionButton, .downloadAction {
   border-radius: 100px;
   padding: 10px 20px;
 }
-button.proPricingActionButton:hover, .downloadAction:hover {
+button.proPricingActionButton:hover {
   text-decoration: none;
   background-color: var(--quinternary);
 }
 
-button.proPricingActionButtonSecondary {
+
+button.proPricingActionButtonSecondary, a.downloadAction {
   background: none;
   background-color: none;
   color: var(--text-color);
@@ -105,8 +111,9 @@ button.proPricingActionButtonSecondary {
   border: 1px solid var(--primary);
   text-decoration: none;
   padding: 10px 20px;
+  margin-bottom: 10px;
 }
-button.proPricingActionButtonSecondary:hover {
+button.proPricingActionButtonSecondary:hover, a.downloadAction:hover {
   background-color: var(--primary);
   color: white;
   text-decoration: none;

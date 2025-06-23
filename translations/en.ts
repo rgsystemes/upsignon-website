@@ -219,15 +219,15 @@ const translations: typeof fr = {
   pricing: {
     metaDescription: "Get our clear and transparent pricing and receive a quote by email.",
     persoPricing: {
-      t: "PERSO",
+      t: "PERSONAL USE",
       free: "0€",
       details:
-        "Our PERSO vaults are entirely free and unlimited. But a good rating on stores and publicity among your relatives and your social will be of great value to us!",
-      downloadAction: "Download UpSignon",
+        "Our PERSONAL USE vaults are entirely free and unlimited. But a good rating on stores and publicity among your relatives and your social will be of great value to us!",
+      downloadAction: "Download",
     },
     proPricing: {
-      t: "PRO",
-      licencePriceUnit: "per vault per month. Billed annually.",
+      t: "PROFESSIONAL",
+      licencePriceUnit: "per vault / user / month. Billed annually.",
       saasDetails: "SAAS hosting is included in the licence price.",
       onPremOption: "Self hosting option (Linux): from 1,000€ / year",
     },

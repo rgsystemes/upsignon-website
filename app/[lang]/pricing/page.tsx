@@ -36,6 +36,28 @@ export default async function Page({
       <section className={styles.section}>
         <h1>{t.menu.pricing}</h1>
         <div className={styles.pricingsContainer}>
+          <div className={styles.proPricing}>
+            <h3 className={styles.pricingTitlePro}>{t.pricing.proPricing.t}</h3>
+            <div className={styles.proPrice}>{defaultLicencePrice}€</div>
+            <div className={styles.proPriceUnit}>
+              {t.pricing.proPricing.licencePriceUnit}
+            </div>
+            <div className={styles.selfHostingTitle}>
+              {t.pricing.proPricing.onPremOption}
+            </div>
+            <FormModalButton
+              lang={lang}
+              className={styles.proPricingActionButton}
+              buttonText={t.actions.freeTrial}
+              modalTitle={t.actions.freeTrial}
+              modalLinkValue="free-trial"
+              isFreeTrialForm={true}
+            />
+
+            <div className={styles.pricingDetails}>
+              {t.pricing.proPricing.saasDetails}
+            </div>
+          </div>
           <div className={styles.persoPricing}>
             <h3 className={styles.pricingTitlePerso}>
               {t.pricing.persoPricing.t}
@@ -48,36 +70,6 @@ export default async function Page({
             </Link>
             <div className={styles.pricingDetails}>
               {t.pricing.persoPricing.details} 🙏🙏
-            </div>
-          </div>
-          <div className={styles.proPricing}>
-            <h3 className={styles.pricingTitlePro}>{t.pricing.proPricing.t}</h3>
-            <div className={styles.proPrice}>{defaultLicencePrice}€</div>
-            <div className={styles.proPriceUnit}>
-              {t.pricing.proPricing.licencePriceUnit}
-            </div>
-            <div className={styles.selfHostingTitle}>
-              {t.pricing.proPricing.onPremOption}
-            </div>
-            <FormModalButton
-              lang={lang}
-              className={styles.proPricingActionButtonSecondary}
-              buttonText={t.actions.contactUs}
-              modalTitle={t.actions.contactUs}
-              modalLinkValue="contact-us"
-              isFreeTrialForm={false}
-            />
-            <FormModalButton
-              lang={lang}
-              className={styles.proPricingActionButton}
-              buttonText={t.actions.freeTrial}
-              modalTitle={t.actions.freeTrial}
-              modalLinkValue="free-trial"
-              isFreeTrialForm={true}
-            />
-
-            <div className={styles.pricingDetails}>
-              {t.pricing.proPricing.saasDetails}
             </div>
           </div>
         </div>

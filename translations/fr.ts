@@ -218,15 +218,15 @@ const translations = {
   pricing: {
     metaDescription: "Obtenez notre tarification claire et transparente et recevez un devis par email.",
     persoPricing: {
-      t: "PERSO",
+      t: "PARTICULIER",
       free: "0€",
       details:
-        "Nos coffres-forts PERSO sont entièrement gratuits et illimités. Mais une bonne note sur les stores et de la publicité auprès de vos proches et sur vos réseaux aura une grande valeur pour nous !",
-      downloadAction: "Télécharger UpSignon",
+        "Nos coffres-forts PARTICULIERS sont entièrement gratuits et illimités. Mais une bonne note sur les stores et de la publicité auprès de vos proches et sur vos réseaux aura une grande valeur pour nous !",
+      downloadAction: "Télécharger",
     },
     proPricing: {
-      t: "PRO",
-      licencePriceUnit: "par coffre-fort par mois. Facturé annuellement.",
+      t: "PROFESSIONNEL",
+      licencePriceUnit: "par coffre-fort / utilisateur / mois. Facturé annuellement.",
       saasDetails: "L'hébergement SAAS est inclus dans le prix des licences.",
       onPremOption: "Option auto-hébergement (Linux) : à partir de 1 000€ / an",
     },
