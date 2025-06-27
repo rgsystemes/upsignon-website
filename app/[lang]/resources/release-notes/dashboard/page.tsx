@@ -34,6 +34,14 @@ export default async function DashboardNotes({ params }: { params: Promise<{ lan
 function FRDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.7.2 */}
+      <h2>
+        <LinkToAnchor id="2.7.2">2.7.2</LinkToAnchor>
+      </h2>
+      <em>Publiée le 28/06/2025</em>
+      <ul>
+        <li>Améliore la documentation de la configuration Microsoft Entra et corrige un bug.</li>
+      </ul>
       {/* 2.7.1 */}
       <h2>
         <LinkToAnchor id="2.7.1">2.7.1</LinkToAnchor>
@@ -294,6 +302,14 @@ function FRDashboardNotes() {
 function ENDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.7.2 */}
+      <h2>
+        <LinkToAnchor id="2.7.2">2.7.2</LinkToAnchor>
+      </h2>
+      <em>Published on 28/06/2025</em>
+      <ul>
+        <li>Improves Microsoft Entra configuration doc and fixes a bug.</li>
+      </ul>
       {/* 2.7.1 */}
       <h2>
         <LinkToAnchor id="2.7.1">2.7.1</LinkToAnchor>
