@@ -33,6 +33,18 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.12.4 */}
+      <h2>
+        <LinkToAnchor id="7.12.4">7.12.4</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 30/06/2025</em>
+      </p>
+      <ul>
+        <li>importe les graines TOTP lorsqu'elle sont exportées en tant qu'URL dans les fichiers XML</li>
+        <li>corrige un problème avec le format de certains fichiers CSV </li>
+        <li>corrige un problème conduisant à la désactivation de la biométrie à chaque redémarrage</li>
+      </ul>
       {/* 7.12.3 */}
       <h2>
         <LinkToAnchor id="7.12.3">7.12.3</LinkToAnchor>
@@ -583,6 +595,18 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.12.4 */}
+      <h2>
+        <LinkToAnchor id="7.12.4">7.12.4</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 30/06/2025</em>
+      </p>
+      <ul>
+        <li>imports totp when exported in XML files as URL</li>
+        <li>fixes an issue with some csv formats</li>
+        <li>fixes biometry being deactivated at each start</li>
+      </ul>
       {/* 7.12.3 */}
       <h2>
         <LinkToAnchor id="7.12.3">7.12.3</LinkToAnchor>
