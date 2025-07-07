@@ -35,21 +35,24 @@ Foreach($u in $usersPaths){
 }
 Get-AppxPackage -Name 'dataSmine.UpSignOn' -AllUsers | Remove-AppxPackage -AllUsers
 `;
-const updateScriptFR = `# Save with UTF-8-with-BOM encoding
-
-##############################################
-# CONSTANTES À MODIFIER SELON VOTRE CONTEXTE #
-##############################################
-# Emplacement du dossier de mise-à-jour
-$updateFolderPath = "C:\\chemin\\vers\\dossier\\maj-upsignon"
+const updateScriptFR = `# Enregistrer en utilisant l'encodage UTF-8-with-BOM
+#############################################
+# CONSTANTES A ADAPTER SELON VOTRE CONTEXTE #
+#############################################
+# Chemin vers le dossier de mise-à-jour
+$updateFolderPath = "C:\\path\\to\\upsignon-update\folder"
+if (-not (Test-Path $updateFolderPath)) {
+    Write-Error "Le dossier de mise à jour n'existe pas : $updateFolderPath"
+    exit 1
+}
 
 # Choix du mode d'installation parmi "SILENT_MSI", "SILENT_USER_MSI", "STORE"
 $packageType = "SILENT_MSI"
 
 
-#########################
-# SCRIPT DE MISE-À-JOUR #
-# Ce script télécharge le dernier package de l'application uniquement si une nouvelle version est disponible.
+#################
+# UPDATE SCRIPT #
+# This script downloads the last package of the app only if a new version is available.
 #########################
 
 # Latest available version URLs per package type
@@ -72,47 +75,72 @@ if($packageType -eq "SILENT_USER_MSI") {
     $localPackagePath = "$updateFolderPath\\upsignon.zip"
 }
 
-$currentVersionFilePath = "$updateFolderPath\\currentVersion.txt"
-$latestVersionFilePath = "$updateFolderPath\\latestVersion.txt"
+$currentVersionFilePath = "$updateFolderPath\currentVersion.txt"
+$latestVersionFilePath = "$updateFolderPath\latestVersion.txt"
 
 
-# Download latest version file
-Invoke-WebRequest -Uri $packageLatestVersionUrl -OutFile $latestVersionFilePath
 
-# Read current version and latest version
-$currentVersion = Get-Content -Path $currentVersionFilePath
-$latestVersion = Get-Content -Path $latestVersionFilePath
+# Download the latest version file
+try {
+    Invoke-WebRequest -Uri $packageLatestVersionUrl -OutFile $latestVersionFilePath -ErrorAction Stop
+} catch {
+    Write-Error "Erreur lors du téléchargement du fichier de dernière version: $_"
+    exit 2
+}
+
+# Read versions
+if (Test-Path $currentVersionFilePath) {
+    $currentVersion = Get-Content -Path $currentVersionFilePath -ErrorAction SilentlyContinue
+} else {
+    $currentVersion = ""
+}
+$latestVersion = Get-Content -Path $latestVersionFilePath -ErrorAction SilentlyContinue
 
 # Compare versions
 if ($currentVersion -ne $latestVersion) {
-    Write-Output "Une nouvelle version est disponible : $latestVersion. Mise à jour en cours..."
+    Write-Output "Une nouvelle version est disponible : $latestVersion. Mise-à-jour en cours..."
 
-    # Remove previous package
+    # Remove previous package if present
     if (Test-Path $localPackagePath) {
-        Remove-Item $localPackagePath
+        try {
+            Remove-Item $localPackagePath -ErrorAction Stop
+        } catch {
+            Write-Warning "Suppression du package précédent impossible : $_"
+        }
     }
 
     # Download the new package
-    Invoke-WebRequest -Uri $packageDownloadUrl -OutFile $localPackagePath
+    try {
+        Invoke-WebRequest -Uri $packageDownloadUrl -OutFile $localPackagePath -ErrorAction Stop
+    } catch {
+        Write-Error "Erreur de téléchargement du package : $_"
+        Remove-Item $latestVersionFilePath -ErrorAction SilentlyContinue
+        exit 4
+    }
 
-    # Update current version
+    # Update current version file
     Set-Content -Path $currentVersionFilePath -Value $latestVersion
 
-    # Remove latest version file
-    Remove-Item $latestVersionFilePath
+    # Remove the latest version file
+    Remove-Item $latestVersionFilePath -ErrorAction SilentlyContinue
 
-    Write-Output "Le package est désormais en version $latestVersion. $localPackagePath"
+    Write-Output "Le package est désormais à la version $latestVersion. ($localPackagePath)"
 } else {
-    Write-Output "Le package est déjà en version $currentVersion."
-    # Remove latest version file
-    Remove-Item $latestVersionFilePath
+    Write-Output "Le package est déjà à la version $currentVersion."
+    # Remove the latest version file
+    Remove-Item $latestVersionFilePath -ErrorAction SilentlyContinue
 }
 `;
-const updateScriptEN = `######################################
+const updateScriptEN = `# Save with UTF-8-with-BOM encoding
+######################################
 # CONSTANTS TO ADAPT TO YOUR CONTEXT #
 ######################################
 # Path of the update folder
-$updateFolderPath = "C:\\path\\to\\upsignon-update\\folder"
+$updateFolderPath = "C:\\path\\to\\upsignon-update\folder"
+if (-not (Test-Path $updateFolderPath)) {
+    Write-Error "The update folder does not exist: $updateFolderPath"
+    exit 1
+}
 
 # Choice of the installation mode amongst "SILENT_MSI", "SILENT_USER_MSI", "STORE"
 $packageType = "SILENT_MSI"
@@ -143,40 +171,60 @@ if($packageType -eq "SILENT_USER_MSI") {
     $localPackagePath = "$updateFolderPath\\upsignon.zip"
 }
 
-$currentVersionFilePath = "$updateFolderPath\\currentVersion.txt"
-$latestVersionFilePath = "$updateFolderPath\\latestVersion.txt"
+$currentVersionFilePath = "$updateFolderPath\currentVersion.txt"
+$latestVersionFilePath = "$updateFolderPath\latestVersion.txt"
 
 
-# Download latest version file
-Invoke-WebRequest -Uri $packageLatestVersionUrl -OutFile $latestVersionFilePath
 
-# Read current version and latest version
-$currentVersion = Get-Content -Path $currentVersionFilePath
-$latestVersion = Get-Content -Path $latestVersionFilePath
+# Download the latest version file
+try {
+    Invoke-WebRequest -Uri $packageLatestVersionUrl -OutFile $latestVersionFilePath -ErrorAction Stop
+} catch {
+    Write-Error "Error while downloading the latest version file: $_"
+    exit 2
+}
+
+# Read versions
+if (Test-Path $currentVersionFilePath) {
+    $currentVersion = Get-Content -Path $currentVersionFilePath -ErrorAction SilentlyContinue
+} else {
+    $currentVersion = ""
+}
+$latestVersion = Get-Content -Path $latestVersionFilePath -ErrorAction SilentlyContinue
 
 # Compare versions
 if ($currentVersion -ne $latestVersion) {
     Write-Output "A new version is available: $latestVersion. Updating..."
 
-    # Remove previous package
+    # Remove previous package if present
     if (Test-Path $localPackagePath) {
-        Remove-Item $localPackagePath
+        try {
+            Remove-Item $localPackagePath -ErrorAction Stop
+        } catch {
+            Write-Warning "Could not remove previous package: $_"
+        }
     }
 
     # Download the new package
-    Invoke-WebRequest -Uri $packageDownloadUrl -OutFile $localPackagePath
+    try {
+        Invoke-WebRequest -Uri $packageDownloadUrl -OutFile $localPackagePath -ErrorAction Stop
+    } catch {
+        Write-Error "Error while downloading the package: $_"
+        Remove-Item $latestVersionFilePath -ErrorAction SilentlyContinue
+        exit 4
+    }
 
-    # Update current version
+    # Update current version file
     Set-Content -Path $currentVersionFilePath -Value $latestVersion
 
-    # Remove latest version file
-    Remove-Item $latestVersionFilePath
+    # Remove the latest version file
+    Remove-Item $latestVersionFilePath -ErrorAction SilentlyContinue
 
-    Write-Output "The package is now in version $latestVersion. $localPackagePath"
+    Write-Output "The package is now at version $latestVersion. ($localPackagePath)"
 } else {
-    Write-Output "The package is already in version $currentVersion."
-    # Remove latest version file
-    Remove-Item $latestVersionFilePath
+    Write-Output "The package is already at version $currentVersion."
+    # Remove the latest version file
+    Remove-Item $latestVersionFilePath -ErrorAction SilentlyContinue
 }
 `;
 const msiMigrationScript2 = `Start-Process \\\\srv\\partages$\\xxx\\UpSignOn-7.3.0-silent-installer.msi -ArgumentList "/quiet"`;
