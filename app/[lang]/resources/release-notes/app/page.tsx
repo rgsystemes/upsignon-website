@@ -73,7 +73,9 @@ function FRAppNotes() {
       </p>
       <ul>
         <li>Import/export des graines TOTP.</li>
-        <li>Nouveau logo dans l'application pour annoncer le rachat par RG System, groupe Septeo.</li>
+        <li>
+          Nouveau logo dans l'application pour annoncer le rachat par SEPTEO IT SOLUTIONS (anciennement RG System).
+        </li>
         <li>
           Nouveau système d'autorisation de l'extension de navigateur apportant des améliorations de sécurité et d'UX.
         </li>
@@ -635,7 +637,9 @@ function ENAppNotes() {
       </p>
       <ul>
         <li>Imports/exports TOTP seeds.</li>
-        <li>New logo inside the application to announce the acquisition by RG System, Septeo group.</li>
+        <li>
+          New logo inside the application to announce the acquisition by SEPTEO IT SOLUTIONS (previously RG System).
+        </li>
         <li>New browser extension authorisation system that improves security and UX.</li>
         <li>Allows an optional simplified browser extension authorization protocol.</li>
       </ul>

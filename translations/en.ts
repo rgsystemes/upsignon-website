@@ -33,7 +33,7 @@ const translations: typeof fr = {
       title: "Editor",
       intro:
         'This website, accessible from the URL address https://upsignon.eu (hereinafter referred to as the "Site") is a publication of the company:',
-      name: "RG SYSTEMES",
+      name: "SEPTEO IT SOLUTIONS",
       mainLocationTitle: "Head office:",
       mainLocationContent: "194 avenue de la Gare Sud de France, Font de la Banquière, 34970 LATTES (France)",
       statusTitle: "Status or legal form:",
@@ -59,7 +59,7 @@ const translations: typeof fr = {
     },
     intellectualProperty: {
       title: "Sign ownership",
-      intro: "The UpSignon brand is the property of RG SYSTEMES.",
+      intro: "The UpSignon brand is the property of SEPTEO IT SOLUTIONS.",
     },
     publicationDirector: {
       title: "Publishin director",
@@ -76,7 +76,7 @@ const translations: typeof fr = {
     },
     footer1: "The entire site is subject to French legislation on copyright and intellectual property.",
     footer2:
-      "All rights of reproduction, representation and making available to the public are reserved. Unless otherwise expressly authorized in writing by RG SYSTEMES.",
+      "All rights of reproduction, representation and making available to the public are reserved. Unless otherwise expressly authorized in writing by SEPTEO IT SOLUTIONS.",
   },
   footer: {
     nav: {
