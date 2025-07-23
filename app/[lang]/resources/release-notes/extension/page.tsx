@@ -33,6 +33,15 @@ export default async function ExtensionNotes({ params }: { params: Promise<{ lan
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.5.3 */}
+      <h2>
+        <LinkToAnchor id="1.5.3">1.5.3</LinkToAnchor>
+      </h2>
+      <em>Publiée le 23/07/2025</em>
+      <ul>
+        <li>Améliore l'interface de la page "extension non connectée".</li>
+        <li>Corrige un bug affichant la mauvaise page dans certains cas.</li>
+      </ul>
       {/* 1.5.2 */}
       <h2>
         <LinkToAnchor id="1.5.2">1.5.2</LinkToAnchor>
@@ -249,6 +258,15 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.5.3 */}
+      <h2>
+        <LinkToAnchor id="1.5.3">1.5.3</LinkToAnchor>
+      </h2>
+      <em>Published on 23/07/2025</em>
+      <ul>
+        <li>Improves the interface for the page "extension not connected".</li>
+        <li>Fixes a bug displaying the wrong page in some cases.</li>
+      </ul>
       {/* 1.5.2 */}
       <h2>
         <LinkToAnchor id="1.5.2">1.5.2</LinkToAnchor>
