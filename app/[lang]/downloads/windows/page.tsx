@@ -426,6 +426,9 @@ function FRWindowsAllDownloadPage() {
               <td>
                 installation par défaut dans <br />
                 <span className={styles.breakable}>C:\Program Files\UPSIGNON\UpSignOn (msi)</span>
+                <br />
+                ou dans
+                <span className={styles.breakable}>C:\Users\xxx\AppData\Local\Programs\UPSIGNON\UpSignOn (msi)</span>
               </td>
               <td>
                 installation pour l’utilisateur uniquement dans <br />
@@ -767,6 +770,9 @@ function ENWindowsAllDownloadPage() {
               <td>
                 default installation in <br />
                 <span className={styles.breakable}>C:\Program Files\UPSIGNON\UpSignOn (msi)</span>
+                <br />
+                or in
+                <span className={styles.breakable}>C:\Users\xxx\AppData\Local\Programs\UPSIGNON\UpSignOn (msi)</span>
               </td>
               <td>
                 installation for user only in <br />
