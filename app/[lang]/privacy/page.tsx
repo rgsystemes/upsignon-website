@@ -1,24 +1,8 @@
 import { Metadata } from "next";
 import { getDictionary } from "../../../translations/translations";
 import styles from "./page.module.css";
-import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang } = await params;
-  const t = getDictionary(lang);
-  return {
-    title: t.footer.privacyPolicy,
-    description: t.footer.privacyPolicy,
-    alternates: {
-      canonical: "https://upsignon.eu/fr/privacy",
-      languages: {
-        fr: "https://upsignon.eu/fr/privacy",
-        en: "https://upsignon.eu/en/privacy",
-      },
-    },
-  };
-}
-
+// This page exists only so Google Play Store accepts the link for privacy policy.
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const t = getDictionary(lang);
