@@ -34,6 +34,14 @@ export default async function ServerNotes({ params }: { params: Promise<{ lang: 
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.7.0 */}
+      <h2>
+        <LinkToAnchor id="2.7.0">2.7.0</LinkToAnchor>
+      </h2>
+      <em>Publié le 11/09/2025</em>
+      <ul>
+        <li>Ajout de l'authentification par SSO</li>
+      </ul>
       {/* 2.6.2 */}
       <h2>
         <LinkToAnchor id="2.6.2">2.6.2</LinkToAnchor>
@@ -246,6 +254,14 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.7.0 */}
+      <h2>
+        <LinkToAnchor id="2.7.0">2.7.0</LinkToAnchor>
+      </h2>
+      <em>Published on 11/09/2025</em>
+      <ul>
+        <li>Add support for SSO authentication</li>
+      </ul>
       {/* 2.6.2 */}
       <h2>
         <LinkToAnchor id="2.6.2">2.6.2</LinkToAnchor>

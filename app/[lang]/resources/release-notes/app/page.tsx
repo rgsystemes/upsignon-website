@@ -33,6 +33,21 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.13.0 */}
+      <h2>
+        <LinkToAnchor id="7.13.0">7.13.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 11/09/2025</em>
+      </p>
+      <ul>
+        <li>PRO: Enrôlement d'appareil par SSO</li>
+        <li>PRO: Mot de passe oublié autonome par SSO</li>
+        <li>WINDOWS: corrige un problème empêchant la fermeture de l'application lors de sa mise-à-jour</li>
+        <li>corrige le champ note qui n'était plus multiligne sur la page de création des codes et des comptes</li>
+        <li>corrige le champ d'édition du mot de passe maître qui ne fonctionnait plus dans certains cas</li>
+        <li>corrige l’avertissement sur les appareils jailbreakés/rootés</li>
+      </ul>
       {/* 7.12.4 */}
       <h2>
         <LinkToAnchor id="7.12.4">7.12.4</LinkToAnchor>
@@ -597,6 +612,21 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.13.0 */}
+      <h2>
+        <LinkToAnchor id="7.13.0">7.13.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 11/09/2025</em>
+      </p>
+      <ul>
+        <li>PRO: SSO device enrolment</li>
+        <li>PRO: SSO master password reset</li>
+        <li>WINDOWS: fix app not closing when upgrading</li>
+        <li>fix note field not being multiline on account and code creation pages</li>
+        <li>fix master password change form not working</li>
+        <li>fix jailbreak/rooted device warning</li>
+      </ul>
       {/* 7.12.4 */}
       <h2>
         <LinkToAnchor id="7.12.4">7.12.4</LinkToAnchor>

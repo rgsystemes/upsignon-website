@@ -34,6 +34,15 @@ export default async function DashboardNotes({ params }: { params: Promise<{ lan
 function FRDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.8.0 */}
+      <h2>
+        <LinkToAnchor id="2.8.0">2.8.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 11/09/2025</em>
+      <ul>
+        <li>Configuration SSO</li>
+        <li>Nouvelle interface de la page paramètres par onglets et nouvelles options de tri</li>
+      </ul>
       {/* 2.7.2 */}
       <h2>
         <LinkToAnchor id="2.7.2">2.7.2</LinkToAnchor>
@@ -302,6 +311,15 @@ function FRDashboardNotes() {
 function ENDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.8.0 */}
+      <h2>
+        <LinkToAnchor id="2.8.0">2.8.0</LinkToAnchor>
+      </h2>
+      <em>Published on 11/09/2025</em>
+      <ul>
+        <li>SSO Configuration</li>
+        <li>New tab interface for settings page and new sorting options</li>
+      </ul>
       {/* 2.7.2 */}
       <h2>
         <LinkToAnchor id="2.7.2">2.7.2</LinkToAnchor>
