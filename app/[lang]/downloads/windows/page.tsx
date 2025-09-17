@@ -552,10 +552,10 @@ function FRWindowsAllDownloadPage() {
       <CodeBlock name="upsignonGPO.sh">{preConfigDeployScript}</CodeBlock>
 
       <h2>
-        <LinkToAnchor id={anchors.gpoAutoUpdate}>Script de mise-à-jour automatique par GPO (déprécié)</LinkToAnchor>
+        <LinkToAnchor id={anchors.gpoAutoUpdate}>Script de mise-à-jour automatique par GPO</LinkToAnchor>
       </h2>
       <details>
-        <summary>(Ce script n'est plus nécessaire depuis la version 7.11.0 de l'application.) Voir :</summary>
+        <summary>Voir :</summary>
         <p>
           Si vous souhaitez mettre à jour l'application automatiquement par GPO, vous pouvez utiliser ce script pour
           télécharger automatiquement la dernière version de l'application à chaque fois qu'une nouvelle version est
@@ -895,10 +895,10 @@ function ENWindowsAllDownloadPage() {
       <CodeBlock name="upsignonGPO.sh">{preConfigDeployScript}</CodeBlock>
 
       <h2>
-        <LinkToAnchor id={anchors.gpoAutoUpdate}>GPO auto update script (deprecated)</LinkToAnchor>
+        <LinkToAnchor id={anchors.gpoAutoUpdate}>GPO auto update script</LinkToAnchor>
       </h2>
       <details>
-        <summary>(This script is no longer necessary since version 7.11.0 of the app.) View:</summary>
+        <summary>View:</summary>
         <p>
           If you wish to automatically update the app by GPO, you can use this script to automatically download the
           latest version of the app each time a new release is published. Add a task to launch this script every day or
