@@ -50,7 +50,7 @@ export function Footer(p: { lang: string }) {
         </div>
       </div>
       <div className={styles.copyright}>
-        © UpSignOn {year} {t.legalNotice.editor.name} {t.footer.copyright}
+        © Septeo IT Solutions {year} {t.legalNotice.editor.name} {t.footer.copyright}
         <span className={styles.spacer} />
         <Link href="/legalNotice">{t.footer.legalNotice}</Link>
         <span className={styles.spacer} />

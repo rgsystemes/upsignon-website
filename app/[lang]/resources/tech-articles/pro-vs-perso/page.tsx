@@ -459,7 +459,7 @@ function ENArticle() {
       <h3>Data backup with a trusted contact</h3>
       <p>
         The downside (or strength) of this system is that if you lose all your devices, then you lose your vault. To
-        resolve this problem, UpSignon lets you entrust a backup of your data to one or more trusted contacts (see
+        resolve this problem, UpSignOn lets you entrust a backup of your data to one or more trusted contacts (see
         below).
       </p>
       <p>
