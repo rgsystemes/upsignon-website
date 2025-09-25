@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (lang === "fr") {
     return {
       title: "Téléchargements - Linux",
-      description: "Tous les liens et informations utiles pour télécharger et installer UpSignon sur Linux.",
+      description: "Tous les liens et informations utiles pour télécharger et installer UpSignOn sur Linux.",
       ...template,
     };
   } else {
     return {
       title: "Downloads - Linux",
-      description: "All links and useful information to download and install UpSignon on Linux.",
+      description: "All links and useful information to download and install UpSignOn on Linux.",
       ...template,
     };
   }

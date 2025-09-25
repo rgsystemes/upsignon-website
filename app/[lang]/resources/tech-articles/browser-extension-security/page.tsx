@@ -62,20 +62,20 @@ function FRArticle() {
         détails).
       </p>
       <p>
-        L'extension de navigateur n'est pas compatible avec iOS et Android. Sur ces plateformes, UpSignon propose le
+        L'extension de navigateur n'est pas compatible avec iOS et Android. Sur ces plateformes, UpSignOn propose le
         remplissage automatique intégré au système d'exploitation. Suivez les indications de la page paramètres pour
         configurer cette fonctionnalité.
       </p>
 
       <h2>Connexion à l’application</h2>
       <p>
-        Dans tout ce qui suit nous appellerons <em>application</em> le logiciel de bureau (ou client lourd) UpSignon et{" "}
+        Dans tout ce qui suit nous appellerons <em>application</em> le logiciel de bureau (ou client lourd) UpSignOn et{" "}
         <em>extension de navigateur</em> le logiciel (ou addon) installé spécifiquement dans chaque navigateur (Google
         Chrome, Firefox, Microsoft Edge, etc.)
       </p>
       <p>
         Pour maximimer la sécurité de vos données, nous avons conçu l'extension de navigateur comme une brique
-        supplémentaire, non autonome. L'application UpSignon (le logiciel de bureau) doit obligatoirement être installée
+        supplémentaire, non autonome. L'application UpSignOn (le logiciel de bureau) doit obligatoirement être installée
         pour que l'extension de navigateur puisse fonctionner.
       </p>
       <p>
@@ -105,7 +105,7 @@ function FRArticle() {
       </p>
       <h3>Cas particulier des serveurs Windows RDS</h3>
       <p>
-        Sur les serveurs Windows RDS où plusieurs utilisateurs peuvent utiliser UpSignon simultanément, chaque
+        Sur les serveurs Windows RDS où plusieurs utilisateurs peuvent utiliser UpSignOn simultanément, chaque
         utilisateur voit un état de l'application et de l'extension qui lui est propre. Chaque utilisateur doit
         autoriser son extension de navigateur. L'extension utilise un port différent pour chaque utilisateur et
         l'échange de données entre l'extension et l'application de sessions utilisateur différentes n'est pas possible.
@@ -114,8 +114,8 @@ function FRArticle() {
       <h2>Sécurité et limitations du remplissage automatique</h2>
       <p>
         Dans ce qui suit, nous appelerons <em>popup</em> la fenêtre de l'extension de navigateur qui s'ouvre lorsqu'on
-        clique sur l'icône UpSignon dans la barre de menu du navigateur. Nous appelerons <em>contenu injecté</em> les
-        bulles affichant du contenu ajouté par l'extension UpSignon dans une page web.
+        clique sur l'icône UpSignOn dans la barre de menu du navigateur. Nous appelerons <em>contenu injecté</em> les
+        bulles affichant du contenu ajouté par l'extension UpSignOn dans une page web.
       </p>
       <h3>Principe du juste-à-temps</h3>
       <p>
@@ -186,19 +186,19 @@ function ENArticle() {
         <Link href="https://upsignon.eu/downloads">the downloads page</Link> for more details).
       </p>
       <p>
-        The browser extension is not compatible with iOS and Android. On these platforms, UpSignon offers the autofill
+        The browser extension is not compatible with iOS and Android. On these platforms, UpSignOn offers the autofill
         built into the operating system. Follow the instructions on the settings page to configure this feature.
       </p>
 
       <h2>Connecting to the application</h2>
       <p>
-        In all that follows we will call <em>application</em> the UpSignon desktop software (or heavy client) and{" "}
+        In all that follows we will call <em>application</em> the UpSignOn desktop software (or heavy client) and{" "}
         <em>browser extension</em> the software (or addon) installed specifically in each browser (Google Chrome,
         Firefox, Microsoft Edge, etc.)
       </p>
       <p>
         To maximize the security of your data, we have designed the browser extension as an additional, non-standalone
-        brick. The UpSignon application (the desktop software) must be installed for the browser extension to work.
+        brick. The UpSignOn application (the desktop software) must be installed for the browser extension to work.
       </p>
       <p>
         All cryptographic operations on vaults are performed in the application. The extension can only reflect the
@@ -227,7 +227,7 @@ function ENArticle() {
 
       <h3>Special case of Windows RDS servers</h3>
       <p>
-        On Windows RDS servers where multiple users can use UpSignon simultaneously, each user sees a status of the
+        On Windows RDS servers where multiple users can use UpSignOn simultaneously, each user sees a status of the
         application and of the extension that is specific to him. Each user must authorize his browser extension. The
         extension uses a different port for each user and data exchange between the extension and the application of
         different user sessions is not possible.
@@ -236,8 +236,8 @@ function ENArticle() {
       <h2>Security and limitations of autofill</h2>
       <p>
         In the following, we will call <em>popup</em> the browser extension window that opens when clicking on the
-        UpSignon icon in the browser menu bar. We will call <em>injected content</em> the bubbles displaying content
-        added by the UpSignon extension in a web page.
+        UpSignOn icon in the browser menu bar. We will call <em>injected content</em> the bubbles displaying content
+        added by the UpSignOn extension in a web page.
       </p>
       <h3>Just-in-time principle</h3>
       <p>

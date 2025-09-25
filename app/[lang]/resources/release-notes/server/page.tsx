@@ -216,7 +216,7 @@ function FRServerNotes() {
         </li>
         <li>améliore la gestion des types d’appareil</li>
         <li>
-          modifie les informations de statut envoyées à UpSignon (supprime celles qui ne sont plus utiles et ajoute la
+          modifie les informations de statut envoyées à UpSignOn (supprime celles qui ne sont plus utiles et ajoute la
           version de nodejs)
         </li>
       </ul>
@@ -428,7 +428,7 @@ function ENServerNotes() {
         </li>
         <li>improves the management of device types</li>
         <li>
-          modifies the status information sent to UpSignon (removes that which are no longer useful and adds the nodejs
+          modifies the status information sent to UpSignOn (removes that which are no longer useful and adds the nodejs
           version)
         </li>
       </ul>

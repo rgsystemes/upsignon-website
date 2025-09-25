@@ -157,7 +157,7 @@ function FRDashboardNotes() {
       <ul>
         <li>mise-à-jour des liens vers les pages de téléchargement et de notes de version</li>
         <li>la liste des éléments d’un dossier partagé est désormais repliable</li>
-        <li>compatibilité avec le serveur UpSignon PRO 2.1.0</li>
+        <li>compatibilité avec le serveur UpSignOn PRO 2.1.0</li>
       </ul>
       {/* 2.0.2 */}
       <h2>
@@ -257,7 +257,7 @@ function FRDashboardNotes() {
         </li>
         <li>améliore l’affichage des types d’appareils et l’affichage des options de banque et d’utilisateur</li>
         <li>
-          superadmin / paramètres : ajoute un indicateur de validité de la chaîne de certification du serveur UpSignon
+          superadmin / paramètres : ajoute un indicateur de validité de la chaîne de certification du serveur UpSignOn
           PRO
         </li>
         <li>mise-à-jour des dépendances et correctifs de sécurité</li>
@@ -430,7 +430,7 @@ function ENDashboardNotes() {
       <ul>
         <li>updated links to download and release notes pages</li>
         <li>the list of items in a shared folder is now collapsible</li>
-        <li>compatibility with UpSignon PRO 2.1.0 server</li>
+        <li>compatibility with UpSignOn PRO 2.1.0 server</li>
       </ul>
 
       {/* 2.0.2 */}
@@ -523,7 +523,7 @@ function ENDashboardNotes() {
           default)
         </li>
         <li>improves the display of device types and the display of bank and user options</li>
-        <li>superadmin / settings: adds a validity indicator for the UpSignon PRO server certification chain</li>
+        <li>superadmin / settings: adds a validity indicator for the UpSignOn PRO server certification chain</li>
         <li>dependency updates and security fixes</li>
       </ul>
 
