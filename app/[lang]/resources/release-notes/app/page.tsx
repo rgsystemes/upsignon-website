@@ -287,7 +287,7 @@ function FRAppNotes() {
           Windows (cas rare)
         </li>
         <li>
-          UpSignon (Windows) correction d’un crash au démarrage de l’application sur certains PC Windows (cas très rare)
+          UpSignOn (Windows) correction d’un crash au démarrage de l’application sur certains PC Windows (cas très rare)
         </li>
       </ul>
       {/* 7.8.0 */}
@@ -361,7 +361,7 @@ function FRAppNotes() {
           manuellement les paramètres proxies
         </li>
         <li>PRO: prise en compte automatique des changements de nom de banque</li>
-        <li>PRO: prise en compte des redirections de serveur UpSignon PRO</li>
+        <li>PRO: prise en compte des redirections de serveur UpSignOn PRO</li>
       </ul>
 
       {/* 7.5.1 */}
@@ -381,7 +381,7 @@ function FRAppNotes() {
       <strong>Améliorations</strong>
       <ul>
         <li>
-          [PRO] Améliore les métadonnées d’appareil envoyées aux serveurs UpSignon PRO (notamment le type d’installation
+          [PRO] Améliore les métadonnées d’appareil envoyées aux serveurs UpSignOn PRO (notamment le type d’installation
           windows)
         </li>
         <li>La saisie des cartes bancaires de type Amex est désormais autorisée</li>
@@ -905,7 +905,7 @@ function ENAppNotes() {
           settings manually
         </li>
         <li>PRO: automatic taking into account of bank name changes</li>
-        <li>PRO: support for UpSignon PRO server redirects</li>
+        <li>PRO: support for UpSignOn PRO server redirects</li>
       </ul>
 
       {/* 7.5.1 */}
@@ -921,7 +921,7 @@ function ENAppNotes() {
       </ul>
       <strong>Improvements</strong>
       <ul>
-        <li>[PRO] improves device metadata sent to UpSignon PRO servers (including windows installation type)</li>
+        <li>[PRO] improves device metadata sent to UpSignOn PRO servers (including windows installation type)</li>
         <li>the entry of Amex type bank cards is now authorized</li>
         <li>[MacOS Safari] updates browser extension to version 0.11.0</li>
         <li>[Windows] fixes certain cases of non-automatic proxy detection</li>

@@ -58,11 +58,7 @@ import VimeoPlayer from "../components/vimeoPlayer/vimeoPlayer";
 import { LinkToAnchor } from "../components/linkToAnchor/linkToAnchor";
 import { FormModalButton } from "../components/formModal/formModal";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   const t = getDictionary(lang);
   return {
@@ -78,11 +74,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const t = getDictionary(lang);
   return (
@@ -94,31 +86,15 @@ export default async function Page({
             <h2 className={styles.demoTitle}>
               <LinkToAnchor id="appDemo">{t.pitch.demo.appDemo}</LinkToAnchor>
             </h2>
-            <VimeoPlayer
-              videoId="964351571"
-              title={t.pitch.demo.appDemo}
-              className={styles.demoVideo}
-            />
+            <VimeoPlayer videoId="964351571" title={t.pitch.demo.appDemo} className={styles.demoVideo} />
             <h2 className={styles.demoTitle}>
-              <LinkToAnchor id="extensionDemo">
-                {t.pitch.demo.extensionDemo}
-              </LinkToAnchor>
+              <LinkToAnchor id="extensionDemo">{t.pitch.demo.extensionDemo}</LinkToAnchor>
             </h2>
-            <VimeoPlayer
-              videoId="964418300"
-              title={t.pitch.demo.extensionDemo}
-              className={styles.demoVideo}
-            />
+            <VimeoPlayer videoId="964418300" title={t.pitch.demo.extensionDemo} className={styles.demoVideo} />
             <h2 className={styles.demoTitle}>
-              <LinkToAnchor id="dashboardDemo">
-                {t.pitch.demo.consoleDemo}
-              </LinkToAnchor>
+              <LinkToAnchor id="dashboardDemo">{t.pitch.demo.consoleDemo}</LinkToAnchor>
             </h2>
-            <VimeoPlayer
-              videoId="964669787"
-              title={t.pitch.demo.extensionDemo}
-              className={styles.demoVideo}
-            />
+            <VimeoPlayer videoId="964669787" title={t.pitch.demo.extensionDemo} className={styles.demoVideo} />
           </div>
         </section>
         <div className={styles.actionContainer}>
@@ -143,9 +119,7 @@ export default async function Page({
           />
         </div>
         <h2 className={styles.feature_family_title}>
-          <LinkToAnchor id="proPerso">
-            {t.features.generalSubtitle}
-          </LinkToAnchor>
+          <LinkToAnchor id="proPerso">{t.features.generalSubtitle}</LinkToAnchor>
         </h2>
         <FeatureSection
           lang={lang}
@@ -354,7 +328,7 @@ export default async function Page({
           imageSrc={totpImg}
           imageAlt={t.features.totp.imageAlt}
         >
-          {/* <div>Comment configurer un TOTP dans UpSignon ?</div> */}
+          {/* <div>Comment configurer un TOTP dans UpSignOn ?</div> */}
           {/* TODO */}
         </FeatureSection>
         <FeatureSection
@@ -426,35 +400,25 @@ export default async function Page({
         >
           <ul>
             <li>
-              <strong>
-                {t.features.rightsManagement.rightLevels.blind.title}
-              </strong>{" "}
+              <strong>{t.features.rightsManagement.rightLevels.blind.title}</strong>{" "}
               {t.features.rightsManagement.rightLevels.blind.def}
             </li>
             <li>
-              <strong>
-                {t.features.rightsManagement.rightLevels.readOnly.title}
-              </strong>{" "}
+              <strong>{t.features.rightsManagement.rightLevels.readOnly.title}</strong>{" "}
               {t.features.rightsManagement.rightLevels.readOnly.def}
             </li>
             <li>
-              <strong>
-                {t.features.rightsManagement.rightLevels.editor.title}
-              </strong>{" "}
+              <strong>{t.features.rightsManagement.rightLevels.editor.title}</strong>{" "}
               {t.features.rightsManagement.rightLevels.editor.def}
             </li>
             <li>
-              <strong>
-                {t.features.rightsManagement.rightLevels.owner.title}
-              </strong>{" "}
+              <strong>{t.features.rightsManagement.rightLevels.owner.title}</strong>{" "}
               {t.features.rightsManagement.rightLevels.owner.def}
             </li>
           </ul>
         </FeatureSection>
         <h2 className={styles.feature_family_title}>
-          <LinkToAnchor id="autofill">
-            {t.features.autofillAutosaveSubtitle}
-          </LinkToAnchor>
+          <LinkToAnchor id="autofill">{t.features.autofillAutosaveSubtitle}</LinkToAnchor>
         </h2>
         <AutofillSection lang={lang} />
         <FeatureSection
@@ -474,9 +438,7 @@ export default async function Page({
           imageAlt={t.features.autosaveDesktop.imageAlt}
         />
         <h2 className={styles.feature_family_title}>
-          <LinkToAnchor id="organize">
-            {t.features.searchFilterOrganizeSubtitle}
-          </LinkToAnchor>
+          <LinkToAnchor id="organize">{t.features.searchFilterOrganizeSubtitle}</LinkToAnchor>
         </h2>
         <FeatureSection
           lang={lang}
@@ -527,9 +489,7 @@ export default async function Page({
           imageAlt={t.features.organize.imageAlt}
         />
         <h2 className={styles.feature_family_title}>
-          <LinkToAnchor id="importExport">
-            {t.features.importExportSubtitle}
-          </LinkToAnchor>
+          <LinkToAnchor id="importExport">{t.features.importExportSubtitle}</LinkToAnchor>
         </h2>
         <FeatureSection
           lang={lang}
@@ -566,9 +526,7 @@ export default async function Page({
           <strong>{t.features.csvExport.warningPro}</strong>
         </FeatureSection>
         <h2 className={styles.feature_family_title}>
-          <LinkToAnchor id="securityFeatures">
-            {t.features.securityFeaturesSubtitle}
-          </LinkToAnchor>
+          <LinkToAnchor id="securityFeatures">{t.features.securityFeaturesSubtitle}</LinkToAnchor>
         </h2>
         <FeatureSection
           lang={lang}
@@ -764,13 +722,9 @@ export default async function Page({
           imageAlt={t.features.screenshotProtection.imageAlt}
         />
         <h2 className={styles.feature_family_title}>
-          <LinkToAnchor id="dashboard">
-            {t.features.supervisionSubtitle}
-          </LinkToAnchor>
+          <LinkToAnchor id="dashboard">{t.features.supervisionSubtitle}</LinkToAnchor>
         </h2>
-        <p className={styles.supervision_general_intro}>
-          {t.features.supervisionGeneralExplanation}
-        </p>
+        <p className={styles.supervision_general_intro}>{t.features.supervisionGeneralExplanation}</p>
         <FeatureSection
           lang={lang}
           title={t.features.passwordStrengthEvolutionCurve.title}
