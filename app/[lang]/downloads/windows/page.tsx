@@ -40,7 +40,7 @@ const updateScriptFR = `# Enregistrer en utilisant l'encodage UTF-8-with-BOM
 # CONSTANTES A ADAPTER SELON VOTRE CONTEXTE #
 #############################################
 # Chemin vers le dossier de mise-à-jour
-$updateFolderPath = "C:\\path\\to\\upsignon-update\folder"
+$updateFolderPath = "C:\\path\\to\\upsignon-update\\folder"
 if (-not (Test-Path $updateFolderPath)) {
     Write-Error "Le dossier de mise à jour n'existe pas : $updateFolderPath"
     exit 1
@@ -75,8 +75,8 @@ if($packageType -eq "SILENT_USER_MSI") {
     $localPackagePath = "$updateFolderPath\\upsignon.zip"
 }
 
-$currentVersionFilePath = "$updateFolderPath\currentVersion.txt"
-$latestVersionFilePath = "$updateFolderPath\latestVersion.txt"
+$currentVersionFilePath = "$updateFolderPath\\currentVersion.txt"
+$latestVersionFilePath = "$updateFolderPath\\latestVersion.txt"
 
 
 
@@ -136,7 +136,7 @@ const updateScriptEN = `# Save with UTF-8-with-BOM encoding
 # CONSTANTS TO ADAPT TO YOUR CONTEXT #
 ######################################
 # Path of the update folder
-$updateFolderPath = "C:\\path\\to\\upsignon-update\folder"
+$updateFolderPath = "C:\\path\\to\\upsignon-update\\folder"
 if (-not (Test-Path $updateFolderPath)) {
     Write-Error "The update folder does not exist: $updateFolderPath"
     exit 1
@@ -171,8 +171,8 @@ if($packageType -eq "SILENT_USER_MSI") {
     $localPackagePath = "$updateFolderPath\\upsignon.zip"
 }
 
-$currentVersionFilePath = "$updateFolderPath\currentVersion.txt"
-$latestVersionFilePath = "$updateFolderPath\latestVersion.txt"
+$currentVersionFilePath = "$updateFolderPath\\currentVersion.txt"
+$latestVersionFilePath = "$updateFolderPath\\latestVersion.txt"
 
 
 
