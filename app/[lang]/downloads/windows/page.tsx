@@ -421,18 +421,22 @@ function FRWindowsAllDownloadPage() {
             <tr>
               <td>
                 installation dans <br />
-                <span className={styles.breakable}>C:\Program Files\UPSIGNON\UpSignOn (msi)</span>
+                <span className={styles.breakable}>C:\Program Files\Septeo IT Solutions\UpSignOn by Septeo (msi)</span>
               </td>
               <td>
                 installation par défaut dans <br />
-                <span className={styles.breakable}>C:\Program Files\UPSIGNON\UpSignOn (msi)</span>
+                <span className={styles.breakable}>C:\Program Files\Septeo IT Solutions\UpSignOn by Septeo (msi)</span>
                 <br />
                 ou dans
-                <span className={styles.breakable}>C:\Users\xxx\AppData\Local\Programs\UPSIGNON\UpSignOn (msi)</span>
+                <span className={styles.breakable}>
+                  C:\Users\xxx\AppData\Local\Programs\Septeo IT Solutions\UpSignOn by Septeo (msi)
+                </span>
               </td>
               <td>
                 installation pour l’utilisateur uniquement dans <br />
-                <span className={styles.breakable}>C:\Users\xxx\AppData\Roaming\UPSIGNON\UpSignOn (msi)</span>
+                <span className={styles.breakable}>
+                  C:\Users\xxx\AppData\Roaming\Septeo IT Solutions\UpSignOn by Septeo (msi)
+                </span>
               </td>
             </tr>
             <tr>
@@ -765,18 +769,22 @@ function ENWindowsAllDownloadPage() {
             <tr>
               <td>
                 installation in <br />
-                <span className={styles.breakable}>C:\Program Files\UPSIGNON\UpSignOn (msi)</span>
+                <span className={styles.breakable}>C:\Program Files\Septeo IT Solutions\UpSignOn by Septeo (msi)</span>
               </td>
               <td>
                 default installation in <br />
-                <span className={styles.breakable}>C:\Program Files\UPSIGNON\UpSignOn (msi)</span>
+                <span className={styles.breakable}>C:\Program Files\Septeo IT Solutions\UpSignOn by Septeo (msi)</span>
                 <br />
                 or in
-                <span className={styles.breakable}>C:\Users\xxx\AppData\Local\Programs\UPSIGNON\UpSignOn (msi)</span>
+                <span className={styles.breakable}>
+                  C:\Users\xxx\AppData\Local\Programs\Septeo IT Solutions\UpSignOn by Septeo (msi)
+                </span>
               </td>
               <td>
                 installation for user only in <br />
-                <span className={styles.breakable}>C:\Users\xxx\AppData\Roaming\UPSIGNON\UpSignOn (msi)</span>
+                <span className={styles.breakable}>
+                  C:\Users\xxx\AppData\Roaming\Septeo IT Solutions\UpSignOn by Septeo (msi)
+                </span>
               </td>
             </tr>
             <tr>
