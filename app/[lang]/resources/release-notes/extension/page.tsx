@@ -33,6 +33,21 @@ export default async function ExtensionNotes({ params }: { params: Promise<{ lan
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.5.4 */}
+      <h2>
+        <LinkToAnchor id="1.5.4">1.5.4</LinkToAnchor>
+      </h2>
+      <em>Publiée le 10/10/2025</em>
+      <ul>
+        <li>Changement du nom de l'extension en UpSignOn by Septeo.</li>
+        <li>Prise en compte des onglets ouverts dès l'installation ou la mise-à-jour de l'extension.</li>
+        <li>Empêche la mise en sommeil de l'extension par le navigateur pour fluidifier l'UX.</li>
+        <li>
+          Corrige un problème de non détection des modifications sur le champ login sur certains sites qui conduisait à
+          la création de doublons.
+        </li>
+        <li>L'extension fonctionne désormais sur les pages utilisant des shadow DOM.</li>
+      </ul>
       {/* 1.5.3 */}
       <h2>
         <LinkToAnchor id="1.5.3">1.5.3</LinkToAnchor>
@@ -258,6 +273,21 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.5.4 */}
+      <h2>
+        <LinkToAnchor id="1.5.4">1.5.4</LinkToAnchor>
+      </h2>
+      <em>Published on 10/10/2025</em>
+      <ul>
+        <li>Extension renamed to UpSignOn by Septeo.</li>
+        <li>Open tabs are now taken into account right at the end of the extension install or update.</li>
+        <li>Prevents the extension from being put to sleep by the browser to improve the user experience.</li>
+        <li>
+          Fixes an issue with the detection of changes on the login field of some websites that led to the creation of
+          duplicate accounts.
+        </li>
+        <li>The extension now works on pages that use shadow DOM.</li>
+      </ul>
       {/* 1.5.3 */}
       <h2>
         <LinkToAnchor id="1.5.3">1.5.3</LinkToAnchor>
