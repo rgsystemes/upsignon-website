@@ -12,6 +12,7 @@ import samePwdMini from "../../../../public/articles/samePwdMini.jpeg";
 import strongPwdMini from "../../../../public/articles/strongPwdMini.jpg";
 import pwdMini from "../../../../public/articles/pwdMini.jpeg";
 import passwordManagerImg from "../../../../public/articles/passwordManager.png";
+import newDesign from "../../../../public/articles/12/Image-Page-Accueil-USO-Nouvelle-UI.jpg";
 import { getDictionary } from "../../../../translations/translations";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -125,6 +126,13 @@ export default async function ArticlesPage({ params }: { params: Promise<{ lang:
             lang={lang}
             image={acquisitionBySepteo}
             title={t.articles.upsignonJoinsRG.title}
+          />
+          <Article
+            link="/resources/articles/12"
+            lang={lang}
+            image={newDesign}
+            title={t.articles[12].title}
+            summary={t.articles[12].summary}
           />
         </div>
       </section>

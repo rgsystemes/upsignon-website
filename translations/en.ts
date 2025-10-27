@@ -809,6 +809,12 @@ const translations: typeof fr = {
       title: "Cyber threats, what if we talked about your employees' passwords?",
       summary: "Summary of the issues.",
     },
+    12: {
+      metaDescription: "Change of graphic charter and icon for UpSignOn!",
+      title: "UpSignOn gets a makeover!",
+      summary:
+        "UpSignOn by Septeo will unveil a brand new interface on 13 November 2025. Clearer, more modern and more fluid.",
+    },
   },
 };
 

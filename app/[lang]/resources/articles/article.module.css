@@ -14,7 +14,9 @@
 }
 .image img {
   border-radius: 12px;
+  height: auto;
 }
+
 .article {
   margin: 20px 0 50px 0;
 }
