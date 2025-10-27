@@ -170,6 +170,12 @@ module.exports = async (phase, { defaultConfig }) => {
           destination: "/resources/articles/upsignon-rejoint-rg-system-groupe-septeo",
           permanent: true,
         },
+        {
+          // redirect a link mistyped in the app
+          source: "/resources/articles/upsignon-rejoint-rg-system-groupe-septeo",
+          destination: "/resources/articles/11",
+          permanent: true,
+        },
       ]),
   };
   return nextConfig;

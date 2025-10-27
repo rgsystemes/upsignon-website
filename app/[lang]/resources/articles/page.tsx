@@ -120,6 +120,12 @@ export default async function ArticlesPage({ params }: { params: Promise<{ lang:
             title={t.articles[10].title}
             summary={t.articles[10].summary}
           />
+          <Article
+            link="/resources/articles/11"
+            lang={lang}
+            image={acquisitionBySepteo}
+            title={t.articles.upsignonJoinsRG.title}
+          />
         </div>
       </section>
     </div>
