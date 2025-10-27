@@ -821,6 +821,12 @@ const translations = {
       title: "Cybermenaces, et si on parlait des mots de passe de vos collaborateurs ?",
       summary: "Résumé des enjeux.",
     },
+    12: {
+      metaDescription: "Changement de charte graphique et d'icône pour UpSignOn !",
+      title: "UpSignOn fait peau neuve !",
+      summary:
+        "UpSignOn by Septeo dévoilera le 13 novembre 2025 une toute nouvelle interface. Plus claire, plus moderne et plus fluide.",
+    },
   },
 };
 
