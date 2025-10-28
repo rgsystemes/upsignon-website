@@ -2,6 +2,9 @@ import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../article.module.css";
 import Link from "next/link";
+import illuFR from "../../../../../public/articles/13/illuFR.png";
+import illuEN from "../../../../../public/articles/13/illuEN.png";
+import Image from "next/image";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -39,6 +42,9 @@ export default async function Article1({ params }: { params: Promise<{ lang: str
 function FRArticle() {
   return (
     <>
+      <div className={styles.image}>
+        <Image src={illuFR} alt="" unoptimized />
+      </div>
       <h1>
         Gérer la sécurité au quotidien dans le service public : le choix du RSSI du Var pour le gestionnaire de mots de
         passe français UpSignOn
@@ -223,6 +229,9 @@ function FRArticle() {
 function ENArticle() {
   return (
     <>
+      <div className={styles.image}>
+        <Image src={illuEN} alt="" unoptimized />
+      </div>
       <h1>
         Managing day-to-day security in the public sector: the Var CISO's choice for the French password manager
         UpSignOn
