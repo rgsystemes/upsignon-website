@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { translationMiddleware } from "./translations/translations";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   return translationMiddleware(request);
 }
 
