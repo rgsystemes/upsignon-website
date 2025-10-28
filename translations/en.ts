@@ -4,12 +4,6 @@ const translations: typeof fr = {
   anchorCopyTitle: "Copy the link to this paragraph.",
   anchorCopied: "Link copied",
   successMessage: "Request sent",
-  banner: {
-    1: "UpSignOn becomes ",
-    2: "UpSignOn by Septeo",
-    3: " to strenghen the French-style security.",
-    more: "Find out more.",
-  },
   menu: {
     features: "Features & demos",
     pricing: "Pricing",
