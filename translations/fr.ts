@@ -2,12 +2,6 @@ const translations = {
   anchorCopyTitle: "Copier le lien vers ce paragraphe.",
   anchorCopied: "Lien copié",
   successMessage: "Demande envoyée",
-  banner: {
-    1: "UpSignOn devient ",
-    2: "UpSignOn by Septeo",
-    3: " pour renforcer la sécurité à la française.",
-    more: "En savoir plus.",
-  },
   menu: {
     features: "Fonctionnalités & démos",
     pricing: "Tarifs",

@@ -12,7 +12,6 @@ import { AnchorScrollWithFixedHeaderBody } from "./components/anchorScrollWithFi
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { HubspotProvider } from "next-hubspot";
-import { Banner } from "./components/banner/banner";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 // If loading a variable font, you don't need to specify the font weight
@@ -46,7 +45,6 @@ export default async function RootLayout({
       <AnchorScrollWithFixedHeaderBody
         fixedComponent={
           <div>
-            <Banner lang={lang} />
             <NavBar lang={lang} />
           </div>
         }
