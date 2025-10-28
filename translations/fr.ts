@@ -827,6 +827,11 @@ const translations = {
       summary:
         "UpSignOn by Septeo dévoilera le 13 novembre 2025 une toute nouvelle interface. Plus claire, plus moderne et plus fluide.",
     },
+    13: {
+      metaDescription: "Témoignage utilisateur - UpSignOn by Septeo",
+      title: "Témoignage utilisateur",
+      summary: "Vincent Sueur, RSSI du département du Var, nous raconte son expérience avec UpSignOn.",
+    },
   },
 };
 

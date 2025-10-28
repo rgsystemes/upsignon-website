@@ -815,6 +815,11 @@ const translations: typeof fr = {
       summary:
         "UpSignOn by Septeo will unveil a brand new interface on 13 November 2025. Clearer, more modern and more fluid.",
     },
+    13: {
+      metaDescription: "User testimonial - UpSignOn by Septeo",
+      title: "User testimonial",
+      summary: "Vincent Sueur, CISO for the Var department, tells us about his experience with UpSignOn.",
+    },
   },
 };
 
