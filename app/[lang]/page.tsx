@@ -141,7 +141,7 @@ export default async function Page({
             isFreeTrialForm={true}
           />
         </div>
-      </div >
+      </div>
       <section className={styles.keyMetricsSection}>
         <div className={styles.keyMetricsSectionContent}>
           <h1 className={styles.sectionTitle}>
@@ -284,6 +284,6 @@ export default async function Page({
         <CustomerCarousel />
         <CustomerQuotes lang={lang} />
       </section>
-    </div >
+    </div>
   );
 }
