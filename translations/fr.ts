@@ -2,6 +2,11 @@ const translations = {
   anchorCopyTitle: "Copier le lien vers ce paragraphe.",
   anchorCopied: "Lien copié",
   successMessage: "Demande envoyée",
+  heroBannner: {
+    title: "Le gestionnaire de mots de passe 100% français",
+    description: "Fini les mots de passe oubliés ou partagés dans un tableur ! UpSignOn permet à vos équipes de sécuriser leurs accès, tout en gagnant en autonomie et en efficacité au quotidien",
+    rating: "Noté 4,8/5 sur 156 avis",
+  },
   banner: {
     1: "UpSignOn devient ",
     2: "UpSignOn by Septeo",
@@ -98,7 +103,7 @@ const translations = {
   pitch: {
     metaDescription:
       "Découvrez UpSignOn, notre solution de gestion de mots de passe française, conviviale, sécurisée et multi-plateforme. Sécurisez et oubliez vos mots de passe. Obtenez une vue d'ensemble des mots de passe dans votre entreprise et partagez-les avec vos collègues.",
-    moto: "UpSignOn, le coffre de MOTS DE PASSE FORTS pour les particuliers et les pros.",
+    moto: "Découvrez comment UpSignOn simplifie la sécurité des accès",
     subtitle: "Enregistrez, sécurisez et oubliez\nvos mots de passe !",
     prezVideoTitle: "Vidéo de présentation d'UpSignOn",
     french: "Une solution 100% française et hébergée en France",
