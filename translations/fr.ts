@@ -7,12 +7,6 @@ const translations = {
     description: "Fini les mots de passe oubliés ou partagés dans un tableur ! UpSignOn permet à vos équipes de sécuriser leurs accès, tout en gagnant en autonomie et en efficacité au quotidien",
     rating: "Noté 4,8/5 sur 156 avis",
   },
-  banner: {
-    1: "UpSignOn devient ",
-    2: "UpSignOn by Septeo",
-    3: " pour renforcer la sécurité à la française.",
-    more: "En savoir plus.",
-  },
   menu: {
     features: "Fonctionnalités & démos",
     pricing: "Tarifs",
@@ -825,6 +819,17 @@ const translations = {
         "Vos collaborateurs sont le maillon faible de votre cyber-défense, notamment via leurs mots de passe. Apprenez pourquoi et comment mieux les accompagner vers le renforcement de leurs mots de passe.",
       title: "Cybermenaces, et si on parlait des mots de passe de vos collaborateurs ?",
       summary: "Résumé des enjeux.",
+    },
+    12: {
+      metaDescription: "Changement de charte graphique et d'icône pour UpSignOn !",
+      title: "UpSignOn fait peau neuve !",
+      summary:
+        "UpSignOn by Septeo dévoilera le 13 novembre 2025 une toute nouvelle interface. Plus claire, plus moderne et plus fluide.",
+    },
+    13: {
+      metaDescription: "Témoignage utilisateur - UpSignOn by Septeo",
+      title: "Témoignage utilisateur",
+      summary: "Vincent Sueur, RSSI du département du Var, nous raconte son expérience avec UpSignOn.",
     },
   },
 };

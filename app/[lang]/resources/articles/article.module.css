@@ -14,7 +14,9 @@
 }
 .image img {
   border-radius: 12px;
+  height: auto;
 }
+
 .article {
   margin: 20px 0 50px 0;
 }
@@ -110,4 +112,13 @@
   width: 70px;
   flex-shrink: 0;
   flex-grow: 0;
+}
+
+.ul {
+  margin-bottom: 20px;
+}
+
+.cite {
+  display: block;
+  margin-bottom: 20px;
 }

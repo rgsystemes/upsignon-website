@@ -9,12 +9,6 @@ const translations: typeof fr = {
     description: "No more forgotten passwords or shared spreadsheets! UpSignOn helps your teams secure their access while gaining autonomy and efficiency every day.",
     rating: "Rated 4.8/5 on 156 reviews",
   },
-  banner: {
-    1: "UpSignOn becomes ",
-    2: "UpSignOn by Septeo",
-    3: " to strenghen the French-style security.",
-    more: "Find out more.",
-  },
   menu: {
     features: "Features & demos",
     pricing: "Pricing",
@@ -813,6 +807,17 @@ const translations: typeof fr = {
         "Your employees are the weak link in your cyber defence, particularly via their passwords. Find out why and how to help them strengthen their passwords.",
       title: "Cyber threats, what if we talked about your employees' passwords?",
       summary: "Summary of the issues.",
+    },
+    12: {
+      metaDescription: "Change of graphic charter and icon for UpSignOn!",
+      title: "UpSignOn gets a makeover!",
+      summary:
+        "UpSignOn by Septeo will unveil a brand new interface on 13 November 2025. Clearer, more modern and more fluid.",
+    },
+    13: {
+      metaDescription: "User testimonial - UpSignOn by Septeo",
+      title: "User testimonial",
+      summary: "Vincent Sueur, CISO for the Var department, tells us about his experience with UpSignOn.",
     },
   },
 };

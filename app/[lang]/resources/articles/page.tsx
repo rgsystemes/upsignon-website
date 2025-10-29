@@ -12,6 +12,9 @@ import samePwdMini from "../../../../public/articles/samePwdMini.jpeg";
 import strongPwdMini from "../../../../public/articles/strongPwdMini.jpg";
 import pwdMini from "../../../../public/articles/pwdMini.jpeg";
 import passwordManagerImg from "../../../../public/articles/passwordManager.png";
+import newDesign from "../../../../public/articles/12/Image-Page-Accueil-USO-Nouvelle-UI.jpg";
+import illu13 from "../../../../public/articles/13/image.png";
+
 import { getDictionary } from "../../../../translations/translations";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -42,10 +45,11 @@ export default async function ArticlesPage({ params }: { params: Promise<{ lang:
         <div className={styles.gridList2}>
           <div />
           <Article
-            link="/resources/articles/upsignon-rejoint-rg-system-groupe-septeo"
+            link="/resources/articles/13"
             lang={lang}
-            image={acquisitionBySepteo}
-            title={t.articles.upsignonJoinsRG.title}
+            image={illu13}
+            title={t.articles[13].title}
+            summary={t.articles[13].summary}
           />
           <div />
         </div>
@@ -119,6 +123,19 @@ export default async function ArticlesPage({ params }: { params: Promise<{ lang:
             image={pwdMini}
             title={t.articles[10].title}
             summary={t.articles[10].summary}
+          />
+          <Article
+            link="/resources/articles/11"
+            lang={lang}
+            image={acquisitionBySepteo}
+            title={t.articles.upsignonJoinsRG.title}
+          />
+          <Article
+            link="/resources/articles/12"
+            lang={lang}
+            image={newDesign}
+            title={t.articles[12].title}
+            summary={t.articles[12].summary}
           />
         </div>
       </section>

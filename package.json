@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3010",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -12,25 +12,25 @@
   "author": "",
   "license": "none",
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.6.1",
+    "@formatjs/intl-localematcher": "^0.6.2",
     "@geist-ui/core": "^2.3.8",
-    "@next/third-parties": "^15.3.3",
+    "@next/third-parties": "^16.0.0",
     "@types/negotiator": "^0.6.4",
     "@vercel/analytics": "^1.5.0",
     "negotiator": "^1.0.0",
-    "next": "^15.3.3",
+    "next": "^16.0.0",
     "next-hubspot": "^2.0.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-modal": "^3.16.3",
     "react-toastify": "^11.0.5"
   },
   "devDependencies": {
-    "@types/node": "24.0.0",
-    "@types/react": "19.1.7",
-    "eslint": "9.28.0",
-    "eslint-config-next": "15.3.3",
-    "typescript": "5.8.3"
+    "@types/node": "24.9.1",
+    "@types/react": "19.2.2",
+    "eslint": "9.38.0",
+    "eslint-config-next": "16.0.0",
+    "typescript": "5.9.3"
   },
   "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39"
 }

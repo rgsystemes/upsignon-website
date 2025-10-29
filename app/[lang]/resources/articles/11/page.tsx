@@ -12,10 +12,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: t.articles.upsignonJoinsRG.title,
     description: t.articles.upsignonJoinsRG.metaDescription,
     alternates: {
-      canonical: "https://upsignon.eu/fr/resources/articles/upsignon-rejoint-rg-system-groupe-septeo",
+      canonical: "https://upsignon.eu/fr/resources/articles/11",
       languages: {
-        fr: "https://upsignon.eu/fr/resources/articles/upsignon-rejoint-rg-system-groupe-septeo",
-        en: "https://upsignon.eu/en/resources/articles/upsignon-rejoint-rg-system-groupe-septeo",
+        fr: "https://upsignon.eu/fr/resources/articles/11",
+        en: "https://upsignon.eu/en/resources/articles/11",
       },
     },
   };
