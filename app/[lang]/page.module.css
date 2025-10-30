@@ -1,6 +1,7 @@
 .blueBackground {
   background-image: linear-gradient(0deg, transparent, var(--quinternary15));
 }
+
 .advantagesBackground{
   background-color: var(--tertiary);
 }
@@ -8,11 +9,80 @@
   background-color: var(--quaternary);
 }
 
+/* HERO BANNER */
+.heroBanner {
+  padding: 50px 0 50px 0;
+  background-image: linear-gradient(180deg,#7096ff1a 50%,#7096ff26 75%,#7096ff33);
+  border-bottom-left-radius: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.heroBannerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 60px 40px;
+  max-width: 80rem;
+}
+
+.heroBannerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.heroBannerImg {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.heroBannerImg img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.heroBannerCTA {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+@media (max-width: 739px) {
+  .heroBannerContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1031px) {
+  .heroBannerCTA {
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 10px;
+  }
+}
+
+.statsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
 .titleSection {
+  padding: 50px 0 0px 0;
   max-width: 900px;
   margin: auto;
-  padding: 20px;
 }
+
 .moto {
   font-size: 2em;
   color: var(--title-color);

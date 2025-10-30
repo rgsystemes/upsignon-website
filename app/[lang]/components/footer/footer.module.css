@@ -21,6 +21,18 @@
   align-content: flex-start;
   column-gap: 40px;
 }
+.logoContainer {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoContainer img {
+  width: auto;
+  height: 200px;
+}
+
 .footerSection {
   display: flex;
   flex-direction: column;
