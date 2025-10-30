@@ -1,4 +1,3 @@
-import React from "react";
 import { getDictionary } from "../../translations/translations";
 import styles from "./page.module.css";
 import { Metadata } from "next";
