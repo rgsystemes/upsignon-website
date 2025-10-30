@@ -21,6 +21,13 @@
   align-content: flex-start;
   column-gap: 40px;
 }
+.logoContainer {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .footerSection {
   display: flex;
   flex-direction: column;

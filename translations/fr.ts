@@ -2,7 +2,7 @@ const translations = {
   anchorCopyTitle: "Copier le lien vers ce paragraphe.",
   anchorCopied: "Lien copié",
   successMessage: "Demande envoyée",
-  heroBannner: {
+  heroBanner: {
     title: "Le gestionnaire de mots de passe 100% français",
     description: "Fini les mots de passe oubliés ou partagés dans un tableur ! UpSignOn permet à vos équipes de sécuriser leurs accès, tout en gagnant en autonomie et en efficacité au quotidien",
     rating: "Noté 4,8/5 sur 156 avis",

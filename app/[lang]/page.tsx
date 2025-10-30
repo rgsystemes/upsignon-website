@@ -53,8 +53,8 @@ export default async function Page({
         <section className={styles.heroBanner}>
           <div className={styles.heroBannerContainer}>
             <div className={styles.heroBannerContent}>
-              <h1 className={styles.heroBannerTitle}>{t.heroBannner.title}</h1>
-              <p className={styles.heroBannerDescription}>{t.heroBannner.description}</p>
+              <h1 className={styles.heroBannerTitle}>{t.heroBanner.title}</h1>
+              <p className={styles.heroBannerDescription}>{t.heroBanner.description}</p>
               <div className={styles.heroBannerCTA}>
                 <FormModalButton
                 lang={lang}
@@ -74,13 +74,13 @@ export default async function Page({
                 />
               </div>
               <div className={styles.statsContainer}>
-                <Image src={googleIcon} alt="" />
-                <p>{t.heroBannner.rating}</p>
-                <Image src={starsIcon} alt="" />
+                <Image src={googleIcon} alt="Google Play" />
+                <p>{t.heroBanner.rating}</p>
+                <Image src={starsIcon} alt="Stars" />
               </div>
             </div>
             <div className={styles.heroBannerImg}>
-              <Image src={heroBannerImg} alt="" />
+              <Image src={heroBannerImg} alt="Hero Banner" />
             </div>
           </div>
         </section>
