@@ -5,7 +5,7 @@ import Image from "next/image";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "./footer.module.css";
 import { FormModalButton } from "../formModal/formModal";
-import logoITSolutions from "../../../../public/icons/logo-septeo-it-solution.png";
+import logoITSolutions from "../../../../public/icons/logo-septeo-it-solution.svg";
 
 export function Footer(p: { lang: string }) {
   const t = getDictionary(p.lang);

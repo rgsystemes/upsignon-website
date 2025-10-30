@@ -28,6 +28,11 @@
   align-items: center;
 }
 
+.logoContainer img {
+  width: auto;
+  height: 200px;
+}
+
 .footerSection {
   display: flex;
   flex-direction: column;
