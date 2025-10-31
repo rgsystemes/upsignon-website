@@ -176,6 +176,11 @@ module.exports = async (phase, { defaultConfig }) => {
           destination: "/resources/articles/11",
           permanent: true,
         },
+        {
+          source: "/help-center",
+          destination: "https://upsignon.notion.site/Notice-d-utilisation-d-UpSignOn-de4f8ba200e14ec1adcaba2613b38340",
+          permanent: false,
+        },
       ]),
   };
   return nextConfig;
