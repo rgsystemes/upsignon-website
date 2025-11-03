@@ -33,6 +33,33 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.13.1 */}
+      <h2>
+        <LinkToAnchor id="7.13.1">7.13.1</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 03/11/2025</em>
+      </p>
+      <p>
+        <strong>Correctifs</strong>
+      </p>
+      <ul>
+        <li>correction d'un problème conduisant à des écrans noirs ou blancs dans différents cas</li>
+        <li>
+          correction d'un problème empêchant l'accès à la console de supervision si le compte associé est partagé dans
+          le coffre-fort
+        </li>
+        <li>correction d'un problème empêchant d'ajouter un coffre-fort PRO sur Linux</li>
+        <li>affichage des dates en heure locale (au lieu de l'heure UTC)</li>
+        <li>non création de doublons lors de l'ajout manuel d'un compte ou lors de l'import CSV</li>
+        <li>possibilité d'importer plusieurs accès à la console de supervision dans le même coffre-fort</li>
+      </ul>
+      <p>
+        <strong>Nouveautés</strong>
+      </p>
+      <ul>
+        <li>annonce d'un prochain changement de design</li>
+      </ul>
       {/* 7.13.0 */}
       <h2>
         <LinkToAnchor id="7.13.0">7.13.0</LinkToAnchor>
@@ -612,6 +639,32 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.13.1 */}
+      <h2>
+        <LinkToAnchor id="7.13.1">7.13.1</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 03/11/2025</em>
+      </p>
+      <p>
+        <strong>Fixes</strong>
+      </p>
+      <ul>
+        <li>fixes an issue leading to black or white screens in various cases</li>
+        <li>
+          fixes an issue preventing access to the supervision dashboard if the associated account is shared in the vault
+        </li>
+        <li>fixes an issue preventing the addition of PRO vaults on Linux</li>
+        <li>show dates and times in local time (instead of UTC time)</li>
+        <li>non creation of duplicates when added accounts manually and during CSV imports</li>
+        <li>possibility to import several access for the supervision dashboard into the same vault</li>
+      </ul>
+      <p>
+        <strong>News</strong>
+      </p>
+      <ul>
+        <li>annoncing a future design update</li>
+      </ul>
       {/* 7.13.0 */}
       <h2>
         <LinkToAnchor id="7.13.0">7.13.0</LinkToAnchor>
