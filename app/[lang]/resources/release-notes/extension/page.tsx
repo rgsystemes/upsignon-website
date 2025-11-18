@@ -33,6 +33,14 @@ export default async function ExtensionNotes({ params }: { params: Promise<{ lan
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.6.0 */}
+      <h2>
+        <LinkToAnchor id="1.6.0">1.6.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 18/11/2025</em>
+      <ul>
+        <li>Changement de l'icône de l'extension.</li>
+      </ul>
       {/* 1.5.4 */}
       <h2>
         <LinkToAnchor id="1.5.4">1.5.4</LinkToAnchor>
@@ -273,6 +281,14 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.6.0 */}
+      <h2>
+        <LinkToAnchor id="1.6.0">1.6.0</LinkToAnchor>
+      </h2>
+      <em>Published on 18/11/2025</em>
+      <ul>
+        <li>Change of the extension icon.</li>
+      </ul>
       {/* 1.5.4 */}
       <h2>
         <LinkToAnchor id="1.5.4">1.5.4</LinkToAnchor>
