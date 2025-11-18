@@ -40,7 +40,9 @@ function FRAppNotes() {
       <p>
         <em>Publiée le 18/11/2025</em>
       </p>
-      <p>Nouveauté</p>
+      <p>
+        <strong>Nouveauté</strong>
+      </p>
       <ul>
         <li>Nouveau design et nouveau logo !</li>
       </ul>
@@ -669,7 +671,9 @@ function ENAppNotes() {
       <p>
         <em>Published on 18/11/2025</em>
       </p>
-      <p>News</p>
+      <p>
+        <strong>News</strong>
+      </p>
       <ul>
         <li>New design and new logo!</li>
       </ul>
