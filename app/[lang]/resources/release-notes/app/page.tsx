@@ -33,6 +33,29 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.14.0 */}
+      <h2>
+        <LinkToAnchor id="7.14.0">7.14.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 18/11/2025</em>
+      </p>
+      <p>Nouveauté</p>
+      <ul>
+        <li>Nouveau design et nouveau logo !</li>
+      </ul>
+      <p>
+        <strong>Correctifs</strong>
+      </p>
+      <ul>
+        <li>corrige un problème empêchant le scroll sur la modale de choix de la biométrie.</li>
+        <li>
+          corrige un problème empêchant la mise à jour de l'application lors du clic sur mettre à jour dans
+          l'application sur les applications windows store.
+        </li>
+      </ul>
+      <p>Améliorations techniques</p>
+      <p>ATTENTION ! iOS 12 et macOS 10.14 ne sont plus supportés.</p>
       {/* 7.13.1 */}
       <h2>
         <LinkToAnchor id="7.13.1">7.13.1</LinkToAnchor>
@@ -639,6 +662,26 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.14.0 */}
+      <h2>
+        <LinkToAnchor id="7.14.0">7.14.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 18/11/2025</em>
+      </p>
+      <p>News</p>
+      <ul>
+        <li>New design and new logo!</li>
+      </ul>
+      <p>
+        <strong>Fixes</strong>
+      </p>
+      <ul>
+        <li>fixes an issue preventing scroll on the biometry choice modal.</li>
+        <li>fixes an issue preventing the app update on windows store apps when clicking on update inside the app.</li>
+      </ul>
+      <p>Technical improvements</p>
+      <p>BREAKING CHANGE! iOS 12 and macOS 10.14 are no longer supported.</p>
       {/* 7.13.1 */}
       <h2>
         <LinkToAnchor id="7.13.1">7.13.1</LinkToAnchor>
