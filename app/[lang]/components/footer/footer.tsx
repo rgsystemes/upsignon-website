@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "./footer.module.css";
 import { FormModalButton } from "../formModal/formModal";
+import logoITSolutions from "../../../../public/icons/logo-septeo-it-solution.svg";
 
 export function Footer(p: { lang: string }) {
   const t = getDictionary(p.lang);
@@ -11,6 +13,9 @@ export function Footer(p: { lang: string }) {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerSections}>
+        <div className={styles.logoContainer}>
+          <Image src={logoITSolutions} alt="Septeo IT Solutions" />
+        </div>
         <nav className={styles.footerSection}>
           <h1>{t.footer.nav.t}</h1>
           <Link href="/">{t.footer.nav.home}</Link>
@@ -50,7 +55,7 @@ export function Footer(p: { lang: string }) {
         </div>
       </div>
       <div className={styles.copyright}>
-        © Septeo IT Solutions {year} {t.legalNotice.editor.name} {t.footer.copyright}
+        © Septeo IT Solutions {year} {t.footer.copyright}
         <span className={styles.spacer} />
         <Link href="/legalNotice">{t.footer.legalNotice}</Link>
         <span className={styles.spacer} />

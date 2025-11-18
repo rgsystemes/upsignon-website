@@ -1,4 +1,3 @@
-import React from "react";
 import { getDictionary } from "../../translations/translations";
 import styles from "./page.module.css";
 import { Metadata } from "next";
@@ -8,6 +7,9 @@ import frenchImg from "../../public/images/french.svg";
 import privacyByDesignImg from "../../public/images/privacyByDesign.svg";
 import multiDeviceImg from "../../public/images/multiDevice.svg";
 import cryptographyImg from "../../public/images/cryptography.svg";
+import heroBannerImg from "../../public/images/heroBanner.png";
+import googleIcon from "../../public/images/google.svg";
+import starsIcon from "../../public/images/stars.svg";
 
 import VimeoPlayer from "./components/vimeoPlayer/vimeoPlayer";
 import CustomerCarousel from "./components/customerCarousel/customerCarousel";
@@ -47,8 +49,42 @@ export default async function Page({
   return (
     <div>
       <div className={styles.blueBackground}>
+        <section className={styles.heroBanner}>
+          <div className={styles.heroBannerContainer}>
+            <div className={styles.heroBannerContent}>
+              <h1 className={styles.heroBannerTitle}>{t.heroBanner.title}</h1>
+              <p className={styles.heroBannerDescription}>{t.heroBanner.description}</p>
+              <div className={styles.heroBannerCTA}>
+                <FormModalButton
+                lang={lang}
+                className={styles.actionLink}
+                buttonText={t.actions.contactUs}
+                modalTitle={t.actions.contactUs}
+                modalLinkValue="contact-us"
+                isFreeTrialForm={false}
+                />
+                <FormModalButton
+                  lang={lang}
+                  className={styles.actionLinkPrimary}
+                  buttonText={t.actions.freeTrial}
+                  modalTitle={t.actions.freeTrial}
+                  modalLinkValue="free-trial"
+                  isFreeTrialForm={true}
+                />
+              </div>
+              <div className={styles.statsContainer}>
+                <Image src={googleIcon} alt="Google Play" />
+                <p>{t.heroBanner.rating}</p>
+                <Image src={starsIcon} alt="Stars" />
+              </div>
+            </div>
+            <div className={styles.heroBannerImg}>
+              <Image src={heroBannerImg} alt="Hero Banner" />
+            </div>
+          </div>
+        </section>
         <section className={styles.titleSection}>
-          <h1 className={styles.moto}>{t.pitch.moto}</h1>
+          <h2 className={styles.moto}>{t.pitch.moto}</h2>
           <VimeoPlayer
             videoId="915105612"
             title={t.pitch.prezVideoTitle}

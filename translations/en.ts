@@ -4,6 +4,11 @@ const translations: typeof fr = {
   anchorCopyTitle: "Copy the link to this paragraph.",
   anchorCopied: "Link copied",
   successMessage: "Request sent",
+  heroBanner: {
+    title: "The 100% french password manager",
+    description: "No more forgotten passwords or shared spreadsheets! UpSignOn helps your teams secure their access while gaining autonomy and efficiency every day.",
+    rating: "Rated 4.8/5 on 156 reviews",
+  },
   menu: {
     features: "Features & demos",
     pricing: "Pricing",
@@ -93,7 +98,7 @@ const translations: typeof fr = {
   pitch: {
     metaDescription:
       "Discover UpSignOn, our user-friendly, secure and multi-platform password management solution. Secure and forget your passwords. Get an overview of the passwords in your company and share them with colleagues.",
-    moto: "UpSignOn, the STRONG PASSWORD vault\nfor private and professional use.",
+    moto: "Discover how UpSignOn simplifies access security",
     subtitle: "Save, secure and forget\nyour passwords!",
     prezVideoTitle: "UpSignOn presentation video",
     french: "Made and hosted in France",
