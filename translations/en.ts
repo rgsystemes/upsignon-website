@@ -6,7 +6,8 @@ const translations: typeof fr = {
   successMessage: "Request sent",
   heroBanner: {
     title: "The 100% french password manager",
-    description: "No more forgotten passwords or shared spreadsheets! UpSignOn helps your teams secure their access while gaining autonomy and efficiency every day.",
+    description:
+      "No more forgotten passwords or shared spreadsheets! UpSignOn helps your teams secure their access while gaining autonomy and efficiency every day.",
     rating: "Rated 4.8/5 on 156 reviews",
   },
   menu: {
@@ -818,6 +819,12 @@ const translations: typeof fr = {
       metaDescription: "User testimonial - UpSignOn by Septeo",
       title: "User testimonial",
       summary: "Vincent Sueur, CISO for the Var department, tells us about his experience with UpSignOn.",
+    },
+    14: {
+      metaDescription:
+        "Discover how Groupe Deux Mains replaced an unsecured Word document with UpSignOn to manage over 300 supplier accounts, strengthen data security, and improve daily efficiency across its support team.",
+      title: "Groupe Deux Mains Secures Its Access with UpSignOn",
+      summary: "Groupe Deux Mains centralizes and secures over 300 supplier accounts with UpSignOn.",
     },
   },
 };

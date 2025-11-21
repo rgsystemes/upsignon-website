@@ -14,6 +14,7 @@ import pwdMini from "../../../../public/articles/pwdMini.jpeg";
 import passwordManagerImg from "../../../../public/articles/passwordManager.png";
 import newDesign from "../../../../public/articles/12/Image-Page-Accueil-USO-Nouvelle-UI.jpg";
 import illu13 from "../../../../public/articles/13/image.png";
+import illu14 from "../../../../public/articles/14/illu.jpg";
 
 import { getDictionary } from "../../../../translations/translations";
 import { Metadata } from "next";
@@ -136,6 +137,13 @@ export default async function ArticlesPage({ params }: { params: Promise<{ lang:
             image={newDesign}
             title={t.articles[12].title}
             summary={t.articles[12].summary}
+          />
+          <Article
+            link="/resources/articles/14"
+            lang={lang}
+            image={illu14}
+            title={t.articles[14].title}
+            summary={t.articles[14].summary}
           />
         </div>
       </section>

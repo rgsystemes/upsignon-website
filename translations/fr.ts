@@ -4,7 +4,8 @@ const translations = {
   successMessage: "Demande envoyée",
   heroBanner: {
     title: "Le gestionnaire de mots de passe 100% français",
-    description: "Fini les mots de passe oubliés ou partagés dans un tableur ! UpSignOn permet à vos équipes de sécuriser leurs accès, tout en gagnant en autonomie et en efficacité au quotidien",
+    description:
+      "Fini les mots de passe oubliés ou partagés dans un tableur ! UpSignOn permet à vos équipes de sécuriser leurs accès, tout en gagnant en autonomie et en efficacité au quotidien",
     rating: "Noté 4,8/5 sur 156 avis",
   },
   menu: {
@@ -830,6 +831,12 @@ const translations = {
       metaDescription: "Témoignage utilisateur - UpSignOn by Septeo",
       title: "Témoignage utilisateur",
       summary: "Vincent Sueur, RSSI du département du Var, nous raconte son expérience avec UpSignOn.",
+    },
+    14: {
+      metaDescription:
+        "Découvrez comment le groupe Deux Mains a remplacé un fichier Word peu sécurisé par UpSignOn pour gérer plus de 300 accès fournisseurs, renforcer la sécurité et améliorer l’efficacité quotidienne de son bureau.",
+      title: "Le groupe Deux Mains sécurise ses accès avec UpSignOn",
+      summary: "Le groupe Deux Mains centralise et sécurise plus de 300 accès fournisseurs grâce à UpSignOn.",
     },
   },
 };
