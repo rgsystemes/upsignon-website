@@ -34,6 +34,20 @@ export default async function DashboardNotes({ params }: { params: Promise<{ lan
 function FRDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.9.0 */}
+      <h2>
+        <LinkToAnchor id="2.9.0">2.9.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 08/12/2025</em>
+      <ul>
+        <li>
+          ajout des pages groupe de banque à destination des clients multi-banque et MSP (création et gestion des
+          banques, gestion des administrateurs)
+        </li>
+        <li>page licences corrigée et améliorée</li>
+        <li>ajout d'explications sur la signification des statistiques fort/moyen/faible vs vert/orange/rouge</li>
+        <li>correction d'une erreur de validation du formulaire d'ajout d'une banque</li>
+      </ul>
       {/* 2.8.0 */}
       <h2>
         <LinkToAnchor id="2.8.0">2.8.0</LinkToAnchor>
@@ -311,6 +325,20 @@ function FRDashboardNotes() {
 function ENDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.9.0 */}
+      <h2>
+        <LinkToAnchor id="2.9.0">2.9.0</LinkToAnchor>
+      </h2>
+      <em>Published on 08/12/2025</em>
+      <ul>
+        <li>
+          Addition of bank group pages for multi-bank customers and MSPs (creation and management of banks, management
+          of administrators)
+        </li>
+        <li>Licence page corrected and improved</li>
+        <li>Added explanations of the meaning of strong/medium/weak vs green/orange/red statistics</li>
+        <li>Corrected an error in the validation of the form for adding a bank</li>
+      </ul>
       {/* 2.8.0 */}
       <h2>
         <LinkToAnchor id="2.8.0">2.8.0</LinkToAnchor>
@@ -432,7 +460,6 @@ function ENDashboardNotes() {
         <li>the list of items in a shared folder is now collapsible</li>
         <li>compatibility with UpSignOn PRO 2.1.0 server</li>
       </ul>
-
       {/* 2.0.2 */}
       <h2>
         <LinkToAnchor id="2.0.2">2.0.2</LinkToAnchor>
@@ -442,7 +469,6 @@ function ENDashboardNotes() {
         <li>minor display fixes</li>
         <li>fixes search in shared vaults</li>
       </ul>
-
       {/* 2.0.1 */}
       <h2>
         <LinkToAnchor id="2.0.1">2.0.1</LinkToAnchor>
@@ -454,7 +480,6 @@ function ENDashboardNotes() {
           unauthorized email address
         </li>
       </ul>
-
       {/* 2.0.0 */}
       <h2>
         <LinkToAnchor id="2.0.0">2.0.0</LinkToAnchor>
@@ -473,7 +498,6 @@ function ENDashboardNotes() {
         </ul>
         <li>non-migrated vaults (i.e. not using the version 7 application) are sorted first and highlighted</li>
       </ul>
-
       {/* 1.15.0 */}
       <h2>
         <LinkToAnchor id="1.15.0">1.15.0</LinkToAnchor>
@@ -486,7 +510,6 @@ function ENDashboardNotes() {
           v7” or “msi users” filter, these emails are used as recipients
         </li>
       </ul>
-
       {/* 1.14.0 */}
       <h2>
         <LinkToAnchor id="1.14.0">1.14.0</LinkToAnchor>
@@ -499,7 +522,6 @@ function ENDashboardNotes() {
         </li>
         <li>adds of subscription links to our technical and admin newsletters</li>
       </ul>
-
       {/* 1.13.1 */}
       <h2>
         <LinkToAnchor id="1.13.1">1.13.1</LinkToAnchor>
@@ -508,7 +530,6 @@ function ENDashboardNotes() {
       <ul>
         <li>display of the admin email which authorizes the reset of a user’s password</li>
       </ul>
-
       {/* 1.13.0 */}
       <h2>
         <LinkToAnchor id="1.13.0">1.13.0</LinkToAnchor>
@@ -526,7 +547,6 @@ function ENDashboardNotes() {
         <li>superadmin / settings: adds a validity indicator for the UpSignOn PRO server certification chain</li>
         <li>dependency updates and security fixes</li>
       </ul>
-
       {/* 1.12.0 */}
       <h2>
         <LinkToAnchor id="1.12.0">1.12.0</LinkToAnchor>
@@ -545,7 +565,6 @@ function ENDashboardNotes() {
           <li>the downloads page</li>
         </ul>
       </ul>
-
       {/* 1.11.0 */}
       <h2>
         <LinkToAnchor id="1.11.0">1.11.0</LinkToAnchor>

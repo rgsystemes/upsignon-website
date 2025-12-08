@@ -34,6 +34,28 @@ export default async function ServerNotes({ params }: { params: Promise<{ lang: 
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.8.0 */}
+      <h2>
+        <LinkToAnchor id="2.8.0">2.8.0</LinkToAnchor>
+      </h2>
+      <em>Publié le 08/12/2025</em>
+      <ul>
+        <li>
+          correction : un utilisateur peut désormais se faire renvoyer un email de reset de mot de passe maître même si
+          le mail précédent est toujours valide
+        </li>
+        <li>correction d'un problème empêchant le fonctionnement du serveur en cas d'utilisant d'un proxy sortant</li>
+        <li>
+          correction d'un problème empêchant de créer un coffre-fort si MS Entra est configuré avec une mauvaise
+          configuration
+        </li>
+        <li>
+          la temporisation appliquée sur la saisie de mots de passe erronés se réinitialise automatiquement au bout de
+          24h sans essai pour éviter une situation où une seule mauvaise saisie du mot de passe maître conduit à devoir
+          attendre plusieurs minutes pour réessayer si plusieurs tentatives erronées avaient déjà été faites plusieurs
+          jours auparavant.
+        </li>
+      </ul>
       {/* 2.7.0 */}
       <h2>
         <LinkToAnchor id="2.7.0">2.7.0</LinkToAnchor>
@@ -254,6 +276,23 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.8.0 */}
+      <h2>
+        <LinkToAnchor id="2.8.0">2.8.0</LinkToAnchor>
+      </h2>
+      <em>Published on 08/12/2025</em>
+      <ul>
+        <li>
+          Fix: a user can now have a master password reset email resent even if the previous email is still valid.
+        </li>
+        <li>Fix for an issue preventing the server from functioning when using an outgoing proxy.</li>
+        <li>Fixed an issue preventing the creation of a vault if MS Entra is configured incorrectly.</li>
+        <li>
+          The timeout applied to incorrect password entries is automatically reset after 24 hours without any attempts,
+          to avoid a situation where a single incorrect master password entry leads to having to wait several minutes to
+          try again if several incorrect attempts had already been made several days earlier.
+        </li>
+      </ul>
       {/* 2.7.0 */}
       <h2>
         <LinkToAnchor id="2.7.0">2.7.0</LinkToAnchor>
