@@ -181,6 +181,12 @@ module.exports = async (phase, { defaultConfig }) => {
           destination: "https://upsignon.notion.site/Notice-d-utilisation-d-UpSignOn-de4f8ba200e14ec1adcaba2613b38340",
           permanent: false,
         },
+        {
+          // redirect a link mistyped in the app
+          source: "/fr/help-center",
+          destination: "https://upsignon.notion.site/Notice-d-utilisation-d-UpSignOn-de4f8ba200e14ec1adcaba2613b38340",
+          permanent: false,
+        },
       ]),
   };
   return nextConfig;
