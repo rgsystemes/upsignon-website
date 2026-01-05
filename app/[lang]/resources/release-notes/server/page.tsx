@@ -34,6 +34,14 @@ export default async function ServerNotes({ params }: { params: Promise<{ lang: 
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.9.0 */}
+      <h2>
+        <LinkToAnchor id="2.9.0">2.9.0</LinkToAnchor>
+      </h2>
+      <em>Publié le 06/01/2026</em>
+      <ul>
+        <li>Le dépassement de licences n'est désormais plus autorisé.</li>
+      </ul>
       {/* 2.8.0 */}
       <h2>
         <LinkToAnchor id="2.8.0">2.8.0</LinkToAnchor>
@@ -276,6 +284,14 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.9.0 */}
+      <h2>
+        <LinkToAnchor id="2.9.0">2.9.0</LinkToAnchor>
+      </h2>
+      <em>Published on 06/01/2026</em>
+      <ul>
+        <li>License overruns are no longer permitted.</li>
+      </ul>
       {/* 2.8.0 */}
       <h2>
         <LinkToAnchor id="2.8.0">2.8.0</LinkToAnchor>
