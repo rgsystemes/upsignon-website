@@ -827,6 +827,143 @@ const translations: typeof fr = {
       summary: "Groupe Deux Mains centralizes and secures over 300 supplier accounts with UpSignOn.",
     },
   },
+  privacyPolicy: {
+    metaDescription: "UpSignOn by Septeo's privacy policy.",
+    pageTitle: "Privacy Policy",
+    subtitle: "Find all legal information regarding the protection of your privacy and your data.",
+    preamble: {
+      title: "Preamble",
+      paragraph1: {
+        before: "This privacy policy is addressed to you, as a user of the upsignon.eu website (",
+        em: "hereinafter referred to as \"the Site\"",
+        after: ").",
+      },
+      paragraph2: "The Site is published by SEPTEO IT SOLUTIONS, a SAS company with share capital of €408,568.00, registered with the Montpellier Trade and Companies Register under number 508 920 683, with its registered office at Font de la Banquière, 194 avenue de la Gare Sud de France 34970 LATTES, the author of these terms, processes personal data.",
+      paragraph3: "SEPTEO IT SOLUTIONS attaches great importance to respecting your privacy and protecting personal data. As such, we are committed to strict compliance with personal data protection regulations, namely Law No. 78-17 of 6 January 1978 known as the Data Protection Act and Regulation No. 2016/679 of 27 April 2016 (hereinafter the \"General Data Protection Regulation\").",
+      paragraph4: "The purpose of this privacy policy is to inform you about the commitments and measures taken by SEPTEO IT SOLUTIONS to ensure respect for your privacy and the protection of your personal data.",
+    },
+    section1: {
+      title: "1. Data Controller",
+      paragraph1: "SEPTEO IT SOLUTIONS is the Data Controller for personal data processed as part of the operation of the Site.",
+    },
+    section2: {
+      title: "2. Purpose of Data Processing",
+      table: {
+        headers: {
+          purpose: "Purpose",
+          data: "Data Processed",
+          legalBasis: "Legal Basis",
+          retention: "Retention Period",
+        },
+        row1: {
+          purpose: "Proper functioning and continuous improvement of the Site, its services and features",
+          data: {
+            item1: "URLs of links through which you accessed the Site",
+            item2: "IP address",
+            item3: "Type and version of your browser",
+            item4: "Navigation data on the Site",
+          },
+          legalBasis: "Legitimate interest",
+          retention: "6 months",
+        },
+        row2: {
+          purpose: "Commercial prospecting",
+          data: {
+            item1: "Last name, first name",
+            item2: "Phone number, email, postal code",
+            item3: "Company name",
+            item4: "Company sector of activity",
+          },
+          legalBasis: "Consent",
+          retention: "3 years from the last contact with the prospect",
+        },
+        row3: {
+          purpose: "Performing audience and usage analysis of Site elements",
+          data: "Navigation data on the site",
+          legalBasis: "Consent",
+          retention: "6 months",
+        },
+      },
+    },
+    section3: {
+      title: "3. Data Recipients",
+      paragraph1: "The following are recipients of all or part of the data:",
+      list: {
+        item1: "SEPTEO's internal services; in this case, only the data strictly necessary for carrying out the processing is transmitted to the only employees authorized to access it due to their functions. These employees with access to your personal data are also subject to a confidentiality obligation;",
+        item2: "Our subcontractors, provided they provide sufficient guarantees with regard to the requirements of the General Data Protection Regulation;",
+        item3: "Third parties likely to place cookies on your device when you have consented to it.",
+      },
+      paragraph2: "Your data is not communicated, exchanged, sold or rented to any other person than those mentioned above.",
+    },
+    section4: {
+      title: "4. Cookies",
+      paragraph1: "The upsignon.eu website uses cookies. When you visit the Site, cookies are placed on your device.",
+      paragraph2: "You can find out about the nature of the cookies placed, accept or refuse them.",
+      paragraph3: "A cookie is a small text file placed on your device's hard drive when you visit a website. It records certain information about your browsing or online behavior.",
+      paragraph4: "The cookies used on the Site serve to differentiate you to improve your browsing experience and the services we offer.",
+      paragraph5: "In practice, technical cookies allow us to authenticate and identify you.",
+      paragraph6: "Other audience measurement cookies and trackers can be used to establish Site audience statistics (measuring the number of visits, number of page views, your activity, your frequency of return, etc.).",
+      paragraph7: "In any case, cookies stored on your device or any other element used to identify you for audience statistics purposes will have a limited lifespan of a maximum of six (6) months, and this period will not be automatically extended during your new visits to the Site.",
+      paragraph8: "You have the right to withdraw your consent at any time to such cookies being placed on your device.",
+    },
+    section5: {
+      title: "5. Data Security",
+      paragraph1: "SEPTEO IT SOLUTIONS implements technical and organizational measures to ensure the security of personal data processing and the confidentiality of collected data.",
+      paragraph2: "As such, we take all useful precautions, considering the nature of the data and the risks represented by the processing, to preserve their security and, in particular, to prevent data from being distorted, damaged, or accessed by unauthorized third parties (physical protection of premises, secure https protocol, logging and traceability of connections to internally deployed software).",
+      paragraph3: "However, if an incident affecting the integrity or confidentiality of the user's data comes to the attention of SEPTEO IT SOLUTIONS, the latter undertakes to inform the user and communicate the corrective measures taken.",
+    },
+    section6: {
+      title: "6. Your Rights",
+      paragraph1: "In accordance with the Data Protection Act and the General Data Protection Regulation, you have the following rights:",
+      rights: {
+        access: {
+          title: "Right of access and information:",
+          description: "you can request access to your processed data and be informed about the circumstances of this processing.",
+        },
+        limitation: {
+          title: "Right to limitation of personal data processing:",
+          description: "you can obtain the limitation of the processing of your personal data by contesting its accuracy, the lawfulness of the processing, when you object to it, or when you wish it to be kept for evidential purposes.",
+        },
+        rectification: {
+          title: "Right of rectification and erasure:",
+          description: "you can request the rectification of your data when it is inaccurate or incomplete.",
+        },
+        opposition: {
+          title: "Right to object:",
+          description: "you can object to the processing of your data carried out on the Site. However, SEPTEO IT SOLUTIONS has the right not to respond to this request if it has legitimate and compelling grounds for processing your data.",
+        },
+        portability: {
+          title: "Right to data portability:",
+          description: "you can obtain your data provided to SEPTEO IT SOLUTIONS in a structured, commonly used and machine-readable format, or obtain the transmission of this data to another data controller.",
+        },
+        afterDeath: {
+          title: "Right to define the fate of your data after your death",
+          description: "and to choose whether or not we communicate your data to a third party you have previously designated. In the event of death and in the absence of instructions from you, we undertake to destroy your data, unless its retention proves necessary for evidential purposes or to meet a legal obligation.",
+        },
+        complaint: {
+          title: "Right to lodge a complaint:",
+          description: "you also have the right to lodge a complaint with the National Commission for Information Technology and Civil Liberties.",
+        },
+      },
+    },
+    section7: {
+      title: "7. Data Protection Officer Contact Details",
+      paragraph1: "You can exercise these rights with the Data Protection Officer at the following addresses:",
+      contacts: {
+        email: {
+          label: "By email:",
+        },
+        mail: {
+          label: "By mail:",
+          value: "DPO – SEPTEO, Font de la Banquière, 194 avenue de la Gare Sud de France 34970 LATTES",
+        },
+      },
+      paragraph2: "The author of this request must indicate their contact details (name, first name, address and a copy of a signed identity document) and a legitimate reason when required by law (particularly in case of objection).",
+      paragraph3: "In the event of communicating a copy of an identity document, the latter will be kept for one or three years when this communication is made as part of the exercise of a right to object.",
+      paragraph4: "To better know your rights, we invite you to consult the website of the National Commission for Information Technology and Civil Liberties at the following address:",
+      paragraph5: "In the event of a request to exercise your rights, we will provide you with a response within the legal deadline of one month at the latest; this deadline may be extended to two months taking into account the complexity of the request or the number of requests received.",
+    },
+  }
 };
 
 export default translations;

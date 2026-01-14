@@ -1,0 +1,39 @@
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 20px 50px 20px;
+}
+.content h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.content p,
+.content ul,
+.content li,
+.content h2 {
+  margin-bottom: 15px;
+}
+
+.privacyPolicyTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.privacyPolicyTable th,
+.privacyPolicyTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.privacyPolicyTable th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.privacyPolicyTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

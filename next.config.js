@@ -187,6 +187,18 @@ module.exports = async (phase, { defaultConfig }) => {
           destination: "https://upsignon.notion.site/Notice-d-utilisation-d-UpSignOn-de4f8ba200e14ec1adcaba2613b38340",
           permanent: false,
         },
+        {
+          // renamed link
+          source: "/fr/privacy",
+          destination: "/fr/appPrivacyPolicy",
+          permanent: true,
+        },
+        {
+          // renamed link
+          source: "/en/privacy",
+          destination: "/en/appPrivacyPolicy",
+          permanent: true,
+        },
       ]),
   };
   return nextConfig;

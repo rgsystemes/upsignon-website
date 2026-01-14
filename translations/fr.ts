@@ -133,7 +133,7 @@ const translations = {
       3: {
         t: "Partagez des mots de passe de façon sécurisée",
         d: [
-          "Partager ses mots de passe, nous le faisons tous. Mais, sans outil, cela conduit inévitablement à utiliser les plus mauvaises pratiques : utiliser un mot de passe trop simple, afficher le mot de passe sur un mur, ne jamais changer ce mot de passe. Grâce à UpSignOn, les mots de passe que vous partagez peuvent rester uniques et forts, et peuvent être modifiés et synchronisés auprès de tous les destinataires sans effort.",
+          "Partager ses mots de passe, nous le faisons tous. Mais, sans outil, cela conduit inévitablement à utiliser les plus mauvaises pratiques : utiliser un mot de passe trop simple, afficher le mot de passe sur un mur, ne jamais changer ce mot de passe. Grâce à UpSignOn, les mots de passe que vous partagez peuvent rester uniques et forts, et peuvent être modifiés et synchronisés auprès de tous les destinataires sans effort.",
         ],
       },
       4: {
@@ -188,7 +188,7 @@ const translations = {
       e2eEnc: {
         t: "Protection cryptographique, chiffrement de bout en bout",
         p1: "Toutes les données sensibles sont chiffrées avant d’être stockées ou transférées via internet. La seule façon pour les déchiffrer est de connaître la clé de chiffrement (par exemple votre mot de passe maître). Les algorithmes et les paramètres que nous avons sélectionnés sont conçus de sorte que des pirates mettraient plusieurs dizaines voire centaines d'années pour déchiffrer vos données, ce qui est totalement dissuasif financièrement pour eux.",
-        p2: 'Nous avons conçu UpSignOn pour respecter autant que possible le principe dit de "confiance nulle" : le système reste sécurisé même si nos serveurs sont compromis.',
+        p2: 'Nous avons conçu UpSignOn pour respecter autant que possible le principe dit de "confiance nulle" : le système reste sécurisé même si nos serveurs sont compromis.',
       },
       mfa: {
         t: "Authentification multi-facteur par conception",
@@ -196,7 +196,7 @@ const translations = {
       },
       zeroKnowledge: {
         t: "Limitation des données personnelles stockées sur le cloud - principe de connaissance nulle",
-        p1: "Seules les données strictement essentielles sont stockées en clair sur les serveurs. Dans le cas des coffres-forts PRO, pour les besoins de la supervision, il s’agit de votre adresse email professionnelle, de vos appareils autorisés et d’informations sur la force des mots de passe de votre coffre-fort. Les coffres-forts PERSO quant à eux respectent totalement le principe dit de “connaissance nulle” : absolument aucune donnée personnelle n’est transmise au serveur, pas même votre adresse email.",
+        p1: "Seules les données strictement essentielles sont stockées en clair sur les serveurs. Dans le cas des coffres-forts PRO, pour les besoins de la supervision, il s’agit de votre adresse email professionnelle, de vos appareils autorisés et d’informations sur la force des mots de passe de votre coffre-fort. Les coffres-forts PERSO quant à eux respectent totalement le principe dit de “connaissance nulle” : absolument aucune donnée personnelle n’est transmise au serveur, pas même votre adresse email.",
       },
     },
     customerList: {
@@ -253,10 +253,10 @@ const translations = {
     tags: {
       pro: "PRO",
       perso: "PERSO",
-      availableFor: (pro: boolean) => `Disponible pour les coffres-forts ${pro ? "pro" : "perso"}`,
-      unavailableFor: (pro: boolean) => `Non disponible pour les coffres-forts ${pro ? "pro" : "perso"}`,
+      availableFor: (pro: boolean) => `Disponible pour les coffres-forts ${pro ? "pro" : "perso"}`,
+      unavailableFor: (pro: boolean) => `Non disponible pour les coffres-forts ${pro ? "pro" : "perso"}`,
       availableWithWarningFor: (pro: boolean) =>
-        `Support partiel ou optionnel pour les coffres-forts ${pro ? "pro" : "perso"}`,
+        `Support partiel ou optionnel pour les coffres-forts ${pro ? "pro" : "perso"}`,
     },
     compatibilityTable: {
       summary: "Table de compatibilité",
@@ -710,7 +710,7 @@ const translations = {
     tutorials: "Tutoriels",
     technicalExplanations: "Explications techniques",
     technicalExplanationsMetaDesc: "Tous nos articles pour comprendre le fonctionnement interne d'UpSignOn.",
-    onPremDoc: "Auto-hébergement Linux : documentation d'installation",
+    onPremDoc: "Auto-hébergement Linux : documentation d'installation",
     generalDesignPrinciples: "Principes de fonctionnement des coffres-forts PERSO et PRO",
     browserExtensionSecurity: "Principe de fonctionnement et de sécurité de l'extension de navigateur",
     releaseNotes: "Notes de version",
@@ -839,6 +839,144 @@ const translations = {
       summary: "Le groupe Deux Mains centralise et sécurise plus de 300 accès fournisseurs grâce à UpSignOn.",
     },
   },
+
+  privacyPolicy: {
+    metaDescription: "Politique de confidentialité d'UpSignOn by Septeo.",
+    pageTitle: "Politique de confidentialité",
+    subtitle: "Retrouvez toutes les informations légales relatives au respect de votre vie privée et à la protection de vos données.",
+    preamble: {
+      title: "Préambule",
+      paragraph1: {
+        before: "La présente politique de confidentialité s'adresse à vous, en votre qualité d'utilisateur du site upsignon.eu (",
+        em: "ci-après dénommé « le Site »",
+        after: ").",
+      },
+      paragraph2: "Le Site est édité par la société SEPTEO IT SOLUTIONS, SAS au capital de 408 568,00 € immatriculée au Registre du Commerce et des Sociétés de Montpellier sous le n° 508 920 683, ayant son siège social au Font de la Banquière, 194, avenue de la Gare Sud de France 34970 LATTES, rédacteur des présentes, met en œuvre des traitements de données à caractère personnel.",
+      paragraph3: "SEPTEO IT SOLUTIONS accorde une grande importance au respect de votre vie privée et à la Protection des données à caractère personnel. À ce titre, nous nous engageons à une application stricte de la règlementation en matière de protection des données personnelles à savoir la loi n°78-17 du 6 janvier 1978 dite loi informatique et liberté et le Règlement n°2016/679 du 27 avril 2016 (ci-après le « Règlement Général sur la Protection des Données Personnelles »).",
+      paragraph4: "La présente politique de confidentialité a pour objectif de vous informer sur les engagements et les mesures prises par SEPTEO IT SOLUTIONS afin de veiller au respect de votre vie privée et à la protection de vos données à caractère personnel.",
+    },
+    section1: {
+      title: "1. Responsable de traitement",
+      paragraph1: "La société SEPTEO IT SOLUTIONS est le Responsable de traitement des données à caractère personnel mis en œuvre dans le cadre de l'exploitation du Site.",
+    },
+    section2: {
+      title: "2. Objet du traitement de données",
+      table: {
+        headers: {
+          purpose: "Finalité",
+          data: "Données traitées",
+          legalBasis: "Base légale",
+          retention: "Durées de conservation",
+        },
+        row1: {
+          purpose: "Le bon fonctionnement et l'amélioration permanente du Site, de ses services et fonctionnalités",
+          data: {
+            item1: "URL des liens par l'intermédiaire desquels vous avez accédé au Site",
+            item2: "Adresse IP",
+            item3: "Type et version de votre navigateur",
+            item4: "Données de navigation sur le Site",
+          },
+          legalBasis: "Intérêt légitime",
+          retention: "6 mois",
+        },
+        row2: {
+          purpose: "La prospection commerciale",
+          data: {
+            item1: "Nom, prénom",
+            item2: "Numéro de téléphone, email, code postal",
+            item3: "Nom de l'entreprise",
+            item4: "Secteur d'activité de l'entreprise",
+          },
+          legalBasis: "Consentement",
+          retention: "3 ans à compter du dernier contact avec le prospect",
+        },
+        row3: {
+          purpose: "La réalisation d'analyse de fréquentation et d'utilisation d'éléments du Site",
+          data: "Données de navigation sur le site",
+          legalBasis: "Consentement",
+          retention: "6 mois",
+        },
+      },
+    },
+    section3: {
+      title: "3. Destinataires des données",
+      paragraph1: "Sont destinataires de tout ou partie des données :",
+      list: {
+        item1: "Les services internes de SEPTEO, dans ce cas, seules les données strictement nécessaires à la réalisation du traitement sont transmises aux seuls collaborateurs habilités à les consulter en raison de leurs fonctions. Ces collaborateurs ayant accès à vos données personnelles sont par ailleurs soumis à une obligation de confidentialité ;",
+        item2: "Nos sous-traitants, à la condition qu'ils présentent les garanties suffisantes au regard des exigences du Règlement Général sur la Protection des Données ;",
+        item3: "Les tiers susceptibles de déposer des cookies sur votre terminal lorsque vous y avez consenti.",
+      },
+      paragraph2: "Vos données ne sont communiquées, échangées, vendues ou louées à aucune autre personne que celles mentionnées ci-dessus.",
+    },
+    section4: {
+      title: "4. Les cookies",
+      paragraph1: "Le Site upsignon.eu utilise des cookies. Lors de vos visites sur le Site, des cookies sont déposés sur votre terminal.",
+      paragraph2: "Vous pouvez vous informer sur la nature des cookies déposés, les accepter ou les refuser.",
+      paragraph3: "Un cookie est un petit fichier texte déposé sur le disque dur de votre terminal lors de votre visite sur un site internet. Il enregistre certaines informations sur votre navigation ou sur votre comportement en ligne.",
+      paragraph4: "Les cookies utilisés sur le Site servent à vous différencier pour améliorer votre navigation et les services que nous proposons.",
+      paragraph5: "En pratique, les cookies techniques nous permettent de vous authentifier et de vous identifier.",
+      paragraph6: "D'autres cookies de mesure d'audience et traceurs peuvent nous servir à établir des statistiques d'audience du Site (mesure du nombre de visites, du nombre de pages vues, de votre activité, de votre fréquence de retour, etc).",
+      paragraph7: "En tout état de cause, les cookies stockés dans votre terminal ou tout autre élément utilisé pour vous identifier à des fins de statistiques d'audience auront une durée de vie limitée à six (6) mois maximum, cette durée n'étant pas prorogée automatiquement lors de vos nouvelles visites sur le Site.",
+      paragraph8: "Vous disposez du droit de revenir à tout moment sur votre consentement à ce que de tels cookies soient déposés sur votre terminal.",
+    },
+    section5: {
+      title: "5. Sécurité des données",
+      paragraph1: "SEPTEO IT SOLUTIONS met en place des mesures techniques et organisationnelles afin d'assurer la sécurité des traitements de données à caractère personnel et la confidentialité des données collectées.",
+      paragraph2: "À ce titre, nous prenons toutes les précautions utiles, au regard de la nature des données et des risques représentés par les traitements pour en préserver la sécurité et, notamment, empêcher que les données soient déformées, endommagées, ou que des tiers non autorisés y aient accès (protection physique des locaux, protocole https sécurisé, journalisation et traçabilité des connexions aux logiciels déployés en interne.)",
+      paragraph3: "Cependant, si un incident impactant l'intégrité ou la confidentialité des données de l'utilisateur est porté à la connaissance de SEPTEO IT SOLUTIONS, cette dernière s'engage à informer l'utilisateur et lui communiquer les mesures correctives prises.",
+    },
+    section6: {
+      title: "6. Vos droits",
+      paragraph1: "Conformément à la loi Informatique et Liberté, et au Règlement Général à la Protection des Données Personnelles, vous disposez des droits suivants :",
+      rights: {
+        access: {
+          title: "Droit d'accès et d'information :",
+          description: "vous pouvez demander la consultation de vos données traitées et être informé sur les circonstances de ce traitement.",
+        },
+        limitation: {
+          title: "Droit à la limitation du traitement des données personnelles :",
+          description: "vous pouvez obtenir la limitation du traitement de vos données personnelles en contestant leur exactitude, la licéité du traitement, lorsque vous vous opposez à celui-ci, ou lorsque vous souhaitez leur conservation à des fins de preuve.",
+        },
+        rectification: {
+          title: "Droit de rectification et d'effacement :",
+          description: "vous pouvez demander la rectification de vos données lorsqu'elles sont inexactes ou incomplètes.",
+        },
+        opposition: {
+          title: "Droit d'opposition :",
+          description: "vous pouvez vous opposer au traitement de vos données réalisé sur le Site. Néanmoins, SEPTEO IT SOLUTIONS est en droit de ne pas répondre à cette demande si elle dispose de motifs légitimes et impérieux au traitement de vos données.",
+        },
+        portability: {
+          title: "Droit à la portabilité :",
+          description: "vous pouvez obtenir vos données fournies à SEPTEO IT SOLUTIONS dans un format structuré, couramment utilisé et lisible par machine ou bien obtenir la transmission de ces données à un autre responsable de traitement.",
+        },
+        afterDeath: {
+          title: "Droit de définir le sort de vos données après votre mort",
+          description: "et de choisir que nous communiquions ou non vos données à un tiers que vous aurez préalablement désigné. En cas de décès et à défaut d'instructions de votre part, nous nous engageons à détruire vos données, sauf si leur conservation s'avère nécessaire à des fins probatoires ou pour répondre à une obligation légale.",
+        },
+        complaint: {
+          title: "Droit d'introduire une réclamation :",
+          description: "vous disposez également du droit d'introduire une réclamation auprès de la Commission Nationale de l'Informatique et des Libertés.",
+        },
+      },
+    },
+    section7: {
+      title: "7. Coordonnées du délégué à la protection des données",
+      paragraph1: "Vous pouvez exercer ces droits auprès du Délégué à la protection des données aux adresses suivantes :",
+      contacts: {
+        email: {
+          label: "Par mail :",
+        },
+        mail: {
+          label: "Par courrier :",
+          value: "DPO – SEPTEO, Font de la Banquière, 194, avenue de la Gare Sud de France 34970 LATTES",
+        },
+      },
+      paragraph2: "L'auteur de cette demande doit indiquer ses coordonnées (nom, prénom, adresse et une copie d'un titre d'identité signé) et un motif légitime lorsque celui-ci est exigé par la loi (notamment en cas d'opposition).",
+      paragraph3: "En cas de communication d'une copie de pièce d'identité, cette dernière sera conservée un ou trois ans lorsque cette communication est effectuée dans le cadre de l'exercice d'un droit d'opposition.",
+      paragraph4: "Afin de mieux connaître vos droits, nous vous invitons à consulter le site internet de la Commission Nationale de l'Informatique et des Libertés à l'adresse suivante :",
+      paragraph5: "En cas de demande d'exercice de vos droits, nous vous apporterons une réponse au plus tard dans le délai légal d'un mois, ce délai pouvant être porté à deux mois compte tenu de la complexité de la demande ou du nombre de demandes reçues.",
+    },
+  }
 };
 
 export default translations;
