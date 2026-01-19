@@ -33,6 +33,27 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.15.0 */}
+      <h2>
+        <LinkToAnchor id="7.15.0">7.15.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publication à venir</em>
+      </p>
+      <p>
+        <strong>Améliorations et correctifs</strong>
+      </p>
+      <ul>
+        <li>Support des VPN sur macOS</li>
+        <li>Amélioration et correction du statut des extensions de navigateur</li>
+        <li>Nouveau formulaire pour contacter le support</li>
+        <li>Nouvelles durées d'autorisation du partage d'écran de l'application (Windows, iOS, Android)</li>
+        <li>Possibilité d'arrêter de partager un dossier</li>
+        <li>
+          Corrections de bugs mineurs (crash après une copie dans certains cas, scan de QR code sur macOS, import des
+          TOTP pour certains formats d'export)
+        </li>
+      </ul>
       {/* 7.14.0 */}
       <h2>
         <LinkToAnchor id="7.14.0">7.14.0</LinkToAnchor>
@@ -664,6 +685,27 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.15.0 */}
+      <h2>
+        <LinkToAnchor id="7.15.0">7.15.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publication in progress</em>
+      </p>
+      <p>
+        <strong>Fixes and improvements</strong>
+      </p>
+      <ul>
+        <li>VPN support on macOS</li>
+        <li>Improvements and fixes to browser extension status</li>
+        <li>New support contact form</li>
+        <li>New app screen sharing authorization durations (Windows, iOS, Android)</li>
+        <li>Ability to stop sharing a folder</li>
+        <li>
+          Minor bug fixes (crash after copying in some cases, QR code scanning on macOS, importing TOTP for some export
+          formats)
+        </li>
+      </ul>
       {/* 7.14.0 */}
       <h2>
         <LinkToAnchor id="7.14.0">7.14.0</LinkToAnchor>
@@ -970,7 +1012,6 @@ function ENAppNotes() {
         <li>fixes a bug on Linux preventing the enrollment of new devices</li>
         <li>fixes the accepted format for entering a TOTP key</li>
       </ul>
-
       {/* 7.7.1 */}
       <h2>
         <LinkToAnchor id="7.7.1">7.7.1</LinkToAnchor>
@@ -991,7 +1032,6 @@ function ENAppNotes() {
       <ul>
         <li>fixes an unexpected auto-locking issue</li>
       </ul>
-
       {/* 7.6.0 */}
       <h2>
         <LinkToAnchor id="7.6.0">7.6.0</LinkToAnchor>
@@ -1007,7 +1047,6 @@ function ENAppNotes() {
         <li>PRO: automatic taking into account of bank name changes</li>
         <li>PRO: support for UpSignOn PRO server redirects</li>
       </ul>
-
       {/* 7.5.1 */}
       <h2>
         <LinkToAnchor id="7.5.1">7.5.0 (7.5.1 for Windows)</LinkToAnchor>
@@ -1038,7 +1077,6 @@ function ENAppNotes() {
         </li>
         <li>fixes a display problem on TOTP</li>
       </ul>
-
       {/* 7.4.1 */}
       <h2>
         <LinkToAnchor id="7.4.1">7.4.1</LinkToAnchor>
@@ -1057,7 +1095,6 @@ function ENAppNotes() {
           the settings page.
         </li>
       </ul>
-
       {/* 7.4.0 */}
       <h2>
         <LinkToAnchor id="7.4.0">7.4.0</LinkToAnchor>
@@ -1087,7 +1124,6 @@ function ENAppNotes() {
         <li>[technical] adds error catching functionality to the Windows application to help with debugging</li>
         <li>improves the robustness of the forgotten password functionality of PERSO vaults</li>
       </ul>
-
       {/* 7.3.1 */}
       <h2>
         <LinkToAnchor id="7.3.1">7.3.1 - 7.3.2 - 7.3.3 (macos)</LinkToAnchor>
@@ -1095,12 +1131,10 @@ function ENAppNotes() {
       <ul>
         <li>Safari extension updates</li>
       </ul>
-
       {/* 7.3.0 */}
       <h2>
         <LinkToAnchor id="7.3.0">7.3.0</LinkToAnchor>
       </h2>
-
       <p>
         <em>Published on 9/02/2024</em>
       </p>
@@ -1122,7 +1156,6 @@ function ENAppNotes() {
         <li>TOTP: short secrets are now accepted</li>
         <li>Windows: the window opens centered on the screen instead of stuck to the top left</li>
       </ul>
-
       {/* 7.2.0 */}
       <h2>
         <LinkToAnchor id="7.2.0">7.2.0</LinkToAnchor>
@@ -1150,7 +1183,6 @@ function ENAppNotes() {
         <li>Updates dependencies</li>
         <li>Changes the navigation system (transparent for users)</li>
       </ul>
-
       {/* 7.1.2 */}
       <h2>
         <LinkToAnchor id="7.1.2">7.1.2 (only for msi)</LinkToAnchor>
@@ -1159,7 +1191,6 @@ function ENAppNotes() {
         <em>Published on 21/12/2023</em>
       </p>
       <p>Fixes the update ling on Windows for apps installed via msi.</p>
-
       {/* 7.1.1 */}
       <h2>
         <LinkToAnchor id="7.1.1">7.1.1</LinkToAnchor>
@@ -1171,7 +1202,6 @@ function ENAppNotes() {
         Fixes a case of blocking of a PERSO vault following a late remigration under certain special conditions (rare
         case).
       </p>
-
       {/* 7.1.0 */}
       <h2>
         <LinkToAnchor id="7.1.0">7.1.0</LinkToAnchor>
