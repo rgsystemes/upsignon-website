@@ -33,6 +33,18 @@ export default async function ExtensionNotes({ params }: { params: Promise<{ lan
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.7.0 */}
+      <h2>
+        <LinkToAnchor id="1.7.0">1.7.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 19/01/2025</em>
+      <ul>
+        <li>
+          Nombreuses améliorations et corrections de cas limites sur le système de gestion de la connexion avec
+          l'application.
+        </li>
+        <li>Suppression complète de l'ancien système d'autorisation.</li>
+      </ul>
       {/* 1.6.0 */}
       <h2>
         <LinkToAnchor id="1.6.0">1.6.0</LinkToAnchor>
@@ -281,6 +293,15 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.7.0 */}
+      <h2>
+        <LinkToAnchor id="1.7.0">1.7.0</LinkToAnchor>
+      </h2>
+      <em>Published on 19/01/2025</em>
+      <ul>
+        <li>Many improvements and edge case fixes on the management of the connection with the app.</li>
+        <li>Removal of the old authorization system.</li>
+      </ul>
       {/* 1.6.0 */}
       <h2>
         <LinkToAnchor id="1.6.0">1.6.0</LinkToAnchor>
