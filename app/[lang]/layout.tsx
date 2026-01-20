@@ -43,8 +43,6 @@ export default async function RootLayout({
         <meta name="google-site-verification" content="yNxeZNw0jlQy8ywG1nUXNCi1zgL61n9KqWv3kb4zmEE" />
       </head>
 
-      <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/20410676.js" />
-
       <AnchorScrollWithFixedHeaderBody
         fixedComponent={
           <div>
@@ -61,6 +59,14 @@ export default async function RootLayout({
 
       <Analytics />
       <GoogleTagManager gtmId="GTM-T4LDV3ND" />
+      <Script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="https://js.hs-scripts.com/20410676.js"
+        strategy="afterInteractive"
+      />
     </html>
   );
 }
