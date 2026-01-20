@@ -13,6 +13,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { HubspotProvider } from "next-hubspot";
 import { GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 // If loading a variable font, you don't need to specify the font weight
 const fontClass = Poppins({
@@ -41,6 +42,8 @@ export default async function RootLayout({
         <link rel="icon" type="image/png" sizes="256x256" href={favicon256.src} />
         <meta name="google-site-verification" content="yNxeZNw0jlQy8ywG1nUXNCi1zgL61n9KqWv3kb4zmEE" />
       </head>
+
+      <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/20410676.js" />
 
       <AnchorScrollWithFixedHeaderBody
         fixedComponent={

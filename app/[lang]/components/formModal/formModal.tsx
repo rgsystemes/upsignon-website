@@ -27,16 +27,10 @@ export function FormModalButton(p: {
 
   return (
     <>
-      <button
-        onClick={openModal}
-        className={`${styles.modalDefaultButton} ${p.className}`}
-      >
+      <button onClick={openModal} className={`${styles.modalDefaultButton} ${p.className}`}>
         {p.buttonText}
       </button>
-      <ModalLinkOpener
-        modalLinkValue={p.modalLinkValue}
-        setIsOpen={setIsOpen}
-      />
+      <ModalLinkOpener modalLinkValue={p.modalLinkValue} setIsOpen={setIsOpen} />
       <Modal
         isOpen={isOpen}
         onRequestClose={closeModal}
@@ -45,11 +39,7 @@ export function FormModalButton(p: {
         shouldReturnFocusAfterClose={false}
         className={styles.modal}
       >
-        <Forms
-          lang={p.lang}
-          title={p.modalTitle}
-          isFreeTrialForm={p.isFreeTrialForm}
-        ></Forms>
+        <Forms lang={p.lang} title={p.modalTitle} isFreeTrialForm={p.isFreeTrialForm}></Forms>
       </Modal>
     </>
   );
@@ -63,10 +53,7 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
       <h1>{p.title}</h1>
       <div className={styles.activityForm}>
         <p>{t.contactUsForm.activity}</p>
-        <div
-          className={styles.choiceContainer}
-          onClick={() => setIsReseller(true)}
-        >
+        <div className={styles.choiceContainer} onClick={() => setIsReseller(true)}>
           <input
             type="radio"
             name="msp"
@@ -76,10 +63,7 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
           />
           <label htmlFor="msp">{t.contactUsForm.activityMSP}</label>
         </div>
-        <div
-          className={styles.choiceContainer}
-          onClick={() => setIsReseller(false)}
-        >
+        <div className={styles.choiceContainer} onClick={() => setIsReseller(false)}>
           <input
             type="radio"
             name="company"
@@ -102,9 +86,9 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
           <HubspotForm
             isVisible={!isReseller}
             id="trial-company"
-            portalId="145668054"
-            formId="9d1a1951-13da-4052-a657-2b9ad22c0e82"
-            region="eu1"
+            portalId="20410676"
+            formId="58672e13-9e16-4421-ac77-c76fa1ac3e57"
+            region="na1"
           />
         </div>
       ) : (
@@ -119,9 +103,9 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
           <HubspotForm
             isVisible={!isReseller}
             id="contact-company"
-            portalId="145668054"
-            formId="3fd5d5c6-2c01-4dc7-bace-d9f412f7bdbe"
-            region="eu1"
+            portalId="20410676"
+            formId="56b2dec4-d8a0-43df-9454-0ec6e9bae2b2"
+            region="na1"
           />
         </div>
       )}
@@ -129,13 +113,7 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
   );
 }
 
-const HubspotForm = (p: {
-  id: string;
-  portalId: string;
-  formId: string;
-  region: string;
-  isVisible: boolean;
-}) => {
+const HubspotForm = (p: { id: string; portalId: string; formId: string; region: string; isVisible: boolean }) => {
   const htmlId = `hubspot-form-${p.id}`;
   const { isFormCreated, isError, error } = useHubspotForm({
     portalId: p.portalId,
