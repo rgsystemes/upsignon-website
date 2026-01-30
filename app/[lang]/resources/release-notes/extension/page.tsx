@@ -33,6 +33,22 @@ export default async function ExtensionNotes({ params }: { params: Promise<{ lan
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.7.6 */}
+      <h2>
+        <LinkToAnchor id="1.7.6">1.7.6</LinkToAnchor>
+      </h2>
+      <em>Publiée le 30/01/2025</em>
+      <ul>
+        <li>
+          Corrige un problème conduisant à un loader infini dans le popup de l'extension lorsqu'au moins un onglet est
+          dormant et que tous les coffres-forts sont verrouillés.
+        </li>
+        <li>
+          Corrige un potentiel problème de "race condition" conduisant à un bug survenant de façon aléatoire sur la
+          connexion avec l'application.
+        </li>
+        <li>Améliore les logs</li>
+      </ul>
       {/* 1.7.0 */}
       <h2>
         <LinkToAnchor id="1.7.0">1.7.0</LinkToAnchor>
@@ -293,6 +309,22 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.7.6 */}
+      <h2>
+        <LinkToAnchor id="1.7.6">1.7.6</LinkToAnchor>
+      </h2>
+      <em>Published on 30/01/2025</em>
+      <ul>
+        <li>
+          Fixes an issue causing an infinite loader in the extension popup when at least one tab is sleeping and all
+          vaults are locked.
+        </li>
+        <li>
+          Fixes a potential race condition issue leading to a bug occurring randomly on the connection with the
+          application.
+        </li>
+        <li>Improves logs</li>
+      </ul>
       {/* 1.7.0 */}
       <h2>
         <LinkToAnchor id="1.7.0">1.7.0</LinkToAnchor>

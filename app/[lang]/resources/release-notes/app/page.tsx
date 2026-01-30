@@ -33,6 +33,16 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.15.1 */}
+      <h2>
+        <LinkToAnchor id="7.15.1">7.15.1</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le ?/02/2026</em>
+      </p>
+      <ul>
+        <li>Corrige plusieurs problèmes relatifs aux statuts des extensions</li>
+      </ul>
       {/* 7.15.0 */}
       <h2>
         <LinkToAnchor id="7.15.0">7.15.0</LinkToAnchor>
@@ -685,6 +695,16 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.15.1 */}
+      <h2>
+        <LinkToAnchor id="7.15.1">7.15.1</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on ?/02/2026</em>
+      </p>
+      <ul>
+        <li>Fixes various issues with browser extension statuses</li>
+      </ul>
       {/* 7.15.0 */}
       <h2>
         <LinkToAnchor id="7.15.0">7.15.0</LinkToAnchor>
