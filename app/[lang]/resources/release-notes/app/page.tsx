@@ -38,7 +38,7 @@ function FRAppNotes() {
         <LinkToAnchor id="7.15.1">7.15.1 (7.15.2 sur Windows)</LinkToAnchor>
       </h2>
       <p>
-        <em>Publiée le ?/02/2026</em>
+        <em>Publiée le 02/02/2026</em>
       </p>
       <ul>
         <li>Corrige plusieurs problèmes relatifs aux statuts des extensions</li>
@@ -700,7 +700,7 @@ function ENAppNotes() {
         <LinkToAnchor id="7.15.1">7.15.1 (7.15.2 on Windows)</LinkToAnchor>
       </h2>
       <p>
-        <em>Published on ?/02/2026</em>
+        <em>Published on 02/02/2026</em>
       </p>
       <ul>
         <li>Fixes various issues with browser extension statuses</li>
