@@ -18,6 +18,7 @@ import illu14 from "../../../../public/articles/14/illu.jpg";
 
 import { getDictionary } from "../../../../translations/translations";
 import { Metadata } from "next";
+import { localizedLink } from "../../components/localizedLink/LocalizedLink";
 import Link from "next/link";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -154,7 +155,7 @@ export default async function ArticlesPage({ params }: { params: Promise<{ lang:
 function Article(p: { image: StaticImageData; title: string; summary?: string; lang: string; link: string }) {
   const t = getDictionary(p.lang);
   return (
-    <Link className={styles.articleLink} href={p.link}>
+    <Link href={localizedLink(p.lang, p.link)} className={styles.articleLink}>
       <div className={styles.miniature}>
         <Image src={p.image} alt="" unoptimized />
       </div>

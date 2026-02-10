@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../../page.module.css";
+import { localizedLink } from "../../../components/localizedLink/LocalizedLink";
 import Link from "next/link";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -26,7 +27,7 @@ export default async function ProtectedClipboardBehaviour({ params }: { params: 
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
+        <Link href={localizedLink(lang, "/resources/tech-articles")}>{t.resources.technicalExplanations}</Link>
       </div>
       <article className={styles.article}>
         <h1>{t.techResources.protectedClipboardBehaviour.title}</h1>
@@ -45,7 +46,7 @@ export default async function ProtectedClipboardBehaviour({ params }: { params: 
       </article>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
+        <Link href={localizedLink(lang, "/resources/tech-articles")}>{t.resources.technicalExplanations}</Link>
       </div>
     </div>
   );

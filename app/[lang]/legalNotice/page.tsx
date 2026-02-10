@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getDictionary } from "../../../translations/translations";
 import styles from "./page.module.css";
+import { localizedLink } from "../components/localizedLink/LocalizedLink";
 import Link from "next/link";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -143,7 +144,9 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
           </span>
           <br />
           <span className={styles.detailContainer}>
-            <Link href={t.legalNotice.websiteCreation.url}>{t.legalNotice.websiteCreation.url}</Link>
+            <Link href={localizedLink(lang, t.legalNotice.websiteCreation.url)}>
+              {t.legalNotice.websiteCreation.url}
+            </Link>
           </span>
         </p>
       </section>

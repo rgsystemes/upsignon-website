@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../../page.module.css";
+import { localizedLink } from "../../../components/localizedLink/LocalizedLink";
 import Link from "next/link";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -37,12 +38,12 @@ export default async function BrowserExtensionSecurity({ params }: { params: Pro
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
+        <Link href={localizedLink(lang, "/resources/tech-articles")}>{t.resources.technicalExplanations}</Link>
       </div>
       {lang === "fr" ? <FRArticle /> : <ENArticle />}
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
+        <Link href={localizedLink(lang, "/resources/tech-articles")}>{t.resources.technicalExplanations}</Link>
       </div>
     </div>
   );
@@ -58,7 +59,8 @@ function FRArticle() {
       <h2>Compatibilité</h2>
       <p>
         L'extension de navigateur est compatible avec la plupart des navigateurs couramments utilisés sur MacOS, Windows
-        et Linux (voir <Link href="https://upsignon.eu/downloads">la page de téléchargements</Link> pour plus de
+        et Linux (voir{" "}
+        <Link href={localizedLink("fr", "https://upsignon.eu/downloads")}>la page de téléchargements</Link> pour plus de
         détails).
       </p>
       <p>
@@ -160,7 +162,7 @@ function FRArticle() {
       </ul>
       <p>
         Nous conseillons au développeurs de consulter{" "}
-        <Link href="https://upsignon.eu/resources/articles/9">
+        <Link href={localizedLink("fr", "https://upsignon.eu/resources/articles/9")}>
           nos recommandations sur les formulaires de connexion
         </Link>
         .
@@ -183,7 +185,7 @@ function ENArticle() {
       <h2>Compatibility</h2>
       <p>
         The browser extension is compatible with most commonly used browsers on MacOS, Windows and Linux (see{" "}
-        <Link href="https://upsignon.eu/downloads">the downloads page</Link> for more details).
+        <Link href={localizedLink("en", "https://upsignon.eu/downloads")}>the downloads page</Link> for more details).
       </p>
       <p>
         The browser extension is not compatible with iOS and Android. On these platforms, UpSignOn offers the autofill
@@ -273,7 +275,10 @@ function ENArticle() {
       </ul>
       <p>
         We advise developers to consult{" "}
-        <Link href="https://upsignon.eu/resources/articles/9">our recommendations on login forms</Link>.{" "}
+        <Link href={localizedLink("en", "https://upsignon.eu/resources/articles/9")}>
+          our recommendations on login forms
+        </Link>
+        .{" "}
       </p>
       <p>
         When neither autofill nor forcefill works, the user still has the option to copy-paste the login and password

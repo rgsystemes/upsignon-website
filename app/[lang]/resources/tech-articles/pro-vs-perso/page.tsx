@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../../page.module.css";
 import Link from "next/link";
+import { localizedLink } from "../../../components/localizedLink/LocalizedLink";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -38,12 +39,12 @@ export default async function ProVsPerso({ params }: { params: Promise<{ lang: s
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
+        <Link href={localizedLink(lang, "/resources/tech-articles")}>{t.resources.technicalExplanations}</Link>
       </div>
       {lang === "fr" ? <FRArticle /> : <ENArticle />}
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/tech-articles">{t.resources.technicalExplanations}</Link>
+        <Link href={localizedLink(lang, "/resources/tech-articles")}>{t.resources.technicalExplanations}</Link>
       </div>
     </div>
   );

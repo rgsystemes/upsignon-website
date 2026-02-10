@@ -8,6 +8,7 @@ import bannerImageEN from "../../../../../public/articles/12/banner_email_upsign
 import newDesign from "../../../../../public/articles/12/Image-Page-Accueil-USO-Nouvelle-UI.jpg";
 import newIconFR from "../../../../../public/articles/12/Image-Avant-Apres-Icone-USO-Nouvelle-UI-FR.jpg";
 import newIconEN from "../../../../../public/articles/12/Image-Avant-Apres-Icone-USO-Nouvelle-UI-EN.jpg";
+import { localizedLink } from "../../../components/localizedLink/LocalizedLink";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -32,12 +33,14 @@ export default async function Article1({ params }: { params: Promise<{ lang: str
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/articles">{t.resources.articles}</Link>
+        <Link href={localizedLink(lang, "/resources/articles")}>{t.resources.articles}</Link>
       </div>
       <article className={styles.article}>{lang === "fr" ? <FRArticle /> : <ENArticle />}</article>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/articles">{t.resources.articles}</Link>
+        <Link lang={lang} href={localizedLink(lang, "/resources/articles")}>
+          {t.resources.articles}
+        </Link>
       </div>
     </div>
   );
@@ -152,8 +155,8 @@ function FRArticle() {
 
       <p>
         Souhaitez-vous découvrir la solution en action ?{" "}
-        <Link href="/pricing?modal=free-trial">Essayez gratuitement UpSignOn</Link> et simplifiez la sécurité des accès
-        de votre entreprise dès aujourd’hui.
+        <Link href={localizedLink("fr", "/pricing?modal=free-trial")}>Essayez gratuitement UpSignOn</Link> et simplifiez
+        la sécurité des accès de votre entreprise dès aujourd’hui.
       </p>
     </>
   );
@@ -253,8 +256,8 @@ function ENArticle() {
       </p>
       <p>
         Would you like to see the solution in action?{" "}
-        <Link href="/pricing/?modal=free-trial">Try UpSignOn for free</Link> and simplify your company's access security
-        today.
+        <Link href={localizedLink("en", "/pricing/?modal=free-trial")}>Try UpSignOn for free</Link> and simplify your
+        company's access security today.
       </p>
     </>
   );

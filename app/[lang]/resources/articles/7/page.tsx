@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../article.module.css";
+import { localizedLink } from "../../../components/localizedLink/LocalizedLink";
 import Link from "next/link";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -25,7 +26,7 @@ export default async function Article7({ params }: { params: Promise<{ lang: str
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/articles">{t.resources.articles}</Link>
+        <Link href={localizedLink(lang, "/resources/articles")}>{t.resources.articles}</Link>
       </div>
       <article className={styles.article}>
         <h1>{t.articles[7].title}</h1>
@@ -36,7 +37,7 @@ export default async function Article7({ params }: { params: Promise<{ lang: str
       </article>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/articles">{t.resources.articles}</Link>
+        <Link href={localizedLink(lang, "/resources/articles")}>{t.resources.articles}</Link>
       </div>
     </div>
   );

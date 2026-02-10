@@ -5,6 +5,7 @@ import Link from "next/link";
 import illuFR from "../../../../../public/articles/13/illuFR.png";
 import illuEN from "../../../../../public/articles/13/illuEN.png";
 import Image from "next/image";
+import { localizedLink } from "../../../components/localizedLink/LocalizedLink";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -29,12 +30,12 @@ export default async function Article1({ params }: { params: Promise<{ lang: str
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/articles">{t.resources.articles}</Link>
+        <Link href={localizedLink(lang, "/resources/articles")}>{t.resources.articles}</Link>
       </div>
       <article className={styles.article}>{lang === "fr" ? <FRArticle /> : <ENArticle />}</article>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/articles">{t.resources.articles}</Link>
+        <Link href={localizedLink(lang, "/resources/articles")}>{t.resources.articles}</Link>
       </div>
     </div>
   );

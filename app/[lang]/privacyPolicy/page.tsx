@@ -3,11 +3,7 @@ import { getDictionary } from "../../../translations/translations";
 import styles from "./page.module.css";
 import Link from "next/link";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   const t = getDictionary(lang);
   return {
@@ -22,11 +18,7 @@ export async function generateMetadata({
     },
   };
 }
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const t = getDictionary(lang);
   return (
@@ -61,18 +53,10 @@ export default async function Page({
             <table className={styles.privacyPolicyTable}>
               <thead>
                 <tr>
-                  <th scope="col">
-                    {t.privacyPolicy.section2.table.headers.purpose}
-                  </th>
-                  <th scope="col">
-                    {t.privacyPolicy.section2.table.headers.data}
-                  </th>
-                  <th scope="col">
-                    {t.privacyPolicy.section2.table.headers.legalBasis}
-                  </th>
-                  <th scope="col">
-                    {t.privacyPolicy.section2.table.headers.retention}
-                  </th>
+                  <th scope="col">{t.privacyPolicy.section2.table.headers.purpose}</th>
+                  <th scope="col">{t.privacyPolicy.section2.table.headers.data}</th>
+                  <th scope="col">{t.privacyPolicy.section2.table.headers.legalBasis}</th>
+                  <th scope="col">{t.privacyPolicy.section2.table.headers.retention}</th>
                 </tr>
               </thead>
               <tbody>
@@ -152,33 +136,23 @@ export default async function Page({
               {t.privacyPolicy.section6.rights.access.description}
             </li>
             <li>
-              <strong>
-                {t.privacyPolicy.section6.rights.limitation.title}
-              </strong>{" "}
+              <strong>{t.privacyPolicy.section6.rights.limitation.title}</strong>{" "}
               {t.privacyPolicy.section6.rights.limitation.description}
             </li>
             <li>
-              <strong>
-                {t.privacyPolicy.section6.rights.rectification.title}
-              </strong>{" "}
+              <strong>{t.privacyPolicy.section6.rights.rectification.title}</strong>{" "}
               {t.privacyPolicy.section6.rights.rectification.description}
             </li>
             <li>
-              <strong>
-                {t.privacyPolicy.section6.rights.opposition.title}
-              </strong>{" "}
+              <strong>{t.privacyPolicy.section6.rights.opposition.title}</strong>{" "}
               {t.privacyPolicy.section6.rights.opposition.description}
             </li>
             <li>
-              <strong>
-                {t.privacyPolicy.section6.rights.portability.title}
-              </strong>{" "}
+              <strong>{t.privacyPolicy.section6.rights.portability.title}</strong>{" "}
               {t.privacyPolicy.section6.rights.portability.description}
             </li>
             <li>
-              <strong>
-                {t.privacyPolicy.section6.rights.afterDeath.title}
-              </strong>{" "}
+              <strong>{t.privacyPolicy.section6.rights.afterDeath.title}</strong>{" "}
               {t.privacyPolicy.section6.rights.afterDeath.description}
             </li>
             <li>
@@ -205,11 +179,7 @@ export default async function Page({
           <p>{t.privacyPolicy.section7.paragraph3}</p>
           <p>
             {t.privacyPolicy.section7.paragraph4}{" "}
-            <Link
-              href="https://cnil.fr"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="https://cnil.fr" target="_blank" rel="noopener noreferrer">
               https://cnil.fr
             </Link>
           </p>

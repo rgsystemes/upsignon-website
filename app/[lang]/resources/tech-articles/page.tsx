@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "../page.module.css";
 import { Metadata } from "next";
+import { localizedLink } from "../../components/localizedLink/LocalizedLink";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -26,13 +27,19 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
   return (
     <div className={styles.article}>
       <h1>{t.resources.technicalExplanations}</h1>
-      <Link className={styles.techArticle} href="/resources/tech-articles/pro-vs-perso">
+      <Link href={localizedLink(lang, "/resources/tech-articles/pro-vs-perso")} className={styles.techArticle}>
         {t.resources.generalDesignPrinciples}
       </Link>
-      <Link className={styles.techArticle} href="/resources/tech-articles/browser-extension-security">
+      <Link
+        href={localizedLink(lang, "/resources/tech-articles/browser-extension-security")}
+        className={styles.techArticle}
+      >
         {t.resources.browserExtensionSecurity}
       </Link>
-      <Link className={styles.techArticle} href="/resources/tech-articles/protected-clipboard-behaviour">
+      <Link
+        href={localizedLink(lang, "/resources/tech-articles/protected-clipboard-behaviour")}
+        className={styles.techArticle}
+      >
         {t.techResources.protectedClipboardBehaviour.title}
       </Link>
       <Link

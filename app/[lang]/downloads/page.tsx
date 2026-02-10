@@ -13,6 +13,7 @@ import OperaImg from "../../../public/icons/Opera.svg";
 import Image from "next/image";
 import { Metadata } from "next";
 import Link from "next/link";
+import { localizedLink } from "../components/localizedLink/LocalizedLink";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -82,7 +83,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
                 >
                   Microsoft Store
                 </Link>
-                <Link href="/downloads/windows">{t.downloads.windowsOtherOptions}</Link>
+                <Link href={localizedLink(lang, "/downloads/windows")}>{t.downloads.windowsOtherOptions}</Link>
               </td>
             </tr>
             <tr>
@@ -94,7 +95,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
                 <Link className={styles.buttonLink} href="https://snapcraft.io/upsignon" download>
                   Snap
                 </Link>
-                <Link href="/downloads/linux">{t.downloads.linuxOtherOptions}</Link>
+                <Link href={localizedLink(lang, "/downloads/linux")}>{t.downloads.linuxOtherOptions}</Link>
               </td>
             </tr>
           </tbody>

@@ -5,6 +5,7 @@ import styles from "../article.module.css";
 import EmployeesPasswordsImg from "../../../../../public/articles/employeesPasswords.jpg";
 import EmployeesPasswordsPostitsImg from "../../../../../public/articles/employeesPasswordsPostits.jpg";
 import { Metadata } from "next";
+import { localizedLink } from "../../../components/localizedLink/LocalizedLink";
 import Link from "next/link";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -29,7 +30,7 @@ export default async function Article10({ params }: { params: Promise<{ lang: st
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/articles">{t.resources.articles}</Link>
+        <Link href={localizedLink(lang, "/resources/articles")}>{t.resources.articles}</Link>
       </div>
       <article className={styles.article}>
         <h1>{t.articles[10].title}</h1>
@@ -40,7 +41,7 @@ export default async function Article10({ params }: { params: Promise<{ lang: st
       </article>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/articles">{t.resources.articles}</Link>
+        <Link href={localizedLink(lang, "/resources/articles")}>{t.resources.articles}</Link>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { CodeBlock } from "../../components/codeBlock/codeBlock";
 import { LinkToAnchor } from "../../components/linkToAnchor/linkToAnchor";
 import Link from "next/link";
 import { PlatformWarningIcon } from "../../features/availabilityIcons";
+import { localizedLink } from "../../components/localizedLink/LocalizedLink";
 
 const gpoConfigContent = `{"proConfigUrl":"https://<xxx.xx/xx>"}`;
 const preConfigDeployScript = `## RUN AS ADMIN !
@@ -276,7 +277,7 @@ function FRWindowsAllDownloadPage() {
     <section className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/downloads">Téléchargements</Link>
+        <Link href={localizedLink("fr", "/downloads")}>Téléchargements</Link>
       </div>
       <h1>Téléchargements, déploiement et pré-configuration Windows</h1>
       <h2>
@@ -627,7 +628,7 @@ function ENWindowsAllDownloadPage() {
     <section className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/downloads">Downloads</Link>
+        <Link href={localizedLink("en", "/downloads")}>Downloads</Link>
       </div>
       <h1>Windows downloads, deployment, and pre-configuration</h1>
       <h2>

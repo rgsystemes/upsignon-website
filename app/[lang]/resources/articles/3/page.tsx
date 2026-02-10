@@ -15,6 +15,7 @@ import checkTickSVG from "../../../../../public/articles/tick.svg";
 import forUsersImg from "../../../../../public/articles/for-users.png";
 import forAdminImg from "../../../../../public/articles/responsable.png";
 import { Metadata } from "next";
+import { localizedLink } from "../../../components/localizedLink/LocalizedLink";
 import Link from "next/link";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -39,13 +40,13 @@ export default async function Article3({ params }: { params: Promise<{ lang: str
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/articles">{t.resources.articles}</Link>
+        <Link href={localizedLink(lang, "/resources/articles")}>{t.resources.articles}</Link>
       </div>
       <article className={styles.article}>{lang === "fr" ? <FRArticle /> : <ENArticle />}</article>
       <div style={{ backgroundColor: "white", padding: 10 }}>
         <div className={styles.backArrow}>
           <span>&lt;  </span>
-          <Link href="/resources/articles">{t.resources.articles}</Link>
+          <Link href={localizedLink(lang, "/resources/articles")}>{t.resources.articles}</Link>
         </div>
       </div>
     </div>

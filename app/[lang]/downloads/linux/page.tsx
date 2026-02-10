@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { CodeBlock } from "../../components/codeBlock/codeBlock";
 import { LinkToAnchor } from "../../components/linkToAnchor/linkToAnchor";
 import Link from "next/link";
+import { localizedLink } from "../../components/localizedLink/LocalizedLink";
 
 const anchors = {
   installInstructions: "install",
@@ -56,7 +57,7 @@ function FRLinuxOtherDownloads() {
     <section className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/downloads">Téléchargements</Link>
+        <Link href={localizedLink("fr", "/downloads")}>Téléchargements</Link>
       </div>
       <h1>Téléchargements Linux et informations</h1>
       <h2>Installation via snapcraft</h2>
@@ -154,7 +155,7 @@ function ENLinuxOtherDownloads() {
     <section className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/downloads">Downloads</Link>
+        <Link href={localizedLink("en", "/downloads")}>Downloads</Link>
       </div>
       <h1>Linux downloads and information</h1>
       <h2>Installation via snapcraft</h2>

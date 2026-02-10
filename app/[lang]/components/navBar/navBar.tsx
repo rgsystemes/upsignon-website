@@ -9,6 +9,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { localizedLink } from "../localizedLink/LocalizedLink";
 
 export function NavBar(p: { lang: string }) {
   const [unfolded, setUnfolded] = useState(false);
@@ -16,7 +17,7 @@ export function NavBar(p: { lang: string }) {
   const pathName = usePathname();
   return (
     <nav className={styles.nav}>
-      <Link href="/" className={styles.logoAndNameContainer}>
+      <Link href={localizedLink(p.lang, "/")} className={styles.logoAndNameContainer}>
         <Image src={logoImg} alt="UpSignOn logo" />
       </Link>
       <div className={styles.spacer} />
@@ -45,19 +46,19 @@ export function NavBar(p: { lang: string }) {
       </div>
       <div className={`${styles.menuItems} ${unfolded ? styles.unfolded : styles.folded}`}>
         <Link
-          href="/features"
+          href={localizedLink(p.lang, "/features")}
           className={`${styles.menuItem} ${pathName.includes("/features") ? styles.currentMenu : ""}`}
         >
           {t.menu.features}
         </Link>
         <Link
-          href="/pricing"
+          href={localizedLink(p.lang, "/pricing")}
           className={`${styles.menuItem} ${pathName.includes("/pricing") ? styles.currentMenu : ""}`}
         >
           {t.menu.pricing}
         </Link>
         <Link
-          href="/downloads"
+          href={localizedLink(p.lang, "/downloads")}
           className={`${styles.menuItem} ${pathName.includes("/downloads") ? styles.currentMenu : ""}`}
         >
           {t.menu.downloads}
@@ -110,7 +111,7 @@ function ResourceMenu(p: { lang: string; isCurrentMenu: boolean }) {
       </div>
       <div className={folded ? null : styles.foldspacer}></div>
       <div className={folded ? styles.hidden : styles.subMenu} ref={submenuRef}>
-        <Link className={styles.subMenuItem} href="/resources/articles">
+        <Link href={localizedLink(p.lang, "/resources/articles")} className={styles.subMenuItem}>
           {t.resources.articles}
         </Link>
         <Link
@@ -120,10 +121,10 @@ function ResourceMenu(p: { lang: string; isCurrentMenu: boolean }) {
         >
           {t.resources.tutorials}
         </Link>
-        <Link className={styles.subMenuItem} href="/resources/tech-articles">
+        <Link href={localizedLink(p.lang, "/resources/tech-articles")} className={styles.subMenuItem}>
           {t.resources.technicalExplanations}
         </Link>
-        <Link className={styles.subMenuItem} href="/resources/release-notes/app">
+        <Link href={localizedLink(p.lang, "/resources/release-notes/app")} className={styles.subMenuItem}>
           {t.resources.releaseNotes}
         </Link>
       </div>

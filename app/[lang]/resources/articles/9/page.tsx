@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getDictionary } from "../../../../../translations/translations";
 import styles from "../article.module.css";
 import { Metadata } from "next";
+import { localizedLink } from "../../../components/localizedLink/LocalizedLink";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -25,7 +26,7 @@ export default async function Article9({ params }: { params: Promise<{ lang: str
     <div className={styles.content}>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/articles">{t.resources.articles}</Link>
+        <Link href={localizedLink(lang, "/resources/articles")}>{t.resources.articles}</Link>
       </div>
       <article className={styles.article}>
         <h1>{t.articles[9].title}</h1>
@@ -36,7 +37,7 @@ export default async function Article9({ params }: { params: Promise<{ lang: str
       </article>
       <div className={styles.backArrow}>
         <span>&lt;  </span>
-        <Link href="/resources/articles">{t.resources.articles}</Link>
+        <Link href={localizedLink(lang, "/resources/articles")}>{t.resources.articles}</Link>
       </div>
     </div>
   );
@@ -89,8 +90,8 @@ function FRArticle() {
       </p>
       <p>
         Comme nous l’expliquons dans notre article{" "}
-        <Link href="/resources/articles/1">“Qu’est-ce qu’un mot de passe fort ?“</Link>, la force d’un mot de passe
-        dépend avant tout de sa longueur.
+        <Link href={localizedLink("fr", "/resources/articles/1")}>"Qu'est-ce qu'un mot de passe fort ?"</Link>, la force
+        d’un mot de passe dépend avant tout de sa longueur.
       </p>
       <p>
         <strong>
@@ -278,8 +279,9 @@ function ENArticle() {
         become ’@’ and ’s’ will become ’$’.
       </p>
       <p>
-        As we explain in our article <Link href="/resources/articles/1">“What is a strong password?“</Link>, the
-        strength of a password depends primarily on its length.
+        As we explain in our article{" "}
+        <Link href={localizedLink("en", "/resources/articles/1")}>"What is a strong password?"</Link>, the strength of a
+        password depends primarily on its length.
       </p>
       <p>
         <strong>

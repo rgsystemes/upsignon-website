@@ -4,12 +4,9 @@ import { getDictionary } from "../../../translations/translations";
 import Link from "next/link";
 import { defaultLicencePrice } from "./priceHelper";
 import { FormModalButton } from "../components/formModal/formModal";
+import { localizedLink } from "../components/localizedLink/LocalizedLink";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   const t = getDictionary(lang);
   return {
@@ -24,11 +21,7 @@ export async function generateMetadata({
     },
   };
 }
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const t = getDictionary(lang);
   return (
@@ -39,12 +32,8 @@ export default async function Page({
           <div className={styles.proPricing}>
             <h3 className={styles.pricingTitlePro}>{t.pricing.proPricing.t}</h3>
             <div className={styles.proPrice}>{defaultLicencePrice}€</div>
-            <div className={styles.proPriceUnit}>
-              {t.pricing.proPricing.licencePriceUnit}
-            </div>
-            <div className={styles.selfHostingTitle}>
-              {t.pricing.proPricing.onPremOption}
-            </div>
+            <div className={styles.proPriceUnit}>{t.pricing.proPricing.licencePriceUnit}</div>
+            <div className={styles.selfHostingTitle}>{t.pricing.proPricing.onPremOption}</div>
             <FormModalButton
               lang={lang}
               className={styles.proPricingActionButton}
@@ -54,23 +43,15 @@ export default async function Page({
               isFreeTrialForm={true}
             />
 
-            <div className={styles.pricingDetails}>
-              {t.pricing.proPricing.saasDetails}
-            </div>
+            <div className={styles.pricingDetails}>{t.pricing.proPricing.saasDetails}</div>
           </div>
           <div className={styles.persoPricing}>
-            <h3 className={styles.pricingTitlePerso}>
-              {t.pricing.persoPricing.t}
-            </h3>
-            <div className={styles.persoPrice}>
-              {t.pricing.persoPricing.free}
-            </div>
-            <Link href="/downloads" className={styles.downloadAction}>
+            <h3 className={styles.pricingTitlePerso}>{t.pricing.persoPricing.t}</h3>
+            <div className={styles.persoPrice}>{t.pricing.persoPricing.free}</div>
+            <Link href={localizedLink(lang, "/downloads")} className={styles.downloadAction}>
               {t.pricing.persoPricing.downloadAction}
             </Link>
-            <div className={styles.pricingDetails}>
-              {t.pricing.persoPricing.details} 🙏🙏
-            </div>
+            <div className={styles.pricingDetails}>{t.pricing.persoPricing.details} 🙏🙏</div>
           </div>
         </div>
         <h1>{t.pricing.distribTitle}</h1>
