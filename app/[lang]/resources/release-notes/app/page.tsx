@@ -33,6 +33,23 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.15.3 */}
+      <h2>
+        <LinkToAnchor id="7.15.3">7.15.3</LinkToAnchor>
+      </h2>
+      <p>
+        <em>En attente de publication</em>
+      </p>
+      <ul>
+        <li>
+          Rend transparent le changement de port de la websocket de l'extension de navigateur au redémarrage de
+          l'application.
+        </li>
+        <li>
+          Corrige un bug déconnectant l'extension de navigateur en mode sécurisé suite à la synchronisation d'un
+          coffre-fort.
+        </li>
+      </ul>
       {/* 7.15.1 */}
       <h2>
         <LinkToAnchor id="7.15.1">7.15.1 (7.15.2 sur Windows)</LinkToAnchor>
@@ -695,6 +712,20 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.15.3 */}
+      <h2>
+        <LinkToAnchor id="7.15.3">7.15.3</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Awaiting publication</em>
+      </p>
+      <ul>
+        <li>Makes transparent the change of browser extension websocket port at app start.</li>
+        <li>
+          Fixes a bug leading to disconnecting the browser extension with secure mode activated after a vault
+          synchronisation.
+        </li>
+      </ul>
       {/* 7.15.1 */}
       <h2>
         <LinkToAnchor id="7.15.1">7.15.1 (7.15.2 on Windows)</LinkToAnchor>

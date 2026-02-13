@@ -33,6 +33,15 @@ export default async function ExtensionNotes({ params }: { params: Promise<{ lan
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.7.7 */}
+      <h2>
+        <LinkToAnchor id="1.7.7">1.7.7</LinkToAnchor>
+      </h2>
+      <em>Publiée le 12/02/2025</em>
+      <ul>
+        <li>Améliore la performance à l'ouverture de la websocket.</li>
+        <li>Corrige un log</li>
+      </ul>
       {/* 1.7.6 */}
       <h2>
         <LinkToAnchor id="1.7.6">1.7.6</LinkToAnchor>
@@ -309,6 +318,15 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.7.7 */}
+      <h2>
+        <LinkToAnchor id="1.7.7">1.7.7</LinkToAnchor>
+      </h2>
+      <em>Published on 12/02/2025</em>
+      <ul>
+        <li>Improves the performance at the websocket opening.</li>
+        <li>Fixes a log</li>
+      </ul>
       {/* 1.7.6 */}
       <h2>
         <LinkToAnchor id="1.7.6">1.7.6</LinkToAnchor>
