@@ -38,7 +38,7 @@ function FRAppNotes() {
         <LinkToAnchor id="7.15.3">7.15.3</LinkToAnchor>
       </h2>
       <p>
-        <em>En attente de publication</em>
+        <em>Publiée le 16/02/2026</em>
       </p>
       <ul>
         <li>
@@ -717,7 +717,7 @@ function ENAppNotes() {
         <LinkToAnchor id="7.15.3">7.15.3</LinkToAnchor>
       </h2>
       <p>
-        <em>Awaiting publication</em>
+        <em>Published on 16/02/2026</em>
       </p>
       <ul>
         <li>Makes transparent the change of browser extension websocket port at app start.</li>
