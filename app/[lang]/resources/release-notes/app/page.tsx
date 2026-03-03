@@ -33,6 +33,22 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.15.7 */}
+      <h2>
+        <LinkToAnchor id="7.15.7">7.15.7</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 04/03/2026</em>
+      </p>
+      <ul>
+        <li>
+          Gestion des doublons : sont désormais considérés comme doublons uniquement les comptes strictement identiques.
+          La création automatique ou l'import ne créent toujours pas de doublons mais la création manuelle permet
+          maintenant d'en créer.
+        </li>
+        <li>Correction d'un bug lié à la résolution DNS de localhost sur certaines configurations windows.</li>
+        <li>Correction d'un problème d'affichage des polices sur windows server 2016.</li>
+      </ul>
       {/* 7.15.3 */}
       <h2>
         <LinkToAnchor id="7.15.3">7.15.3</LinkToAnchor>
@@ -712,6 +728,21 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.15.7 */}
+      <h2>
+        <LinkToAnchor id="7.15.7">7.15.7</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 04/03/2026</em>
+      </p>
+      <ul>
+        <li>
+          Duplicates management: only accounts that are strictly identical are now considered duplicates. Automatic
+          creation or import still does not create duplicates, but manual creation now allows duplicates to be created.
+        </li>
+        <li>Fixed a bug related to localhost DNS resolution on certain Windows configurations.</li>
+        <li>Fixed an issue with font display on Windows Server 2016.</li>
+      </ul>
       {/* 7.15.3 */}
       <h2>
         <LinkToAnchor id="7.15.3">7.15.3</LinkToAnchor>
