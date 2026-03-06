@@ -203,7 +203,7 @@ const translations = {
       sectionTitle: "Ils nous font confiance",
     },
     customerQuotes: {
-      title: "Témoignage client",
+      title: "Témoignages clients",
       quotes: {
         metavonics: {
           name: "Steve Bazin",
@@ -211,6 +211,13 @@ const translations = {
             "En seulement 30 minutes, j’ai pu déployer UpSignOn et former 3 de mes collaborateurs. Ils ont immédiatement apprécié la simplicité et l’ergonomie de la solution.",
           jobTitle: "IT Manager",
           companyName: "Metavonics",
+        },
+        grandFrais: {
+          name: "Fabien Gougoux",
+          quote:
+            "C’est un outil sur lequel on a confiance pour protéger les systèmes essentiels au bon fonctionnement de l’enseigne.",
+          jobTitle: "Responsable Infrastructure et Sécurité",
+          companyName: "Grand Frais",
         },
       },
     },

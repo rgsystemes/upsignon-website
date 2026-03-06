@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./customerCarousel.module.css";
 
+import grandFraisImg from "../../../../public/customerLogos/Grand_Frais_logo.png";
 import adicoImg from "../../../../public/customerLogos/adico.jpg";
 import caletreImg from "../../../../public/customerLogos/caletre.svg";
 import cd11Img from "../../../../public/customerLogos/cd11.png";
@@ -24,7 +25,14 @@ export default function CustomerCarousel() {
   const allChildren = (
     <>
       <div className={styles.customer}>
-        <Image src={regionOccitanieImg} alt="La Région Occitanie" height={150} />
+        <Image src={grandFraisImg} alt="Grand Frais" height={150} />
+      </div>
+      <div className={styles.customer}>
+        <Image
+          src={regionOccitanieImg}
+          alt="La Région Occitanie"
+          height={150}
+        />
       </div>
       <div className={styles.customer}>
         <Image src={chambersignImg} alt="Chambersign" width={300} />
@@ -42,10 +50,19 @@ export default function CustomerCarousel() {
         <Image src={adicoImg} alt="ADICO" height={120} />
       </div>
       <div className={styles.customer}>
-        <Image src={caletreImg} alt="Caletré" style={{ backgroundColor: "#261747", padding: 30 }} height={150} />
+        <Image
+          src={caletreImg}
+          alt="Caletré"
+          style={{ backgroundColor: "#261747", padding: 30 }}
+          height={150}
+        />
       </div>
       <div className={styles.customer}>
-        <Image src={hauteGaronneNumeriqueImg} alt="Haute Garonne Numérique" height={150} />
+        <Image
+          src={hauteGaronneNumeriqueImg}
+          alt="Haute Garonne Numérique"
+          height={150}
+        />
       </div>
       <div className={styles.customer}>
         <Image src={esigelecImg} alt="Esigelec" height={150} />
@@ -54,7 +71,11 @@ export default function CustomerCarousel() {
         <Image src={ecollectivitesImg} alt="E-Collectivités" width={300} />
       </div>
       <div className={styles.customer}>
-        <Image src={cd11Img} alt="Conseil Départemental de l'Aude" height={150} />
+        <Image
+          src={cd11Img}
+          alt="Conseil Départemental de l'Aude"
+          height={150}
+        />
       </div>
       <div className={styles.customer}>
         <Image src={orleansMetropoleImg} alt="Orléans-Métropole" height={150} />
@@ -68,7 +89,10 @@ export default function CustomerCarousel() {
       <div className={styles.customer}>
         <Image src={wapliImg} alt="WAPLI" height={150} />
       </div>
-      <div className={styles.customer} style={{ padding: 30, backgroundColor: "rgba(5, 31, 56)" }}>
+      <div
+        className={styles.customer}
+        style={{ padding: 30, backgroundColor: "rgba(5, 31, 56)" }}
+      >
         <Image src={urbasolarImg} alt="Urbasolar" width={300} />
       </div>
       <div className={styles.customer}>
