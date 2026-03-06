@@ -826,6 +826,12 @@ const translations: typeof fr = {
       title: "Groupe Deux Mains Secures Its Access with UpSignOn",
       summary: "Groupe Deux Mains centralizes and secures over 300 supplier accounts with UpSignOn.",
     },
+    grandFrais: {
+      metaDescription:
+        "Learn how Grand Frais protects more than 400 critical IT credentials with UpSignOn through centralized password management, device control and stronger access security.",
+      title: "Grand Frais Case Study – Securing IT Access Management with UpSignOn",
+      summary: "Grand Frais centralizes and secures over 400 critical IT credentials with UpSignOn.",
+    },
   },
   privacyPolicy: {
     metaDescription: "UpSignOn by Septeo's privacy policy.",

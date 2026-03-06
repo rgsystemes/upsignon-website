@@ -15,13 +15,18 @@ import passwordManagerImg from "../../../../public/articles/passwordManager.png"
 import newDesign from "../../../../public/articles/12/Image-Page-Accueil-USO-Nouvelle-UI.jpg";
 import illu13 from "../../../../public/articles/13/image.png";
 import illu14 from "../../../../public/articles/14/illu.jpg";
+import illuGrandFrais from "../../../../public/articles/grandFrais/bannerblog_uso_grandfrais.png";
 
 import { getDictionary } from "../../../../translations/translations";
 import { Metadata } from "next";
 import { localizedLink } from "../../components/localizedLink/LocalizedLink";
 import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await params;
   const t = getDictionary(lang);
   return {
@@ -37,15 +42,18 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
-export default async function ArticlesPage({ params }: { params: Promise<{ lang: string }> }) {
+export default async function ArticlesPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
   const { lang } = await params;
   const t = getDictionary(lang);
   return (
     <div className={styles.contentBackground}>
       <section className={styles.content}>
         <h1>{t.resources.articles}</h1>
-        <div className={styles.gridList2}>
-          <div />
+        <div className={styles.gridList4}>
           <Article
             link="/resources/articles/13"
             lang={lang}
@@ -53,7 +61,13 @@ export default async function ArticlesPage({ params }: { params: Promise<{ lang:
             title={t.articles[13].title}
             summary={t.articles[13].summary}
           />
-          <div />
+          <Article
+            link="/resources/articles/grand-frais"
+            lang={lang}
+            image={illuGrandFrais}
+            title={t.articles.grandFrais.title}
+            summary={t.articles.grandFrais.summary}
+          />
         </div>
         <div className={styles.gridList}>
           <Article
@@ -152,7 +166,13 @@ export default async function ArticlesPage({ params }: { params: Promise<{ lang:
   );
 }
 
-function Article(p: { image: StaticImageData; title: string; summary?: string; lang: string; link: string }) {
+function Article(p: {
+  image: StaticImageData;
+  title: string;
+  summary?: string;
+  lang: string;
+  link: string;
+}) {
   const t = getDictionary(p.lang);
   return (
     <Link href={localizedLink(p.lang, p.link)} className={styles.articleLink}>

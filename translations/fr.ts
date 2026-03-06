@@ -838,6 +838,12 @@ const translations = {
       title: "Le groupe Deux Mains sécurise ses accès avec UpSignOn",
       summary: "Le groupe Deux Mains centralise et sécurise plus de 300 accès fournisseurs grâce à UpSignOn.",
     },
+    grandFrais: {
+      metaDescription:
+        "Découvrez comment Grand Frais sécurise plus de 400 accès critiques IT grâce à UpSignOn : gestion centralisée des mots de passe, contrôle des appareils et sécurité renforcée.",
+      title: "Cas client Grand Frais – Sécuriser les accès IT avec UpSignOn",
+      summary: "Le groupe Grand Frais sécurise plus de 400 accès critiques IT grâce à UpSignOn.",
+    },
   },
 
   privacyPolicy: {
