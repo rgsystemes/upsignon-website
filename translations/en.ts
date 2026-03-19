@@ -886,6 +886,7 @@ const translations: typeof fr = {
             item2: "Phone number, email, postal code",
             item3: "Company name",
             item4: "Company sector of activity",
+            item5: "Number of employees in the company",
           },
           legalBasis: "Consent",
           retention: "3 years from the last contact with the prospect",

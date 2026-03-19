@@ -899,6 +899,7 @@ const translations = {
             item2: "Numéro de téléphone, email, code postal",
             item3: "Nom de l'entreprise",
             item4: "Secteur d'activité de l'entreprise",
+            item5: "Nombre de salariés de l'entreprise",
           },
           legalBasis: "Consentement",
           retention: "3 ans à compter du dernier contact avec le prospect",
