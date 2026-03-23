@@ -34,6 +34,14 @@ export default async function ServerNotes({ params }: { params: Promise<{ lang: 
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.10.0 */}
+      <h2>
+        <LinkToAnchor id="2.10.0">2.10.0</LinkToAnchor>
+      </h2>
+      <em>Publié le 24/03/2026</em>
+      <ul>
+        <li>Mise en forme des emails envoyés par UpSignOn.</li>
+      </ul>
       {/* 2.9.0 */}
       <h2>
         <LinkToAnchor id="2.9.0">2.9.0</LinkToAnchor>
@@ -284,6 +292,14 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.10.0 */}
+      <h2>
+        <LinkToAnchor id="2.10.0">2.10.0</LinkToAnchor>
+      </h2>
+      <em>Published on 24/03/2026</em>
+      <ul>
+        <li>Email formatting.</li>
+      </ul>
       {/* 2.9.0 */}
       <h2>
         <LinkToAnchor id="2.9.0">2.9.0</LinkToAnchor>

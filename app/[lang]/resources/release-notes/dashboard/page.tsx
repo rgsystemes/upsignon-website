@@ -34,6 +34,18 @@ export default async function DashboardNotes({ params }: { params: Promise<{ lan
 function FRDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.10.0 */}
+      <h2>
+        <LinkToAnchor id="2.10.0">2.10.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 24/03/2026</em>
+      <ul>
+        <li>
+          Ajout d'un mesage d'erreur explicite dans le formulaire d'ajout d'une banque lorsque le nom de la banque
+          dépasse le nombre de caractères autorisés.
+        </li>
+        <li>Ajout de champs de recherche dans les banques et les groupes de banques.</li>
+      </ul>
       {/* 2.9.0 */}
       <h2>
         <LinkToAnchor id="2.9.0">2.9.0</LinkToAnchor>
@@ -325,6 +337,18 @@ function FRDashboardNotes() {
 function ENDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.10.0 */}
+      <h2>
+        <LinkToAnchor id="2.10.0">2.10.0</LinkToAnchor>
+      </h2>
+      <em>Published on 24/03/2026</em>
+      <ul>
+        <li>
+          Adds an explicit error message on the bank creation form when the bank name overflows the maximum number of
+          caracters.
+        </li>
+        <li>Add search fields on banks and groups of banks.</li>
+      </ul>
       {/* 2.9.0 */}
       <h2>
         <LinkToAnchor id="2.9.0">2.9.0</LinkToAnchor>
