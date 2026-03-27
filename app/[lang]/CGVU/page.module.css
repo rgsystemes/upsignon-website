@@ -1,0 +1,54 @@
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 20px 50px 20px;
+}
+.content h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.header p {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+.header .headerAppName {
+  font-size: 1.5em;
+}
+.header {
+  margin-bottom: 40px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.content p,
+.content ul,
+.content li,
+.content h2 {
+  margin-bottom: 15px;
+}
+
+.content nav li {
+  margin-bottom: 5px;
+}
+.content nav {
+  margin-bottom: 20px;
+}
+
+.content dl dt {
+  font-weight: bold;
+  margin-top: 5px;
+}
+.content dl {
+  margin-bottom: 20px;
+}
+
+.formulaire-retractation {
+  display: block;
+  margin-top: 50px;
+}

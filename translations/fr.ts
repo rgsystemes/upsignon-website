@@ -990,7 +990,11 @@ const translations = {
       paragraph4: "Afin de mieux connaître vos droits, nous vous invitons à consulter le site internet de la Commission Nationale de l'Informatique et des Libertés à l'adresse suivante :",
       paragraph5: "En cas de demande d'exercice de vos droits, nous vous apporterons une réponse au plus tard dans le délai légal d'un mois, ce délai pouvant être porté à deux mois compte tenu de la complexité de la demande ou du nombre de demandes reçues.",
     },
-  }
+  },
+  CGVU: {
+    metaDescription: "Conditions générales de vente et d'utilisation d'UpSignOn by Septeo.",
+    pageTitle: "Conditions générales de vente et d'utilisation",
+  },
 };
 
 export default translations;

@@ -977,6 +977,10 @@ const translations: typeof fr = {
       paragraph4: "To better know your rights, we invite you to consult the website of the National Commission for Information Technology and Civil Liberties at the following address:",
       paragraph5: "In the event of a request to exercise your rights, we will provide you with a response within the legal deadline of one month at the latest; this deadline may be extended to two months taking into account the complexity of the request or the number of requests received.",
     },
+  },
+  CGVU: {
+    metaDescription: "Terms and conditions of sale and use of UpSignOn by Septeo.",
+    pageTitle: "Terms and conditions of sale and use",
   }
 };
 
