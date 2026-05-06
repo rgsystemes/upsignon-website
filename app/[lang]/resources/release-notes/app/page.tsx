@@ -33,6 +33,36 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.16.0 */}
+      <h2>
+        <LinkToAnchor id="7.16.0">7.16.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 06/05/2026</em>
+      </p>
+      <strong>Améliorations</strong>
+      <ul>
+        <li>Export : le message de fin d’export indique désormais le nombre d’éléments réellement importés.</li>
+        <li>
+          Amélioration de la migration SaaS : prise en compte des redirections DNS pour permettre l’arrêt plus rapide
+          des serveurs on‑premise après la bascule.
+        </li>
+      </ul>
+      <strong>Correctifs</strong>
+      <ul>
+        <li>
+          Correction d’un dysfonctionnement : coller vers UpSignOn depuis l’historique du presse-papier ne fonctionnait
+          pas.
+        </li>
+        <li>Correction d’un crash lors de l’export en cas de références circulaires.</li>
+        <li>
+          Correction d’un problème d’accès à la page « Gérer les accès » lorsque l'adresse email du coffre-fort
+          contenait des majuscules.
+        </li>
+        <li>Correction d’un comportement gênant : la recherche s’auto‑sélectionnait.</li>
+        <li>Le message d’avertissement « Mode hors‑ligne » disparaît correctement quand la connexion est rétablie.</li>
+        <li>Correction d’une erreur de synchronisation lorsque l’accès à un coffre-fort partagé a été retiré.</li>
+      </ul>
       {/* 7.15.7 */}
       <h2>
         <LinkToAnchor id="7.15.7">7.15.7</LinkToAnchor>
@@ -728,6 +758,30 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.16.0 */}
+      <h2>
+        <LinkToAnchor id="7.16.0">7.16.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 06/05/2026</em>
+      </p>
+      <strong>Improvements</strong>
+      <ul>
+        <li>Export: the completion message now shows the actual number of items imported.</li>
+        <li>
+          Improved SaaS migration: DNS redirects are now handled to enable faster shutdown of on‑prem servers after
+          switching over.
+        </li>
+      </ul>
+      <strong>Fixes</strong>
+      <ul>
+        <li>Fixed an issue where pasting into UpSignOn from the clipboard history did not work.</li>
+        <li>Fixed a crash during export with circular dependencies</li>
+        <li>Fixed an access issue on the “Manage access” page when the vault email contained uppercase letters.</li>
+        <li>Fixed an annoying behavior where the search field would auto-select itself.</li>
+        <li>The “Offline mode” warning now disappears correctly once connectivity is restored.</li>
+        <li>Fixed a sync error when access to a shared vault has been removed.</li>
+      </ul>
       {/* 7.15.7 */}
       <h2>
         <LinkToAnchor id="7.15.7">7.15.7</LinkToAnchor>

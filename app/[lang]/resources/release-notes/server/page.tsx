@@ -34,6 +34,18 @@ export default async function ServerNotes({ params }: { params: Promise<{ lang: 
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.11.0 */}
+      <h2>
+        <LinkToAnchor id="2.11.0">2.11.0</LinkToAnchor>
+      </h2>
+      <em>Publié le 20/04/2026</em>
+      <ul>
+        <li>
+          Amélioration de la migration SaaS : prise en compte des redirections DNS pour permettre l’arrêt plus rapide
+          des serveurs on‑premise après la bascule.
+        </li>
+        <li>Améliorations techniques.</li>
+      </ul>
       {/* 2.10.0 */}
       <h2>
         <LinkToAnchor id="2.10.0">2.10.0</LinkToAnchor>
@@ -292,6 +304,18 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.11.0 */}
+      <h2>
+        <LinkToAnchor id="2.11.0">2.11.0</LinkToAnchor>
+      </h2>
+      <em>Published on 20/04/2026</em>
+      <ul>
+        <li>
+          Improved SaaS migration: DNS redirects are now handled to enable faster shutdown of on‑prem servers after
+          switching over.
+        </li>
+        <li>Technical improvements.</li>
+      </ul>
       {/* 2.10.0 */}
       <h2>
         <LinkToAnchor id="2.10.0">2.10.0</LinkToAnchor>
