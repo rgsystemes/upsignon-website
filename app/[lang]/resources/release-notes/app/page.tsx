@@ -33,6 +33,18 @@ export default async function AppNotes({ params }: { params: Promise<{ lang: str
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.16.1 */}
+      <h2>
+        <LinkToAnchor id="7.16.1">7.16.1</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publiée le 11/05/2026</em>
+      </p>
+      <ul>
+        <li>
+          Correction d'un bug empêchant l'affichage des données chez certains utilisateurs dans des cas particuliers.
+        </li>
+      </ul>
       {/* 7.16.0 */}
       <h2>
         <LinkToAnchor id="7.16.0">7.16.0</LinkToAnchor>
@@ -758,6 +770,16 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.16.1 */}
+      <h2>
+        <LinkToAnchor id="7.16.1">7.16.1</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 11/05/2026</em>
+      </p>
+      <ul>
+        <li>Fixes a bug preventing the display of data for some users in special cases.</li>
+      </ul>
       {/* 7.16.0 */}
       <h2>
         <LinkToAnchor id="7.16.0">7.16.0</LinkToAnchor>
