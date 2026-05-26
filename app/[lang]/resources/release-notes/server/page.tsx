@@ -5,7 +5,11 @@ import { LinkToAnchor } from "../../../components/linkToAnchor/linkToAnchor";
 import Link from "next/link";
 import { PlatformWarningIcon } from "../../../features/availabilityIcons";
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await params;
   const t = getDictionary(lang);
   return {
@@ -22,7 +26,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
-export default async function ServerNotes({ params }: { params: Promise<{ lang: string }> }) {
+export default async function ServerNotes({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
   const { lang } = await params;
   if (lang === "fr") {
     return <FRServerNotes />;
@@ -34,6 +42,18 @@ export default async function ServerNotes({ params }: { params: Promise<{ lang: 
 function FRServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.12.0 */}
+      <h2>
+        <LinkToAnchor id="2.12.0">2.12.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 03/06/2026</em>
+      <ul>
+        <li>
+          Ajout de la logique du "Protocole de secours" (Shamir) permettant à un
+          nombre prédéfini de personnes de confiance de déverrouiller les
+          coffres-forts.
+        </li>
+      </ul>
       {/* 2.11.0 */}
       <h2>
         <LinkToAnchor id="2.11.0">2.11.0</LinkToAnchor>
@@ -41,8 +61,9 @@ function FRServerNotes() {
       <em>Publié le 20/04/2026</em>
       <ul>
         <li>
-          Amélioration de la migration SaaS : prise en compte des redirections DNS pour permettre l’arrêt plus rapide
-          des serveurs on‑premise après la bascule.
+          Amélioration de la migration SaaS : prise en compte des redirections
+          DNS pour permettre l’arrêt plus rapide des serveurs on‑premise après
+          la bascule.
         </li>
         <li>Améliorations techniques.</li>
       </ul>
@@ -69,19 +90,25 @@ function FRServerNotes() {
       <em>Publié le 08/12/2025</em>
       <ul>
         <li>
-          correction : un utilisateur peut désormais se faire renvoyer un email de reset de mot de passe maître même si
-          le mail précédent est toujours valide
-        </li>
-        <li>correction d'un problème empêchant le fonctionnement du serveur en cas d'utilisant d'un proxy sortant</li>
-        <li>
-          correction d'un problème empêchant de créer un coffre-fort si MS Entra est configuré avec une mauvaise
-          configuration
+          correction : un utilisateur peut désormais se faire renvoyer un email
+          de reset de mot de passe maître même si le mail précédent est toujours
+          valide
         </li>
         <li>
-          la temporisation appliquée sur la saisie de mots de passe erronés se réinitialise automatiquement au bout de
-          24h sans essai pour éviter une situation où une seule mauvaise saisie du mot de passe maître conduit à devoir
-          attendre plusieurs minutes pour réessayer si plusieurs tentatives erronées avaient déjà été faites plusieurs
-          jours auparavant.
+          correction d'un problème empêchant le fonctionnement du serveur en cas
+          d'utilisant d'un proxy sortant
+        </li>
+        <li>
+          correction d'un problème empêchant de créer un coffre-fort si MS Entra
+          est configuré avec une mauvaise configuration
+        </li>
+        <li>
+          la temporisation appliquée sur la saisie de mots de passe erronés se
+          réinitialise automatiquement au bout de 24h sans essai pour éviter une
+          situation où une seule mauvaise saisie du mot de passe maître conduit
+          à devoir attendre plusieurs minutes pour réessayer si plusieurs
+          tentatives erronées avaient déjà été faites plusieurs jours
+          auparavant.
         </li>
       </ul>
       {/* 2.7.0 */}
@@ -98,7 +125,10 @@ function FRServerNotes() {
       </h2>
       <em>Publiée le 19/06/2025</em>
       <ul>
-        <li>Le mode simple pour les autorisations de navigateur est désormais le mode par défaut.</li>
+        <li>
+          Le mode simple pour les autorisations de navigateur est désormais le
+          mode par défaut.
+        </li>
       </ul>
       {/* 2.6.1 */}
       <h2>
@@ -115,9 +145,12 @@ function FRServerNotes() {
       <em>Publiée le 03/06/2025</em>
       <ul>
         <li>
-          Ajout d'un paramètre pour autoriser le mode simple pour l'autorisation des extensions de navigateur. (Voir les
-          notes de versions de la{" "}
-          <Link href="/fr/resources/release-notes/app#7.12.1">version 7.12.1 de l'application</Link>.)
+          Ajout d'un paramètre pour autoriser le mode simple pour l'autorisation
+          des extensions de navigateur. (Voir les notes de versions de la{" "}
+          <Link href="/fr/resources/release-notes/app#7.12.1">
+            version 7.12.1 de l'application
+          </Link>
+          .)
         </li>
       </ul>
       {/* 2.5.0 */}
@@ -126,10 +159,17 @@ function FRServerNotes() {
       </h2>
       <em>Publiée le 18/02/2025</em>
       <ul>
-        <li>Ajout de paramètres pour contrôler les durées de verrouillage automatique maximale et par défaut.</li>
         <li>
-          Ajout de 2 niveaux d'accès supplémentaires aux coffres-forts partagés - éditeur et aveugle. Voir les notes de
-          version de la <Link href="/fr/resources/release-notes/app#7.11.0">version 7.11.0 de l'application</Link>.
+          Ajout de paramètres pour contrôler les durées de verrouillage
+          automatique maximale et par défaut.
+        </li>
+        <li>
+          Ajout de 2 niveaux d'accès supplémentaires aux coffres-forts partagés
+          - éditeur et aveugle. Voir les notes de version de la{" "}
+          <Link href="/fr/resources/release-notes/app#7.11.0">
+            version 7.11.0 de l'application
+          </Link>
+          .
         </li>
       </ul>
       {/* 2.4.0 */}
@@ -139,11 +179,13 @@ function FRServerNotes() {
       <em>Publiée le 03/10/2024</em>
       <ul>
         <li>
-          ajout d'un paramètre pour empêcher l'affichage de la popup de mise-à-jour dans l'application (à partir de la
-          version 7.9.0 de l'application)
+          ajout d'un paramètre pour empêcher l'affichage de la popup de
+          mise-à-jour dans l'application (à partir de la version 7.9.0 de
+          l'application)
         </li>
         <li>
-          corrige un problème de synchronisation avec Microsoft Entra ID empêchant la désactivation des utilisateurs
+          corrige un problème de synchronisation avec Microsoft Entra ID
+          empêchant la désactivation des utilisateurs
         </li>
       </ul>
       {/* 2.3.0 */}
@@ -153,7 +195,10 @@ function FRServerNotes() {
       <em>Publiée le 19/07/2024</em>
       <ul>
         <li>suppression définitive des coffres PRO non migrés en version 7</li>
-        <li>CASSANT : les banques de test sans date d’expiration sont désormais considérées comme expirées</li>
+        <li>
+          CASSANT : les banques de test sans date d’expiration sont désormais
+          considérées comme expirées
+        </li>
       </ul>
       {/* 2.2.0 */}
       <h2>
@@ -162,12 +207,14 @@ function FRServerNotes() {
       <em>Publiée le 01/07/2024</em>
       <ul>
         <li>
-          correction d’un bug où la validation manuelle d’un admin est demandée dès le premier appareil au lieu du
-          deuxième lorsque l’option est activée.
+          correction d’un bug où la validation manuelle d’un admin est demandée
+          dès le premier appareil au lieu du deuxième lorsque l’option est
+          activée.
         </li>
         <li>
-          les notifications de mot de passe oublié et de validation de deuxième appareil ne sont plus envoyées aux
-          superadministrateurs, sauf s’il n’y a aucun administrateur dédié pour la banque.
+          les notifications de mot de passe oublié et de validation de deuxième
+          appareil ne sont plus envoyées aux superadministrateurs, sauf s’il n’y
+          a aucun administrateur dédié pour la banque.
         </li>
       </ul>
       {/* 2.1.0 */}
@@ -177,9 +224,10 @@ function FRServerNotes() {
       <em>Publiée le 27/06/2024</em>
       <ul>
         <li>
-          correction de la courbe d’évolution de la force des mots de passe avec prise en compte de la suppression des
-          coffres et éléments partagés (auparavant, les coffres et éléments partagés supprimés continuaient à compter
-          avec leur dernière valeur connue).
+          correction de la courbe d’évolution de la force des mots de passe avec
+          prise en compte de la suppression des coffres et éléments partagés
+          (auparavant, les coffres et éléments partagés supprimés continuaient à
+          compter avec leur dernière valeur connue).
         </li>
       </ul>
       {/* 2.0.1 */}
@@ -189,7 +237,8 @@ function FRServerNotes() {
       <em>Publiée le 17/06/2024</em>
       <ul>
         <li>
-          les versions de l’application inférieures strictement à la 7.1.1 ne peuvent plus modifier les coffres-forts.
+          les versions de l’application inférieures strictement à la 7.1.1 ne
+          peuvent plus modifier les coffres-forts.
         </li>
       </ul>
       {/* 2.0.0 */}
@@ -208,13 +257,15 @@ function FRServerNotes() {
         <li>connexion à Microsoft Entra</li>
         <ul>
           <li>
-            lors de la création d’un coffre-fort, le serveur peut vérifier si un utilisateur est autorisé en
-            interrogeant Microsoft Entra OU en regardant si l’adresse email de l’utilisateur est autorisée (ancienne
-            méthode)
+            lors de la création d’un coffre-fort, le serveur peut vérifier si un
+            utilisateur est autorisé en interrogeant Microsoft Entra OU en
+            regardant si l’adresse email de l’utilisateur est autorisée
+            (ancienne méthode)
           </li>
           <li>
-            tous les jours à 1h et 13h, le serveur désactive automatiquement les utilisateurs qui ne sont plus autorisés
-            ni via Microsoft Entra ni via une règle de format d’adresse email
+            tous les jours à 1h et 13h, le serveur désactive automatiquement les
+            utilisateurs qui ne sont plus autorisés ni via Microsoft Entra ni
+            via une règle de format d’adresse email
           </li>
         </ul>
       </ul>
@@ -225,7 +276,9 @@ function FRServerNotes() {
       </h2>
       <em>Publiée le 30/04/2024</em>
       <ul>
-        <li>ajoute un mécanisme pour simplifier le changement d’URL du serveur</li>
+        <li>
+          ajoute un mécanisme pour simplifier le changement d’URL du serveur
+        </li>
       </ul>
 
       {/* 1.10.0 */}
@@ -235,8 +288,10 @@ function FRServerNotes() {
       <em>Publiée le 9/04/2024</em>
       <ul>
         <li>
-          les heures d’expiration des codes à usage unique envoyés par le serveur dans les emails de mots de passe
-          oubliés ou d’autorisation d’appareil sont désormais affichés à l’heure locale du serveur et non à l’heure UTC.
+          les heures d’expiration des codes à usage unique envoyés par le
+          serveur dans les emails de mots de passe oubliés ou d’autorisation
+          d’appareil sont désormais affichés à l’heure locale du serveur et non
+          à l’heure UTC.
         </li>
       </ul>
 
@@ -246,7 +301,10 @@ function FRServerNotes() {
       </h2>
       <em>Publiée le 4/04/2024</em>
       <ul>
-        <li>correctif sur la vérification de plateforme pour l’enrôlement d’un nouvel appareil</li>
+        <li>
+          correctif sur la vérification de plateforme pour l’enrôlement d’un
+          nouvel appareil
+        </li>
       </ul>
 
       {/* 1.9.0 */}
@@ -256,18 +314,23 @@ function FRServerNotes() {
       <em>Publiée le 3/04/2024</em>
       <ul>
         <li>
-          un mail est automatiquement envoyé à tous les super-administrateurs et administrateurs de la banque lorsqu’un
-          utilisateur soumet une demande de réinitialisation de mot de passe
+          un mail est automatiquement envoyé à tous les super-administrateurs et
+          administrateurs de la banque lorsqu’un utilisateur soumet une demande
+          de réinitialisation de mot de passe
         </li>
-        <li>ajoute un paramètre pour configurer les plateformes autorisées, par banque et par utilisateur</li>
         <li>
-          ajoute une option pour exiger la validation manuelle d’un administrateur pour l’ajout d’un deuxième appareil
-          (désactivé par défaut)
+          ajoute un paramètre pour configurer les plateformes autorisées, par
+          banque et par utilisateur
+        </li>
+        <li>
+          ajoute une option pour exiger la validation manuelle d’un
+          administrateur pour l’ajout d’un deuxième appareil (désactivé par
+          défaut)
         </li>
         <li>améliore la gestion des types d’appareil</li>
         <li>
-          modifie les informations de statut envoyées à UpSignOn (supprime celles qui ne sont plus utiles et ajoute la
-          version de nodejs)
+          modifie les informations de statut envoyées à UpSignOn (supprime
+          celles qui ne sont plus utiles et ajoute la version de nodejs)
         </li>
       </ul>
 
@@ -277,14 +340,17 @@ function FRServerNotes() {
       </h2>
       <ul>
         <li>
-          correction sur la demande de réinitialisation de mot de passe maître si une demande antérieure avait déjà été
-          faite
+          correction sur la demande de réinitialisation de mot de passe maître
+          si une demande antérieure avait déjà été faite
         </li>
         <li>
-          changement de la valeur par défaut pour l’autorisation d’export CSV (désormais interdit par défaut) NB : ce
-          paramètre a dû être réinitialisé pour tous les utilisateurs
+          changement de la valeur par défaut pour l’autorisation d’export CSV
+          (désormais interdit par défaut) NB : ce paramètre a dû être
+          réinitialisé pour tous les utilisateurs
         </li>
-        <li>correction de la date de dernière session affichée dans la console</li>
+        <li>
+          correction de la date de dernière session affichée dans la console
+        </li>
       </ul>
 
       {/* 1.8.5 */}
@@ -293,10 +359,13 @@ function FRServerNotes() {
       </h2>
       <ul>
         <li>
-          ajout d’un mécanisme spécifique pour permettre la migration des coffres-forts PRO après leur enrôlement sur
-          une application v7
+          ajout d’un mécanisme spécifique pour permettre la migration des
+          coffres-forts PRO après leur enrôlement sur une application v7
         </li>
-        <li>correction sur la route de demande de suppression d’un destinataire d’un coffre-fort partagé</li>
+        <li>
+          correction sur la route de demande de suppression d’un destinataire
+          d’un coffre-fort partagé
+        </li>
       </ul>
     </section>
   );
@@ -304,6 +373,17 @@ function FRServerNotes() {
 function ENServerNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.12.0 */}
+      <h2>
+        <LinkToAnchor id="2.12.0">2.12.0</LinkToAnchor>
+      </h2>
+      <em>Published on 03/06/2026</em>
+      <ul>
+        <li>
+          Adds the logic for the "Fallback Recovery Protocol" (Shamir) allowing
+          a predefined number of trusted individuals to unlock the vaults.
+        </li>
+      </ul>
       {/* 2.11.0 */}
       <h2>
         <LinkToAnchor id="2.11.0">2.11.0</LinkToAnchor>
@@ -311,8 +391,8 @@ function ENServerNotes() {
       <em>Published on 20/04/2026</em>
       <ul>
         <li>
-          Improved SaaS migration: DNS redirects are now handled to enable faster shutdown of on‑prem servers after
-          switching over.
+          Improved SaaS migration: DNS redirects are now handled to enable
+          faster shutdown of on‑prem servers after switching over.
         </li>
         <li>Technical improvements.</li>
       </ul>
@@ -339,14 +419,23 @@ function ENServerNotes() {
       <em>Published on 08/12/2025</em>
       <ul>
         <li>
-          Fix: a user can now have a master password reset email resent even if the previous email is still valid.
+          Fix: a user can now have a master password reset email resent even if
+          the previous email is still valid.
         </li>
-        <li>Fix for an issue preventing the server from functioning when using an outgoing proxy.</li>
-        <li>Fixed an issue preventing the creation of a vault if MS Entra is configured incorrectly.</li>
         <li>
-          The timeout applied to incorrect password entries is automatically reset after 24 hours without any attempts,
-          to avoid a situation where a single incorrect master password entry leads to having to wait several minutes to
-          try again if several incorrect attempts had already been made several days earlier.
+          Fix for an issue preventing the server from functioning when using an
+          outgoing proxy.
+        </li>
+        <li>
+          Fixed an issue preventing the creation of a vault if MS Entra is
+          configured incorrectly.
+        </li>
+        <li>
+          The timeout applied to incorrect password entries is automatically
+          reset after 24 hours without any attempts, to avoid a situation where
+          a single incorrect master password entry leads to having to wait
+          several minutes to try again if several incorrect attempts had already
+          been made several days earlier.
         </li>
       </ul>
       {/* 2.7.0 */}
@@ -380,8 +469,12 @@ function ENServerNotes() {
       <em>Published on 03/06/2025</em>
       <ul>
         <li>
-          Adds a setting to allow the simple mode for authorizing the browser extensions. (See release notes for{" "}
-          <Link href="/en/resources/release-notes/app#7.12.1">version 7.12.1 of the application</Link>.)
+          Adds a setting to allow the simple mode for authorizing the browser
+          extensions. (See release notes for{" "}
+          <Link href="/en/resources/release-notes/app#7.12.1">
+            version 7.12.1 of the application
+          </Link>
+          .)
         </li>
       </ul>
       {/* 2.5.0 */}
@@ -390,10 +483,16 @@ function ENServerNotes() {
       </h2>
       <em>Published on 18/02/2025</em>
       <ul>
-        <li>Adds parameters to control the maximum and default autolock durations.</li>
         <li>
-          Adds 2 levels of access to shared vaults - editor and blind. See release notes for{" "}
-          <Link href="/en/resources/release-notes/app#7.11.0">version 7.11.0 of the application</Link>.
+          Adds parameters to control the maximum and default autolock durations.
+        </li>
+        <li>
+          Adds 2 levels of access to shared vaults - editor and blind. See
+          release notes for{" "}
+          <Link href="/en/resources/release-notes/app#7.11.0">
+            version 7.11.0 of the application
+          </Link>
+          .
         </li>
       </ul>
       {/* 2.4.0 */}
@@ -403,10 +502,13 @@ function ENServerNotes() {
       <em>Published on 03/10/2024</em>
       <ul>
         <li>
-          adds a parameter to prevent the display of the app update popup in the app (since version 7.9.0 of the
-          application)
+          adds a parameter to prevent the display of the app update popup in the
+          app (since version 7.9.0 of the application)
         </li>
-        <li>fixes an issue when synchronising with Microsoft Entra ID preventing the deactivation of users</li>
+        <li>
+          fixes an issue when synchronising with Microsoft Entra ID preventing
+          the deactivation of users
+        </li>
       </ul>
       {/* 2.3.0 */}
       <h2>
@@ -415,7 +517,10 @@ function ENServerNotes() {
       <em>Published on 19/07/2024</em>
       <ul>
         <li>DEFINITIVE DELETION of PRO vaults not migrated to version 7</li>
-        <li>BREAKING: test banks without expiration date are now considered expired</li>
+        <li>
+          BREAKING: test banks without expiration date are now considered
+          expired
+        </li>
       </ul>
       {/* 2.2.0 */}
       <h2>
@@ -424,12 +529,13 @@ function ENServerNotes() {
       <em>Published on 01/07/2024</em>
       <ul>
         <li>
-          Fixed a bug where manual validation from an admin is requested from the first device instead of the second
-          when the option is activated.
+          Fixed a bug where manual validation from an admin is requested from
+          the first device instead of the second when the option is activated.
         </li>
         <li>
-          Forgotten password and second device validation notifications are no longer sent to super administrators
-          except if if there is no dedicated administrator for the bank.
+          Forgotten password and second device validation notifications are no
+          longer sent to super administrators except if if there is no dedicated
+          administrator for the bank.
         </li>
       </ul>
       {/* 2.1.0 */}
@@ -439,8 +545,10 @@ function ENServerNotes() {
       <em>Published on 27/06/2024</em>
       <ul>
         <li>
-          correction of the password strength evolution curve taking into account the deletion of vaults and shared
-          elements (previously, deleted vaults and shared elements continued to count with their last known value).
+          correction of the password strength evolution curve taking into
+          account the deletion of vaults and shared elements (previously,
+          deleted vaults and shared elements continued to count with their last
+          known value).
         </li>
       </ul>
       {/* 2.0.1 */}
@@ -449,7 +557,10 @@ function ENServerNotes() {
       </h2>
       <em>Published on 17/06/2024</em>
       <ul>
-        <li>versions of the app stricly below 7.1.1 can no longer make changes to vaults.</li>
+        <li>
+          versions of the app stricly below 7.1.1 can no longer make changes to
+          vaults.
+        </li>
       </ul>
       {/* 2.0.0 */}
       <h2>
@@ -466,12 +577,14 @@ function ENServerNotes() {
         <li>connection to Microsoft Entra</li>
         <ul>
           <li>
-            when creating a vault, the server can check if a user is authorized by querying Microsoft Entra OR by
-            looking if the user’s email address is authorized (old method)
+            when creating a vault, the server can check if a user is authorized
+            by querying Microsoft Entra OR by looking if the user’s email
+            address is authorized (old method)
           </li>
           <li>
-            every day at 1 a.m. and 1 p.m., the server automatically deactivates users who are no longer authorized
-            neither via Microsoft Entra nor via an email address format rule
+            every day at 1 a.m. and 1 p.m., the server automatically deactivates
+            users who are no longer authorized neither via Microsoft Entra nor
+            via an email address format rule
           </li>
         </ul>
       </ul>
@@ -492,8 +605,9 @@ function ENServerNotes() {
       <em>Published on 09/04/2024</em>
       <ul>
         <li>
-          expiration times for one-time codes sent by the server in password emails Forgotten or device permissions are
-          now displayed in the server’s local time instead of UTC.
+          expiration times for one-time codes sent by the server in password
+          emails Forgotten or device permissions are now displayed in the
+          server’s local time instead of UTC.
         </li>
       </ul>
 
@@ -513,18 +627,22 @@ function ENServerNotes() {
       <em>Published on 03/04/2024</em>
       <ul>
         <li>
-          an email is automatically sent to all super-administrators and administrators of the bank when a user submits
-          a password reset request
+          an email is automatically sent to all super-administrators and
+          administrators of the bank when a user submits a password reset
+          request
         </li>
-        <li>adds a parameter to configure authorized platforms, per bank and per user</li>
         <li>
-          adds an option to require manual validation from an administrator for adding a second device (disabled by
-          default)
+          adds a parameter to configure authorized platforms, per bank and per
+          user
+        </li>
+        <li>
+          adds an option to require manual validation from an administrator for
+          adding a second device (disabled by default)
         </li>
         <li>improves the management of device types</li>
         <li>
-          modifies the status information sent to UpSignOn (removes that which are no longer useful and adds the nodejs
-          version)
+          modifies the status information sent to UpSignOn (removes that which
+          are no longer useful and adds the nodejs version)
         </li>
       </ul>
 
@@ -533,10 +651,13 @@ function ENServerNotes() {
         <LinkToAnchor id="1.8.6">1.8.6</LinkToAnchor>
       </h2>
       <ul>
-        <li>correction on the master password reset request if a previous request had already been done</li>
         <li>
-          changes the default value for CSV export authorization (now prohibited by default) NB: this setting had to be
-          reset for all users
+          correction on the master password reset request if a previous request
+          had already been done
+        </li>
+        <li>
+          changes the default value for CSV export authorization (now prohibited
+          by default) NB: this setting had to be reset for all users
         </li>
         <li>fixes the last session date displayed in the console</li>
       </ul>
@@ -547,9 +668,12 @@ function ENServerNotes() {
       </h2>
       <ul>
         <li>
-          adds a specific mechanism to allow the migration of PRO vaults after their enrollment on a v7 application
+          adds a specific mechanism to allow the migration of PRO vaults after
+          their enrollment on a v7 application
         </li>
-        <li>fixes the request route to delete a recipient from a shared vault</li>
+        <li>
+          fixes the request route to delete a recipient from a shared vault
+        </li>
       </ul>
     </section>
   );
