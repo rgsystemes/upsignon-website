@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Modal from "react-modal";
 import { getDictionary } from "../../../../translations/translations";
 import styles from "./formModal.module.css";
@@ -27,25 +27,39 @@ export function FormModalButton(p: {
 
   return (
     <>
-      <button onClick={openModal} className={`${styles.modalDefaultButton} ${p.className}`}>
+      <button
+        onClick={openModal}
+        className={`${styles.modalDefaultButton} ${p.className}`}
+      >
         {p.buttonText}
       </button>
-      <ModalLinkOpener modalLinkValue={p.modalLinkValue} setIsOpen={setIsOpen} />
+      <ModalLinkOpener
+        modalLinkValue={p.modalLinkValue}
+        setIsOpen={setIsOpen}
+      />
       <Modal
         isOpen={isOpen}
         onRequestClose={closeModal}
         contentLabel={p.modalTitle}
         preventScroll
         shouldReturnFocusAfterClose={false}
-        className={styles.modal}
+        className={`${styles.modal} ${p.isFreeTrialForm ? styles.modalNoPadding : ""}`}
       >
-        <Forms lang={p.lang} title={p.modalTitle} isFreeTrialForm={p.isFreeTrialForm}></Forms>
+        <Forms
+          lang={p.lang}
+          title={p.modalTitle}
+          isFreeTrialForm={p.isFreeTrialForm}
+        ></Forms>
       </Modal>
     </>
   );
 }
 
 function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
+  if (p.isFreeTrialForm) {
+    return <TrialRequestIframe />;
+  }
+
   const t = getDictionary(p.lang);
   const [isReseller, setIsReseller] = useState<boolean | null>(null);
   return (
@@ -53,7 +67,10 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
       <h1>{p.title}</h1>
       <div className={styles.activityForm}>
         <p>{t.contactUsForm.activity}</p>
-        <div className={styles.choiceContainer} onClick={() => setIsReseller(true)}>
+        <div
+          className={styles.choiceContainer}
+          onClick={() => setIsReseller(true)}
+        >
           <input
             type="radio"
             name="msp"
@@ -63,7 +80,10 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
           />
           <label htmlFor="msp">{t.contactUsForm.activityMSP}</label>
         </div>
-        <div className={styles.choiceContainer} onClick={() => setIsReseller(false)}>
+        <div
+          className={styles.choiceContainer}
+          onClick={() => setIsReseller(false)}
+        >
           <input
             type="radio"
             name="company"
@@ -74,24 +94,7 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
           <label htmlFor="company">{t.contactUsForm.activityEnterprise}</label>
         </div>
       </div>
-      {isReseller === null ? null : p.isFreeTrialForm ? (
-        <div className={styles.hubspotFormContainer}>
-          <HubspotForm
-            isVisible={isReseller}
-            id="trial-reseller"
-            portalId="7012322"
-            formId="fecb3f74-49fd-44c4-b742-4498e618b374"
-            region="na1"
-          />
-          <HubspotForm
-            isVisible={!isReseller}
-            id="trial-company"
-            portalId="20410676"
-            formId="58672e13-9e16-4421-ac77-c76fa1ac3e57"
-            region="na1"
-          />
-        </div>
-      ) : (
+      {isReseller === null ? null : (
         <div className={styles.hubspotFormContainer}>
           <HubspotForm
             isVisible={isReseller}
@@ -113,7 +116,13 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
   );
 }
 
-const HubspotForm = (p: { id: string; portalId: string; formId: string; region: string; isVisible: boolean }) => {
+const HubspotForm = (p: {
+  id: string;
+  portalId: string;
+  formId: string;
+  region: string;
+  isVisible: boolean;
+}) => {
   const htmlId = `hubspot-form-${p.id}`;
   const { isFormCreated, isError, error } = useHubspotForm({
     portalId: p.portalId,
@@ -124,3 +133,48 @@ const HubspotForm = (p: { id: string; portalId: string; formId: string; region: 
 
   return <div id={htmlId} style={p.isVisible ? null : { display: "none" }} />;
 };
+
+function TrialRequestIframe() {
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const [iframeHeight, setIframeHeight] = useState(200);
+
+  useEffect(() => {
+    function handleMessage(event: MessageEvent) {
+      if (event.source !== iframeRef.current?.contentWindow) {
+        return;
+      }
+
+      const nextHeight = Number(
+        (event.data as { frameHeight?: unknown })?.frameHeight,
+      );
+      if (Number.isFinite(nextHeight)) {
+        setIframeHeight(nextHeight);
+      }
+    }
+
+    window.addEventListener("message", handleMessage);
+    return () => {
+      window.removeEventListener("message", handleMessage);
+    };
+  }, []);
+
+  let iframeSrc = "https://admin-pro.upsignon.eu/trial-request";
+  if (window.location.hostname === "localhost") {
+    iframeSrc = "http://localhost:8090/trial-request";
+  } else if (window.location.hostname.endsWith("upsignon.vercel.app")) {
+    iframeSrc = "https://pro-staging.upsignon.eu/admin/trial-request";
+  } else {
+    iframeSrc = "https://admin-pro.upsignon.eu/trial-request";
+  }
+  return (
+    <div className={styles.modalContent}>
+      <iframe
+        ref={iframeRef}
+        src={iframeSrc}
+        title="Trial request form"
+        className={styles.trialRequestIframe}
+        style={{ height: `${iframeHeight}px` }}
+      />
+    </div>
+  );
+}

@@ -9,7 +9,7 @@
   max-height: calc(100% - 140px);
   width: 800px;
   max-width: calc(100% - 40px);
-  border: 2px solid var(--grey300);;
+  border: 2px solid var(--grey300);
   background: var(--background-color);
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -46,11 +46,13 @@
 .activityForm input {
   margin-right: 10px;
 }
-.choiceContainer, .choiceContainer input, .choiceContainer label {
+.choiceContainer,
+.choiceContainer input,
+.choiceContainer label {
   cursor: pointer;
 }
 .choiceContainer {
-  margin-bottom: 5px
+  margin-bottom: 5px;
 }
 .choiceContainer input[type="radio"] {
   display: none;
@@ -76,6 +78,12 @@
 .choiceContainer input[type="radio"]:checked + label::before {
   background: var(--primary);
   border-color: var(--primary);
+}
+
+.trialRequestIframe {
+  display: block;
+  width: 100%;
+  border: 0;
 }
 
 @media (max-width: 750px) {
