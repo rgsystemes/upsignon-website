@@ -4,7 +4,11 @@ import styles from "../notes.module.css";
 import { LinkToAnchor } from "../../../components/linkToAnchor/linkToAnchor";
 import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
   const { lang } = await params;
   const t = getDictionary(lang);
   return {
@@ -21,7 +25,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
-export default async function ExtensionNotes({ params }: { params: Promise<{ lang: string }> }) {
+export default async function ExtensionNotes({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
   const { lang } = await params;
   if (lang === "fr") {
     return <FRExtensionNotes />;
@@ -33,6 +41,14 @@ export default async function ExtensionNotes({ params }: { params: Promise<{ lan
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.7.9 */}
+      <h2>
+        <LinkToAnchor id="1.7.9">1.7.9</LinkToAnchor>
+      </h2>
+      <em>Publiée le 18/06/2026</em>
+      <ul>
+        <li>Mises-à-jour de sécurité</li>
+      </ul>
       {/* 1.7.8 */}
       <h2>
         <LinkToAnchor id="1.7.8">1.7.8</LinkToAnchor>
@@ -57,12 +73,13 @@ function FRExtensionNotes() {
       <em>Publiée le 30/01/2025</em>
       <ul>
         <li>
-          Corrige un problème conduisant à un loader infini dans le popup de l'extension lorsqu'au moins un onglet est
-          dormant et que tous les coffres-forts sont verrouillés.
+          Corrige un problème conduisant à un loader infini dans le popup de
+          l'extension lorsqu'au moins un onglet est dormant et que tous les
+          coffres-forts sont verrouillés.
         </li>
         <li>
-          Corrige un potentiel problème de "race condition" conduisant à un bug survenant de façon aléatoire sur la
-          connexion avec l'application.
+          Corrige un potentiel problème de "race condition" conduisant à un bug
+          survenant de façon aléatoire sur la connexion avec l'application.
         </li>
         <li>Améliore les logs</li>
       </ul>
@@ -73,8 +90,8 @@ function FRExtensionNotes() {
       <em>Publiée le 19/01/2025</em>
       <ul>
         <li>
-          Nombreuses améliorations et corrections de cas limites sur le système de gestion de la connexion avec
-          l'application.
+          Nombreuses améliorations et corrections de cas limites sur le système
+          de gestion de la connexion avec l'application.
         </li>
         <li>Suppression complète de l'ancien système d'autorisation.</li>
       </ul>
@@ -93,13 +110,22 @@ function FRExtensionNotes() {
       <em>Publiée le 10/10/2025</em>
       <ul>
         <li>Changement du nom de l'extension en UpSignOn by Septeo.</li>
-        <li>Prise en compte des onglets ouverts dès l'installation ou la mise-à-jour de l'extension.</li>
-        <li>Empêche la mise en sommeil de l'extension par le navigateur pour fluidifier l'UX.</li>
         <li>
-          Corrige un problème de non détection des modifications sur le champ login sur certains sites qui conduisait à
-          la création de doublons.
+          Prise en compte des onglets ouverts dès l'installation ou la
+          mise-à-jour de l'extension.
         </li>
-        <li>L'extension fonctionne désormais sur les pages utilisant des shadow DOM.</li>
+        <li>
+          Empêche la mise en sommeil de l'extension par le navigateur pour
+          fluidifier l'UX.
+        </li>
+        <li>
+          Corrige un problème de non détection des modifications sur le champ
+          login sur certains sites qui conduisait à la création de doublons.
+        </li>
+        <li>
+          L'extension fonctionne désormais sur les pages utilisant des shadow
+          DOM.
+        </li>
       </ul>
       {/* 1.5.3 */}
       <h2>
@@ -116,10 +142,14 @@ function FRExtensionNotes() {
       </h2>
       <em>Publiée le 19/06/2025</em>
       <ul>
-        <li>Corrige un bug empêchant de valider l'alerte du navigateur au clic sur le bouton "Connecter à l'appli".</li>
         <li>
-          Corrige un bug où l'extension affiche la page d'erreur alors qu'elle est bien connectée à l'application (cas
-          où le navigateur a éteint une partie du code de l'extension pour consommer moins de ressources).
+          Corrige un bug empêchant de valider l'alerte du navigateur au clic sur
+          le bouton "Connecter à l'appli".
+        </li>
+        <li>
+          Corrige un bug où l'extension affiche la page d'erreur alors qu'elle
+          est bien connectée à l'application (cas où le navigateur a éteint une
+          partie du code de l'extension pour consommer moins de ressources).
         </li>
       </ul>
       {/* 1.5.1 */}
@@ -137,8 +167,8 @@ function FRExtensionNotes() {
       <em>Publiée le 28/05/2025</em>
       <ul>
         <li>
-          Prise en charge d'un mode simplifié optionnel (le code à usage unique n'est plus demandé) pour l'autorisation
-          de l'extension de navigateur.
+          Prise en charge d'un mode simplifié optionnel (le code à usage unique
+          n'est plus demandé) pour l'autorisation de l'extension de navigateur.
         </li>
         <li>Correctifs sur l'heuristique de remplissage automatique.</li>
       </ul>
@@ -150,10 +180,14 @@ function FRExtensionNotes() {
       <ul>
         <li>Améliorations de sécurité</li>
         <li>
-          Nouveau système de configuration du canal de communication entre l'extension et l'application UpSignOn pour
-          une meilleure sécurité et une meilleure expérience utilisateur. Voir les notes de versions de{" "}
-          <Link href="/fr/resources/release-notes/app#7.12.2">l'application v7.12.2</Link>). (NB : cette version reste
-          rétrocompatible avec les anciennes versions de l'application.)
+          Nouveau système de configuration du canal de communication entre
+          l'extension et l'application UpSignOn pour une meilleure sécurité et
+          une meilleure expérience utilisateur. Voir les notes de versions de{" "}
+          <Link href="/fr/resources/release-notes/app#7.12.2">
+            l'application v7.12.2
+          </Link>
+          ). (NB : cette version reste rétrocompatible avec les anciennes
+          versions de l'application.)
         </li>
       </ul>
       {/* 1.3.0 */}
@@ -163,9 +197,11 @@ function FRExtensionNotes() {
       <em>Publiée le 18/02/2025</em>
       <ul>
         <li>
-          Applique le nouveau modèle de niveaux d'accès des coffres-forts partagés (see{" "}
-          <Link href="/fr/resources/release-notes/app#7.11.0">app v7.11.0</Link>) et conserve la rétro-compatibilité
-          avec les anciennes versions de l'application.
+          Applique le nouveau modèle de niveaux d'accès des coffres-forts
+          partagés (see{" "}
+          <Link href="/fr/resources/release-notes/app#7.11.0">app v7.11.0</Link>
+          ) et conserve la rétro-compatibilité avec les anciennes versions de
+          l'application.
         </li>
       </ul>
       {/* 1.2.3 */}
@@ -174,7 +210,10 @@ function FRExtensionNotes() {
       </h2>
       <em>Publiée le 04/02/2025</em>
       <ul>
-        <li>Corrige un problème de redimensionnement de la bulle au clic (nouveaux cas).</li>
+        <li>
+          Corrige un problème de redimensionnement de la bulle au clic (nouveaux
+          cas).
+        </li>
       </ul>
       {/* 1.2.2 */}
       <h2>
@@ -182,7 +221,10 @@ function FRExtensionNotes() {
       </h2>
       <em>Publiée le 03/02/2025</em>
       <ul>
-        <li>Corrige un problème de redimensionnement de la bulle au clic sur les onglets.</li>
+        <li>
+          Corrige un problème de redimensionnement de la bulle au clic sur les
+          onglets.
+        </li>
         <li>Corrige la copie des codes TOTP.</li>
       </ul>
       {/* 1.2.1 */}
@@ -191,7 +233,10 @@ function FRExtensionNotes() {
       </h2>
       <em>Publiée le 11/12/2024</em>
       <ul>
-        <li>Corrige un cas d'affichage de la page de configuration au lieu de la page d'erreur.</li>
+        <li>
+          Corrige un cas d'affichage de la page de configuration au lieu de la
+          page d'erreur.
+        </li>
       </ul>
       {/* 1.2.0 */}
       <h2>
@@ -200,21 +245,32 @@ function FRExtensionNotes() {
       <em>Publiée le 29/11/2024</em>
       <ul>
         <li>
-          Ajoute une méthode de configuration alternative pour les appareils sur lesquels le lien d'application ne
-          fonctionne pas (par exemple sur certaines distributions linux).{" "}
+          Ajoute une méthode de configuration alternative pour les appareils sur
+          lesquels le lien d'application ne fonctionne pas (par exemple sur
+          certaines distributions linux).{" "}
           <em>Nécessite une version 7.10.0 ou ultérieure de l'application.</em>
         </li>
         <li>
-          La popup de l'extension (vue au clic sur l'icône de l'extension dans la barre d'acitons du navigateur) permet
-          désormais d'afficher les codes TOTP. <em>Nécessite une version 7.10.0 ou ultérieure de l'application.</em>
+          La popup de l'extension (vue au clic sur l'icône de l'extension dans
+          la barre d'acitons du navigateur) permet désormais d'afficher les
+          codes TOTP.{" "}
+          <em>Nécessite une version 7.10.0 ou ultérieure de l'application.</em>
         </li>
         <li>
-          Affiche les comptes qui correspondent à la page avec leur arborescence pour faciliter leur distinction en cas
-          de correspondances multiples.
+          Affiche les comptes qui correspondent à la page avec leur arborescence
+          pour faciliter leur distinction en cas de correspondances multiples.
         </li>
-        <li>Ajoute la possibilité de réinitialiser l'extension en cliquant 7 fois sur le numéro de version.</li>
-        <li>Améliore l'heuristique de remplissage automatique sur certains sites.</li>
-        <li>Corrige un cas où l'extension empêche l'affichage du clavier virtuel d'un site bancaire.</li>
+        <li>
+          Ajoute la possibilité de réinitialiser l'extension en cliquant 7 fois
+          sur le numéro de version.
+        </li>
+        <li>
+          Améliore l'heuristique de remplissage automatique sur certains sites.
+        </li>
+        <li>
+          Corrige un cas où l'extension empêche l'affichage du clavier virtuel
+          d'un site bancaire.
+        </li>
         <li>Corrige divers bugs mineurs.</li>
       </ul>
       {/* 1.1.0 */}
@@ -224,9 +280,10 @@ function FRExtensionNotes() {
       <em>Publiée le 10/09/2024</em>
       <ul>
         <li>
-          Permet le remplissage et l'enregistrement automatique des formulaires contenus dans une iframe si cet iframe
-          est directement enfant du cadre principal et si le nom de domaine de cet iframe est égal au nom de domaine de
-          la page.
+          Permet le remplissage et l'enregistrement automatique des formulaires
+          contenus dans une iframe si cet iframe est directement enfant du cadre
+          principal et si le nom de domaine de cet iframe est égal au nom de
+          domaine de la page.
         </li>
       </ul>
       {/* 1.0.0 */}
@@ -236,13 +293,17 @@ function FRExtensionNotes() {
       <em>Publiée le 29/05/2024</em>
       <ul>
         <li>
-          <strong>Fin de support de l’ancien système:</strong> Les application antérieures à la version 7 ne sont plus
-          compatibles avec l’extension de navigateur.
+          <strong>Fin de support de l’ancien système:</strong> Les application
+          antérieures à la version 7 ne sont plus compatibles avec l’extension
+          de navigateur.
         </li>
-        <li>Amélioration significative des performances à l’ouverture de l’extension</li>
         <li>
-          Amélioration technique - passage en manifest v3 sur les navigateurs chromium : l’extension consomme moins de
-          ressources qu’auparavant.
+          Amélioration significative des performances à l’ouverture de
+          l’extension
+        </li>
+        <li>
+          Amélioration technique - passage en manifest v3 sur les navigateurs
+          chromium : l’extension consomme moins de ressources qu’auparavant.
         </li>
       </ul>
 
@@ -253,9 +314,18 @@ function FRExtensionNotes() {
       <em>Publiée le 26/03/2024</em>
       <ul>
         <li>Amélioration de l’affichage des mots de passe non enregistrés</li>
-        <li>Les mots de passe non enregistrés peuvent être ajoutés directement dans un coffre-fort</li>
-        <li>Ajout d’une option pour désactiver globalement l’enregistrement automatique</li>
-        <li>Amélioration de l’heuristique de détection de la soumission des formulaires de connexion</li>
+        <li>
+          Les mots de passe non enregistrés peuvent être ajoutés directement
+          dans un coffre-fort
+        </li>
+        <li>
+          Ajout d’une option pour désactiver globalement l’enregistrement
+          automatique
+        </li>
+        <li>
+          Amélioration de l’heuristique de détection de la soumission des
+          formulaires de connexion
+        </li>
       </ul>
 
       {/* 0.10.5 */}
@@ -264,8 +334,13 @@ function FRExtensionNotes() {
       </h2>
       <em>Publiée le 20/02/2024</em>
       <ul>
-        <li>amélioration de l’heuristique de détection des champs mot de passe</li>
-        <li>effacement automatique de l’avertissement sur la force du mot de passe au bout de 6 secondes</li>
+        <li>
+          amélioration de l’heuristique de détection des champs mot de passe
+        </li>
+        <li>
+          effacement automatique de l’avertissement sur la force du mot de passe
+          au bout de 6 secondes
+        </li>
       </ul>
 
       {/* 0.10.4 */}
@@ -274,11 +349,16 @@ function FRExtensionNotes() {
       </h2>
       <em>Publiée le 13/02/2024</em>
       <ul>
-        <li>correction de la modification d’un mot de passe d’un compte partagé pour un coffre-fort PRO</li>
+        <li>
+          correction de la modification d’un mot de passe d’un compte partagé
+          pour un coffre-fort PRO
+        </li>
         <li>corrige l’affichage de certains éléments sur certains sites</li>
         <li>
-          ajout d’un mécanisme permettant de garantir qu’un mot de passe ne sera pas proposé dans la liste des mots de
-          passe non sauvegardés s’il existe déjà dans un coffre pour corriger le comportement observé sur certains sites
+          ajout d’un mécanisme permettant de garantir qu’un mot de passe ne sera
+          pas proposé dans la liste des mots de passe non sauvegardés s’il
+          existe déjà dans un coffre pour corriger le comportement observé sur
+          certains sites
         </li>
       </ul>
 
@@ -288,7 +368,10 @@ function FRExtensionNotes() {
       </h2>
       <em>Publiée le 12/02/2024</em>
       <ul>
-        <li>ajout d’une option pour désactiver l’enregistrement automatique par défaut sur le site actuel</li>
+        <li>
+          ajout d’une option pour désactiver l’enregistrement automatique par
+          défaut sur le site actuel
+        </li>
       </ul>
 
       {/* 0.10.2 */}
@@ -298,8 +381,8 @@ function FRExtensionNotes() {
       <em>Publiée le 12/02/2024</em>
       <ul>
         <li>
-          amélioration de l’heuristique de détection des champs pour permettre le remplissage (semi-)automatique dans
-          certains cas particuliers
+          amélioration de l’heuristique de détection des champs pour permettre
+          le remplissage (semi-)automatique dans certains cas particuliers
         </li>
       </ul>
 
@@ -309,14 +392,21 @@ function FRExtensionNotes() {
       </h2>
       <em>Publiée le 9/02/2024</em>
       <ul>
-        <li>enregistrement automatique des logins et mots de passe saisis manuellement (coffres-forts Pro et Perso)</li>
         <li>
-          gestion d’une plage de port pour la communication avec l’application, et notamment gestion des sessions RDS
-          multi-utilisateurs.
+          enregistrement automatique des logins et mots de passe saisis
+          manuellement (coffres-forts Pro et Perso)
         </li>
-        <li>amélioration sur l’heuristique de détection des formulaires et du remplissage automatique</li>
         <li>
-          affichage d’alertes sur les mots de passe faibles au moment de l’utilisation du mot de passe via l’extension
+          gestion d’une plage de port pour la communication avec l’application,
+          et notamment gestion des sessions RDS multi-utilisateurs.
+        </li>
+        <li>
+          amélioration sur l’heuristique de détection des formulaires et du
+          remplissage automatique
+        </li>
+        <li>
+          affichage d’alertes sur les mots de passe faibles au moment de
+          l’utilisation du mot de passe via l’extension
         </li>
       </ul>
     </section>
@@ -326,6 +416,14 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.7.9 */}
+      <h2>
+        <LinkToAnchor id="1.7.9">1.7.9</LinkToAnchor>
+      </h2>
+      <em>Published on 18/06/2026</em>
+      <ul>
+        <li>Security updates</li>
+      </ul>
       {/* 1.7.8 */}
       <h2>
         <LinkToAnchor id="1.7.8">1.7.8</LinkToAnchor>
@@ -350,12 +448,12 @@ function ENExtensionNotes() {
       <em>Published on 30/01/2025</em>
       <ul>
         <li>
-          Fixes an issue causing an infinite loader in the extension popup when at least one tab is sleeping and all
-          vaults are locked.
+          Fixes an issue causing an infinite loader in the extension popup when
+          at least one tab is sleeping and all vaults are locked.
         </li>
         <li>
-          Fixes a potential race condition issue leading to a bug occurring randomly on the connection with the
-          application.
+          Fixes a potential race condition issue leading to a bug occurring
+          randomly on the connection with the application.
         </li>
         <li>Improves logs</li>
       </ul>
@@ -365,7 +463,10 @@ function ENExtensionNotes() {
       </h2>
       <em>Published on 19/01/2025</em>
       <ul>
-        <li>Many improvements and edge case fixes on the management of the connection with the app.</li>
+        <li>
+          Many improvements and edge case fixes on the management of the
+          connection with the app.
+        </li>
         <li>Removal of the old authorization system.</li>
       </ul>
       {/* 1.6.0 */}
@@ -383,11 +484,17 @@ function ENExtensionNotes() {
       <em>Published on 10/10/2025</em>
       <ul>
         <li>Extension renamed to UpSignOn by Septeo.</li>
-        <li>Open tabs are now taken into account right at the end of the extension install or update.</li>
-        <li>Prevents the extension from being put to sleep by the browser to improve the user experience.</li>
         <li>
-          Fixes an issue with the detection of changes on the login field of some websites that led to the creation of
-          duplicate accounts.
+          Open tabs are now taken into account right at the end of the extension
+          install or update.
+        </li>
+        <li>
+          Prevents the extension from being put to sleep by the browser to
+          improve the user experience.
+        </li>
+        <li>
+          Fixes an issue with the detection of changes on the login field of
+          some websites that led to the creation of duplicate accounts.
         </li>
         <li>The extension now works on pages that use shadow DOM.</li>
       </ul>
@@ -406,10 +513,14 @@ function ENExtensionNotes() {
       </h2>
       <em>Published on 19/06/2025</em>
       <ul>
-        <li>Fixes a bug preventing to validate the browser alert when clicking on te "Connect to the app" button.</li>
         <li>
-          Fixes a bug where the extension displays the error page despite being connected to the app (case when the
-          browser kills parts of the extension to use less resources).
+          Fixes a bug preventing to validate the browser alert when clicking on
+          te "Connect to the app" button.
+        </li>
+        <li>
+          Fixes a bug where the extension displays the error page despite being
+          connected to the app (case when the browser kills parts of the
+          extension to use less resources).
         </li>
       </ul>
       {/* 1.5.1 */}
@@ -427,8 +538,8 @@ function ENExtensionNotes() {
       <em>Publiched on 28/05/2025</em>
       <ul>
         <li>
-          Support for an optional simplified mode (the code used once is no longer requested) for authorizing the
-          browser extension.
+          Support for an optional simplified mode (the code used once is no
+          longer requested) for authorizing the browser extension.
         </li>
         <li>Fixes on ths autofill heuristic.</li>
       </ul>
@@ -440,10 +551,11 @@ function ENExtensionNotes() {
       <ul>
         <li>Security improvements</li>
         <li>
-          New setup system for the communication channel between the extension and the UpSignOn app to enhance security
-          and UX. See version notes of
-          <Link href="/fr/resources/release-notes/app#7.12.2">app v7.12.2</Link>). (Note : this version remains
-          backwards-compatible with previous versions of the app.)
+          New setup system for the communication channel between the extension
+          and the UpSignOn app to enhance security and UX. See version notes of
+          <Link href="/fr/resources/release-notes/app#7.12.2">app v7.12.2</Link>
+          ). (Note : this version remains backwards-compatible with previous
+          versions of the app.)
         </li>
       </ul>
       {/* 1.3.0 */}
@@ -454,8 +566,8 @@ function ENExtensionNotes() {
       <ul>
         <li>
           Applies the new shared vault access level model (see{" "}
-          <Link href="/fr/resources/release-notes/app#7.11.0">app v7.11.0</Link>) and keep backwards compatibility with
-          older app versions.
+          <Link href="/fr/resources/release-notes/app#7.11.0">app v7.11.0</Link>
+          ) and keep backwards compatibility with older app versions.
         </li>
       </ul>
       {/* 1.2.3 */}
@@ -481,7 +593,10 @@ function ENExtensionNotes() {
       </h2>
       <em>Published on 11/12/2024</em>
       <ul>
-        <li>Fixes a case when the setup page is displayed instead of the error page.</li>
+        <li>
+          Fixes a case when the setup page is displayed instead of the error
+          page.
+        </li>
       </ul>
       {/* 1.2.0 */}
       <h2>
@@ -490,20 +605,30 @@ function ENExtensionNotes() {
       <em>Published on 29/11/2024</em>
       <ul>
         <li>
-          Adds an alternative configuration method for devices on which the application link does not work (for example
-          on some Linux distributions). <em>Requires version 7.10.0 or later of the application.</em>
+          Adds an alternative configuration method for devices on which the
+          application link does not work (for example on some Linux
+          distributions).{" "}
+          <em>Requires version 7.10.0 or later of the application.</em>
         </li>
         <li>
-          The extension popup (seen when you click on the extension icon in the browser toolbar) now displays TOTP
-          codes. <em>Requires version 7.10.0 or later of the application.</em>
+          The extension popup (seen when you click on the extension icon in the
+          browser toolbar) now displays TOTP codes.{" "}
+          <em>Requires version 7.10.0 or later of the application.</em>
         </li>
         <li>
-          Displays the accounts that correspond to the page with their tree structure to make it easier to distinguish
-          them in the event of multiple matches.
+          Displays the accounts that correspond to the page with their tree
+          structure to make it easier to distinguish them in the event of
+          multiple matches.
         </li>
-        <li>Adds the ability to reset the extension by clicking 7 times on the version number.</li>
+        <li>
+          Adds the ability to reset the extension by clicking 7 times on the
+          version number.
+        </li>
         <li>Improves auto-fill heuristics on certain sites.</li>
-        <li>Fixes a case where the extension prevents the virtual keyboard of a banking site from being displayed.</li>
+        <li>
+          Fixes a case where the extension prevents the virtual keyboard of a
+          banking site from being displayed.
+        </li>
         <li>Fixes various minor bugs.</li>
       </ul>
       {/* 1.1.0 */}
@@ -513,8 +638,9 @@ function ENExtensionNotes() {
       <em>Published on 10/09/2024</em>
       <ul>
         <li>
-          Allows forms contained in an iframe to be filled in and saved automatically if the iframe is a direct child of
-          the main frame and if the iframe's domain name is equal to the page's domain name.
+          Allows forms contained in an iframe to be filled in and saved
+          automatically if the iframe is a direct child of the main frame and if
+          the iframe's domain name is equal to the page's domain name.
         </li>
       </ul>
       {/* 1.0.0 */}
@@ -524,13 +650,13 @@ function ENExtensionNotes() {
       <em>Published on 29/05/2024</em>
       <ul>
         <li>
-          <strong>End of support for the old system:</strong> Applications prior to version 7 are no longer compatible
-          with the browser extension.
+          <strong>End of support for the old system:</strong> Applications prior
+          to version 7 are no longer compatible with the browser extension.
         </li>
         <li>Significant performance improvement when opening the extension</li>
         <li>
-          Technical improvement - transition to manifest v3 on chromium browsers: the extension consumes less resources
-          than before.
+          Technical improvement - transition to manifest v3 on chromium
+          browsers: the extension consumes less resources than before.
         </li>
       </ul>
 
@@ -565,8 +691,9 @@ function ENExtensionNotes() {
         <li>fixes changing a shared account password for a PRO vault</li>
         <li>fixes the display of certain elements on certain sites</li>
         <li>
-          adds a mechanism to guarantee that a password will not be suggested in the list of unsaved passwords if it
-          already exists in a vault to fix the behavior observed on certain sites
+          adds a mechanism to guarantee that a password will not be suggested in
+          the list of unsaved passwords if it already exists in a vault to fix
+          the behavior observed on certain sites
         </li>
       </ul>
 
@@ -585,7 +712,10 @@ function ENExtensionNotes() {
       </h2>
       <em>Published 12/02/2024</em>
       <ul>
-        <li>improvement of the field detection heuristic to allow (semi-)automatic filling in some special cases</li>
+        <li>
+          improvement of the field detection heuristic to allow (semi-)automatic
+          filling in some special cases
+        </li>
       </ul>
 
       {/* 0.10.1 */}
@@ -594,13 +724,19 @@ function ENExtensionNotes() {
       </h2>
       <em>Published 9/02/2024</em>
       <ul>
-        <li>automatic saving of logins and passwords entered manually (Pro and Personal vaults)</li>
         <li>
-          management of a port range for communication with the application, and in particular management of multi-user
-          RDS sessions
+          automatic saving of logins and passwords entered manually (Pro and
+          Personal vaults)
+        </li>
+        <li>
+          management of a port range for communication with the application, and
+          in particular management of multi-user RDS sessions
         </li>
         <li>improves form and autofill detection heuristics</li>
-        <li>displays alerts about weak passwords when using the password via the extension</li>
+        <li>
+          displays alerts about weak passwords when using the password via the
+          extension
+        </li>
       </ul>
     </section>
   );
