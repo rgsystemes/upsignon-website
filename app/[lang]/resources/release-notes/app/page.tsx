@@ -41,6 +41,20 @@ export default async function AppNotes({
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.18.0 */}
+      <h2>
+        <LinkToAnchor id="7.18.0">7.18.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publié le 23/06/2026</em>
+      </p>
+      <ul>
+        <li>Nouveau filtre TOTP.</li>
+        <li>Nouvelle option pour enregistrer le filtre.</li>
+        <li>Amélioration du système de redirection après la migration d'une banque (PRO).</li>
+        <li>Correction d'un bug produisant une alerte de sécurité pour certains utilisateurs.</li>
+        <li>Améliorations techniques diverses.</li>
+      </ul>
       {/* 7.17.0 */}
       <h2>
         <LinkToAnchor id="7.17.0">7.17.0</LinkToAnchor>
@@ -1026,6 +1040,20 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.18.0 */}
+      <h2>
+        <LinkToAnchor id="7.18.0">7.18.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 23/06/2026</em>
+      </p>
+      <ul>
+        <li>New TOTP filter.</li>
+        <li>New option to save filter.</li>
+        <li>Improves the redirection system post bank migration (PRO).</li>
+        <li>Fixes a bug producing a security alert for some users.</li>
+        <li>Various technical improvements.</li>
+      </ul>
       {/* 7.17.0 */}
       <h2>
         <LinkToAnchor id="7.17.0">7.17.0</LinkToAnchor>
