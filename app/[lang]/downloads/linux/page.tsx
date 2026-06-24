@@ -179,8 +179,8 @@ function ENLinuxOtherDownloads() {
       </details>
       <br />
       <br />
+      <h2>AppImage download (not advised)</h2>
       <details>
-        <h2>AppImage download (not advised)</h2>
         <summary>Show</summary>
         <p>
           The app is provided with the AppImage format for those who want it, but but offer no support for installation
