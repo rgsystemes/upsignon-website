@@ -42,6 +42,14 @@ export default async function DashboardNotes({
 function FRDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.13.0 */}
+      <h2>
+        <LinkToAnchor id="2.13.0">2.13.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 24/06/2026</em>
+      <ul>
+        <li>Corrrectifs de sécurité</li>
+      </ul>
       {/* 2.12.0 */}
       <h2>
         <LinkToAnchor id="2.12.0">2.12.0</LinkToAnchor>
@@ -455,6 +463,14 @@ function FRDashboardNotes() {
 function ENDashboardNotes() {
   return (
     <section className={styles.section}>
+      {/* 2.13.0 */}
+      <h2>
+        <LinkToAnchor id="2.13.0">2.13.0</LinkToAnchor>
+      </h2>
+      <em>Published on 24/06/2026</em>
+      <ul>
+        <li>Security fixes</li>
+      </ul>
       {/* 2.12.0 */}
       <h2>
         <LinkToAnchor id="2.12.0">2.12.0</LinkToAnchor>
