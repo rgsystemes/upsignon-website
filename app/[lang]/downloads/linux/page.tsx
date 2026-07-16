@@ -87,7 +87,7 @@ function FRLinuxOtherDownloads() {
         <summary>Afficher</summary>
         <p>
           L'application est fournie au format AppImage pour les utilisateurs qui le souhaitent, mais nous ne fournissons
-          pas de support pour l'installation.
+          pas de support pour l'installation. Seulement disponible pour ubuntu 24.04 et plus.
         </p>
         <h3>Liste des versions</h3>
         <ul className={styles.ul}>
@@ -183,8 +183,8 @@ function ENLinuxOtherDownloads() {
       <details>
         <summary>Show</summary>
         <p>
-          The app is provided with the AppImage format for those who want it, but but offer no support for installation
-          with this format.
+          The app is provided with the AppImage format for those who want it, but we offer no support for installation
+          with this format. Ubuntu 24.04 and later versions only.
         </p>
         <h3>List of versions</h3>
         <ul className={styles.ul}>
