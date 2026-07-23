@@ -41,6 +41,21 @@ export default async function AppNotes({
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.19.0 */}
+      <h2>
+        <LinkToAnchor id="7.19.0">7.19.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publié le 05/08/2026</em>
+      </p>
+      <ul>
+        <li>Correctifs de sécurité.</li>
+        <li>Les coffres-forts partagés se synchronisent désormais immédiatement chez leurs nouveaux destinataires.</li>
+        <li>Correction d'un crash (écran noir) de l'application après son verrouillage automatique.</li>
+        <li>Création de nouveaux éléments directement dans un dossier via de nouvelles options dans le menu des dossiers.</li>
+        <li>Amélioration et correctifs dans le remplissage automatique sur Android.</li>
+        <li>Arrêt des livraisons de l'application au format AppImage pour Linux.</li>
+      </ul>
       {/* 7.18.0 */}
       <h2>
         <LinkToAnchor id="7.18.0">7.18.0</LinkToAnchor>
@@ -1040,6 +1055,21 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.19.0 */}
+      <h2>
+        <LinkToAnchor id="7.19.0">7.19.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 05/08/2026</em>
+      </p>
+      <ul>
+        <li>Security fixes.</li>
+        <li>Shared vaults now synchronize immediately for their new recipients.</li>
+        <li>Fixes a crash (black screen) in the application after auto-lock.</li>
+        <li>Create new items directly in a folder via new options in the folder menu.</li>
+        <li>Improvements and fixes to autofill on Android.</li>
+        <li>AppImage delivery for Linux has been discontinued.</li>
+      </ul>
       {/* 7.18.0 */}
       <h2>
         <LinkToAnchor id="7.18.0">7.18.0</LinkToAnchor>
