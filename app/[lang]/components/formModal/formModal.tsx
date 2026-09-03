@@ -57,7 +57,7 @@ export function FormModalButton(p: {
 
 function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
   if (p.isFreeTrialForm) {
-    return <TrialRequestIframe />;
+    return <TrialRequestIframe lang={p.lang} />;
   }
 
   const t = getDictionary(p.lang);
@@ -134,7 +134,7 @@ const HubspotForm = (p: {
   return <div id={htmlId} style={p.isVisible ? null : { display: "none" }} />;
 };
 
-function TrialRequestIframe() {
+function TrialRequestIframe(p: { lang: string }) {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [iframeHeight, setIframeHeight] = useState(200);
 
@@ -166,6 +166,7 @@ function TrialRequestIframe() {
   } else {
     iframeSrc = "https://admin-pro.upsignon.eu/trial-request";
   }
+  iframeSrc += `?lang=${encodeURIComponent(p.lang)}`;
   return (
     <div className={styles.modalContent}>
       <iframe
