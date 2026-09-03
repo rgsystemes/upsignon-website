@@ -43,7 +43,7 @@ export function FormModalButton(p: {
         contentLabel={p.modalTitle}
         preventScroll
         shouldReturnFocusAfterClose={false}
-        className={`${styles.modal} ${p.isFreeTrialForm ? styles.modalNoPadding : ""}`}
+        className={styles.modal}
       >
         <Forms
           lang={p.lang}
