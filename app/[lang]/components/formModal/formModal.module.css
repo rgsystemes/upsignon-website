@@ -17,6 +17,38 @@
   outline: none;
 }
 
+.closeButtonContainer {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.closeButton {
+  position: relative;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+  border: none;
+  border-radius: 50%;
+  background: var(--background-color);
+  color: var(--text-color-alt);
+  cursor: pointer;
+  line-height: 0;
+}
+.closeButton:hover {
+  background-color: var(--grey100);
+  color: var(--text-color);
+}
+
 .modalContent {
   text-align: center;
   padding: 30px 20px;
@@ -91,5 +123,9 @@
   }
   .modalContent {
     padding: 10px 10px;
+  }
+  .closeButton {
+    top: 4px;
+    right: 4px;
   }
 }
