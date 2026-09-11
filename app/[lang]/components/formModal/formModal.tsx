@@ -185,7 +185,10 @@ function TrialRequestIframe(p: { lang: string }) {
 
   let iframeSrc = "https://admin-pro.upsignon.eu/trial-request";
   if (window.location.hostname === "localhost") {
-    iframeSrc = "http://localhost:8090/trial-request";
+    // In dev, the front is served directly by the Vite dev server (not proxied through the
+    // Express backend), which falls back to index.html for any extensionless path it doesn't
+    // recognize - so the .html extension is required here to hit trial-request.html.
+    iframeSrc = "http://localhost:8090/trial-request.html";
   } else if (window.location.hostname.endsWith("upsignon.vercel.app")) {
     iframeSrc = "https://pro-staging.upsignon.eu/admin/trial-request";
   } else {
