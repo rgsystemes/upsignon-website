@@ -91,32 +91,30 @@ function Forms(p: { lang: string; title: string; isFreeTrialForm: boolean }) {
     <div className={styles.modalContent}>
       <h1>{p.title}</h1>
       <div className={styles.activityForm}>
-        <p>{t.contactUsForm.activity}</p>
+        <p className={styles.activitySubtitle}>{t.contactUsForm.activity}</p>
         <div
-          className={styles.choiceContainer}
-          onClick={() => setIsReseller(true)}
+          className={styles.activityChoices}
+          role="radiogroup"
+          aria-label={t.contactUsForm.activity}
         >
-          <input
-            type="radio"
-            name="msp"
-            value="yes"
-            checked={isReseller === true}
-            onChange={() => setIsReseller(true)}
-          />
-          <label htmlFor="msp">{t.contactUsForm.activityMSP}</label>
-        </div>
-        <div
-          className={styles.choiceContainer}
-          onClick={() => setIsReseller(false)}
-        >
-          <input
-            type="radio"
-            name="company"
-            value="no"
-            checked={isReseller === false}
-            onChange={() => setIsReseller(false)}
-          />
-          <label htmlFor="company">{t.contactUsForm.activityEnterprise}</label>
+          <button
+            type="button"
+            role="radio"
+            aria-checked={isReseller === true}
+            className={isReseller === true ? styles.active : undefined}
+            onClick={() => setIsReseller(true)}
+          >
+            {t.contactUsForm.activityMSP}
+          </button>
+          <button
+            type="button"
+            role="radio"
+            aria-checked={isReseller === false}
+            className={isReseller === false ? styles.active : undefined}
+            onClick={() => setIsReseller(false)}
+          >
+            {t.contactUsForm.activityEnterprise}
+          </button>
         </div>
       </div>
       {isReseller === null ? null : (
