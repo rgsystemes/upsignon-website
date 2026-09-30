@@ -41,6 +41,16 @@ export default async function ExtensionNotes({
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.9.0 */}
+      <h2>
+        <LinkToAnchor id="1.9.0">1.9.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 30/09/2026</em>
+      <ul>
+        <li>Possibilité de désactiver le remplissage automatique sur certains sites</li>
+        <li>Amélioration de l'heuristique de remplissage automatique</li>
+        <li>Amélioration de l'heuristique d'enregistrement automatique</li>
+      </ul>
       {/* 1.7.9 */}
       <h2>
         <LinkToAnchor id="1.7.9">1.7.9</LinkToAnchor>
@@ -416,6 +426,16 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.9.0 */}
+      <h2>
+        <LinkToAnchor id="1.9.0">1.9.0</LinkToAnchor>
+      </h2>
+      <em>Published on 30/09/2026</em>
+      <ul>
+        <li>Ability to disable autofill on certain sites</li>
+        <li>Improvement of the autofill heuristic</li>
+        <li>Improvement of the automatic saving heuristic</li>
+      </ul>
       {/* 1.7.9 */}
       <h2>
         <LinkToAnchor id="1.7.9">1.7.9</LinkToAnchor>
