@@ -206,13 +206,6 @@ const translations: typeof fr = {
     customerQuotes: {
       title: "Customer testimonials",
       quotes: {
-        metavonics: {
-          name: "Steve Bazin",
-          quote:
-            "In just 30 minutes, I was able to deploy UpSignOn and train 3 of my colleagues. They immediately appreciated the simplicity and usability of the solution.",
-          jobTitle: "IT Manager",
-          companyName: "Metavonics",
-        },
         grandFrais: {
           name: "Fabien Gougoux",
           quote:

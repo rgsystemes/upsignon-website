@@ -1,14 +1,12 @@
 import Image from "next/image";
 import styles from "./customerQuotes.module.css";
 
-import metavonicsLogo from "../../../../public/customerLogos/metavonics.png";
 import granfFraisLogo from "../../../../public/customerLogos/Grand_Frais_logo.png";
 import { getDictionary } from "../../../../translations/translations";
 
 export default function CustomerQuotes(p: { lang: string }) {
   const t = getDictionary(p.lang);
   const customerLogos = {
-    metavonics: metavonicsLogo,
     grandFrais: granfFraisLogo,
   };
   return (
