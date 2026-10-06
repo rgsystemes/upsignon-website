@@ -205,13 +205,6 @@ const translations = {
     customerQuotes: {
       title: "Témoignages clients",
       quotes: {
-        metavonics: {
-          name: "Steve Bazin",
-          quote:
-            "En seulement 30 minutes, j’ai pu déployer UpSignOn et former 3 de mes collaborateurs. Ils ont immédiatement apprécié la simplicité et l’ergonomie de la solution.",
-          jobTitle: "IT Manager",
-          companyName: "Metavonics",
-        },
         grandFrais: {
           name: "Fabien Gougoux",
           quote:

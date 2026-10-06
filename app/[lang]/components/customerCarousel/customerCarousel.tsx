@@ -4,7 +4,6 @@ import styles from "./customerCarousel.module.css";
 import grandFraisImg from "../../../../public/customerLogos/Grand_Frais_logo.png";
 import adicoImg from "../../../../public/customerLogos/adico.jpg";
 import caletreImg from "../../../../public/customerLogos/caletre.svg";
-import cd11Img from "../../../../public/customerLogos/cd11.png";
 import chambersignImg from "../../../../public/customerLogos/chambersign.svg";
 import ecollectivitesImg from "../../../../public/customerLogos/ecollectivites.png";
 import esigelecImg from "../../../../public/customerLogos/esigelec.png";
@@ -69,13 +68,6 @@ export default function CustomerCarousel() {
       </div>
       <div className={styles.customer}>
         <Image src={ecollectivitesImg} alt="E-Collectivités" width={300} />
-      </div>
-      <div className={styles.customer}>
-        <Image
-          src={cd11Img}
-          alt="Conseil Départemental de l'Aude"
-          height={150}
-        />
       </div>
       <div className={styles.customer}>
         <Image src={orleansMetropoleImg} alt="Orléans-Métropole" height={150} />
