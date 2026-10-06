@@ -32,6 +32,9 @@
     "eslint-config-next": "16.3.8",
     "typescript": "7.0.2"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "packageManager": "pnpm@10.24.0",
   "pnpm": {
     "onlyBuiltDependencies": []
