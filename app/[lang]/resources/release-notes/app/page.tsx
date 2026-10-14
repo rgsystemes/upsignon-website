@@ -41,6 +41,17 @@ export default async function AppNotes({
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.20.0 */}
+      <h2>
+        <LinkToAnchor id="7.20.0">7.20.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publié le 14/10/2026</em>
+      </p>
+      <ul>
+        <li>Ajout d'un système de corbeille</li>
+        <li>Correctifs divers</li>
+      </ul>
       {/* 7.19.1 */}
       <h2>
         <LinkToAnchor id="7.19.1">7.19.1</LinkToAnchor>
@@ -1065,6 +1076,17 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.20.0 */}
+      <h2>
+        <LinkToAnchor id="7.20.0">7.20.0</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 14/10/2026</em>
+      </p>
+      <ul>
+        <li>Adds a recycle bin system</li>
+        <li>Various minor fixes</li>
+      </ul>
       {/* 7.19.1 */}
       <h2>
         <LinkToAnchor id="7.19.1">7.19.1</LinkToAnchor>
