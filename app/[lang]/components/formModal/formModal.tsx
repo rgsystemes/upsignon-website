@@ -187,7 +187,7 @@ function TrialRequestIframe(p: { lang: string }) {
     // Express backend), which falls back to index.html for any extensionless path it doesn't
     // recognize - so the .html extension is required here to hit trial-request.html.
     iframeSrc = "http://localhost:8090/trial-request.html";
-  } else if (window.location.hostname.endsWith("upsignon.vercel.app")) {
+  } else if (window.location.hostname.endsWith(".vercel.app")) {
     iframeSrc = "https://pro-staging.upsignon.eu/admin/trial-request";
   } else {
     iframeSrc = "https://admin-pro.upsignon.eu/trial-request";
