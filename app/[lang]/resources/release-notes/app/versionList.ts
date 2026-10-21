@@ -30,7 +30,7 @@ export const allMsixBundleVersions = [
   "7.1.1",
 ];
 export const allMsiVersions = [
-  "7.20.0",
+  "7.20.1",
   "7.19.1",
   "7.19.0",
   "7.18.0",

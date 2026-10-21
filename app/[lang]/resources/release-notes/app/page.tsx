@@ -41,6 +41,16 @@ export default async function AppNotes({
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.20.1 */}
+      <h2>
+        <LinkToAnchor id="7.20.1">7.20.1</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publié le 21/10/2026 (windows msi uniquement)</em>
+      </p>
+      <ul>
+        <li>Corrige un problème d'installation sur Windows via le MSI 7.20.0</li>
+      </ul>
       {/* 7.20.0 */}
       <h2>
         <LinkToAnchor id="7.20.0">7.20.0</LinkToAnchor>
@@ -1076,6 +1086,16 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.20.1 */}
+      <h2>
+        <LinkToAnchor id="7.20.1">7.20.1</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 21/10/2026 (windows msi only)</em>
+      </p>
+      <ul>
+        <li>Fixes an installation issue on Windows via the MSI 7.20.0</li>
+      </ul>
       {/* 7.20.0 */}
       <h2>
         <LinkToAnchor id="7.20.0">7.20.0</LinkToAnchor>
