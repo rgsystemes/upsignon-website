@@ -41,6 +41,14 @@ export default async function ExtensionNotes({
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.10.0 */}
+      <h2>
+        <LinkToAnchor id="1.10.0">1.10.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 23/10/2026</em>
+      <ul>
+        <li>Amélioration des heuristiques de remplissage et d'enregistrement automatique (formulaires en deux étapes, distinction des champs OTP)</li>
+      </ul>
       {/* 1.9.0 */}
       <h2>
         <LinkToAnchor id="1.9.0">1.9.0</LinkToAnchor>
@@ -426,6 +434,14 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.10.0 */}
+      <h2>
+        <LinkToAnchor id="1.10.0">1.10.0</LinkToAnchor>
+      </h2>
+      <em>Published on 23/10/2026</em>
+      <ul>
+        <li>Improvement of the autofill and autosave heuristics (two-step forms, distinction of OTP fields)</li>
+      </ul>
       {/* 1.9.0 */}
       <h2>
         <LinkToAnchor id="1.9.0">1.9.0</LinkToAnchor>
