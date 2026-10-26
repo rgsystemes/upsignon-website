@@ -41,6 +41,16 @@ export default async function AppNotes({
 function FRAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.20.2 */}
+      <h2>
+        <LinkToAnchor id="7.20.2">7.20.2</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Publié le 26/10/2026 (windows uniquement)</em>
+      </p>
+      <ul>
+        <li>Corrige un bug conduisant à la suppression du secret biométrique.</li>
+      </ul>
       {/* 7.20.1 */}
       <h2>
         <LinkToAnchor id="7.20.1">7.20.1</LinkToAnchor>
@@ -1086,6 +1096,16 @@ function FRAppNotes() {
 function ENAppNotes() {
   return (
     <section className={styles.section}>
+      {/* 7.20.2 */}
+      <h2>
+        <LinkToAnchor id="7.20.2">7.20.2</LinkToAnchor>
+      </h2>
+      <p>
+        <em>Published on 26/10/2026 (windows only)</em>
+      </p>
+      <ul>
+        <li>Fixes a bug leading to the deletion of the biometric secret.</li>
+      </ul>
       {/* 7.20.1 */}
       <h2>
         <LinkToAnchor id="7.20.1">7.20.1</LinkToAnchor>
