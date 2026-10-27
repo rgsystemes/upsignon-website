@@ -1,21 +1,52 @@
 .modal {
   position: absolute;
-  top: 100px;
+  top: 50%;
   left: 50%;
   right: auto;
   bottom: auto;
   margin-right: -0%;
-  transform: translate(-50%, 0);
-  max-height: calc(100% - 140px);
+  transform: translate(-50%, -50%);
+  max-height: calc(100% - 40px);
   width: 800px;
   max-width: calc(100% - 40px);
-  border: 2px solid var(--grey300);;
+  border: 2px solid var(--grey300);
   background: var(--background-color);
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   border-radius: 5px;
   outline: none;
-  padding: 20px;
+}
+
+.closeButtonContainer {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.closeButton {
+  position: relative;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+  border: none;
+  border-radius: 50%;
+  background: var(--background-color);
+  color: var(--text-color-alt);
+  cursor: pointer;
+  line-height: 0;
+}
+.closeButton:hover {
+  background-color: var(--grey100);
+  color: var(--text-color);
 }
 
 .modalContent {
@@ -39,52 +70,64 @@
 
 .activityForm {
   text-align: left;
-  align-self: left;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.activityForm input {
-  margin-right: 10px;
+.activitySubtitle {
+  margin: 0 0 20px;
+  color: var(--text-color-alt);
+  font-size: 0.95rem;
 }
-.choiceContainer, .choiceContainer input, .choiceContainer label {
+.activityChoices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.activityChoices button {
+  border: 1px solid rgba(88, 96, 129, 0.4);
+  background: #ffffff;
+  color: #111111;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
 }
-.choiceContainer {
-  margin-bottom: 5px
+.activityChoices button:hover {
+  background: #eaebef;
 }
-.choiceContainer input[type="radio"] {
-  display: none;
+.activityChoices button.active {
+  background: #edeef5;
+  border-color: #4d54d1;
+  color: #4d54d1;
+  font-weight: 600;
 }
-.choiceContainer label {
-  position: relative;
-  padding-left: 28px;
-  cursor: pointer;
-  line-height: 22px;
-  user-select: none;
+
+.trialRequestIframe {
+  display: block;
+  width: 100%;
+  border: 0;
 }
-.choiceContainer label::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 2px;
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--primary);
-  border-radius: 50%;
-  background: transparent;
-}
-.choiceContainer input[type="radio"]:checked + label::before {
-  background: var(--primary);
-  border-color: var(--primary);
+
+@media (max-width: 350px) {
+  .activityChoices {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 750px) {
   .modal {
-    top: 60px;
-    max-height: calc(100% - 80px);
     padding: 10px;
   }
   .modalContent {
     padding: 10px 10px;
+  }
+  .closeButton {
+    top: 4px;
+    right: 4px;
   }
 }
