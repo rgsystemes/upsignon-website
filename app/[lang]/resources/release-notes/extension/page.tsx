@@ -41,6 +41,15 @@ export default async function ExtensionNotes({
 function FRExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.11.0 */}
+      <h2>
+        <LinkToAnchor id="1.11.0">1.11.0</LinkToAnchor>
+      </h2>
+      <em>Publiée le 04/11/2026</em>
+      <ul>
+        <li>Remplissage automatique pour les champs TOTP</li>
+        <li>Amélioration du remplissage et de l'enregistrement automatique sur google.com</li>
+      </ul>
       {/* 1.10.0 */}
       <h2>
         <LinkToAnchor id="1.10.0">1.10.0</LinkToAnchor>
@@ -434,6 +443,15 @@ function FRExtensionNotes() {
 function ENExtensionNotes() {
   return (
     <section className={styles.section}>
+      {/* 1.11.0 */}
+      <h2>
+        <LinkToAnchor id="1.11.0">1.11.0</LinkToAnchor>
+      </h2>
+      <em>Published on 04/11/2026</em>
+      <ul>
+        <li>Autofilling for TOTP fields</li>
+        <li>Improvement to autofill and autosave on google.com</li>
+      </ul>
       {/* 1.10.0 */}
       <h2>
         <LinkToAnchor id="1.10.0">1.10.0</LinkToAnchor>
