@@ -3,9 +3,10 @@ import styles from "./page.module.css";
 import { Metadata } from "next";
 import Image from "next/image";
 
-import frenchImg from "../../public/images/french.svg";
-import privacyByDesignImg from "../../public/images/privacyByDesign.svg";
-import multiDeviceImg from "../../public/images/multiDevice.svg";
+import tagFrenchImg from "../../public/images/tagFrench.svg";
+import tagGdprImg from "../../public/images/tagGdpr.svg";
+import tagIsoImg from "../../public/images/tagIso27001.svg";
+import tagMultiPlatformImg from "../../public/images/tagMultiPlatform.svg";
 import cryptographyImg from "../../public/images/cryptography.svg";
 import heroBannerImg from "../../public/images/heroBanner.png";
 import googleIcon from "../../public/images/google.svg";
@@ -95,21 +96,31 @@ export default async function Page({
         <section className={styles.tagsSection}>
           <div className={styles.tagsCard}>
             <div className={styles.tagsImgContainer}>
-              <Image src={frenchImg} alt="" />
+              <Image src={tagFrenchImg} alt="" />
             </div>
-            <div>{t.pitch.french}</div>
+            <div className={styles.tagsTitle}>{t.pitch.tags.french.title}</div>
+            <div className={styles.tagsDescription}>{t.pitch.tags.french.description}</div>
           </div>
           <div className={styles.tagsCard}>
             <div className={styles.tagsImgContainer}>
-              <Image src={privacyByDesignImg} alt="" />
+              <Image src={tagGdprImg} alt="" />
             </div>
-            <div>{t.pitch.privacyByDesign}</div>
+            <div className={styles.tagsTitle}>{t.pitch.tags.gdpr.title}</div>
+            <div className={styles.tagsDescription}>{t.pitch.tags.gdpr.description}</div>
           </div>
           <div className={styles.tagsCard}>
             <div className={styles.tagsImgContainer}>
-              <Image src={multiDeviceImg} alt="" />
+              <Image src={tagIsoImg} alt="" />
             </div>
-            <div>{t.pitch.crossPlatform}</div>
+            <div className={styles.tagsTitle}>{t.pitch.tags.iso.title}</div>
+            <div className={styles.tagsDescription}>{t.pitch.tags.iso.description}</div>
+          </div>
+          <div className={styles.tagsCard}>
+            <div className={styles.tagsImgContainer}>
+              <Image src={tagMultiPlatformImg} alt="" />
+            </div>
+            <div className={styles.tagsTitle}>{t.pitch.tags.multiPlatform.title}</div>
+            <div className={styles.tagsDescription}>{t.pitch.tags.multiPlatform.description}</div>
           </div>
         </section>
         <section className={styles.hostingSection}>

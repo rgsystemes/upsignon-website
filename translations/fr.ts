@@ -101,9 +101,12 @@ const translations = {
     moto: "Découvrez comment UpSignOn simplifie la sécurité des accès",
     subtitle: "Enregistrez, sécurisez et oubliez\nvos mots de passe !",
     prezVideoTitle: "Vidéo de présentation d'UpSignOn",
-    french: "Une solution 100% française et hébergée en France",
-    privacyByDesign: "Sécurité et vie privée par conception",
-    crossPlatform: "Multi-platformes (Windows, Linux, macOS, iOS, Android)",
+    tags: {
+      french: { title: "100 % français", description: "Développées et hébergées en France" },
+      gdpr: { title: "Conforme RGPD", description: "Vos données protégées et maîtrisées" },
+      iso: { title: "ISO 27001", description: "Hébergement sur infrastructure certifiée" },
+      multiPlatform: { title: "Multi-plateforme", description: "Windows, Linux, macOS, iOS, Android" },
+    },
     saas: "SaaS",
     onprem: "Auto-hébergé",
     keyMetrics: {

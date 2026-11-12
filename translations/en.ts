@@ -102,9 +102,12 @@ const translations: typeof fr = {
     moto: "Discover how UpSignOn simplifies access security",
     subtitle: "Save, secure and forget\nyour passwords!",
     prezVideoTitle: "UpSignOn presentation video",
-    french: "Made and hosted in France",
-    privacyByDesign: "Security and privacy by design",
-    crossPlatform: "Cross-platform (Windows, Linux, macOS, iOS, Android)",
+    tags: {
+      french: { title: "100% French", description: "Developed and hosted in France" },
+      gdpr: { title: "GDPR compliant", description: "Your data protected and under your control" },
+      iso: { title: "ISO 27001", description: "Hosted on certified infrastructure" },
+      multiPlatform: { title: "Cross-platform", description: "Windows, Linux, macOS, iOS, Android" },
+    },
     saas: "SaaS",
     onprem: "On-Premise",
     keyMetrics: {

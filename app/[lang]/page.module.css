@@ -107,32 +107,35 @@
 
 /* TAGS SECTION */
 .tagsSection {
-  padding: 50px 0 0px 0;
+  padding: 50px 20px 0px 20px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 40px;
 }
 .tagsCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 20px;
-  background-color: var(--background-color);
-  padding: 20px;
-  font-weight: bold;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
   text-align: center;
+  width: 220px;
   flex-shrink: 0;
 }
 .tagsImgContainer {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 .tagsImgContainer img {
-  width: auto;
-  height: 120px;
+  width: 80px;
+  height: 80px;
+}
+.tagsTitle {
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 6px;
+}
+.tagsDescription {
+  font-size: 0.9em;
+  opacity: 0.75;
 }
 
 .tagsImgContainerLogos {
