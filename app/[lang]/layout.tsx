@@ -39,8 +39,16 @@ export default async function RootLayout({
       <head>
         <link rel="shortcut icon" href={favicon.src} />
         <link rel="icon" type="image/png" sizes="32x32" href={favicon32.src} />
-        <link rel="icon" type="image/png" sizes="256x256" href={favicon256.src} />
-        <meta name="google-site-verification" content="yNxeZNw0jlQy8ywG1nUXNCi1zgL61n9KqWv3kb4zmEE" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="256x256"
+          href={favicon256.src}
+        />
+        <meta
+          name="google-site-verification"
+          content="yNxeZNw0jlQy8ywG1nUXNCi1zgL61n9KqWv3kb4zmEE"
+        />
       </head>
 
       <AnchorScrollWithFixedHeaderBody
@@ -65,6 +73,14 @@ export default async function RootLayout({
         async
         defer
         src="https://js.hs-scripts.com/20410676.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="https://js.hs-scripts.com/7012322.js"
         strategy="afterInteractive"
       />
     </html>
